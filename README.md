@@ -36,6 +36,7 @@ it forces the theory to make the frame explicit.
 | [`02`](docs/02-coding-theorem-of-value.md) | The capacity theorem | **`ΔG ≤ I(X;Y)`** — value-throughput is bounded by information-throughput; **Second Law** `G = D(q‖r) − D(q‖p)` exact |
 | [`03`](docs/03-cross-frame-value.md) | Cross-frame / multi-agent | **Value is frame-relative; price is frame-independent.** Exchange via shadow price `λ=K/E`; invariant = Fisher–Rao metric (Čencov); alignment `cos θ` sets positive/negative-sum |
 | [`04`](docs/04-multi-agent-capacity-region.md) | Fleet governance | **Collective value-throughput ≤ H(X)** — the world's entropy caps the whole fleet; region shaped by alignment; operating point set by price |
+| [`05`](docs/05-dynamics.md) | The equations of motion | **Learning = value-recovery, dissipation = regret**; natural-gradient (Fisher) belief flow, tâtonnement price flow, control+selection goal flow; alignment = a stability condition; a moving world forbids zero dissipation |
 
 ### The three load-bearing equations
 
@@ -80,8 +81,10 @@ assumptions.
 
 ## Reading order
 
-`00` (framing) → `01` (the measure) → `02` (the limit) → `03` (many agents) → `04` (the fleet). Each builds on
-the last; each is self-contained enough to skim from its headline box.
+`00` (framing) → `01` (the measure) → `02` (the limit) → `03` (many agents) → `04` (the fleet) → `05`
+(dynamics). Each builds on the last; each is self-contained enough to skim from its headline box. Docs 01–04
+are the **statics** (conservation laws, equilibria); doc 05 is the **dynamics** (equations of motion).
+Together they form a thermodynamics of value.
 
 ## Provenance & non-goals
 
