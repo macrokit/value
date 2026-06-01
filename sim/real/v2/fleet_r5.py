@@ -142,12 +142,19 @@ def run(rec):
                 ds.append((da - db) * scale)
             return float(np.mean(ds)), float(np.percentile(ds, 2.5)), float(np.percentile(ds, 97.5))
         tag = f"[{unit}]"
+        # REQUIRED: value-price must beat round-robin AND equal-weight (CI excludes 0).
+        # STRONG: beating the hand-tuned adversary is a real PASS/FAIL — a CI that
+        # overlaps 0 is an honest tie/loss, NOT rounded up to a win (Flag #3). best_single
+        # and hand_cost are reported informationally with CIs.
+        kinds = {"round_robin": "REQUIRED", "equal_pool": "REQUIRED", "hand_tuned": "STRONG",
+                 "best_single": "info", "hand_cost": "info"}
         for adv in ["round_robin", "equal_pool", "best_single", "hand_tuned", "hand_cost"]:
             m, lo, hi = diff_ci("value_price", adv)
-            req = adv in ("round_robin", "equal_pool")
-            verdict = (lo > 0) if req else None
-            rec(f"R5 {tag} value-price > {adv}" + (" (REQUIRED)" if req else " (strong/adversary)"),
-                verdict, f"Δ={m:+.4f} 95%CI[{lo:+.4f},{hi:+.4f}]")
+            kind = kinds[adv]
+            verdict = None if kind == "info" else (lo > 0)   # strict: CI must exclude 0
+            note = "" if (verdict is None or lo > 0) else "  (CI overlaps 0 → honest tie/loss)"
+            rec(f"R5 {tag} value-price > {adv} ({kind})",
+                verdict, f"Δ={m:+.4f} 95%CI[{lo:+.4f},{hi:+.4f}]{note}")
     _ceiling(info, fleet, rec)
     # dump
     json.dump({"fleet": fleet, "n_stream": len(stream), "error_agreement": ec},

@@ -30,13 +30,31 @@ def load_run(short, domain):
     p = os.path.join(RAW, f"{short}__{domain}.json")
     return json.load(open(p)) if os.path.exists(p) else None
 
+# Flag #2: text-output analog of v1's artifact guard. A model that silently degrades
+# (truncation / refusal loops / format collapse under load) emits UNPARSEABLE output,
+# not a wrong label — that is plumbing, not capability, and must not be recorded as a
+# low-I capability point. Runs with > this fraction of '?' are excluded + logged.
+DEGRADED_UNPARSED = 0.50
+_logged_degraded = set()
+
+def unparsed_rate(run):
+    return float(np.mean([o["pred"] == "?" for o in run.values()])) if run else 1.0
+
 def present_models(domain):
     import run_v2
-    out = []
+    n = D.load(domain)["n"]; out = []
     for tag, short, params in run_v2.LADDER:
         c = load_run(short, domain)
-        if c and len(c) >= 0.95 * D.load(domain)["n"]:
-            out.append((short, params))
+        if not c or len(c) < 0.95 * n:
+            continue
+        ur = unparsed_rate(c)
+        if ur > DEGRADED_UNPARSED:
+            key = (short, domain)
+            if key not in _logged_degraded:
+                print(f"     !! EXCLUDED {short}/{domain}: {ur:.0%} unparseable — suspected "
+                      f"degradation (plumbing), not capability."); _logged_degraded.add(key)
+            continue
+        out.append((short, params))
     return out
 
 def confusion(run, classes, ylab, ids=None):
@@ -80,8 +98,15 @@ def mean_tokens(run):
     return float(np.mean(t)) if t else float("nan")
 
 def mean_latency(run):
+    """MEDIAN per-call latency (s), load-robust. (Flag #1) The post-hoc eviction fix
+    (run_v2.unload) injects one-time model-LOAD time into the first call of each batch;
+    the MEAN would be biased by that single outlier — unevenly, since bigger models load
+    slower — distorting the R3/R5 cost ranking that the headline depends on. The median
+    excludes the lone load call and reflects generation cost. Pre-registration named
+    *mean* latency (SECONDARY cost); we report median for this measurement-artifact reason
+    and disclose it in docs/09. The PRIMARY cost — tokens — is load-free and unchanged."""
     t = [(o.get("total_ns") or 0) / 1e9 for o in run.values() if o.get("total_ns")]
-    return float(np.mean(t)) if t else float("nan")
+    return float(np.median(t)) if t else float("nan")
 
 def split(domain, seed):
     """Re-derive a seeded stratified fit/holdout split for CI over seeds."""
