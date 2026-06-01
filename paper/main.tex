@@ -575,20 +575,24 @@ solve it. On the empirical side: the in-sample $\Delta G=\I$ is an arithmetic id
 capability tracking, the out-of-sample tracking, and R5 are empirical; R3 is an $\I$/compute curve across model
 scale, not a within-model prompt ablation; the calibration in R2 is constructed from the confusion matrix, not a
 probability the model reported, so the dissipation measured is that of a stated belief over those predictions;
-and the whole test is one task on one corpus --- evidence that the bridge holds there, not a universal law.
+and the empirical scope is three task domains and a ten-model, five-family ladder (\S\ref{sec:v2}) --- evidence
+the bridge \emph{generalizes across these}, not yet a universal law, and not independently replicated.
 Degenerate runs in which a model emits no action (a serving/plumbing failure, not a decision) are detected and
 excluded rather than reported as low-$\I$ capability. The alignment theorem is mean-field with a linearized
 landscape and a quasi-static dispersion $V$; a fully coupled treatment, and an endogenous reward gradient $g$ in
 a closed multi-agent world, remain open.
 
-\paragraph{The decisive test.} The present evidence shows the laws are well-defined and hold on one task; it
-does not establish them as general. The experiment that would do so --- or falsify the framework --- is direct:
-on a fleet of \emph{heterogeneous, resource-constrained} agents (specialists perceiving different slices of
-$X$, under a real compute budget), does value-pricing measurably beat a strong hand-tuned orchestration
-baseline, and does collective throughput obey the predicted ceiling $\sum_a G_a\le H(X)$ quantitatively? A
-negative there --- pricing failing to beat the baseline even under cost and diversity, or throughput exceeding
-the entropy ceiling --- would refute the governance claim at its center. We have shown the bridge holds; this is
-the experiment that would show it \emph{matters}.
+\paragraph{What remains decisive.} The scale-up (\S\ref{sec:v2}) already ran the heterogeneous,
+resource-constrained fleet test the governance claim turns on --- specialists perceiving different slices of $X$
+under a compute budget --- and the answer was scoped, not triumphant: value-pricing beats naive and cost-blind
+allocation but only \emph{matches} a strong cost-aware hand-tuned baseline, while collective throughput obeyed
+the predicted ceiling $\sum_a G_a\le H(X)$. Two things would still be decisive, and neither is yet done. First, a
+\emph{dynamic} multi-agent setting in which the goals $k$ themselves evolve over time
+(\S\ref{sec:dynamics}--\ref{sec:alignment}), rather than the static classification tested here --- that is the
+regime where the is/ought asymmetry and the alignment-stability theorem actually bite, and a failure of the
+predicted flows there would refute the dynamical layer. Second, independent replication at larger scale. We have
+shown the single-frame laws \emph{generalize} across three task shapes and a ten-model ladder; what remains is to
+show the framework governs a population whose goals \emph{move}.
 
 \section{Conclusion}\label{sec:conclusion}
 
@@ -596,8 +600,9 @@ Stripped of morality, price, and psychology, value is a structural quantity with
 a capacity limit ($\Delta G=\I(X;Y)$), a Second Law ($G=\KL{q}{r}-\KL{q}{p}$), a frame-independent price, a
 fleet entropy ceiling, and an alignment-stability law. Shannon's own quantities --- entropy, divergence, mutual
 information, the Fisher metric --- reappear unbidden throughout, which is the strongest internal evidence that
-the abstraction is real rather than decorative. On live language models the single-frame laws hold to high
-precision, and the one fleet-level claim with a genuine precondition is reported with its boundary intact. The
+the abstraction is real rather than decorative. On live language models --- across three task domains and a
+ten-model, five-family ladder, pre-registered --- the single-frame laws hold to high precision and generalize,
+and the one fleet-level claim with a genuine precondition is reported with its boundary intact. The
 quantity is frame-relative; the laws relating frames are universal; and they are now testable on the artificial
 agents the theory was built to govern.
 
