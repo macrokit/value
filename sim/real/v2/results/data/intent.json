@@ -1,0 +1,1469 @@
+{
+  "domain": "intent",
+  "classes": [
+    "alarm",
+    "timer",
+    "reminder",
+    "calendar",
+    "todo_list",
+    "meeting_schedule"
+  ],
+  "gloss": {
+    "alarm": "set/change/check a wake-up ALARM at a clock time",
+    "timer": "set/check a countdown TIMER for a duration",
+    "reminder": "manage REMINDERS to do a specific task",
+    "calendar": "ask what events are on the CALENDAR by date",
+    "todo_list": "manage a TO-DO LIST of tasks for the day",
+    "meeting_schedule": "ask when a MEETING with someone is scheduled"
+  },
+  "items": [
+    {
+      "text": "what's on my list of things to remember",
+      "gold": "reminder",
+      "id": 0
+    },
+    {
+      "text": "how is my calendar looking for may 6th",
+      "gold": "calendar",
+      "id": 1
+    },
+    {
+      "text": "i need to know if cleaning out the fridge is on my to do list",
+      "gold": "todo_list",
+      "id": 2
+    },
+    {
+      "text": "walk me through the items on my reminder list",
+      "gold": "reminder",
+      "id": 3
+    },
+    {
+      "text": "the 21st, what is on my calendar",
+      "gold": "calendar",
+      "id": 4
+    },
+    {
+      "text": "does my errand list have goodwill on it",
+      "gold": "todo_list",
+      "id": 5
+    },
+    {
+      "text": "did i jot down a time to see my accountant on my to do list",
+      "gold": "todo_list",
+      "id": 6
+    },
+    {
+      "text": "read my complete todo list to me",
+      "gold": "todo_list",
+      "id": 7
+    },
+    {
+      "text": "could you set a timer",
+      "gold": "timer",
+      "id": 8
+    },
+    {
+      "text": "did i add to my reminder list that i need to take the car in for an oil change",
+      "gold": "reminder",
+      "id": 9
+    },
+    {
+      "text": "have i got any meetings today with sara",
+      "gold": "meeting_schedule",
+      "id": 10
+    },
+    {
+      "text": "am i scheduled for any meetings between noon and one",
+      "gold": "meeting_schedule",
+      "id": 11
+    },
+    {
+      "text": "what chores do i have waiting on my reminder list",
+      "gold": "todo_list",
+      "id": 12
+    },
+    {
+      "text": "do i have any meetings with dave today",
+      "gold": "meeting_schedule",
+      "id": 13
+    },
+    {
+      "text": "recite my to do list",
+      "gold": "todo_list",
+      "id": 14
+    },
+    {
+      "text": "can you repeat my list back to me",
+      "gold": "reminder",
+      "id": 15
+    },
+    {
+      "text": "i wish to have a 10 minute timer",
+      "gold": "timer",
+      "id": 16
+    },
+    {
+      "text": "is my meeting with frank on my list of reminders",
+      "gold": "reminder",
+      "id": 17
+    },
+    {
+      "text": "create alarms for 8 pm and 9 pm",
+      "gold": "alarm",
+      "id": 18
+    },
+    {
+      "text": "let's go through my to do list items please",
+      "gold": "todo_list",
+      "id": 19
+    },
+    {
+      "text": "i need an alarm set",
+      "gold": "alarm",
+      "id": 20
+    },
+    {
+      "text": "check my schedule for meetings today",
+      "gold": "meeting_schedule",
+      "id": 21
+    },
+    {
+      "text": "set a timer for me",
+      "gold": "timer",
+      "id": 22
+    },
+    {
+      "text": "set the timer for 10 minutes",
+      "gold": "timer",
+      "id": 23
+    },
+    {
+      "text": "read back my day for march 4th 2019",
+      "gold": "calendar",
+      "id": 24
+    },
+    {
+      "text": "set an alarm to work out and another to go home",
+      "gold": "alarm",
+      "id": 25
+    },
+    {
+      "text": "tell me my reminders",
+      "gold": "reminder",
+      "id": 26
+    },
+    {
+      "text": "do you know what things i wanted to remember",
+      "gold": "reminder",
+      "id": 27
+    },
+    {
+      "text": "what must i do today",
+      "gold": "todo_list",
+      "id": 28
+    },
+    {
+      "text": "read my appointments for march 2",
+      "gold": "calendar",
+      "id": 29
+    },
+    {
+      "text": "what are the things that i wanted to keep in mind",
+      "gold": "reminder",
+      "id": 30
+    },
+    {
+      "text": "please set an alarm for me",
+      "gold": "alarm",
+      "id": 31
+    },
+    {
+      "text": "do i have any meetings coming up with dan",
+      "gold": "meeting_schedule",
+      "id": 32
+    },
+    {
+      "text": "do i have anything on my calendar for march 2nd",
+      "gold": "calendar",
+      "id": 33
+    },
+    {
+      "text": "please start counting down from 10 minutes",
+      "gold": "timer",
+      "id": 34
+    },
+    {
+      "text": "how many items are on my todo list",
+      "gold": "todo_list",
+      "id": 35
+    },
+    {
+      "text": "do my task list have call kath on it",
+      "gold": "todo_list",
+      "id": 36
+    },
+    {
+      "text": "can you read my list back to me",
+      "gold": "reminder",
+      "id": 37
+    },
+    {
+      "text": "will you please tell me my to do list",
+      "gold": "todo_list",
+      "id": 38
+    },
+    {
+      "text": "10 minutes is what the timer should be set at",
+      "gold": "timer",
+      "id": 39
+    },
+    {
+      "text": "please look to see if paying bills is on my reminders list currently",
+      "gold": "reminder",
+      "id": 40
+    },
+    {
+      "text": "tell me what's on the calendar for saturday",
+      "gold": "calendar",
+      "id": 41
+    },
+    {
+      "text": "read back the reminder list",
+      "gold": "reminder",
+      "id": 42
+    },
+    {
+      "text": "set an alarm for me",
+      "gold": "alarm",
+      "id": 43
+    },
+    {
+      "text": "i need to know if i have meetings from 3 to 6 pm",
+      "gold": "meeting_schedule",
+      "id": 44
+    },
+    {
+      "text": "alert me in 20 minutes",
+      "gold": "timer",
+      "id": 45
+    },
+    {
+      "text": "what is my meeting schedule today",
+      "gold": "meeting_schedule",
+      "id": 46
+    },
+    {
+      "text": "how many meetings do i have scheduled between 10 and 3",
+      "gold": "meeting_schedule",
+      "id": 47
+    },
+    {
+      "text": "did i make a note on my todo list to mop the bathroom floor",
+      "gold": "todo_list",
+      "id": 48
+    },
+    {
+      "text": "what events are on my calendar for april 1st",
+      "gold": "calendar",
+      "id": 49
+    },
+    {
+      "text": "will you repeat my reminder list",
+      "gold": "reminder",
+      "id": 50
+    },
+    {
+      "text": "set a timer for 5 minutes from now",
+      "gold": "timer",
+      "id": 51
+    },
+    {
+      "text": "did i add purchase tickets to the penguin game to my todo list",
+      "gold": "todo_list",
+      "id": 52
+    },
+    {
+      "text": "is changing the water filter on my to do list right now",
+      "gold": "todo_list",
+      "id": 53
+    },
+    {
+      "text": "read my list of reminders to me",
+      "gold": "reminder",
+      "id": 54
+    },
+    {
+      "text": "can you describe my list back to me",
+      "gold": "reminder",
+      "id": 55
+    },
+    {
+      "text": "please set two alarms, one at 12 pm and the next at 1 pm",
+      "gold": "alarm",
+      "id": 56
+    },
+    {
+      "text": "set a timer for twelve seconds",
+      "gold": "timer",
+      "id": 57
+    },
+    {
+      "text": "would you set my alarm for 10:00 and another for 3:00",
+      "gold": "alarm",
+      "id": 58
+    },
+    {
+      "text": "do i have any meetings between 1 and 8 pm",
+      "gold": "meeting_schedule",
+      "id": 59
+    },
+    {
+      "text": "tomorrow i need the alarm to go off at 5",
+      "gold": "alarm",
+      "id": 60
+    },
+    {
+      "text": "set me an alarm for 4pm and another for 5pm",
+      "gold": "alarm",
+      "id": 61
+    },
+    {
+      "text": "what is on my calendar next sunday",
+      "gold": "calendar",
+      "id": 62
+    },
+    {
+      "text": "am i supposed to attend any meetings today",
+      "gold": "meeting_schedule",
+      "id": 63
+    },
+    {
+      "text": "set alarm for 5 am",
+      "gold": "alarm",
+      "id": 64
+    },
+    {
+      "text": "i want to set a timer",
+      "gold": "timer",
+      "id": 65
+    },
+    {
+      "text": "let me know what's on my list of reminders",
+      "gold": "reminder",
+      "id": 66
+    },
+    {
+      "text": "do i have any meetings today between 9 and 10:30",
+      "gold": "meeting_schedule",
+      "id": 67
+    },
+    {
+      "text": "what are the thing i told you to help me remember",
+      "gold": "reminder",
+      "id": 68
+    },
+    {
+      "text": "set a timer for 30 minutes",
+      "gold": "timer",
+      "id": 69
+    },
+    {
+      "text": "can you wake me up at noon",
+      "gold": "alarm",
+      "id": 70
+    },
+    {
+      "text": "remind me in (x) hours",
+      "gold": "timer",
+      "id": 71
+    },
+    {
+      "text": "what do i have on my calendar for monday the 1st of march",
+      "gold": "calendar",
+      "id": 72
+    },
+    {
+      "text": "set a six minute timer",
+      "gold": "timer",
+      "id": 73
+    },
+    {
+      "text": "when is my meeting with bob",
+      "gold": "meeting_schedule",
+      "id": 74
+    },
+    {
+      "text": "please set up a timer for me",
+      "gold": "timer",
+      "id": 75
+    },
+    {
+      "text": "set a timer for 5 minutes",
+      "gold": "timer",
+      "id": 76
+    },
+    {
+      "text": "i would like to hear you read my reminder list to me",
+      "gold": "reminder",
+      "id": 77
+    },
+    {
+      "text": "read my calendar events",
+      "gold": "calendar",
+      "id": 78
+    },
+    {
+      "text": "set an alarm for 11 tomorrow",
+      "gold": "alarm",
+      "id": 79
+    },
+    {
+      "text": "can you remind me what i was trying to remember",
+      "gold": "reminder",
+      "id": 80
+    },
+    {
+      "text": "at 9 tomorrow, set off the alarm",
+      "gold": "alarm",
+      "id": 81
+    },
+    {
+      "text": "give me my to-do list",
+      "gold": "todo_list",
+      "id": 82
+    },
+    {
+      "text": "i need to start a timer",
+      "gold": "timer",
+      "id": 83
+    },
+    {
+      "text": "what tasks have i yet to complete off my list",
+      "gold": "todo_list",
+      "id": 84
+    },
+    {
+      "text": "please set up an alarm to go off tomorrow at daybreak",
+      "gold": "alarm",
+      "id": 85
+    },
+    {
+      "text": "tell what is showing on my calendar for the 17th of march",
+      "gold": "calendar",
+      "id": 86
+    },
+    {
+      "text": "what is my plan for the day",
+      "gold": "reminder",
+      "id": 87
+    },
+    {
+      "text": "does today's schedule include any meetings",
+      "gold": "meeting_schedule",
+      "id": 88
+    },
+    {
+      "text": "is laundry on my todo list",
+      "gold": "todo_list",
+      "id": 89
+    },
+    {
+      "text": "are there meetings scheduled for today",
+      "gold": "meeting_schedule",
+      "id": 90
+    },
+    {
+      "text": "do i meet with joan today",
+      "gold": "meeting_schedule",
+      "id": 91
+    },
+    {
+      "text": "what do i have to do",
+      "gold": "todo_list",
+      "id": 92
+    },
+    {
+      "text": "set the alarm now",
+      "gold": "alarm",
+      "id": 93
+    },
+    {
+      "text": "what items do i need to do",
+      "gold": "todo_list",
+      "id": 94
+    },
+    {
+      "text": "do i have any meetings today between 6 and 7",
+      "gold": "meeting_schedule",
+      "id": 95
+    },
+    {
+      "text": "is my daughter's birthday on my calendar",
+      "gold": "calendar",
+      "id": 96
+    },
+    {
+      "text": "please set a timer for",
+      "gold": "timer",
+      "id": 97
+    },
+    {
+      "text": "check my reminders for mop and floor",
+      "gold": "reminder",
+      "id": 98
+    },
+    {
+      "text": "what do i have on my list of reminders",
+      "gold": "reminder",
+      "id": 99
+    },
+    {
+      "text": "what reminders did i have",
+      "gold": "reminder",
+      "id": 100
+    },
+    {
+      "text": "i need a timer set please",
+      "gold": "timer",
+      "id": 101
+    },
+    {
+      "text": "do i have any meetings with ben today",
+      "gold": "meeting_schedule",
+      "id": 102
+    },
+    {
+      "text": "set an alarm for 05:00 and one for 16:00",
+      "gold": "alarm",
+      "id": 103
+    },
+    {
+      "text": "set timer for (x) minutes",
+      "gold": "timer",
+      "id": 104
+    },
+    {
+      "text": "the timer should have 10 minutes set to it",
+      "gold": "timer",
+      "id": 105
+    },
+    {
+      "text": "let me hear all meetings for today",
+      "gold": "meeting_schedule",
+      "id": 106
+    },
+    {
+      "text": "do i have anything scheduled on my calendar for next tuesday",
+      "gold": "calendar",
+      "id": 107
+    },
+    {
+      "text": "what's on my calendar for march 01",
+      "gold": "calendar",
+      "id": 108
+    },
+    {
+      "text": "what is on my to-do list",
+      "gold": "todo_list",
+      "id": 109
+    },
+    {
+      "text": "do i have any meetings today between 2 and 3",
+      "gold": "meeting_schedule",
+      "id": 110
+    },
+    {
+      "text": "set a 1 minute timer",
+      "gold": "timer",
+      "id": 111
+    },
+    {
+      "text": "what meetings are scheduled for today",
+      "gold": "meeting_schedule",
+      "id": 112
+    },
+    {
+      "text": "is buying a light bulb on my reminders list",
+      "gold": "reminder",
+      "id": 113
+    },
+    {
+      "text": "is event on my calendar",
+      "gold": "calendar",
+      "id": 114
+    },
+    {
+      "text": "what is on my to do list",
+      "gold": "todo_list",
+      "id": 115
+    },
+    {
+      "text": "what am i supposed to be doing today",
+      "gold": "calendar",
+      "id": 116
+    },
+    {
+      "text": "set alarm for 6am",
+      "gold": "alarm",
+      "id": 117
+    },
+    {
+      "text": "schedule an alarm",
+      "gold": "alarm",
+      "id": 118
+    },
+    {
+      "text": "do i have to meet the dev squad to day",
+      "gold": "meeting_schedule",
+      "id": 119
+    },
+    {
+      "text": "are any meetings scheduled for today",
+      "gold": "meeting_schedule",
+      "id": 120
+    },
+    {
+      "text": "check my to do list to see if jewelry repair is listed",
+      "gold": "todo_list",
+      "id": 121
+    },
+    {
+      "text": "set a 5 am alarm please",
+      "gold": "alarm",
+      "id": 122
+    },
+    {
+      "text": "i really need to set a timer",
+      "gold": "timer",
+      "id": 123
+    },
+    {
+      "text": "i'll need you to set a timer for 10 minutes",
+      "gold": "timer",
+      "id": 124
+    },
+    {
+      "text": "what is the date of my next scheduled dentist appointment",
+      "gold": "calendar",
+      "id": 125
+    },
+    {
+      "text": "assist me by setting my alarm for 9:00 and another for 11:00",
+      "gold": "alarm",
+      "id": 126
+    },
+    {
+      "text": "remind me of what i asked you to remember",
+      "gold": "reminder",
+      "id": 127
+    },
+    {
+      "text": "please read all the items on my reminder list",
+      "gold": "reminder",
+      "id": 128
+    },
+    {
+      "text": "get a 3 minute timer",
+      "gold": "timer",
+      "id": 129
+    },
+    {
+      "text": "did i put an item on the calendar to get the dog neutered",
+      "gold": "calendar",
+      "id": 130
+    },
+    {
+      "text": "could you set up a timer for me",
+      "gold": "timer",
+      "id": 131
+    },
+    {
+      "text": "i need to hear my todo list",
+      "gold": "todo_list",
+      "id": 132
+    },
+    {
+      "text": "check my to do list to see if feeding the fish is on it",
+      "gold": "todo_list",
+      "id": 133
+    },
+    {
+      "text": "do i have anything scheduled on january 1st",
+      "gold": "calendar",
+      "id": 134
+    },
+    {
+      "text": "please run a timer for me",
+      "gold": "timer",
+      "id": 135
+    },
+    {
+      "text": "is my schedule clear with no meetings with dan today",
+      "gold": "meeting_schedule",
+      "id": 136
+    },
+    {
+      "text": "about how many meetings am i attending between 12 and 3 today",
+      "gold": "meeting_schedule",
+      "id": 137
+    },
+    {
+      "text": "i need to know if sorting the mail is on my to do list",
+      "gold": "todo_list",
+      "id": 138
+    },
+    {
+      "text": "have i set aside a time on my to do list to do my taxes",
+      "gold": "todo_list",
+      "id": 139
+    },
+    {
+      "text": "tell me everything i included on my list of things to remember for later",
+      "gold": "reminder",
+      "id": 140
+    },
+    {
+      "text": "tell me the content of my to do list today",
+      "gold": "todo_list",
+      "id": 141
+    },
+    {
+      "text": "tell me what is on my to do list",
+      "gold": "todo_list",
+      "id": 142
+    },
+    {
+      "text": "do i have any meetings today between 9 and 10",
+      "gold": "meeting_schedule",
+      "id": 143
+    },
+    {
+      "text": "please create an alarm for 12 noon",
+      "gold": "alarm",
+      "id": 144
+    },
+    {
+      "text": "i wanna have an alarm",
+      "gold": "alarm",
+      "id": 145
+    },
+    {
+      "text": "does my calendar include an event called shana's baby shower",
+      "gold": "calendar",
+      "id": 146
+    },
+    {
+      "text": "what is currently on my calendar for friday the 1st",
+      "gold": "calendar",
+      "id": 147
+    },
+    {
+      "text": "what time is my meeting with steve",
+      "gold": "meeting_schedule",
+      "id": 148
+    },
+    {
+      "text": "read my to-do list to me",
+      "gold": "todo_list",
+      "id": 149
+    },
+    {
+      "text": "i would like you to set the timer to go off in ten minutes",
+      "gold": "timer",
+      "id": 150
+    },
+    {
+      "text": "is cleaning the outside windows on my todo list",
+      "gold": "todo_list",
+      "id": 151
+    },
+    {
+      "text": "what is tuesday's calendar like",
+      "gold": "calendar",
+      "id": 152
+    },
+    {
+      "text": "when is babysitting on my to do list",
+      "gold": "todo_list",
+      "id": 153
+    },
+    {
+      "text": "my meeting with alice is scheduled for when",
+      "gold": "meeting_schedule",
+      "id": 154
+    },
+    {
+      "text": "tell me what is on my calendar for april 1",
+      "gold": "calendar",
+      "id": 155
+    },
+    {
+      "text": "i need a timer set for 15 minutes",
+      "gold": "timer",
+      "id": 156
+    },
+    {
+      "text": "what do i have on my reminder list",
+      "gold": "reminder",
+      "id": 157
+    },
+    {
+      "text": "reminders of my list is what",
+      "gold": "reminder",
+      "id": 158
+    },
+    {
+      "text": "what's my schedule like for thursday the 14th",
+      "gold": "calendar",
+      "id": 159
+    },
+    {
+      "text": "did i set a day on my calendar for voting in the next election",
+      "gold": "calendar",
+      "id": 160
+    },
+    {
+      "text": "i need to know everything on my to do list currently",
+      "gold": "todo_list",
+      "id": 161
+    },
+    {
+      "text": "did i schedule any meetings for today",
+      "gold": "meeting_schedule",
+      "id": 162
+    },
+    {
+      "text": "set alarm for noon",
+      "gold": "alarm",
+      "id": 163
+    },
+    {
+      "text": "set a new timer for ten seconds",
+      "gold": "timer",
+      "id": 164
+    },
+    {
+      "text": "i need my todo list read",
+      "gold": "todo_list",
+      "id": 165
+    },
+    {
+      "text": "how do i set a timer",
+      "gold": "timer",
+      "id": 166
+    },
+    {
+      "text": "let's get a timer going for 10 minutes",
+      "gold": "timer",
+      "id": 167
+    },
+    {
+      "text": "tell me if flipping the mattress is on my list of reminders please",
+      "gold": "reminder",
+      "id": 168
+    },
+    {
+      "text": "i'd like to just confirm all of the reminders currently on my list of reminders, please",
+      "gold": "reminder",
+      "id": 169
+    },
+    {
+      "text": "do i have any meetings with mark today",
+      "gold": "meeting_schedule",
+      "id": 170
+    },
+    {
+      "text": "whats on my reminder list, read back",
+      "gold": "reminder",
+      "id": 171
+    },
+    {
+      "text": "what were the things i want to recall",
+      "gold": "reminder",
+      "id": 172
+    },
+    {
+      "text": "can you tell me what reminders i've set",
+      "gold": "reminder",
+      "id": 173
+    },
+    {
+      "text": "what do i have scheduled for march 2",
+      "gold": "calendar",
+      "id": 174
+    },
+    {
+      "text": "please read out my list of tasks to accomplish",
+      "gold": "todo_list",
+      "id": 175
+    },
+    {
+      "text": "is my day open for march 4th 2019",
+      "gold": "calendar",
+      "id": 176
+    },
+    {
+      "text": "lets set a timer for me",
+      "gold": "timer",
+      "id": 177
+    },
+    {
+      "text": "retrieve events on my calendar",
+      "gold": "calendar",
+      "id": 178
+    },
+    {
+      "text": "please list my meetings for today from 8:00 am to 2:00 pm",
+      "gold": "meeting_schedule",
+      "id": 179
+    },
+    {
+      "text": "when is my meeting with infrastructure",
+      "gold": "meeting_schedule",
+      "id": 180
+    },
+    {
+      "text": "i would like to have an alarm set for me",
+      "gold": "alarm",
+      "id": 181
+    },
+    {
+      "text": "what is on my calander for valentines day",
+      "gold": "calendar",
+      "id": 182
+    },
+    {
+      "text": "do you see any meetings with john on my schedule today",
+      "gold": "meeting_schedule",
+      "id": 183
+    },
+    {
+      "text": "what is it i wanted to bear in mind",
+      "gold": "reminder",
+      "id": 184
+    },
+    {
+      "text": "set the timer for me please",
+      "gold": "timer",
+      "id": 185
+    },
+    {
+      "text": "what are the things that i have for today",
+      "gold": "todo_list",
+      "id": 186
+    },
+    {
+      "text": "please read my todo list",
+      "gold": "todo_list",
+      "id": 187
+    },
+    {
+      "text": "have i scheduled anything on march 2nd on my calendar",
+      "gold": "calendar",
+      "id": 188
+    },
+    {
+      "text": "i need an alarm set for 10:00 and another set for 3:00",
+      "gold": "alarm",
+      "id": 189
+    },
+    {
+      "text": "please set a timer to go off in 45 minutes",
+      "gold": "timer",
+      "id": 190
+    },
+    {
+      "text": "can you tell me my to do list",
+      "gold": "todo_list",
+      "id": 191
+    },
+    {
+      "text": "i have what to do on wednesday",
+      "gold": "calendar",
+      "id": 192
+    },
+    {
+      "text": "i must set a timer",
+      "gold": "timer",
+      "id": 193
+    },
+    {
+      "text": "what time is my haircut on wednesday",
+      "gold": "calendar",
+      "id": 194
+    },
+    {
+      "text": "i want an alarm for 6 am",
+      "gold": "alarm",
+      "id": 195
+    },
+    {
+      "text": "tell me what is on my calendar for march 2",
+      "gold": "calendar",
+      "id": 196
+    },
+    {
+      "text": "set an alarm for me for 10:00 and another one set for 4:00",
+      "gold": "alarm",
+      "id": 197
+    },
+    {
+      "text": "is a meeting with ruth on my schedule today",
+      "gold": "meeting_schedule",
+      "id": 198
+    },
+    {
+      "text": "i gotta have a 10 minute timer",
+      "gold": "timer",
+      "id": 199
+    },
+    {
+      "text": "i want to be woken up at 9 tomorrow",
+      "gold": "alarm",
+      "id": 200
+    },
+    {
+      "text": "can you tell me what my calendar is like for thursday the 14th",
+      "gold": "calendar",
+      "id": 201
+    },
+    {
+      "text": "make a new alarm for 6 in the morning",
+      "gold": "alarm",
+      "id": 202
+    },
+    {
+      "text": "i gotta set a timer",
+      "gold": "timer",
+      "id": 203
+    },
+    {
+      "text": "are there any meetings between 2 and 5 pm",
+      "gold": "meeting_schedule",
+      "id": 204
+    },
+    {
+      "text": "what do i have going on between 9 and 10",
+      "gold": "meeting_schedule",
+      "id": 205
+    },
+    {
+      "text": "what time i have to meet mr accountant",
+      "gold": "meeting_schedule",
+      "id": 206
+    },
+    {
+      "text": "what appointments do i have tomorrow after 1:00pm",
+      "gold": "calendar",
+      "id": 207
+    },
+    {
+      "text": "what meetings do i have today from 3 to 4",
+      "gold": "meeting_schedule",
+      "id": 208
+    },
+    {
+      "text": "what meetings are on my schedule today between 1:00 pm and 4:00 pm",
+      "gold": "meeting_schedule",
+      "id": 209
+    },
+    {
+      "text": "is taking out the trash on my to do list",
+      "gold": "todo_list",
+      "id": 210
+    },
+    {
+      "text": "give me my todo list",
+      "gold": "todo_list",
+      "id": 211
+    },
+    {
+      "text": "set a brand new timer for eight seconds",
+      "gold": "timer",
+      "id": 212
+    },
+    {
+      "text": "i need an alarm set for 5:30 pm",
+      "gold": "alarm",
+      "id": 213
+    },
+    {
+      "text": "did i mark the mechanic's appointment on my calendar",
+      "gold": "calendar",
+      "id": 214
+    },
+    {
+      "text": "do i have any meetings on my schedule today",
+      "gold": "meeting_schedule",
+      "id": 215
+    },
+    {
+      "text": "tomorrow i need an alarm at 7 tomorrow",
+      "gold": "alarm",
+      "id": 216
+    },
+    {
+      "text": "i want to hear everything on my reminder list",
+      "gold": "reminder",
+      "id": 217
+    },
+    {
+      "text": "read my calendar for march 7th",
+      "gold": "calendar",
+      "id": 218
+    },
+    {
+      "text": "set an alarm for 9 tomorrow",
+      "gold": "alarm",
+      "id": 219
+    },
+    {
+      "text": "set a five minute timer",
+      "gold": "timer",
+      "id": 220
+    },
+    {
+      "text": "initiate a new alarm please",
+      "gold": "alarm",
+      "id": 221
+    },
+    {
+      "text": "remind me of the items on my list of things to remember",
+      "gold": "reminder",
+      "id": 222
+    },
+    {
+      "text": "what kinds of things are you supposed to remind me of",
+      "gold": "reminder",
+      "id": 223
+    },
+    {
+      "text": "i need an alarm to go off tomorrow at five fifteen",
+      "gold": "alarm",
+      "id": 224
+    },
+    {
+      "text": "set an alarm for 5am",
+      "gold": "alarm",
+      "id": 225
+    },
+    {
+      "text": "set a timer to go off in 5 minutes",
+      "gold": "timer",
+      "id": 226
+    },
+    {
+      "text": "does my calendar have anything for january 1st",
+      "gold": "calendar",
+      "id": 227
+    },
+    {
+      "text": "help me wake up with an alarm at 5:30am",
+      "gold": "alarm",
+      "id": 228
+    },
+    {
+      "text": "read me my schedule for march 2",
+      "gold": "calendar",
+      "id": 229
+    },
+    {
+      "text": "is there a reminder for my aa meeting on my list",
+      "gold": "reminder",
+      "id": 230
+    },
+    {
+      "text": "please make sure the alarm is set",
+      "gold": "alarm",
+      "id": 231
+    },
+    {
+      "text": "what's in the books for april 30th",
+      "gold": "calendar",
+      "id": 232
+    },
+    {
+      "text": "is the meeting with lisa today",
+      "gold": "meeting_schedule",
+      "id": 233
+    },
+    {
+      "text": "i need alarm for both 4am and 7am",
+      "gold": "alarm",
+      "id": 234
+    },
+    {
+      "text": "please set an alarm for mid day",
+      "gold": "alarm",
+      "id": 235
+    },
+    {
+      "text": "check my domestic to do list for carpet cleaning",
+      "gold": "todo_list",
+      "id": 236
+    },
+    {
+      "text": "what are the things i wanted to recall",
+      "gold": "reminder",
+      "id": 237
+    },
+    {
+      "text": "i want to make an alarm",
+      "gold": "alarm",
+      "id": 238
+    },
+    {
+      "text": "can you tell me all the reminders i have set on my reminder list",
+      "gold": "reminder",
+      "id": 239
+    }
+  ],
+  "split": {
+    "fit": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      8,
+      11,
+      12,
+      13,
+      15,
+      16,
+      18,
+      22,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      33,
+      36,
+      38,
+      39,
+      42,
+      46,
+      48,
+      49,
+      50,
+      51,
+      53,
+      54,
+      55,
+      56,
+      57,
+      61,
+      63,
+      65,
+      70,
+      74,
+      77,
+      78,
+      79,
+      80,
+      81,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      97,
+      98,
+      103,
+      106,
+      109,
+      110,
+      111,
+      114,
+      116,
+      119,
+      120,
+      121,
+      122,
+      125,
+      126,
+      127,
+      128,
+      132,
+      133,
+      134,
+      135,
+      138,
+      141,
+      142,
+      143,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      154,
+      156,
+      159,
+      160,
+      162,
+      163,
+      164,
+      166,
+      167,
+      168,
+      171,
+      177,
+      185,
+      189,
+      191,
+      192,
+      193,
+      198,
+      200,
+      201,
+      202,
+      204,
+      206,
+      207,
+      209,
+      214,
+      216,
+      217,
+      218,
+      219,
+      220,
+      222,
+      226,
+      228,
+      235,
+      236,
+      238,
+      239
+    ],
+    "holdout": [
+      5,
+      6,
+      7,
+      9,
+      10,
+      14,
+      17,
+      19,
+      20,
+      21,
+      23,
+      25,
+      31,
+      32,
+      34,
+      35,
+      37,
+      40,
+      41,
+      43,
+      44,
+      45,
+      47,
+      52,
+      58,
+      59,
+      60,
+      62,
+      64,
+      66,
+      67,
+      68,
+      69,
+      71,
+      72,
+      73,
+      75,
+      76,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      95,
+      96,
+      99,
+      100,
+      101,
+      102,
+      104,
+      105,
+      107,
+      108,
+      112,
+      113,
+      115,
+      117,
+      118,
+      123,
+      124,
+      129,
+      130,
+      131,
+      136,
+      137,
+      139,
+      140,
+      144,
+      151,
+      152,
+      153,
+      155,
+      157,
+      158,
+      161,
+      165,
+      169,
+      170,
+      172,
+      173,
+      174,
+      175,
+      176,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      186,
+      187,
+      188,
+      190,
+      194,
+      195,
+      196,
+      197,
+      199,
+      203,
+      205,
+      208,
+      210,
+      211,
+      212,
+      213,
+      215,
+      221,
+      223,
+      224,
+      225,
+      227,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      237
+    ]
+  },
+  "n": 240,
+  "K": 6
+}
