@@ -37,6 +37,7 @@ it forces the theory to make the frame explicit.
 | [`03`](docs/03-cross-frame-value.md) | Cross-frame / multi-agent | **Value is frame-relative; price is frame-independent.** Exchange via shadow price `λ=K/E`; invariant = Fisher–Rao metric (Čencov); alignment `cos θ` sets positive/negative-sum |
 | [`04`](docs/04-multi-agent-capacity-region.md) | Fleet governance | **Collective value-throughput ≤ H(X)** — the world's entropy caps the whole fleet; region shaped by alignment; operating point set by price |
 | [`05`](docs/05-dynamics.md) | The equations of motion | **Learning = value-recovery, dissipation = regret**; natural-gradient (Fisher) belief flow, tâtonnement price flow, control+selection goal flow; alignment = a stability condition; a moving world forbids zero dissipation |
+| [`06`](docs/06-real-agent-test.md) | **Real-agent test** | Live LLM ladder (1.5B→7B) obeys the laws on its own outputs: `ΔG`∝`I(X;Y)` (**r=0.996**); over-confidence dissipates value (weak model → negative growth); diversity > redundancy; **pricing beats pooling and wins under a compute budget — but no demon on a correlated ladder** (honest negative) |
 
 ### The three load-bearing equations
 
@@ -78,8 +79,26 @@ produces those numbers. **20/20 checks pass** (`python3 sim/experiments.py`):
 - **E5** dissipation = regret; a drifting world floors dissipation at ~0.18 nats while a stationary one → 0
   (the Dynamical Second Law).
 
-These confirm the math is self-consistent and correctly derived; testing whether *real LLM agents* obey the
-laws is the next step ([`sim/README.md`](sim/README.md) is honest about the scope).
+These confirm the math is self-consistent and correctly derived. The sim is necessary but circular (the worlds
+are built from the distributions the formulas assume), so the next step is **real agents**.
+
+[`sim/real/`](sim/real/) instantiates the theory with a ladder of **live local LLMs** (1.5B → 3B → 7B) on a
+frozen 100-item decision task — `X` = the correct action, `Y_a` = the model's chosen action — and measures the
+value quantities from their *actual outputs* (`python3 sim/real/experiments_real.py`; full write-up in
+[`docs/06`](docs/06-real-agent-test.md)):
+
+- **R1** `I(X;Y)` rises with model scale (1.28 → 1.56 → 1.78 nats) and out-of-sample `ΔG` tracks it at
+  **Pearson r = 0.996** — value-throughput is information-throughput, on real behavior.
+- **R2** over-confidence is dissipation in nats, and it *shrinks* with capability (4.17 → 2.11 → 0.69); the 1.5B
+  model's confident error drives realized growth **negative**.
+- **R3** the cheapest model delivers the most `I(X;Y)` **per second of compute** (0.74 vs 0.30 nats/s).
+- **R4** a diverse pair covers more of `H(X)` than either alone (+0.09 nats); an identical re-run adds **0**.
+- **R5** (honest) a price/Kelly fleet beats equal-weight pooling but **not** the single best model — *no demon
+  on a correlated ladder* — **yet** under a compute budget an `I/cost` price wins (0.39 vs 0.24 nats/s). Pricing
+  pays where agents are priced and diverse, not merely pooled.
+
+So the laws hold on real agents where the single-frame theory is testable; the one fleet-level claim with a
+genuine precondition (perception diversity) is reported with its boundary, not oversold.
 
 ## Honest status
 
@@ -98,9 +117,10 @@ assumptions.
 ## Reading order
 
 `00` (framing) → `01` (the measure) → `02` (the limit) → `03` (many agents) → `04` (the fleet) → `05`
-(dynamics). Each builds on the last; each is self-contained enough to skim from its headline box. Docs 01–04
-are the **statics** (conservation laws, equilibria); doc 05 is the **dynamics** (equations of motion).
-Together they form a thermodynamics of value.
+(dynamics) → `06` (the real-agent test). Each builds on the last; each is self-contained enough to skim from
+its headline box. Docs 01–04 are the **statics** (conservation laws, equilibria); doc 05 is the **dynamics**
+(equations of motion); doc 06 is the **evidence** (live LLMs measured against the laws). Together they form a
+thermodynamics of value, with a real-agent test.
 
 ## Provenance & non-goals
 

@@ -1,0 +1,57 @@
+[
+  {
+    "name": "R1 in-sample identity \u0394G == I(X;Y)",
+    "verdict": "PASS",
+    "detail": "max|\u0394G\u2212I|=0.0000 nats"
+  },
+  {
+    "name": "R1 I(X;Y) rises along weak\u2192strong ladder",
+    "verdict": "PASS",
+    "detail": "qwen1.5b:1.277 \u2264 qwen3b:1.561 \u2264 qwen7b:1.779"
+  },
+  {
+    "name": "R1 \u0394G_holdout correlates with I(X;Y)",
+    "verdict": "PASS",
+    "detail": "pearson r=0.996"
+  },
+  {
+    "name": "R2 over-confidence dissipates value (qwen1.5b)",
+    "verdict": "PASS",
+    "detail": "G_over=-3.2545 < G_cal=+0.9148  (dissipated 4.1693 nats)"
+  },
+  {
+    "name": "R3 value-per-second curve computed",
+    "verdict": "PASS",
+    "detail": "best I/s = qwen1.5b (0.7411 nats/s)"
+  },
+  {
+    "name": "R4 best diverse pair lifts joint I above best single",
+    "verdict": "PASS",
+    "detail": "qwen3b+qwen7b: +0.0896 nats"
+  },
+  {
+    "name": "R4 redundancy adds exactly 0 (det. re-run)",
+    "verdict": "PASS",
+    "detail": "I(X;Ya,Ya) = I(X;Ya) for every model"
+  },
+  {
+    "name": "R5 Kelly/price \u2265 equal-weight",
+    "verdict": "PASS",
+    "detail": "+1.3431 \u2265 +1.3243"
+  },
+  {
+    "name": "R5 Kelly/price \u2265 best-single (out-of-sample)",
+    "verdict": "FAIL",
+    "detail": "+1.3431 \u2265 +1.4233"
+  },
+  {
+    "name": "R5 fleet beats EVERY agent (Shannon's demon)",
+    "verdict": "INFO",
+    "detail": "+1.3431 vs max_indiv +1.4233  (no demon \u2014 agents positively correlated; see notes)"
+  },
+  {
+    "name": "R5 under compute budget, value-density ranking inverts (cheap wins)",
+    "verdict": "PASS",
+    "detail": "highest G/s = qwen1.5b (+0.5308 nats/s) vs best-single qwen7b (+0.2432 nats/s)"
+  }
+]

@@ -104,11 +104,27 @@ def parse_run(path):
 
 EXPECTED_N = 100   # the frozen corpus size; partial runs are excluded as artifacts
 
-def available_fleet(require_complete=True):
-    """Discover all run files, classify each to a ladder rung, keep one complete run
-    per rung (the one with the most tasks, then newest path). Returns
-    [(short, params, run), ...] in ladder order. Naming-robust + mistral-excluded."""
-    best = {}                                    # short -> (params, run, path)
+def _run_quality(run):
+    """(accuracy, n_tasks) — used to pick the best run of a model and to reject
+    crash artifacts. A tool-call plumbing failure collapses to ~all 'none' and a
+    near-zero accuracy, so it loses to any real run of the same model."""
+    n = len(run["tasks"]) or 1
+    acc = sum(t["pred"] == t["gold"] for t in run["tasks"]) / n
+    return acc, len(run["tasks"])
+
+def is_artifact(run, none_thresh=0.85):
+    """True if the run looks like a tool-call plumbing artifact, not real behavior."""
+    n = len(run["tasks"]) or 1
+    none_frac = sum(t["pred"] == "none" for t in run["tasks"]) / n
+    acc = sum(t["pred"] == t["gold"] for t in run["tasks"]) / n
+    return none_frac > none_thresh and acc < 0.30
+
+def available_fleet(require_complete=True, drop_artifacts=True):
+    """Discover all run files, classify each to a ladder rung, and keep the BEST
+    complete run per rung — best = highest accuracy (so a crash artifact loses to a
+    real run of the same model), then most tasks. Returns [(short, params, run), ...]
+    in ladder order. Naming-robust, mistral-excluded, artifact-rejecting."""
+    best = {}                                    # short -> (params, run, quality)
     for path in _all_run_paths():
         cls = classify_run(path)
         if not cls:
@@ -117,10 +133,12 @@ def available_fleet(require_complete=True):
         run = parse_run(path)
         if require_complete and len(run["tasks"]) != EXPECTED_N:
             continue
+        if drop_artifacts and is_artifact(run):
+            continue
+        q = _run_quality(run)
         cur = best.get(short)
-        if cur is None or len(run["tasks"]) > len(cur[1]["tasks"]) or \
-           (len(run["tasks"]) == len(cur[1]["tasks"]) and path > cur[2]):
-            best[short] = (params, run, path)
+        if cur is None or q > cur[2]:
+            best[short] = (params, run, q)
     out = []
     for short, params, _ in RUNGS:
         if short in best:

@@ -234,6 +234,32 @@ def R5_pricing():
         f"{g_kelly:+.4f} vs max_indiv {max(g_hold):+.4f}" +
         ("" if demon else "  (no demon — agents positively correlated; see notes)"))
 
+    # --- Cost-aware view: under a COMPUTE BUDGET the ranking can invert. The raw
+    #     growth above ignores cost; value *per joule* is growth / mean compute. A
+    #     budget-aware price routes resource by value-density (∝ I_a / cost_a). ---
+    runof = {s: run for s, _, run in FLEET}
+    cost = {s: mean_latency_s(runof[s]) for s in shorts}
+    print("\n     compute-budget view (value per second of compute):")
+    dens = []
+    for s, g in zip(shorts, g_hold):
+        c = cost[s]; d = g / c if c else float('nan')
+        dens.append((s, d)); print(f"       {s:9} G/s = {g:+.4f}/{c:.2f}s = {d:+.4f} nats/s")
+    best_dens = max(dens, key=lambda x: x[1])
+    # price-by-density routing: weight ∝ I_a / cost_a (the shadow-price λ=K/E analog)
+    Ia = np.array([v.mutual_information(confusion(runof[s], FIT)) for s in shorts])
+    cc = np.array([cost[s] for s in shorts])
+    w_price = np.clip(Ia / cc, 0, None); w_price /= w_price.sum()
+    g_price = v.portfolio_growth(w_price, Rhold)
+    g_price_per_s = g_price / float(np.dot(w_price, cc))
+    g_best_per_s = g_best / cost[shorts[a_best]]
+    print(f"       price∝I/cost weights: " + "  ".join(f"{s}:{w:.2f}" for s, w in zip(shorts, w_price)))
+    print(f"       value-density: best-single({shorts[a_best]})={g_best_per_s:+.4f}/s  "
+          f"price∝I/cost={g_price_per_s:+.4f}/s")
+    rec("R5 under compute budget, value-density ranking inverts (cheap wins)",
+        best_dens[0] == shorts[0],
+        f"highest G/s = {best_dens[0]} ({best_dens[1]:+.4f} nats/s) vs best-single "
+        f"{shorts[a_best]} ({g_best_per_s:+.4f} nats/s)")
+
 
 def dump_artifacts():
     """Write deliverables to results/: confusion matrices + the PASS/FAIL table."""
