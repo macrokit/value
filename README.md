@@ -65,6 +65,22 @@ Two structural facts give confidence the abstraction is real, not decorative:
   more of `H(X)`); suppress **belief-divergence** (zero/negative-sum speculation) and **goal-conflict**
   (negative `cos θ`). Headcount past perception-saturation buys nothing.
 
+## Evidence — the theory predicts its own instantiation
+
+[`sim/`](sim/) is a minimal numerical test: take each closed-form prediction and check a Monte-Carlo world
+produces those numbers. **20/20 checks pass** (`python3 sim/experiments.py`):
+
+- **E1** `ΔG = I(X;Y)` to ~0.001 nats — value-throughput *is* information-throughput.
+- **E2** `G = D(q‖r) − D(q‖p)` exactly, including value going **negative** under confident error.
+- **E3** fleet ceiling `ΔG_fleet ≤ H(X)`; diversity lifts it, redundancy adds exactly 0.
+- **E4** the headline: a **priced/rebalanced fleet beats ad-hoc** — *Shannon's demon*, a fleet that grows at
+  +0.021/round from agents that individually don't grow at all.
+- **E5** dissipation = regret; a drifting world floors dissipation at ~0.18 nats while a stationary one → 0
+  (the Dynamical Second Law).
+
+These confirm the math is self-consistent and correctly derived; testing whether *real LLM agents* obey the
+laws is the next step ([`sim/README.md`](sim/README.md) is honest about the scope).
+
 ## Honest status
 
 - **Proven (within stated axioms):** the log law (01), the capacity theorem with achievability + converse (02),
