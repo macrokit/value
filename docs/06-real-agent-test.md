@@ -91,7 +91,8 @@ quantities are computed independently from the confusion structure.
   across models, so R3 is the I/compute *curve*, not a within-model prompt ablation — see §5.)
 - **R4 — diversity beats redundancy** (real E3). Joint `I(X; Y_a, Y_b)` for two *different* models vs the same
   model twice. Distinct models should cover more of `H(X)`; an identical (greedy) re-run adds exactly 0.
-- **R5 — pricing beats ad-hoc** (real E4, the headline governance claim). Combine the models' calibrated
+- **R5 — when pricing beats ad-hoc** (real E4, the headline governance claim — a *scoping* test, not a
+  win/lose one). Combine the models' calibrated
   posteriors into a fleet and compare realized out-of-sample log-growth of: (a) the single best model, (b) an
   equal-weight ensemble, (c) a **price/Kelly-weighted** ensemble (weights from `kelly_weights` fit on the fit
   split). Prediction: priced fleet ≥ best-single and ≥ equal-weight; the striking case is a *demon* — the fleet
@@ -176,11 +177,15 @@ So pricing pays exactly where [`04`](04-multi-agent-capacity-region.md) says it 
 *chooses the operating point under a resource constraint*, not as a free lunch that beats the best agent when
 compute is unlimited.
 
-> **What R5 teaches.** Pooling a correlated ladder does not beat its best member (no demon). Pricing earns its
-> keep on two distinct axes that *are* present here: it beats naïve equal-weighting, and under a compute budget
-> it routes value-density to the cheap agent and wins. The demon needs *perception diversity* (different slices
-> of `H(X)`), which a same-task capability ladder lacks by construction — a concrete, falsifiable boundary on
-> the fleet result.
+> **What R5 teaches (a scoping theorem, not a defeat).** Read precisely: *pricing dominates ad-hoc allocation
+> exactly under cost constraints or imperfect agent correlation; absent both — free compute, a single task, and
+> homogeneous positively-correlated agents — the best single agent is optimal, as the theory predicts.* So the
+> claim "pricing beats ad-hoc" must **always** carry its two conditions; stated unqualified it is false, and the
+> theory says so. A governance result that names the regime in which it does not win is a point of rigor. And the
+> regime in which it *does* win — agents that are heterogeneous **and** resource-constrained — is the ordinary
+> condition of real fleets: R3's value-density curve and R5's cost-aware price compound there into a concrete
+> advantage. The demon's missing ingredient here is *perception diversity* (different slices of `H(X)`, i.e.
+> specialists, not generalists of varying strength), a concrete and falsifiable boundary.
 
 A PASS/FAIL table and per-model confusion matrices are emitted to
 [`sim/real/results/`](../sim/real/results/) (`results_table.json`, `confusions.json`, `experiments_output.txt`);
