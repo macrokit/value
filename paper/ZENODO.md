@@ -10,12 +10,12 @@ your decision before upload — flagged with ⚠️.
 | **Upload type** | Publication → **Preprint** |
 | **Title** | A Mathematical Theory of Value |
 | **Authors / Creators** | Qian, Cheng |
-| ⚠️ **Affiliation** | *(blank, or "Independent researcher" — confirm)* |
-| ⚠️ **ORCID** | *(none on file — add if you have one, else leave blank)* |
+| **Affiliation** | *(leave blank — owner default)* |
+| **ORCID** | *(none — leave blank)* |
 | **Publication date** | 2026 |
 | **Language** | English (eng) |
 | **Version** | v1 |
-| ⚠️ **License** | **CC-BY-4.0** (proposed — standard for a preprint; lets others cite/build with attribution. Note: this is the *paper's* license; the associated code may carry a different one. Confirm.) |
+| **License** | **CC-BY-4.0** (owner default — standard for a preprint; lets others cite/build with attribution). |
 | **Keywords** | value; theory of value; information theory; Kelly criterion; mutual information; log-optimal growth; multi-agent systems; AI agents; agent coordination; AI alignment; mechanism design; free energy; reinforcement learning; ergodicity economics |
 | **Description** | (abstract below) |
 | **Notes** | Source and reproducible experiments are maintained in a private repository; available on request. |
@@ -72,7 +72,7 @@ your decision before upload — flagged with ⚠️.
 ## Pre-upload checklist
 
 - [ ] **Publish gate:** explicit owner sign-off (the handoff requires confirming before any outward release).
-- [ ] Decide ⚠️ affiliation, ⚠️ ORCID, ⚠️ license (CC-BY-4.0 proposed).
+- [x] Decisions resolved (owner defaults): affiliation blank, ORCID blank, license CC-BY-4.0.
 - [ ] Final read of `main.pdf` end-to-end (the red-team fixes are in; this is a last proofing pass).
 - [ ] Confirm the paper names no private-project or proprietary-domain specifics — leakage check already clean.
 - [ ] Reserve a DOI in Zenodo (draft deposition) before publishing, if you want the DOI in any announcement.
