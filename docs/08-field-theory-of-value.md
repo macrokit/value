@@ -171,10 +171,12 @@ them. This program is worth nothing until it earns the analogy:
 This is the long-horizon extension, gated behind the nearer empirical work ([`06`](06-real-agent-test.md)
 scale-up). The tractable first steps, in order:
 
-1. **Simulate it.** Put the discrete agents of [`04`](04-multi-agent-capacity-region.md) on a lattice, inject a
-   localized demand-shock, and check for the telegrapher crossover (§3) and the flocking transition (§5) — a
-   pure-simulation result, no new theory, that would show whether the continuum limit even has the claimed
-   phenomenology.
+1. ✅ **Simulate it — DONE** ([`sim/field/`](../sim/field/), 5/5). The lattice limit *does* have the claimed
+   phenomenology: a demand-shock spreads ballistically (`σ²∝t²`, a wave) at large lag and diffusively (`σ²∝t`)
+   at small lag, with wave speed obeying the telegrapher law `v∝1/√τ` to 1%; and a population of goal-directors
+   undergoes the Vicsek order→disorder phase transition (`m`: 0.99→0.03). This clears the first gate — *does the
+   continuum even have the phenomenology?* — yes. It is an internal-consistency check, **not** evidence about
+   real agents (next steps remain).
 2. **Pin the couplings** to the discrete theory by coarse-graining (derive `D, τ, J, Γ` from agent-level
    `E, λ, k`-dynamics rather than positing them).
 3. **Find one real system** with measurable demand-propagation (a market microstructure, an information
