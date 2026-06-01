@@ -39,6 +39,7 @@ it forces the theory to make the frame explicit.
 | [`05`](docs/05-dynamics.md) | The equations of motion | **Learning = value-recovery, dissipation = regret**; natural-gradient (Fisher) belief flow, tâtonnement price flow, control+selection goal flow; alignment = a stability condition; a moving world forbids zero dissipation |
 | [`06`](docs/06-real-agent-test.md) | **Real-agent test** | Four live LLMs obey the laws on their own outputs: `I(X;Y)` tracks realized **capability not size** (**r=0.99**; a cross-family 8B, bigger-but-weaker, lands at lower `I`); `ΔG`∝`I(X;Y)`; over-confidence dissipates value (weakest → negative growth); diversity > redundancy; **pricing beats pooling and wins under a compute budget — but no demon on correlated agents** (honest negative) |
 | [`07`](docs/07-alignment-stability.md) | Alignment theorem | Coupled control+selection flow solved: residual misalignment `= ‖Vg‖/γ`; stable iff `γ > λ_max(∂(Vg)/∂k̄)`; **incentive design (`g→0`) beats brute-force control (`↑γ`)** |
+| [`08`](docs/08-field-theory-of-value.md) | **Field theory (speculative)** | Continuum limit: value as a field; **demand-shocks are waves** (telegrapher's eq, dispersion crossover); collective goals are a **phase transition** (active matter / Toner–Tu); is/ought = **beliefs massive, goals Goldstone**. A research program, not a result — §9 is blunt about it. |
 
 Supporting: [`docs/related-work.md`](docs/related-work.md) — paper-ready prior-art section (utility theory,
 Kelly/info theory, RL, thermodynamics/FEP, general equilibrium, alignment) with an honest statement of
@@ -123,11 +124,13 @@ assumptions.
 ## Reading order
 
 `00` (framing) → `01` (the measure) → `02` (the limit) → `03` (many agents) → `04` (the fleet) → `05`
-(dynamics) → `06` (the real-agent test) → `07` (the alignment theorem). Each builds on the last; each is
-self-contained enough to skim from its headline box. Docs 01–04 are the **statics** (conservation laws,
-equilibria); `05` and `07` are the **dynamics** (equations of motion + the alignment-stability theorem); `06`
-is the **evidence** (live LLMs measured against the laws). Together they form a thermodynamics of value, with a
-real-agent test. `docs/related-work.md` situates it against prior art.
+(dynamics) → `06` (the real-agent test) → `07` (the alignment theorem) → `08` (the field-theory frontier).
+Each builds on the last; each is self-contained enough to skim from its headline box. Docs 01–04 are the
+**statics** (conservation laws, equilibria); `05` and `07` are the **dynamics** (equations of motion + the
+alignment-stability theorem); `06` is the **evidence** (live LLMs measured against the laws); `08` is the
+**speculative frontier** (a continuum/field-theory extension — read its §9 caveats; a research program, not a
+result). Together they form a thermodynamics of value, with a real-agent test. `docs/related-work.md` situates
+it against prior art.
 
 ## Provenance & non-goals
 
