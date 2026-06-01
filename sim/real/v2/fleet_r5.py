@@ -124,7 +124,7 @@ def run(rec):
     print(f"     fleet = {fleet}  (specialists by domain competence)")
     print(f"     mixed holdout stream: {len(stream)} queries across {len(D.DOMAINS)} domains")
     ec = error_correlation(info, fleet, stream)
-    print(f"     mean pairwise error-agreement = {ec:.3f} (v1 generalists were higher; lower = more diverse)")
+    print(f"     mean pairwise error-agreement = {ec:.3f} (diversity metric; lower = less correlated errors)")
 
     for cost_key, unit, scale in [("cost_tok", "per-1k-tokens", 1000), ("cost_lat", "per-10s-latency", 10)]:
         pol = _policy_arrays(info, fleet, stream, cost_key)
@@ -176,7 +176,10 @@ def _ceiling(info, fleet, rec):
                 lift = Iab - max(singles[ms[i]], singles[ms[j]])
                 if best is None or Iab > best[1]:
                     best = (f"{ms[i]}+{ms[j]}", Iab, lift)
-        lifts.append(best[2] if best else 0)
+        if best is None:
+            print(f"       {domain}: H(X)={Hx:.3f}  (<2 models — skipped)")
+            continue
+        lifts.append(best[2])
         print(f"       {domain}: H(X)={Hx:.3f}  best pair {best[0]} joint I={best[1]:.3f} "
               f"(lift +{best[2]:.3f}); all pairs ≤ H(X): {all_le}")
     rec("Ceiling: all pairwise joint I ≤ H(X)", all_le, "data-processing bound holds empirically")
