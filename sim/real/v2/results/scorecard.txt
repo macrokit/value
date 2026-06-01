@@ -1,0 +1,140 @@
+====================================================================================
+v2 EMPIRICS — scored against PREREGISTRATION.md (nats; 95% CIs)
+  intent: 10 models, n=240, K=6
+  mcqa: 10 models, n=240, K=4
+  topic: 10 models, n=240, K=4
+====================================================================================
+
+R1-v2 — the bridge generalizes: I(X;Y) tracks capability across domains/models
+     domain   model        acc  I(nats)  ΔG_hold
+     intent   qwen0.5b   0.871   1.4166   1.3077
+     intent   llama1b    0.867   1.4482   1.2737
+     intent   qwen1.5b   0.954   1.6112   1.4872
+     intent   gemma2b    0.954   1.6481   1.5244
+     intent   qwen3b     0.950   1.5969   1.4613
+     intent   llama3b    0.942   1.5683   1.4392
+     intent   phi3.5     0.946   1.5968   1.4243
+     intent   qwen7b     0.954   1.6266   1.5301
+     intent   mistral7b  0.958   1.6255   1.5397
+     intent   llama8b    0.954   1.6062   1.4876
+     mcqa     qwen0.5b   0.287   0.0657   0.0416
+     mcqa     llama1b    0.354   0.0971   0.0850
+     mcqa     qwen1.5b   0.467   0.1129   0.0928
+     mcqa     gemma2b    0.458   0.1201   0.0575
+     mcqa     qwen3b     0.537   0.1875   0.2253
+     mcqa     llama3b    0.454   0.1166   0.0329
+     mcqa     phi3.5     0.533   0.1890   0.2100
+     mcqa     qwen7b     0.650   0.3765   0.3682
+     mcqa     mistral7b  0.400   0.1012   0.0813
+     mcqa     llama8b    0.517   0.1857   0.1105
+     topic    qwen0.5b   0.454   0.3670   0.3314
+     topic    llama1b    0.292   0.0291  -0.0027
+     topic    qwen1.5b   0.650   0.5678   0.5123
+     topic    gemma2b    0.683   0.6227   0.6005
+     topic    qwen3b     0.725   0.6250   0.6082
+     topic    llama3b    0.487   0.3102   0.1812
+     topic    phi3.5     0.304   0.0882   0.0513
+     topic    qwen7b     0.742   0.6603   0.5048
+     topic    mistral7b  0.729   0.6477   0.5755
+     topic    llama8b    0.800   0.8177   0.7684
+  [PASS] R1a pooled Spearman(I, accuracy) > 0.8: ρ=0.977  95%CI[0.916,0.996]  (n=30 model×domain points)
+        per-domain ρ[intent] = 0.842 (n=10)
+        per-domain ρ[mcqa] = 0.952 (n=10)
+        per-domain ρ[topic] = 0.988 (n=10)
+  [PASS] R1a per-domain Spearman > 0.6 in every domain: 
+  [PASS] R1b slope(ΔG_hold ~ I) CI excludes 0 (positive): slope=0.935  95%CI[0.915,0.954]
+
+R2-v2 — the Second Law generalizes: over-confidence dissipates in every domain
+     domain   model        G_cal   G_over   dissip
+     intent   qwen0.5b    1.3077  -0.7986   2.1064
+     intent   llama1b     1.2737  -0.2806   1.5543
+     intent   qwen1.5b    1.4872   0.9283   0.5589
+     intent   gemma2b     1.5244   1.1010   0.4234
+     intent   qwen3b      1.4613   0.5829   0.8784
+     intent   llama3b     1.4392   0.5829   0.8563
+     intent   phi3.5      1.4243   0.4102   1.0141
+     intent   qwen7b      1.5301   0.9283   0.6018
+     intent   mistral7b   1.5397   1.1010   0.4387
+     intent   llama8b     1.4876   0.7556   0.7320
+        -> min dissipation in intent: +0.4234 (>0 ok)
+     mcqa     qwen0.5b    0.0416 -11.4100  11.4515
+     mcqa     llama1b     0.0850 -10.8919  10.9770
+     mcqa     qwen1.5b    0.0928  -9.3377   9.4305
+     mcqa     gemma2b     0.0575  -9.8557   9.9133
+     mcqa     qwen3b      0.2253  -7.0926   7.3180
+     mcqa     llama3b     0.0329 -11.0646  11.0975
+     mcqa     phi3.5      0.2100  -7.6107   7.8207
+     mcqa     qwen7b      0.3682  -5.5384   5.9066
+     mcqa     mistral7b   0.0813 -10.8919  10.9732
+     mcqa     llama8b     0.1105  -9.3377   9.4482
+        -> min dissipation in mcqa: +5.9066 (>0 ok)
+     topic    qwen0.5b    0.3314  -9.6661   9.9975
+     topic    llama1b    -0.0027 -13.8108  13.8081
+     topic    qwen1.5b    0.5123  -5.8668   6.3791
+     topic    gemma2b     0.6005  -4.6580   5.2585
+     topic    qwen3b      0.6082  -4.1399   4.7481
+     topic    llama3b     0.1812 -10.7023  10.8835
+     topic    phi3.5      0.0513 -13.1200  13.1713
+     topic    qwen7b      0.5048  -4.8307   5.3355
+     topic    mistral7b   0.5755  -4.3126   4.8881
+     topic    llama8b     0.7684  -2.7584   3.5268
+        -> min dissipation in topic: +3.5268 (>0 ok)
+  [PASS] R2-v2 over-confidence dissipation > 0 in EVERY domain: 
+
+Fleet-R5 — heterogeneous, cost-constrained routing (THE headline)
+     fleet = ['qwen0.5b', 'llama1b', 'qwen1.5b', 'gemma2b', 'qwen3b', 'llama3b', 'phi3.5', 'qwen7b', 'mistral7b', 'llama8b']  (specialists by domain competence)
+     mixed holdout stream: 360 queries across 3 domains
+     mean pairwise error-agreement = 0.750 (diversity metric; lower = less correlated errors)
+
+     value per-1k-tokens (cost = cost_tok):
+       round_robin    +5.0057
+       equal_pool     +0.5691
+       best_single    +6.1798
+       hand_tuned     +6.6669
+       hand_cost      +6.6669
+       value_price    +6.6669
+  [PASS] R5 [per-1k-tokens] value-price > round_robin (REQUIRED): Δ=+1.6575 95%CI[+1.0344,+2.2467]
+  [PASS] R5 [per-1k-tokens] value-price > equal_pool (REQUIRED): Δ=+6.1074 95%CI[+5.4560,+6.6966]
+  [----] R5 [per-1k-tokens] value-price > best_single (info): Δ=+0.4867 95%CI[+0.0579,+0.9488]
+  [FAIL] R5 [per-1k-tokens] value-price > hand_tuned (STRONG): Δ=+0.0000 95%CI[+0.0000,+0.0000]  (CI overlaps 0 → honest tie/loss)
+  [----] R5 [per-1k-tokens] value-price > hand_cost (info): Δ=+0.0000 95%CI[+0.0000,+0.0000]
+
+     value per-10s-latency (cost = cost_lat):
+       round_robin    +17.0791
+       equal_pool     +1.9418
+       best_single    +13.3039
+       hand_tuned     +15.5432
+       hand_cost      +43.7838
+       value_price    +21.8476
+  [PASS] R5 [per-10s-latency] value-price > round_robin (REQUIRED): Δ=+4.8137 95%CI[+1.8782,+7.7867]
+  [PASS] R5 [per-10s-latency] value-price > equal_pool (REQUIRED): Δ=+20.0188 95%CI[+16.6117,+23.8957]
+  [----] R5 [per-10s-latency] value-price > best_single (info): Δ=+8.5666 95%CI[+5.7698,+11.8222]
+  [PASS] R5 [per-10s-latency] value-price > hand_tuned (STRONG): Δ=+6.4231 95%CI[+3.9202,+9.2236]
+  [----] R5 [per-10s-latency] value-price > hand_cost (info): Δ=-21.9138 95%CI[-25.7065,-18.2204]
+
+     Ceiling & diversity (R4 at scale):
+       intent: H(X)=1.792  best pair llama1b+qwen7b joint I=1.722 (lift +0.095); all pairs ≤ H(X): True
+       mcqa: H(X)=1.369  best pair phi3.5+qwen7b joint I=0.509 (lift +0.132); all pairs ≤ H(X): True
+       topic: H(X)=1.386  best pair mistral7b+llama8b joint I=0.952 (lift +0.134); all pairs ≤ H(X): True
+  [PASS] Ceiling: all pairwise joint I ≤ H(X): data-processing bound holds empirically
+  [PASS] Diversity: best diverse pair lifts joint I over best single (every domain): lifts=[0.095, 0.132, 0.134]
+
+====================================================================================
+SUMMARY: 11 PASS, 1 FAIL, 4 info
+  PASS  R1a pooled Spearman(I, accuracy) > 0.8
+  PASS  R1a per-domain Spearman > 0.6 in every domain
+  PASS  R1b slope(ΔG_hold ~ I) CI excludes 0 (positive)
+  PASS  R2-v2 over-confidence dissipation > 0 in EVERY domain
+  PASS  R5 [per-1k-tokens] value-price > round_robin (REQUIRED)
+  PASS  R5 [per-1k-tokens] value-price > equal_pool (REQUIRED)
+  ----  R5 [per-1k-tokens] value-price > best_single (info)
+  FAIL  R5 [per-1k-tokens] value-price > hand_tuned (STRONG)
+  ----  R5 [per-1k-tokens] value-price > hand_cost (info)
+  PASS  R5 [per-10s-latency] value-price > round_robin (REQUIRED)
+  PASS  R5 [per-10s-latency] value-price > equal_pool (REQUIRED)
+  ----  R5 [per-10s-latency] value-price > best_single (info)
+  PASS  R5 [per-10s-latency] value-price > hand_tuned (STRONG)
+  ----  R5 [per-10s-latency] value-price > hand_cost (info)
+  PASS  Ceiling: all pairwise joint I ≤ H(X)
+  PASS  Diversity: best diverse pair lifts joint I over best single (every domain)
+====================================================================================

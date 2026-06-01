@@ -40,6 +40,7 @@ it forces the theory to make the frame explicit.
 | [`06`](docs/06-real-agent-test.md) | **Real-agent test** | Four live LLMs obey the laws on their own outputs: `I(X;Y)` tracks realized **capability not size** (**r=0.99**; a cross-family 8B, bigger-but-weaker, lands at lower `I`); `ΔG`∝`I(X;Y)`; over-confidence dissipates value (weakest → negative growth); diversity > redundancy; **pricing beats pooling and wins under a compute budget — but no demon on correlated agents** (honest negative) |
 | [`07`](docs/07-alignment-stability.md) | Alignment theorem | Coupled control+selection flow solved: residual misalignment `= ‖Vg‖/γ`; stable iff `γ > λ_max(∂(Vg)/∂k̄)`; **incentive design (`g→0`) beats brute-force control (`↑γ`)** |
 | [`08`](docs/08-field-theory-of-value.md) | **Field theory (speculative)** | Continuum limit: value as a field; **demand-shocks are waves** (telegrapher's eq, dispersion crossover); collective goals are a **phase transition** (active matter / Toner–Tu); is/ought = **beliefs massive, goals Goldstone**. A research program, not a result — §9 is blunt about it. |
+| [`09`](docs/09-v2-empirics.md) | **v2 empirics (pre-registered)** | Scale-up to **3 domains × 10 models** with 95% CIs: `I(X;Y)` tracks capability at **ρ=0.977** (R1 generalizes); over-confidence dissipates in every domain (R2 generalizes); value-price routing **beats naive + cost-blind hand-tuned under a compute budget** (ties under tokens, loses to cost-aware) — pricing = cost-awareness derived, scoped honestly |
 
 Supporting: [`docs/related-work.md`](docs/related-work.md) — paper-ready prior-art section (utility theory,
 Kelly/info theory, RL, thermodynamics/FEP, general equilibrium, alignment) with an honest statement of
@@ -106,6 +107,29 @@ in [`docs/06`](docs/06-real-agent-test.md)):
 
 So the laws hold on real agents where the single-frame theory is testable; the one fleet-level claim with a
 genuine precondition (perception diversity) is reported with its boundary, not oversold.
+
+### v2 scale-up — generalization across domains and a 10-model ladder
+
+[`sim/real/v2/`](sim/real/v2/) answers the v1 reviewer's binding critique ("one task, four models") by scaling to
+**three domains** (intent routing K=6, MMLU-style MCQA K=4, AG-News topic K=4; 240 items each) and a
+**ten-model cross-family ladder** (Qwen / Llama / Gemma / Phi / Mistral, 0.5B→8B), **pre-registered before any
+model ran** ([`PREREGISTRATION.md`](sim/real/v2/PREREGISTRATION.md)) and reported with 95% CIs (full write-up
+[`docs/09`](docs/09-v2-empirics.md)):
+
+- **R1-v2 (PASS):** pooled over 30 model×domain points, `I(X;Y)` tracks realized capability at **Spearman
+  ρ = 0.977** (CI [0.916, 0.996]); out-of-sample `ΔG` tracks `I` with **slope 0.935** (CI excludes 0). The
+  capacity bridge **generalizes**.
+- **R2-v2 (PASS):** over-confidence dissipates value in **every** domain; the weakest models go sharply
+  **negative** (−11 nats on MMLU, −14 on topic).
+- **Fleet-R5 (headline, honest):** a value-price router (`∝ I_a/cost_a`) **beats round-robin and equal-weight on
+  both cost metrics** (governance claim non-empty), and **beats the strong cost-blind hand-tuned router under a
+  compute/latency budget** (Δ = +6.4, CI [3.9, 9.2]) — while **tying** it under a token budget (token cost is
+  ~uniform, so pricing reduces to quality-first) and **losing** to a *cost-aware* hand-tuned router. Pricing's
+  edge is **cost-awareness derived from first principles**, bounded exactly.
+- **Ceiling (PASS):** all pairwise joint `I ≤ H(X)`; diverse specialists beat redundancy in every domain.
+
+v2 moves the evidence from *demonstration* to *generalization* — the laws hold across task shapes and a real
+model ladder, with the fleet result scoped to where pricing actually pays.
 
 ## Honest status
 
