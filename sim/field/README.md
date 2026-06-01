@@ -32,7 +32,34 @@ transition.
   simulation only clears the first gate — *does the continuum limit even have the phenomenology?* — and the
   answer is yes.
 
+## Real-data foundations check — `v2_geometry.py`
+
+The first time the field theory touches *real* data. The field theory models an agent population as an
+**order-parameter field** (goals/competences that align, with a dominant collective direction). This check asks
+one honest, limited question of the 30 v2 caches (10 models × 3 domains): **does a real agent population sit in
+the field theory's *ordered* (aligned) phase?** Run: `python3 sim/field/v2_geometry.py`.
+
+| Domain | mean cross-agent correlation (vs independent null) | top eigenvalue fraction `λ₁/Σλ` (vs null) |
+|---|---|---|
+| intent | **+0.51** vs +0.00 — **z = +51** | **0.51** vs 0.21 — z = +43 |
+| mcqa | **+0.34** vs −0.00 — **z = +36** | **0.41** vs 0.13 — z = +51 |
+| topic | **+0.32** vs +0.00 — **z = +32** | **0.41** vs 0.14 — z = +50 |
+
+**Reading:** across all three domains the population is strongly **ordered** — a dominant shared competence
+axis and strong positive cross-agent correlation, *tens of standard deviations* above what independent agents
+at the same accuracies would show. So real agents **do** have the low-dimensional alignment geometry the field
+theory's order parameter assumes. Bonus: this *static* geometry **explains** the v1/v2 R5 result (no Shannon's
+demon) — a positively-aligned population is deep in the constructive-interference regime, so pooling/pricing has
+little anti-correlated diversity to harvest. The geometry predicts the dynamics.
+
+**Honest scope:** this supports the order-parameter *assumption* on real agents. It is **not** a test of the
+wave dynamics (doc 08 §3) or the phase transition (§5) — those need agents whose goals *evolve* over time, which
+v2 (static classification) does not have. Suggestive of the foundations, not validation of the field theory.
+The decisive test (a *measured* dispersion crossover or flocking transition in a dynamic agent system) remains
+open.
+
 ## Files
 
 - `field_experiments.py` — F1 (telegrapher demand-wave: `simulate_front` for speed, `simulate_spread` for the
   ballistic/diffusive second-moment discriminator) and F2 (`vicsek_order`, self-propelled flock). numpy only.
+- `v2_geometry.py` — the real-data order-parameter foundations check above (reads `sim/real/v2/results/raw/`).

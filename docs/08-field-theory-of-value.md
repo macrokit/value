@@ -177,6 +177,15 @@ scale-up). The tractable first steps, in order:
    undergoes the Vicsek order→disorder phase transition (`m`: 0.99→0.03). This clears the first gate — *does the
    continuum even have the phenomenology?* — yes. It is an internal-consistency check, **not** evidence about
    real agents (next steps remain).
+1b. ✅ **First real-data touch — DONE** ([`sim/field/v2_geometry.py`](../sim/field/v2_geometry.py)). The
+   field theory's *order-parameter assumption* holds on a real 10-agent population: across 3 domains, strong
+   positive cross-agent alignment (correlation 0.32–0.51) and a dominant shared-competence axis (`λ₁/Σλ`
+   0.41–0.51), **tens of σ above the independence null** (z = 32–51). Real agents have the low-dimensional
+   alignment geometry the field assumes — and this *static* geometry explains the v1/v2 R5 result (the
+   population is deep in the constructive-interference/aligned regime, so there is little anti-correlated
+   diversity for pooling/pricing to harvest). **Scope: supports the foundations; NOT a test of the wave (§3)
+   or the transition (§5)** — those need evolving goals, which static classification lacks.
+
 2. **Pin the couplings** to the discrete theory by coarse-graining (derive `D, τ, J, Γ` from agent-level
    `E, λ, k`-dynamics rather than positing them).
 3. **Find one real system** with measurable demand-propagation (a market microstructure, an information
