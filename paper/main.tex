@@ -1,0 +1,536 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage[round]{natbib}
+\usepackage{enumitem}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\KL}[2]{D\!\left(#1\,\|\,#2\right)}
+\newcommand{\I}{I}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\title{\bf A Mathematical Theory of Value}
+\author{Cheng Qian}
+\date{2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We propose that \emph{value} --- the quantity that goal-directed agents create, destroy, and exchange --- is a
+lawful structural quantity, in the same category as information, once stripped of its semantic clothing
+(morality, price, psychology). Following the method of \citet{shannon1948}, we make one ruthless abstraction:
+value is the rate at which an agent converts a physical resource into goal-progress, relative to a frame fixed
+by the agent's goal. From a single scale-invariance axiom we derive a logarithmic measure of value,
+$V=\sum_i k_i\ln e_i$. From the compounding dynamics of a resource that is reinvested we derive a
+\emph{coding theorem of value}: the rate at which an agent can create value through a perception channel $Y$ of
+the world $X$ is bounded by the mutual information, $\Delta G \le \I(X;Y)$, achieved by Bayes-proportional
+allocation; and realized value decomposes exactly as available potential minus dissipation,
+$G=\KL{q}{r}-\KL{q}{p}$, identifying misalignment with measurable waste. For populations we show value is
+frame-relative while \emph{price} is frame-independent, that the collective value throughput of a fleet is
+capped by the world's entropy $\sum_a G_a\le H(X)$, and that the fleet's operating point is a Kelly portfolio
+over agents selected by an emergent price. A dynamical layer gives the equations of motion and an
+is/ought asymmetry --- beliefs have a target the world supplies, goals do not --- from which alignment emerges
+as a control-stability condition with a closed-form residual misalignment. We then test the single-frame laws on
+live language models: a capability ladder of local models on a frozen 100-item decision task obeys
+$\Delta G \propto \I(X;Y)$ (Pearson $r=0.996$), exhibits over-confidence as measurable dissipation that shrinks
+with capability, and confirms diversity-beats-redundancy; the fleet-pricing claim is reported with its honest
+boundary (no volatility-harvesting ``demon'' on a positively-correlated ladder, but pricing wins under a compute
+budget). None of the underlying mechanisms is individually new; the contribution is their unification under one
+substrate-grounded quantity, and the is/ought asymmetry that follows.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}\label{sec:intro}
+
+Information theory began with an abstraction that looked like a loss. \citet{shannon1948} threw away
+\emph{meaning} and kept only the reduction of uncertainty; from that single move came a measure ($-\log p$), a
+unit (the bit), and hard limits (channel capacity, the coding theorems). The abstraction was productive
+precisely because it was ruthless: by refusing to model what a message \emph{meant}, Shannon could state exactly
+what any communication system can and cannot do.
+
+We attempt the analogous move for \emph{value}. The everyday notion of value is a tangle of morality, market
+price, and human preference. We throw all three away and keep one structural residue: \emph{value is the rate at
+which a goal-directed agent converts a scarce physical resource into progress toward its goal.} This is
+frame-relative --- it is defined only relative to a goal, the way information is defined only relative to a prior
+and energy only relative to a reference frame --- but relativity does not disqualify a quantity from being
+fundamental. It forces the theory to make the frame explicit. A theory of value is to agency what relativity is
+to motion: the quantity is frame-dependent; the laws relating frames are universal.
+
+The motivation is not only foundational. If, as increasingly seems likely, near-future populations of
+artificial agents are each driven by an explicit objective, then a theory of value is not philosophy --- it is
+the control theory for agent populations. To route, align, and govern many separated agents we need value to be
+a \emph{measured} quantity with conservation laws and limits, not a verdict. This paper builds that quantity and
+tests it on real agents.
+
+\paragraph{Contributions and honesty.} We claim none of the underlying mechanisms as individually novel. The
+logarithm is Bernoulli's and Kelly's; the growth-rate-as-information-rate is \citeauthor{kelly1956}'s; the
+price layer is Arrow--Debreu's; the information geometry is \v{C}encov's and Amari's. Our contribution is
+fourfold and we state it plainly (\S\ref{sec:related}): (i) the \emph{unification} of these accounts under one
+substrate-grounded quantity; (ii) the \emph{capacity theorem} and \emph{fleet ceiling} that the unification
+makes visible; (iii) the \emph{is/ought asymmetry} as a structural property of agent dynamics; and (iv) an
+\emph{empirical test} on live models. Throughout, each result is followed by the assumptions that make it bite,
+in Shannon's spirit of naming the model.
+
+\bigskip
+\noindent\textbf{Plan.} Part~\ref{part:statics} (statics) derives the measure, the capacity theorem, and the
+Second Law for a single agent. Part~\ref{part:multi} (multi-agent) develops cross-frame price and the fleet
+capacity region. Part~\ref{part:dynamics} (dynamics) gives the equations of motion and alignment-as-stability.
+Part~\ref{part:experiments} (evidence) reports the synthetic and real-agent tests. Appendices collect the two
+proofs.
+
+% ======================================================================
+\part{Statics: the measure, the limit, the Second Law}\label{part:statics}
+% ======================================================================
+
+\section{The measure: a logarithmic law of value}\label{sec:measure}
+
+\paragraph{Setup.} An agent holds a divisible resource of total size $E>0$ (free energy, compute, budget,
+attention --- any fungible substrate of action) and allocates it across $K$ goal-relevant channels in amounts
+$e=(e_1,\dots,e_K)$, $\sum_i e_i=E$. Each channel $i$ carries a \emph{goal weight} $k_i\ge 0$ measuring how much
+progress toward the goal a unit of effective work on $i$ yields. Let $V(e)$ be the value the allocation
+realizes. We ask what functional form $V$ must take.
+
+\begin{axiom}[Diminishing returns]\label{ax:concave}
+$V$ is increasing and strictly concave in each $e_i$: the first unit of resource on a channel is worth more than
+the thousandth.
+\end{axiom}
+\begin{axiom}[Additivity across independent channels]\label{ax:additive}
+For channels whose contributions do not interact, $V(e)=\sum_i v(e_i;k_i)$.
+\end{axiom}
+\begin{axiom}[Scale invariance]\label{ax:scale}
+Rescaling the resource unit ($e_i\mapsto \lambda e_i$) changes total value only by an additive constant
+independent of the allocation: $v(\lambda e_i;k_i)=v(e_i;k_i)+c(\lambda,k_i)$.
+\end{axiom}
+
+Axiom~\ref{ax:scale} is the load-bearing one: it says value has no privileged zero of \emph{scale}, exactly as
+information has no privileged base of logarithm. It is a Cauchy functional equation in disguise.
+
+\begin{theorem}[Logarithmic Value Law]\label{thm:log}
+Under Axioms~\textup{\ref{ax:concave}--\ref{ax:scale}} with mild regularity, the value measure is, up to choice
+of unit,
+\begin{equation}
+\boxed{\;V(e)\;=\;\sum_{i=1}^{K} k_i \ln e_i\;}
+\end{equation}
+and the value-maximizing allocation of a fixed budget $E$ is proportional to the goal weights,
+$e_i^\star = E\,\hat k_i$ with $\hat k_i=k_i/\sum_j k_j$, giving
+\begin{equation}
+V^\star \;=\; K\ln E \;-\; K\, H(\hat k)\,,\qquad H(\hat k)=-\textstyle\sum_i \hat k_i\ln\hat k_i .
+\end{equation}
+\end{theorem}
+\noindent The proof (Appendix~\ref{app:log}) solves the Cauchy equation forced by Axiom~\ref{ax:scale}. Two
+features deserve note. First, Shannon's entropy $H$ reappears \emph{unbidden} as a penalty: a goal spread thinly
+over many channels (high $H(\hat k)$) realizes less value than a focused one --- \emph{focus is worth
+$K\,H(\hat k)$ nats of value}. Second, the logarithm here is forced by diminishing returns; \S\ref{sec:capacity}
+forces it a \emph{second} time from compounding. A quantity whose form is over-determined by two independent
+routes is the signature of something fundamental, not a modeling convenience.
+
+\section{The capacity theorem: value-throughput is bounded by information-throughput}\label{sec:capacity}
+
+\paragraph{The repeated game.} Now let value compound: value realized this round becomes resource next round (an
+agent that achieves its goal earns more budget, trust, or compute). Each round $t$ the world settles into a
+state $s\sim q$; the agent splits its budget into fractions $b=(b_1,\dots,b_n)$, $b_i\ge0$, $\sum_i b_i=1$; and
+channel $i$ returns a multiplier $o_i(s)\ge 0$ per unit committed. The budget updates multiplicatively,
+$E_{t+1}=E_t\sum_i b_i\,o_i(s_t)$, so $\log E_T=\log E_0+\sum_t \log\!\big(\sum_i b_i o_i(s_t)\big)$ and the
+long-run \emph{value growth rate} is
+\begin{equation}\label{eq:G}
+G(b)\;=\;\E_{s\sim q}\!\Big[\log\textstyle\sum_i b_i\,o_i(s)\Big].
+\end{equation}
+That the time-average growth of a multiplicative process is the \emph{expected log} of its multiplier is the
+ergodicity argument of \citet{peters2019}; it forces the logarithm again, now from dynamics rather than
+psychology. $G$ is concave in $b$, so maximizing it is a well-posed convex program.
+
+\paragraph{The horse race.} Take the canonical structure in which states are the channels, committing to channel
+$i$ pays only in state $i$, and returns are quoted against a \emph{reference belief} $r$ over states,
+$o_i=1/r_i$. Then $G(b)=\sum_s q_s\log(b_s/r_s)$, maximized (Gibbs) by betting one's model,
+$b_s=p_s$. With a correct model $p=q$,
+\begin{equation}\label{eq:Gstar}
+G^\star=\sum_s q_s\log\frac{q_s}{r_s}=\KL{q}{r}.
+\end{equation}
+\emph{Maximal value growth equals the divergence of the agent's correct model from the baseline.} An agent whose
+model is the baseline ($p=r$) grows value at rate zero: value creation is informational edge over the prevailing
+expectation, nothing more.
+
+\paragraph{Side information.} Equip the agent with a perception channel: a signal $Y$ correlated with the
+world-state $X$, observed before allocating. Optimal play bets the posterior $b_s=p(s\mid y)$, with growth
+$G_Y=\sum_{x,y}p(x,y)\log\frac{p(x\mid y)}{r(x)}$. The gain over acting on the prior alone is exactly mutual
+information:
+\begin{theorem}[Coding Theorem of Value]\label{thm:capacity}
+The incremental rate at which an agent can compound value by perceiving the world through a channel $Y$ is at
+most the mutual information between world-state and perception,
+\begin{equation}
+\boxed{\;\Delta G \;=\; G_Y-G_0 \;=\; \I(X;Y)\;,}
+\end{equation}
+and this bound is achieved by Bayes-proportional allocation. \textup{(Proof: Appendix~\ref{app:capacity}.)}
+\end{theorem}
+\noindent This has the full structure of a Shannon coding theorem. \emph{Achievability:} betting the posterior
+attains $\Delta G=\I(X;Y)$. \emph{Converse:} any $b\ne p(\cdot\mid y)$ loses exactly $\KL{p(\cdot\mid y)}{b}$ per
+round (Gibbs), so $\I(X;Y)$ is an upper bound. An agent cannot create value faster than it can perceive the
+world; \emph{value-throughput is bounded by information-throughput.} Perception capacity is the hard ceiling on
+value-generation rate --- the value analog of channel capacity.
+
+\section{The Second Law of Value}\label{sec:secondlaw}
+
+Drop the assumption that the agent's model is correct. Let $q$ be reality, $p$ the agent's model, $r$ the
+baseline; the agent bets $b=p$ but the world is drawn from $q$. Then
+\begin{equation}\label{eq:secondlaw}
+\boxed{\;G_{\mathrm{actual}}=\sum_s q_s\log\frac{p_s}{r_s}
+=\underbrace{\KL{q}{r}}_{\text{available potential}}-\underbrace{\KL{q}{p}}_{\text{dissipation (model error)}}\;.}
+\end{equation}
+Realized value is available potential minus dissipation from misalignment, every term in nats. Three
+consequences. (i) \emph{Misalignment is measurable dissipation}: confident error ($\KL{q}{p}>\KL{q}{r}$) drives
+growth negative --- a wrong, certain agent actively destroys value, while calibrated humility is
+value-preserving. (ii) \emph{Learning is value-recovery}: $\KL{q}{p}$ is exactly the cross-entropy excess that
+predictive training minimizes, so the machine-learning objective \emph{is} the minimization of value
+dissipation. (iii) \emph{Alignment is a value law}: reducing $\KL{q}{p}$ is mechanically identical to reducing
+wasted value. We test \eqref{eq:secondlaw} on live models in \S\ref{sec:real} (R2), where the weakest model's
+over-confidence indeed drives realized growth negative.
+
+% ======================================================================
+\part{Multi-agent: price and the fleet}\label{part:multi}
+% ======================================================================
+
+\section{Cross-frame value and the frame-independence of price}\label{sec:crossframe}
+
+A single agent's value lives in its own frame $(q,p,r,k)$. Two agents with different goals have values that are
+\emph{not} cardinally comparable --- the interpersonal-comparison impossibility of \citet{arrow1951}, which we
+concede rather than circumvent. Yet they can still coordinate, exactly as economies coordinate non-comparable
+utilities: through a \emph{price} on the shared resource.
+
+\paragraph{Shadow price.} For an agent with goal mass $K=\sum_i k_i$ and budget $E$, the marginal value of
+resource (the Lagrange multiplier on $\sum_i e_i=E$ in Theorem~\ref{thm:log}) is the \emph{shadow price}
+$\lambda=K/E$. Two agents trade resource until their shadow prices equalize; the common $\lambda$ is a scalar
+that lives in \emph{neither} agent's value frame. Hence:
+\begin{quote}
+\emph{Value is frame-relative; price is frame-independent.} Value is a vector in an agent's goal basis; price is
+the one scalar on which separated frames agree.
+\end{quote}
+
+\paragraph{The invariant.} The transformation between two agents' value frames is a change of coordinates on the
+belief simplex. The unique (up to scale) Riemannian metric invariant under such sufficient-statistic
+reparametrizations is the Fisher--Rao metric \citep{cencov1982,amari2016}. It is the cross-frame invariant of
+the theory: distances in belief that all agents agree on, whatever their goals. Alignment between two goals is
+the cosine $\cos\theta_{ab}=\langle \hat k_a,\hat k_b\rangle$; its sign sets whether their interaction is
+positive- or negative-sum.
+
+\section{The fleet capacity region}\label{sec:fleet}
+
+Consider $m$ agents acting on one world $X$ and drawing on one resource pool.
+
+\paragraph{The ceiling.} Each agent's growth is bounded by its own perception (Theorem~\ref{thm:capacity}),
+$G_a\le \I(X;Y_a)$. Jointly, the data-processing inequality gives the sum-rate bound
+\begin{equation}\label{eq:ceiling}
+\boxed{\;\sum_{a\in S} G_a \;\le\; \I(X;Y_S)\;\le\; H(X)\;}\qquad\text{for any subset }S,
+\end{equation}
+the collective value throughput of a fleet is capped by the entropy of the world it acts on. Headcount past
+perception-saturation buys nothing. \emph{Perception diversity} (agents that perceive different slices of $X$)
+lifts $\I(X;Y_S)$ toward $H(X)$; \emph{redundancy} (agents perceiving the same slice) adds exactly zero. We
+confirm both on live models in \S\ref{sec:real} (R4).
+
+\paragraph{The operating point.} Under multiplicative dynamics the shared pool multiplies each round by
+$\sum_a w_a R_a$ for resource weights $w_a$, so the fleet is a \emph{Kelly portfolio over agents}: for
+imperfectly-correlated agents, spreading resource and rebalancing raises the time-average growth (the
+volatility-harvesting effect of \citealp{kelly1956,cover1991}). The weights that achieve the optimum are
+selected by the resource \emph{price} $\pi$: price moves resource to high-shadow-price agents until $\lambda$
+equalizes. Thus
+\begin{quote}
+the \emph{alignment matrix} $M=[\cos\theta_{ab}]$ shapes the achievable region (a cooperation dividend where
+$\cos\theta>0$, a conflict tax where $\cos\theta<0$); the \emph{price} selects the operating point on it.
+\end{quote}
+This separates governance into two acts: \emph{shaping} the region (alignment and perception design) and
+\emph{choosing} the point on it (pricing). The pricing claim is the one we test most carefully
+(\S\ref{sec:real}, R5), and where the demon's precondition --- genuine diversity --- turns out to matter.
+
+% ======================================================================
+\part{Dynamics: motion and alignment}\label{part:dynamics}
+% ======================================================================
+
+\section{The equations of motion and the is/ought asymmetry}\label{sec:dynamics}
+
+The statics fix equilibria; the dynamics say how they are approached. Three objects evolve. \emph{Beliefs} $p$
+flow toward the true law $q$ by a natural-gradient (Fisher) descent on log-loss --- the realized regret of this
+flow equals the cumulative dissipation $\sum_t \KL{q}{p_t}$ of \eqref{eq:secondlaw}, so \emph{learning is
+value-recovery} dynamically as well as statically. \emph{Prices} $\pi$ flow toward market-clearing by
+t\^atonnement (dual ascent on the resource constraint). \emph{Goals} $k$ flow under two forces: \emph{control}
+(a principal pulling $k_a$ toward a target $k^\star$) and \emph{selection} (compounding reweights resource
+toward higher-growth goals).
+
+The organizing fact is an asymmetry. Beliefs and prices each flow toward a target \emph{the world supplies}:
+reality provides $q$, the resource constraint provides market-clearing. Goals have \emph{no} target the world
+supplies --- reality contains no fact about what ought to be valued. So beliefs and prices are \emph{learnable}
+(gradient flows toward a given target); goals are only \emph{controllable} or \emph{selectable}. This is Hume's
+is/ought gap recovered as a structural property of the dynamics, and \S\ref{sec:alignment} shows it is the
+mathematical shape of the alignment problem.
+
+\section{Alignment as a stability condition}\label{sec:alignment}
+
+Let agent $a$ have goal $k_a$ and resource share $w_a$, with fleet effective goal $\bar k=\sum_a w_a k_a$.
+Control pulls each goal toward target: $\dot k_a|_{\mathrm{ctrl}}=-\gamma(k_a-k^\star)$. Selection follows the
+replicator $\dot w_a=w_a(G_a-\bar G)$. Summarize the environment's reward landscape over goals to first order by
+its growth gradient $g:=\nabla_k G$ --- the direction in goal-space along which deviating from $k^\star$
+\emph{increases} resource capture.
+
+\begin{theorem}[Coupled-flow alignment]\label{thm:align}
+By Price's equation \citep{price1970}, the selection drift of the mean is the trait--fitness covariance; with
+$G_a\approx \bar G+g^\top(k_a-\bar k)$ it equals $Vg$, where $V=\Cov_a(k_a)$ is the goal-dispersion matrix.
+Hence the effective goal obeys
+\begin{equation}
+\dot{\bar k}=-\gamma(\bar k-k^\star)+Vg,
+\end{equation}
+with fixed point and residual misalignment
+\begin{equation}
+\boxed{\;\bar k^\star=k^\star+\gamma^{-1}Vg,\qquad \|\bar k^\star-k^\star\|=\gamma^{-1}\|Vg\|\;,}
+\end{equation}
+and the aligned fixed point is locally stable iff $\gamma>\lambda_{\max}\!\big(\partial(Vg)/\partial\bar k\big)$.
+\end{theorem}
+\noindent The fleet does not in general settle at the target; it settles a distance $\|Vg\|/\gamma$ away ---
+goal-dispersion times reward-pull over control gain. Perfect alignment holds iff $Vg=0$: either the environment
+rewards exactly the target ($g=0$), or there is no diversity to select among ($V=0$), or control is infinite.
+The governance reading is sharp:
+\begin{quote}
+\emph{The cheap half of alignment is incentive design, not control.} Driving $g\to0$ (aligning what \emph{pays}
+with what is \emph{wanted}) removes the residual for \emph{any} $\gamma$ and \emph{any} $V$, preserving the
+diversity that lifts the fleet ceiling \eqref{eq:ceiling}; raising $\gamma$ (brute-force oversight) merely
+opposes a drift it never removes. Spend first on $g$.
+\end{quote}
+This is the actionable form of the is/ought asymmetry: because goals have no world-given target, they are
+governed by what pays (selection, via $g$) and what is imposed (control, via $\gamma$).
+
+% ======================================================================
+\part{Evidence}\label{part:experiments}
+% ======================================================================
+
+\section{Synthetic validation}\label{sec:sim}
+
+We first check that each closed-form prediction is reproduced by a Monte-Carlo world built to the theory's
+assumptions. All five families pass to numerical tolerance (20/20 checks): E1, $\Delta G=\I(X;Y)$ to
+$\sim\!10^{-3}$ nats; E2, the Second-Law decomposition \eqref{eq:secondlaw} exactly, including value going
+negative under confident error; E3, the fleet ceiling \eqref{eq:ceiling} with diversity lifting it and
+redundancy adding zero; E4, a Kelly-priced fleet beating ad-hoc allocation, including a ``Shannon's demon''
+built from anti-correlated agents that individually do not grow yet collectively do; E5, cumulative dissipation
+equal to regret, with a drifting world flooring dissipation at a positive value (a dynamical Second Law). These
+confirm the mathematics is self-consistent and correctly derived. They are, however, circular by construction:
+the worlds are drawn from the same distributions the formulas assume. The decisive test is on real agents.
+
+\section{Real agents}\label{sec:real}
+
+\paragraph{Instantiation.} We take a frozen, pre-registered 100-item decision task in which each item has a
+ground-truth correct action drawn from $K=7$ classes, and an agent's output \emph{is} an action. This realizes
+the perception-then-act structure of Theorem~\ref{thm:capacity} directly: the world-state $X$ is the correct
+action, the perception $Y_a$ is the action model $a$ chooses. We set $r=q$ (the action marginal), so a
+no-signal agent grows value at rate $0$. From each model's run we form the confusion matrix
+$C_a[x,y]=\#(\text{gold}=x,\text{chosen}=y)$ and compute every quantity in nats with the same primitives used in
+\S\ref{sec:sim}: $\I(X;Y_a)$ from the joint; the calibrated posterior $p_a(x\mid y)=C_a[:,y]/\sum_x C_a[:,y]$;
+and realized growth $\Delta G_a=\text{mean}\,\ln\!\big(p_a(x\mid y_a)/r(x)\big)$. The agents are a weak$\to$strong
+ladder of local models ($1.5$B, $3$B, $7$B parameters), greedy decoding. Posteriors are calibrated on a
+$48$-item fit split and scored on a $52$-item holdout; in-sample, the oracle posterior with $r=q$ makes
+$\Delta G=\I$ an arithmetic identity (used only to confirm the units), so the empirical content is the ladder
+monotonicity, the out-of-sample tracking, and the fleet result.
+
+\paragraph{R1: the bridge holds and rises with scale.} Mutual information increases monotonically along the
+ladder and out-of-sample value-growth tracks it almost perfectly (Table~\ref{tab:r1}; Pearson $r=0.996$
+between $\I$ and $\Delta G_{\text{holdout}}$). Value-throughput is information-throughput, on real behavior.
+
+\begin{table}[h]\centering
+\begin{tabular}{lccccc}
+\toprule
+model & params & tool-acc & $\I(X;Y)$ & $\Delta G_{\text{in}}$ & $\Delta G_{\text{hold}}$ \\
+\midrule
+A & 1.5B & 0.79 & 1.277 & 1.277 & 0.915 \\
+B & 3B   & 0.87 & 1.561 & 1.561 & 1.242 \\
+C & 7B   & 0.96 & 1.779 & 1.779 & 1.423 \\
+\bottomrule
+\end{tabular}
+\caption{R1 (nats). $\I(X;Y)$ rises with capability; $\Delta G_{\text{hold}}$ tracks it ($r=0.996$). The world
+entropy is $H(X)=1.92$ nats, so model C captures $93\%$ of it, model A $66\%$.}
+\label{tab:r1}
+\end{table}
+
+\paragraph{R2: over-confidence is dissipation, shrinking with capability.} Reading the same point-predictions
+with a calibrated versus an over-confident posterior realizes different value; the gap is dissipation
+(Table~\ref{tab:r2}). It is large for the weak model and shrinks with scale --- a quantitative statement that
+weaker agents must be more humble. For model A, confident error drives realized growth \emph{negative}, exactly
+the Second Law's prediction \eqref{eq:secondlaw}.
+
+\begin{table}[h]\centering
+\begin{tabular}{lccc}
+\toprule
+model & $G_{\text{cal}}$ & $G_{\text{over}}$ & dissipated \\
+\midrule
+A (1.5B) & $+0.915$ & $-3.255$ & 4.17 \\
+B (3B)   & $+1.242$ & $-0.863$ & 2.11 \\
+C (7B)   & $+1.423$ & $+0.731$ & 0.69 \\
+\bottomrule
+\end{tabular}
+\caption{R2 (nats). Dissipation from false certainty falls as capability rises; the weakest agent's
+over-confidence destroys value outright.}
+\label{tab:r2}
+\end{table}
+
+\paragraph{R3: value per joule.} Mutual information \emph{per second of compute} falls with scale
+($0.74\to0.38\to0.30$ nats/s), as does $\I$ per billion parameters ($0.85\to0.52\to0.25$). The weakest model is
+the most efficient perceiver per unit compute --- the value-theoretic reason a cheap reflex is worth running on
+a narrow task. (This is the $\I$/compute curve across model scale, not a within-model prompt ablation; see
+\S\ref{sec:limits}.)
+
+\paragraph{R4: diversity beats redundancy.} Two different models jointly perceive more of $H(X)$ than either
+alone; an identical greedy re-run adds exactly zero. The best diverse pair (B+C) reaches $\I=1.869$ nats, $+0.090$
+over C alone and closing most of the gap to $H(X)=1.921$. This is the fleet-ceiling prediction \eqref{eq:ceiling}
+on real agents.
+
+\paragraph{R5: pricing beats pooling, but only where there is diversity to price (reported honestly).} On raw
+out-of-sample growth, the Kelly/price fleet ($+1.343$) beats the equal-weight ensemble ($+1.324$) but
+\emph{does not beat the single best model} ($+1.423$). There is no Shannon's demon here, and the theory says
+why: a capability ladder on the \emph{same} task yields positively-correlated agents (R4 quantifies the residual
+diversity at $+0.09$ nats), so Kelly rebalancing has no anti-correlated volatility to harvest and the best agent
+dominates. This is the honest negative the synthetic E4 demon does not reproduce, because E4 was constructed with
+anti-correlated agents.
+
+The negative is confined to the cost-blind axis. Value \emph{per unit compute} inverts the ranking: model A
+yields $0.531$ nats/s against C's $0.243$, and a budget-aware price $\propto \I_a/\text{cost}_a$ (the shadow
+price $\lambda=K/E$ of \S\ref{sec:crossframe}) achieves $0.393$ nats/s, beating the best single model's density.
+Pricing therefore pays exactly where \S\ref{sec:fleet} says it should: as the lever that chooses the operating
+point under a resource constraint, not as a free lunch that beats the best agent when compute is unlimited. The
+demon needs \emph{perception diversity} --- different slices of $H(X)$ --- which a same-task scale ladder lacks
+by construction. We mark this as a falsifiable boundary, not a defeat.
+
+\section{Related work}\label{sec:related}
+
+Every component of this theory exists in some field; the contribution is the unification, the substrate
+grounding, and the is/ought asymmetry. We state this explicitly and concede each component to its source.
+
+\emph{Expected utility and diminishing value.} The axiomatic treatment of preference is \citet{vnm1944} and
+\citet{savage1954}; our logarithmic measure (\S\ref{sec:measure}) coincides with \citet{bernoulli1738} and with
+unit-coefficient constant-relative-risk-aversion utility, and the diminishing-returns law it encodes is
+Weber--Fechner. We do not claim the form as novel; our departure is to \emph{derive} it from scale invariance on
+a physical resource, to ground it in a substrate (free energy) supplying a unit and a cross-frame exchange rate
+that expected utility lacks, and to show it is forced a second time by compounding \citep{peters2019}.
+
+\emph{Information rate and log-optimal growth.} The closest prior art, which we credit most carefully, is
+\citet{kelly1956}: the exponential growth rate of wealth is an information rate, optimized by betting one's
+beliefs; \citet{breiman1961} proved asymptotic optimality and \citet{cover1991} developed universal portfolios.
+Our capacity theorem (\S\ref{sec:capacity}) is generalized Kelly, and the fleet operating point (\S\ref{sec:fleet})
+is a Kelly--Cover portfolio over agents. What we add is the reinterpretation of wealth as free energy (a physical
+rather than monetary substrate), the cross-frame price layer, the dynamics/alignment layer, and the claim that
+Kelly's theorem is the single-agent monetary \emph{special case} of a general law of value.
+
+\emph{Reinforcement learning.} ``Value function'' is precisely defined in RL \citep{bellman1957,suttonbarto} as
+expected cumulative reward; the relationship is complementary, not competitive. RL takes reward as given and
+maximizes it; our goal weights are the analog of reward, but we problematize where reward comes from and how it
+drifts (\S\ref{sec:dynamics}--\ref{sec:alignment}). Our theory sits beneath RL --- a candidate account of what
+reward \emph{is}.
+
+\emph{Thermodynamics of computation and the free-energy principle.} That information has thermodynamic cost is
+\citet{landauer1961} and \citet{bennett1982}; \citet{jaynes1957} recast statistical mechanics as inference;
+\citet{england2013} studied dissipation-driven adaptation; \citet{friston2010} casts agents as free-energy
+minimizers. Our belief dynamics (\S\ref{sec:dynamics}) is free-energy-principle-like and shares the information
+geometry \citep{cencov1982,amari2016}. The distinction is precise: the free-energy principle is a theory of the
+perception/belief half --- the ``is'' --- whereas our value layer is the goal/value half --- the ``ought'' ---
+plus a multi-agent price economics the FEP does not contain. The seam between them is the is/ought asymmetry.
+
+\emph{General equilibrium and social choice.} Our price layer (\S\ref{sec:crossframe}) is
+\citet{arrowdebreu1954,debreu1959} and its companion impossibility \citep{arrow1951}. We use these rather than
+extend them: we concede that cardinal cross-agent comparison is impossible and route around it via an emergent
+price. The contribution is the synthesis with the information-theoretic value layer under one substrate, and the
+application to artificial-agent populations.
+
+\emph{AI alignment.} Instrumental convergence \citep{omohundro2008,bostrom2014} we derive from the compounding
+dynamics of value (\S\ref{sec:dynamics}): goal-directions correlated with resource capture are selected
+regardless of terminal content. We recast alignment as a dynamical stability condition (\S\ref{sec:alignment}),
+which to our knowledge is a new framing.
+
+\section{Discussion: governing a population of agents}\label{sec:discussion}
+
+The results compose into a control theory for populations of separated agents. \emph{Per agent}, value-generation
+rate is capped by the perception mutual information $\I(X;Y_a)$ (Theorem~\ref{thm:capacity}); supplying an agent
+the goal-relevant bits cheaply --- raising effective $\I$ per unit compute --- lifts its value ceiling without
+raising its deliberation cost, which is the formal reason a cheap reflex can match expensive deliberation on a
+narrow task (R3 measures this curve directly). \emph{Across agents}, values are not cardinally comparable, so
+coordination must run through an emergent price on shared resource (\S\ref{sec:crossframe}), never a god's-eye
+utility sum. \emph{Fleet design} is then two levers: cultivate perception diversity to lift the entropy ceiling
+\eqref{eq:ceiling} (R4), and price resource to the best operating point (R5) --- with the caveat, learned
+empirically, that pricing earns its keep only where genuine diversity exists. \emph{Alignment}, finally, is
+incentive design before oversight (Theorem~\ref{thm:align}): spend first on making what pays equal what is
+wanted.
+
+\section{Limits}\label{sec:limits}
+
+We name the assumptions that bound each claim. The capacity theorem assumes compounding (reinvested value) and is
+cleanest in the horse-race structure; general returns give a concave program without the closed-form
+$\KL{q}{r}$. The fleet ceiling's exact achievable region is an open problem of network-information-theory
+difficulty. The cross-frame layer concedes that cardinal interpersonal comparison is non-canonical; we do not
+solve it. On the empirical side: the in-sample $\Delta G=\I$ is an arithmetic identity, not evidence ---only the
+ladder monotonicity, the out-of-sample tracking, and R5 are empirical; R3 is an $\I$/compute curve across model
+scale, not a within-model prompt ablation; the calibration in R2 is constructed from the confusion matrix, not a
+probability the model reported, so the dissipation measured is that of a stated belief over those predictions;
+and the whole test is one task on one corpus --- evidence that the bridge holds there, not a universal law.
+Degenerate runs in which a model emits no action (a serving/plumbing failure, not a decision) are detected and
+excluded rather than reported as low-$\I$ capability. The alignment theorem is mean-field with a linearized
+landscape and a quasi-static dispersion $V$; a fully coupled treatment, and an endogenous reward gradient $g$ in
+a closed multi-agent world, remain open.
+
+\section{Conclusion}\label{sec:conclusion}
+
+Stripped of morality, price, and psychology, value is a structural quantity with a measure ($\sum_i k_i\ln e_i$),
+a capacity limit ($\Delta G=\I(X;Y)$), a Second Law ($G=\KL{q}{r}-\KL{q}{p}$), a frame-independent price, a
+fleet entropy ceiling, and an alignment-stability law. Shannon's own quantities --- entropy, divergence, mutual
+information, the Fisher metric --- reappear unbidden throughout, which is the strongest internal evidence that
+the abstraction is real rather than decorative. On live language models the single-frame laws hold to high
+precision, and the one fleet-level claim with a genuine precondition is reported with its boundary intact. The
+quantity is frame-relative; the laws relating frames are universal; and they are now testable on the artificial
+agents the theory was built to govern.
+
+\appendix
+\section{Proof of the Logarithmic Value Law (Theorem~\ref{thm:log})}\label{app:log}
+
+By Axiom~\ref{ax:additive} it suffices to find the per-channel $v(e;k)$. Axiom~\ref{ax:scale} states
+$v(\lambda e;k)=v(e;k)+c(\lambda,k)$ for all $\lambda,e>0$. Fix $k$ and write $f(e):=v(e;k)$. Then
+$f(\lambda e)-f(e)=c(\lambda)$ is independent of $e$. Differentiating in $\lambda$ at $\lambda=1$,
+$e f'(e)=c'(1)=:k$, a separable ODE with solution $f(e)=k\ln e+\text{const}$. Concavity (Axiom~\ref{ax:concave})
+fixes the sign $k\ge 0$ and rules out the additive constant's dependence on $e$. Summing over channels gives
+$V(e)=\sum_i k_i\ln e_i$. Maximizing under $\sum_i e_i=E$ with multiplier $\lambda$: $\partial_{e_i}(V-\lambda
+\sum_j e_j)=k_i/e_i-\lambda=0\Rightarrow e_i=k_i/\lambda$, and $\sum_i e_i=E$ gives $\lambda=K/E$ (the shadow
+price) and $e_i^\star=E\hat k_i$. Substituting, $V^\star=\sum_i k_i\ln(E\hat k_i)=K\ln E+\sum_i k_i\ln\hat k_i
+=K\ln E-K H(\hat k)$ after normalizing $k_i=K\hat k_i$. \hfill$\square$
+
+\section{Proof of the Coding Theorem of Value (Theorem~\ref{thm:capacity})}\label{app:capacity}
+
+\emph{Achievability.} With side information $Y=y$ the optimal bet is the posterior $b_s=p(s\mid y)$ (Gibbs
+applied conditionally), giving conditional growth $\sum_s p(s\mid y)\log\frac{p(s\mid y)}{r(s)}$. Averaging over
+$y$,
+\[
+G_Y=\sum_{y}p(y)\sum_s p(s\mid y)\log\frac{p(s\mid y)}{r(s)}
+   =\sum_{x,y}p(x,y)\log\frac{p(x\mid y)}{r(x)}.
+\]
+Without side information the optimal bet is the prior $b_s=p(s)$, giving $G_0=\sum_x p(x)\log\frac{p(x)}{r(x)}
+=\KL{p_X}{r}$. Subtracting,
+\[
+\Delta G=G_Y-G_0=\sum_{x,y}p(x,y)\log\frac{p(x\mid y)}{p(x)}=\I(X;Y).
+\]
+\emph{Converse.} For any allocation $b(\cdot\mid y)\ne p(\cdot\mid y)$, the conditional growth loss is
+$\sum_s p(s\mid y)\log\frac{p(s\mid y)}{b(s\mid y)}=\KL{p(\cdot\mid y)}{b(\cdot\mid y)}\ge 0$ by Gibbs, with
+equality iff $b=p(\cdot\mid y)$. Hence no strategy exceeds $G_0+\I(X;Y)$, so $\I(X;Y)$ is both achieved and an
+upper bound on $\Delta G$. \hfill$\square$
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}
