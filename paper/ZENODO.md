@@ -15,7 +15,7 @@ your decision before upload — flagged with ⚠️.
 | **Publication date** | 2026 |
 | **Language** | English (eng) |
 | **Version** | v1 |
-| ⚠️ **License** | **CC-BY-4.0** (proposed — standard for a preprint; lets others cite/build with attribution. Note: this is the *paper's* license; differs from Macrokit code's Apache-2.0. Confirm.) |
+| ⚠️ **License** | **CC-BY-4.0** (proposed — standard for a preprint; lets others cite/build with attribution. Note: this is the *paper's* license; the associated code may carry a different one. Confirm.) |
 | **Keywords** | value; theory of value; information theory; Kelly criterion; mutual information; log-optimal growth; multi-agent systems; AI agents; agent coordination; AI alignment; mechanism design; free energy; reinforcement learning; ergodicity economics |
 | **Description** | (abstract below) |
 | **Notes** | Source and reproducible experiments are maintained in a private repository; available on request. |
@@ -74,6 +74,6 @@ your decision before upload — flagged with ⚠️.
 - [ ] **Publish gate:** explicit owner sign-off (the handoff requires confirming before any outward release).
 - [ ] Decide ⚠️ affiliation, ⚠️ ORCID, ⚠️ license (CC-BY-4.0 proposed).
 - [ ] Final read of `main.pdf` end-to-end (the red-team fixes are in; this is a last proofing pass).
-- [ ] Confirm the paper names no Macrokit/AutoStore specifics (Sacred Rule #1) — leakage check already clean.
+- [ ] Confirm the paper names no private-project or proprietary-domain specifics — leakage check already clean.
 - [ ] Reserve a DOI in Zenodo (draft deposition) before publishing, if you want the DOI in any announcement.
 - [ ] After publish: the DOI is permanent and the record is immutable except for new versions — so proof first.
