@@ -37,6 +37,11 @@ it forces the theory to make the frame explicit.
 | [`03`](docs/03-cross-frame-value.md) | Cross-frame / multi-agent | **Value is frame-relative; price is frame-independent.** Exchange via shadow price `λ=K/E`; invariant = Fisher–Rao metric (Čencov); alignment `cos θ` sets positive/negative-sum |
 | [`04`](docs/04-multi-agent-capacity-region.md) | Fleet governance | **Collective value-throughput ≤ H(X)** — the world's entropy caps the whole fleet; region shaped by alignment; operating point set by price |
 | [`05`](docs/05-dynamics.md) | The equations of motion | **Learning = value-recovery, dissipation = regret**; natural-gradient (Fisher) belief flow, tâtonnement price flow, control+selection goal flow; alignment = a stability condition; a moving world forbids zero dissipation |
+| [`07`](docs/07-alignment-stability.md) | Alignment theorem | Coupled control+selection flow solved: residual misalignment `= ‖Vg‖/γ`; stable iff `γ > λ_max(∂(Vg)/∂k̄)`; **incentive design (`g→0`) beats brute-force control (`↑γ`)** |
+
+Supporting: [`docs/related-work.md`](docs/related-work.md) — paper-ready prior-art section (utility theory,
+Kelly/info theory, RL, thermodynamics/FEP, general equilibrium, alignment) with an honest statement of
+contribution.
 
 ### The three load-bearing equations
 
@@ -98,9 +103,10 @@ assumptions.
 ## Reading order
 
 `00` (framing) → `01` (the measure) → `02` (the limit) → `03` (many agents) → `04` (the fleet) → `05`
-(dynamics). Each builds on the last; each is self-contained enough to skim from its headline box. Docs 01–04
-are the **statics** (conservation laws, equilibria); doc 05 is the **dynamics** (equations of motion).
-Together they form a thermodynamics of value.
+(dynamics) → `07` (the alignment theorem). Each builds on the last; each is self-contained enough to skim from
+its headline box. Docs 01–04 are the **statics** (conservation laws, equilibria); `05` and `07` are the
+**dynamics** (equations of motion + the alignment-stability theorem). Together they form a thermodynamics of
+value. `docs/related-work.md` situates it against prior art. (`06` is reserved for the real-agent test.)
 
 ## Provenance & non-goals
 
