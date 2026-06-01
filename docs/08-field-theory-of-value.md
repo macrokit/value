@@ -11,6 +11,13 @@
 > theorem, Toner–Tu active hydrodynamics). What is *speculative* is the **mapping** of value/economics onto
 > them. The whole document is a construction motivated by analogy plus one real anchor (active matter); §9 is
 > blunt about what would make it science rather than physics-envy.
+>
+> **Status update.** The mapping is no longer pure analogy: [`10`](10-field-theory-derivation.md) **derives**
+> the telegrapher and Toner–Tu forms by coarse-graining the discrete value dynamics, and
+> [`sim/field/dynamic/`](../sim/field/dynamic/) confirms both signatures **emerge** from a toy agent value
+> economy (7/7). What remains speculative is now precise: two falsifiable *conditions* (reallocation inertia;
+> local-symmetric motile imitation) and the unmet **real-agent** test (§9). Read the inline `> Derived…` notes
+> in §3, §6 and the §10 roadmap for what changed.
 
 ## 0. The one anchor that keeps this honest: active matter
 
@@ -78,6 +85,13 @@ propagate as waves; long-wavelength (society-wide) ones diffuse and damp. *This 
 prediction — a real demand-propagation experiment on a network should show this crossover, or the field
 picture is wrong.*
 
+> **Now derived, not posited** ([`10`](10-field-theory-derivation.md) §2). Coarse-graining substrate
+> conservation plus a *relaxational* resource current (the transmission-line / Maxwell–Cattaneo route) yields
+> this exact equation with `τ=L/R`, `D=1/(RC)`, `v=1/\sqrt{LC}` — where `C` is the storage elasticity
+> `\partial e/\partial\pi`, `R\sim1/\kappa` the disequilibrium dissipation, and `L` the reallocation inertia. The
+> wave exists **iff `L>0`** (finite reallocation response time); with instantaneous reallocation the theory
+> predicts only diffusion. So `τ` is no longer free — it is a measurable condition.
+
 This is the formal content of "an individual's desire creates a wave in society": a localized source `\rho`
 in the telegrapher's equation radiates a damped wave through the price field, at speed `\sqrt{D/\tau}`.
 
@@ -127,6 +141,12 @@ of the goal field* — and they are soft precisely *because* goals have no world
 gap becomes: the belief field has a mass, the goal field does not. This is the single most striking thing the
 field picture buys, and it is a precise, structural claim.
 
+> **Derived and sharpened** ([`10`](10-field-theory-derivation.md) §3.3): the control term of
+> [`05`](05-dynamics.md) §3 coarse-grains to an external field on the director, i.e. a **mass `m^2\propto\gamma`**
+> (the control gain). So goals are Goldstone (massless) *only when uncontrolled*; **alignment design is literally
+> the addition of a mass term.** Confirmed emergently — control rounds the flocking transition (§5), the
+> simulated signature of a mass — in [`sim/field/dynamic/`](../sim/field/dynamic/) (C3).
+
 ## 7. What is conserved, and what is not
 
 The truly conserved object is the **substrate** (resource/free energy): a continuity equation
@@ -156,9 +176,14 @@ them. This program is worth nothing until it earns the analogy:
 - **Locality and symmetry are assumed, not established.** Field theory needs local interactions and a real
   symmetry group. Social/agent networks are long-range, heterogeneous, and may have *no* clean symmetry — in
   which case the field reduction is invalid and only the discrete theory survives.
-- **The mappings are constructions, not derivations.** The telegrapher's equation, Frank energy, and Toner–Tu
-  dynamics are rigorous; *that value/price/desire obey them* is a hypothesis. Each coupling constant
-  (`D, τ, J, Γ, β`) is presently a free parameter, not measured.
+- **The mappings are ~~constructions, not derivations~~ derivations conditional on explicit assumptions.**
+  *(Updated, [`10`](10-field-theory-derivation.md).)* The telegrapher and Toner–Tu forms now **derive** by
+  coarse-graining the discrete value dynamics, with the coupling constants expressed as functions of agent-level
+  quantities (`τ,D,v` from storage elasticity / dissipation / reallocation inertia; `Γ,J,β` from imitation rate,
+  density, range, replicator sensitivity). What remains *assumed* is no longer the equations but two falsifiable
+  **conditions**: reallocation **inertia `L>0`** (else the wave is pure diffusion) and **local, rotationally-
+  symmetric, motile** goal imitation (else the gradient expansion / spontaneous ordering fails). The honest gap
+  moved from "are these the right equations?" to "do real agent networks meet these conditions?".
 - **The decisive test is a measured dispersion relation or a measured transition.** The program becomes science
   the day someone measures, in a real agent population or market, either the §3 crossover `q^\*` (waves at
   short scale, diffusion at long scale) or the §5 flocking transition with its critical exponents. Absent that,
@@ -186,10 +211,23 @@ scale-up). The tractable first steps, in order:
    diversity for pooling/pricing to harvest). **Scope: supports the foundations; NOT a test of the wave (§3)
    or the transition (§5)** — those need evolving goals, which static classification lacks.
 
-2. **Pin the couplings** to the discrete theory by coarse-graining (derive `D, τ, J, Γ` from agent-level
-   `E, λ, k`-dynamics rather than positing them).
+2. ✅ **Pin the couplings — DONE** ([`10`](10-field-theory-derivation.md)). Coarse-graining the discrete value
+   dynamics ([`04`](04-multi-agent-capacity-region.md)–[`05`](05-dynamics.md)) **derives** both forms: the
+   telegrapher equation from substrate conservation + a relaxational resource current (`τ=L/R`, `D=1/RC`,
+   `v=1/\sqrt{LC}`), and Toner–Tu from local replicator-weighted goal imitation (the Bertin–Droz–Grégoire route;
+   `Γ\propto J_{\rm align}\rho r^2`), with **control = a mass `m^2\propto\gamma`** grounding §6. The constants are
+   now functions of agent quantities, not free. *Conditions* replace posits: the wave needs reallocation inertia
+   `L>0`; the transition needs local, symmetric, motile imitation. **Either could fail on real networks — that is
+   now the explicit, falsifiable gap.**
+2b. ✅ **Emergent confirmation in a dynamic toy economy — DONE** ([`sim/field/dynamic/`](../sim/field/dynamic/),
+   7/7). Toy agents with *only* the micro-rules (resource shipped toward value with a flow lag; goals imitating
+   resource-capturing neighbours) — **no field equation integrated** — reproduce the demand wave with the
+   predicted dispersion crossover `q^\*` (4/4) and the collective-goal order→disorder transition with a
+   susceptibility peak and the control-as-mass rounding (3/3). The wave needs reallocation inertia and the
+   transition needs motility (Mermin–Wagner kills it on a fixed lattice) — exactly the derived conditions. This
+   is the bridge between the pure-physics lattice (rung 1) and real agents; **still not real-agent data** (rung 3).
 3. **Find one real system** with measurable demand-propagation (a market microstructure, an information
-   cascade on a network) and test for the dispersion crossover.
+   cascade on a network) and test for the dispersion crossover. *(The decisive, still-open gate.)*
 4. Only then: the analytic field theory (renormalization, the phase diagram, the critical exponents).
 
 The prize, if it survives: a **phase diagram of collective intelligence** — and the field-theoretic statement
