@@ -50,16 +50,17 @@ capped by the world's entropy $\sum_a G_a\le H(X)$, and that the fleet's operati
 over agents selected by an emergent price. A dynamical layer gives the equations of motion and an
 is/ought asymmetry --- beliefs have a target the world supplies, goals do not --- from which alignment emerges
 as a control-stability condition with a closed-form residual misalignment. We then test the single-frame laws on
-live language models: across four local models on a frozen 100-item decision task, perception mutual information
-tracks realized \emph{capability} rather than parameter count (monotonically across all four; a cross-family
-model that is larger yet weaker lands at correspondingly lower $\I$), out-of-sample $\Delta G$ tracks $\I(X;Y)$
-across every model,
-over-confidence is measurable dissipation that shrinks with capability, and diversity-beats-redundancy holds; the
-fleet-pricing claim is reported with its honest boundary (no volatility-harvesting ``demon'' on positively
-correlated agents, but pricing wins under a compute budget). The laws hold in the smooth, concave
-(diminishing-returns) regime; threshold, satiation, and risk-seeking goals lie outside it. None of the
-underlying mechanisms is individually new; the contribution is their unification under one
-substrate-grounded quantity, and the is/ought asymmetry that follows.
+live language models in a \emph{pre-registered} scale-up across three task domains and a ten-model, five-family
+ladder ($0.5$B--$8$B): perception mutual information tracks realized \emph{capability} rather than parameter count
+(Spearman $\rho = 0.977$ pooled over 30 model$\times$domain points), out-of-sample $\Delta G$ tracks $\I(X;Y)$
+(slope CI excludes $0$), and over-confidence is measurable dissipation in every domain --- the two single-frame
+laws generalize. A fleet-pricing experiment is reported scoped and primary-metric-first: value-pricing recovers
+cost-aware routing from first principles --- it ties good hand-tuned routing under a token budget, beats a
+cost-blind router under a compute budget, and does not outperform a cost-aware engineer; its contribution is
+principled measurement, not outperformance. The laws hold in the smooth, concave (diminishing-returns) regime;
+threshold, satiation, and risk-seeking goals lie outside it. None of the underlying mechanisms is individually
+new; the contribution is their unification under one substrate-grounded quantity, and the is/ought asymmetry that
+follows.
 \end{abstract}
 
 \tableofcontents
@@ -428,6 +429,67 @@ as the lever that chooses the operating point under a resource constraint, not a
 best agent when compute is unlimited. The demon needs \emph{perception diversity} --- different slices of $H(X)$,
 i.e.\ specialists rather than generalists of varying strength --- which a set of same-task generalists lacks by
 construction. We mark this as a falsifiable boundary, not a defeat.
+
+\section{Generalization: a pre-registered scale-up}\label{sec:v2}
+
+The test of \S\ref{sec:real} was one task and four models --- a demonstration, not a validation. To ask whether
+the laws \emph{generalize}, we pre-registered (predictions, models, metrics, and pass/fail thresholds committed
+and frozen \emph{before any model was run}) a scale-up to \textbf{three task domains} --- an intent-routing
+benchmark \citep{larson2019clinc}, a multiple-choice QA benchmark \citep{hendrycks2021mmlu}, and a
+topic-classification benchmark \citep{zhang2015agnews} ($K=4$--$6$; 240 items each) --- and a \textbf{ten-model ladder across five families} (Qwen, Llama, Gemma, Phi, Mistral;
+$0.5$B--$8$B). Models emit a text label; calibration and all routing weights are fit on a held-out split and
+scored out-of-sample, with $95\%$ bootstrap confidence intervals.
+
+\paragraph{The headline: the bridge and the Second Law generalize.} Pooled across all 30 model$\times$domain
+points, mutual information tracks realized capability at \textbf{Spearman $\rho = 0.977$} (CI $[0.916, 0.996]$),
+and out-of-sample value-growth tracks mutual information with \textbf{slope $0.935$} (CI $[0.915, 0.954]$,
+excluding $0$): realized $\Delta G$ out of sample \emph{is} perceived $\I(X;Y)$ (Table~\ref{tab:v2}). Per-domain
+$\rho$ is $0.84$/$0.95$/$0.99$. Over-confidence dissipates value in \emph{every} domain, driving the
+least-capable models sharply negative (e.g.\ $-11$ to $-14$ nats on the QA and topic tasks). The two single-frame
+laws --- the coding theorem (\S\ref{sec:capacity}) and the Second Law (\S\ref{sec:secondlaw}) --- thus hold
+across three task shapes and a five-family ladder, not just the one task of \S\ref{sec:real}. This is the
+substantive result of the scale-up. The fleet ceiling also holds: all pairwise joint $\I(X;Y_a,Y_b) \le H(X)$,
+and diverse specialists exceed redundant pairs in every domain.
+
+\begin{table}[h]\centering
+\begin{tabular}{lccc}
+\toprule
+quantity & pooled (30 pts) & per-domain range & threshold \\
+\midrule
+Spearman$(\I,\text{accuracy})$ & $0.977$ \,[$0.916,0.996$] & $0.84$--$0.99$ & $>0.8$ \;\checkmark \\
+slope$(\Delta G_{\text{hold}} \sim \I)$ & $0.935$ \,[$0.915,0.954$] & --- & CI excl.\ $0$ \;\checkmark \\
+over-confidence dissipation & $>0$ all domains & negative for weak models & $>0$ \;\checkmark \\
+\bottomrule
+\end{tabular}
+\caption{Pre-registered generalization checks (95\% CIs). $I$ tracks realized capability and out-of-sample
+$\Delta G$ tracks $I$, pooled across 3 domains and a 10-model, 5-family ladder.}
+\label{tab:v2}
+\end{table}
+
+\paragraph{The fleet test, reported primary-metric-first and scoped.} We re-ran the pricing test
+(\S\ref{sec:fleet}) in the heterogeneous, cost-constrained regime the theory favors: a \emph{specialist} fleet
+(different models lead on different domains; low cross-agent error correlation) under a compute budget, routing
+by value-price ($\propto \I_a/\text{cost}_a$) against round-robin, equal-weight, best-single, and a \emph{strong
+hand-tuned} router that sends each query to the model most accurate on its domain.
+
+On the \textbf{pre-registered primary cost metric (tokens)}, value-price \textbf{ties} the hand-tuned router ---
+it does \emph{not} beat it (paired-bootstrap CI includes $0$). Token cost varies only $\sim\!1.2\times$ across the
+ladder, so cost-aware pricing reduces to quality-first routing and selects the identical model. Only on a
+\emph{secondary} latency budget --- where compute cost varies $5$--$6\times$, a real cost gradient --- does
+value-price beat a cost-\emph{blind} router; and even there it \emph{loses} to a hand-tuned router that itself
+prices cost (accuracy/cost). Against the naive baselines (round-robin, equal-weight) value-price wins on both
+metrics, so priced routing is no worse than ad-hoc --- but that is the floor, not the claim.
+
+\begin{quote}
+Value-pricing derives cost-aware routing from first principles --- it ties good hand-tuned routing under a token
+budget, beats a cost-blind router under a latency budget, and does not outperform a cost-aware engineer. Its
+contribution is principled measurement and cost-awareness, not outperformance.
+\end{quote}
+
+\noindent This is consistent with the scoping rule of \S\ref{sec:fleet}: pricing's edge is cost-awareness, which
+it recovers as a law rather than a trick; it organizes and measures what good engineering already does, and we do
+not claim it outperforms a competent cost-aware baseline. The generalization of the capacity and Second-Law
+results --- not the routing comparison --- is what the scale-up establishes.
 
 \section{Related work}\label{sec:related}
 
