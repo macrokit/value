@@ -89,7 +89,10 @@ tests it on real agents.
 
 \paragraph{Contributions and honesty.} We claim none of the underlying mechanisms as individually novel. The
 logarithm is Bernoulli's and Kelly's; the growth-rate-as-information-rate is \citeauthor{kelly1956}'s; the
-price layer is Arrow--Debreu's; the information geometry is \v{C}encov's and Amari's. Our contribution is
+price layer is Arrow--Debreu's; the information geometry is \v{C}encov's and Amari's. In particular --- to meet
+the concession here rather than leave it for a referee --- our capacity theorem (Theorem~\ref{thm:capacity}) \emph{is}
+generalized Kelly; what we add is not the betting result but everything built upon it: the free-energy substrate
+that supplies a unit, the cross-frame price, and the dynamics and alignment layers. Our contribution is
 fourfold and we state it plainly (\S\ref{sec:related}): (i) the \emph{unification} of these accounts under one
 substrate-grounded quantity; (ii) the \emph{capacity theorem} and \emph{fleet ceiling} that the unification
 makes visible; (iii) the \emph{is/ought asymmetry} as a structural property of agent dynamics; and (iv) an
@@ -201,8 +204,17 @@ baseline; the agent bets $b=p$ but the world is drawn from $q$. Then
 \boxed{\;G_{\mathrm{actual}}=\sum_s q_s\log\frac{p_s}{r_s}
 =\underbrace{\KL{q}{r}}_{\text{available potential}}-\underbrace{\KL{q}{p}}_{\text{dissipation (model error)}}\;.}
 \end{equation}
-Realized value is available potential minus dissipation from misalignment, every term in nats. Three
-consequences. (i) \emph{Misalignment is measurable dissipation}: confident error ($\KL{q}{p}>\KL{q}{r}$) drives
+Realized value is available potential minus dissipation from misalignment, every term in nats.
+
+\emph{The name is a structural analogy, stated with explicit scope.} It holds exactly where thermodynamic
+entropy does: the dissipation $\KL{q}{p}\ge 0$ is non-negative, \emph{destroyed} rather than created, and
+monotonically reduced as the agent learns ($p\to q$). It \emph{breaks} where entropy does not: value here is
+goal- and frame-relative --- fixed by the reference $r$ and the goal-weights $k$ --- not an observer-independent
+quantity, so this is a Second Law \emph{of value}, not a corollary of statistical mechanics. We keep the name
+because the formal structure --- a non-negative, non-creatable dissipation that learning minimizes --- is
+genuinely shared, and bound it because the substrate is not.
+
+Three consequences. (i) \emph{Misalignment is measurable dissipation}: confident error ($\KL{q}{p}>\KL{q}{r}$) drives
 growth negative --- a wrong, certain agent actively destroys value, while calibrated humility is
 value-preserving. (ii) \emph{Learning is value-recovery}: $\KL{q}{p}$ is exactly the cross-entropy excess that
 predictive training minimizes, so the machine-learning objective \emph{is} the minimization of value
