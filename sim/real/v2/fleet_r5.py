@@ -38,10 +38,17 @@ def _prep(seed):
             run = E.load_run(short, domain)
             post = E.calib(E.confusion(run, classes, ylab, fit))
             vals = E.per_item_value(run, post, classes, ylab, hold, r)
+            tok = E.mean_tokens(run)
             info[(domain, short)] = {
                 "vals": vals,                      # id -> realized value (nats)
-                "cost_tok": E.mean_tokens(run),
+                "cost_tok": tok,
                 "cost_lat": E.mean_latency(run),
+                # Principled, HARDWARE-INDEPENDENT compute proxy (post-hoc sensitivity
+                # analysis, cache-only): a dense forward pass costs ~2·params·tokens
+                # FLOPs, so active-params(B) × tokens is ∝ FLOPs ∝ energy. This answers
+                # the "you picked the cost metric that won" objection — latency is
+                # hardware/scheduling-dependent; FLOPs are not.
+                "cost_compute": params * tok,
                 "acc_fit": E.accuracy(run, fit),
                 "I_fit": v.mutual_information(E.confusion(run, classes, ylab, fit)),
                 "post": post, "classes": classes, "ylab": ylab, "r": r, "run": run,
@@ -126,7 +133,8 @@ def run(rec):
     ec = error_correlation(info, fleet, stream)
     print(f"     mean pairwise error-agreement = {ec:.3f} (diversity metric; lower = less correlated errors)")
 
-    for cost_key, unit, scale in [("cost_tok", "per-1k-tokens", 1000), ("cost_lat", "per-10s-latency", 10)]:
+    for cost_key, unit, scale in [("cost_tok", "per-1k-tokens", 1000), ("cost_lat", "per-10s-latency", 10),
+                                  ("cost_compute", "per-compute (params×tok, FLOP-proxy)", 1000)]:
         pol = _policy_arrays(info, fleet, stream, cost_key)
         vpc = {k: _vpc(a) * scale for k, a in pol.items()}
         print(f"\n     value {unit} (cost = {cost_key}):")

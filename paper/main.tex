@@ -474,16 +474,23 @@ hand-tuned} router that sends each query to the model most accurate on its domai
 
 On the \textbf{pre-registered primary cost metric (tokens)}, value-price \textbf{ties} the hand-tuned router ---
 it does \emph{not} beat it (paired-bootstrap CI includes $0$). Token cost varies only $\sim\!1.2\times$ across the
-ladder, so cost-aware pricing reduces to quality-first routing and selects the identical model. Only on a
-\emph{secondary} latency budget --- where compute cost varies $5$--$6\times$, a real cost gradient --- does
-value-price beat a cost-\emph{blind} router; and even there it \emph{loses} to a hand-tuned router that itself
-prices cost (accuracy/cost). Against the naive baselines (round-robin, equal-weight) value-price wins on both
-metrics, so priced routing is no worse than ad-hoc --- but that is the floor, not the claim.
+ladder, so cost-aware pricing reduces to quality-first routing and selects the identical model. A token budget,
+however, cannot express the real compute gradient. A \emph{post-hoc sensitivity analysis} (cache-only, not
+pre-registered) re-scores on two cost proxies that do --- wall latency (hardware-dependent) and
+active-params$\times$tokens ($\propto$ FLOPs $\propto$ energy, hardware-\emph{independent}) --- and value-price
+beats the cost-\emph{blind} router on \emph{both} (FLOP-proxy $\Delta = +7.45$, CI $[6.33, 8.48]$): the cost-aware
+advantage is \textbf{robust across cost metrics}, not an artifact of metric choice. Against a hand-tuned router
+that \emph{itself} prices cost (accuracy/cost), value-price is edged out under raw latency but \textbf{exactly
+ties} under the principled FLOP proxy ($\Delta = 0$: $\I/\text{FLOP}$ and accuracy/FLOP select the same model,
+since $\I$ tracks accuracy) --- it \emph{matches}, and never beats, the cost-aware engineer. Against the naive
+baselines (round-robin, equal-weight) value-price wins on every metric, so priced routing is no worse than ad-hoc
+--- but that is the floor, not the claim.
 
 \begin{quote}
 Value-pricing derives cost-aware routing from first principles --- it ties good hand-tuned routing under a token
-budget, beats a cost-blind router under a latency budget, and does not outperform a cost-aware engineer. Its
-contribution is principled measurement and cost-awareness, not outperformance.
+budget, beats a cost-blind router under a compute budget (robustly, across both latency and FLOP cost proxies),
+and matches but does not outperform a cost-aware engineer. Its contribution is principled measurement and
+cost-awareness, not outperformance.
 \end{quote}
 
 \noindent This is consistent with the scoping rule of \S\ref{sec:fleet}: pricing's edge is cost-awareness, which

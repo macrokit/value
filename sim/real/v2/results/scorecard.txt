@@ -112,6 +112,19 @@ Fleet-R5 — heterogeneous, cost-constrained routing (THE headline)
   [PASS] R5 [per-10s-latency] value-price > hand_tuned (STRONG): Δ=+6.4231 95%CI[+3.9202,+9.2236]
   [----] R5 [per-10s-latency] value-price > hand_cost (info): Δ=-21.9138 95%CI[-25.7065,-18.2204]
 
+     value per-compute (params×tok, FLOP-proxy) (cost = cost_compute):
+       round_robin    +1.3642
+       equal_pool     +0.1551
+       best_single    +0.8828
+       hand_tuned     +1.1493
+       hand_cost      +8.6144
+       value_price    +8.6144
+  [PASS] R5 [per-compute (params×tok, FLOP-proxy)] value-price > round_robin (REQUIRED): Δ=+7.2522 95%CI[+6.0678,+8.2870]
+  [PASS] R5 [per-compute (params×tok, FLOP-proxy)] value-price > equal_pool (REQUIRED): Δ=+8.4462 95%CI[+7.3052,+9.6162]
+  [----] R5 [per-compute (params×tok, FLOP-proxy)] value-price > best_single (info): Δ=+7.7543 95%CI[+6.6094,+8.8387]
+  [PASS] R5 [per-compute (params×tok, FLOP-proxy)] value-price > hand_tuned (STRONG): Δ=+7.4495 95%CI[+6.3312,+8.4770]
+  [----] R5 [per-compute (params×tok, FLOP-proxy)] value-price > hand_cost (info): Δ=+0.0000 95%CI[+0.0000,+0.0000]
+
      Ceiling & diversity (R4 at scale):
        intent: H(X)=1.792  best pair llama1b+qwen7b joint I=1.722 (lift +0.095); all pairs ≤ H(X): True
        mcqa: H(X)=1.369  best pair phi3.5+qwen7b joint I=0.509 (lift +0.132); all pairs ≤ H(X): True
@@ -120,7 +133,7 @@ Fleet-R5 — heterogeneous, cost-constrained routing (THE headline)
   [PASS] Diversity: best diverse pair lifts joint I over best single (every domain): lifts=[0.095, 0.132, 0.134]
 
 ====================================================================================
-SUMMARY: 11 PASS, 1 FAIL, 4 info
+SUMMARY: 14 PASS, 1 FAIL, 6 info
   PASS  R1a pooled Spearman(I, accuracy) > 0.8
   PASS  R1a per-domain Spearman > 0.6 in every domain
   PASS  R1b slope(ΔG_hold ~ I) CI excludes 0 (positive)
@@ -135,6 +148,11 @@ SUMMARY: 11 PASS, 1 FAIL, 4 info
   ----  R5 [per-10s-latency] value-price > best_single (info)
   PASS  R5 [per-10s-latency] value-price > hand_tuned (STRONG)
   ----  R5 [per-10s-latency] value-price > hand_cost (info)
+  PASS  R5 [per-compute (params×tok, FLOP-proxy)] value-price > round_robin (REQUIRED)
+  PASS  R5 [per-compute (params×tok, FLOP-proxy)] value-price > equal_pool (REQUIRED)
+  ----  R5 [per-compute (params×tok, FLOP-proxy)] value-price > best_single (info)
+  PASS  R5 [per-compute (params×tok, FLOP-proxy)] value-price > hand_tuned (STRONG)
+  ----  R5 [per-compute (params×tok, FLOP-proxy)] value-price > hand_cost (info)
   PASS  Ceiling: all pairwise joint I ≤ H(X)
   PASS  Diversity: best diverse pair lifts joint I over best single (every domain)
 ====================================================================================
