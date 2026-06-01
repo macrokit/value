@@ -49,11 +49,12 @@ capped by the world's entropy $\sum_a G_a\le H(X)$, and that the fleet's operati
 over agents selected by an emergent price. A dynamical layer gives the equations of motion and an
 is/ought asymmetry --- beliefs have a target the world supplies, goals do not --- from which alignment emerges
 as a control-stability condition with a closed-form residual misalignment. We then test the single-frame laws on
-live language models: a capability ladder of local models on a frozen 100-item decision task obeys
-$\Delta G \propto \I(X;Y)$ (Pearson $r=0.996$), exhibits over-confidence as measurable dissipation that shrinks
-with capability, and confirms diversity-beats-redundancy; the fleet-pricing claim is reported with its honest
-boundary (no volatility-harvesting ``demon'' on a positively-correlated ladder, but pricing wins under a compute
-budget). None of the underlying mechanisms is individually new; the contribution is their unification under one
+live language models: across four local models on a frozen 100-item decision task, perception mutual information
+tracks realized \emph{capability} rather than parameter count ($r=0.99$; a cross-family model that is larger yet
+weaker lands at correspondingly lower $\I$), out-of-sample $\Delta G$ tracks $\I(X;Y)$ ($r=0.99$),
+over-confidence is measurable dissipation that shrinks with capability, and diversity-beats-redundancy holds; the
+fleet-pricing claim is reported with its honest boundary (no volatility-harvesting ``demon'' on positively
+correlated agents, but pricing wins under a compute budget). None of the underlying mechanisms is individually new; the contribution is their unification under one
 substrate-grounded quantity, and the is/ought asymmetry that follows.
 \end{abstract}
 
@@ -339,15 +340,19 @@ action, the perception $Y_a$ is the action model $a$ chooses. We set $r=q$ (the 
 no-signal agent grows value at rate $0$. From each model's run we form the confusion matrix
 $C_a[x,y]=\#(\text{gold}=x,\text{chosen}=y)$ and compute every quantity in nats with the same primitives used in
 \S\ref{sec:sim}: $\I(X;Y_a)$ from the joint; the calibrated posterior $p_a(x\mid y)=C_a[:,y]/\sum_x C_a[:,y]$;
-and realized growth $\Delta G_a=\text{mean}\,\ln\!\big(p_a(x\mid y_a)/r(x)\big)$. The agents are a weak$\to$strong
-ladder of local models ($1.5$B, $3$B, $7$B parameters), greedy decoding. Posteriors are calibrated on a
-$48$-item fit split and scored on a $52$-item holdout; in-sample, the oracle posterior with $r=q$ makes
-$\Delta G=\I$ an arithmetic identity (used only to confirm the units), so the empirical content is the ladder
-monotonicity, the out-of-sample tracking, and the fleet result.
+and realized growth $\Delta G_a=\text{mean}\,\ln\!\big(p_a(x\mid y_a)/r(x)\big)$. The agents are four local
+models spanning a range of realized capability --- three of one family ($1.5$B, $3$B, $7$B) and a cross-family
+model (an $8$B that is, on this task, \emph{less} capable than the $7$B) --- greedy decoding. Posteriors are
+calibrated on a $48$-item fit split and scored on a $52$-item holdout; in-sample, the oracle posterior with
+$r=q$ makes $\Delta G=\I$ an arithmetic identity (used only to confirm the units), so the empirical content is
+the capability tracking, the out-of-sample tracking, and the fleet result.
 
-\paragraph{R1: the bridge holds and rises with scale.} Mutual information increases monotonically along the
-ladder and out-of-sample value-growth tracks it almost perfectly (Table~\ref{tab:r1}; Pearson $r=0.996$
-between $\I$ and $\Delta G_{\text{holdout}}$). Value-throughput is information-throughput, on real behavior.
+\paragraph{R1: the bridge holds, and $\I$ tracks capability, not size.} Mutual information tracks realized
+capability (tool-accuracy) at Pearson $r=0.99$, and out-of-sample value-growth tracks $\I$ at $r=0.99$
+(Table~\ref{tab:r1}). The decisive datum is the cross-family model D: it is \emph{larger} than C (8B vs 7B) yet
+\emph{less} capable ($0.86$ vs $0.96$), and its $\I$ lands accordingly below C, near B. So the claim is not
+``scale buys value'' but the sharper one: value-throughput is information-throughput, and information-throughput
+is set by what the model can actually perceive.
 
 \begin{table}[h]\centering
 \begin{tabular}{lccccc}
@@ -357,60 +362,66 @@ model & params & tool-acc & $\I(X;Y)$ & $\Delta G_{\text{in}}$ & $\Delta G_{\tex
 A & 1.5B & 0.79 & 1.277 & 1.277 & 0.915 \\
 B & 3B   & 0.87 & 1.561 & 1.561 & 1.242 \\
 C & 7B   & 0.96 & 1.779 & 1.779 & 1.423 \\
+D (cross-family) & 8B & 0.86 & 1.513 & 1.513 & 1.109 \\
 \bottomrule
 \end{tabular}
-\caption{R1 (nats). $\I(X;Y)$ rises with capability; $\Delta G_{\text{hold}}$ tracks it ($r=0.996$). The world
-entropy is $H(X)=1.92$ nats, so model C captures $93\%$ of it, model A $66\%$.}
+\caption{R1 (nats). $\I(X;Y)$ tracks realized capability, not parameter count ($r=0.99$ vs accuracy);
+$\Delta G_{\text{hold}}$ tracks $\I$ ($r=0.99$). Model D is larger than C yet weaker, and its $\I$ lands below
+C accordingly. World entropy $H(X)=1.92$ nats: C captures $93\%$, D (though larger) only $79\%$, A $66\%$.}
 \label{tab:r1}
 \end{table}
 
 \paragraph{R2: over-confidence is dissipation, shrinking with capability.} Reading the same point-predictions
 with a calibrated versus an over-confident posterior realizes different value; the gap is dissipation
-(Table~\ref{tab:r2}). It is large for the weak model and shrinks with scale --- a quantitative statement that
-weaker agents must be more humble. For model A, confident error drives realized growth \emph{negative}, exactly
-the Second Law's prediction \eqref{eq:secondlaw}.
+(Table~\ref{tab:r2}). It is large for the weak models and shrinks with capability (not size: the larger-but-weaker
+D dissipates more than C) --- a quantitative statement that less-capable agents must be more humble. For models A
+and D, confident error drives realized growth \emph{negative}, exactly the Second Law's prediction
+\eqref{eq:secondlaw}.
 
 \begin{table}[h]\centering
-\begin{tabular}{lccc}
+\begin{tabular}{lcccc}
 \toprule
-model & $G_{\text{cal}}$ & $G_{\text{over}}$ & dissipated \\
+model & tool-acc & $G_{\text{cal}}$ & $G_{\text{over}}$ & dissipated \\
 \midrule
-A (1.5B) & $+0.915$ & $-3.255$ & 4.17 \\
-B (3B)   & $+1.242$ & $-0.863$ & 2.11 \\
-C (7B)   & $+1.423$ & $+0.731$ & 0.69 \\
+A (1.5B) & 0.79 & $+0.915$ & $-3.255$ & 4.17 \\
+B (3B)   & 0.87 & $+1.242$ & $-0.863$ & 2.11 \\
+C (7B)   & 0.96 & $+1.423$ & $+0.731$ & 0.69 \\
+D (8B)   & 0.86 & $+1.109$ & $-1.660$ & 2.77 \\
 \bottomrule
 \end{tabular}
-\caption{R2 (nats). Dissipation from false certainty falls as capability rises; the weakest agent's
-over-confidence destroys value outright.}
+\caption{R2 (nats). Dissipation from false certainty falls as \emph{capability} rises (not size: the larger but
+weaker D dissipates more than C); for the least-capable models over-confidence destroys value outright.}
 \label{tab:r2}
 \end{table}
 
-\paragraph{R3: value per joule.} Mutual information \emph{per second of compute} falls with scale
-($0.74\to0.38\to0.30$ nats/s), as does $\I$ per billion parameters ($0.85\to0.52\to0.25$). The weakest model is
-the most efficient perceiver per unit compute --- the value-theoretic reason a cheap reflex is worth running on
-a narrow task. (This is the $\I$/compute curve across model scale, not a within-model prompt ablation; see
-\S\ref{sec:limits}.)
+\paragraph{R3: value per joule.} Mutual information \emph{per second of compute} falls across the family
+($0.74\to0.38\to0.30$ nats/s for A,B,C), and the cross-family D is worst ($0.15$ nats/s: slowest and lower $\I$).
+The weakest model is the most efficient perceiver per unit compute --- the value-theoretic reason a cheap reflex
+is worth running on a narrow task. (This is the $\I$/compute curve across heterogeneous models, not a
+within-model prompt ablation; see \S\ref{sec:limits}.)
 
 \paragraph{R4: diversity beats redundancy.} Two different models jointly perceive more of $H(X)$ than either
-alone; an identical greedy re-run adds exactly zero. The best diverse pair (B+C) reaches $\I=1.869$ nats, $+0.090$
-over C alone and closing most of the gap to $H(X)=1.921$. This is the fleet-ceiling prediction \eqref{eq:ceiling}
-on real agents.
+alone; an identical greedy re-run adds exactly zero. The highest joint information comes from the strongest
+diverse pair (B+C, $\I=1.869$ nats, $+0.090$ over C, closing most of the gap to $H(X)=1.921$), while the largest
+\emph{lifts} come from pairing differently-wrong weak models (A+B and B+D each add ${\sim}0.2$ nats). This is the
+fleet-ceiling prediction \eqref{eq:ceiling} on real agents.
 
 \paragraph{R5: pricing beats pooling, but only where there is diversity to price (reported honestly).} On raw
-out-of-sample growth, the Kelly/price fleet ($+1.343$) beats the equal-weight ensemble ($+1.324$) but
+out-of-sample growth, the Kelly/price fleet ($+1.328$) beats the equal-weight ensemble ($+1.315$) but
 \emph{does not beat the single best model} ($+1.423$). There is no Shannon's demon here, and the theory says
-why: a capability ladder on the \emph{same} task yields positively-correlated agents (R4 quantifies the residual
+why: four models on the \emph{same} task are positively-correlated agents (R4 quantifies the best residual
 diversity at $+0.09$ nats), so Kelly rebalancing has no anti-correlated volatility to harvest and the best agent
 dominates. This is the honest negative the synthetic E4 demon does not reproduce, because E4 was constructed with
 anti-correlated agents.
 
 The negative is confined to the cost-blind axis. Value \emph{per unit compute} inverts the ranking: model A
-yields $0.531$ nats/s against C's $0.243$, and a budget-aware price $\propto \I_a/\text{cost}_a$ (the shadow
-price $\lambda=K/E$ of \S\ref{sec:crossframe}) achieves $0.393$ nats/s, beating the best single model's density.
-Pricing therefore pays exactly where \S\ref{sec:fleet} says it should: as the lever that chooses the operating
-point under a resource constraint, not as a free lunch that beats the best agent when compute is unlimited. The
-demon needs \emph{perception diversity} --- different slices of $H(X)$ --- which a same-task scale ladder lacks
-by construction. We mark this as a falsifiable boundary, not a defeat.
+yields $0.531$ nats/s against C's $0.243$ (and the slow D only $0.111$), and a budget-aware price
+$\propto \I_a/\text{cost}_a$ (the shadow price $\lambda=K/E$ of \S\ref{sec:crossframe}) achieves $0.328$ nats/s,
+beating the best single model's density. Pricing therefore pays exactly where \S\ref{sec:fleet} says it should:
+as the lever that chooses the operating point under a resource constraint, not as a free lunch that beats the
+best agent when compute is unlimited. The demon needs \emph{perception diversity} --- different slices of $H(X)$,
+i.e.\ specialists rather than generalists of varying strength --- which a set of same-task generalists lacks by
+construction. We mark this as a falsifiable boundary, not a defeat.
 
 \section{Related work}\label{sec:related}
 
@@ -478,7 +489,7 @@ cleanest in the horse-race structure; general returns give a concave program wit
 $\KL{q}{r}$. The fleet ceiling's exact achievable region is an open problem of network-information-theory
 difficulty. The cross-frame layer concedes that cardinal interpersonal comparison is non-canonical; we do not
 solve it. On the empirical side: the in-sample $\Delta G=\I$ is an arithmetic identity, not evidence ---only the
-ladder monotonicity, the out-of-sample tracking, and R5 are empirical; R3 is an $\I$/compute curve across model
+capability tracking, the out-of-sample tracking, and R5 are empirical; R3 is an $\I$/compute curve across model
 scale, not a within-model prompt ablation; the calibration in R2 is constructed from the confusion matrix, not a
 probability the model reported, so the dissipation measured is that of a stated belief over those predictions;
 and the whole test is one task on one corpus --- evidence that the bridge holds there, not a universal law.

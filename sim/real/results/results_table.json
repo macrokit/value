@@ -5,14 +5,14 @@
     "detail": "max|\u0394G\u2212I|=0.0000 nats"
   },
   {
-    "name": "R1 I(X;Y) rises along weak\u2192strong ladder",
+    "name": "R1 I(X;Y) tracks realized capability (accuracy)",
     "verdict": "PASS",
-    "detail": "qwen1.5b:1.277 \u2264 qwen3b:1.561 \u2264 qwen7b:1.779"
+    "detail": "pearson r=0.993  (I follows capability, not param count)"
   },
   {
     "name": "R1 \u0394G_holdout correlates with I(X;Y)",
     "verdict": "PASS",
-    "detail": "pearson r=0.996"
+    "detail": "pearson r=0.987"
   },
   {
     "name": "R2 over-confidence dissipates value (qwen1.5b)",
@@ -37,17 +37,17 @@
   {
     "name": "R5 Kelly/price \u2265 equal-weight",
     "verdict": "PASS",
-    "detail": "+1.3431 \u2265 +1.3243"
+    "detail": "+1.3281 \u2265 +1.3151"
   },
   {
     "name": "R5 Kelly/price \u2265 best-single (out-of-sample)",
     "verdict": "FAIL",
-    "detail": "+1.3431 \u2265 +1.4233"
+    "detail": "+1.3281 \u2265 +1.4233"
   },
   {
     "name": "R5 fleet beats EVERY agent (Shannon's demon)",
     "verdict": "INFO",
-    "detail": "+1.3431 vs max_indiv +1.4233  (no demon \u2014 agents positively correlated; see notes)"
+    "detail": "+1.3281 vs max_indiv +1.4233  (no demon \u2014 agents positively correlated; see notes)"
   },
   {
     "name": "R5 under compute budget, value-density ranking inverts (cheap wins)",

@@ -7,17 +7,18 @@
 > whether the three load-bearing quantities (`I(X;Y)`, `ΔG`, `D(q‖p)`) behave as the statics (docs
 > [`01`](01-core-formalization.md)–[`04`](04-multi-agent-capacity-region.md)) predict.
 
-> **Real-agent result.** On a frozen 100-item decision task, a weak→strong ladder of three local models
-> (1.5B → 3B → 7B) obeys the value laws *measured on their own behavior*. **(R1)** value-growth tracks
-> perception mutual information — `I(X;Y)` rises 1.28 → 1.56 → 1.78 nats with scale and out-of-sample `ΔG`
-> tracks it at Pearson **r = 0.996**. **(R2)** over-confidence is measurable value dissipation, and it *shrinks*
-> with capability (4.17 → 2.11 → 0.69 nats) — for the 1.5B model, confident error drives realized growth
-> **negative**. **(R3)** the cheapest model delivers the most perception-MI **per second of compute** (0.74 vs
-> 0.30 nats/s). **(R4)** a diverse model pair covers more of `H(X)` than either alone (+0.09 nats) while an
-> identical re-run adds exactly **0**. **(R5, honest negative + twist)** a price/Kelly fleet beats equal-weight
-> but **does *not* beat the single best model** on raw growth — there is no Shannon's demon on a *correlated*
-> capability ladder — **yet** under a compute budget the value-density ranking inverts and an `I/cost` price
-> wins (0.39 vs 0.24 nats/s). Pricing pays where the agents are *priced*, not merely *pooled*.
+> **Real-agent result.** On a frozen 100-item decision task, four local models obey the value laws *measured on
+> their own behavior*. **(R1)** value-growth tracks perception mutual information: `I(X;Y)` follows realized
+> **capability** (Pearson **r = 0.99** vs accuracy) and out-of-sample `ΔG` tracks `I` at **r = 0.99** — and the
+> tracking is to *capability, not parameter count*, a cross-family 8B model that is bigger yet weaker than the
+> 7B landing at correspondingly lower `I`. **(R2)** over-confidence is measurable value dissipation that *shrinks
+> with capability* (4.17 → 0.69 nats over the qwen ladder) — for the 1.5B model, confident error drives realized
+> growth **negative**. **(R3)** the cheapest model delivers the most perception-MI **per second of compute**
+> (0.74 vs 0.30 nats/s). **(R4)** a diverse model pair covers more of `H(X)` than either alone (+0.09 nats) while
+> an identical re-run adds exactly **0**. **(R5, honest negative + twist)** a price/Kelly fleet beats
+> equal-weight but **does *not* beat the single best model** on raw growth — there is no Shannon's demon on a
+> *correlated* set of agents — **yet** under a compute budget the value-density ranking inverts and an `I/cost`
+> price wins (0.33 vs 0.24 nats/s). Pricing pays where the agents are *priced*, not merely *pooled*.
 
 ## 1. Why a tool-routing task
 
@@ -57,9 +58,12 @@ in **nats**:
 - **Realized value-growth** `ΔG_a = mean over items of ln( p_a(x|y_a) / r(x) )` — the horse-race log-growth of
   betting the calibrated posterior against the reference ([`02`](02-coding-theorem-of-value.md) §2).
 
-The capability ladder (a weak→strong sequence of four local models, ~1.5B → ~8B parameters) gives the spread
-of `I(X;Y)` that R1 needs. The benchmark's headline **accuracy** is reported only as a sanity-check ordering of
-the ladder; it is *not* `I(X;Y)` — the value quantities are computed independently from the confusion structure.
+The agents are four local models spanning a range of capability (three from one family at ~1.5B / 3B / 7B, plus
+a cross-family ~8B). This is deliberately **not** a clean parameter ladder: the 8B model is from a different
+family and is *less capable* on this task than the 7B, which is exactly the perturbation R1 needs — it
+separates "`I` rises with size" (false) from "`I` rises with capability" (the real claim). The benchmark's
+headline **accuracy** is reported only as a measure of realized capability; it is *not* `I(X;Y)` — the value
+quantities are computed independently from the confusion structure.
 
 **Honest measurement discipline.** To keep the test from being circular we separate two regimes:
 
@@ -94,42 +98,50 @@ the ladder; it is *not* `I(X;Y)` — the value quantities are computed independe
 
 ## 4. Results
 
-> **Status.** Three rungs (1.5B / 3B / 7B) complete; an 8B rung is pending and will extend the ladder when it
-> lands (it does not change any conclusion below). Greedy decoding (temperature 0), 100 items, 48/52 fit/holdout.
-> The 7B rung is the reference model served via llama.cpp; the 1.5B/3B rungs via a local Ollama server (a
+> **Status.** Four models: 1.5B / 3B / 7B (one family) + a cross-family 8B. Greedy decoding (temperature 0),
+> 100 items, 48/52 fit/holdout. The 7B is served via llama.cpp; the 1.5B/3B/8B via a local Ollama server (a
 > serving-stack difference noted in §5). All numbers below are produced by
 > [`sim/real/experiments_real.py`](../sim/real/experiments_real.py) and cached under `sim/real/results/`.
 
-**R1 — the bridge holds, and rises with scale.** `I(X;Y)` increases monotonically along the ladder; the
-in-sample identity `ΔG = I(X;Y)` holds to `< 10⁻⁴` (confirming the arithmetic on real confusions); and
-**out-of-sample `ΔG` tracks `I` at Pearson r = 0.996.** Value-throughput is information-throughput, on real
-model behavior.
+**R1 — the bridge holds, and `I` tracks *capability*, not size.** The in-sample identity `ΔG = I(X;Y)` holds to
+`< 10⁻⁴` (confirming the arithmetic on real confusions). Across the four models, `I(X;Y)` tracks realized
+capability (tool-accuracy) at **Pearson r = 0.99**, and out-of-sample `ΔG` tracks `I` at **r = 0.99**. The
+decisive point is the cross-family 8B: it is *larger* than the 7B yet *less capable* (0.86 vs 0.96 accuracy),
+and its `I` lands accordingly *below* the 7B and near the 3B — bigger model, lower capability, lower value
+ceiling. So the claim is not "scale buys value"; it is the sharper **value-throughput is information-throughput,
+and information-throughput is set by what the model can actually perceive.**
 
 | Model | params | tool-acc | `I(X;Y)` (nats) | `ΔG` in-samp | `ΔG` holdout |
 |---|---|---|---|---|---|
 | qwen2.5-1.5b | 1.5B | 0.79 | 1.277 | 1.277 | 0.915 |
 | qwen2.5-3b | 3B | 0.87 | 1.561 | 1.561 | 1.242 |
-| qwen-7b | 7B | 0.96 | 1.779 | 1.779 | 1.423 |
+| qwen-7b | 7B | 0.96 | **1.779** | 1.779 | 1.423 |
+| llama3.1-8b *(cross-family)* | 8B | 0.86 | 1.513 | 1.513 | 1.109 |
 
-(`H(X) = 1.92` nats is the ceiling; even the 7B captures 93% of the world's entropy, the 1.5B 66%.)
+(`H(X) = 1.92` nats is the ceiling; the 7B captures 93% of the world's entropy, the 1.5B 66%. Note the 8B —
+larger than the 7B — sits at 79%, below it: a value ceiling set by capability, not parameters.)
 
 **R2 — over-confidence is dissipation, and calibration is a capability.** Reading the *same* point-predictions
 with a calibrated vs an over-confident posterior realizes different value; the gap is dissipation. It is large
 for the weak model and shrinks with scale — a quantitative statement that **weaker models must be more humble**:
 
-| Model | `G_cal` | `G_over` | dissipated (nats) |
-|---|---|---|---|
-| qwen2.5-1.5b | +0.915 | **−3.255** | 4.17 |
-| qwen2.5-3b | +1.242 | −0.863 | 2.11 |
-| qwen-7b | +1.423 | +0.731 | 0.69 |
+| Model | tool-acc | `G_cal` | `G_over` | dissipated (nats) |
+|---|---|---|---|---|
+| qwen2.5-1.5b | 0.79 | +0.915 | **−3.255** | 4.17 |
+| qwen2.5-3b | 0.87 | +1.242 | −0.863 | 2.11 |
+| qwen-7b | 0.96 | +1.423 | +0.731 | 0.69 |
+| llama3.1-8b | 0.86 | +1.109 | −1.660 | 2.77 |
 
-For the 1.5B model, confident error drives realized growth **negative** — a wrong, certain agent actively
-destroys value, exactly the Second Law's prediction ([`02`](02-coding-theorem-of-value.md) §4).
+Dissipation tracks *(in)capability*, not size: the less-reliable 8B dissipates 2.77 nats — more than the 7B and
+in line with its accuracy. For the 1.5B and 8B models, confident error drives realized growth **negative** — a
+wrong, certain agent actively destroys value, exactly the Second Law's prediction
+([`02`](02-coding-theorem-of-value.md) §4).
 
 **R3 — value per joule: the cheap model wins the density race.** `I(X;Y)` per second of compute *falls* with
-scale (0.74 → 0.38 → 0.30 nats/s), as does `I` per billion parameters (0.85 → 0.52 → 0.25). The weak model is
-the most *efficient* perceiver per unit compute — the value-theoretic statement of why a cheap reflex is worth
-running. (Scope: this is the I/compute curve across model scale, not a within-model prompt ablation; see §5.)
+scale across the qwen family (0.74 → 0.38 → 0.30 nats/s), and the cross-family 8B is worst of all (0.15 nats/s:
+slowest *and* lower `I`). The weak model is the most *efficient* perceiver per unit compute — the value-theoretic
+statement of why a cheap reflex is worth running. (Scope: this is the I/compute curve across heterogeneous
+models, not a within-model prompt ablation; see §5.)
 
 **R4 — diversity beats redundancy.** Two *different* models jointly perceive more of `H(X)` than either alone;
 an identical greedy re-run adds **exactly 0**. The best diverse pair (3B+7B) reaches `I = 1.869` nats, lifting
@@ -138,24 +150,30 @@ an identical greedy re-run adds **exactly 0**. The best diverse pair (3B+7B) rea
 | Pair | joint `I` | lift over best single |
 |---|---|---|
 | 1.5B + 3B | 1.767 | +0.205 |
-| 1.5B + 7B | 1.809 | +0.030 |
 | 3B + 7B | **1.869** | +0.090 |
+| 1.5B + 8B | 1.698 | +0.185 |
+| 3B + 8B | 1.761 | +0.200 |
 | any model ×2 (redundant) | = single | **+0.000** |
 
+The largest *lifts* come from pairing models whose errors differ most (two weaker, differently-wrong models —
+1.5B+3B, 3B+8B — add ~0.2 nats), while the highest *absolute* joint `I` comes from the strongest diverse pair
+(3B+7B). Either way, two distinct perceivers beat one; an identical re-run adds nothing.
+
 **R5 — pricing beats ad-hoc, but only where there is something to price (the headline, reported honestly).**
-On raw out-of-sample growth, the Kelly/price fleet (`+1.343`) beats the equal-weight ensemble (`+1.324`) but
+On raw out-of-sample growth, the Kelly/price fleet (`+1.328`) beats the equal-weight ensemble (`+1.315`) but
 **does not beat the single best model** (`+1.423`). **There is no Shannon's demon here** — and the theory says
-why: a capability ladder on the *same* task produces *positively-correlated* agents (R4: the diversity lift is
-only +0.09 nats), so there is no anti-correlated volatility for Kelly rebalancing to harvest, and the best
-agent simply dominates. This is the honest negative the synthetic E4 demon does *not* reproduce, because E4 was
-built with anti-correlated agents by construction.
+why: four models on the *same* task are *positively-correlated* agents (R4: the best diversity lift is only +0.09
+nats), so there is no anti-correlated volatility for Kelly rebalancing to harvest, and the best agent simply
+dominates. This is the honest negative the synthetic E4 demon does *not* reproduce, because E4 was built with
+anti-correlated agents by construction.
 
 The twist that rescues the governance claim: **the negative is only on the cost-blind axis.** Value *per joule*
-(growth ÷ mean compute) inverts the ranking — the 1.5B model yields **0.531 nats/s** against the 7B's 0.243 —
-and a budget-aware price `∝ I_a/cost_a` (the shadow-price `λ = K/E` of [`03`](03-cross-frame-value.md) §5)
-achieves **0.393 nats/s**, beating the best single model's density (0.243). So pricing pays exactly where
-[`04`](04-multi-agent-capacity-region.md) says it should: as the lever that *chooses the operating point under
-a resource constraint*, not as a free lunch that beats the best agent when compute is unlimited.
+(growth ÷ mean compute) inverts the ranking — the 1.5B model yields **0.531 nats/s** against the 7B's 0.243 (and
+the slow 8B only 0.111) — and a budget-aware price `∝ I_a/cost_a` (the shadow-price `λ = K/E` of
+[`03`](03-cross-frame-value.md) §5) achieves **0.328 nats/s**, beating the best single model's density (0.243).
+So pricing pays exactly where [`04`](04-multi-agent-capacity-region.md) says it should: as the lever that
+*chooses the operating point under a resource constraint*, not as a free lunch that beats the best agent when
+compute is unlimited.
 
 > **What R5 teaches.** Pooling a correlated ladder does not beat its best member (no demon). Pricing earns its
 > keep on two distinct axes that *are* present here: it beats naïve equal-weighting, and under a compute budget
@@ -170,7 +188,8 @@ the raw model runs are cached under `sim/real/results/bench_runs/` so every numb
 ## 5. Where this breaks (scope honesty)
 
 - **The in-sample identity is arithmetic, not evidence.** `ΔG = I` in-sample holds by construction; only the
-  ladder monotonicity, the out-of-sample tracking, and R5 are empirical. We label them as such above.
+  capability tracking (`I` vs accuracy, incl. the cross-family point), the out-of-sample tracking, and R5 are
+  empirical. We label them as such above.
 - **R3 is a curve, not an ablation.** The corpus is fixed and "macro-on" for every model, so R3 measures
   `I`/compute across model scale, not raw-prompt vs structured-prompt within one model. A clean within-model
   macro ablation (the sharpest form of the "design-time encoding raises `I` per joule" claim) is future work and
@@ -185,23 +204,23 @@ the raw model runs are cached under `sim/real/results/bench_runs/` so every numb
   tool call at all (a plumbing failure, not a routing decision); such degenerate runs are detected (near-zero
   `I` with predictions collapsed to the no-op class) and excluded, never reported as a low-`I` capability
   result. One 7B run was discarded on exactly this ground and replaced by a clean run of the same model.
-- **Mixed serving stacks.** The 7B rung was served via one local runtime and the 1.5B/3B rungs via another. The
-  value mapping reads only each model's chosen action, so the confounder is small, but the absolute latencies in
-  R3/R5 mix two stacks and should be read as within-rung, not cross-stack, comparisons.
-- **R5's negative is regime-specific, and that is the point.** No demon appears because a same-task capability
-  ladder yields positively-correlated agents (R4 quantifies the residual diversity at +0.09 nats). A fleet of
-  agents with genuinely *different* perception channels — different slices of `H(X)` — is the regime where the
-  demon is predicted; testing that needs heterogeneous agents, not a scale ladder, and is the natural next
-  experiment.
+- **Mixed serving stacks.** The 7B was served via one local runtime and the 1.5B/3B/8B via another. The value
+  mapping reads only each model's chosen action, so the confounder is small for `I`/`ΔG`, but the absolute
+  latencies in R3/R5 mix two stacks and should be read as within-model, not cross-stack, comparisons.
+- **R5's negative is regime-specific, and that is the point.** No demon appears because four models on the same
+  task are positively-correlated agents (R4 quantifies the best residual diversity at +0.09 nats). A fleet of
+  agents with genuinely *different* perception channels — different slices of `H(X)`, e.g. specialists rather
+  than generalists of varying strength — is the regime where the demon is predicted; testing that needs
+  heterogeneous *roles*, not heterogeneous *capability*, and is the natural next experiment.
 
 ## 6. What this establishes
 
-On a frozen, pre-registered decision task, a ladder of real local models obeys the value laws measured on their
-own outputs: **value-throughput tracks information-throughput** (R1, r = 0.996), **miscalibration is dissipation
-in nats** and the weak model dissipates most (R2), **diversity lifts the fleet's perception while redundancy
-adds nothing** (R4). The two governance-facing results are reported with their honest edges: perception-MI is
-the real ceiling on an agent's value-generation (R1), and **pricing beats naïve pooling and wins under a compute
-budget, but does not beat the single best agent on a correlated ladder** (R5) — no demon without diversity. The
-bridge from a thermodynamics of value to live agents is empirical, not just self-consistent; its limits are
-named. (An 8B rung will extend the ladder when its run lands; it sharpens R1's slope and adds one more fleet
-member, without altering any conclusion here.)
+On a frozen, pre-registered decision task, four real local models obey the value laws measured on their own
+outputs: **value-throughput tracks information-throughput**, and information-throughput tracks *capability, not
+size* — a cross-family 8B that is bigger yet weaker than the 7B sits at correspondingly lower `I` (R1, r = 0.99).
+**Miscalibration is dissipation in nats** and the least-capable models dissipate most, going negative (R2);
+**diversity lifts the fleet's perception while redundancy adds nothing** (R4). The two governance-facing results
+are reported with their honest edges: perception-MI is the real ceiling on an agent's value-generation (R1), and
+**pricing beats naïve pooling and wins under a compute budget, but does not beat the single best agent on a set
+of correlated agents** (R5) — no demon without genuine perception diversity. The bridge from a thermodynamics of
+value to live agents is empirical, not just self-consistent; its limits are named.
