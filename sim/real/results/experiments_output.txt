@@ -1,0 +1,87 @@
+================================================================================
+REAL-AGENT TEST — R1-R5 on the tool-use benchmark, value mapping (nats)
+  actions K=7; corpus=100 tasks; fit/holdout=48/52
+  fleet available: qwen1.5b, qwen3b, qwen7b, llama8b
+================================================================================
+
+R1 — Bridge holds on real outputs:  ΔG_a tracks I(X;Y_a), rises with scale
+     (I from full confusion; ΔG_holdout: calibrate on fit, score out-of-sample)
+     model        B tool-acc   I(X;Y)  ΔG_insamp   ΔG_hold
+     qwen1.5b   1.5    0.790   1.2772     1.2772    0.9148
+     qwen3b     3.0    0.870   1.5614     1.5614    1.2422
+     qwen7b     7.0    0.960   1.7791     1.7791    1.4233
+     llama8b    8.0    0.860   1.5130     1.5130    1.1087
+  [PASS] R1 in-sample identity ΔG == I(X;Y): max|ΔG−I|=0.0000 nats
+  [PASS] R1 I(X;Y) tracks realized capability (accuracy): pearson r=0.993  (I follows capability, not param count)
+     note: llama8b is bigger yet has LOWER I than a smaller model — a cross-family capability point, not a 4th rung.
+  [PASS] R1 ΔG_holdout correlates with I(X;Y): pearson r=0.987
+
+R2 — Second Law of Value (signal form):  miscalibration dissipates I(X;Y)
+     same point-predictions, read with a calibrated vs an over-confident posterior;
+     the realized-value gap is the dissipation from false certainty.
+     model        G_cal   G_over  dissipated
+     qwen1.5b    0.9148  -3.2545      4.1693
+     qwen3b      1.2422  -0.8633      2.1055
+     qwen7b      1.4233   0.7308      0.6926
+     llama8b     1.1087  -1.6604      2.7691
+  [PASS] R2 over-confidence dissipates value (qwen1.5b): G_over=-3.2545 < G_cal=+0.9148  (dissipated 4.1693 nats)
+
+R3 — Value per joule:  I(X;Y) per second of compute across the ladder
+     (the corpus is macro-on by design — see limits; this is the I/compute curve)
+     model        B   I(X;Y)  s/call   I per s   I per B
+     qwen1.5b   1.5   1.2772    1.72    0.7411    0.8515
+     qwen3b     3.0   1.5614    4.12    0.3791    0.5205
+     qwen7b     7.0   1.7791    5.85    0.3040    0.2542
+     llama8b    8.0   1.5130   10.00    0.1514    0.1891
+  [PASS] R3 value-per-second curve computed: best I/s = qwen1.5b (0.7411 nats/s)
+
+R4 — Diversity > redundancy:  I(X;Ya,Yb) different models vs same model twice
+     H(X) = 1.9208 nats (fleet ceiling)
+     diverse pairs (different models):
+       qwen1.5b+qwen3b      I_joint=1.7668  (max single 1.5614, lift ++0.2054)
+       qwen1.5b+qwen7b      I_joint=1.8089  (max single 1.7791, lift ++0.0298)
+       qwen1.5b+llama8b     I_joint=1.6984  (max single 1.5130, lift ++0.1854)
+       qwen3b+qwen7b        I_joint=1.8688  (max single 1.7791, lift ++0.0896)
+       qwen3b+llama8b       I_joint=1.7609  (max single 1.5614, lift ++0.1995)
+       qwen7b+llama8b       I_joint=1.8198  (max single 1.7791, lift ++0.0406)
+     redundant (same model twice, deterministic temp=0 → identical):
+       qwen1.5b x2          I_joint=1.2772  (single 1.2772, lift ++0.0000)
+       qwen3b x2            I_joint=1.5614  (single 1.5614, lift +-0.0000)
+       qwen7b x2            I_joint=1.7791  (single 1.7791, lift +-0.0000)
+       llama8b x2           I_joint=1.5130  (single 1.5130, lift +-0.0000)
+  [PASS] R4 best diverse pair lifts joint I above best single: qwen3b+qwen7b: +0.0896 nats
+  [PASS] R4 redundancy adds exactly 0 (det. re-run): I(X;Ya,Ya) = I(X;Ya) for every model
+
+R5 — HEADLINE: pricing beats ad-hoc (Kelly/price fleet, out-of-sample)
+     per-agent holdout growth: qwen1.5b:+0.9148  qwen3b:+1.2422  qwen7b:+1.4233  llama8b:+1.1087
+     best-single(qwen7b)=+1.4233  equal=+1.3151  Kelly/price=+1.3281
+     Kelly weights: qwen1.5b:0.22  qwen3b:0.24  qwen7b:0.29  llama8b:0.24
+  [PASS] R5 Kelly/price ≥ equal-weight: +1.3281 ≥ +1.3151
+  [FAIL] R5 Kelly/price ≥ best-single (out-of-sample): +1.3281 ≥ +1.4233
+  [----] R5 fleet beats EVERY agent (Shannon's demon): +1.3281 vs max_indiv +1.4233  (no demon — agents positively correlated; see notes)
+
+     compute-budget view (value per second of compute):
+       qwen1.5b  G/s = +0.9148/1.72s = +0.5308 nats/s
+       qwen3b    G/s = +1.2422/4.12s = +0.3016 nats/s
+       qwen7b    G/s = +1.4233/5.85s = +0.2432 nats/s
+       llama8b   G/s = +1.1087/10.00s = +0.1109 nats/s
+       price∝I/cost weights: qwen1.5b:0.49  qwen3b:0.22  qwen7b:0.19  llama8b:0.10
+       value-density: best-single(qwen7b)=+0.2432/s  price∝I/cost=+0.3281/s
+  [PASS] R5 under compute budget, value-density ranking inverts (cheap wins): highest G/s = qwen1.5b (+0.5308 nats/s) vs best-single qwen7b (+0.2432 nats/s)
+
+================================================================================
+SUMMARY: 9 PASS, 1 FAIL, 1 informational
+  PASS  R1 in-sample identity ΔG == I(X;Y)
+  PASS  R1 I(X;Y) tracks realized capability (accuracy)
+  PASS  R1 ΔG_holdout correlates with I(X;Y)
+  PASS  R2 over-confidence dissipates value (qwen1.5b)
+  PASS  R3 value-per-second curve computed
+  PASS  R4 best diverse pair lifts joint I above best single
+  PASS  R4 redundancy adds exactly 0 (det. re-run)
+  PASS  R5 Kelly/price ≥ equal-weight
+  FAIL  R5 Kelly/price ≥ best-single (out-of-sample)
+  ----  R5 fleet beats EVERY agent (Shannon's demon)
+  PASS  R5 under compute budget, value-density ranking inverts (cheap wins)
+================================================================================
+
+[artifacts] wrote results/confusions.json + results/results_table.json
