@@ -85,7 +85,8 @@ quantities are computed independently from the confusion structure.
 - **R2 — the Second Law / calibration is dissipation** (real E2). Reading the *same* point-predictions with a
   calibrated vs an over-confident posterior realizes different value; the gap is dissipation in nats. Confident
   error destroys value ([`02`](02-coding-theorem-of-value.md) §4).
-- **R3 — value per joule** (the Macrokit-relevant axis). `I(X;Y)` per second of compute across the ladder —
+- **R3 — value per joule** (the deployment-relevant axis: cheap reflex vs. expensive deliberation). `I(X;Y)`
+  per second of compute across the ladder —
   does a cheap model deliver competitive perception-MI per unit compute? (Scope note: this corpus is fixed
   across models, so R3 is the I/compute *curve*, not a within-model prompt ablation — see §5.)
 - **R4 — diversity beats redundancy** (real E3). Joint `I(X; Y_a, Y_b)` for two *different* models vs the same
