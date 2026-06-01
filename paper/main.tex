@@ -50,11 +50,14 @@ over agents selected by an emergent price. A dynamical layer gives the equations
 is/ought asymmetry --- beliefs have a target the world supplies, goals do not --- from which alignment emerges
 as a control-stability condition with a closed-form residual misalignment. We then test the single-frame laws on
 live language models: across four local models on a frozen 100-item decision task, perception mutual information
-tracks realized \emph{capability} rather than parameter count ($r=0.99$; a cross-family model that is larger yet
-weaker lands at correspondingly lower $\I$), out-of-sample $\Delta G$ tracks $\I(X;Y)$ ($r=0.99$),
+tracks realized \emph{capability} rather than parameter count (monotonically across all four; a cross-family
+model that is larger yet weaker lands at correspondingly lower $\I$), out-of-sample $\Delta G$ tracks $\I(X;Y)$
+across every model,
 over-confidence is measurable dissipation that shrinks with capability, and diversity-beats-redundancy holds; the
 fleet-pricing claim is reported with its honest boundary (no volatility-harvesting ``demon'' on positively
-correlated agents, but pricing wins under a compute budget). None of the underlying mechanisms is individually new; the contribution is their unification under one
+correlated agents, but pricing wins under a compute budget). The laws hold in the smooth, concave
+(diminishing-returns) regime; threshold, satiation, and risk-seeking goals lie outside it. None of the
+underlying mechanisms is individually new; the contribution is their unification under one
 substrate-grounded quantity, and the is/ought asymmetry that follows.
 \end{abstract}
 
@@ -142,7 +145,7 @@ features deserve note. First, Shannon's entropy $H$ reappears \emph{unbidden} as
 over many channels (high $H(\hat k)$) realizes less value than a focused one --- \emph{focus is worth
 $K\,H(\hat k)$ nats of value}. Second, the logarithm here is forced by diminishing returns; \S\ref{sec:capacity}
 forces it a \emph{second} time from compounding. A quantity whose form is over-determined by two independent
-routes is the signature of something fundamental, not a modeling convenience.
+routes is the signature of a real structural law, not a modeling convenience.
 
 \section{The capacity theorem: value-throughput is bounded by information-throughput}\label{sec:capacity}
 
@@ -333,7 +336,7 @@ the worlds are drawn from the same distributions the formulas assume. The decisi
 
 \section{Real agents}\label{sec:real}
 
-\paragraph{Instantiation.} We take a frozen, pre-registered 100-item decision task in which each item has a
+\paragraph{Instantiation.} We take a frozen, held-out 100-item decision task in which each item has a
 ground-truth correct action drawn from $K=7$ classes, and an agent's output \emph{is} an action. This realizes
 the perception-then-act structure of Theorem~\ref{thm:capacity} directly: the world-state $X$ is the correct
 action, the perception $Y_a$ is the action model $a$ chooses. We set $r=q$ (the action marginal), so a
@@ -347,9 +350,10 @@ calibrated on a $48$-item fit split and scored on a $52$-item holdout; in-sample
 $r=q$ makes $\Delta G=\I$ an arithmetic identity (used only to confirm the units), so the empirical content is
 the capability tracking, the out-of-sample tracking, and the fleet result.
 
-\paragraph{R1: the bridge holds, and $\I$ tracks capability, not size.} Mutual information tracks realized
-capability (tool-accuracy) at Pearson $r=0.99$, and out-of-sample value-growth tracks $\I$ at $r=0.99$
-(Table~\ref{tab:r1}). The decisive datum is the cross-family model D: it is \emph{larger} than C (8B vs 7B) yet
+\paragraph{R1: the bridge holds, and $\I$ tracks capability, not size.} Across the four models, mutual
+information increases monotonically with realized capability (tool-accuracy), and out-of-sample value-growth
+increases monotonically with $\I$ (Table~\ref{tab:r1}; with only four models we report the ordered values, not
+a correlation coefficient). The decisive datum is the cross-family model D: it is \emph{larger} than C (8B vs 7B) yet
 \emph{less} capable ($0.86$ vs $0.96$), and its $\I$ lands accordingly below C, near B. So the claim is not
 ``scale buys value'' but the sharper one: value-throughput is information-throughput, and information-throughput
 is set by what the model can actually perceive.
@@ -365,8 +369,8 @@ C & 7B   & 0.96 & 1.779 & 1.779 & 1.423 \\
 D (cross-family) & 8B & 0.86 & 1.513 & 1.513 & 1.109 \\
 \bottomrule
 \end{tabular}
-\caption{R1 (nats). $\I(X;Y)$ tracks realized capability, not parameter count ($r=0.99$ vs accuracy);
-$\Delta G_{\text{hold}}$ tracks $\I$ ($r=0.99$). Model D is larger than C yet weaker, and its $\I$ lands below
+\caption{R1 (nats). $\I(X;Y)$ tracks realized capability, not parameter count;
+$\Delta G_{\text{hold}}$ increases with $\I$ across all four models. Model D is larger than C yet weaker, and its $\I$ lands below
 C accordingly. World entropy $H(X)=1.92$ nats: C captures $93\%$, D (though larger) only $79\%$, A $66\%$.}
 \label{tab:r1}
 \end{table}
@@ -414,7 +418,8 @@ diversity at $+0.09$ nats), so Kelly rebalancing has no anti-correlated volatili
 dominates. This is the honest negative the synthetic E4 demon does not reproduce, because E4 was constructed with
 anti-correlated agents.
 
-The negative is confined to the cost-blind axis. Value \emph{per unit compute} inverts the ranking: model A
+The negative is confined to the cost-blind axis. Realized holdout growth \emph{per second of compute}
+($\Delta G_{\text{hold}}/$s, distinct from R3's $\I/$s) inverts the ranking: model A
 yields $0.531$ nats/s against C's $0.243$ (and the slow D only $0.111$), and a budget-aware price
 $\propto \I_a/\text{cost}_a$ (the shadow price $\lambda=K/E$ of \S\ref{sec:crossframe}) achieves $0.328$ nats/s,
 beating the best single model's density. Pricing therefore pays exactly where \S\ref{sec:fleet} says it should:
@@ -432,15 +437,16 @@ grounding, and the is/ought asymmetry. We state this explicitly and concede each
 \citet{savage1954}; our logarithmic measure (\S\ref{sec:measure}) coincides with \citet{bernoulli1738} and with
 unit-coefficient constant-relative-risk-aversion utility, and the diminishing-returns law it encodes is
 Weber--Fechner. We do not claim the form as novel; our departure is to \emph{derive} it from scale invariance on
-a physical resource, to ground it in a substrate (free energy) supplying a unit and a cross-frame exchange rate
-that expected utility lacks, and to show it is forced a second time by compounding \citep{peters2019}.
+a physical resource, to ground it in a conserved scarce resource (free energy being the natural physical candidate) supplying a unit
+and a cross-frame exchange rate that expected utility lacks, and to show it is forced a second time by
+compounding \citep{peters2019}.
 
 \emph{Information rate and log-optimal growth.} The closest prior art, which we credit most carefully, is
 \citet{kelly1956}: the exponential growth rate of wealth is an information rate, optimized by betting one's
 beliefs; \citet{breiman1961} proved asymptotic optimality and \citet{cover1991} developed universal portfolios.
 Our capacity theorem (\S\ref{sec:capacity}) is generalized Kelly, and the fleet operating point (\S\ref{sec:fleet})
-is a Kelly--Cover portfolio over agents. What we add is the reinterpretation of wealth as free energy (a physical
-rather than monetary substrate), the cross-frame price layer, the dynamics/alignment layer, and the claim that
+is a Kelly--Cover portfolio over agents. What we add is the reinterpretation of wealth as any conserved scarce resource (free energy being the physical
+candidate rather than a monetary one), the cross-frame price layer, the dynamics/alignment layer, and the claim that
 Kelly's theorem is the single-agent monetary \emph{special case} of a general law of value.
 
 \emph{Reinforcement learning.} ``Value function'' is precisely defined in RL \citep{bellman1957,suttonbarto} as
@@ -489,7 +495,9 @@ into a concrete operating advantage. \emph{Alignment}, finally, is incentive des
 
 \section{Limits}\label{sec:limits}
 
-We name the assumptions that bound each claim. The capacity theorem assumes compounding (reinvested value) and is
+We name the assumptions that bound each claim. The measure (\S\ref{sec:measure}) is the smooth, concave regime:
+threshold (all-or-nothing) goals, satiation, and risk-seeking violate Axiom~\ref{ax:concave} and lie outside
+the theory. The capacity theorem assumes compounding (reinvested value) and is
 cleanest in the horse-race structure; general returns give a concave program without the closed-form
 $\KL{q}{r}$. The fleet ceiling's exact achievable region is an open problem of network-information-theory
 difficulty. The cross-frame layer concedes that cardinal interpersonal comparison is non-canonical; we do not
@@ -502,6 +510,15 @@ Degenerate runs in which a model emits no action (a serving/plumbing failure, no
 excluded rather than reported as low-$\I$ capability. The alignment theorem is mean-field with a linearized
 landscape and a quasi-static dispersion $V$; a fully coupled treatment, and an endogenous reward gradient $g$ in
 a closed multi-agent world, remain open.
+
+\paragraph{The decisive test.} The present evidence shows the laws are well-defined and hold on one task; it
+does not establish them as general. The experiment that would do so --- or falsify the framework --- is direct:
+on a fleet of \emph{heterogeneous, resource-constrained} agents (specialists perceiving different slices of
+$X$, under a real compute budget), does value-pricing measurably beat a strong hand-tuned orchestration
+baseline, and does collective throughput obey the predicted ceiling $\sum_a G_a\le H(X)$ quantitatively? A
+negative there --- pricing failing to beat the baseline even under cost and diversity, or throughput exceeding
+the entropy ceiling --- would refute the governance claim at its center. We have shown the bridge holds; this is
+the experiment that would show it \emph{matters}.
 
 \section{Conclusion}\label{sec:conclusion}
 
