@@ -1,0 +1,2162 @@
+{
+  "0": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 105,
+    "eval_tokens": 8,
+    "total_ns": 803682166,
+    "wall_s": 0.8268170356750488,
+    "pred": "C",
+    "gold": "C"
+  },
+  "1": {
+    "text": "D",
+    "prompt_tokens": 98,
+    "eval_tokens": 2,
+    "total_ns": 330626792,
+    "wall_s": 0.41621994972229004,
+    "pred": "D",
+    "gold": "D"
+  },
+  "2": {
+    "text": "B",
+    "prompt_tokens": 103,
+    "eval_tokens": 2,
+    "total_ns": 327366083,
+    "wall_s": 0.38021206855773926,
+    "pred": "B",
+    "gold": "C"
+  },
+  "3": {
+    "text": "D. Proprioceptive information is",
+    "prompt_tokens": 142,
+    "eval_tokens": 8,
+    "total_ns": 789931750,
+    "wall_s": 0.816673755645752,
+    "pred": "D",
+    "gold": "D"
+  },
+  "4": {
+    "text": "C",
+    "prompt_tokens": 115,
+    "eval_tokens": 2,
+    "total_ns": 437505458,
+    "wall_s": 0.4584312438964844,
+    "pred": "C",
+    "gold": "B"
+  },
+  "5": {
+    "text": "A",
+    "prompt_tokens": 169,
+    "eval_tokens": 2,
+    "total_ns": 675425417,
+    "wall_s": 0.6976277828216553,
+    "pred": "A",
+    "gold": "A"
+  },
+  "6": {
+    "text": " B. The floor",
+    "prompt_tokens": 91,
+    "eval_tokens": 5,
+    "total_ns": 444212250,
+    "wall_s": 0.47250890731811523,
+    "pred": "B",
+    "gold": "B"
+  },
+  "7": {
+    "text": "B",
+    "prompt_tokens": 136,
+    "eval_tokens": 2,
+    "total_ns": 445278208,
+    "wall_s": 0.5248708724975586,
+    "pred": "B",
+    "gold": "B"
+  },
+  "8": {
+    "text": "A",
+    "prompt_tokens": 78,
+    "eval_tokens": 2,
+    "total_ns": 318740417,
+    "wall_s": 0.40943408012390137,
+    "pred": "A",
+    "gold": "A"
+  },
+  "9": {
+    "text": "A",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 320838292,
+    "wall_s": 0.5117497444152832,
+    "pred": "A",
+    "gold": "A"
+  },
+  "10": {
+    "text": "D",
+    "prompt_tokens": 108,
+    "eval_tokens": 2,
+    "total_ns": 326000459,
+    "wall_s": 0.511883020401001,
+    "pred": "D",
+    "gold": "B"
+  },
+  "11": {
+    "text": "C",
+    "prompt_tokens": 118,
+    "eval_tokens": 2,
+    "total_ns": 447940792,
+    "wall_s": 0.5117840766906738,
+    "pred": "C",
+    "gold": "C"
+  },
+  "12": {
+    "text": "A",
+    "prompt_tokens": 180,
+    "eval_tokens": 2,
+    "total_ns": 680048791,
+    "wall_s": 0.7024481296539307,
+    "pred": "A",
+    "gold": "A"
+  },
+  "13": {
+    "text": "C \n\nNote: Gonorr",
+    "prompt_tokens": 94,
+    "eval_tokens": 8,
+    "total_ns": 560687000,
+    "wall_s": 0.6277608871459961,
+    "pred": "C",
+    "gold": "C"
+  },
+  "14": {
+    "text": "B",
+    "prompt_tokens": 164,
+    "eval_tokens": 2,
+    "total_ns": 555428750,
+    "wall_s": 0.6148841381072998,
+    "pred": "B",
+    "gold": "C"
+  },
+  "15": {
+    "text": "C",
+    "prompt_tokens": 96,
+    "eval_tokens": 2,
+    "total_ns": 316683584,
+    "wall_s": 0.43250203132629395,
+    "pred": "C",
+    "gold": "B"
+  },
+  "16": {
+    "text": "To find the maximum possible order for an",
+    "prompt_tokens": 94,
+    "eval_tokens": 8,
+    "total_ns": 564553375,
+    "wall_s": 0.5902471542358398,
+    "pred": "D",
+    "gold": "B"
+  },
+  "17": {
+    "text": "B. cricothyroid muscle",
+    "prompt_tokens": 198,
+    "eval_tokens": 8,
+    "total_ns": 926718167,
+    "wall_s": 0.9541261196136475,
+    "pred": "B",
+    "gold": "B"
+  },
+  "18": {
+    "text": "False, True (Option D)\n",
+    "prompt_tokens": 134,
+    "eval_tokens": 8,
+    "total_ns": 677608167,
+    "wall_s": 0.7429251670837402,
+    "pred": "A",
+    "gold": "A"
+  },
+  "19": {
+    "text": "A",
+    "prompt_tokens": 89,
+    "eval_tokens": 2,
+    "total_ns": 323781375,
+    "wall_s": 0.3514370918273926,
+    "pred": "A",
+    "gold": "A"
+  },
+  "20": {
+    "text": "B. 4 (The minimal polynomial",
+    "prompt_tokens": 89,
+    "eval_tokens": 8,
+    "total_ns": 557433959,
+    "wall_s": 0.7165522575378418,
+    "pred": "B",
+    "gold": "B"
+  },
+  "21": {
+    "text": "B. The inferior articular demif",
+    "prompt_tokens": 144,
+    "eval_tokens": 8,
+    "total_ns": 802372750,
+    "wall_s": 0.8307058811187744,
+    "pred": "B",
+    "gold": "C"
+  },
+  "22": {
+    "text": "D. False, True",
+    "prompt_tokens": 140,
+    "eval_tokens": 6,
+    "total_ns": 708944042,
+    "wall_s": 0.7342531681060791,
+    "pred": "D",
+    "gold": "D"
+  },
+  "23": {
+    "text": "B",
+    "prompt_tokens": 82,
+    "eval_tokens": 2,
+    "total_ns": 319690667,
+    "wall_s": 0.3471038341522217,
+    "pred": "B",
+    "gold": "A"
+  },
+  "24": {
+    "text": "A",
+    "prompt_tokens": 92,
+    "eval_tokens": 2,
+    "total_ns": 324452459,
+    "wall_s": 0.34493327140808105,
+    "pred": "A",
+    "gold": "D"
+  },
+  "25": {
+    "text": "B. Yes, with p=3",
+    "prompt_tokens": 114,
+    "eval_tokens": 8,
+    "total_ns": 674513542,
+    "wall_s": 0.7013401985168457,
+    "pred": "B",
+    "gold": "B"
+  },
+  "26": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 111,
+    "eval_tokens": 8,
+    "total_ns": 682144959,
+    "wall_s": 0.7076277732849121,
+    "pred": "D",
+    "gold": "D"
+  },
+  "27": {
+    "text": "D. False, True",
+    "prompt_tokens": 133,
+    "eval_tokens": 6,
+    "total_ns": 600018750,
+    "wall_s": 0.7359349727630615,
+    "pred": "D",
+    "gold": "A"
+  },
+  "28": {
+    "text": "B",
+    "prompt_tokens": 103,
+    "eval_tokens": 2,
+    "total_ns": 324885042,
+    "wall_s": 0.34810900688171387,
+    "pred": "B",
+    "gold": "B"
+  },
+  "29": {
+    "text": "B",
+    "prompt_tokens": 96,
+    "eval_tokens": 2,
+    "total_ns": 325186750,
+    "wall_s": 0.36805200576782227,
+    "pred": "B",
+    "gold": "B"
+  },
+  "30": {
+    "text": "D",
+    "prompt_tokens": 82,
+    "eval_tokens": 2,
+    "total_ns": 321122792,
+    "wall_s": 0.4346280097961426,
+    "pred": "D",
+    "gold": "D"
+  },
+  "31": {
+    "text": "A. True, True",
+    "prompt_tokens": 127,
+    "eval_tokens": 6,
+    "total_ns": 600497542,
+    "wall_s": 0.7938141822814941,
+    "pred": "A",
+    "gold": "A"
+  },
+  "32": {
+    "text": "C",
+    "prompt_tokens": 90,
+    "eval_tokens": 2,
+    "total_ns": 334401792,
+    "wall_s": 0.5121872425079346,
+    "pred": "C",
+    "gold": "C"
+  },
+  "33": {
+    "text": "B",
+    "prompt_tokens": 78,
+    "eval_tokens": 2,
+    "total_ns": 320078834,
+    "wall_s": 0.5118317604064941,
+    "pred": "B",
+    "gold": "B"
+  },
+  "34": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 136,
+    "eval_tokens": 8,
+    "total_ns": 674040333,
+    "wall_s": 0.7166950702667236,
+    "pred": "C",
+    "gold": "C"
+  },
+  "35": {
+    "text": "D",
+    "prompt_tokens": 105,
+    "eval_tokens": 2,
+    "total_ns": 436377916,
+    "wall_s": 0.5118508338928223,
+    "pred": "D",
+    "gold": "A"
+  },
+  "36": {
+    "text": "C. to be palpable both",
+    "prompt_tokens": 130,
+    "eval_tokens": 8,
+    "total_ns": 682657083,
+    "wall_s": 0.8287169933319092,
+    "pred": "C",
+    "gold": "C"
+  },
+  "37": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 135,
+    "eval_tokens": 8,
+    "total_ns": 685232500,
+    "wall_s": 0.8093459606170654,
+    "pred": "C",
+    "gold": "C"
+  },
+  "38": {
+    "text": "B",
+    "prompt_tokens": 92,
+    "eval_tokens": 2,
+    "total_ns": 322946334,
+    "wall_s": 0.41431498527526855,
+    "pred": "B",
+    "gold": "B"
+  },
+  "39": {
+    "text": "D. False, True",
+    "prompt_tokens": 98,
+    "eval_tokens": 6,
+    "total_ns": 480548459,
+    "wall_s": 0.6093299388885498,
+    "pred": "D",
+    "gold": "C"
+  },
+  "40": {
+    "text": "A",
+    "prompt_tokens": 97,
+    "eval_tokens": 2,
+    "total_ns": 325492584,
+    "wall_s": 0.3502390384674072,
+    "pred": "A",
+    "gold": "A"
+  },
+  "41": {
+    "text": "A",
+    "prompt_tokens": 114,
+    "eval_tokens": 2,
+    "total_ns": 439219833,
+    "wall_s": 0.5688457489013672,
+    "pred": "A",
+    "gold": "C"
+  },
+  "42": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 118,
+    "eval_tokens": 8,
+    "total_ns": 685074917,
+    "wall_s": 0.7996048927307129,
+    "pred": "D",
+    "gold": "C"
+  },
+  "43": {
+    "text": "A. True, True\n\nEx",
+    "prompt_tokens": 93,
+    "eval_tokens": 8,
+    "total_ns": 557274167,
+    "wall_s": 0.7357580661773682,
+    "pred": "A",
+    "gold": "D"
+  },
+  "44": {
+    "text": "D",
+    "prompt_tokens": 114,
+    "eval_tokens": 2,
+    "total_ns": 437558667,
+    "wall_s": 0.5120840072631836,
+    "pred": "D",
+    "gold": "D"
+  },
+  "45": {
+    "text": "B. 4 (The minimal polynomial",
+    "prompt_tokens": 87,
+    "eval_tokens": 8,
+    "total_ns": 555913791,
+    "wall_s": 0.6142599582672119,
+    "pred": "B",
+    "gold": "C"
+  },
+  "46": {
+    "text": "B",
+    "prompt_tokens": 125,
+    "eval_tokens": 2,
+    "total_ns": 441192917,
+    "wall_s": 0.5118160247802734,
+    "pred": "B",
+    "gold": "D"
+  },
+  "47": {
+    "text": "B. Pupillary constr",
+    "prompt_tokens": 149,
+    "eval_tokens": 8,
+    "total_ns": 796295209,
+    "wall_s": 0.8709778785705566,
+    "pred": "B",
+    "gold": "B"
+  },
+  "48": {
+    "text": "B. the mucosa covering the",
+    "prompt_tokens": 152,
+    "eval_tokens": 8,
+    "total_ns": 791844500,
+    "wall_s": 0.824120044708252,
+    "pred": "B",
+    "gold": "B"
+  },
+  "49": {
+    "text": "B",
+    "prompt_tokens": 148,
+    "eval_tokens": 2,
+    "total_ns": 554887834,
+    "wall_s": 0.5733809471130371,
+    "pred": "B",
+    "gold": "B"
+  },
+  "50": {
+    "text": "C. paralysis of the fa",
+    "prompt_tokens": 151,
+    "eval_tokens": 8,
+    "total_ns": 798578083,
+    "wall_s": 0.8278570175170898,
+    "pred": "C",
+    "gold": "A"
+  },
+  "51": {
+    "text": "D. False, True",
+    "prompt_tokens": 103,
+    "eval_tokens": 6,
+    "total_ns": 493264833,
+    "wall_s": 0.5204720497131348,
+    "pred": "D",
+    "gold": "D"
+  },
+  "52": {
+    "text": "A",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 440876792,
+    "wall_s": 0.4667792320251465,
+    "pred": "A",
+    "gold": "C"
+  },
+  "53": {
+    "text": "B",
+    "prompt_tokens": 103,
+    "eval_tokens": 2,
+    "total_ns": 326332583,
+    "wall_s": 0.5232522487640381,
+    "pred": "B",
+    "gold": "C"
+  },
+  "54": {
+    "text": "D",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 323490750,
+    "wall_s": 0.3534669876098633,
+    "pred": "D",
+    "gold": "D"
+  },
+  "55": {
+    "text": "C",
+    "prompt_tokens": 90,
+    "eval_tokens": 2,
+    "total_ns": 321337833,
+    "wall_s": 0.34186601638793945,
+    "pred": "C",
+    "gold": "B"
+  },
+  "56": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 120,
+    "eval_tokens": 8,
+    "total_ns": 680361000,
+    "wall_s": 0.8401117324829102,
+    "pred": "D",
+    "gold": "D"
+  },
+  "57": {
+    "text": " A",
+    "prompt_tokens": 80,
+    "eval_tokens": 2,
+    "total_ns": 324065292,
+    "wall_s": 0.5118460655212402,
+    "pred": "A",
+    "gold": "B"
+  },
+  "58": {
+    "text": "C. 0",
+    "prompt_tokens": 135,
+    "eval_tokens": 5,
+    "total_ns": 562853917,
+    "wall_s": 0.6141860485076904,
+    "pred": "C",
+    "gold": "B"
+  },
+  "59": {
+    "text": "B",
+    "prompt_tokens": 146,
+    "eval_tokens": 2,
+    "total_ns": 554111250,
+    "wall_s": 0.6142349243164062,
+    "pred": "B",
+    "gold": "A"
+  },
+  "60": {
+    "text": " D. False, True\n\nEx",
+    "prompt_tokens": 121,
+    "eval_tokens": 8,
+    "total_ns": 677833166,
+    "wall_s": 0.7163569927215576,
+    "pred": "D",
+    "gold": "B"
+  },
+  "61": {
+    "text": "C",
+    "prompt_tokens": 104,
+    "eval_tokens": 2,
+    "total_ns": 331190625,
+    "wall_s": 0.3696451187133789,
+    "pred": "C",
+    "gold": "C"
+  },
+  "62": {
+    "text": "A",
+    "prompt_tokens": 138,
+    "eval_tokens": 2,
+    "total_ns": 563759333,
+    "wall_s": 0.5920672416687012,
+    "pred": "A",
+    "gold": "A"
+  },
+  "63": {
+    "text": "C\n\n##### Explanation",
+    "prompt_tokens": 86,
+    "eval_tokens": 8,
+    "total_ns": 556339000,
+    "wall_s": 0.5858211517333984,
+    "pred": "C",
+    "gold": "C"
+  },
+  "64": {
+    "text": "D",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 557892750,
+    "wall_s": 0.7042548656463623,
+    "pred": "D",
+    "gold": "C"
+  },
+  "65": {
+    "text": "D",
+    "prompt_tokens": 110,
+    "eval_tokens": 2,
+    "total_ns": 434652459,
+    "wall_s": 0.5025990009307861,
+    "pred": "D",
+    "gold": "C"
+  },
+  "66": {
+    "text": "C. It is impossible to predict an",
+    "prompt_tokens": 127,
+    "eval_tokens": 8,
+    "total_ns": 684189708,
+    "wall_s": 0.7126932144165039,
+    "pred": "C",
+    "gold": "B"
+  },
+  "67": {
+    "text": "B",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 328980875,
+    "wall_s": 0.4231600761413574,
+    "pred": "B",
+    "gold": "B"
+  },
+  "68": {
+    "text": "C",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 439912042,
+    "wall_s": 0.46740293502807617,
+    "pred": "C",
+    "gold": "D"
+  },
+  "69": {
+    "text": " D. False, True\n\nEx",
+    "prompt_tokens": 108,
+    "eval_tokens": 8,
+    "total_ns": 670425833,
+    "wall_s": 0.6978011131286621,
+    "pred": "D",
+    "gold": "A"
+  },
+  "70": {
+    "text": "A. True, True",
+    "prompt_tokens": 120,
+    "eval_tokens": 6,
+    "total_ns": 594938333,
+    "wall_s": 0.6847927570343018,
+    "pred": "A",
+    "gold": "A"
+  },
+  "71": {
+    "text": "A. True, True",
+    "prompt_tokens": 95,
+    "eval_tokens": 6,
+    "total_ns": 486523667,
+    "wall_s": 0.5165832042694092,
+    "pred": "A",
+    "gold": "C"
+  },
+  "72": {
+    "text": "C",
+    "prompt_tokens": 89,
+    "eval_tokens": 2,
+    "total_ns": 329272375,
+    "wall_s": 0.3552210330963135,
+    "pred": "C",
+    "gold": "C"
+  },
+  "73": {
+    "text": "B",
+    "prompt_tokens": 108,
+    "eval_tokens": 2,
+    "total_ns": 439931334,
+    "wall_s": 0.465623140335083,
+    "pred": "B",
+    "gold": "C"
+  },
+  "74": {
+    "text": "C",
+    "prompt_tokens": 85,
+    "eval_tokens": 2,
+    "total_ns": 320670709,
+    "wall_s": 0.394287109375,
+    "pred": "C",
+    "gold": "C"
+  },
+  "75": {
+    "text": "To determine when the polynomial \\( f(",
+    "prompt_tokens": 96,
+    "eval_tokens": 8,
+    "total_ns": 557058708,
+    "wall_s": 0.5846667289733887,
+    "pred": "D",
+    "gold": "B"
+  },
+  "76": {
+    "text": "A. (x - 2)(",
+    "prompt_tokens": 133,
+    "eval_tokens": 8,
+    "total_ns": 675816417,
+    "wall_s": 0.7474770545959473,
+    "pred": "A",
+    "gold": "A"
+  },
+  "77": {
+    "text": " B. 5\n\nThe order",
+    "prompt_tokens": 95,
+    "eval_tokens": 8,
+    "total_ns": 565505792,
+    "wall_s": 0.599132776260376,
+    "pred": "B",
+    "gold": "C"
+  },
+  "78": {
+    "text": "B",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 445588500,
+    "wall_s": 0.5260391235351562,
+    "pred": "B",
+    "gold": "B"
+  },
+  "79": {
+    "text": "To find the degree of the field extension",
+    "prompt_tokens": 94,
+    "eval_tokens": 8,
+    "total_ns": 558279709,
+    "wall_s": 0.7173027992248535,
+    "pred": "D",
+    "gold": "B"
+  },
+  "80": {
+    "text": "C",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 442265625,
+    "wall_s": 0.508699893951416,
+    "pred": "C",
+    "gold": "C"
+  },
+  "81": {
+    "text": "C. (g o h)^2",
+    "prompt_tokens": 130,
+    "eval_tokens": 8,
+    "total_ns": 677783250,
+    "wall_s": 0.7167007923126221,
+    "pred": "C",
+    "gold": "C"
+  },
+  "82": {
+    "text": "C",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 451779083,
+    "wall_s": 0.5115878582000732,
+    "pred": "C",
+    "gold": "C"
+  },
+  "83": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 110,
+    "eval_tokens": 8,
+    "total_ns": 680530542,
+    "wall_s": 0.7098970413208008,
+    "pred": "D",
+    "gold": "B"
+  },
+  "84": {
+    "text": "C",
+    "prompt_tokens": 121,
+    "eval_tokens": 2,
+    "total_ns": 439029708,
+    "wall_s": 0.5180039405822754,
+    "pred": "C",
+    "gold": "C"
+  },
+  "85": {
+    "text": "The order (or cycle type) of",
+    "prompt_tokens": 106,
+    "eval_tokens": 8,
+    "total_ns": 672183292,
+    "wall_s": 0.7173030376434326,
+    "pred": "D",
+    "gold": "C"
+  },
+  "86": {
+    "text": "C",
+    "prompt_tokens": 108,
+    "eval_tokens": 2,
+    "total_ns": 436546417,
+    "wall_s": 0.48139500617980957,
+    "pred": "C",
+    "gold": "C"
+  },
+  "87": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 136,
+    "eval_tokens": 8,
+    "total_ns": 683657042,
+    "wall_s": 0.7472209930419922,
+    "pred": "C",
+    "gold": "D"
+  },
+  "88": {
+    "text": "A",
+    "prompt_tokens": 98,
+    "eval_tokens": 2,
+    "total_ns": 331120125,
+    "wall_s": 0.37656188011169434,
+    "pred": "A",
+    "gold": "A"
+  },
+  "89": {
+    "text": "C",
+    "prompt_tokens": 106,
+    "eval_tokens": 2,
+    "total_ns": 437171166,
+    "wall_s": 0.47594118118286133,
+    "pred": "C",
+    "gold": "D"
+  },
+  "90": {
+    "text": "D",
+    "prompt_tokens": 105,
+    "eval_tokens": 2,
+    "total_ns": 436195375,
+    "wall_s": 0.5796458721160889,
+    "pred": "D",
+    "gold": "D"
+  },
+  "91": {
+    "text": "B",
+    "prompt_tokens": 99,
+    "eval_tokens": 2,
+    "total_ns": 324067208,
+    "wall_s": 0.512692928314209,
+    "pred": "B",
+    "gold": "B"
+  },
+  "92": {
+    "text": "B. Bartholin's",
+    "prompt_tokens": 101,
+    "eval_tokens": 8,
+    "total_ns": 563864125,
+    "wall_s": 0.6141378879547119,
+    "pred": "B",
+    "gold": "B"
+  },
+  "93": {
+    "text": "A. True, True",
+    "prompt_tokens": 105,
+    "eval_tokens": 6,
+    "total_ns": 604813500,
+    "wall_s": 0.7160451412200928,
+    "pred": "A",
+    "gold": "A"
+  },
+  "94": {
+    "text": "C. the floor of the orbit,",
+    "prompt_tokens": 135,
+    "eval_tokens": 8,
+    "total_ns": 685273833,
+    "wall_s": 0.7116081714630127,
+    "pred": "C",
+    "gold": "C"
+  },
+  "95": {
+    "text": "B. is prevented from everting",
+    "prompt_tokens": 126,
+    "eval_tokens": 8,
+    "total_ns": 677930958,
+    "wall_s": 0.7224421501159668,
+    "pred": "B",
+    "gold": "B"
+  },
+  "96": {
+    "text": "C",
+    "prompt_tokens": 111,
+    "eval_tokens": 2,
+    "total_ns": 436433583,
+    "wall_s": 0.5133750438690186,
+    "pred": "C",
+    "gold": "B"
+  },
+  "97": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 134,
+    "eval_tokens": 8,
+    "total_ns": 685195084,
+    "wall_s": 0.9196169376373291,
+    "pred": "C",
+    "gold": "C"
+  },
+  "98": {
+    "text": "A. True, True",
+    "prompt_tokens": 121,
+    "eval_tokens": 6,
+    "total_ns": 593246500,
+    "wall_s": 0.7183489799499512,
+    "pred": "A",
+    "gold": "D"
+  },
+  "99": {
+    "text": "C. Melanocytes",
+    "prompt_tokens": 92,
+    "eval_tokens": 7,
+    "total_ns": 517502208,
+    "wall_s": 0.5538311004638672,
+    "pred": "C",
+    "gold": "C"
+  },
+  "100": {
+    "text": "B",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 322819667,
+    "wall_s": 0.3658878803253174,
+    "pred": "B",
+    "gold": "B"
+  },
+  "101": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 109,
+    "eval_tokens": 8,
+    "total_ns": 672214541,
+    "wall_s": 0.7157869338989258,
+    "pred": "C",
+    "gold": "A"
+  },
+  "102": {
+    "text": "A",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 450687250,
+    "wall_s": 0.47490620613098145,
+    "pred": "A",
+    "gold": "A"
+  },
+  "103": {
+    "text": "B. 4 (The minimal polynomial",
+    "prompt_tokens": 88,
+    "eval_tokens": 8,
+    "total_ns": 561888333,
+    "wall_s": 0.6519899368286133,
+    "pred": "B",
+    "gold": "B"
+  },
+  "104": {
+    "text": "C",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 325754208,
+    "wall_s": 0.40947675704956055,
+    "pred": "C",
+    "gold": "D"
+  },
+  "105": {
+    "text": "For the quotient ring \\( \\mathbb",
+    "prompt_tokens": 97,
+    "eval_tokens": 8,
+    "total_ns": 558558875,
+    "wall_s": 0.5833950042724609,
+    "pred": "A",
+    "gold": "B"
+  },
+  "106": {
+    "text": "D",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 324395042,
+    "wall_s": 0.41739892959594727,
+    "pred": "D",
+    "gold": "D"
+  },
+  "107": {
+    "text": "C",
+    "prompt_tokens": 122,
+    "eval_tokens": 2,
+    "total_ns": 440093834,
+    "wall_s": 0.46593308448791504,
+    "pred": "C",
+    "gold": "B"
+  },
+  "108": {
+    "text": "C",
+    "prompt_tokens": 131,
+    "eval_tokens": 2,
+    "total_ns": 450056250,
+    "wall_s": 0.4744083881378174,
+    "pred": "C",
+    "gold": "C"
+  },
+  "109": {
+    "text": "A",
+    "prompt_tokens": 104,
+    "eval_tokens": 2,
+    "total_ns": 326969333,
+    "wall_s": 0.41311216354370117,
+    "pred": "A",
+    "gold": "A"
+  },
+  "110": {
+    "text": "A",
+    "prompt_tokens": 108,
+    "eval_tokens": 2,
+    "total_ns": 325498208,
+    "wall_s": 0.5118589401245117,
+    "pred": "A",
+    "gold": "B"
+  },
+  "111": {
+    "text": "D. False, True",
+    "prompt_tokens": 103,
+    "eval_tokens": 6,
+    "total_ns": 480805333,
+    "wall_s": 0.6222898960113525,
+    "pred": "D",
+    "gold": "D"
+  },
+  "112": {
+    "text": "A",
+    "prompt_tokens": 82,
+    "eval_tokens": 2,
+    "total_ns": 319999000,
+    "wall_s": 0.5038220882415771,
+    "pred": "A",
+    "gold": "A"
+  },
+  "113": {
+    "text": " D. False, True\n\nEx",
+    "prompt_tokens": 105,
+    "eval_tokens": 8,
+    "total_ns": 676571833,
+    "wall_s": 0.7173581123352051,
+    "pred": "D",
+    "gold": "D"
+  },
+  "114": {
+    "text": "D",
+    "prompt_tokens": 80,
+    "eval_tokens": 2,
+    "total_ns": 327315167,
+    "wall_s": 0.35742616653442383,
+    "pred": "D",
+    "gold": "B"
+  },
+  "115": {
+    "text": "A",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 562965584,
+    "wall_s": 0.6662719249725342,
+    "pred": "A",
+    "gold": "C"
+  },
+  "116": {
+    "text": "C",
+    "prompt_tokens": 107,
+    "eval_tokens": 2,
+    "total_ns": 435394334,
+    "wall_s": 0.46648478507995605,
+    "pred": "C",
+    "gold": "C"
+  },
+  "117": {
+    "text": "B. Yes, with p=3",
+    "prompt_tokens": 126,
+    "eval_tokens": 8,
+    "total_ns": 677446834,
+    "wall_s": 0.7080180644989014,
+    "pred": "B",
+    "gold": "B"
+  },
+  "118": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 104,
+    "eval_tokens": 8,
+    "total_ns": 558889500,
+    "wall_s": 0.6673007011413574,
+    "pred": "C",
+    "gold": "D"
+  },
+  "119": {
+    "text": "D\n\n\nInstruction much more",
+    "prompt_tokens": 99,
+    "eval_tokens": 8,
+    "total_ns": 572618750,
+    "wall_s": 0.6139791011810303,
+    "pred": "D",
+    "gold": "D"
+  },
+  "120": {
+    "text": "A",
+    "prompt_tokens": 86,
+    "eval_tokens": 2,
+    "total_ns": 322277250,
+    "wall_s": 0.41661906242370605,
+    "pred": "A",
+    "gold": "A"
+  },
+  "121": {
+    "text": "A",
+    "prompt_tokens": 124,
+    "eval_tokens": 2,
+    "total_ns": 438771541,
+    "wall_s": 0.5537948608398438,
+    "pred": "A",
+    "gold": "D"
+  },
+  "122": {
+    "text": "C. 0 (In the given",
+    "prompt_tokens": 135,
+    "eval_tokens": 8,
+    "total_ns": 679495000,
+    "wall_s": 0.7665610313415527,
+    "pred": "C",
+    "gold": "A"
+  },
+  "123": {
+    "text": "C. True, False",
+    "prompt_tokens": 109,
+    "eval_tokens": 6,
+    "total_ns": 594847792,
+    "wall_s": 0.8189821243286133,
+    "pred": "C",
+    "gold": "C"
+  },
+  "124": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 124,
+    "eval_tokens": 8,
+    "total_ns": 684209667,
+    "wall_s": 0.7111208438873291,
+    "pred": "C",
+    "gold": "A"
+  },
+  "125": {
+    "text": "C",
+    "prompt_tokens": 108,
+    "eval_tokens": 2,
+    "total_ns": 435406833,
+    "wall_s": 0.4617130756378174,
+    "pred": "C",
+    "gold": "C"
+  },
+  "126": {
+    "text": "C. 0,1",
+    "prompt_tokens": 109,
+    "eval_tokens": 7,
+    "total_ns": 631101291,
+    "wall_s": 0.6551380157470703,
+    "pred": "C",
+    "gold": "D"
+  },
+  "127": {
+    "text": "A",
+    "prompt_tokens": 87,
+    "eval_tokens": 2,
+    "total_ns": 320505250,
+    "wall_s": 0.3454310894012451,
+    "pred": "A",
+    "gold": "A"
+  },
+  "128": {
+    "text": "D",
+    "prompt_tokens": 86,
+    "eval_tokens": 2,
+    "total_ns": 321993541,
+    "wall_s": 0.40438199043273926,
+    "pred": "D",
+    "gold": "C"
+  },
+  "129": {
+    "text": "To apply Fermat's Little",
+    "prompt_tokens": 92,
+    "eval_tokens": 8,
+    "total_ns": 565923458,
+    "wall_s": 0.599045991897583,
+    "pred": "A",
+    "gold": "D"
+  },
+  "130": {
+    "text": "C \n\nWhat is the relevant",
+    "prompt_tokens": 99,
+    "eval_tokens": 8,
+    "total_ns": 566133750,
+    "wall_s": 0.5907740592956543,
+    "pred": "C",
+    "gold": "C"
+  },
+  "131": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 129,
+    "eval_tokens": 8,
+    "total_ns": 676365375,
+    "wall_s": 0.7359449863433838,
+    "pred": "C",
+    "gold": "C"
+  },
+  "132": {
+    "text": "B",
+    "prompt_tokens": 135,
+    "eval_tokens": 2,
+    "total_ns": 441958583,
+    "wall_s": 0.511970043182373,
+    "pred": "B",
+    "gold": "D"
+  },
+  "133": {
+    "text": "C",
+    "prompt_tokens": 119,
+    "eval_tokens": 2,
+    "total_ns": 438594375,
+    "wall_s": 0.5116097927093506,
+    "pred": "C",
+    "gold": "B"
+  },
+  "134": {
+    "text": "B. superf extrinsic factors such",
+    "prompt_tokens": 100,
+    "eval_tokens": 8,
+    "total_ns": 575961584,
+    "wall_s": 0.6148049831390381,
+    "pred": "B",
+    "gold": "C"
+  },
+  "135": {
+    "text": "A. True, True\n\nEx",
+    "prompt_tokens": 118,
+    "eval_tokens": 8,
+    "total_ns": 682479125,
+    "wall_s": 0.7169060707092285,
+    "pred": "A",
+    "gold": "A"
+  },
+  "136": {
+    "text": "C",
+    "prompt_tokens": 101,
+    "eval_tokens": 2,
+    "total_ns": 324905166,
+    "wall_s": 0.5118410587310791,
+    "pred": "C",
+    "gold": "D"
+  },
+  "137": {
+    "text": "B. anterior and lateral to med",
+    "prompt_tokens": 115,
+    "eval_tokens": 8,
+    "total_ns": 672074125,
+    "wall_s": 0.7165682315826416,
+    "pred": "B",
+    "gold": "B"
+  },
+  "138": {
+    "text": "A\n\n(Note: In reality",
+    "prompt_tokens": 150,
+    "eval_tokens": 8,
+    "total_ns": 792757583,
+    "wall_s": 0.8184609413146973,
+    "pred": "A",
+    "gold": "B"
+  },
+  "139": {
+    "text": "A. Spastic Paralysis.",
+    "prompt_tokens": 114,
+    "eval_tokens": 8,
+    "total_ns": 682732541,
+    "wall_s": 0.7175648212432861,
+    "pred": "A",
+    "gold": "A"
+  },
+  "140": {
+    "text": "A. True, True",
+    "prompt_tokens": 107,
+    "eval_tokens": 6,
+    "total_ns": 592156625,
+    "wall_s": 0.6154658794403076,
+    "pred": "A",
+    "gold": "C"
+  },
+  "141": {
+    "text": "A",
+    "prompt_tokens": 165,
+    "eval_tokens": 2,
+    "total_ns": 560739333,
+    "wall_s": 0.5972661972045898,
+    "pred": "A",
+    "gold": "B"
+  },
+  "142": {
+    "text": "C",
+    "prompt_tokens": 87,
+    "eval_tokens": 2,
+    "total_ns": 322063083,
+    "wall_s": 0.3525962829589844,
+    "pred": "C",
+    "gold": "D"
+  },
+  "143": {
+    "text": "D",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 444364791,
+    "wall_s": 0.4739971160888672,
+    "pred": "D",
+    "gold": "D"
+  },
+  "144": {
+    "text": "D. False, True",
+    "prompt_tokens": 133,
+    "eval_tokens": 6,
+    "total_ns": 611386500,
+    "wall_s": 0.6368308067321777,
+    "pred": "D",
+    "gold": "A"
+  },
+  "145": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 128,
+    "eval_tokens": 8,
+    "total_ns": 682131333,
+    "wall_s": 0.7630200386047363,
+    "pred": "D",
+    "gold": "C"
+  },
+  "146": {
+    "text": "D",
+    "prompt_tokens": 103,
+    "eval_tokens": 2,
+    "total_ns": 328171500,
+    "wall_s": 0.3495142459869385,
+    "pred": "D",
+    "gold": "D"
+  },
+  "147": {
+    "text": "A",
+    "prompt_tokens": 92,
+    "eval_tokens": 2,
+    "total_ns": 320906334,
+    "wall_s": 0.34500622749328613,
+    "pred": "A",
+    "gold": "C"
+  },
+  "148": {
+    "text": "C",
+    "prompt_tokens": 144,
+    "eval_tokens": 2,
+    "total_ns": 553139667,
+    "wall_s": 0.5702080726623535,
+    "pred": "C",
+    "gold": "C"
+  },
+  "149": {
+    "text": "C",
+    "prompt_tokens": 94,
+    "eval_tokens": 2,
+    "total_ns": 324670750,
+    "wall_s": 0.35045790672302246,
+    "pred": "C",
+    "gold": "C"
+  },
+  "150": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 132,
+    "eval_tokens": 8,
+    "total_ns": 683458916,
+    "wall_s": 0.7798140048980713,
+    "pred": "D",
+    "gold": "B"
+  },
+  "151": {
+    "text": "C",
+    "prompt_tokens": 103,
+    "eval_tokens": 2,
+    "total_ns": 318847875,
+    "wall_s": 0.3446629047393799,
+    "pred": "C",
+    "gold": "A"
+  },
+  "152": {
+    "text": "B",
+    "prompt_tokens": 121,
+    "eval_tokens": 2,
+    "total_ns": 439964583,
+    "wall_s": 0.46781086921691895,
+    "pred": "B",
+    "gold": "A"
+  },
+  "153": {
+    "text": "A",
+    "prompt_tokens": 122,
+    "eval_tokens": 2,
+    "total_ns": 437615541,
+    "wall_s": 0.46419286727905273,
+    "pred": "A",
+    "gold": "C"
+  },
+  "154": {
+    "text": "C. The mandibular canal,",
+    "prompt_tokens": 130,
+    "eval_tokens": 8,
+    "total_ns": 678674500,
+    "wall_s": 0.7077298164367676,
+    "pred": "C",
+    "gold": "D"
+  },
+  "155": {
+    "text": "B",
+    "prompt_tokens": 81,
+    "eval_tokens": 2,
+    "total_ns": 320921833,
+    "wall_s": 0.3489189147949219,
+    "pred": "B",
+    "gold": "D"
+  },
+  "156": {
+    "text": "C",
+    "prompt_tokens": 82,
+    "eval_tokens": 2,
+    "total_ns": 329798708,
+    "wall_s": 0.5373513698577881,
+    "pred": "C",
+    "gold": "B"
+  },
+  "157": {
+    "text": "C",
+    "prompt_tokens": 152,
+    "eval_tokens": 2,
+    "total_ns": 563695500,
+    "wall_s": 0.5912189483642578,
+    "pred": "C",
+    "gold": "A"
+  },
+  "158": {
+    "text": "A",
+    "prompt_tokens": 108,
+    "eval_tokens": 2,
+    "total_ns": 436210792,
+    "wall_s": 0.46242785453796387,
+    "pred": "A",
+    "gold": "A"
+  },
+  "159": {
+    "text": "C",
+    "prompt_tokens": 107,
+    "eval_tokens": 2,
+    "total_ns": 433995125,
+    "wall_s": 0.5799388885498047,
+    "pred": "C",
+    "gold": "C"
+  },
+  "160": {
+    "text": "A\n\n## Instruction: Based",
+    "prompt_tokens": 119,
+    "eval_tokens": 8,
+    "total_ns": 673708750,
+    "wall_s": 0.6982738971710205,
+    "pred": "A",
+    "gold": "C"
+  },
+  "161": {
+    "text": "A",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 441734125,
+    "wall_s": 0.5258040428161621,
+    "pred": "A",
+    "gold": "C"
+  },
+  "162": {
+    "text": "B",
+    "prompt_tokens": 110,
+    "eval_tokens": 2,
+    "total_ns": 441296291,
+    "wall_s": 0.5117490291595459,
+    "pred": "B",
+    "gold": "D"
+  },
+  "163": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 140,
+    "eval_tokens": 8,
+    "total_ns": 791101375,
+    "wall_s": 0.9219810962677002,
+    "pred": "D",
+    "gold": "A"
+  },
+  "164": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 119,
+    "eval_tokens": 8,
+    "total_ns": 673191458,
+    "wall_s": 0.7154879570007324,
+    "pred": "D",
+    "gold": "C"
+  },
+  "165": {
+    "text": "D",
+    "prompt_tokens": 112,
+    "eval_tokens": 2,
+    "total_ns": 438130166,
+    "wall_s": 0.512462854385376,
+    "pred": "D",
+    "gold": "D"
+  },
+  "166": {
+    "text": "A\n\nTo determine why option A",
+    "prompt_tokens": 109,
+    "eval_tokens": 8,
+    "total_ns": 684163084,
+    "wall_s": 0.7382609844207764,
+    "pred": "A",
+    "gold": "B"
+  },
+  "167": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 131,
+    "eval_tokens": 8,
+    "total_ns": 683068542,
+    "wall_s": 0.7974159717559814,
+    "pred": "D",
+    "gold": "C"
+  },
+  "168": {
+    "text": "B",
+    "prompt_tokens": 131,
+    "eval_tokens": 2,
+    "total_ns": 441817583,
+    "wall_s": 0.5118048191070557,
+    "pred": "B",
+    "gold": "B"
+  },
+  "169": {
+    "text": "D",
+    "prompt_tokens": 114,
+    "eval_tokens": 2,
+    "total_ns": 437085000,
+    "wall_s": 0.5110421180725098,
+    "pred": "D",
+    "gold": "B"
+  },
+  "170": {
+    "text": "C",
+    "prompt_tokens": 96,
+    "eval_tokens": 2,
+    "total_ns": 324324083,
+    "wall_s": 0.34907102584838867,
+    "pred": "C",
+    "gold": "C"
+  },
+  "171": {
+    "text": "C",
+    "prompt_tokens": 85,
+    "eval_tokens": 2,
+    "total_ns": 327178792,
+    "wall_s": 0.47057294845581055,
+    "pred": "C",
+    "gold": "C"
+  },
+  "172": {
+    "text": "A. True, True",
+    "prompt_tokens": 112,
+    "eval_tokens": 6,
+    "total_ns": 600655333,
+    "wall_s": 0.6249179840087891,
+    "pred": "A",
+    "gold": "B"
+  },
+  "173": {
+    "text": "D",
+    "prompt_tokens": 119,
+    "eval_tokens": 2,
+    "total_ns": 438248834,
+    "wall_s": 0.46482110023498535,
+    "pred": "D",
+    "gold": "D"
+  },
+  "174": {
+    "text": "D",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 325648292,
+    "wall_s": 0.5481138229370117,
+    "pred": "D",
+    "gold": "D"
+  },
+  "175": {
+    "text": "B",
+    "prompt_tokens": 170,
+    "eval_tokens": 2,
+    "total_ns": 672746917,
+    "wall_s": 0.716749906539917,
+    "pred": "B",
+    "gold": "B"
+  },
+  "176": {
+    "text": "C",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 447170500,
+    "wall_s": 0.5117011070251465,
+    "pred": "C",
+    "gold": "A"
+  },
+  "177": {
+    "text": "D",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 332660083,
+    "wall_s": 0.3562350273132324,
+    "pred": "D",
+    "gold": "A"
+  },
+  "178": {
+    "text": "D",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 329331625,
+    "wall_s": 0.4625661373138428,
+    "pred": "D",
+    "gold": "D"
+  },
+  "179": {
+    "text": "D",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 321189459,
+    "wall_s": 0.5118250846862793,
+    "pred": "D",
+    "gold": "D"
+  },
+  "180": {
+    "text": "A",
+    "prompt_tokens": 118,
+    "eval_tokens": 2,
+    "total_ns": 436933333,
+    "wall_s": 0.5012860298156738,
+    "pred": "A",
+    "gold": "A"
+  },
+  "181": {
+    "text": "D",
+    "prompt_tokens": 89,
+    "eval_tokens": 2,
+    "total_ns": 322604667,
+    "wall_s": 0.4199211597442627,
+    "pred": "D",
+    "gold": "C"
+  },
+  "182": {
+    "text": "C",
+    "prompt_tokens": 111,
+    "eval_tokens": 2,
+    "total_ns": 436100666,
+    "wall_s": 0.5129389762878418,
+    "pred": "C",
+    "gold": "C"
+  },
+  "183": {
+    "text": "D",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 330101959,
+    "wall_s": 0.40837717056274414,
+    "pred": "D",
+    "gold": "D"
+  },
+  "184": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 137,
+    "eval_tokens": 8,
+    "total_ns": 796516459,
+    "wall_s": 0.8196132183074951,
+    "pred": "C",
+    "gold": "C"
+  },
+  "185": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 141,
+    "eval_tokens": 8,
+    "total_ns": 675046208,
+    "wall_s": 0.7041540145874023,
+    "pred": "D",
+    "gold": "C"
+  },
+  "186": {
+    "text": "C",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 326663542,
+    "wall_s": 0.3558950424194336,
+    "pred": "C",
+    "gold": "C"
+  },
+  "187": {
+    "text": "B",
+    "prompt_tokens": 115,
+    "eval_tokens": 2,
+    "total_ns": 436313875,
+    "wall_s": 0.4748539924621582,
+    "pred": "B",
+    "gold": "A"
+  },
+  "188": {
+    "text": "A",
+    "prompt_tokens": 110,
+    "eval_tokens": 2,
+    "total_ns": 445254916,
+    "wall_s": 0.5115618705749512,
+    "pred": "A",
+    "gold": "A"
+  },
+  "189": {
+    "text": " C. True, False\n\nEx",
+    "prompt_tokens": 111,
+    "eval_tokens": 8,
+    "total_ns": 681291208,
+    "wall_s": 0.8192548751831055,
+    "pred": "C",
+    "gold": "C"
+  },
+  "190": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 109,
+    "eval_tokens": 8,
+    "total_ns": 671834083,
+    "wall_s": 0.8192272186279297,
+    "pred": "D",
+    "gold": "B"
+  },
+  "191": {
+    "text": "D",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 437881292,
+    "wall_s": 0.5118229389190674,
+    "pred": "D",
+    "gold": "D"
+  },
+  "192": {
+    "text": "B. lower lip, mandibular",
+    "prompt_tokens": 139,
+    "eval_tokens": 8,
+    "total_ns": 793480084,
+    "wall_s": 0.8177402019500732,
+    "pred": "B",
+    "gold": "C"
+  },
+  "193": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 127,
+    "eval_tokens": 8,
+    "total_ns": 681094125,
+    "wall_s": 0.725456714630127,
+    "pred": "C",
+    "gold": "D"
+  },
+  "194": {
+    "text": "B",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 325876083,
+    "wall_s": 0.35247302055358887,
+    "pred": "B",
+    "gold": "B"
+  },
+  "195": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 122,
+    "eval_tokens": 8,
+    "total_ns": 672363875,
+    "wall_s": 0.7659709453582764,
+    "pred": "D",
+    "gold": "B"
+  },
+  "196": {
+    "text": "A",
+    "prompt_tokens": 113,
+    "eval_tokens": 2,
+    "total_ns": 437182875,
+    "wall_s": 0.5118088722229004,
+    "pred": "A",
+    "gold": "D"
+  },
+  "197": {
+    "text": "A",
+    "prompt_tokens": 89,
+    "eval_tokens": 2,
+    "total_ns": 324137417,
+    "wall_s": 0.5118668079376221,
+    "pred": "A",
+    "gold": "D"
+  },
+  "198": {
+    "text": "C",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 335040750,
+    "wall_s": 0.5118482112884521,
+    "pred": "C",
+    "gold": "C"
+  },
+  "199": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 125,
+    "eval_tokens": 8,
+    "total_ns": 682568291,
+    "wall_s": 0.7166421413421631,
+    "pred": "C",
+    "gold": "D"
+  },
+  "200": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 141,
+    "eval_tokens": 8,
+    "total_ns": 674616792,
+    "wall_s": 0.8156850337982178,
+    "pred": "C",
+    "gold": "A"
+  },
+  "201": {
+    "text": "B",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 325474792,
+    "wall_s": 0.5108721256256104,
+    "pred": "B",
+    "gold": "B"
+  },
+  "202": {
+    "text": "C",
+    "prompt_tokens": 105,
+    "eval_tokens": 2,
+    "total_ns": 438430334,
+    "wall_s": 0.501154899597168,
+    "pred": "C",
+    "gold": "C"
+  },
+  "203": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 103,
+    "eval_tokens": 8,
+    "total_ns": 573518500,
+    "wall_s": 0.6245670318603516,
+    "pred": "C",
+    "gold": "D"
+  },
+  "204": {
+    "text": "A",
+    "prompt_tokens": 112,
+    "eval_tokens": 2,
+    "total_ns": 438380334,
+    "wall_s": 0.5162167549133301,
+    "pred": "A",
+    "gold": "A"
+  },
+  "205": {
+    "text": "C",
+    "prompt_tokens": 126,
+    "eval_tokens": 2,
+    "total_ns": 440721458,
+    "wall_s": 0.478701114654541,
+    "pred": "C",
+    "gold": "C"
+  },
+  "206": {
+    "text": "A",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 442460417,
+    "wall_s": 0.4769148826599121,
+    "pred": "A",
+    "gold": "A"
+  },
+  "207": {
+    "text": "C",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 321059291,
+    "wall_s": 0.3706212043762207,
+    "pred": "C",
+    "gold": "C"
+  },
+  "208": {
+    "text": "D",
+    "prompt_tokens": 89,
+    "eval_tokens": 2,
+    "total_ns": 323648083,
+    "wall_s": 0.4100956916809082,
+    "pred": "D",
+    "gold": "D"
+  },
+  "209": {
+    "text": "A\n\n#### Textbook Level Ex",
+    "prompt_tokens": 97,
+    "eval_tokens": 8,
+    "total_ns": 572013500,
+    "wall_s": 0.6132361888885498,
+    "pred": "A",
+    "gold": "A"
+  },
+  "210": {
+    "text": "D",
+    "prompt_tokens": 99,
+    "eval_tokens": 2,
+    "total_ns": 331791458,
+    "wall_s": 0.4104492664337158,
+    "pred": "D",
+    "gold": "D"
+  },
+  "211": {
+    "text": "C. loss of taste and soma",
+    "prompt_tokens": 147,
+    "eval_tokens": 8,
+    "total_ns": 791179291,
+    "wall_s": 0.817070722579956,
+    "pred": "C",
+    "gold": "C"
+  },
+  "212": {
+    "text": "A",
+    "prompt_tokens": 78,
+    "eval_tokens": 2,
+    "total_ns": 320351708,
+    "wall_s": 0.3473472595214844,
+    "pred": "A",
+    "gold": "B"
+  },
+  "213": {
+    "text": "B",
+    "prompt_tokens": 111,
+    "eval_tokens": 2,
+    "total_ns": 438109917,
+    "wall_s": 0.46410107612609863,
+    "pred": "B",
+    "gold": "B"
+  },
+  "214": {
+    "text": "A\n\nAnswer: A\n\n",
+    "prompt_tokens": 166,
+    "eval_tokens": 8,
+    "total_ns": 805460583,
+    "wall_s": 0.8277938365936279,
+    "pred": "A",
+    "gold": "A"
+  },
+  "215": {
+    "text": "D",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 442590416,
+    "wall_s": 0.47121596336364746,
+    "pred": "D",
+    "gold": "C"
+  },
+  "216": {
+    "text": "D. False, True\n\nEx",
+    "prompt_tokens": 100,
+    "eval_tokens": 8,
+    "total_ns": 560445583,
+    "wall_s": 0.586035966873169,
+    "pred": "D",
+    "gold": "B"
+  },
+  "217": {
+    "text": "B",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 326330000,
+    "wall_s": 0.35045313835144043,
+    "pred": "B",
+    "gold": "C"
+  },
+  "218": {
+    "text": "D",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 439958625,
+    "wall_s": 0.6400530338287354,
+    "pred": "D",
+    "gold": "C"
+  },
+  "219": {
+    "text": "C. group",
+    "prompt_tokens": 91,
+    "eval_tokens": 4,
+    "total_ns": 403793958,
+    "wall_s": 0.5118370056152344,
+    "pred": "C",
+    "gold": "D"
+  },
+  "220": {
+    "text": "C. True, False\n\nEx",
+    "prompt_tokens": 127,
+    "eval_tokens": 8,
+    "total_ns": 690246583,
+    "wall_s": 0.7162120342254639,
+    "pred": "C",
+    "gold": "D"
+  },
+  "221": {
+    "text": "C",
+    "prompt_tokens": 104,
+    "eval_tokens": 2,
+    "total_ns": 330034917,
+    "wall_s": 0.40992188453674316,
+    "pred": "C",
+    "gold": "C"
+  },
+  "222": {
+    "text": "B. Mucous membranes",
+    "prompt_tokens": 96,
+    "eval_tokens": 8,
+    "total_ns": 558835292,
+    "wall_s": 0.6134719848632812,
+    "pred": "B",
+    "gold": "B"
+  },
+  "223": {
+    "text": "B. Pupillary dilat",
+    "prompt_tokens": 148,
+    "eval_tokens": 8,
+    "total_ns": 790902292,
+    "wall_s": 0.9232640266418457,
+    "pred": "B",
+    "gold": "D"
+  },
+  "224": {
+    "text": "D. False, True",
+    "prompt_tokens": 129,
+    "eval_tokens": 6,
+    "total_ns": 601540541,
+    "wall_s": 0.7153799533843994,
+    "pred": "D",
+    "gold": "D"
+  },
+  "225": {
+    "text": "C. 2,3",
+    "prompt_tokens": 100,
+    "eval_tokens": 7,
+    "total_ns": 520578709,
+    "wall_s": 0.5504231452941895,
+    "pred": "C",
+    "gold": "C"
+  },
+  "226": {
+    "text": "B. 2",
+    "prompt_tokens": 83,
+    "eval_tokens": 5,
+    "total_ns": 437987000,
+    "wall_s": 0.466458797454834,
+    "pred": "B",
+    "gold": "B"
+  },
+  "227": {
+    "text": "D",
+    "prompt_tokens": 176,
+    "eval_tokens": 2,
+    "total_ns": 672546833,
+    "wall_s": 0.6987550258636475,
+    "pred": "D",
+    "gold": "B"
+  },
+  "228": {
+    "text": "C. 30",
+    "prompt_tokens": 89,
+    "eval_tokens": 6,
+    "total_ns": 479706834,
+    "wall_s": 0.5273618698120117,
+    "pred": "C",
+    "gold": "C"
+  },
+  "229": {
+    "text": "A",
+    "prompt_tokens": 169,
+    "eval_tokens": 2,
+    "total_ns": 671222958,
+    "wall_s": 0.7258689403533936,
+    "pred": "A",
+    "gold": "C"
+  },
+  "230": {
+    "text": "C. 30",
+    "prompt_tokens": 88,
+    "eval_tokens": 6,
+    "total_ns": 475853542,
+    "wall_s": 0.5118873119354248,
+    "pred": "C",
+    "gold": "A"
+  },
+  "231": {
+    "text": "D. False, True",
+    "prompt_tokens": 107,
+    "eval_tokens": 6,
+    "total_ns": 591139000,
+    "wall_s": 0.7165031433105469,
+    "pred": "D",
+    "gold": "B"
+  },
+  "232": {
+    "text": "C\n\n#### Textbook-level",
+    "prompt_tokens": 100,
+    "eval_tokens": 8,
+    "total_ns": 562751208,
+    "wall_s": 0.5814127922058105,
+    "pred": "C",
+    "gold": "C"
+  },
+  "233": {
+    "text": "C",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 451439708,
+    "wall_s": 0.4786417484283447,
+    "pred": "C",
+    "gold": "C"
+  },
+  "234": {
+    "text": "D",
+    "prompt_tokens": 94,
+    "eval_tokens": 2,
+    "total_ns": 327248625,
+    "wall_s": 0.35311007499694824,
+    "pred": "D",
+    "gold": "D"
+  },
+  "235": {
+    "text": " B. 2",
+    "prompt_tokens": 92,
+    "eval_tokens": 5,
+    "total_ns": 439880875,
+    "wall_s": 0.4674239158630371,
+    "pred": "B",
+    "gold": "A"
+  },
+  "236": {
+    "text": "D",
+    "prompt_tokens": 109,
+    "eval_tokens": 2,
+    "total_ns": 436209333,
+    "wall_s": 0.5763049125671387,
+    "pred": "D",
+    "gold": "D"
+  },
+  "237": {
+    "text": "A",
+    "prompt_tokens": 142,
+    "eval_tokens": 2,
+    "total_ns": 555061667,
+    "wall_s": 0.6144568920135498,
+    "pred": "A",
+    "gold": "B"
+  },
+  "238": {
+    "text": "A",
+    "prompt_tokens": 77,
+    "eval_tokens": 2,
+    "total_ns": 321770042,
+    "wall_s": 0.35506200790405273,
+    "pred": "A",
+    "gold": "C"
+  },
+  "239": {
+    "text": "A. True, True",
+    "prompt_tokens": 114,
+    "eval_tokens": 6,
+    "total_ns": 607050625,
+    "wall_s": 0.6360030174255371,
+    "pred": "A",
+    "gold": "A"
+  }
+}

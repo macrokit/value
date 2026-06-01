@@ -1,0 +1,2162 @@
+{
+  "0": {
+    "text": "sports",
+    "prompt_tokens": 137,
+    "eval_tokens": 2,
+    "total_ns": 178794542,
+    "wall_s": 0.2064650058746338,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "1": {
+    "text": "business",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 163034708,
+    "wall_s": 0.2694711685180664,
+    "pred": "business",
+    "gold": "business"
+  },
+  "2": {
+    "text": "business",
+    "prompt_tokens": 142,
+    "eval_tokens": 2,
+    "total_ns": 130257625,
+    "wall_s": 0.1581439971923828,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "3": {
+    "text": "sports",
+    "prompt_tokens": 125,
+    "eval_tokens": 2,
+    "total_ns": 119066875,
+    "wall_s": 0.18680286407470703,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "4": {
+    "text": "business",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 132482125,
+    "wall_s": 0.15257501602172852,
+    "pred": "business",
+    "gold": "business"
+  },
+  "5": {
+    "text": "business",
+    "prompt_tokens": 153,
+    "eval_tokens": 2,
+    "total_ns": 138271709,
+    "wall_s": 0.15670418739318848,
+    "pred": "business",
+    "gold": "business"
+  },
+  "6": {
+    "text": "business",
+    "prompt_tokens": 250,
+    "eval_tokens": 2,
+    "total_ns": 186689542,
+    "wall_s": 0.21285200119018555,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "7": {
+    "text": "business",
+    "prompt_tokens": 115,
+    "eval_tokens": 2,
+    "total_ns": 141019875,
+    "wall_s": 0.1625981330871582,
+    "pred": "business",
+    "gold": "business"
+  },
+  "8": {
+    "text": "sports",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 123160583,
+    "wall_s": 0.14745116233825684,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "9": {
+    "text": "sports",
+    "prompt_tokens": 135,
+    "eval_tokens": 2,
+    "total_ns": 123839708,
+    "wall_s": 0.2138059139251709,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "10": {
+    "text": "business",
+    "prompt_tokens": 140,
+    "eval_tokens": 2,
+    "total_ns": 158955209,
+    "wall_s": 0.1826171875,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "11": {
+    "text": "business",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 141671667,
+    "wall_s": 0.15921711921691895,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "12": {
+    "text": "business",
+    "prompt_tokens": 140,
+    "eval_tokens": 2,
+    "total_ns": 137755417,
+    "wall_s": 0.1840651035308838,
+    "pred": "business",
+    "gold": "business"
+  },
+  "13": {
+    "text": "business",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 133842417,
+    "wall_s": 0.15521574020385742,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "14": {
+    "text": "business",
+    "prompt_tokens": 251,
+    "eval_tokens": 2,
+    "total_ns": 183381750,
+    "wall_s": 0.20257782936096191,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "15": {
+    "text": "sports",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 141934417,
+    "wall_s": 0.17435479164123535,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "16": {
+    "text": "business",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 125257583,
+    "wall_s": 0.1450331211090088,
+    "pred": "business",
+    "gold": "world"
+  },
+  "17": {
+    "text": "business",
+    "prompt_tokens": 125,
+    "eval_tokens": 2,
+    "total_ns": 116558542,
+    "wall_s": 0.13754796981811523,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "18": {
+    "text": "business",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 118301625,
+    "wall_s": 0.13873791694641113,
+    "pred": "business",
+    "gold": "world"
+  },
+  "19": {
+    "text": "business",
+    "prompt_tokens": 164,
+    "eval_tokens": 2,
+    "total_ns": 161477625,
+    "wall_s": 0.2653510570526123,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "20": {
+    "text": "business",
+    "prompt_tokens": 136,
+    "eval_tokens": 2,
+    "total_ns": 139987084,
+    "wall_s": 0.15941667556762695,
+    "pred": "business",
+    "gold": "world"
+  },
+  "21": {
+    "text": "business",
+    "prompt_tokens": 141,
+    "eval_tokens": 2,
+    "total_ns": 140411417,
+    "wall_s": 0.19249796867370605,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "22": {
+    "text": "sports",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 136257708,
+    "wall_s": 0.15732789039611816,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "23": {
+    "text": "business",
+    "prompt_tokens": 108,
+    "eval_tokens": 2,
+    "total_ns": 120516375,
+    "wall_s": 0.13901066780090332,
+    "pred": "business",
+    "gold": "world"
+  },
+  "24": {
+    "text": "business",
+    "prompt_tokens": 126,
+    "eval_tokens": 2,
+    "total_ns": 120603708,
+    "wall_s": 0.13697528839111328,
+    "pred": "business",
+    "gold": "business"
+  },
+  "25": {
+    "text": "business",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 150153166,
+    "wall_s": 0.2536320686340332,
+    "pred": "business",
+    "gold": "world"
+  },
+  "26": {
+    "text": "sports",
+    "prompt_tokens": 135,
+    "eval_tokens": 2,
+    "total_ns": 122275209,
+    "wall_s": 0.14049887657165527,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "27": {
+    "text": "sports",
+    "prompt_tokens": 125,
+    "eval_tokens": 2,
+    "total_ns": 122767500,
+    "wall_s": 0.21950793266296387,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "28": {
+    "text": "business",
+    "prompt_tokens": 142,
+    "eval_tokens": 2,
+    "total_ns": 157392375,
+    "wall_s": 0.17757797241210938,
+    "pred": "business",
+    "gold": "business"
+  },
+  "29": {
+    "text": "business",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 127325250,
+    "wall_s": 0.15050411224365234,
+    "pred": "business",
+    "gold": "business"
+  },
+  "30": {
+    "text": "sports",
+    "prompt_tokens": 138,
+    "eval_tokens": 2,
+    "total_ns": 135897292,
+    "wall_s": 0.19794392585754395,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "31": {
+    "text": "business",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 137044875,
+    "wall_s": 0.15720081329345703,
+    "pred": "business",
+    "gold": "world"
+  },
+  "32": {
+    "text": "business",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 138655500,
+    "wall_s": 0.15698599815368652,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "33": {
+    "text": "business",
+    "prompt_tokens": 124,
+    "eval_tokens": 2,
+    "total_ns": 125701333,
+    "wall_s": 0.20774412155151367,
+    "pred": "business",
+    "gold": "business"
+  },
+  "34": {
+    "text": "business",
+    "prompt_tokens": 115,
+    "eval_tokens": 2,
+    "total_ns": 140316333,
+    "wall_s": 0.16085028648376465,
+    "pred": "business",
+    "gold": "world"
+  },
+  "35": {
+    "text": "business",
+    "prompt_tokens": 142,
+    "eval_tokens": 2,
+    "total_ns": 135109625,
+    "wall_s": 0.1534252166748047,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "36": {
+    "text": "business",
+    "prompt_tokens": 107,
+    "eval_tokens": 2,
+    "total_ns": 124148542,
+    "wall_s": 0.2100510597229004,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "37": {
+    "text": "sports",
+    "prompt_tokens": 126,
+    "eval_tokens": 2,
+    "total_ns": 139413042,
+    "wall_s": 0.15903496742248535,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "38": {
+    "text": "business",
+    "prompt_tokens": 127,
+    "eval_tokens": 2,
+    "total_ns": 122929584,
+    "wall_s": 0.14059925079345703,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "39": {
+    "text": "business",
+    "prompt_tokens": 123,
+    "eval_tokens": 2,
+    "total_ns": 120328917,
+    "wall_s": 0.22433090209960938,
+    "pred": "business",
+    "gold": "world"
+  },
+  "40": {
+    "text": "sports",
+    "prompt_tokens": 122,
+    "eval_tokens": 2,
+    "total_ns": 147723125,
+    "wall_s": 0.16645193099975586,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "41": {
+    "text": "business",
+    "prompt_tokens": 136,
+    "eval_tokens": 2,
+    "total_ns": 135399834,
+    "wall_s": 0.1528918743133545,
+    "pred": "business",
+    "gold": "business"
+  },
+  "42": {
+    "text": "sports",
+    "prompt_tokens": 138,
+    "eval_tokens": 2,
+    "total_ns": 136071666,
+    "wall_s": 0.20269203186035156,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "43": {
+    "text": "business",
+    "prompt_tokens": 115,
+    "eval_tokens": 2,
+    "total_ns": 138478667,
+    "wall_s": 0.15767908096313477,
+    "pred": "business",
+    "gold": "world"
+  },
+  "44": {
+    "text": "business",
+    "prompt_tokens": 131,
+    "eval_tokens": 2,
+    "total_ns": 122860000,
+    "wall_s": 0.1425328254699707,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "45": {
+    "text": "business",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 123311792,
+    "wall_s": 0.22348904609680176,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "46": {
+    "text": "business",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 130676667,
+    "wall_s": 0.1502389907836914,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "47": {
+    "text": "business",
+    "prompt_tokens": 139,
+    "eval_tokens": 2,
+    "total_ns": 133155625,
+    "wall_s": 0.15329909324645996,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "48": {
+    "text": "business",
+    "prompt_tokens": 107,
+    "eval_tokens": 2,
+    "total_ns": 125650208,
+    "wall_s": 0.22110700607299805,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "49": {
+    "text": "business",
+    "prompt_tokens": 124,
+    "eval_tokens": 2,
+    "total_ns": 147079167,
+    "wall_s": 0.17976021766662598,
+    "pred": "business",
+    "gold": "business"
+  },
+  "50": {
+    "text": "sports",
+    "prompt_tokens": 106,
+    "eval_tokens": 2,
+    "total_ns": 121502500,
+    "wall_s": 0.1561439037322998,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "51": {
+    "text": "sports",
+    "prompt_tokens": 119,
+    "eval_tokens": 2,
+    "total_ns": 122688792,
+    "wall_s": 0.18683600425720215,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "52": {
+    "text": "business",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 134954125,
+    "wall_s": 0.1551189422607422,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "53": {
+    "text": "business",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 109626750,
+    "wall_s": 0.12767910957336426,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "54": {
+    "text": "sports",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 119890292,
+    "wall_s": 0.13970208168029785,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "55": {
+    "text": "business",
+    "prompt_tokens": 126,
+    "eval_tokens": 2,
+    "total_ns": 149203334,
+    "wall_s": 0.25712108612060547,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "56": {
+    "text": "business",
+    "prompt_tokens": 136,
+    "eval_tokens": 2,
+    "total_ns": 138323000,
+    "wall_s": 0.15823101997375488,
+    "pred": "business",
+    "gold": "world"
+  },
+  "57": {
+    "text": "business",
+    "prompt_tokens": 128,
+    "eval_tokens": 2,
+    "total_ns": 126449291,
+    "wall_s": 0.21088290214538574,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "58": {
+    "text": "business",
+    "prompt_tokens": 106,
+    "eval_tokens": 2,
+    "total_ns": 137945416,
+    "wall_s": 0.15578794479370117,
+    "pred": "business",
+    "gold": "world"
+  },
+  "59": {
+    "text": "business",
+    "prompt_tokens": 105,
+    "eval_tokens": 2,
+    "total_ns": 118710667,
+    "wall_s": 0.1398460865020752,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "60": {
+    "text": "business",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 142305125,
+    "wall_s": 0.228532075881958,
+    "pred": "business",
+    "gold": "world"
+  },
+  "61": {
+    "text": "business",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 146548375,
+    "wall_s": 0.17404699325561523,
+    "pred": "business",
+    "gold": "world"
+  },
+  "62": {
+    "text": "business",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 121109542,
+    "wall_s": 0.1419510841369629,
+    "pred": "business",
+    "gold": "business"
+  },
+  "63": {
+    "text": "business",
+    "prompt_tokens": 116,
+    "eval_tokens": 2,
+    "total_ns": 122267958,
+    "wall_s": 0.2077040672302246,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "64": {
+    "text": "business",
+    "prompt_tokens": 128,
+    "eval_tokens": 2,
+    "total_ns": 139644625,
+    "wall_s": 0.16113519668579102,
+    "pred": "business",
+    "gold": "world"
+  },
+  "65": {
+    "text": "sports",
+    "prompt_tokens": 142,
+    "eval_tokens": 2,
+    "total_ns": 134413500,
+    "wall_s": 0.15148282051086426,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "66": {
+    "text": "sports",
+    "prompt_tokens": 131,
+    "eval_tokens": 2,
+    "total_ns": 125171042,
+    "wall_s": 0.21205496788024902,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "67": {
+    "text": "business",
+    "prompt_tokens": 182,
+    "eval_tokens": 2,
+    "total_ns": 169879667,
+    "wall_s": 0.1895890235900879,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "68": {
+    "text": "business",
+    "prompt_tokens": 119,
+    "eval_tokens": 2,
+    "total_ns": 129664667,
+    "wall_s": 0.14765405654907227,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "69": {
+    "text": "business",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 122004167,
+    "wall_s": 0.1926741600036621,
+    "pred": "business",
+    "gold": "world"
+  },
+  "70": {
+    "text": "business",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 135729875,
+    "wall_s": 0.15433502197265625,
+    "pred": "business",
+    "gold": "world"
+  },
+  "71": {
+    "text": "sports",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 123367792,
+    "wall_s": 0.14212489128112793,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "72": {
+    "text": "business",
+    "prompt_tokens": 190,
+    "eval_tokens": 2,
+    "total_ns": 151447833,
+    "wall_s": 0.2209770679473877,
+    "pred": "business",
+    "gold": "business"
+  },
+  "73": {
+    "text": "business",
+    "prompt_tokens": 113,
+    "eval_tokens": 2,
+    "total_ns": 144064167,
+    "wall_s": 0.16420578956604004,
+    "pred": "business",
+    "gold": "world"
+  },
+  "74": {
+    "text": "business",
+    "prompt_tokens": 139,
+    "eval_tokens": 2,
+    "total_ns": 137618292,
+    "wall_s": 0.1576521396636963,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "75": {
+    "text": "business",
+    "prompt_tokens": 145,
+    "eval_tokens": 2,
+    "total_ns": 140225375,
+    "wall_s": 0.2009110450744629,
+    "pred": "business",
+    "gold": "world"
+  },
+  "76": {
+    "text": "sports",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 134786750,
+    "wall_s": 0.15411996841430664,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "77": {
+    "text": "sports",
+    "prompt_tokens": 127,
+    "eval_tokens": 2,
+    "total_ns": 121682959,
+    "wall_s": 0.14286398887634277,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "78": {
+    "text": "business",
+    "prompt_tokens": 112,
+    "eval_tokens": 2,
+    "total_ns": 121510875,
+    "wall_s": 0.2267599105834961,
+    "pred": "business",
+    "gold": "business"
+  },
+  "79": {
+    "text": "business",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 145574583,
+    "wall_s": 0.16540026664733887,
+    "pred": "business",
+    "gold": "world"
+  },
+  "80": {
+    "text": "business",
+    "prompt_tokens": 123,
+    "eval_tokens": 2,
+    "total_ns": 119911833,
+    "wall_s": 0.13538289070129395,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "81": {
+    "text": "business",
+    "prompt_tokens": 142,
+    "eval_tokens": 2,
+    "total_ns": 136786542,
+    "wall_s": 0.2220001220703125,
+    "pred": "business",
+    "gold": "world"
+  },
+  "82": {
+    "text": "business",
+    "prompt_tokens": 99,
+    "eval_tokens": 2,
+    "total_ns": 132690000,
+    "wall_s": 0.1546931266784668,
+    "pred": "business",
+    "gold": "business"
+  },
+  "83": {
+    "text": "business",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 118398416,
+    "wall_s": 0.1364278793334961,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "84": {
+    "text": "business",
+    "prompt_tokens": 192,
+    "eval_tokens": 2,
+    "total_ns": 149209708,
+    "wall_s": 0.23330307006835938,
+    "pred": "business",
+    "gold": "business"
+  },
+  "85": {
+    "text": "business",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 162255208,
+    "wall_s": 0.18139004707336426,
+    "pred": "business",
+    "gold": "world"
+  },
+  "86": {
+    "text": "business",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 124852417,
+    "wall_s": 0.1438767910003662,
+    "pred": "business",
+    "gold": "business"
+  },
+  "87": {
+    "text": "sports",
+    "prompt_tokens": 116,
+    "eval_tokens": 2,
+    "total_ns": 121305708,
+    "wall_s": 0.19832873344421387,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "88": {
+    "text": "business",
+    "prompt_tokens": 141,
+    "eval_tokens": 2,
+    "total_ns": 152586791,
+    "wall_s": 0.17299199104309082,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "89": {
+    "text": "business",
+    "prompt_tokens": 118,
+    "eval_tokens": 2,
+    "total_ns": 122968750,
+    "wall_s": 0.14089226722717285,
+    "pred": "business",
+    "gold": "business"
+  },
+  "90": {
+    "text": "business",
+    "prompt_tokens": 270,
+    "eval_tokens": 2,
+    "total_ns": 197638500,
+    "wall_s": 0.21598005294799805,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "91": {
+    "text": "business",
+    "prompt_tokens": 145,
+    "eval_tokens": 2,
+    "total_ns": 158103708,
+    "wall_s": 0.1802818775177002,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "92": {
+    "text": "business",
+    "prompt_tokens": 154,
+    "eval_tokens": 2,
+    "total_ns": 141724750,
+    "wall_s": 0.16219496726989746,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "93": {
+    "text": "business",
+    "prompt_tokens": 139,
+    "eval_tokens": 2,
+    "total_ns": 139170750,
+    "wall_s": 0.1758430004119873,
+    "pred": "business",
+    "gold": "world"
+  },
+  "94": {
+    "text": "business",
+    "prompt_tokens": 250,
+    "eval_tokens": 2,
+    "total_ns": 194114334,
+    "wall_s": 0.22731590270996094,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "95": {
+    "text": "business",
+    "prompt_tokens": 109,
+    "eval_tokens": 2,
+    "total_ns": 137369833,
+    "wall_s": 0.1605691909790039,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "96": {
+    "text": "business",
+    "prompt_tokens": 118,
+    "eval_tokens": 2,
+    "total_ns": 121278584,
+    "wall_s": 0.14052391052246094,
+    "pred": "business",
+    "gold": "business"
+  },
+  "97": {
+    "text": "business",
+    "prompt_tokens": 140,
+    "eval_tokens": 2,
+    "total_ns": 136561417,
+    "wall_s": 0.15773797035217285,
+    "pred": "business",
+    "gold": "world"
+  },
+  "98": {
+    "text": "sports",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 126187542,
+    "wall_s": 0.14536118507385254,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "99": {
+    "text": "sports",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 123943000,
+    "wall_s": 0.21535730361938477,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "100": {
+    "text": "sports",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 142473667,
+    "wall_s": 0.16256403923034668,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "101": {
+    "text": "business",
+    "prompt_tokens": 136,
+    "eval_tokens": 2,
+    "total_ns": 136979959,
+    "wall_s": 0.15575218200683594,
+    "pred": "business",
+    "gold": "world"
+  },
+  "102": {
+    "text": "business",
+    "prompt_tokens": 140,
+    "eval_tokens": 2,
+    "total_ns": 137887667,
+    "wall_s": 0.20560479164123535,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "103": {
+    "text": "business",
+    "prompt_tokens": 121,
+    "eval_tokens": 2,
+    "total_ns": 138056459,
+    "wall_s": 0.15703511238098145,
+    "pred": "business",
+    "gold": "world"
+  },
+  "104": {
+    "text": "sports",
+    "prompt_tokens": 147,
+    "eval_tokens": 2,
+    "total_ns": 136124750,
+    "wall_s": 0.15346622467041016,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "105": {
+    "text": "business",
+    "prompt_tokens": 128,
+    "eval_tokens": 2,
+    "total_ns": 124619083,
+    "wall_s": 0.21356916427612305,
+    "pred": "business",
+    "gold": "world"
+  },
+  "106": {
+    "text": "business",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 158058417,
+    "wall_s": 0.1797778606414795,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "107": {
+    "text": "business",
+    "prompt_tokens": 143,
+    "eval_tokens": 2,
+    "total_ns": 140570000,
+    "wall_s": 0.16100311279296875,
+    "pred": "business",
+    "gold": "business"
+  },
+  "108": {
+    "text": "business",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 137573709,
+    "wall_s": 0.18264389038085938,
+    "pred": "business",
+    "gold": "business"
+  },
+  "109": {
+    "text": "business",
+    "prompt_tokens": 215,
+    "eval_tokens": 2,
+    "total_ns": 174972166,
+    "wall_s": 0.19510698318481445,
+    "pred": "business",
+    "gold": "business"
+  },
+  "110": {
+    "text": "business",
+    "prompt_tokens": 121,
+    "eval_tokens": 2,
+    "total_ns": 133382375,
+    "wall_s": 0.15330886840820312,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "111": {
+    "text": "business",
+    "prompt_tokens": 138,
+    "eval_tokens": 2,
+    "total_ns": 135328667,
+    "wall_s": 0.1759800910949707,
+    "pred": "business",
+    "gold": "world"
+  },
+  "112": {
+    "text": "science and technology",
+    "prompt_tokens": 114,
+    "eval_tokens": 4,
+    "total_ns": 149055000,
+    "wall_s": 0.16851091384887695,
+    "pred": "?",
+    "gold": "scitech"
+  },
+  "113": {
+    "text": "sports",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 125973834,
+    "wall_s": 0.14467620849609375,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "114": {
+    "text": "business",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 106601042,
+    "wall_s": 0.12285900115966797,
+    "pred": "business",
+    "gold": "business"
+  },
+  "115": {
+    "text": "science and technology",
+    "prompt_tokens": 133,
+    "eval_tokens": 4,
+    "total_ns": 164568958,
+    "wall_s": 0.26987123489379883,
+    "pred": "?",
+    "gold": "scitech"
+  },
+  "116": {
+    "text": "business",
+    "prompt_tokens": 101,
+    "eval_tokens": 2,
+    "total_ns": 111441209,
+    "wall_s": 0.12997913360595703,
+    "pred": "business",
+    "gold": "business"
+  },
+  "117": {
+    "text": "sports",
+    "prompt_tokens": 183,
+    "eval_tokens": 2,
+    "total_ns": 148405791,
+    "wall_s": 0.21159124374389648,
+    "pred": "sports",
+    "gold": "world"
+  },
+  "118": {
+    "text": "business",
+    "prompt_tokens": 136,
+    "eval_tokens": 2,
+    "total_ns": 156350042,
+    "wall_s": 0.17636799812316895,
+    "pred": "business",
+    "gold": "world"
+  },
+  "119": {
+    "text": "business",
+    "prompt_tokens": 146,
+    "eval_tokens": 2,
+    "total_ns": 140564083,
+    "wall_s": 0.15853285789489746,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "120": {
+    "text": "business",
+    "prompt_tokens": 196,
+    "eval_tokens": 2,
+    "total_ns": 155099458,
+    "wall_s": 0.1867661476135254,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "121": {
+    "text": "business",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 116833041,
+    "wall_s": 0.1400289535522461,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "122": {
+    "text": "business",
+    "prompt_tokens": 131,
+    "eval_tokens": 2,
+    "total_ns": 122118250,
+    "wall_s": 0.14342904090881348,
+    "pred": "business",
+    "gold": "world"
+  },
+  "123": {
+    "text": "business",
+    "prompt_tokens": 142,
+    "eval_tokens": 2,
+    "total_ns": 135212875,
+    "wall_s": 0.2404177188873291,
+    "pred": "business",
+    "gold": "world"
+  },
+  "124": {
+    "text": "business",
+    "prompt_tokens": 107,
+    "eval_tokens": 2,
+    "total_ns": 148854000,
+    "wall_s": 0.16741394996643066,
+    "pred": "business",
+    "gold": "world"
+  },
+  "125": {
+    "text": "business",
+    "prompt_tokens": 111,
+    "eval_tokens": 2,
+    "total_ns": 119469459,
+    "wall_s": 0.13763880729675293,
+    "pred": "business",
+    "gold": "business"
+  },
+  "126": {
+    "text": "world",
+    "prompt_tokens": 145,
+    "eval_tokens": 2,
+    "total_ns": 136851291,
+    "wall_s": 0.21861791610717773,
+    "pred": "world",
+    "gold": "world"
+  },
+  "127": {
+    "text": "business",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 143430125,
+    "wall_s": 0.16350102424621582,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "128": {
+    "text": "sports",
+    "prompt_tokens": 127,
+    "eval_tokens": 2,
+    "total_ns": 120592667,
+    "wall_s": 0.1394951343536377,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "129": {
+    "text": "business",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 121620583,
+    "wall_s": 0.22222375869750977,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "130": {
+    "text": "business",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 146220042,
+    "wall_s": 0.16794300079345703,
+    "pred": "business",
+    "gold": "business"
+  },
+  "131": {
+    "text": "sports",
+    "prompt_tokens": 136,
+    "eval_tokens": 2,
+    "total_ns": 136341625,
+    "wall_s": 0.15712428092956543,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "132": {
+    "text": "business",
+    "prompt_tokens": 139,
+    "eval_tokens": 2,
+    "total_ns": 139435333,
+    "wall_s": 0.19814395904541016,
+    "pred": "business",
+    "gold": "business"
+  },
+  "133": {
+    "text": "business",
+    "prompt_tokens": 128,
+    "eval_tokens": 2,
+    "total_ns": 136564917,
+    "wall_s": 0.1562209129333496,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "134": {
+    "text": "business",
+    "prompt_tokens": 139,
+    "eval_tokens": 2,
+    "total_ns": 137173166,
+    "wall_s": 0.15786123275756836,
+    "pred": "business",
+    "gold": "business"
+  },
+  "135": {
+    "text": "business",
+    "prompt_tokens": 122,
+    "eval_tokens": 2,
+    "total_ns": 127351709,
+    "wall_s": 0.20971012115478516,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "136": {
+    "text": "business",
+    "prompt_tokens": 139,
+    "eval_tokens": 2,
+    "total_ns": 153086458,
+    "wall_s": 0.17331194877624512,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "137": {
+    "text": "business",
+    "prompt_tokens": 131,
+    "eval_tokens": 2,
+    "total_ns": 126777083,
+    "wall_s": 0.1450040340423584,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "138": {
+    "text": "business",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 121277583,
+    "wall_s": 0.20579981803894043,
+    "pred": "business",
+    "gold": "business"
+  },
+  "139": {
+    "text": "business",
+    "prompt_tokens": 123,
+    "eval_tokens": 2,
+    "total_ns": 139332333,
+    "wall_s": 0.15795493125915527,
+    "pred": "business",
+    "gold": "business"
+  },
+  "140": {
+    "text": "sports",
+    "prompt_tokens": 146,
+    "eval_tokens": 2,
+    "total_ns": 137464292,
+    "wall_s": 0.1565392017364502,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "141": {
+    "text": "business",
+    "prompt_tokens": 150,
+    "eval_tokens": 2,
+    "total_ns": 140829416,
+    "wall_s": 0.20872020721435547,
+    "pred": "business",
+    "gold": "business"
+  },
+  "142": {
+    "text": "business",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 142022334,
+    "wall_s": 0.16176795959472656,
+    "pred": "business",
+    "gold": "business"
+  },
+  "143": {
+    "text": "business",
+    "prompt_tokens": 98,
+    "eval_tokens": 2,
+    "total_ns": 110880375,
+    "wall_s": 0.13666987419128418,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "144": {
+    "text": "business",
+    "prompt_tokens": 97,
+    "eval_tokens": 2,
+    "total_ns": 105589667,
+    "wall_s": 0.1273488998413086,
+    "pred": "business",
+    "gold": "world"
+  },
+  "145": {
+    "text": "business",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 142671458,
+    "wall_s": 0.24740219116210938,
+    "pred": "business",
+    "gold": "world"
+  },
+  "146": {
+    "text": "business",
+    "prompt_tokens": 116,
+    "eval_tokens": 2,
+    "total_ns": 122598666,
+    "wall_s": 0.14187002182006836,
+    "pred": "business",
+    "gold": "business"
+  },
+  "147": {
+    "text": "business",
+    "prompt_tokens": 138,
+    "eval_tokens": 2,
+    "total_ns": 135983917,
+    "wall_s": 0.23259806632995605,
+    "pred": "business",
+    "gold": "business"
+  },
+  "148": {
+    "text": "business",
+    "prompt_tokens": 127,
+    "eval_tokens": 2,
+    "total_ns": 148190917,
+    "wall_s": 0.16948723793029785,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "149": {
+    "text": "business",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 122161084,
+    "wall_s": 0.14213109016418457,
+    "pred": "business",
+    "gold": "business"
+  },
+  "150": {
+    "text": "business",
+    "prompt_tokens": 127,
+    "eval_tokens": 2,
+    "total_ns": 119665083,
+    "wall_s": 0.21188092231750488,
+    "pred": "business",
+    "gold": "world"
+  },
+  "151": {
+    "text": "business",
+    "prompt_tokens": 106,
+    "eval_tokens": 2,
+    "total_ns": 142811750,
+    "wall_s": 0.16297197341918945,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "152": {
+    "text": "business",
+    "prompt_tokens": 136,
+    "eval_tokens": 2,
+    "total_ns": 135013833,
+    "wall_s": 0.15195083618164062,
+    "pred": "business",
+    "gold": "business"
+  },
+  "153": {
+    "text": "science and technology",
+    "prompt_tokens": 132,
+    "eval_tokens": 4,
+    "total_ns": 148024708,
+    "wall_s": 0.20952701568603516,
+    "pred": "?",
+    "gold": "scitech"
+  },
+  "154": {
+    "text": "business",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 138226916,
+    "wall_s": 0.1582350730895996,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "155": {
+    "text": "business",
+    "prompt_tokens": 112,
+    "eval_tokens": 2,
+    "total_ns": 120168000,
+    "wall_s": 0.1392219066619873,
+    "pred": "business",
+    "gold": "business"
+  },
+  "156": {
+    "text": "sports",
+    "prompt_tokens": 193,
+    "eval_tokens": 2,
+    "total_ns": 151612916,
+    "wall_s": 0.22632908821105957,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "157": {
+    "text": "sports",
+    "prompt_tokens": 126,
+    "eval_tokens": 2,
+    "total_ns": 147503875,
+    "wall_s": 0.17128300666809082,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "158": {
+    "text": "sports",
+    "prompt_tokens": 110,
+    "eval_tokens": 2,
+    "total_ns": 122562584,
+    "wall_s": 0.14518976211547852,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "159": {
+    "text": "business",
+    "prompt_tokens": 142,
+    "eval_tokens": 2,
+    "total_ns": 138114959,
+    "wall_s": 0.20904278755187988,
+    "pred": "business",
+    "gold": "business"
+  },
+  "160": {
+    "text": "business",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 143686334,
+    "wall_s": 0.16623282432556152,
+    "pred": "business",
+    "gold": "business"
+  },
+  "161": {
+    "text": "business",
+    "prompt_tokens": 104,
+    "eval_tokens": 2,
+    "total_ns": 122650167,
+    "wall_s": 0.14022588729858398,
+    "pred": "business",
+    "gold": "business"
+  },
+  "162": {
+    "text": "business",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 120020417,
+    "wall_s": 0.21333694458007812,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "163": {
+    "text": "business",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 144702000,
+    "wall_s": 0.16539716720581055,
+    "pred": "business",
+    "gold": "world"
+  },
+  "164": {
+    "text": "sports",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 138223625,
+    "wall_s": 0.15814614295959473,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "165": {
+    "text": "business",
+    "prompt_tokens": 141,
+    "eval_tokens": 2,
+    "total_ns": 139652750,
+    "wall_s": 0.2002260684967041,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "166": {
+    "text": "sports",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 152178833,
+    "wall_s": 0.1744387149810791,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "167": {
+    "text": "sports",
+    "prompt_tokens": 112,
+    "eval_tokens": 2,
+    "total_ns": 125684708,
+    "wall_s": 0.1439800262451172,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "168": {
+    "text": "sports",
+    "prompt_tokens": 152,
+    "eval_tokens": 2,
+    "total_ns": 136880334,
+    "wall_s": 0.20553898811340332,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "169": {
+    "text": "sports",
+    "prompt_tokens": 116,
+    "eval_tokens": 2,
+    "total_ns": 141822334,
+    "wall_s": 0.1629807949066162,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "170": {
+    "text": "business",
+    "prompt_tokens": 151,
+    "eval_tokens": 2,
+    "total_ns": 138380458,
+    "wall_s": 0.15973567962646484,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "171": {
+    "text": "business",
+    "prompt_tokens": 136,
+    "eval_tokens": 2,
+    "total_ns": 139927083,
+    "wall_s": 0.21134376525878906,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "172": {
+    "text": "sports",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 139030334,
+    "wall_s": 0.15965700149536133,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "173": {
+    "text": "sports",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 107434333,
+    "wall_s": 0.12984395027160645,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "174": {
+    "text": "business",
+    "prompt_tokens": 110,
+    "eval_tokens": 2,
+    "total_ns": 118990292,
+    "wall_s": 0.1366710662841797,
+    "pred": "business",
+    "gold": "business"
+  },
+  "175": {
+    "text": "business",
+    "prompt_tokens": 135,
+    "eval_tokens": 2,
+    "total_ns": 151313958,
+    "wall_s": 0.2697620391845703,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "176": {
+    "text": "business",
+    "prompt_tokens": 149,
+    "eval_tokens": 2,
+    "total_ns": 135840292,
+    "wall_s": 0.1561899185180664,
+    "pred": "business",
+    "gold": "business"
+  },
+  "177": {
+    "text": "business",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 124452458,
+    "wall_s": 0.1846151351928711,
+    "pred": "business",
+    "gold": "world"
+  },
+  "178": {
+    "text": "business",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 135793875,
+    "wall_s": 0.16177678108215332,
+    "pred": "business",
+    "gold": "business"
+  },
+  "179": {
+    "text": "business",
+    "prompt_tokens": 108,
+    "eval_tokens": 2,
+    "total_ns": 122623917,
+    "wall_s": 0.14223575592041016,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "180": {
+    "text": "business",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 124610625,
+    "wall_s": 0.22091007232666016,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "181": {
+    "text": "business",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 141336792,
+    "wall_s": 0.1638200283050537,
+    "pred": "business",
+    "gold": "world"
+  },
+  "182": {
+    "text": "business",
+    "prompt_tokens": 151,
+    "eval_tokens": 2,
+    "total_ns": 137604041,
+    "wall_s": 0.16013693809509277,
+    "pred": "business",
+    "gold": "business"
+  },
+  "183": {
+    "text": "business",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 125031167,
+    "wall_s": 0.19899606704711914,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "184": {
+    "text": "sports",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 134036791,
+    "wall_s": 0.15334606170654297,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "185": {
+    "text": "business",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 107492458,
+    "wall_s": 0.12948298454284668,
+    "pred": "business",
+    "gold": "world"
+  },
+  "186": {
+    "text": "business",
+    "prompt_tokens": 113,
+    "eval_tokens": 2,
+    "total_ns": 119888375,
+    "wall_s": 0.13965702056884766,
+    "pred": "business",
+    "gold": "business"
+  },
+  "187": {
+    "text": "business",
+    "prompt_tokens": 105,
+    "eval_tokens": 2,
+    "total_ns": 148962875,
+    "wall_s": 0.25584888458251953,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "188": {
+    "text": "business",
+    "prompt_tokens": 168,
+    "eval_tokens": 2,
+    "total_ns": 150141000,
+    "wall_s": 0.17162418365478516,
+    "pred": "business",
+    "gold": "business"
+  },
+  "189": {
+    "text": "business",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 131213416,
+    "wall_s": 0.19996309280395508,
+    "pred": "business",
+    "gold": "world"
+  },
+  "190": {
+    "text": "business",
+    "prompt_tokens": 131,
+    "eval_tokens": 2,
+    "total_ns": 136937834,
+    "wall_s": 0.15648198127746582,
+    "pred": "business",
+    "gold": "world"
+  },
+  "191": {
+    "text": "business",
+    "prompt_tokens": 116,
+    "eval_tokens": 2,
+    "total_ns": 120700917,
+    "wall_s": 0.13933420181274414,
+    "pred": "business",
+    "gold": "business"
+  },
+  "192": {
+    "text": "business",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 123384625,
+    "wall_s": 0.23500728607177734,
+    "pred": "business",
+    "gold": "business"
+  },
+  "193": {
+    "text": "business",
+    "prompt_tokens": 124,
+    "eval_tokens": 2,
+    "total_ns": 148865125,
+    "wall_s": 0.17141461372375488,
+    "pred": "business",
+    "gold": "sports"
+  },
+  "194": {
+    "text": "business",
+    "prompt_tokens": 169,
+    "eval_tokens": 2,
+    "total_ns": 148736459,
+    "wall_s": 0.1709461212158203,
+    "pred": "business",
+    "gold": "business"
+  },
+  "195": {
+    "text": "business",
+    "prompt_tokens": 135,
+    "eval_tokens": 2,
+    "total_ns": 129383833,
+    "wall_s": 0.18660402297973633,
+    "pred": "business",
+    "gold": "world"
+  },
+  "196": {
+    "text": "business",
+    "prompt_tokens": 138,
+    "eval_tokens": 2,
+    "total_ns": 147829167,
+    "wall_s": 0.16777801513671875,
+    "pred": "business",
+    "gold": "business"
+  },
+  "197": {
+    "text": "business",
+    "prompt_tokens": 134,
+    "eval_tokens": 2,
+    "total_ns": 124415167,
+    "wall_s": 0.14142799377441406,
+    "pred": "business",
+    "gold": "world"
+  },
+  "198": {
+    "text": "science and technology",
+    "prompt_tokens": 130,
+    "eval_tokens": 4,
+    "total_ns": 145142500,
+    "wall_s": 0.20190787315368652,
+    "pred": "?",
+    "gold": "scitech"
+  },
+  "199": {
+    "text": "sports",
+    "prompt_tokens": 123,
+    "eval_tokens": 2,
+    "total_ns": 125261667,
+    "wall_s": 0.1534569263458252,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "200": {
+    "text": "business",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 126409959,
+    "wall_s": 0.15001606941223145,
+    "pred": "business",
+    "gold": "world"
+  },
+  "201": {
+    "text": "business",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 123906417,
+    "wall_s": 0.2164289951324463,
+    "pred": "business",
+    "gold": "business"
+  },
+  "202": {
+    "text": "business",
+    "prompt_tokens": 131,
+    "eval_tokens": 2,
+    "total_ns": 143623959,
+    "wall_s": 0.16210699081420898,
+    "pred": "business",
+    "gold": "world"
+  },
+  "203": {
+    "text": "business",
+    "prompt_tokens": 126,
+    "eval_tokens": 2,
+    "total_ns": 122382542,
+    "wall_s": 0.14200305938720703,
+    "pred": "business",
+    "gold": "world"
+  },
+  "204": {
+    "text": "business",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 107167458,
+    "wall_s": 0.13274717330932617,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "205": {
+    "text": "business",
+    "prompt_tokens": 165,
+    "eval_tokens": 2,
+    "total_ns": 160271250,
+    "wall_s": 0.26520586013793945,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "206": {
+    "text": "business",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 125659292,
+    "wall_s": 0.14839911460876465,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "207": {
+    "text": "business",
+    "prompt_tokens": 119,
+    "eval_tokens": 2,
+    "total_ns": 121249666,
+    "wall_s": 0.19781708717346191,
+    "pred": "business",
+    "gold": "business"
+  },
+  "208": {
+    "text": "business",
+    "prompt_tokens": 123,
+    "eval_tokens": 2,
+    "total_ns": 134436792,
+    "wall_s": 0.15348505973815918,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "209": {
+    "text": "business",
+    "prompt_tokens": 113,
+    "eval_tokens": 2,
+    "total_ns": 124293625,
+    "wall_s": 0.14818310737609863,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "210": {
+    "text": "business",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 123790208,
+    "wall_s": 0.22353506088256836,
+    "pred": "business",
+    "gold": "business"
+  },
+  "211": {
+    "text": "business",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 147273375,
+    "wall_s": 0.1703319549560547,
+    "pred": "business",
+    "gold": "business"
+  },
+  "212": {
+    "text": "business",
+    "prompt_tokens": 143,
+    "eval_tokens": 2,
+    "total_ns": 136908542,
+    "wall_s": 0.157012939453125,
+    "pred": "business",
+    "gold": "world"
+  },
+  "213": {
+    "text": "business",
+    "prompt_tokens": 149,
+    "eval_tokens": 2,
+    "total_ns": 140563250,
+    "wall_s": 0.1951920986175537,
+    "pred": "business",
+    "gold": "world"
+  },
+  "214": {
+    "text": "business",
+    "prompt_tokens": 144,
+    "eval_tokens": 2,
+    "total_ns": 149000750,
+    "wall_s": 0.16969799995422363,
+    "pred": "business",
+    "gold": "business"
+  },
+  "215": {
+    "text": "business",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 124240083,
+    "wall_s": 0.14414215087890625,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "216": {
+    "text": "business",
+    "prompt_tokens": 138,
+    "eval_tokens": 2,
+    "total_ns": 133519667,
+    "wall_s": 0.2108290195465088,
+    "pred": "business",
+    "gold": "world"
+  },
+  "217": {
+    "text": "sports",
+    "prompt_tokens": 113,
+    "eval_tokens": 2,
+    "total_ns": 142369083,
+    "wall_s": 0.16128015518188477,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "218": {
+    "text": "business",
+    "prompt_tokens": 171,
+    "eval_tokens": 2,
+    "total_ns": 151353959,
+    "wall_s": 0.17098212242126465,
+    "pred": "business",
+    "gold": "business"
+  },
+  "219": {
+    "text": "business",
+    "prompt_tokens": 128,
+    "eval_tokens": 2,
+    "total_ns": 127040292,
+    "wall_s": 0.19094514846801758,
+    "pred": "business",
+    "gold": "world"
+  },
+  "220": {
+    "text": "sports",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 148579709,
+    "wall_s": 0.16794896125793457,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "221": {
+    "text": "sports",
+    "prompt_tokens": 132,
+    "eval_tokens": 2,
+    "total_ns": 124995334,
+    "wall_s": 0.14583492279052734,
+    "pred": "sports",
+    "gold": "world"
+  },
+  "222": {
+    "text": "sports",
+    "prompt_tokens": 117,
+    "eval_tokens": 2,
+    "total_ns": 119967917,
+    "wall_s": 0.21033906936645508,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "223": {
+    "text": "sports",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 141705625,
+    "wall_s": 0.1621389389038086,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "224": {
+    "text": "sports",
+    "prompt_tokens": 101,
+    "eval_tokens": 2,
+    "total_ns": 107740416,
+    "wall_s": 0.12467408180236816,
+    "pred": "sports",
+    "gold": "world"
+  },
+  "225": {
+    "text": "business",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 120468666,
+    "wall_s": 0.14074969291687012,
+    "pred": "business",
+    "gold": "world"
+  },
+  "226": {
+    "text": "business",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 160836583,
+    "wall_s": 0.26470017433166504,
+    "pred": "business",
+    "gold": "world"
+  },
+  "227": {
+    "text": "business",
+    "prompt_tokens": 118,
+    "eval_tokens": 2,
+    "total_ns": 124448792,
+    "wall_s": 0.14426589012145996,
+    "pred": "business",
+    "gold": "business"
+  },
+  "228": {
+    "text": "business",
+    "prompt_tokens": 137,
+    "eval_tokens": 2,
+    "total_ns": 136462875,
+    "wall_s": 0.21136212348937988,
+    "pred": "business",
+    "gold": "world"
+  },
+  "229": {
+    "text": "business",
+    "prompt_tokens": 125,
+    "eval_tokens": 2,
+    "total_ns": 145150041,
+    "wall_s": 0.17965006828308105,
+    "pred": "business",
+    "gold": "business"
+  },
+  "230": {
+    "text": "sports",
+    "prompt_tokens": 144,
+    "eval_tokens": 2,
+    "total_ns": 143486625,
+    "wall_s": 0.18157267570495605,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "231": {
+    "text": "business",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 126580708,
+    "wall_s": 0.16790080070495605,
+    "pred": "business",
+    "gold": "world"
+  },
+  "232": {
+    "text": "business",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 128405334,
+    "wall_s": 0.15189099311828613,
+    "pred": "business",
+    "gold": "business"
+  },
+  "233": {
+    "text": "business",
+    "prompt_tokens": 104,
+    "eval_tokens": 2,
+    "total_ns": 120230792,
+    "wall_s": 0.1402449607849121,
+    "pred": "business",
+    "gold": "scitech"
+  },
+  "234": {
+    "text": "business",
+    "prompt_tokens": 137,
+    "eval_tokens": 2,
+    "total_ns": 135061000,
+    "wall_s": 0.22599506378173828,
+    "pred": "business",
+    "gold": "world"
+  },
+  "235": {
+    "text": "business",
+    "prompt_tokens": 128,
+    "eval_tokens": 2,
+    "total_ns": 144995083,
+    "wall_s": 0.16501140594482422,
+    "pred": "business",
+    "gold": "world"
+  },
+  "236": {
+    "text": "business",
+    "prompt_tokens": 137,
+    "eval_tokens": 2,
+    "total_ns": 136690667,
+    "wall_s": 0.15810394287109375,
+    "pred": "business",
+    "gold": "business"
+  },
+  "237": {
+    "text": "sports",
+    "prompt_tokens": 114,
+    "eval_tokens": 2,
+    "total_ns": 125280334,
+    "wall_s": 0.20095586776733398,
+    "pred": "sports",
+    "gold": "sports"
+  },
+  "238": {
+    "text": "business",
+    "prompt_tokens": 106,
+    "eval_tokens": 2,
+    "total_ns": 134765791,
+    "wall_s": 0.15398311614990234,
+    "pred": "business",
+    "gold": "world"
+  },
+  "239": {
+    "text": "sports",
+    "prompt_tokens": 128,
+    "eval_tokens": 2,
+    "total_ns": 122577709,
+    "wall_s": 0.14184331893920898,
+    "pred": "sports",
+    "gold": "sports"
+  }
+}

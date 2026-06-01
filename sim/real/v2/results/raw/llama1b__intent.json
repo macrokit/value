@@ -1,0 +1,2162 @@
+{
+  "0": {
+    "text": "reminder",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 1786626791,
+    "wall_s": 1.856109857559204,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "1": {
+    "text": "calendar",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 197024083,
+    "wall_s": 0.2176189422607422,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "2": {
+    "text": "todo_list",
+    "prompt_tokens": 166,
+    "eval_tokens": 3,
+    "total_ns": 216411208,
+    "wall_s": 0.24354290962219238,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "3": {
+    "text": "I'm not able to access or see",
+    "prompt_tokens": 160,
+    "eval_tokens": 8,
+    "total_ns": 301546958,
+    "wall_s": 0.40278124809265137,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "4": {
+    "text": "calendar",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 189577166,
+    "wall_s": 0.20959186553955078,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "5": {
+    "text": "todo_list",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 172691208,
+    "wall_s": 0.1937847137451172,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "6": {
+    "text": "todo_list",
+    "prompt_tokens": 166,
+    "eval_tokens": 3,
+    "total_ns": 178437375,
+    "wall_s": 0.2420029640197754,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "7": {
+    "text": "todo_list",
+    "prompt_tokens": 158,
+    "eval_tokens": 3,
+    "total_ns": 191919917,
+    "wall_s": 0.21137499809265137,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "8": {
+    "text": "timer",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 156103042,
+    "wall_s": 0.1750020980834961,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "9": {
+    "text": "reminder",
+    "prompt_tokens": 170,
+    "eval_tokens": 2,
+    "total_ns": 151938916,
+    "wall_s": 0.17385101318359375,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "10": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 176665875,
+    "wall_s": 0.1965322494506836,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "11": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 161,
+    "eval_tokens": 3,
+    "total_ns": 180747500,
+    "wall_s": 0.20035886764526367,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "12": {
+    "text": "reminder",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 189811208,
+    "wall_s": 0.29527807235717773,
+    "pred": "reminder",
+    "gold": "todo_list"
+  },
+  "13": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 176063417,
+    "wall_s": 0.19402217864990234,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "14": {
+    "text": "todo_list",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 178931084,
+    "wall_s": 0.1958317756652832,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "15": {
+    "text": "- alarm\n- timer\n- reminder",
+    "prompt_tokens": 159,
+    "eval_tokens": 8,
+    "total_ns": 298378792,
+    "wall_s": 0.32462310791015625,
+    "pred": "alarm",
+    "gold": "reminder"
+  },
+  "16": {
+    "text": "timer",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 190885959,
+    "wall_s": 0.21384596824645996,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "17": {
+    "text": "reminder",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 154929459,
+    "wall_s": 0.17546606063842773,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "18": {
+    "text": "alarm \ntimer",
+    "prompt_tokens": 161,
+    "eval_tokens": 4,
+    "total_ns": 203687583,
+    "wall_s": 0.2641880512237549,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "19": {
+    "text": "todo_list",
+    "prompt_tokens": 161,
+    "eval_tokens": 3,
+    "total_ns": 197115708,
+    "wall_s": 0.21724581718444824,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "20": {
+    "text": "alarm",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 155395500,
+    "wall_s": 0.17477011680603027,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "21": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 174622042,
+    "wall_s": 0.19502782821655273,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "22": {
+    "text": "timer",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 157926041,
+    "wall_s": 0.1770009994506836,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "23": {
+    "text": "timer",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 155324166,
+    "wall_s": 0.1740572452545166,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "24": {
+    "text": "alarm",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 159076125,
+    "wall_s": 0.18436098098754883,
+    "pred": "alarm",
+    "gold": "calendar"
+  },
+  "25": {
+    "text": "alarm \ntimer",
+    "prompt_tokens": 162,
+    "eval_tokens": 4,
+    "total_ns": 204393667,
+    "wall_s": 0.2253565788269043,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "26": {
+    "text": "reminder",
+    "prompt_tokens": 155,
+    "eval_tokens": 2,
+    "total_ns": 165660750,
+    "wall_s": 0.22593307495117188,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "27": {
+    "text": "I cannot provide information or guidance on illegal",
+    "prompt_tokens": 160,
+    "eval_tokens": 8,
+    "total_ns": 391221125,
+    "wall_s": 0.5845377445220947,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "28": {
+    "text": "todo_list",
+    "prompt_tokens": 156,
+    "eval_tokens": 3,
+    "total_ns": 212352125,
+    "wall_s": 0.30692410469055176,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "29": {
+    "text": "calendar",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 179823292,
+    "wall_s": 0.21804189682006836,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "30": {
+    "text": "To classify the message into exactly one intent",
+    "prompt_tokens": 162,
+    "eval_tokens": 8,
+    "total_ns": 300834041,
+    "wall_s": 0.3203577995300293,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "31": {
+    "text": "alarm",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 191013833,
+    "wall_s": 0.21048402786254883,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "32": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 175105667,
+    "wall_s": 0.19396018981933594,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "33": {
+    "text": "calendar",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 157482125,
+    "wall_s": 0.2597172260284424,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "34": {
+    "text": "timer",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 177994208,
+    "wall_s": 0.19677066802978516,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "35": {
+    "text": "todo_list",
+    "prompt_tokens": 159,
+    "eval_tokens": 3,
+    "total_ns": 177522458,
+    "wall_s": 0.19845890998840332,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "36": {
+    "text": "reminder",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 162256917,
+    "wall_s": 0.18542885780334473,
+    "pred": "reminder",
+    "gold": "todo_list"
+  },
+  "37": {
+    "text": "alarm\ntimer\nreminder\ncalendar\n",
+    "prompt_tokens": 159,
+    "eval_tokens": 8,
+    "total_ns": 297307292,
+    "wall_s": 0.3227877616882324,
+    "pred": "alarm",
+    "gold": "reminder"
+  },
+  "38": {
+    "text": "todo_list",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 217128125,
+    "wall_s": 0.24814701080322266,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "39": {
+    "text": "timer",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 161778375,
+    "wall_s": 0.18096423149108887,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "40": {
+    "text": "reminder",
+    "prompt_tokens": 164,
+    "eval_tokens": 2,
+    "total_ns": 155646333,
+    "wall_s": 0.23894405364990234,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "41": {
+    "text": "calendar",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 176595750,
+    "wall_s": 0.2082059383392334,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "42": {
+    "text": "reminder",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 149861667,
+    "wall_s": 0.1674180030822754,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "43": {
+    "text": "alarm",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 157225625,
+    "wall_s": 0.198807954788208,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "44": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 166,
+    "eval_tokens": 3,
+    "total_ns": 172602500,
+    "wall_s": 0.19075512886047363,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "45": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 157317542,
+    "wall_s": 0.18022513389587402,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "46": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 200589208,
+    "wall_s": 0.3097977638244629,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "47": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 164,
+    "eval_tokens": 3,
+    "total_ns": 183550958,
+    "wall_s": 0.2021338939666748,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "48": {
+    "text": "todo_list",
+    "prompt_tokens": 165,
+    "eval_tokens": 3,
+    "total_ns": 186327750,
+    "wall_s": 0.21007919311523438,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "49": {
+    "text": "calendar",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 159588709,
+    "wall_s": 0.18711090087890625,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "50": {
+    "text": "reminder",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 154308125,
+    "wall_s": 0.24065780639648438,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "51": {
+    "text": "timer",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 172583292,
+    "wall_s": 0.1932530403137207,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "52": {
+    "text": "todo_list",
+    "prompt_tokens": 165,
+    "eval_tokens": 3,
+    "total_ns": 178388458,
+    "wall_s": 0.19693398475646973,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "53": {
+    "text": "todo_list",
+    "prompt_tokens": 163,
+    "eval_tokens": 3,
+    "total_ns": 183383500,
+    "wall_s": 0.2032618522644043,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "54": {
+    "text": "reminder",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 156873125,
+    "wall_s": 0.17671704292297363,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "55": {
+    "text": "Your list appears to be a collection of",
+    "prompt_tokens": 159,
+    "eval_tokens": 8,
+    "total_ns": 295668042,
+    "wall_s": 0.3234124183654785,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "56": {
+    "text": "alarm",
+    "prompt_tokens": 168,
+    "eval_tokens": 2,
+    "total_ns": 186825333,
+    "wall_s": 0.20710515975952148,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "57": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 151255417,
+    "wall_s": 0.1698160171508789,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "58": {
+    "text": "alarm\ntimer",
+    "prompt_tokens": 168,
+    "eval_tokens": 4,
+    "total_ns": 222706542,
+    "wall_s": 0.41310882568359375,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "59": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 163,
+    "eval_tokens": 3,
+    "total_ns": 214044875,
+    "wall_s": 0.23269891738891602,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "60": {
+    "text": "alarm",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 161028709,
+    "wall_s": 0.18364500999450684,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "61": {
+    "text": "alarm\nalarm",
+    "prompt_tokens": 165,
+    "eval_tokens": 4,
+    "total_ns": 199615958,
+    "wall_s": 0.21659326553344727,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "62": {
+    "text": "calendar",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 163264416,
+    "wall_s": 0.1814711093902588,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "63": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 159,
+    "eval_tokens": 3,
+    "total_ns": 178253541,
+    "wall_s": 0.19718718528747559,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "64": {
+    "text": "alarm",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 157169959,
+    "wall_s": 0.2477881908416748,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "65": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 172814750,
+    "wall_s": 0.19251298904418945,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "66": {
+    "text": "reminder",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 152708083,
+    "wall_s": 0.17274904251098633,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "67": {
+    "text": "meeting",
+    "prompt_tokens": 165,
+    "eval_tokens": 2,
+    "total_ns": 154440708,
+    "wall_s": 0.17720770835876465,
+    "pred": "?",
+    "gold": "meeting_schedule"
+  },
+  "68": {
+    "text": "You asked me to help you remember:\n\n",
+    "prompt_tokens": 162,
+    "eval_tokens": 8,
+    "total_ns": 294495209,
+    "wall_s": 0.32146501541137695,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "69": {
+    "text": "timer",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 191596209,
+    "wall_s": 0.21186113357543945,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "70": {
+    "text": "alarm",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 150346334,
+    "wall_s": 0.16899824142456055,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "71": {
+    "text": "reminder",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 149936750,
+    "wall_s": 0.16775798797607422,
+    "pred": "reminder",
+    "gold": "timer"
+  },
+  "72": {
+    "text": "calendar",
+    "prompt_tokens": 166,
+    "eval_tokens": 2,
+    "total_ns": 148606417,
+    "wall_s": 0.17038702964782715,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "73": {
+    "text": "timer",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 151096833,
+    "wall_s": 0.16977810859680176,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "74": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 175035583,
+    "wall_s": 0.19318199157714844,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "75": {
+    "text": "timer",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 157028458,
+    "wall_s": 0.17758917808532715,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "76": {
+    "text": "timer",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 151188583,
+    "wall_s": 0.17048430442810059,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "77": {
+    "text": "reminder",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 153645666,
+    "wall_s": 0.1739208698272705,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "78": {
+    "text": "calendar",
+    "prompt_tokens": 155,
+    "eval_tokens": 2,
+    "total_ns": 152666542,
+    "wall_s": 0.1721489429473877,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "79": {
+    "text": "alarm",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 150914959,
+    "wall_s": 0.17041707038879395,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "80": {
+    "text": "I can't provide any personal information or",
+    "prompt_tokens": 161,
+    "eval_tokens": 8,
+    "total_ns": 292941666,
+    "wall_s": 0.33199405670166016,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "81": {
+    "text": "alarm",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 191116125,
+    "wall_s": 0.20853400230407715,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "82": {
+    "text": "todo_list",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 175353583,
+    "wall_s": 0.19255709648132324,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "83": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 156807625,
+    "wall_s": 0.17687702178955078,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "84": {
+    "text": "todo_list",
+    "prompt_tokens": 161,
+    "eval_tokens": 3,
+    "total_ns": 178145166,
+    "wall_s": 0.1985630989074707,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "85": {
+    "text": "alarm",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 160123625,
+    "wall_s": 0.17969775199890137,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "86": {
+    "text": "calendar",
+    "prompt_tokens": 165,
+    "eval_tokens": 2,
+    "total_ns": 182677834,
+    "wall_s": 0.288470983505249,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "87": {
+    "text": "calendar",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 153331042,
+    "wall_s": 0.17057085037231445,
+    "pred": "calendar",
+    "gold": "reminder"
+  },
+  "88": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 158,
+    "eval_tokens": 3,
+    "total_ns": 181451625,
+    "wall_s": 0.2016441822052002,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "89": {
+    "text": "todo_list",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 180296875,
+    "wall_s": 0.20013713836669922,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "90": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 180694334,
+    "wall_s": 0.27849602699279785,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "91": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 158,
+    "eval_tokens": 3,
+    "total_ns": 206493125,
+    "wall_s": 0.22999310493469238,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "92": {
+    "text": "alarm",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 157746750,
+    "wall_s": 0.1786792278289795,
+    "pred": "alarm",
+    "gold": "todo_list"
+  },
+  "93": {
+    "text": "alarm",
+    "prompt_tokens": 155,
+    "eval_tokens": 2,
+    "total_ns": 149955125,
+    "wall_s": 0.16796517372131348,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "94": {
+    "text": "reminder",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 151792667,
+    "wall_s": 0.17013192176818848,
+    "pred": "reminder",
+    "gold": "todo_list"
+  },
+  "95": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 163,
+    "eval_tokens": 3,
+    "total_ns": 177272750,
+    "wall_s": 0.20851993560791016,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "96": {
+    "text": "calendar",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 191137958,
+    "wall_s": 0.3042459487915039,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "97": {
+    "text": "timer",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 154331625,
+    "wall_s": 0.1880970001220703,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "98": {
+    "text": "reminder",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 154876541,
+    "wall_s": 0.17975187301635742,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "99": {
+    "text": "reminder",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 159174209,
+    "wall_s": 0.19949793815612793,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "100": {
+    "text": "reminder",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 152193791,
+    "wall_s": 0.1718282699584961,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "101": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 180756792,
+    "wall_s": 0.28821396827697754,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "102": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 159,
+    "eval_tokens": 3,
+    "total_ns": 175657208,
+    "wall_s": 0.19378972053527832,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "103": {
+    "text": "alarm\ntimer",
+    "prompt_tokens": 166,
+    "eval_tokens": 4,
+    "total_ns": 201098709,
+    "wall_s": 0.22001004219055176,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "104": {
+    "text": "timer",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 160222000,
+    "wall_s": 0.18171000480651855,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "105": {
+    "text": "alarm",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 153051917,
+    "wall_s": 0.17365193367004395,
+    "pred": "alarm",
+    "gold": "timer"
+  },
+  "106": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 158,
+    "eval_tokens": 3,
+    "total_ns": 201673166,
+    "wall_s": 0.3054800033569336,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "107": {
+    "text": "calendar",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 161103791,
+    "wall_s": 0.17928099632263184,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "108": {
+    "text": "calendar",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 154691584,
+    "wall_s": 0.17292118072509766,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "109": {
+    "text": "todo_list",
+    "prompt_tokens": 158,
+    "eval_tokens": 3,
+    "total_ns": 174829375,
+    "wall_s": 0.19295406341552734,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "110": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 163,
+    "eval_tokens": 3,
+    "total_ns": 181654291,
+    "wall_s": 0.2846968173980713,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "111": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 185563125,
+    "wall_s": 0.20499825477600098,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "112": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 176049500,
+    "wall_s": 0.19595813751220703,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "113": {
+    "text": "reminder",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 155549958,
+    "wall_s": 0.1727128028869629,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "114": {
+    "text": "calendar",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 147348250,
+    "wall_s": 0.16585826873779297,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "115": {
+    "text": "todo_list",
+    "prompt_tokens": 158,
+    "eval_tokens": 3,
+    "total_ns": 172246667,
+    "wall_s": 0.19257664680480957,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "116": {
+    "text": "calendar",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 157842709,
+    "wall_s": 0.17667198181152344,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "117": {
+    "text": "alarm",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 153921166,
+    "wall_s": 0.17317605018615723,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "118": {
+    "text": "alarm",
+    "prompt_tokens": 154,
+    "eval_tokens": 2,
+    "total_ns": 172432791,
+    "wall_s": 0.19304394721984863,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "119": {
+    "text": "alarm",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 182655833,
+    "wall_s": 0.2873058319091797,
+    "pred": "alarm",
+    "gold": "meeting_schedule"
+  },
+  "120": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 178848792,
+    "wall_s": 0.20748114585876465,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "121": {
+    "text": "todo_list",
+    "prompt_tokens": 163,
+    "eval_tokens": 3,
+    "total_ns": 183334583,
+    "wall_s": 0.20101380348205566,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "122": {
+    "text": "alarm",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 156467083,
+    "wall_s": 0.17592906951904297,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "123": {
+    "text": "timer",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 150244541,
+    "wall_s": 0.1696629524230957,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "124": {
+    "text": "timer",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 154027583,
+    "wall_s": 0.17140984535217285,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "125": {
+    "text": "calendar",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 153322750,
+    "wall_s": 0.17237496376037598,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "126": {
+    "text": "alarm\nalarm",
+    "prompt_tokens": 169,
+    "eval_tokens": 4,
+    "total_ns": 194962375,
+    "wall_s": 0.2813289165496826,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "127": {
+    "text": "reminder",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 187635708,
+    "wall_s": 0.21364808082580566,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "128": {
+    "text": "reminder",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 151354250,
+    "wall_s": 0.169356107711792,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "129": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 153919459,
+    "wall_s": 0.17917799949645996,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "130": {
+    "text": "calendar",
+    "prompt_tokens": 165,
+    "eval_tokens": 2,
+    "total_ns": 154792375,
+    "wall_s": 0.17511892318725586,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "131": {
+    "text": "timer",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 152777875,
+    "wall_s": 0.17236876487731934,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "132": {
+    "text": "todo_list",
+    "prompt_tokens": 158,
+    "eval_tokens": 3,
+    "total_ns": 176845167,
+    "wall_s": 0.19577407836914062,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "133": {
+    "text": "todo_list",
+    "prompt_tokens": 165,
+    "eval_tokens": 3,
+    "total_ns": 185866875,
+    "wall_s": 0.20512604713439941,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "134": {
+    "text": "calendar",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 161341458,
+    "wall_s": 0.261260986328125,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "135": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 179451042,
+    "wall_s": 0.19926714897155762,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "136": {
+    "text": "calendar",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 152215167,
+    "wall_s": 0.1695101261138916,
+    "pred": "calendar",
+    "gold": "meeting_schedule"
+  },
+  "137": {
+    "text": "meeting",
+    "prompt_tokens": 165,
+    "eval_tokens": 2,
+    "total_ns": 157232083,
+    "wall_s": 0.17692017555236816,
+    "pred": "?",
+    "gold": "meeting_schedule"
+  },
+  "138": {
+    "text": "todo_list",
+    "prompt_tokens": 165,
+    "eval_tokens": 3,
+    "total_ns": 179549458,
+    "wall_s": 0.20008397102355957,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "139": {
+    "text": "todo_list",
+    "prompt_tokens": 166,
+    "eval_tokens": 3,
+    "total_ns": 180707958,
+    "wall_s": 0.20035004615783691,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "140": {
+    "text": "I can't provide you with information that",
+    "prompt_tokens": 165,
+    "eval_tokens": 8,
+    "total_ns": 331285625,
+    "wall_s": 0.5335109233856201,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "141": {
+    "text": "todo_list",
+    "prompt_tokens": 161,
+    "eval_tokens": 3,
+    "total_ns": 212711958,
+    "wall_s": 0.40862274169921875,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "142": {
+    "text": "todo_list",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 212666584,
+    "wall_s": 0.23339509963989258,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "143": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 163,
+    "eval_tokens": 3,
+    "total_ns": 187222083,
+    "wall_s": 0.20679593086242676,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "144": {
+    "text": "alarm",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 156302334,
+    "wall_s": 0.17537307739257812,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "145": {
+    "text": "alarm",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 150219875,
+    "wall_s": 0.16881990432739258,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "146": {
+    "text": "calendar",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 153014417,
+    "wall_s": 0.17190790176391602,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "147": {
+    "text": "calendar",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 154824167,
+    "wall_s": 0.17393922805786133,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "148": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 159,
+    "eval_tokens": 3,
+    "total_ns": 176238458,
+    "wall_s": 0.19791173934936523,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "149": {
+    "text": "todo_list",
+    "prompt_tokens": 158,
+    "eval_tokens": 3,
+    "total_ns": 184721958,
+    "wall_s": 0.21297788619995117,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "150": {
+    "text": "timer",
+    "prompt_tokens": 165,
+    "eval_tokens": 2,
+    "total_ns": 161381750,
+    "wall_s": 0.23959994316101074,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "151": {
+    "text": "todo_list",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 193053958,
+    "wall_s": 0.21165895462036133,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "152": {
+    "text": "calendar",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 156301709,
+    "wall_s": 0.17685914039611816,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "153": {
+    "text": "todo_list",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 173987666,
+    "wall_s": 0.1921229362487793,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "154": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 159,
+    "eval_tokens": 3,
+    "total_ns": 182348667,
+    "wall_s": 0.20437979698181152,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "155": {
+    "text": "calendar",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 162106000,
+    "wall_s": 0.2626988887786865,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "156": {
+    "text": "timer",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 179963333,
+    "wall_s": 0.21142101287841797,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "157": {
+    "text": "reminder",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 155358792,
+    "wall_s": 0.17412877082824707,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "158": {
+    "text": "reminder",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 152717125,
+    "wall_s": 0.1719968318939209,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "159": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 163,
+    "eval_tokens": 3,
+    "total_ns": 178470625,
+    "wall_s": 0.19778084754943848,
+    "pred": "meeting_schedule",
+    "gold": "calendar"
+  },
+  "160": {
+    "text": "calendar",
+    "prompt_tokens": 165,
+    "eval_tokens": 2,
+    "total_ns": 160279083,
+    "wall_s": 0.17666316032409668,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "161": {
+    "text": "todo_list",
+    "prompt_tokens": 162,
+    "eval_tokens": 3,
+    "total_ns": 177316291,
+    "wall_s": 0.19572997093200684,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "162": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 158,
+    "eval_tokens": 3,
+    "total_ns": 181008875,
+    "wall_s": 0.19901490211486816,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "163": {
+    "text": "alarm",
+    "prompt_tokens": 155,
+    "eval_tokens": 2,
+    "total_ns": 156964875,
+    "wall_s": 0.24140691757202148,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "164": {
+    "text": "timer",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 174750125,
+    "wall_s": 0.19944095611572266,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "165": {
+    "text": "todo_list",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 173614875,
+    "wall_s": 0.19354605674743652,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "166": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 155462792,
+    "wall_s": 0.17536616325378418,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "167": {
+    "text": "timer",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 151579417,
+    "wall_s": 0.16951990127563477,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "168": {
+    "text": "reminder",
+    "prompt_tokens": 164,
+    "eval_tokens": 2,
+    "total_ns": 156694709,
+    "wall_s": 0.17540907859802246,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "169": {
+    "text": "reminder",
+    "prompt_tokens": 169,
+    "eval_tokens": 2,
+    "total_ns": 152125875,
+    "wall_s": 0.17284393310546875,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "170": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 159,
+    "eval_tokens": 3,
+    "total_ns": 175250625,
+    "wall_s": 0.19601082801818848,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "171": {
+    "text": "reminder",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 157770875,
+    "wall_s": 0.17681312561035156,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "172": {
+    "text": "I cannot provide information about your personal schedule",
+    "prompt_tokens": 159,
+    "eval_tokens": 8,
+    "total_ns": 293717125,
+    "wall_s": 0.38361597061157227,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "173": {
+    "text": "reminder",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 189240375,
+    "wall_s": 0.2544558048248291,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "174": {
+    "text": "calendar",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 166501125,
+    "wall_s": 0.19241881370544434,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "175": {
+    "text": "alarm",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 151906958,
+    "wall_s": 0.17043089866638184,
+    "pred": "alarm",
+    "gold": "todo_list"
+  },
+  "176": {
+    "text": "calendar",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 152833834,
+    "wall_s": 0.1697080135345459,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "177": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 151829334,
+    "wall_s": 0.1698627471923828,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "178": {
+    "text": "calendar",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 149954292,
+    "wall_s": 0.16859698295593262,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "179": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 169,
+    "eval_tokens": 3,
+    "total_ns": 171004459,
+    "wall_s": 0.18971800804138184,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "180": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 157,
+    "eval_tokens": 3,
+    "total_ns": 179239917,
+    "wall_s": 0.20153117179870605,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "181": {
+    "text": "alarm",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 159251375,
+    "wall_s": 0.17752480506896973,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "182": {
+    "text": "calendar",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 155463833,
+    "wall_s": 0.17457103729248047,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "183": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 162,
+    "eval_tokens": 3,
+    "total_ns": 178561708,
+    "wall_s": 0.19755196571350098,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "184": {
+    "text": "You wanted me to classify messages into exactly",
+    "prompt_tokens": 160,
+    "eval_tokens": 8,
+    "total_ns": 300765125,
+    "wall_s": 0.31916189193725586,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "185": {
+    "text": "timer",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 186570125,
+    "wall_s": 0.21337604522705078,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "186": {
+    "text": "todo_list",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 178128042,
+    "wall_s": 0.2725999355316162,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "187": {
+    "text": "todo_list",
+    "prompt_tokens": 156,
+    "eval_tokens": 3,
+    "total_ns": 204690000,
+    "wall_s": 0.22802209854125977,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "188": {
+    "text": "calendar",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 159677583,
+    "wall_s": 0.18097686767578125,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "189": {
+    "text": "alarm\ntimer",
+    "prompt_tokens": 169,
+    "eval_tokens": 4,
+    "total_ns": 196294292,
+    "wall_s": 0.2283477783203125,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "190": {
+    "text": "timer",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 166959042,
+    "wall_s": 0.18495512008666992,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "191": {
+    "text": "todo_list",
+    "prompt_tokens": 159,
+    "eval_tokens": 3,
+    "total_ns": 175474250,
+    "wall_s": 0.23990297317504883,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "192": {
+    "text": "todo_list",
+    "prompt_tokens": 159,
+    "eval_tokens": 3,
+    "total_ns": 194437750,
+    "wall_s": 0.22028708457946777,
+    "pred": "todo_list",
+    "gold": "calendar"
+  },
+  "193": {
+    "text": "timer",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 158708000,
+    "wall_s": 0.1780989170074463,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "194": {
+    "text": "timer",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 151400792,
+    "wall_s": 0.17123103141784668,
+    "pred": "timer",
+    "gold": "calendar"
+  },
+  "195": {
+    "text": "alarm",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 151511542,
+    "wall_s": 0.1688680648803711,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "196": {
+    "text": "calendar",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 154446208,
+    "wall_s": 0.18146467208862305,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "197": {
+    "text": "alarm\ntimer",
+    "prompt_tokens": 170,
+    "eval_tokens": 4,
+    "total_ns": 195402833,
+    "wall_s": 0.21422982215881348,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "198": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 185248625,
+    "wall_s": 0.2017672061920166,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "199": {
+    "text": "timer",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 156581875,
+    "wall_s": 0.2331101894378662,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "200": {
+    "text": "alarm",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 166499250,
+    "wall_s": 0.18274211883544922,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "201": {
+    "text": "calendar",
+    "prompt_tokens": 167,
+    "eval_tokens": 2,
+    "total_ns": 150390125,
+    "wall_s": 0.17012572288513184,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "202": {
+    "text": "alarm",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 153851500,
+    "wall_s": 0.17174196243286133,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "203": {
+    "text": "timer",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 153704166,
+    "wall_s": 0.17390108108520508,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "204": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 162,
+    "eval_tokens": 3,
+    "total_ns": 176218792,
+    "wall_s": 0.19452905654907227,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "205": {
+    "text": "calendar",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 159255917,
+    "wall_s": 0.17854595184326172,
+    "pred": "calendar",
+    "gold": "meeting_schedule"
+  },
+  "206": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 159,
+    "eval_tokens": 3,
+    "total_ns": 175850125,
+    "wall_s": 0.19532990455627441,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "207": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 163,
+    "eval_tokens": 3,
+    "total_ns": 182337958,
+    "wall_s": 0.20001602172851562,
+    "pred": "meeting_schedule",
+    "gold": "calendar"
+  },
+  "208": {
+    "text": "meeting",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 187265833,
+    "wall_s": 0.2904222011566162,
+    "pred": "?",
+    "gold": "meeting_schedule"
+  },
+  "209": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 170,
+    "eval_tokens": 3,
+    "total_ns": 174002459,
+    "wall_s": 0.19397711753845215,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "210": {
+    "text": "todo_list",
+    "prompt_tokens": 161,
+    "eval_tokens": 3,
+    "total_ns": 183025666,
+    "wall_s": 0.20337271690368652,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "211": {
+    "text": "todo_list",
+    "prompt_tokens": 156,
+    "eval_tokens": 3,
+    "total_ns": 179266084,
+    "wall_s": 0.2003939151763916,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "212": {
+    "text": "timer",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 158344834,
+    "wall_s": 0.25031399726867676,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "213": {
+    "text": "alarm",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 175599667,
+    "wall_s": 0.19595909118652344,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "214": {
+    "text": "calendar",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 153280875,
+    "wall_s": 0.1716771125793457,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "215": {
+    "text": "meeting_schedule",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 174466709,
+    "wall_s": 0.19122576713562012,
+    "pred": "meeting_schedule",
+    "gold": "meeting_schedule"
+  },
+  "216": {
+    "text": "alarm",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 159093125,
+    "wall_s": 0.17725682258605957,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "217": {
+    "text": "reminder",
+    "prompt_tokens": 160,
+    "eval_tokens": 2,
+    "total_ns": 154844125,
+    "wall_s": 0.17493128776550293,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "218": {
+    "text": "calendar",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 153345125,
+    "wall_s": 0.17509007453918457,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "219": {
+    "text": "alarm",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 154174417,
+    "wall_s": 0.17442679405212402,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "220": {
+    "text": "timer",
+    "prompt_tokens": 156,
+    "eval_tokens": 2,
+    "total_ns": 150163917,
+    "wall_s": 0.16890406608581543,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "221": {
+    "text": "alarm",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 151655084,
+    "wall_s": 0.17309784889221191,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "222": {
+    "text": "reminder",
+    "prompt_tokens": 164,
+    "eval_tokens": 2,
+    "total_ns": 155035459,
+    "wall_s": 0.1756749153137207,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "223": {
+    "text": "reminder",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 155313042,
+    "wall_s": 0.1728229522705078,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "224": {
+    "text": "alarm",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 152127541,
+    "wall_s": 0.17072415351867676,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "225": {
+    "text": "alarm",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 153193125,
+    "wall_s": 0.17433500289916992,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "226": {
+    "text": "timer",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 154011084,
+    "wall_s": 0.17401504516601562,
+    "pred": "timer",
+    "gold": "timer"
+  },
+  "227": {
+    "text": "calendar",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 153763834,
+    "wall_s": 0.17200994491577148,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "228": {
+    "text": "alarm",
+    "prompt_tokens": 164,
+    "eval_tokens": 2,
+    "total_ns": 156327458,
+    "wall_s": 0.17406678199768066,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "229": {
+    "text": "calendar",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 154921250,
+    "wall_s": 0.1748790740966797,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "230": {
+    "text": "reminder",
+    "prompt_tokens": 162,
+    "eval_tokens": 2,
+    "total_ns": 155540833,
+    "wall_s": 0.17807531356811523,
+    "pred": "reminder",
+    "gold": "reminder"
+  },
+  "231": {
+    "text": "alarm",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 154567458,
+    "wall_s": 0.18172383308410645,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "232": {
+    "text": "calendar",
+    "prompt_tokens": 161,
+    "eval_tokens": 2,
+    "total_ns": 151995209,
+    "wall_s": 0.16993188858032227,
+    "pred": "calendar",
+    "gold": "calendar"
+  },
+  "233": {
+    "text": "meeting",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 149981458,
+    "wall_s": 0.1675119400024414,
+    "pred": "?",
+    "gold": "meeting_schedule"
+  },
+  "234": {
+    "text": "alarm",
+    "prompt_tokens": 163,
+    "eval_tokens": 2,
+    "total_ns": 151590166,
+    "wall_s": 0.16965293884277344,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "235": {
+    "text": "alarm",
+    "prompt_tokens": 158,
+    "eval_tokens": 2,
+    "total_ns": 153209167,
+    "wall_s": 0.17162179946899414,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "236": {
+    "text": "todo_list",
+    "prompt_tokens": 160,
+    "eval_tokens": 3,
+    "total_ns": 175605792,
+    "wall_s": 0.19340062141418457,
+    "pred": "todo_list",
+    "gold": "todo_list"
+  },
+  "237": {
+    "text": "I can't provide information on personal topics",
+    "prompt_tokens": 159,
+    "eval_tokens": 8,
+    "total_ns": 296406500,
+    "wall_s": 0.3206160068511963,
+    "pred": "?",
+    "gold": "reminder"
+  },
+  "238": {
+    "text": "alarm",
+    "prompt_tokens": 157,
+    "eval_tokens": 2,
+    "total_ns": 189815250,
+    "wall_s": 0.2093639373779297,
+    "pred": "alarm",
+    "gold": "alarm"
+  },
+  "239": {
+    "text": "reminder",
+    "prompt_tokens": 165,
+    "eval_tokens": 2,
+    "total_ns": 159570709,
+    "wall_s": 0.1835782527923584,
+    "pred": "reminder",
+    "gold": "reminder"
+  }
+}

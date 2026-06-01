@@ -1,0 +1,16 @@
+{
+  "fleet": [
+    "qwen0.5b",
+    "llama1b",
+    "qwen1.5b",
+    "gemma2b",
+    "qwen3b",
+    "llama3b",
+    "phi3.5",
+    "qwen7b",
+    "mistral7b",
+    "llama8b"
+  ],
+  "n_stream": 360,
+  "error_agreement": 0.7501851851851852
+}

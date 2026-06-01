@@ -1,0 +1,82 @@
+[
+  {
+    "name": "R1a pooled Spearman(I, accuracy) > 0.8",
+    "verdict": "PASS",
+    "detail": "\u03c1=0.977  95%CI[0.916,0.996]  (n=30 model\u00d7domain points)"
+  },
+  {
+    "name": "R1a per-domain Spearman > 0.6 in every domain",
+    "verdict": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "R1b slope(\u0394G_hold ~ I) CI excludes 0 (positive)",
+    "verdict": "PASS",
+    "detail": "slope=0.935  95%CI[0.915,0.954]"
+  },
+  {
+    "name": "R2-v2 over-confidence dissipation > 0 in EVERY domain",
+    "verdict": "PASS",
+    "detail": ""
+  },
+  {
+    "name": "R5 [per-1k-tokens] value-price > round_robin (REQUIRED)",
+    "verdict": "PASS",
+    "detail": "\u0394=+1.6575 95%CI[+1.0344,+2.2467]"
+  },
+  {
+    "name": "R5 [per-1k-tokens] value-price > equal_pool (REQUIRED)",
+    "verdict": "PASS",
+    "detail": "\u0394=+6.1074 95%CI[+5.4560,+6.6966]"
+  },
+  {
+    "name": "R5 [per-1k-tokens] value-price > best_single (info)",
+    "verdict": "INFO",
+    "detail": "\u0394=+0.4867 95%CI[+0.0579,+0.9488]"
+  },
+  {
+    "name": "R5 [per-1k-tokens] value-price > hand_tuned (STRONG)",
+    "verdict": "FAIL",
+    "detail": "\u0394=+0.0000 95%CI[+0.0000,+0.0000]  (CI overlaps 0 \u2192 honest tie/loss)"
+  },
+  {
+    "name": "R5 [per-1k-tokens] value-price > hand_cost (info)",
+    "verdict": "INFO",
+    "detail": "\u0394=+0.0000 95%CI[+0.0000,+0.0000]"
+  },
+  {
+    "name": "R5 [per-10s-latency] value-price > round_robin (REQUIRED)",
+    "verdict": "PASS",
+    "detail": "\u0394=+4.8137 95%CI[+1.8782,+7.7867]"
+  },
+  {
+    "name": "R5 [per-10s-latency] value-price > equal_pool (REQUIRED)",
+    "verdict": "PASS",
+    "detail": "\u0394=+20.0188 95%CI[+16.6117,+23.8957]"
+  },
+  {
+    "name": "R5 [per-10s-latency] value-price > best_single (info)",
+    "verdict": "INFO",
+    "detail": "\u0394=+8.5666 95%CI[+5.7698,+11.8222]"
+  },
+  {
+    "name": "R5 [per-10s-latency] value-price > hand_tuned (STRONG)",
+    "verdict": "PASS",
+    "detail": "\u0394=+6.4231 95%CI[+3.9202,+9.2236]"
+  },
+  {
+    "name": "R5 [per-10s-latency] value-price > hand_cost (info)",
+    "verdict": "INFO",
+    "detail": "\u0394=-21.9138 95%CI[-25.7065,-18.2204]"
+  },
+  {
+    "name": "Ceiling: all pairwise joint I \u2264 H(X)",
+    "verdict": "PASS",
+    "detail": "data-processing bound holds empirically"
+  },
+  {
+    "name": "Diversity: best diverse pair lifts joint I over best single (every domain)",
+    "verdict": "PASS",
+    "detail": "lifts=[0.095, 0.132, 0.134]"
+  }
+]

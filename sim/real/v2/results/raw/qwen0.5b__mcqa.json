@@ -1,0 +1,2162 @@
+{
+  "0": {
+    "text": "A. True, True",
+    "prompt_tokens": 98,
+    "eval_tokens": 6,
+    "total_ns": 182168542,
+    "wall_s": 0.20011019706726074,
+    "pred": "A",
+    "gold": "C"
+  },
+  "1": {
+    "text": "D",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 134729125,
+    "wall_s": 0.18174290657043457,
+    "pred": "D",
+    "gold": "D"
+  },
+  "2": {
+    "text": "A",
+    "prompt_tokens": 96,
+    "eval_tokens": 2,
+    "total_ns": 128730709,
+    "wall_s": 0.14705300331115723,
+    "pred": "A",
+    "gold": "C"
+  },
+  "3": {
+    "text": "A",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 137777583,
+    "wall_s": 0.15744590759277344,
+    "pred": "A",
+    "gold": "D"
+  },
+  "4": {
+    "text": "A",
+    "prompt_tokens": 101,
+    "eval_tokens": 2,
+    "total_ns": 139686250,
+    "wall_s": 0.21952295303344727,
+    "pred": "A",
+    "gold": "B"
+  },
+  "5": {
+    "text": "A",
+    "prompt_tokens": 142,
+    "eval_tokens": 2,
+    "total_ns": 188408375,
+    "wall_s": 0.3462178707122803,
+    "pred": "A",
+    "gold": "A"
+  },
+  "6": {
+    "text": "A",
+    "prompt_tokens": 79,
+    "eval_tokens": 2,
+    "total_ns": 126906584,
+    "wall_s": 0.1813960075378418,
+    "pred": "A",
+    "gold": "B"
+  },
+  "7": {
+    "text": "A",
+    "prompt_tokens": 123,
+    "eval_tokens": 2,
+    "total_ns": 173761417,
+    "wall_s": 0.28156614303588867,
+    "pred": "A",
+    "gold": "B"
+  },
+  "8": {
+    "text": "A",
+    "prompt_tokens": 72,
+    "eval_tokens": 2,
+    "total_ns": 123252542,
+    "wall_s": 0.142333984375,
+    "pred": "A",
+    "gold": "A"
+  },
+  "9": {
+    "text": "A.",
+    "prompt_tokens": 78,
+    "eval_tokens": 3,
+    "total_ns": 153929708,
+    "wall_s": 0.2579360008239746,
+    "pred": "A",
+    "gold": "A"
+  },
+  "10": {
+    "text": "A",
+    "prompt_tokens": 94,
+    "eval_tokens": 2,
+    "total_ns": 122818459,
+    "wall_s": 0.14131522178649902,
+    "pred": "A",
+    "gold": "B"
+  },
+  "11": {
+    "text": "A",
+    "prompt_tokens": 91,
+    "eval_tokens": 2,
+    "total_ns": 123901584,
+    "wall_s": 0.22370600700378418,
+    "pred": "A",
+    "gold": "C"
+  },
+  "12": {
+    "text": "A",
+    "prompt_tokens": 164,
+    "eval_tokens": 2,
+    "total_ns": 235776959,
+    "wall_s": 0.2699859142303467,
+    "pred": "A",
+    "gold": "A"
+  },
+  "13": {
+    "text": "B",
+    "prompt_tokens": 83,
+    "eval_tokens": 2,
+    "total_ns": 128306500,
+    "wall_s": 0.14720702171325684,
+    "pred": "B",
+    "gold": "C"
+  },
+  "14": {
+    "text": "A",
+    "prompt_tokens": 141,
+    "eval_tokens": 2,
+    "total_ns": 150136333,
+    "wall_s": 0.16893482208251953,
+    "pred": "A",
+    "gold": "C"
+  },
+  "15": {
+    "text": "A",
+    "prompt_tokens": 91,
+    "eval_tokens": 2,
+    "total_ns": 128947666,
+    "wall_s": 0.14836406707763672,
+    "pred": "A",
+    "gold": "B"
+  },
+  "16": {
+    "text": "A",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 120098167,
+    "wall_s": 0.1383211612701416,
+    "pred": "A",
+    "gold": "B"
+  },
+  "17": {
+    "text": "A",
+    "prompt_tokens": 164,
+    "eval_tokens": 2,
+    "total_ns": 148028209,
+    "wall_s": 0.172943115234375,
+    "pred": "A",
+    "gold": "B"
+  },
+  "18": {
+    "text": "A.",
+    "prompt_tokens": 127,
+    "eval_tokens": 3,
+    "total_ns": 157940500,
+    "wall_s": 0.18005824089050293,
+    "pred": "A",
+    "gold": "A"
+  },
+  "19": {
+    "text": "A",
+    "prompt_tokens": 79,
+    "eval_tokens": 2,
+    "total_ns": 129116041,
+    "wall_s": 0.14826130867004395,
+    "pred": "A",
+    "gold": "A"
+  },
+  "20": {
+    "text": "A",
+    "prompt_tokens": 81,
+    "eval_tokens": 2,
+    "total_ns": 120765750,
+    "wall_s": 0.19522690773010254,
+    "pred": "A",
+    "gold": "B"
+  },
+  "21": {
+    "text": "A",
+    "prompt_tokens": 129,
+    "eval_tokens": 2,
+    "total_ns": 149532084,
+    "wall_s": 0.16640377044677734,
+    "pred": "A",
+    "gold": "C"
+  },
+  "22": {
+    "text": "A",
+    "prompt_tokens": 125,
+    "eval_tokens": 2,
+    "total_ns": 140182542,
+    "wall_s": 0.15751194953918457,
+    "pred": "A",
+    "gold": "D"
+  },
+  "23": {
+    "text": "A.",
+    "prompt_tokens": 76,
+    "eval_tokens": 3,
+    "total_ns": 134241292,
+    "wall_s": 0.20171022415161133,
+    "pred": "A",
+    "gold": "A"
+  },
+  "24": {
+    "text": "A",
+    "prompt_tokens": 83,
+    "eval_tokens": 2,
+    "total_ns": 138002625,
+    "wall_s": 0.16339612007141113,
+    "pred": "A",
+    "gold": "D"
+  },
+  "25": {
+    "text": "A.",
+    "prompt_tokens": 101,
+    "eval_tokens": 3,
+    "total_ns": 146743292,
+    "wall_s": 0.16736602783203125,
+    "pred": "A",
+    "gold": "B"
+  },
+  "26": {
+    "text": "A. True, True",
+    "prompt_tokens": 103,
+    "eval_tokens": 6,
+    "total_ns": 184135958,
+    "wall_s": 0.20296001434326172,
+    "pred": "A",
+    "gold": "D"
+  },
+  "27": {
+    "text": "A. True, True",
+    "prompt_tokens": 122,
+    "eval_tokens": 6,
+    "total_ns": 195473375,
+    "wall_s": 0.2166121006011963,
+    "pred": "A",
+    "gold": "A"
+  },
+  "28": {
+    "text": "A",
+    "prompt_tokens": 91,
+    "eval_tokens": 2,
+    "total_ns": 135577083,
+    "wall_s": 0.15319085121154785,
+    "pred": "A",
+    "gold": "B"
+  },
+  "29": {
+    "text": "B",
+    "prompt_tokens": 83,
+    "eval_tokens": 2,
+    "total_ns": 121811375,
+    "wall_s": 0.14287900924682617,
+    "pred": "B",
+    "gold": "B"
+  },
+  "30": {
+    "text": "D",
+    "prompt_tokens": 72,
+    "eval_tokens": 2,
+    "total_ns": 122671125,
+    "wall_s": 0.14801311492919922,
+    "pred": "D",
+    "gold": "D"
+  },
+  "31": {
+    "text": "A. True, True",
+    "prompt_tokens": 119,
+    "eval_tokens": 6,
+    "total_ns": 183340250,
+    "wall_s": 0.2008659839630127,
+    "pred": "A",
+    "gold": "A"
+  },
+  "32": {
+    "text": "C",
+    "prompt_tokens": 80,
+    "eval_tokens": 2,
+    "total_ns": 135301750,
+    "wall_s": 0.1766211986541748,
+    "pred": "C",
+    "gold": "C"
+  },
+  "33": {
+    "text": "A",
+    "prompt_tokens": 69,
+    "eval_tokens": 2,
+    "total_ns": 126783250,
+    "wall_s": 0.14813494682312012,
+    "pred": "A",
+    "gold": "B"
+  },
+  "34": {
+    "text": "A. True, True",
+    "prompt_tokens": 126,
+    "eval_tokens": 6,
+    "total_ns": 185627791,
+    "wall_s": 0.20502400398254395,
+    "pred": "A",
+    "gold": "C"
+  },
+  "35": {
+    "text": "A",
+    "prompt_tokens": 87,
+    "eval_tokens": 2,
+    "total_ns": 132238208,
+    "wall_s": 0.16886091232299805,
+    "pred": "A",
+    "gold": "A"
+  },
+  "36": {
+    "text": "A",
+    "prompt_tokens": 110,
+    "eval_tokens": 2,
+    "total_ns": 141223500,
+    "wall_s": 0.15927815437316895,
+    "pred": "A",
+    "gold": "C"
+  },
+  "37": {
+    "text": "A. True, True",
+    "prompt_tokens": 128,
+    "eval_tokens": 6,
+    "total_ns": 188973959,
+    "wall_s": 0.208662748336792,
+    "pred": "A",
+    "gold": "C"
+  },
+  "38": {
+    "text": "B",
+    "prompt_tokens": 81,
+    "eval_tokens": 2,
+    "total_ns": 134182667,
+    "wall_s": 0.15668606758117676,
+    "pred": "B",
+    "gold": "B"
+  },
+  "39": {
+    "text": "A. True, True",
+    "prompt_tokens": 91,
+    "eval_tokens": 6,
+    "total_ns": 169079333,
+    "wall_s": 0.1889359951019287,
+    "pred": "A",
+    "gold": "C"
+  },
+  "40": {
+    "text": "A",
+    "prompt_tokens": 84,
+    "eval_tokens": 2,
+    "total_ns": 130169250,
+    "wall_s": 0.1476600170135498,
+    "pred": "A",
+    "gold": "A"
+  },
+  "41": {
+    "text": "A",
+    "prompt_tokens": 101,
+    "eval_tokens": 2,
+    "total_ns": 135193709,
+    "wall_s": 0.18536806106567383,
+    "pred": "A",
+    "gold": "C"
+  },
+  "42": {
+    "text": "A. True, True",
+    "prompt_tokens": 113,
+    "eval_tokens": 6,
+    "total_ns": 195126500,
+    "wall_s": 0.21411609649658203,
+    "pred": "A",
+    "gold": "C"
+  },
+  "43": {
+    "text": "A. True, True",
+    "prompt_tokens": 84,
+    "eval_tokens": 6,
+    "total_ns": 180918916,
+    "wall_s": 0.2014157772064209,
+    "pred": "A",
+    "gold": "D"
+  },
+  "44": {
+    "text": "A",
+    "prompt_tokens": 101,
+    "eval_tokens": 2,
+    "total_ns": 145644208,
+    "wall_s": 0.16872191429138184,
+    "pred": "A",
+    "gold": "D"
+  },
+  "45": {
+    "text": "D",
+    "prompt_tokens": 80,
+    "eval_tokens": 2,
+    "total_ns": 126402500,
+    "wall_s": 0.14468884468078613,
+    "pred": "D",
+    "gold": "C"
+  },
+  "46": {
+    "text": "A",
+    "prompt_tokens": 101,
+    "eval_tokens": 2,
+    "total_ns": 135003000,
+    "wall_s": 0.15326380729675293,
+    "pred": "A",
+    "gold": "D"
+  },
+  "47": {
+    "text": "A",
+    "prompt_tokens": 123,
+    "eval_tokens": 2,
+    "total_ns": 137186167,
+    "wall_s": 0.16555118560791016,
+    "pred": "A",
+    "gold": "B"
+  },
+  "48": {
+    "text": "A",
+    "prompt_tokens": 126,
+    "eval_tokens": 2,
+    "total_ns": 142763792,
+    "wall_s": 0.16306304931640625,
+    "pred": "A",
+    "gold": "B"
+  },
+  "49": {
+    "text": "A",
+    "prompt_tokens": 120,
+    "eval_tokens": 2,
+    "total_ns": 139977917,
+    "wall_s": 0.15917706489562988,
+    "pred": "A",
+    "gold": "B"
+  },
+  "50": {
+    "text": "A.",
+    "prompt_tokens": 118,
+    "eval_tokens": 3,
+    "total_ns": 151798209,
+    "wall_s": 0.20190000534057617,
+    "pred": "A",
+    "gold": "A"
+  },
+  "51": {
+    "text": "A. True, True",
+    "prompt_tokens": 96,
+    "eval_tokens": 6,
+    "total_ns": 183269292,
+    "wall_s": 0.20379281044006348,
+    "pred": "A",
+    "gold": "D"
+  },
+  "52": {
+    "text": "A",
+    "prompt_tokens": 112,
+    "eval_tokens": 2,
+    "total_ns": 143940875,
+    "wall_s": 0.16236281394958496,
+    "pred": "A",
+    "gold": "C"
+  },
+  "53": {
+    "text": "A",
+    "prompt_tokens": 87,
+    "eval_tokens": 2,
+    "total_ns": 123915708,
+    "wall_s": 0.1574399471282959,
+    "pred": "A",
+    "gold": "C"
+  },
+  "54": {
+    "text": "A",
+    "prompt_tokens": 83,
+    "eval_tokens": 2,
+    "total_ns": 125185375,
+    "wall_s": 0.14582419395446777,
+    "pred": "A",
+    "gold": "D"
+  },
+  "55": {
+    "text": "A",
+    "prompt_tokens": 84,
+    "eval_tokens": 2,
+    "total_ns": 121149209,
+    "wall_s": 0.13884902000427246,
+    "pred": "A",
+    "gold": "B"
+  },
+  "56": {
+    "text": "A. True, True",
+    "prompt_tokens": 115,
+    "eval_tokens": 6,
+    "total_ns": 180569667,
+    "wall_s": 0.23962974548339844,
+    "pred": "A",
+    "gold": "D"
+  },
+  "57": {
+    "text": "A",
+    "prompt_tokens": 75,
+    "eval_tokens": 2,
+    "total_ns": 146665167,
+    "wall_s": 0.16595077514648438,
+    "pred": "A",
+    "gold": "B"
+  },
+  "58": {
+    "text": "A",
+    "prompt_tokens": 127,
+    "eval_tokens": 2,
+    "total_ns": 135681208,
+    "wall_s": 0.15267133712768555,
+    "pred": "A",
+    "gold": "B"
+  },
+  "59": {
+    "text": "A",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 152050417,
+    "wall_s": 0.20533299446105957,
+    "pred": "A",
+    "gold": "A"
+  },
+  "60": {
+    "text": "A. True, True",
+    "prompt_tokens": 114,
+    "eval_tokens": 6,
+    "total_ns": 199147666,
+    "wall_s": 0.21862411499023438,
+    "pred": "A",
+    "gold": "B"
+  },
+  "61": {
+    "text": "A",
+    "prompt_tokens": 97,
+    "eval_tokens": 2,
+    "total_ns": 134506208,
+    "wall_s": 0.1521012783050537,
+    "pred": "A",
+    "gold": "C"
+  },
+  "62": {
+    "text": "A",
+    "prompt_tokens": 118,
+    "eval_tokens": 2,
+    "total_ns": 136415208,
+    "wall_s": 0.15469098091125488,
+    "pred": "A",
+    "gold": "A"
+  },
+  "63": {
+    "text": "A",
+    "prompt_tokens": 75,
+    "eval_tokens": 2,
+    "total_ns": 122838708,
+    "wall_s": 0.14106988906860352,
+    "pred": "A",
+    "gold": "C"
+  },
+  "64": {
+    "text": "A",
+    "prompt_tokens": 149,
+    "eval_tokens": 2,
+    "total_ns": 150731083,
+    "wall_s": 0.16983914375305176,
+    "pred": "A",
+    "gold": "C"
+  },
+  "65": {
+    "text": "A",
+    "prompt_tokens": 103,
+    "eval_tokens": 2,
+    "total_ns": 143190459,
+    "wall_s": 0.21245908737182617,
+    "pred": "A",
+    "gold": "C"
+  },
+  "66": {
+    "text": "A",
+    "prompt_tokens": 106,
+    "eval_tokens": 2,
+    "total_ns": 153629542,
+    "wall_s": 0.1751399040222168,
+    "pred": "A",
+    "gold": "B"
+  },
+  "67": {
+    "text": "B",
+    "prompt_tokens": 85,
+    "eval_tokens": 2,
+    "total_ns": 126320625,
+    "wall_s": 0.1448671817779541,
+    "pred": "B",
+    "gold": "B"
+  },
+  "68": {
+    "text": "C",
+    "prompt_tokens": 110,
+    "eval_tokens": 2,
+    "total_ns": 134422875,
+    "wall_s": 0.20508909225463867,
+    "pred": "C",
+    "gold": "D"
+  },
+  "69": {
+    "text": "A. True, True",
+    "prompt_tokens": 100,
+    "eval_tokens": 6,
+    "total_ns": 185242709,
+    "wall_s": 0.2044682502746582,
+    "pred": "A",
+    "gold": "A"
+  },
+  "70": {
+    "text": "A. True, True",
+    "prompt_tokens": 115,
+    "eval_tokens": 6,
+    "total_ns": 185951042,
+    "wall_s": 0.20533418655395508,
+    "pred": "A",
+    "gold": "A"
+  },
+  "71": {
+    "text": "A. True, True",
+    "prompt_tokens": 87,
+    "eval_tokens": 6,
+    "total_ns": 180888583,
+    "wall_s": 0.201829195022583,
+    "pred": "A",
+    "gold": "C"
+  },
+  "72": {
+    "text": "A",
+    "prompt_tokens": 76,
+    "eval_tokens": 2,
+    "total_ns": 128429084,
+    "wall_s": 0.1472170352935791,
+    "pred": "A",
+    "gold": "C"
+  },
+  "73": {
+    "text": "A",
+    "prompt_tokens": 101,
+    "eval_tokens": 2,
+    "total_ns": 136401125,
+    "wall_s": 0.15636992454528809,
+    "pred": "A",
+    "gold": "C"
+  },
+  "74": {
+    "text": "C",
+    "prompt_tokens": 75,
+    "eval_tokens": 2,
+    "total_ns": 123577833,
+    "wall_s": 0.1442399024963379,
+    "pred": "C",
+    "gold": "C"
+  },
+  "75": {
+    "text": "A",
+    "prompt_tokens": 89,
+    "eval_tokens": 2,
+    "total_ns": 120261709,
+    "wall_s": 0.13991093635559082,
+    "pred": "A",
+    "gold": "B"
+  },
+  "76": {
+    "text": "A",
+    "prompt_tokens": 124,
+    "eval_tokens": 2,
+    "total_ns": 136140084,
+    "wall_s": 0.15452289581298828,
+    "pred": "A",
+    "gold": "A"
+  },
+  "77": {
+    "text": "A.",
+    "prompt_tokens": 87,
+    "eval_tokens": 3,
+    "total_ns": 137973166,
+    "wall_s": 0.21586394309997559,
+    "pred": "A",
+    "gold": "C"
+  },
+  "78": {
+    "text": "A",
+    "prompt_tokens": 116,
+    "eval_tokens": 2,
+    "total_ns": 156237375,
+    "wall_s": 0.17719388008117676,
+    "pred": "A",
+    "gold": "B"
+  },
+  "79": {
+    "text": "D",
+    "prompt_tokens": 85,
+    "eval_tokens": 2,
+    "total_ns": 125767125,
+    "wall_s": 0.14590120315551758,
+    "pred": "D",
+    "gold": "B"
+  },
+  "80": {
+    "text": "A",
+    "prompt_tokens": 110,
+    "eval_tokens": 2,
+    "total_ns": 136846417,
+    "wall_s": 0.1994950771331787,
+    "pred": "A",
+    "gold": "C"
+  },
+  "81": {
+    "text": "A",
+    "prompt_tokens": 123,
+    "eval_tokens": 2,
+    "total_ns": 148998875,
+    "wall_s": 0.16879510879516602,
+    "pred": "A",
+    "gold": "C"
+  },
+  "82": {
+    "text": "A. spastic paralysis",
+    "prompt_tokens": 112,
+    "eval_tokens": 6,
+    "total_ns": 187411083,
+    "wall_s": 0.20270586013793945,
+    "pred": "A",
+    "gold": "C"
+  },
+  "83": {
+    "text": "A. True, True",
+    "prompt_tokens": 103,
+    "eval_tokens": 6,
+    "total_ns": 197333375,
+    "wall_s": 0.21775174140930176,
+    "pred": "A",
+    "gold": "B"
+  },
+  "84": {
+    "text": "A",
+    "prompt_tokens": 104,
+    "eval_tokens": 2,
+    "total_ns": 151578417,
+    "wall_s": 0.1745448112487793,
+    "pred": "A",
+    "gold": "C"
+  },
+  "85": {
+    "text": "A. 8",
+    "prompt_tokens": 100,
+    "eval_tokens": 5,
+    "total_ns": 157859291,
+    "wall_s": 0.1756281852722168,
+    "pred": "A",
+    "gold": "C"
+  },
+  "86": {
+    "text": "C",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 129038958,
+    "wall_s": 0.14668011665344238,
+    "pred": "C",
+    "gold": "C"
+  },
+  "87": {
+    "text": "A. True, True",
+    "prompt_tokens": 126,
+    "eval_tokens": 6,
+    "total_ns": 186354333,
+    "wall_s": 0.20658588409423828,
+    "pred": "A",
+    "gold": "D"
+  },
+  "88": {
+    "text": "A",
+    "prompt_tokens": 80,
+    "eval_tokens": 2,
+    "total_ns": 134590916,
+    "wall_s": 0.15407586097717285,
+    "pred": "A",
+    "gold": "A"
+  },
+  "89": {
+    "text": "A",
+    "prompt_tokens": 90,
+    "eval_tokens": 2,
+    "total_ns": 120949500,
+    "wall_s": 0.1392529010772705,
+    "pred": "A",
+    "gold": "D"
+  },
+  "90": {
+    "text": "A",
+    "prompt_tokens": 85,
+    "eval_tokens": 2,
+    "total_ns": 121696834,
+    "wall_s": 0.14011693000793457,
+    "pred": "A",
+    "gold": "D"
+  },
+  "91": {
+    "text": "A",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 119648125,
+    "wall_s": 0.13758492469787598,
+    "pred": "A",
+    "gold": "B"
+  },
+  "92": {
+    "text": "B",
+    "prompt_tokens": 84,
+    "eval_tokens": 2,
+    "total_ns": 122394042,
+    "wall_s": 0.14032888412475586,
+    "pred": "B",
+    "gold": "B"
+  },
+  "93": {
+    "text": "A. True, True",
+    "prompt_tokens": 96,
+    "eval_tokens": 6,
+    "total_ns": 192870833,
+    "wall_s": 0.2988259792327881,
+    "pred": "A",
+    "gold": "A"
+  },
+  "94": {
+    "text": "A",
+    "prompt_tokens": 121,
+    "eval_tokens": 2,
+    "total_ns": 145472667,
+    "wall_s": 0.16536903381347656,
+    "pred": "A",
+    "gold": "C"
+  },
+  "95": {
+    "text": "A",
+    "prompt_tokens": 105,
+    "eval_tokens": 2,
+    "total_ns": 135792125,
+    "wall_s": 0.15382695198059082,
+    "pred": "A",
+    "gold": "B"
+  },
+  "96": {
+    "text": "A",
+    "prompt_tokens": 99,
+    "eval_tokens": 2,
+    "total_ns": 125140500,
+    "wall_s": 0.14371395111083984,
+    "pred": "A",
+    "gold": "B"
+  },
+  "97": {
+    "text": "A. True, True",
+    "prompt_tokens": 121,
+    "eval_tokens": 6,
+    "total_ns": 184615250,
+    "wall_s": 0.20541787147521973,
+    "pred": "A",
+    "gold": "C"
+  },
+  "98": {
+    "text": "A. True, True",
+    "prompt_tokens": 111,
+    "eval_tokens": 6,
+    "total_ns": 196912916,
+    "wall_s": 0.2171621322631836,
+    "pred": "A",
+    "gold": "D"
+  },
+  "99": {
+    "text": "A",
+    "prompt_tokens": 75,
+    "eval_tokens": 2,
+    "total_ns": 132737916,
+    "wall_s": 0.1525430679321289,
+    "pred": "A",
+    "gold": "C"
+  },
+  "100": {
+    "text": "B",
+    "prompt_tokens": 90,
+    "eval_tokens": 2,
+    "total_ns": 117494583,
+    "wall_s": 0.13561201095581055,
+    "pred": "B",
+    "gold": "B"
+  },
+  "101": {
+    "text": "A. True, True",
+    "prompt_tokens": 100,
+    "eval_tokens": 6,
+    "total_ns": 167708583,
+    "wall_s": 0.19130897521972656,
+    "pred": "A",
+    "gold": "A"
+  },
+  "102": {
+    "text": "A",
+    "prompt_tokens": 109,
+    "eval_tokens": 2,
+    "total_ns": 148701125,
+    "wall_s": 0.16722607612609863,
+    "pred": "A",
+    "gold": "A"
+  },
+  "103": {
+    "text": "D",
+    "prompt_tokens": 80,
+    "eval_tokens": 2,
+    "total_ns": 125115000,
+    "wall_s": 0.14427900314331055,
+    "pred": "D",
+    "gold": "B"
+  },
+  "104": {
+    "text": "A",
+    "prompt_tokens": 93,
+    "eval_tokens": 2,
+    "total_ns": 121552208,
+    "wall_s": 0.21079611778259277,
+    "pred": "A",
+    "gold": "D"
+  },
+  "105": {
+    "text": "A",
+    "prompt_tokens": 90,
+    "eval_tokens": 2,
+    "total_ns": 144001666,
+    "wall_s": 0.16582512855529785,
+    "pred": "A",
+    "gold": "B"
+  },
+  "106": {
+    "text": "D",
+    "prompt_tokens": 83,
+    "eval_tokens": 2,
+    "total_ns": 119661375,
+    "wall_s": 0.1360640525817871,
+    "pred": "D",
+    "gold": "D"
+  },
+  "107": {
+    "text": "A",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 120054375,
+    "wall_s": 0.2226250171661377,
+    "pred": "A",
+    "gold": "B"
+  },
+  "108": {
+    "text": "A",
+    "prompt_tokens": 115,
+    "eval_tokens": 2,
+    "total_ns": 161333875,
+    "wall_s": 0.1812291145324707,
+    "pred": "A",
+    "gold": "C"
+  },
+  "109": {
+    "text": "A",
+    "prompt_tokens": 87,
+    "eval_tokens": 2,
+    "total_ns": 123025500,
+    "wall_s": 0.14087581634521484,
+    "pred": "A",
+    "gold": "A"
+  },
+  "110": {
+    "text": "A",
+    "prompt_tokens": 91,
+    "eval_tokens": 2,
+    "total_ns": 120189125,
+    "wall_s": 0.20187902450561523,
+    "pred": "A",
+    "gold": "B"
+  },
+  "111": {
+    "text": "A. True, True",
+    "prompt_tokens": 92,
+    "eval_tokens": 6,
+    "total_ns": 184472750,
+    "wall_s": 0.20355606079101562,
+    "pred": "A",
+    "gold": "D"
+  },
+  "112": {
+    "text": "A",
+    "prompt_tokens": 74,
+    "eval_tokens": 2,
+    "total_ns": 128350542,
+    "wall_s": 0.14627408981323242,
+    "pred": "A",
+    "gold": "A"
+  },
+  "113": {
+    "text": "A. True, True",
+    "prompt_tokens": 98,
+    "eval_tokens": 6,
+    "total_ns": 167627208,
+    "wall_s": 0.18326091766357422,
+    "pred": "A",
+    "gold": "D"
+  },
+  "114": {
+    "text": "D",
+    "prompt_tokens": 73,
+    "eval_tokens": 2,
+    "total_ns": 127717083,
+    "wall_s": 0.14609718322753906,
+    "pred": "D",
+    "gold": "B"
+  },
+  "115": {
+    "text": "A",
+    "prompt_tokens": 135,
+    "eval_tokens": 2,
+    "total_ns": 149032208,
+    "wall_s": 0.16711807250976562,
+    "pred": "A",
+    "gold": "C"
+  },
+  "116": {
+    "text": "A",
+    "prompt_tokens": 91,
+    "eval_tokens": 2,
+    "total_ns": 125980875,
+    "wall_s": 0.20089077949523926,
+    "pred": "A",
+    "gold": "C"
+  },
+  "117": {
+    "text": "A.",
+    "prompt_tokens": 113,
+    "eval_tokens": 3,
+    "total_ns": 159908666,
+    "wall_s": 0.17908096313476562,
+    "pred": "A",
+    "gold": "B"
+  },
+  "118": {
+    "text": "A. True, True",
+    "prompt_tokens": 98,
+    "eval_tokens": 6,
+    "total_ns": 174262625,
+    "wall_s": 0.1937568187713623,
+    "pred": "A",
+    "gold": "D"
+  },
+  "119": {
+    "text": "A",
+    "prompt_tokens": 91,
+    "eval_tokens": 2,
+    "total_ns": 129913750,
+    "wall_s": 0.1502370834350586,
+    "pred": "A",
+    "gold": "D"
+  },
+  "120": {
+    "text": "A",
+    "prompt_tokens": 74,
+    "eval_tokens": 2,
+    "total_ns": 121042583,
+    "wall_s": 0.13963103294372559,
+    "pred": "A",
+    "gold": "A"
+  },
+  "121": {
+    "text": "A",
+    "prompt_tokens": 107,
+    "eval_tokens": 2,
+    "total_ns": 136659250,
+    "wall_s": 0.1568598747253418,
+    "pred": "A",
+    "gold": "D"
+  },
+  "122": {
+    "text": "A",
+    "prompt_tokens": 127,
+    "eval_tokens": 2,
+    "total_ns": 139868625,
+    "wall_s": 0.22577118873596191,
+    "pred": "A",
+    "gold": "A"
+  },
+  "123": {
+    "text": "A. True, True",
+    "prompt_tokens": 102,
+    "eval_tokens": 6,
+    "total_ns": 201721042,
+    "wall_s": 0.22290897369384766,
+    "pred": "A",
+    "gold": "C"
+  },
+  "124": {
+    "text": "A. True, True",
+    "prompt_tokens": 116,
+    "eval_tokens": 6,
+    "total_ns": 196369000,
+    "wall_s": 0.30190181732177734,
+    "pred": "A",
+    "gold": "A"
+  },
+  "125": {
+    "text": "A",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 174228625,
+    "wall_s": 0.19492506980895996,
+    "pred": "A",
+    "gold": "C"
+  },
+  "126": {
+    "text": "A",
+    "prompt_tokens": 104,
+    "eval_tokens": 2,
+    "total_ns": 139655375,
+    "wall_s": 0.15628528594970703,
+    "pred": "A",
+    "gold": "D"
+  },
+  "127": {
+    "text": "A.",
+    "prompt_tokens": 81,
+    "eval_tokens": 3,
+    "total_ns": 136890666,
+    "wall_s": 0.17207694053649902,
+    "pred": "A",
+    "gold": "A"
+  },
+  "128": {
+    "text": "A",
+    "prompt_tokens": 81,
+    "eval_tokens": 2,
+    "total_ns": 125086875,
+    "wall_s": 0.1449599266052246,
+    "pred": "A",
+    "gold": "C"
+  },
+  "129": {
+    "text": "D",
+    "prompt_tokens": 84,
+    "eval_tokens": 2,
+    "total_ns": 120947792,
+    "wall_s": 0.138779878616333,
+    "pred": "D",
+    "gold": "D"
+  },
+  "130": {
+    "text": "C",
+    "prompt_tokens": 84,
+    "eval_tokens": 2,
+    "total_ns": 121276250,
+    "wall_s": 0.13909101486206055,
+    "pred": "C",
+    "gold": "C"
+  },
+  "131": {
+    "text": "A. True, True",
+    "prompt_tokens": 122,
+    "eval_tokens": 6,
+    "total_ns": 205403041,
+    "wall_s": 0.3131232261657715,
+    "pred": "A",
+    "gold": "C"
+  },
+  "132": {
+    "text": "A",
+    "prompt_tokens": 116,
+    "eval_tokens": 2,
+    "total_ns": 147707625,
+    "wall_s": 0.1679840087890625,
+    "pred": "A",
+    "gold": "D"
+  },
+  "133": {
+    "text": "A",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 139684791,
+    "wall_s": 0.15762114524841309,
+    "pred": "A",
+    "gold": "B"
+  },
+  "134": {
+    "text": "A",
+    "prompt_tokens": 87,
+    "eval_tokens": 2,
+    "total_ns": 126191500,
+    "wall_s": 0.14447879791259766,
+    "pred": "A",
+    "gold": "C"
+  },
+  "135": {
+    "text": "A. True, True",
+    "prompt_tokens": 112,
+    "eval_tokens": 6,
+    "total_ns": 182037750,
+    "wall_s": 0.19897890090942383,
+    "pred": "A",
+    "gold": "A"
+  },
+  "136": {
+    "text": "A",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 131463958,
+    "wall_s": 0.16709303855895996,
+    "pred": "A",
+    "gold": "D"
+  },
+  "137": {
+    "text": "A",
+    "prompt_tokens": 97,
+    "eval_tokens": 2,
+    "total_ns": 124136750,
+    "wall_s": 0.14310979843139648,
+    "pred": "A",
+    "gold": "B"
+  },
+  "138": {
+    "text": "A",
+    "prompt_tokens": 124,
+    "eval_tokens": 2,
+    "total_ns": 136704209,
+    "wall_s": 0.15543007850646973,
+    "pred": "A",
+    "gold": "B"
+  },
+  "139": {
+    "text": "A",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 124953458,
+    "wall_s": 0.22574734687805176,
+    "pred": "A",
+    "gold": "A"
+  },
+  "140": {
+    "text": "A. True, True",
+    "prompt_tokens": 96,
+    "eval_tokens": 6,
+    "total_ns": 193138792,
+    "wall_s": 0.2112751007080078,
+    "pred": "A",
+    "gold": "C"
+  },
+  "141": {
+    "text": "A",
+    "prompt_tokens": 138,
+    "eval_tokens": 2,
+    "total_ns": 160101375,
+    "wall_s": 0.18099570274353027,
+    "pred": "A",
+    "gold": "B"
+  },
+  "142": {
+    "text": "A",
+    "prompt_tokens": 77,
+    "eval_tokens": 2,
+    "total_ns": 125674000,
+    "wall_s": 0.14391493797302246,
+    "pred": "A",
+    "gold": "D"
+  },
+  "143": {
+    "text": "A",
+    "prompt_tokens": 115,
+    "eval_tokens": 2,
+    "total_ns": 133491541,
+    "wall_s": 0.15191292762756348,
+    "pred": "A",
+    "gold": "D"
+  },
+  "144": {
+    "text": "A. True, True",
+    "prompt_tokens": 126,
+    "eval_tokens": 6,
+    "total_ns": 185848417,
+    "wall_s": 0.20437908172607422,
+    "pred": "A",
+    "gold": "A"
+  },
+  "145": {
+    "text": "A. True, True",
+    "prompt_tokens": 119,
+    "eval_tokens": 6,
+    "total_ns": 195508542,
+    "wall_s": 0.21497893333435059,
+    "pred": "A",
+    "gold": "C"
+  },
+  "146": {
+    "text": "A",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 135651042,
+    "wall_s": 0.15411901473999023,
+    "pred": "A",
+    "gold": "D"
+  },
+  "147": {
+    "text": "D",
+    "prompt_tokens": 75,
+    "eval_tokens": 2,
+    "total_ns": 119085125,
+    "wall_s": 0.13807272911071777,
+    "pred": "D",
+    "gold": "C"
+  },
+  "148": {
+    "text": "A",
+    "prompt_tokens": 130,
+    "eval_tokens": 2,
+    "total_ns": 135098125,
+    "wall_s": 0.17093491554260254,
+    "pred": "A",
+    "gold": "C"
+  },
+  "149": {
+    "text": "C",
+    "prompt_tokens": 81,
+    "eval_tokens": 2,
+    "total_ns": 128135250,
+    "wall_s": 0.1473100185394287,
+    "pred": "C",
+    "gold": "C"
+  },
+  "150": {
+    "text": "A. True, True",
+    "prompt_tokens": 125,
+    "eval_tokens": 6,
+    "total_ns": 183046042,
+    "wall_s": 0.2010810375213623,
+    "pred": "A",
+    "gold": "B"
+  },
+  "151": {
+    "text": "A",
+    "prompt_tokens": 93,
+    "eval_tokens": 2,
+    "total_ns": 134342667,
+    "wall_s": 0.17611479759216309,
+    "pred": "A",
+    "gold": "A"
+  },
+  "152": {
+    "text": "B",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 139825958,
+    "wall_s": 0.15752482414245605,
+    "pred": "B",
+    "gold": "A"
+  },
+  "153": {
+    "text": "A",
+    "prompt_tokens": 108,
+    "eval_tokens": 2,
+    "total_ns": 135816375,
+    "wall_s": 0.15439391136169434,
+    "pred": "A",
+    "gold": "C"
+  },
+  "154": {
+    "text": "A",
+    "prompt_tokens": 110,
+    "eval_tokens": 2,
+    "total_ns": 136134792,
+    "wall_s": 0.21176695823669434,
+    "pred": "A",
+    "gold": "D"
+  },
+  "155": {
+    "text": "A",
+    "prompt_tokens": 73,
+    "eval_tokens": 2,
+    "total_ns": 138665958,
+    "wall_s": 0.15739011764526367,
+    "pred": "A",
+    "gold": "D"
+  },
+  "156": {
+    "text": "A.",
+    "prompt_tokens": 76,
+    "eval_tokens": 3,
+    "total_ns": 132829500,
+    "wall_s": 0.15355706214904785,
+    "pred": "A",
+    "gold": "B"
+  },
+  "157": {
+    "text": "A",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 149805917,
+    "wall_s": 0.21350669860839844,
+    "pred": "A",
+    "gold": "A"
+  },
+  "158": {
+    "text": "A",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 156477125,
+    "wall_s": 0.1758289337158203,
+    "pred": "A",
+    "gold": "A"
+  },
+  "159": {
+    "text": "C",
+    "prompt_tokens": 91,
+    "eval_tokens": 2,
+    "total_ns": 124186042,
+    "wall_s": 0.1425023078918457,
+    "pred": "C",
+    "gold": "C"
+  },
+  "160": {
+    "text": "A. palatine processes.",
+    "prompt_tokens": 106,
+    "eval_tokens": 8,
+    "total_ns": 206811583,
+    "wall_s": 0.22499728202819824,
+    "pred": "A",
+    "gold": "C"
+  },
+  "161": {
+    "text": "A",
+    "prompt_tokens": 106,
+    "eval_tokens": 2,
+    "total_ns": 152507959,
+    "wall_s": 0.17386126518249512,
+    "pred": "A",
+    "gold": "C"
+  },
+  "162": {
+    "text": "A",
+    "prompt_tokens": 92,
+    "eval_tokens": 2,
+    "total_ns": 123935833,
+    "wall_s": 0.14302420616149902,
+    "pred": "A",
+    "gold": "D"
+  },
+  "163": {
+    "text": "A. True, True",
+    "prompt_tokens": 126,
+    "eval_tokens": 6,
+    "total_ns": 185389208,
+    "wall_s": 0.20459818840026855,
+    "pred": "A",
+    "gold": "A"
+  },
+  "164": {
+    "text": "A. True, True",
+    "prompt_tokens": 113,
+    "eval_tokens": 6,
+    "total_ns": 195144667,
+    "wall_s": 0.21381807327270508,
+    "pred": "A",
+    "gold": "C"
+  },
+  "165": {
+    "text": "D",
+    "prompt_tokens": 98,
+    "eval_tokens": 2,
+    "total_ns": 134322208,
+    "wall_s": 0.16036033630371094,
+    "pred": "D",
+    "gold": "D"
+  },
+  "166": {
+    "text": "A. not anti-symmetric",
+    "prompt_tokens": 100,
+    "eval_tokens": 7,
+    "total_ns": 181834208,
+    "wall_s": 0.20221495628356934,
+    "pred": "A",
+    "gold": "B"
+  },
+  "167": {
+    "text": "A. True, True",
+    "prompt_tokens": 116,
+    "eval_tokens": 6,
+    "total_ns": 194938375,
+    "wall_s": 0.21342730522155762,
+    "pred": "A",
+    "gold": "C"
+  },
+  "168": {
+    "text": "A",
+    "prompt_tokens": 118,
+    "eval_tokens": 2,
+    "total_ns": 148551833,
+    "wall_s": 0.2374100685119629,
+    "pred": "A",
+    "gold": "B"
+  },
+  "169": {
+    "text": "B",
+    "prompt_tokens": 97,
+    "eval_tokens": 2,
+    "total_ns": 144583583,
+    "wall_s": 0.16326403617858887,
+    "pred": "B",
+    "gold": "B"
+  },
+  "170": {
+    "text": "A",
+    "prompt_tokens": 83,
+    "eval_tokens": 2,
+    "total_ns": 121849458,
+    "wall_s": 0.1396801471710205,
+    "pred": "A",
+    "gold": "C"
+  },
+  "171": {
+    "text": "C",
+    "prompt_tokens": 75,
+    "eval_tokens": 2,
+    "total_ns": 118933500,
+    "wall_s": 0.22150707244873047,
+    "pred": "C",
+    "gold": "C"
+  },
+  "172": {
+    "text": "A. True, True",
+    "prompt_tokens": 103,
+    "eval_tokens": 6,
+    "total_ns": 206126000,
+    "wall_s": 0.29482173919677734,
+    "pred": "A",
+    "gold": "B"
+  },
+  "173": {
+    "text": "A",
+    "prompt_tokens": 92,
+    "eval_tokens": 2,
+    "total_ns": 157302208,
+    "wall_s": 0.2335491180419922,
+    "pred": "A",
+    "gold": "D"
+  },
+  "174": {
+    "text": "D",
+    "prompt_tokens": 86,
+    "eval_tokens": 2,
+    "total_ns": 136871125,
+    "wall_s": 0.15657806396484375,
+    "pred": "D",
+    "gold": "D"
+  },
+  "175": {
+    "text": "B",
+    "prompt_tokens": 151,
+    "eval_tokens": 2,
+    "total_ns": 151508375,
+    "wall_s": 0.16869711875915527,
+    "pred": "B",
+    "gold": "B"
+  },
+  "176": {
+    "text": "A",
+    "prompt_tokens": 92,
+    "eval_tokens": 2,
+    "total_ns": 126182417,
+    "wall_s": 0.19486713409423828,
+    "pred": "A",
+    "gold": "A"
+  },
+  "177": {
+    "text": "A",
+    "prompt_tokens": 89,
+    "eval_tokens": 2,
+    "total_ns": 134167000,
+    "wall_s": 0.15549612045288086,
+    "pred": "A",
+    "gold": "A"
+  },
+  "178": {
+    "text": "D",
+    "prompt_tokens": 83,
+    "eval_tokens": 2,
+    "total_ns": 120210500,
+    "wall_s": 0.1456437110900879,
+    "pred": "D",
+    "gold": "D"
+  },
+  "179": {
+    "text": "D",
+    "prompt_tokens": 78,
+    "eval_tokens": 2,
+    "total_ns": 121812958,
+    "wall_s": 0.22214674949645996,
+    "pred": "D",
+    "gold": "D"
+  },
+  "180": {
+    "text": "A",
+    "prompt_tokens": 101,
+    "eval_tokens": 2,
+    "total_ns": 156560917,
+    "wall_s": 0.17585492134094238,
+    "pred": "A",
+    "gold": "A"
+  },
+  "181": {
+    "text": "D",
+    "prompt_tokens": 83,
+    "eval_tokens": 2,
+    "total_ns": 124506209,
+    "wall_s": 0.1428368091583252,
+    "pred": "D",
+    "gold": "C"
+  },
+  "182": {
+    "text": "A",
+    "prompt_tokens": 92,
+    "eval_tokens": 2,
+    "total_ns": 120975292,
+    "wall_s": 0.20738506317138672,
+    "pred": "A",
+    "gold": "C"
+  },
+  "183": {
+    "text": "D",
+    "prompt_tokens": 76,
+    "eval_tokens": 2,
+    "total_ns": 141230875,
+    "wall_s": 0.1589951515197754,
+    "pred": "D",
+    "gold": "D"
+  },
+  "184": {
+    "text": "A. True, True",
+    "prompt_tokens": 130,
+    "eval_tokens": 6,
+    "total_ns": 183468750,
+    "wall_s": 0.20312786102294922,
+    "pred": "A",
+    "gold": "C"
+  },
+  "185": {
+    "text": "A. True, True",
+    "prompt_tokens": 126,
+    "eval_tokens": 6,
+    "total_ns": 199966375,
+    "wall_s": 0.23163509368896484,
+    "pred": "A",
+    "gold": "C"
+  },
+  "186": {
+    "text": "A",
+    "prompt_tokens": 86,
+    "eval_tokens": 2,
+    "total_ns": 136149291,
+    "wall_s": 0.15630817413330078,
+    "pred": "A",
+    "gold": "C"
+  },
+  "187": {
+    "text": "B",
+    "prompt_tokens": 96,
+    "eval_tokens": 2,
+    "total_ns": 120645959,
+    "wall_s": 0.14073514938354492,
+    "pred": "B",
+    "gold": "A"
+  },
+  "188": {
+    "text": "A",
+    "prompt_tokens": 97,
+    "eval_tokens": 2,
+    "total_ns": 123504083,
+    "wall_s": 0.15465283393859863,
+    "pred": "A",
+    "gold": "A"
+  },
+  "189": {
+    "text": "A. True, True",
+    "prompt_tokens": 104,
+    "eval_tokens": 6,
+    "total_ns": 187652583,
+    "wall_s": 0.20824098587036133,
+    "pred": "A",
+    "gold": "C"
+  },
+  "190": {
+    "text": "A",
+    "prompt_tokens": 104,
+    "eval_tokens": 2,
+    "total_ns": 137566209,
+    "wall_s": 0.16333293914794922,
+    "pred": "A",
+    "gold": "B"
+  },
+  "191": {
+    "text": "A",
+    "prompt_tokens": 102,
+    "eval_tokens": 2,
+    "total_ns": 135588167,
+    "wall_s": 0.15679001808166504,
+    "pred": "A",
+    "gold": "D"
+  },
+  "192": {
+    "text": "A. lower lip and mandibular",
+    "prompt_tokens": 127,
+    "eval_tokens": 8,
+    "total_ns": 210889042,
+    "wall_s": 0.22918200492858887,
+    "pred": "A",
+    "gold": "C"
+  },
+  "193": {
+    "text": "A. True, True",
+    "prompt_tokens": 118,
+    "eval_tokens": 6,
+    "total_ns": 203116041,
+    "wall_s": 0.28986024856567383,
+    "pred": "A",
+    "gold": "D"
+  },
+  "194": {
+    "text": "D",
+    "prompt_tokens": 93,
+    "eval_tokens": 2,
+    "total_ns": 158960292,
+    "wall_s": 0.18135309219360352,
+    "pred": "D",
+    "gold": "B"
+  },
+  "195": {
+    "text": "A. True, True",
+    "prompt_tokens": 115,
+    "eval_tokens": 6,
+    "total_ns": 182967292,
+    "wall_s": 0.20545101165771484,
+    "pred": "A",
+    "gold": "B"
+  },
+  "196": {
+    "text": "C",
+    "prompt_tokens": 90,
+    "eval_tokens": 2,
+    "total_ns": 134451750,
+    "wall_s": 0.1589651107788086,
+    "pred": "C",
+    "gold": "D"
+  },
+  "197": {
+    "text": "A.",
+    "prompt_tokens": 83,
+    "eval_tokens": 3,
+    "total_ns": 134973042,
+    "wall_s": 0.16214299201965332,
+    "pred": "A",
+    "gold": "D"
+  },
+  "198": {
+    "text": "A",
+    "prompt_tokens": 86,
+    "eval_tokens": 2,
+    "total_ns": 123290500,
+    "wall_s": 0.14278697967529297,
+    "pred": "A",
+    "gold": "C"
+  },
+  "199": {
+    "text": "A. True, True",
+    "prompt_tokens": 116,
+    "eval_tokens": 6,
+    "total_ns": 182701125,
+    "wall_s": 0.20154905319213867,
+    "pred": "A",
+    "gold": "D"
+  },
+  "200": {
+    "text": "A. True, True",
+    "prompt_tokens": 131,
+    "eval_tokens": 6,
+    "total_ns": 195830750,
+    "wall_s": 0.21244573593139648,
+    "pred": "A",
+    "gold": "A"
+  },
+  "201": {
+    "text": "D",
+    "prompt_tokens": 86,
+    "eval_tokens": 2,
+    "total_ns": 133544000,
+    "wall_s": 0.15107393264770508,
+    "pred": "D",
+    "gold": "B"
+  },
+  "202": {
+    "text": "A",
+    "prompt_tokens": 97,
+    "eval_tokens": 2,
+    "total_ns": 121100250,
+    "wall_s": 0.1526501178741455,
+    "pred": "A",
+    "gold": "C"
+  },
+  "203": {
+    "text": "A. True, True",
+    "prompt_tokens": 96,
+    "eval_tokens": 6,
+    "total_ns": 172160417,
+    "wall_s": 0.19073486328125,
+    "pred": "A",
+    "gold": "D"
+  },
+  "204": {
+    "text": "A",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 129874250,
+    "wall_s": 0.1476759910583496,
+    "pred": "A",
+    "gold": "A"
+  },
+  "205": {
+    "text": "A",
+    "prompt_tokens": 104,
+    "eval_tokens": 2,
+    "total_ns": 133440750,
+    "wall_s": 0.23286080360412598,
+    "pred": "A",
+    "gold": "C"
+  },
+  "206": {
+    "text": "A",
+    "prompt_tokens": 118,
+    "eval_tokens": 2,
+    "total_ns": 163766000,
+    "wall_s": 0.18337631225585938,
+    "pred": "A",
+    "gold": "A"
+  },
+  "207": {
+    "text": "A",
+    "prompt_tokens": 75,
+    "eval_tokens": 2,
+    "total_ns": 123106708,
+    "wall_s": 0.1412339210510254,
+    "pred": "A",
+    "gold": "C"
+  },
+  "208": {
+    "text": "A",
+    "prompt_tokens": 75,
+    "eval_tokens": 2,
+    "total_ns": 122003500,
+    "wall_s": 0.15309500694274902,
+    "pred": "A",
+    "gold": "D"
+  },
+  "209": {
+    "text": "C",
+    "prompt_tokens": 78,
+    "eval_tokens": 2,
+    "total_ns": 123512750,
+    "wall_s": 0.14218783378601074,
+    "pred": "C",
+    "gold": "A"
+  },
+  "210": {
+    "text": "D",
+    "prompt_tokens": 82,
+    "eval_tokens": 2,
+    "total_ns": 120616416,
+    "wall_s": 0.13700103759765625,
+    "pred": "D",
+    "gold": "D"
+  },
+  "211": {
+    "text": "A",
+    "prompt_tokens": 118,
+    "eval_tokens": 2,
+    "total_ns": 135602250,
+    "wall_s": 0.1549971103668213,
+    "pred": "A",
+    "gold": "C"
+  },
+  "212": {
+    "text": "D",
+    "prompt_tokens": 72,
+    "eval_tokens": 2,
+    "total_ns": 150931792,
+    "wall_s": 0.2548999786376953,
+    "pred": "D",
+    "gold": "B"
+  },
+  "213": {
+    "text": "A",
+    "prompt_tokens": 106,
+    "eval_tokens": 2,
+    "total_ns": 136353292,
+    "wall_s": 0.15683698654174805,
+    "pred": "A",
+    "gold": "B"
+  },
+  "214": {
+    "text": "A",
+    "prompt_tokens": 137,
+    "eval_tokens": 2,
+    "total_ns": 151985417,
+    "wall_s": 0.20140528678894043,
+    "pred": "A",
+    "gold": "A"
+  },
+  "215": {
+    "text": "A",
+    "prompt_tokens": 112,
+    "eval_tokens": 2,
+    "total_ns": 149660625,
+    "wall_s": 0.1688230037689209,
+    "pred": "A",
+    "gold": "C"
+  },
+  "216": {
+    "text": "A. True, True",
+    "prompt_tokens": 93,
+    "eval_tokens": 6,
+    "total_ns": 171357750,
+    "wall_s": 0.1891791820526123,
+    "pred": "A",
+    "gold": "B"
+  },
+  "217": {
+    "text": "A",
+    "prompt_tokens": 87,
+    "eval_tokens": 2,
+    "total_ns": 129956041,
+    "wall_s": 0.17154312133789062,
+    "pred": "A",
+    "gold": "C"
+  },
+  "218": {
+    "text": "A",
+    "prompt_tokens": 98,
+    "eval_tokens": 2,
+    "total_ns": 125207250,
+    "wall_s": 0.14500093460083008,
+    "pred": "A",
+    "gold": "C"
+  },
+  "219": {
+    "text": "A",
+    "prompt_tokens": 85,
+    "eval_tokens": 2,
+    "total_ns": 121936500,
+    "wall_s": 0.14032602310180664,
+    "pred": "A",
+    "gold": "D"
+  },
+  "220": {
+    "text": "A. True, True",
+    "prompt_tokens": 117,
+    "eval_tokens": 6,
+    "total_ns": 181666917,
+    "wall_s": 0.23345398902893066,
+    "pred": "A",
+    "gold": "D"
+  },
+  "221": {
+    "text": "A",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 143746792,
+    "wall_s": 0.1624772548675537,
+    "pred": "A",
+    "gold": "C"
+  },
+  "222": {
+    "text": "B",
+    "prompt_tokens": 83,
+    "eval_tokens": 2,
+    "total_ns": 121908209,
+    "wall_s": 0.1511669158935547,
+    "pred": "B",
+    "gold": "B"
+  },
+  "223": {
+    "text": "A",
+    "prompt_tokens": 133,
+    "eval_tokens": 2,
+    "total_ns": 148229375,
+    "wall_s": 0.2101731300354004,
+    "pred": "A",
+    "gold": "D"
+  },
+  "224": {
+    "text": "A.",
+    "prompt_tokens": 118,
+    "eval_tokens": 3,
+    "total_ns": 173058208,
+    "wall_s": 0.20558786392211914,
+    "pred": "A",
+    "gold": "D"
+  },
+  "225": {
+    "text": "A",
+    "prompt_tokens": 95,
+    "eval_tokens": 2,
+    "total_ns": 130005458,
+    "wall_s": 0.14939403533935547,
+    "pred": "A",
+    "gold": "C"
+  },
+  "226": {
+    "text": "A",
+    "prompt_tokens": 76,
+    "eval_tokens": 2,
+    "total_ns": 121689625,
+    "wall_s": 0.16856002807617188,
+    "pred": "A",
+    "gold": "B"
+  },
+  "227": {
+    "text": "A",
+    "prompt_tokens": 159,
+    "eval_tokens": 2,
+    "total_ns": 154070125,
+    "wall_s": 0.17320895195007324,
+    "pred": "A",
+    "gold": "B"
+  },
+  "228": {
+    "text": "D",
+    "prompt_tokens": 82,
+    "eval_tokens": 2,
+    "total_ns": 127275750,
+    "wall_s": 0.1479051113128662,
+    "pred": "D",
+    "gold": "C"
+  },
+  "229": {
+    "text": "A",
+    "prompt_tokens": 141,
+    "eval_tokens": 2,
+    "total_ns": 149841834,
+    "wall_s": 0.20286893844604492,
+    "pred": "A",
+    "gold": "C"
+  },
+  "230": {
+    "text": "D",
+    "prompt_tokens": 81,
+    "eval_tokens": 2,
+    "total_ns": 139428792,
+    "wall_s": 0.16130805015563965,
+    "pred": "D",
+    "gold": "A"
+  },
+  "231": {
+    "text": "A. True, True",
+    "prompt_tokens": 100,
+    "eval_tokens": 6,
+    "total_ns": 167991125,
+    "wall_s": 0.18558001518249512,
+    "pred": "A",
+    "gold": "B"
+  },
+  "232": {
+    "text": "A",
+    "prompt_tokens": 86,
+    "eval_tokens": 2,
+    "total_ns": 127515375,
+    "wall_s": 0.1768960952758789,
+    "pred": "A",
+    "gold": "C"
+  },
+  "233": {
+    "text": "A",
+    "prompt_tokens": 116,
+    "eval_tokens": 2,
+    "total_ns": 142291375,
+    "wall_s": 0.16098618507385254,
+    "pred": "A",
+    "gold": "C"
+  },
+  "234": {
+    "text": "A",
+    "prompt_tokens": 88,
+    "eval_tokens": 2,
+    "total_ns": 124093125,
+    "wall_s": 0.14441418647766113,
+    "pred": "A",
+    "gold": "D"
+  },
+  "235": {
+    "text": "D",
+    "prompt_tokens": 85,
+    "eval_tokens": 2,
+    "total_ns": 122619125,
+    "wall_s": 0.218214750289917,
+    "pred": "D",
+    "gold": "A"
+  },
+  "236": {
+    "text": "D",
+    "prompt_tokens": 100,
+    "eval_tokens": 2,
+    "total_ns": 143768917,
+    "wall_s": 0.16502690315246582,
+    "pred": "D",
+    "gold": "D"
+  },
+  "237": {
+    "text": "A",
+    "prompt_tokens": 119,
+    "eval_tokens": 2,
+    "total_ns": 137971042,
+    "wall_s": 0.15720820426940918,
+    "pred": "A",
+    "gold": "B"
+  },
+  "238": {
+    "text": "D",
+    "prompt_tokens": 71,
+    "eval_tokens": 2,
+    "total_ns": 125168125,
+    "wall_s": 0.20173907279968262,
+    "pred": "D",
+    "gold": "C"
+  },
+  "239": {
+    "text": "A. True, True",
+    "prompt_tokens": 104,
+    "eval_tokens": 6,
+    "total_ns": 198664833,
+    "wall_s": 0.2216501235961914,
+    "pred": "A",
+    "gold": "A"
+  }
+}
