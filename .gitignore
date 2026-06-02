@@ -8,3 +8,6 @@ STRATEGY.md
 drafts/
 HANDOFF-v2-empirics.md
 HANDOFF-wave-theory.md
+
+# Rung-7 LLM call cache (local-only, regenerable via the China-Mac tunnel; verdicts live in results/*.json)
+sim/field/real/results/cache.sqlite

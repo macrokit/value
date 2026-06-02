@@ -15,9 +15,11 @@
 > **Status update.** The mapping is no longer pure analogy: [`10`](10-field-theory-derivation.md) **derives**
 > the telegrapher and Toner–Tu forms by coarse-graining the discrete value dynamics, and
 > [`sim/field/dynamic/`](../sim/field/dynamic/) confirms both signatures **emerge** from a toy agent value
-> economy (7/7). What remains speculative is now precise: two falsifiable *conditions* (reallocation inertia;
-> local-symmetric motile imitation) and the unmet **real-agent** test (§9). Read the inline `> Derived…` notes
-> in §3, §6 and the §10 roadmap for what changed.
+> economy (7/7). The first **real-agent** test ([`11`](11-real-agent-field-test.md), an LLM-agent economy) was
+> then attempted and did **NOT** clear the gate — a pre-registered negative for the transition, inconclusive
+> (confounded) for the wave, obstacle = LLM token bias + a weak noise knob. So the honest status is: **derived +
+> emergent in a toy economy, not validated on real agents.** Read the inline `> Derived…` notes in §3, §6 and the
+> §10 roadmap (rungs 2/2b done, rung 3 attempted-not-cleared) for what changed.
 
 ## 0. The one anchor that keeps this honest: active matter
 
@@ -188,8 +190,13 @@ them. This program is worth nothing until it earns the analogy:
   the day someone measures, in a real agent population or market, either the §3 crossover `q^\*` (waves at
   short scale, diffusion at long scale) or the §5 flocking transition with its critical exponents. Absent that,
   this is a suggestive structure, explicitly labelled as such.
-- **No empirical content yet.** Unlike [`06`](06-real-agent-test.md), nothing here has been tested. It is the
-  *most* speculative document in the repository and should be read as the research frontier, not a claim.
+- **No *validated* empirical content on real agents.** A first real-agent test was attempted
+  ([`11`](11-real-agent-field-test.md), dynamic LLM-agent economy) and did **not** clear the gate: a
+  pre-registered negative for the transition and an inconclusive-confounded result for the wave, with the
+  obstacle identified as LLM token bias + a weak noise knob (not, yet, the physics). So this remains the *most*
+  speculative document in the repository: **derived ([`10`](10-field-theory-derivation.md)) and emergent in a
+  toy economy ([`sim/field/dynamic/`](../sim/field/dynamic/)), but not validated on real agents.** Read it as
+  the research frontier, not a claim.
 
 ## 10. Roadmap
 
@@ -226,8 +233,18 @@ scale-up). The tractable first steps, in order:
    susceptibility peak and the control-as-mass rounding (3/3). The wave needs reallocation inertia and the
    transition needs motility (Mermin–Wagner kills it on a fixed lattice) — exactly the derived conditions. This
    is the bridge between the pure-physics lattice (rung 1) and real agents; **still not real-agent data** (rung 3).
-3. **Find one real system** with measurable demand-propagation (a market microstructure, an information
-   cascade on a network) and test for the dispersion crossover. *(The decisive, still-open gate.)*
+3. ⏳ **Real-agent test — ATTEMPTED, gate NOT cleared** ([`11`](11-real-agent-field-test.md);
+   [`sim/field/real/`](../sim/field/real/)). The decisive test was run as a dynamic **LLM-agent** economy
+   (qwen2.5 0.5b/1.5b choosing each agent's niche each round, pre-registered thresholds). **Outcome: a
+   pre-registered NEGATIVE for the collective-goal transition** (no order→disorder collapse within the frozen
+   noise range on either model; exploratory high-temp shows at most a soft crossover, no disordered phase) **and
+   an INCONCLUSIVE-confounded result for the wave** (the shock fell on the model's most-favoured niche-token).
+   The binding obstacle is **LLM token bias** (small models emit favourite niche-tokens regardless of value,
+   confounding both the order parameter and the value-response) plus a **weak noise knob** (sampling temperature
+   is not faithful Vicsek alignment-noise — the neighbour majority stays visible in-prompt). **Neither a
+   validated positive nor a clean refutation:** the obstacle is the LLM-as-agent, not (yet) the physics. Next
+   instrument: a bias-controlled design (symbol-randomised niches; an alignment-noise knob that corrupts
+   perceived neighbours) under a fresh pre-registration. *(The gate remains open.)*
 4. Only then: the analytic field theory (renormalization, the phase diagram, the critical exponents).
 
 The prize, if it survives: a **phase diagram of collective intelligence** — and the field-theoretic statement
