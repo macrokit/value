@@ -27,7 +27,22 @@ unit of effective progress. The vector `k = (k₁,…,kₙ)` **is the agent-fram
 The budget `E` is frame-independent (the cross-frame invariant of [`00`](00-thesis-seed.md) §3); `k` is what
 varies between agents.
 
-## 2. Axioms for a per-channel value function `vᵢ(eᵢ)`
+## 2. Deriving the functional form — two independent routes
+
+### Route 1 (primary): compounding forces the logarithm
+
+The decisive constraint is that value compounds: resource created this round is reinvested next round. For a
+multiplicatively-compounding resource, the time-average growth rate is the **expected log** of the multiplier,
+not its arithmetic mean (Peters 2019 ergodicity argument; independently the basis of Kelly's 1956 criterion).
+Applied channel by channel: the long-run growth contribution of resource `eᵢ` committed to channel `i` with
+goal weight `kᵢ` is `kᵢ ln eᵢ`. Summing over independent channels:
+
+$$V(e) = \sum_i k_i \ln e_i.$$
+
+The logarithm is forced by the geometry of compounding — it is the unique form whose expectation equals the
+time-average of a multiplicative process. **No scale assumption is required.**
+
+### Route 2 (cross-check): axioms recover the same form
 
 We want `V(e) = Σᵢ vᵢ(eᵢ)` (separability across independent goal-channels — Axiom S below). For each `vᵢ`:
 
@@ -40,14 +55,15 @@ We want `V(e) = Σᵢ vᵢ(eᵢ)` (separability across independent goal-channels
   $$v_i(\lambda e) - v_i(e) = \varphi_i(\lambda)\quad\text{for all } e>0,\ \lambda>0,$$
   with `φᵢ` independent of `e`.
 
-A3 is the load-bearing axiom and it is not arbitrary: it is the precise statement of **diminishing marginal
-value** — the most robust empirical regularity about value (Bernoulli 1738 on wealth; Weber–Fechner on
-stimulus response; Gossen's first law). It is also exactly the place where value departs from energy: energy
-is linear in amount, value is scale-relative.
+A3 is independently natural — value has no privileged zero of scale, exactly as information has no privileged
+base of logarithm — but it is also a **consequence** of the compounding derivation: `kᵢ ln(λe) = kᵢ ln e + kᵢ ln λ`,
+which satisfies A3 exactly. The axiomatic route therefore cross-checks rather than founds the measure.
+A3 is a Cauchy functional equation in disguise; the proof below makes this explicit.
 
-## 3. The theorem
+## 3. The theorem (scale-invariance / axiomatic route)
 
 **Claim.** Any `vᵢ` satisfying (A1)–(A3) has the form `vᵢ(eᵢ) = kᵢ ln eᵢ + cᵢ` with `kᵢ ≥ 0`.
+This coincides with Route 1, confirming the derivation from both sides.
 
 **Proof.** Put `g(x) := vᵢ(eˣ)`. A3 with `e = eˣ`, `λ = eʸ` gives
 `g(x+y) − g(x) = φᵢ(eʸ) =: ψ(y)`, independent of `x`. Setting `x = 0`: `ψ(y) = g(y) − g(0)`. Substitute:
@@ -65,7 +81,7 @@ It shares Shannon's logarithm but is a genuinely different quantity:
 | | Shannon entropy `H(p) = −Σ pᵢ ln pᵢ` | Logarithmic value `V(e) = Σ kᵢ ln eᵢ` |
 |---|---|---|
 | variable | probability `pᵢ` (what we don't know) | resource committed `eᵢ` (what we spend) |
-| log arises from | additivity over independent events | diminishing marginal value (A3) |
+| log arises from | additivity over independent events | compounding / ergodicity (A3 is a consequence, not a cause) |
 | directionality | none — symmetric in outcomes | carried by `kᵢ` (a goal, a sign, a target) |
 | sign of the `Σ … ln …` term | `−` | `+` |
 

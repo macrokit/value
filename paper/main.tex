@@ -39,8 +39,9 @@ We propose that \emph{value} --- the quantity that goal-directed agents create, 
 lawful structural quantity, in the same category as information, once stripped of its semantic clothing
 (morality, price, psychology). Following the method of \citet{shannon1948}, we make one ruthless abstraction:
 value is the rate at which an agent converts a physical resource into goal-progress, relative to a frame fixed
-by the agent's goal. From a single scale-invariance axiom we derive a logarithmic measure of value,
-$V=\sum_i k_i\ln e_i$. From the compounding dynamics of a resource that is reinvested we derive a
+by the agent's goal. From the compounding dynamics of a multiplicatively reinvested resource we derive a
+logarithmic measure of value, $V=\sum_i k_i\ln e_i$ --- a form that scale invariance independently forces via
+a Cauchy functional equation, confirming it from a second route. From the same compounding dynamics we derive a
 \emph{coding theorem of value}: the rate at which an agent can create value through a perception channel $Y$ of
 the world $X$ is bounded by the mutual information, $\Delta G \le \I(X;Y)$, achieved by Bayes-proportional
 allocation; and realized value decomposes exactly as available potential minus dissipation,
@@ -116,7 +117,24 @@ proofs.
 attention --- any fungible substrate of action) and allocates it across $K$ goal-relevant channels in amounts
 $e=(e_1,\dots,e_K)$, $\sum_i e_i=E$. Each channel $i$ carries a \emph{goal weight} $k_i\ge 0$ measuring how much
 progress toward the goal a unit of effective work on $i$ yields. Let $V(e)$ be the value the allocation
-realizes. We ask what functional form $V$ must take.
+realizes. Two independent routes force the same functional form; we present both.
+
+\paragraph{Primary route: compounding.}
+The decisive constraint is that value compounds: resource created this round is reinvested next round. For any
+multiplicatively-compounding resource, the correct measure of long-run gain is the expected log of the
+multiplier, not its arithmetic mean --- the ergodicity argument of \citet{peters2019}, and independently the
+basis of Kelly's criterion \citep{kelly1956}. Applied channel by channel: if channel $i$ receives resource $e_i$
+and advances the agent's goal with weight $k_i$, the contribution to the time-average growth rate of the
+reinvested resource is $k_i\ln e_i$. Summing over independent channels gives
+\begin{equation}\label{eq:Vcomp}
+V(e) \;=\; \sum_{i=1}^K k_i\ln e_i.
+\end{equation}
+The logarithm arises from the geometry of compounding: it is the unique functional form whose expectation equals
+the time-average of a multiplicative process (\S\ref{sec:capacity} makes this explicit via the growth-rate
+program). \emph{No scale assumption is required.}
+
+\paragraph{Cross-check via scale invariance.} Three axioms, independently natural, recover the same form and
+supply a rigorous existence-uniqueness proof.
 
 \begin{axiom}[Diminishing returns]\label{ax:concave}
 $V$ is increasing and strictly concave in each $e_i$: the first unit of resource on a channel is worth more than
@@ -130,8 +148,10 @@ Rescaling the resource unit ($e_i\mapsto \lambda e_i$) changes total value only 
 independent of the allocation: $v(\lambda e_i;k_i)=v(e_i;k_i)+c(\lambda,k_i)$.
 \end{axiom}
 
-Axiom~\ref{ax:scale} is the load-bearing one: it says value has no privileged zero of \emph{scale}, exactly as
-information has no privileged base of logarithm. It is a Cauchy functional equation in disguise.
+Axiom~\ref{ax:scale} is independently motivated (value has no privileged zero of scale, just as information has
+no privileged base of logarithm), and is in fact a \emph{consequence} of the compounding derivation: one can
+verify directly that $k_i\ln(\lambda e_i)=k_i\ln e_i+k_i\ln\lambda$, so the logarithm satisfies it exactly.
+The axiomatic route therefore cross-checks rather than founds the measure.
 
 \begin{theorem}[Logarithmic Value Law]\label{thm:log}
 Under Axioms~\textup{\ref{ax:concave}--\ref{ax:scale}} with mild regularity, the value measure is, up to choice
@@ -145,12 +165,13 @@ $e_i^\star = E\,\hat k_i$ with $\hat k_i=k_i/\sum_j k_j$, giving
 V^\star \;=\; K\ln E \;-\; K\, H(\hat k)\,,\qquad H(\hat k)=-\textstyle\sum_i \hat k_i\ln\hat k_i .
 \end{equation}
 \end{theorem}
-\noindent The proof (Appendix~\ref{app:log}) solves the Cauchy equation forced by Axiom~\ref{ax:scale}. Two
-features deserve note. First, Shannon's entropy $H$ reappears \emph{unbidden} as a penalty: a goal spread thinly
-over many channels (high $H(\hat k)$) realizes less value than a focused one --- \emph{focus is worth
-$K\,H(\hat k)$ nats of value}. Second, the logarithm here is forced by diminishing returns; \S\ref{sec:capacity}
-forces it a \emph{second} time from compounding. A quantity whose form is over-determined by two independent
-routes is the signature of a real structural law, not a modeling convenience.
+\noindent Two features deserve note. First, Shannon's entropy $H$ reappears \emph{unbidden} as a penalty: a goal
+spread thinly over many channels (high $H(\hat k)$) realizes less value than a focused one ---
+\emph{focus is worth $K\,H(\hat k)$ nats of value}. Second, the logarithm is forced by compounding (primary
+route above and \S\ref{sec:capacity}); Axiom~\ref{ax:scale} forces it a second time via the Cauchy equation
+(Appendix~\ref{app:log}). A form over-determined by two independent derivations is the signature of a real
+structural law. The Appendix proof uses the axiomatic route; the compounding route does not invoke scale
+invariance.
 
 \section{The capacity theorem: value is bounded by information}\label{sec:capacity}
 
@@ -518,10 +539,11 @@ grounding, and the is/ought asymmetry. We state this explicitly and concede each
 \emph{Expected utility and diminishing value.} The axiomatic treatment of preference is \citet{vnm1944} and
 \citet{savage1954}; our logarithmic measure (\S\ref{sec:measure}) coincides with \citet{bernoulli1738} and with
 unit-coefficient constant-relative-risk-aversion utility, and the diminishing-returns law it encodes is
-Weber--Fechner. We do not claim the form as novel; our departure is to \emph{derive} it from scale invariance on
-a physical resource, to ground it in a conserved scarce resource (free energy being the natural physical candidate) supplying a unit
-and a cross-frame exchange rate that expected utility lacks, and to show it is forced a second time by
-compounding \citep{peters2019}.
+Weber--Fechner. We do not claim the form as novel; our departure is to \emph{derive} it from multiplicative compounding on a
+physical resource \citep{peters2019,kelly1956} --- scale invariance then appears as a consequence and
+independent cross-check rather than the foundation --- and to ground it in a conserved scarce resource (free
+energy being the natural physical candidate) supplying a unit and a cross-frame exchange rate that expected
+utility lacks.
 
 \emph{Information rate and log-optimal growth.} The closest prior art, which we credit most carefully, is
 \citet{kelly1956}: the exponential growth rate of wealth is an information rate, optimized by betting one's
@@ -620,6 +642,10 @@ agents the theory was built to govern.
 
 \appendix
 \section{Proof of the Logarithmic Value Law (Theorem~\ref{thm:log})}\label{app:log}
+
+\emph{This appendix gives the scale-invariance (axiomatic) route to $V=\sum_i k_i\ln e_i$, which
+cross-checks the compounding derivation of \S\ref{sec:measure}. The two routes are independent: neither
+invokes the other.}
 
 By Axiom~\ref{ax:additive} it suffices to find the per-channel $v(e;k)$. Axiom~\ref{ax:scale} states
 $v(\lambda e;k)=v(e;k)+c(\lambda,k)$ for all $\lambda,e>0$. Fix $k$ and write $f(e):=v(e;k)$. Then
