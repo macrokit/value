@@ -152,16 +152,29 @@ def _prompt(niche_rewards, own_hist, nbr_choices, salient=False):
 class LLMEconomy:
     def __init__(self, N=20, model="qwen2.5:0.5b-instruct", temp=0.6, J=1.0,
                  gamma=0.0, k_star=0, topology="annealed", n_nb=6, ring_k=3,
-                 lag=0, seed=0, pool=8, salient=False):
+                 lag=0, seed=0, pool=8, salient=False, symbol_random=False):
         """topology: 'annealed' (fresh random n_nb neighbours each round = motile/
         mean-field) | 'quenched' (fixed ring +/- ring_k = low-D) | 'ring' (ring +/-
         ring_k, used for the wave). lag L = switching commitment (reallocation inertia).
         salient = foreground the rewarded niche in the prompt (wave re-test).
+        symbol_random (Rung 8, guardrail (a)): each agent sees niches under its OWN fixed
+        random label permutation, so the model's token prior maps to a different *true*
+        niche per agent (collective token bias cancels) while coordination/reward-reading
+        are still processed by the model. Physics (m, payoffs, shock, γ) stays in TRUE
+        niche space; only what the model SEES is relabelled.
         """
         self.N, self.model, self.temp, self.J = N, model, temp, J
         self.gamma, self.k_star, self.topology = gamma, k_star, topology
         self.n_nb, self.ring_k, self.lag, self.seed, self.pool = n_nb, ring_k, lag, seed, pool
         self.salient = salient
+        self.symbol_random = symbol_random
+        # per-agent label permutation: perm[a][true]=label_shown; inv[a][label]=true
+        pr = np.random.default_rng(seed * 2654435761 % (2**32))
+        if symbol_random:
+            self.perm = np.array([pr.permutation(K) for _ in range(N)])
+        else:
+            self.perm = np.tile(np.arange(K), (N, 1))
+        self.inv = np.argsort(self.perm, axis=1)
         self.rng = np.random.default_rng(seed)
         self.niche = self.rng.integers(0, K, size=N)         # initial niches
         self.rewards = np.zeros(K)                            # per-niche base reward R_k
@@ -210,9 +223,14 @@ class LLMEconomy:
         free = [a for a in range(self.N) if self.since_switch[a] >= self.lag]
         prompts = {}
         for a in free:
-            rw = self._niche_rewards_for(a)
-            nbr_choices = [int(self.niche[j]) for j in nbr_sets[a]]
-            prompts[a] = _prompt(rw, self.hist[a], nbr_choices, salient=self.salient)
+            rw = self._niche_rewards_for(a)                         # TRUE-niche rewards
+            nbr_true = [int(self.niche[j]) for j in nbr_sets[a]]
+            # translate EVERYTHING the model sees into agent a's private label space
+            perm, inv = self.perm[a], self.inv[a]
+            rw_label = rw[inv]                                      # rw_label[ℓ] = rw[true shown as ℓ]
+            nbr_label = [int(perm[t]) for t in nbr_true]
+            hist_label = [(int(perm[t]), p) for (t, p) in self.hist[a]]
+            prompts[a] = _prompt(rw_label, hist_label, nbr_label, salient=self.salient)
 
         def decide(a):
             txt = _chat(self.model, self.temp, prompts[a], self.seed, a, rnd)
@@ -221,11 +239,11 @@ class LLMEconomy:
         new_niche = self.niche.copy()
         if free:
             with cf.ThreadPoolExecutor(max_workers=self.pool) as ex:
-                for a, choice in ex.map(decide, free):
+                for a, label in ex.map(decide, free):
                     self.parse_tot += 1
-                    if choice is not None:
+                    if label is not None:
                         self.parse_ok += 1
-                        new_niche[a] = choice
+                        new_niche[a] = int(self.inv[a][label])      # label -> TRUE niche
                     # else: keep current niche (default)
 
         # update switch counters BEFORE overwriting, and record payoffs (on new state)

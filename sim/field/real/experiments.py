@@ -27,14 +27,19 @@ NF, TF, BURNF = 20, 12, 6           # flocking N, T, burn
 NW, TW = 40, 18                     # wave N, T
 
 
-def flocking_sweep(gamma, topology="annealed", temps=TEMPS, seeds=SEEDS):
+SYMRAND = os.environ.get("RUNG8_SYMRAND", "0") == "1"   # rung 8: symbol-randomise labels
+
+
+def flocking_sweep(gamma, topology="annealed", temps=TEMPS, seeds=SEEDS,
+                   symbol_random=SYMRAND):
     """Return {temp: {m, chi}} averaged over seeds. chi = N·Var_t(m) per seed, averaged."""
     out = {}
     for temp in temps:
         ms, chis, prs = [], [], []
         for s in seeds:
             ec = LLMEconomy(N=NF, model=MODEL, temp=temp, J=1.0, gamma=gamma,
-                            k_star=0, topology=topology, n_nb=6, seed=s)
+                            k_star=0, topology=topology, n_nb=6, seed=s,
+                            symbol_random=symbol_random)
             r = ec.run(T=TF, burn=BURNF)
             ms.append(r["m"]); chis.append(r["chi"]); prs.append(r["parse_rate"])
         out[temp] = dict(m=float(np.mean(ms)), chi=float(np.mean(chis)),
@@ -90,13 +95,17 @@ def run_flocking(results):
 
 
 # --------------------------------------------------------------------------- wave
-def wave_run(lag, seeds=SEEDS, k0=0, x0=NW // 2, hw=2, amp=3.0, t0=2, salient=False):
+def wave_run(lag, seeds=SEEDS, k0=0, x0=NW // 2, hw=2, amp=3.0, t0=2, salient=False,
+             symbol_random=False):
     """Run the ring economy with a localized value-shock; return the per-round,
-    seed-averaged adoption profile of k0 (length NW) and the leading-edge distance."""
+    seed-averaged adoption profile of TRUE niche k0 and the leading-edge distance.
+    symbol_random (rung 8): per-agent label permutation removes the token-bias confound
+    (k0 being a favoured token); adoption is measured in true-niche space throughout."""
     profiles_all = []
     for s in seeds:
         ec = LLMEconomy(N=NW, model=MODEL, temp=0.4, J=1.0, topology="ring",
-                        ring_k=2, lag=lag, seed=s, salient=salient)
+                        ring_k=2, lag=lag, seed=s, salient=salient,
+                        symbol_random=symbol_random)
         ec.shock = (k0, x0, hw, amp); ec.shock_t0 = t0
         r = ec.run(T=TW, burn=0, record_profile_k=k0)
         profiles_all.append(r["profiles"])              # (TW, NW)

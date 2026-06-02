@@ -212,3 +212,117 @@ instrument (bias-controlled niches + alignment-noise knob) to try.
 - **Reproducible:** all model calls cached (`sim/field/real/results/cache.sqlite`);
   pre-registered verdicts in `real_results_*.json`; exploratory runs in
   `exploratory_*.json`, each labelled exploratory in-file.
+
+---
+
+# Rung 8 — the bias-controlled re-test: a clean negative, and what it reveals
+
+> Rung 7's obstacle was LLM **token bias**. Rung 8 controls that *instrument artifact*
+> under a locked guardrail (*control the confound, do NOT impose the conclusion* —
+> [`sim/field/real/PREREGISTRATION_rung8.md`](../sim/field/real/PREREGISTRATION_rung8.md),
+> frozen + committed before any run). The fix is **per-agent symbol-randomisation** of
+> the niche labels: each agent sees the niches under its own private random permutation,
+> so the model's preference for a *token* (e.g. the digit "3") maps to a **different true
+> niche for each agent** — the collective token bias cancels — while coordination
+> ("match the majority label you see") and reward-reading are **still processed by the
+> model**, and the only noise is the LLM's own sampling temperature. We did **not** inject
+> external alignment-noise or supply a shared focal point (either would engineer the
+> answer). Primary model `qwen2.5:1.5b` (0.5b cannot coordinate at all, Rung 7).
+
+## 7.1 Symbol-randomisation works — and it dissolves the "order"
+
+The control does exactly its job: **neutral-context order drops from 0.40–0.51 (Rung 7)
+to `m=0.062`** — with no neighbours and no rewards, the population is now genuinely
+disordered, confirming the collective token bias is removed (parse stays 1.00).
+
+But with the bias controlled, **the ordered phase disappears entirely** (1.5b, annealed,
+`γ=0`, symbol-randomised; pre-registered, `real_results_rung8.json`):
+
+| temp | 0.2 | 0.6 | 1.0 | 1.4 | 2.0 | 2.8 |
+|---|---|---|---|---|---|---|
+| `m` | **0.177** | 0.383 | 0.389 | 0.269 | 0.280 | 0.377 |
+| `χ` | 0.088 | 0.135 | 0.098 | 0.083 | 0.188 | 0.198 |
+
+`m ≈ 0.18–0.39` at *every* temperature (random baseline ≈ 0.20), with no low-temperature
+ordered phase — if anything `m` is slightly *higher* at mid/high temperature. **0/4 on
+the frozen checks:**
+
+- **C1** (order→disorder): FAIL — `m(0.2)=0.177` is *at random*; there is no order to lose.
+- **C2** (interior χ peak): FAIL — χ is tiny everywhere and rises to the boundary.
+- **M** (motility gating): FAIL — quenched `m(0.2)=0.325` > annealed `0.177` (the fixed
+  local ring freezes into small static domains; the annealed mean field stays ~random) —
+  the *opposite* of the predicted gating, and neither is an ordered phase.
+- **C3** (control = mass): MOOT — there is no spontaneous order to round.
+
+## 7.2 The mechanism: focal-point coordination, not spontaneous symmetry-breaking
+
+Two control results pin down *why* — and they are the genuinely informative part:
+
+- An **external control field** `γ=0.6` (a shared, model-processed cue toward one true
+  niche) lifts `m(0.2)` from 0.177 back to **0.506**. The agents *can* coordinate — when
+  given a shared focal point.
+- The quenched ring reaches `m=0.32` of *local* domains — local matching happens, but
+  domains never merge into global order.
+
+So the picture is consistent and clean: **Rung-7's "collective goal" was the shared token
+bias acting as a Schelling focal point** that let agents break symmetry from a scattered
+start. Remove that artifact and the agents **do not spontaneously break symmetry** — they
+coordinate only when a shared focal point is supplied (the token bias before, or an
+explicit control field now). The §6 *mass term* (an external field induces order) is even
+weakly corroborated; the §5 *spontaneous flocking transition* is **not** — it is absent
+once the artifact is controlled.
+
+**This is a clean negative, not the CAP "untestable":** the model demonstrably can play
+the game (parse 1.00; local matching; control-induced order), so the signal is
+measurable — what is *absent* is the spontaneous ordered phase the transition requires.
+We report it as such, and per the guardrail we did **not** restore a focal point to
+manufacture a transition.
+
+## 7.3 The wave under bias control — and a genuine positive sub-finding
+
+The bias-controlled wave (1.5b, symbol-randomised, salient reward on a *true* niche at
+the ring locus; `rung8_wave.json`) finally separates the two things Rung 7 confounded:
+
+| | locus adoption of `k0` | far-field background | leading edge (sites) |
+|---|---|---|---|
+| **L=3** (inertia) | 0 → **0.7** | ~0.13 (≈ random `1/8`) | max **2.0** (= shock half-width) |
+| **L=0** | 0 → **0.7** | ~0.18 | max **2.0** |
+
+- **Reward-following genuinely works** — the directly-rewarded agents at the locus adopt
+  `k0` (≈0.7), and the far-field stays at the random baseline (no token-bias flooding).
+  This **resolves Rung 7's apparent "0% reward-following" as the token-bias artifact it
+  was**: with the label space randomised, a salient value-shock *is* followed. A real
+  positive, and a clean refutation of the over-strong Rung-7 wording.
+- **But the shock does NOT propagate.** Adoption is confined to the directly-rewarded
+  band (leading edge ≈ 2 sites = the shock half-width) in **both** lag conditions — no
+  travelling front, no `∝t` growth, no inertia gating. **0/3 on W-wave / W-diff / W-gate.**
+
+The reason is exactly §7.2: propagation would require *un*-rewarded neighbours to adopt
+`k0` because *their* neighbours did (coordination carrying the shock outward) — but these
+agents do not spontaneously coordinate without a focal point, so the rewarded locus stays
+an island. The demand wave does not emerge — not because agents ignore value (they don't),
+but because there is no spontaneous coordination to propagate it.
+
+## 7.4 Net status after Rung 8
+
+- **Collective-goal transition:** with the token-bias artifact removed, **no spontaneous
+  ordered phase exists** in the real-LLM value economy at this scale → the §5 flocking
+  transition does **not** describe these agents. Real small-LLM value agents coordinate
+  via **shared focal points** (Schelling / external control field), not via Vicsek-style
+  spontaneous symmetry-breaking. Clean negative.
+- **Demand wave:** bias-controlled, **reward-following works** (locus adopts the shock,
+  ≈0.7) — a genuine positive that retires Rung 7's "agents ignore rewards" wording — **but
+  the shock does not propagate** (adoption stays within the rewarded band; no travelling
+  front, no inertia gating). Clean negative for the wave, with the same root cause: no
+  spontaneous coordination to carry it.
+- **Honest residual ambiguity (stated, not engineered around):** "no spontaneous order"
+  is shown for the annealed-mean-field and quenched-local topologies at toy scale; we did
+  not search for a special nucleating topology or supply a focal point (that would impose
+  the conclusion), and per the CAP we did not escalate past 1.5b. A genuinely motile
+  topology *might* nucleate — but providing it without a focal point is the open question,
+  not something this rung claims either way.
+- **Consequence:** doc 08 §5 (spontaneous collective-goal transition) is **not** supported
+  on real agents; what *is* seen is focal-point/field-induced coordination (closer to §6's
+  mass term). The standalone preprint remains **unearned**. Keeper finding strengthened:
+  small-LLM value-coordination is focal-point-driven, and what looks like an emergent order
+  parameter is, absent a controlled label space, substantially a token-bias artifact.

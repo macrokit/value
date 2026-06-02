@@ -12,12 +12,15 @@ run; falsification clause up front). The honest write-up is
 
 ## Result (one line)
 
-**Pre-registered NEGATIVE (transition) + INCONCLUSIVE-confounded (wave).** Neither
-signature emerged under its frozen thresholds. The binding obstacle is **LLM token
-bias** (small models pick favourite niche-tokens regardless of value) plus a **weak
-noise knob** (sampling temperature is not faithful Vicsek alignment-noise). Neither a
-validated positive nor a clean theory-refutation — see docs/11 for the precise,
-separated status.
+**Rung 7:** pre-registered NEGATIVE (transition) + INCONCLUSIVE-confounded (wave);
+obstacle = **LLM token bias**. **Rung 8** (`PREREGISTRATION_rung8.md`, `run_rung8.py`):
+controls the bias via per-agent **symbol-randomisation** (guardrail-respecting) → the
+"order" **vanishes** (`m(0.2)`: 0.94 → 0.18 ≈ random), so rung-7's collective goal was the
+shared token bias acting as a **Schelling focal point** — agents coordinate only via a
+focal point (an external control field `γ` restores `m`→0.51), **not** by spontaneous
+symmetry-breaking. Wave: reward-following works bias-controlled (locus adopts ≈0.7) **but
+does not propagate**. **Clean negative for the spontaneous transition (doc 08 §5); §6
+field-induced order weakly corroborated.** Full, separated status in docs/11 §7.
 
 ## Files
 

@@ -242,9 +242,19 @@ scale-up). The tractable first steps, in order:
    The binding obstacle is **LLM token bias** (small models emit favourite niche-tokens regardless of value,
    confounding both the order parameter and the value-response) plus a **weak noise knob** (sampling temperature
    is not faithful Vicsek alignment-noise — the neighbour majority stays visible in-prompt). **Neither a
-   validated positive nor a clean refutation:** the obstacle is the LLM-as-agent, not (yet) the physics. Next
-   instrument: a bias-controlled design (symbol-randomised niches; an alignment-noise knob that corrupts
-   perceived neighbours) under a fresh pre-registration. *(The gate remains open.)*
+   validated positive nor a clean refutation:** the obstacle is the LLM-as-agent, not (yet) the physics.
+3b. ⚠️ **Bias-controlled re-test (Rung 8) — CLEAN NEGATIVE for spontaneous order** ([`11`](11-real-agent-field-test.md) §7;
+   `sim/field/real/PREREGISTRATION_rung8.md`). Per-agent **symbol-randomisation** removes the token-bias artifact
+   (neutral-context order falls 0.40–0.51 → **0.06**) while the LLM still makes the real value-decision (noise = its
+   own temperature; no externally-imposed alignment-noise — guardrail). **With the artifact controlled the ordered
+   phase vanishes** (`m≈0.18–0.39` at all temperatures; `m(0.2)=0.18`≈random; 0/4). So Rung-7's "collective goal"
+   was the shared token bias acting as a **Schelling focal point**, not spontaneous flocking: an external control
+   field `γ` *does* induce order (`m(0.2)`: 0.18→0.51), but **agents do not spontaneously break symmetry**. The §5
+   *spontaneous* transition is **not** supported on real agents (the §6 *field-induced* order is, weakly). The wave:
+   reward-following genuinely works once bias-controlled (locus adopts ≈0.7) **but the shock does not propagate**
+   (no spontaneous coordination to carry it). Per the CAP we did not escalate past 1.5b or supply a focal point.
+   **Keeper:** small-LLM value-coordination is focal-point-driven; the apparent order parameter is, uncontrolled,
+   substantially a token-bias artifact. *(Gate still open; doc 08 §5 not supported on real agents at this scale.)*
 4. Only then: the analytic field theory (renormalization, the phase diagram, the critical exponents).
 
 The prize, if it survives: a **phase diagram of collective intelligence** — and the field-theoretic statement
