@@ -27,24 +27,18 @@ unit of effective progress. The vector `k = (k₁,…,kₙ)` **is the agent-fram
 The budget `E` is frame-independent (the cross-frame invariant of [`00`](00-thesis-seed.md) §3); `k` is what
 varies between agents.
 
-## 2. Deriving the functional form — two independent routes
+## 2. Two independent confirmations of the logarithmic form
 
-### Route 1 (primary): compounding forces the logarithm
+The form `V(e) = Σᵢ kᵢ ln eᵢ` is forced by two structurally different arguments that share no premises.
+Their agreement — the same logarithm reached from opposite directions — is the signal that the form is
+a real structural law rather than a modeling choice.
 
-The decisive constraint is that value compounds: resource created this round is reinvested next round. For a
-multiplicatively-compounding resource, the time-average growth rate is the **expected log** of the multiplier,
-not its arithmetic mean (Peters 2019 ergodicity argument; independently the basis of Kelly's 1956 criterion).
-Applied channel by channel: the long-run growth contribution of resource `eᵢ` committed to channel `i` with
-goal weight `kᵢ` is `kᵢ ln eᵢ`. Summing over independent channels:
+### Confirmation A (static): axioms uniquely determine the functional form
 
-$$V(e) = \sum_i k_i \ln e_i.$$
+The question here is purely static: *what functional form for V is consistent with the basic properties
+a value measure must satisfy?* The answer is uniquely logarithmic, proved via Cauchy's theorem in §3.
 
-The logarithm is forced by the geometry of compounding — it is the unique form whose expectation equals the
-time-average of a multiplicative process. **No scale assumption is required.**
-
-### Route 2 (cross-check): axioms recover the same form
-
-We want `V(e) = Σᵢ vᵢ(eᵢ)` (separability across independent goal-channels — Axiom S below). For each `vᵢ`:
+We want `V(e) = Σᵢ vᵢ(eᵢ)` (separability across independent goal-channels — Axiom S). For each `vᵢ`:
 
 - **(A1) Continuity.** `vᵢ` is continuous on `e > 0`.
 - **(A2) Monotonicity.** `vᵢ` is non-decreasing: committing more resource toward a goal-relevant channel
@@ -55,15 +49,29 @@ We want `V(e) = Σᵢ vᵢ(eᵢ)` (separability across independent goal-channels
   $$v_i(\lambda e) - v_i(e) = \varphi_i(\lambda)\quad\text{for all } e>0,\ \lambda>0,$$
   with `φᵢ` independent of `e`.
 
-A3 is independently natural — value has no privileged zero of scale, exactly as information has no privileged
-base of logarithm — but it is also a **consequence** of the compounding derivation: `kᵢ ln(λe) = kᵢ ln e + kᵢ ln λ`,
-which satisfies A3 exactly. The axiomatic route therefore cross-checks rather than founds the measure.
-A3 is a Cauchy functional equation in disguise; the proof below makes this explicit.
+A3 is the load-bearing one for this route: it encodes the absence of a privileged resource-unit — value
+has no absolute zero of scale, just as information has no privileged base of logarithm. It is Cauchy's
+functional equation in disguise (§3 makes this explicit). This is the rigorous *static* determination:
+given these axioms, the only consistent form is logarithmic.
 
-## 3. The theorem (scale-invariance / axiomatic route)
+### Confirmation B (dynamic): compounding forces the same form — rigorous in [`02`](02-coding-theorem-of-value.md)
+
+The question here is dynamic: *when value compounds, what is the correct measure of long-run gain?* The
+answer, via the ergodicity argument of Peters (2019) and Kelly (1956), is the expected log of the
+multiplier. [`02`](02-coding-theorem-of-value.md) §1–3 develops this rigorously via the repeated game:
+the long-run value growth rate is
+
+$$G(b) = \mathbb{E}_{s \sim q}\!\Big[\log \sum_i b_i\, o_i(s)\Big],$$
+
+and the optimal allocation in the horse-race case recovers `V* = Σᵢ kᵢ ln eᵢ` — the same logarithmic
+form, now derived from **dynamics** with no scale assumption. The two confirmations address different
+questions: Confirmation A fixes the static functional form; Confirmation B shows the dynamic optimum
+lands on the same shape.
+
+## 3. The theorem (Confirmation A — rigorous static proof)
 
 **Claim.** Any `vᵢ` satisfying (A1)–(A3) has the form `vᵢ(eᵢ) = kᵢ ln eᵢ + cᵢ` with `kᵢ ≥ 0`.
-This coincides with Route 1, confirming the derivation from both sides.
+The same form is independently forced by Confirmation B; their agreement is the over-determination signal.
 
 **Proof.** Put `g(x) := vᵢ(eˣ)`. A3 with `e = eˣ`, `λ = eʸ` gives
 `g(x+y) − g(x) = φᵢ(eʸ) =: ψ(y)`, independent of `x`. Setting `x = 0`: `ψ(y) = g(y) − g(0)`. Substitute:
