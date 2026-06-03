@@ -3,6 +3,20 @@
 A single view of what's open, so the threads aren't scattered. Ordered by readiness. The published core
 (Zenodo, concept DOI `10.5281/zenodo.20487041`) stands on its own; everything here is *forward* work.
 
+## Strategic lens (the prioritization rule)
+External review converges on one directive: *the decisive move is not more equations or broader Kelly-style
+validation, but an empirical result that **Kelly / information theory / decision theory cannot explain.*** That
+sorts the work sharply:
+- The **single-agent bridge** (`ΔG = I(X;Y)`, the cross-shape law) is **Kelly's home turf** — strengthening it
+  (more shapes, more models) raises rigor but does **not** escape the "generalized Kelly with new terminology"
+  critique, and does not earn the word "value."
+- What is **distinctively *value*** — and the only thing that escapes that critique, settles the naming battle,
+  and lifts the impact tier — is the **multi-agent + dynamics layer**: cross-frame/price coordination, the
+  fleet ceiling, and the is/ought / alignment-as-control results. *None* of these are single-agent Kelly.
+**Therefore: prioritize the multi-agent / dynamics empirics (below) over any further single-agent/bridge work.**
+The cross-frame/price **real-data test is the highest-leverage shot** precisely because it tests the part Kelly
+does not cover, with measured (not weak-model-elicited) quantities.
+
 ## Near-term (in flight / logistics)
 - [ ] **Publish v3** — the cross-shape generalization ([`14`](14-bridge-generalization.md)) + the two-route
   derivation hardening ([`01`](01-core-formalization.md)). *Blocker:* reconcile the cross-shape `n=42` line in
