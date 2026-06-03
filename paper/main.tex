@@ -55,7 +55,11 @@ live language models in a \emph{pre-registered} scale-up across three task domai
 ladder ($0.5$B--$8$B): perception mutual information tracks realized \emph{capability} rather than parameter count
 (Spearman $\rho = 0.977$ pooled over 30 model$\times$domain points), out-of-sample $\Delta G$ tracks $\I(X;Y)$
 (slope CI excludes $0$), and over-confidence is measurable dissipation in every domain --- the two single-frame
-laws generalize. A fleet-pricing experiment is reported scoped and primary-metric-first: value-pricing recovers
+laws generalize. A further pre-registered test shows the out-of-sample bridge $\Delta G\sim\I(X;Y)$ is
+\emph{shape-invariant}: pooled across four qualitatively different task shapes --- classification, reasoning
+(GSM8K), sequential decision, and code (MBPP), all with discrete gold so $\I$ is computed, not estimated ($n=42$)
+--- the slope is $0.953$, statistically indistinguishable from the classification-only value, promoting the
+bridge from a demonstration toward a law. A fleet-pricing experiment is reported scoped and primary-metric-first: value-pricing recovers
 cost-aware routing from first principles --- it ties good hand-tuned routing under a token budget, beats a
 cost-blind router under a compute budget, and does not outperform a cost-aware engineer; its contribution is
 principled measurement, not outperformance. The laws hold in the smooth, concave (diminishing-returns) regime;
@@ -526,6 +530,66 @@ it recovers as a law rather than a trick; it organizes and measures what good en
 not claim it outperforms a competent cost-aware baseline. The generalization of the capacity and Second-Law
 results --- not the routing comparison --- is what the scale-up establishes.
 
+\subsection{Cross-shape generalization: the bridge is shape-invariant}\label{sec:shapes}
+
+The scale-up above varied the task \emph{domain} but held the task \emph{shape} fixed: all three benchmarks are
+pick-a-label classification. The sharper question is whether $\Delta G\sim\I(X;Y)$ is a property of
+classification or a law that survives a change of task \emph{shape}. The coding theorem (\S\ref{sec:capacity})
+predicts $\Delta G=\I(X;Y)$ for \emph{any} perception-then-act task, so the prediction is that the bridge is
+shape-invariant. We pre-registered (predictions, models, metrics, thresholds frozen before any run) a cross-shape
+test over three qualitatively different shapes, each chosen to have \emph{discrete ground truth} so that $\I$ is
+computed exactly from a confusion matrix rather than estimated by a soft embedding proxy:
+\begin{itemize}[noitemsep,topsep=2pt]
+\item \textbf{reasoning} --- GSM8K \citep{cobbe2021gsm8k}: free-form chain-of-thought reduced to its integer
+answer (gold mod $4$);
+\item \textbf{sequential / agentic} --- a synthetic register-machine rollout: a step-by-step execution trace
+reduced to its exact final state (mod $6$);
+\item \textbf{code} --- MBPP \citep{austin2021mbpp}: a generated Python function, scored by
+\emph{sandbox-executed} output (hash mod $4$).
+\end{itemize}
+The pipeline is identical to \S\ref{sec:v2} (calibration on a held-out fit split, out-of-sample scoring, $95\%$
+bootstrap CIs); a six-model ladder ($0.5$B--$3$B) was run per shape --- the pre-registered $\ge\!6$ minimum, the
+$7$B/$8$B extension being blocked by hardware (\S\ref{sec:limits}).
+
+\paragraph{The bridge holds across all four shapes.} The out-of-sample slope $\Delta G_{\text{hold}}\sim\I$
+passes for every new shape individually (reasoning $0.936$, sequential $1.023$, code $1.133$; each CI excludes
+$0$), pooled across the three new shapes (\textbf{slope $0.956$}, CI $[0.920,1.001]$), and --- decisively ---
+pooled with the three classification domains of \S\ref{sec:v2} into one relationship across \textbf{four task
+shapes} ($n=42$): Spearman$(\I,\text{accuracy})=\mathbf{0.924}$ (CI $[0.825,0.967]$) and
+slope$(\Delta G_{\text{hold}}\sim\I)=\mathbf{0.953}$ (CI $[0.925,0.979]$). The cross-shape slope is
+\emph{statistically indistinguishable} from the classification-only $0.935$ of \S\ref{sec:v2}: the bridge is the
+\emph{same} near-unit-slope relationship whether the agent classifies, reasons, rolls out a sequential
+computation, or writes code. Eleven of the twelve frozen checks pass (Table~\ref{tab:shapes}).
+
+\begin{table}[h]\centering
+\begin{tabular}{lccc}
+\toprule
+shape & $n$ models & Spearman$(\I,\text{acc})$ & slope$(\Delta G_{\text{hold}}\sim\I)$ \\
+\midrule
+classification (\S\ref{sec:v2}) & 10 & $0.977$ & $0.935$ \\
+reasoning (GSM8K) & 6 & $0.943$ \;\checkmark & $0.936$ \;\checkmark \\
+sequential (register-machine) & 6 & $0.886$ \;\checkmark & $1.023$ \;\checkmark \\
+code (MBPP) & 6 & $0.429$ (underpowered) & $1.133$ \;\checkmark \\
+\midrule
+pooled new shapes & 18 & --- & $0.956$ \,[$0.920,1.001$] \\
+cross-shape (4 shapes) & 42 & $0.924$ \,[$0.825,0.967$] & $0.953$ \,[$0.925,0.979$] \\
+\bottomrule
+\end{tabular}
+\caption{Cross-shape generalization. The out-of-sample bridge $\Delta G_{\text{hold}}\sim\I$ holds across four
+task shapes with a pooled slope ($0.953$) statistically indistinguishable from classification-only ($0.935$).
+$11/12$ frozen checks pass; the lone miss is code's underpowered capability-ranking sub-check
+(\S\ref{sec:limits}), not a shape-specific break --- the code \emph{bridge} slope itself passes.}
+\label{tab:shapes}
+\end{table}
+
+\noindent This is a \emph{generalization}, not a new mechanism: the test confirms that the coding theorem's
+prediction is shape-invariant, promoting the bridge from a demonstration on classification toward a law. The one
+frozen check that does not clear is code's \emph{capability-ranking} sub-check
+(Spearman$(\I,\text{accuracy})=0.429$), which is underpowered rather than a counterexample (\S\ref{sec:limits}
+reports it in full); the code \emph{bridge} slope passes. As throughout, in-sample $\Delta G=\I$ is a
+definitional identity (oracle posterior) carrying no empirical weight --- the content of this test is entirely in
+the out-of-sample and cross-shape tracking.
+
 \section{Related work}\label{sec:related}
 
 Every component of this theory exists in some field; the contribution is the unification, the substrate
@@ -603,10 +667,20 @@ solve it. On the empirical side: the in-sample $\Delta G=\I$ is an arithmetic id
 capability tracking, the out-of-sample tracking, and R5 are empirical; R3 is an $\I$/compute curve across model
 scale, not a within-model prompt ablation; the calibration in R2 is constructed from the confusion matrix, not a
 probability the model reported, so the dissipation measured is that of a stated belief over those predictions;
-and the empirical scope is three task domains and a ten-model, five-family ladder (\S\ref{sec:v2}) --- evidence
-the bridge \emph{generalizes across these}, not yet a universal law, and not independently replicated.
+and the empirical scope is three classification domains, a ten-model five-family ladder (\S\ref{sec:v2}), and a
+cross-shape extension to reasoning, sequential, and code tasks (\S\ref{sec:shapes}) --- evidence the bridge
+\emph{generalizes across four task shapes}, not yet a universal law, and not independently replicated.
 Degenerate runs in which a model emits no action (a serving/plumbing failure, not a decision) are detected and
-excluded rather than reported as low-$\I$ capability. The alignment theorem is mean-field with a linearized
+excluded rather than reported as low-$\I$ capability. \emph{The one frozen cross-shape check that does not
+clear is the code shape's capability-ranking sub-check} (Spearman$(\I,\text{accuracy})=0.429$, CI
+$[-0.43,1.00]$): the six $\le\!3$B models cluster tightly in code-accuracy ($0.35$--$0.47$), so the rank
+correlation is noise-dominated and inconclusive --- a power limitation, not a shape-specific break. The
+pre-registered remedy (adding $7$B/$8$B models, far stronger coders, to widen the code capability range) could
+not be run: those models stall at usable throughput on the $16$\,GB host at $512$-token chain-of-thought, the
+same memory ceiling that bounds the ladder elsewhere. Crucially the code \emph{bridge} itself
+(out-of-sample $\Delta G_{\text{hold}}\sim\I$) \emph{passes}; only the capability-ranking sub-check on that one
+shape is underpowered, and we report it as such rather than as a counterexample or forcing the run on
+inadequate hardware. The alignment theorem is mean-field with a linearized
 landscape and a quasi-static dispersion $V$; a fully coupled treatment, and an endogenous reward gradient $g$ in
 a closed multi-agent world, remain open.
 
