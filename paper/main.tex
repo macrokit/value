@@ -555,7 +555,11 @@ $7$B/$8$B extension being blocked by hardware (\S\ref{sec:limits}).
 passes for every new shape individually (reasoning $0.936$, sequential $1.023$, code $1.133$; each CI excludes
 $0$), pooled across the three new shapes (\textbf{slope $0.956$}, CI $[0.920,1.001]$), and --- decisively ---
 pooled with the three classification domains of \S\ref{sec:v2} into one relationship across \textbf{four task
-shapes} ($n=42$): Spearman$(\I,\text{accuracy})=\mathbf{0.924}$ (CI $[0.825,0.967]$) and
+shapes} ($n=42$: classification contributes the $24$ points of the frozen eight-model, three-family ladder
+common to the shape runs ($8$ models $\times\,3$ domains), and the three new shapes the remaining $18$ ($6$
+models $\times\,3$ shapes --- the $7$B/$8$B pair blocked on the new shapes, \S\ref{sec:limits}), so
+$24+18=42$; v2's two extra families lie outside this common ladder):
+Spearman$(\I,\text{accuracy})=\mathbf{0.924}$ (CI $[0.825,0.967]$) and
 slope$(\Delta G_{\text{hold}}\sim\I)=\mathbf{0.953}$ (CI $[0.925,0.979]$). The cross-shape slope is
 \emph{statistically indistinguishable} from the classification-only $0.935$ of \S\ref{sec:v2}: the bridge is the
 \emph{same} near-unit-slope relationship whether the agent classifies, reasons, rolls out a sequential
@@ -577,6 +581,8 @@ cross-shape (4 shapes) & 42 & $0.924$ \,[$0.825,0.967$] & $0.953$ \,[$0.925,0.97
 \end{tabular}
 \caption{Cross-shape generalization. The out-of-sample bridge $\Delta G_{\text{hold}}\sim\I$ holds across four
 task shapes with a pooled slope ($0.953$) statistically indistinguishable from classification-only ($0.935$).
+The classification row reports the full ten-model v2 headline; the $n=42$ cross-shape pool reuses only the
+eight-model, three-family ladder common to all shapes ($24$ classification $+\,18$ new-shape points).
 $11/12$ frozen checks pass; the lone miss is code's underpowered capability-ranking sub-check
 (\S\ref{sec:limits}), not a shape-specific break --- the code \emph{bridge} slope itself passes.}
 \label{tab:shapes}
