@@ -1,0 +1,362 @@
+{
+  "0": {
+    "text": "To determine how long it takes for the fog bank to cover the entire 42-mile-wide city, we can follow these steps:\n\n1. **Determine the rate of coverage:**\n   - The fog bank covers 3 miles in 10 minutes.\n\n2. **Calculate the total distance to be covered:**\n   - The city is 42 miles wide.\n\n3. **Find out how many 3-mile segments fit into 42 miles:**\n   \\[\n   \\frac{42 \\text{ miles}}{3 \\text{ miles/segment}} = 14 \\text{ segments}\n   \\]\n\n4. **Calculate the total time required to cover all segments:**\n   - Since each segment takes 10 minutes, for 14 segments:\n   \\[\n   14 \\times 10 \\text{ minutes} = 140 \\text{ minutes}\n   \\]\n\nThus, it will take 140 minutes for the fog bank to cover the whole city.\n\n#### 140",
+    "prompt_tokens": 109,
+    "eval_tokens": 217,
+    "total_ns": 41510711708,
+    "wall_s": 41.57497811317444,
+    "pred": "0",
+    "gold": "0"
+  },
+  "1": {
+    "text": "To determine how many gift bags Christina needs and the total cost, we'll follow these steps:\n\n1. **Calculate the number of guests who actually show up:**\n   - Christina invited 16 friends.\n   - Since \\( \\frac{1}{4} \\) of the attendees don't show up, \\( \\frac{3}{4} \\) do show up.\n   - Number of guests who show up = \\( 16 \\times \\frac{3}{4} = 12 \\).\n\n2. **Determine the number of gift bags needed:**\n   - Christina needs 0.75 gift bags per guest.\n   - Total gift bags required = \\( 12 \\times 0.75 = 9 \\).\n\n3. **Calculate the total cost for the gift bags:**\n   - Each gift bag costs $2.\n   - Total cost = \\( 9 \\times 2 = 18 \\).\n\nThus, Christina will spend \\$18 on gift bags.\n\n#### 18",
+    "prompt_tokens": 95,
+    "eval_tokens": 212,
+    "total_ns": 37893680000,
+    "wall_s": 38.17102384567261,
+    "pred": "2",
+    "gold": "0"
+  },
+  "2": {
+    "text": "Let's break down the problem step by step:\n\n1. **Calculate the total number of eggs laid per day:**\n   Janet\u2019s ducks lay 16 eggs per day.\n\n2. **Determine how many eggs are used for breakfast and muffins:**\n   - Janet eats 3 eggs every morning.\n   - She uses 4 eggs to bake muffins for her friends each day.\n   \n   Therefore, the total number of eggs used is:\n   \\[\n   3 + 4 = 7 \\text{ eggs}\n   \\]\n\n3. **Calculate the number of eggs remaining after Janet's use:**\n   The number of eggs left over after she uses some for breakfast and muffins is:\n   \\[\n   16 - 7 = 9 \\text{ eggs}\n   \\]\n\n4. **Determine how much money Janet makes from selling the remaining eggs:**\n   She sells each egg at $2 per egg.\n   \n   Therefore, the total amount of money she makes from selling the remaining 9 eggs is:\n   \\[\n   9 \\times 2 = 18 \\text{ dollars}\n   \\]\n\n#### 18",
+    "prompt_tokens": 110,
+    "eval_tokens": 241,
+    "total_ns": 42044677083,
+    "wall_s": 42.08061909675598,
+    "pred": "2",
+    "gold": "2"
+  },
+  "3": {
+    "text": "To determine how much money Jordan would earn in one week if he spent his video game time working instead, we can follow these steps:\n\n1. **Calculate the total hours Jordan spends playing video games per day:**\n   \\[\n   2 \\text{ hours/day}\n   \\]\n\n2. **Determine the number of days in a week:**\n   \\[\n   7 \\text{ days/week}\n   \\]\n\n3. **Calculate the total hours spent on video games in one week:**\n   \\[\n   2 \\text{ hours/day} \\times 7 \\text{ days/week} = 14 \\text{ hours/week}\n   \\]\n\n4. **Find out Jordan's hourly wage from his part-time job:**\n   \\[\n   \\$10/\\text{hour}\n   \\]\n\n5. **Calculate the total earnings if Jordan worked instead of playing video games for those 14 hours in a week:**\n   \\[\n   14 \\text{ hours/week} \\times \\$10/\\text{hour} = \\$140/\\text{week}\n   \\]\n\nThus, the amount of money Jordan would earn in one week if he spent his video game time working instead is:\n\\[\n#### 140\n\\]",
+    "prompt_tokens": 91,
+    "eval_tokens": 269,
+    "total_ns": 47592957291,
+    "wall_s": 47.619067907333374,
+    "pred": "0",
+    "gold": "0"
+  },
+  "4": {
+    "text": "Let's break down the problem step-by-step:\n\n1. **First 6 Hours:**\n   - Bees leaving: \\(30\\)\n\n2. **Next 6 Hours (7th to 12th hour):**\n   - Bees returning: \\(\\frac{1}{2} \\times 30 = 15\\)\n   \n3. **Next 6 Hours (13th to 18th hour):**\n   - Bees leaving: \\(2 \\times 30 = 60\\)\n\n4. **Last 6 Hours (19th to 24th hour):**\n   - Bees returning: The number of bees that left in the first 6 hours and haven't returned yet is \\(30 - 15 = 15\\). All these 15 bees return.\n\nSo, the total number of bees returning in the last 6 hours is:\n\\[ \\boxed{15} \\]\n#### 15",
+    "prompt_tokens": 170,
+    "eval_tokens": 206,
+    "total_ns": 37484743833,
+    "wall_s": 37.50762701034546,
+    "pred": "3",
+    "gold": "3"
+  },
+  "5": {
+    "text": "To solve this problem, we need to calculate the total distance traveled by each train over the two days.\n\n### Day 1:\n- Both trains travel westward for 80 miles.\nSo, the distance covered on the first day is \\(80\\) miles.\n\n### Day 2:\n- Both trains then travel northwards for 150 miles.\nSo, the distance covered on the second day is \\(150\\) miles.\n\n### Total Distance:\nTo find the total distance each train has traveled over the two days, we add the distances from both days together:\n\n\\[\n80 \\text{ miles (westward)} + 150 \\text{ miles (northward)} = 230 \\text{ miles}\n\\]\n\nThus, the total distance covered by each train in the two days is \\(230\\) miles.\n\n#### 230",
+    "prompt_tokens": 98,
+    "eval_tokens": 181,
+    "total_ns": 32573943833,
+    "wall_s": 32.59600830078125,
+    "pred": "2",
+    "gold": "2"
+  },
+  "6": {
+    "text": "To find the total cost of all the pastries Toula bought, we need to calculate the cost for each type of pastry separately and then sum these costs.\n\n1. **Cost of Donuts:**\n   - Toula bought 3 dozen donuts.\n   - The cost per dozen is $68.\n   \\[\n   \\text{Total cost of donuts} = 3 \\times 68\n   \\]\n   Let's calculate this:\n   \\[\n   3 \\times 68 = 204\n   \\]\n\n2. **Cost of Mini Cupcakes:**\n   - Toula bought 2 dozen mini cupcakes.\n   - The cost per dozen is $80.\n   \\[\n   \\text{Total cost of mini cupcakes} = 2 \\times 80\n   \\]\n   Let's calculate this:\n   \\[\n   2 \\times 80 = 160\n   \\]\n\n3. **Cost of Mini Cheesecakes:**\n   - Toula bought 6 dozen mini cheesecakes.\n   - The cost per dozen is $55.\n   \\[\n   \\text{Total cost of mini cheesecakes} = 6 \\times 55\n   \\]\n   Let's calculate this:\n   \\[\n   6 \\times 55 = 330\n   \\]\n\n4. **Total Cost:**\n   - Now, we sum the costs calculated for each type of pastry.\n   \\[\n   \\text{Total cost} = 204 + 160 + 330\n   \\]\n   Let's calculate this:\n   \\[\n   204 + 160 = 364\n   \\]\n   \\[\n   364 + 330 = 694\n   \\]\n\nThus, the total cost is \\(#### 694\\).",
+    "prompt_tokens": 110,
+    "eval_tokens": 402,
+    "total_ns": 69902034042,
+    "wall_s": 69.92820596694946,
+    "pred": "2",
+    "gold": "2"
+  },
+  "7": {
+    "text": "Let's break down the problem step-by-step.\n\n1. **Identify the given information:**\n   - Number of dogs (\\(D\\)) = 60.\n   - The number of cats is twice the number of dogs because there are two cats for every dog. Therefore, the number of cats (\\(C\\)) = \\(2 \\times D\\) = \\(2 \\times 60\\) = 120.\n\n2. **Calculate the combined number of pet dogs and cats:**\n   - Combined number of pets (dogs + cats) = \\(D + C\\) = 60 + 120 = 180.\n\n3. **Relate the rabbits to the combined number of dogs and cats:**\n   - The number of rabbit pets (\\(R\\)) is twelve less than the combined number of pet dogs and cats.\n   - Therefore, \\(R = (D + C) - 12\\) = 180 - 12 = 168.\n\n4. **Calculate the total number of pets in the neighborhood:**\n   - Total number of pets = Number of rabbits + Number of dogs + Number of cats.\n   - Total number of pets = \\(R + D + C\\) = 168 + 60 + 120 = 348.\n\n#### 348",
+    "prompt_tokens": 96,
+    "eval_tokens": 282,
+    "total_ns": 47359227792,
+    "wall_s": 47.41595387458801,
+    "pred": "0",
+    "gold": "0"
+  },
+  "8": {
+    "text": "To determine how many hours John spends each week taking care of his dogs, we can break the problem down into smaller steps.\n\n1. **Calculate daily hours spent per dog:**\n   Each dog takes 0.5 hours a day to walk and take care of their business.\n\n2. **Calculate total daily hours for all dogs:**\n   Since John has 10 dogs, the total daily hours are:\n   \\[\n   10 \\text{ dogs} \\times 0.5 \\text{ hours/dog} = 5 \\text{ hours/day}\n   \\]\n\n3. **Calculate weekly hours spent:**\n   There are 7 days in a week, so the total weekly hours are:\n   \\[\n   5 \\text{ hours/day} \\times 7 \\text{ days/week} = 35 \\text{ hours/week}\n   \\]\n\nThus, John spends **#### 35** hours a week taking care of his dogs.",
+    "prompt_tokens": 86,
+    "eval_tokens": 203,
+    "total_ns": 33941136958,
+    "wall_s": 33.97098398208618,
+    "pred": "3",
+    "gold": "3"
+  },
+  "9": {
+    "text": "To find the total inner volume of all three boxes, we need to follow these steps:\n\n### Step 1: Determine the dimensions of the inner space of one box.\nEach outer dimension of a box is given as:\n- Length (L) = 5 inches\n- Width (W) = 6 inches\n- Height (H) = 4 inches\n\nThe walls are 1 inch thick, so we need to subtract twice this thickness from each dimension to find the inner dimensions.\n\nFor length: \\( L_{\\text{inner}} = 5 - 2 \\times 1 = 3 \\) inches.\nFor width: \\( W_{\\text{inner}} = 6 - 2 \\times 1 = 4 \\) inches.\nFor height: \\( H_{\\text{inner}} = 4 - 2 \\times 1 = 2 \\) inches.\n\n### Step 2: Calculate the inner volume of one box.\nThe formula for the volume of a rectangular prism is:\n\\[ V = L \\times W \\times H \\]\n\nSubstituting the inner dimensions:\n\\[ V_{\\text{inner}} = 3 \\times 4 \\times 2 = 24 \\text{ cubic inches} \\]\n\n### Step 3: Calculate the total inner volume of all three boxes.\nSince there are 3 boxes, we multiply the inner volume of one box by 3:\n\\[ V_{\\text{total}} = 3 \\times 24 = 72 \\text{ cubic inches} \\]\n\n#### 72",
+    "prompt_tokens": 89,
+    "eval_tokens": 324,
+    "total_ns": 53413186209,
+    "wall_s": 53.791786909103394,
+    "pred": "0",
+    "gold": "0"
+  },
+  "10": {
+    "text": "To find the total number of unoccupied units in Richard's apartment building, we will follow these steps:\n\n1. **Calculate the total number of units in the building:**\n   - The building has 15 floors.\n   - Each floor contains 8 units.\n\n\\[\n\\text{Total number of units} = 15 \\times 8 = 120\n\\]\n\n2. **Determine the number of occupied units:**\n   - \\( \\frac{3}{4} \\) of the building is occupied.\n   \n\\[\n\\text{Number of occupied units} = \\frac{3}{4} \\times 120 = \\frac{3 \\times 120}{4} = \\frac{360}{4} = 90\n\\]\n\n3. **Calculate the number of unoccupied units:**\n   - Subtract the number of occupied units from the total number of units.\n   \n\\[\n\\text{Number of unoccupied units} = 120 - 90 = 30\n\\]\n\n#### 30",
+    "prompt_tokens": 88,
+    "eval_tokens": 226,
+    "total_ns": 37178022541,
+    "wall_s": 37.21765089035034,
+    "pred": "2",
+    "gold": "2"
+  },
+  "11": {
+    "text": "To determine the total number of people that all four schools have sent to the basketball tournament, we need to break down the contributions from each school and then sum them up.\n\n1. **Players:**\n   - Each team (girls' or boys') has 5 players.\n   - There are two teams per school (one girls' and one boys').\n   - Therefore, each school sends \\(5 \\text{ players} + 5 \\text{ players} = 10 \\text{ players}\\).\n\n2. **Total Players:**\n   - Since there are four schools, the total number of players is:\n     \\[\n     4 \\text{ schools} \\times 10 \\text{ players per school} = 40 \\text{ players}\n     \\]\n\n3. **Coaches:**\n   - Each team has one coach.\n   - There are two teams per school, so each school sends \\(2 \\text{ coaches}\\).\n\n4. **Total Coaches:**\n   - Since there are four schools, the total number of coaches is:\n     \\[\n     4 \\text{ schools} \\times 2 \\text{ coaches per school} = 8 \\text{ coaches}\n     \\]\n\n5. **Total People:**\n   - Adding the players and coaches together gives us the total number of people:\n     \\[\n     40 \\text{ players} + 8 \\text{ coaches} = 48 \\text{ people}\n     \\]\n\n#### 48",
+    "prompt_tokens": 103,
+    "eval_tokens": 312,
+    "total_ns": 52083547542,
+    "wall_s": 52.121992349624634,
+    "pred": "0",
+    "gold": "0"
+  },
+  "12": {
+    "text": "To determine the number of quilt blocks Gene has, we need to follow these steps:\n\n1. **Calculate the number of years Gene has been vacationing:**\n   - Gene started vacationing at age 23.\n   - He is currently 34 years old.\n   - Therefore, he has been vacationing for \\( 34 - 23 = 11 \\) years.\n\n2. **Determine the number of vacations per year:**\n   - Gene goes on four vacations each year.\n\n3. **Calculate the total number of vacation t-shirts (quilt blocks):**\n   - Since he has been vacationing for 11 years and goes on 4 vacations each year, the total number of shirts is:\n     \\[\n     11 \\text{ years} \\times 4 \\text{ vacations/year} = 44 \\text{ shirts}\n     \\]\n\nThus, Gene has a total of 44 quilt blocks.\n\n#### 44",
+    "prompt_tokens": 128,
+    "eval_tokens": 202,
+    "total_ns": 34686657500,
+    "wall_s": 34.91726088523865,
+    "pred": "0",
+    "gold": "0"
+  },
+  "13": {
+    "text": "To solve this problem, we need to follow these steps:\n\n1. **Determine the volume of tomatoes before cooking:**\n   - Each can of tomatoes is 16 ounces.\n   - When cooked, they lose half their volume.\n\n2. **Calculate the volume after cooking:**\n   - If a can loses half its volume when cooked, then each 16-ounce can reduces to \\( \\frac{16}{2} = 8 \\) ounces of sauce.\n\n3. **Determine how many cans are needed for 32 ounces of sauce:**\n   - Since one can yields 8 ounces of sauce, the number of cans required is:\n     \\[\n     \\frac{32 \\text{ ounces}}{8 \\text{ ounces per can}} = 4 \\text{ cans}\n     \\]\n\n4. **Calculate the total number of tomatoes used:**\n   - Each can contains three tomatoes.\n   - Therefore, for 4 cans, the total number of tomatoes is:\n     \\[\n     4 \\text{ cans} \\times 3 \\text{ tomatoes per can} = 12 \\text{ tomatoes}\n     \\]\n\nThus, Freda used **12** tomatoes.\n\n#### 12",
+    "prompt_tokens": 99,
+    "eval_tokens": 256,
+    "total_ns": 42748857875,
+    "wall_s": 42.78289794921875,
+    "pred": "0",
+    "gold": "0"
+  },
+  "14": {
+    "text": "To determine how many boxes of pizza Marie ordered, we need to follow these steps:\n\n1. **Calculate the total cost of the chicken meal:**\n   \\[\n   1 \\text{ meal} \\times \\$12 = \\$12\n   \\]\n\n2. **Calculate the total cost of the milk packs:**\n   \\[\n   5 \\text{ packs} \\times \\$3 = \\$15\n   \\]\n\n3. **Calculate the total cost of the apples:**\n   \\[\n   4 \\text{ apples} \\times \\$1.50 = \\$6\n   \\]\n\n4. **Sum up the costs of the chicken meal, milk packs, and apples:**\n   \\[\n   \\$12 + \\$15 + \\$6 = \\$33\n   \\]\n\n5. **Determine how much money was spent on pizza by subtracting the total cost of other items from the total amount paid:**\n   \\[\n   \\$50 - \\$33 = \\$17\n   \\]\n\n6. **Calculate the number of boxes of pizza Marie ordered, given that each box costs $8.50:**\n   \\[\n   \\frac{\\$17}{\\$8.50} = 2\n   \\]\n   \nSince \\( \\frac{17}{8.5} = 2 \\), we conclude that Marie ordered 2 boxes of pizza.\n\n#### 2",
+    "prompt_tokens": 113,
+    "eval_tokens": 297,
+    "total_ns": 49380360292,
+    "wall_s": 49.42400312423706,
+    "pred": "2",
+    "gold": "2"
+  },
+  "15": {
+    "text": "Let's denote the number of queens as \\( Q \\), the number of baby bees as \\( B \\), and the number of worker bees as \\( W \\).\n\nFrom the problem statement:\n1. There are twice as many worker bees as baby bees: \n   \\[\n   W = 2B\n   \\]\n2. There are twice as many babies as queens:\n   \\[\n   B = 2Q\n   \\]\n\nWe also know that the total number of bees in the hive is 700, so we can write:\n\\[\nW + B + Q = 700\n\\]\n\nSubstituting \\( W \\) and \\( B \\) from the relationships above into the equation for the total number of bees:\n\n1. Substitute \\( B = 2Q \\):\n   \\[\n   W = 2B = 2(2Q) = 4Q\n   \\]\n   \n2. Now substitute \\( W = 4Q \\) and \\( B = 2Q \\) into the total equation:\n   \\[\n   4Q + 2Q + Q = 700\n   \\]\n\n3. Combine like terms:\n   \\[\n   7Q = 700\n   \\]\n\n4. Solve for \\( Q \\):\n   \\[\n   Q = \\frac{700}{7} = 100\n   \\]\n\n5. Now find the number of baby bees \\( B \\):\n   \\[\n   B = 2Q = 2(100) = 200\n   \\]\n\n6. Finally, calculate the number of worker bees \\( W \\):\n   \\[\n   W = 4Q = 4(100) = 400\n   \\]\n\nThus, the number of worker bees is:\n\\[\n\\boxed{400}\n\\]",
+    "prompt_tokens": 85,
+    "eval_tokens": 391,
+    "total_ns": 64132497875,
+    "wall_s": 64.15254926681519,
+    "pred": "0",
+    "gold": "0"
+  },
+  "16": {
+    "text": "To determine how many oranges are good in the basket, we need to follow these steps:\n\n1. **Total number of oranges**: Given as 25.\n\n2. **Number of bad oranges**: Given directly as 1.\n\n3. **Number of unripe oranges**: \n   - 20% of the total oranges are unripe.\n   - Calculate 20% of 25: \\( \\frac{20}{100} \\times 25 = 5 \\).\n   - So, there are 5 unripe oranges.\n\n4. **Number of sour oranges**: Given directly as 2.\n\n5. **Calculate the number of good oranges**:\n   - Subtract the number of bad, unripe, and sour oranges from the total.\n   - Total number of bad, unripe, and sour oranges: \\(1 + 5 + 2 = 8\\).\n   - Therefore, the number of good oranges is \\(25 - 8 = 17\\).\n\n#### 17",
+    "prompt_tokens": 83,
+    "eval_tokens": 212,
+    "total_ns": 34700603375,
+    "wall_s": 35.11560606956482,
+    "pred": "1",
+    "gold": "1"
+  },
+  "17": {
+    "text": "To determine how far Sophia can drive on a single tank of gas, we need to calculate the car's fuel efficiency in miles per gallon (mpg) and then use that information to find out the total distance she can travel with a full 12-gallon tank.\n\nStep 1: Calculate the car's fuel efficiency.\n- Sophia has traveled 100 miles using 4 gallons of gas.\n- Fuel efficiency = Distance / Gallons used\n\\[ \\text{Fuel Efficiency} = \\frac{100 \\text{ miles}}{4 \\text{ gallons}} = 25 \\text{ miles per gallon (mpg)} \\]\n\nStep 2: Determine the total distance she can travel with a full tank.\n- A full tank holds 12 gallons of gas.\n- Total distance = Fuel Efficiency * Gallons in the tank\n\\[ \\text{Total Distance} = 25 \\text{ mpg} \\times 12 \\text{ gallons} = 300 \\text{ miles} \\]\n\nTherefore, Sophia can drive **#### 300** miles on a single tank of gas.",
+    "prompt_tokens": 138,
+    "eval_tokens": 234,
+    "total_ns": 40149515459,
+    "wall_s": 40.181588888168335,
+    "pred": "0",
+    "gold": "0"
+  },
+  "18": {
+    "text": "To determine how much Cynthia will spend on ice cream after 60 days, we need to follow these steps:\n\n1. **Calculate the total number of servings Cynthia eats in 60 days:**\n   - Since she eats one serving every night, over 60 days, she will eat:\n     \\[\n     60 \\text{ servings}\n     \\]\n\n2. **Determine how many cartons of ice cream are needed:**\n   - Each carton contains 15 servings.\n   - To find the number of cartons required, we divide the total number of servings by the number of servings per carton:\n     \\[\n     \\frac{60 \\text{ servings}}{15 \\text{ servings/carton}} = 4 \\text{ cartons}\n     \\]\n\n3. **Calculate the total cost:**\n   - Each carton costs $4.00.\n   - Therefore, the total cost for 4 cartons is:\n     \\[\n     4 \\text{ cartons} \\times \\$4.00/\\text{carton} = \\$16.00\n     \\]\n\nThus, after 60 days, Cynthia will spend \\(\\boxed{16}\\) dollars on ice cream.",
+    "prompt_tokens": 104,
+    "eval_tokens": 262,
+    "total_ns": 43933734917,
+    "wall_s": 43.95569896697998,
+    "pred": "0",
+    "gold": "0"
+  },
+  "19": {
+    "text": "To solve this problem, we need to determine the square footage for each level of Luke's sandcastle and then find the average.\n\n1. **Identify the square footage of each level:**\n   - The top (4th) level has a square footage of 16.\n   - Each subsequent level will have double the square footage of the next higher level.\n\n2. **Calculate the square footage for each level from bottom to top:**\n   - Let's denote the levels as \\( L_1, L_2, L_3, \\) and \\( L_4 \\), where \\( L_4 \\) is the top level.\n   - Given that \\( L_4 = 16 \\).\n   - The square footage of \\( L_3 \\) (the third level from the bottom) will be double that of \\( L_4 \\):\n     \\[\n     L_3 = 2 \\times L_4 = 2 \\times 16 = 32\n     \\]\n   - Similarly, for \\( L_2 \\) (the second level from the bottom):\n     \\[\n     L_2 = 2 \\times L_3 = 2 \\times 32 = 64\n     \\]\n   - And finally, for \\( L_1 \\) (the bottom level):\n     \\[\n     L_1 = 2 \\times L_2 = 2 \\times 64 = 128\n     \\]\n\n3. **Sum the square footage of all levels:**\n   \\[\n   \\text{Total square footage} = L_1 + L_2 + L_3 + L_4 = 128 + 64 + 32 + 16\n   \\]\n   - Calculate the sum:\n     \\[\n     128 + 64 = 192\n     \\]\n     \\[\n     192 + 32 = 224\n     \\]\n     \\[\n     224 + 16 = 240\n     \\]\n\n4. **Calculate the average square footage:**\n   - There are 4 levels, so we divide the total square footage by 4:\n     \\[\n     \\text{Average} = \\frac{\\text{Total square footage}}{4} = \\frac{240}{4} = 60\n     \\]\n\n#### 60",
+    "prompt_tokens": 111,
+    "eval_tokens": 510,
+    "total_ns": 83998404458,
+    "wall_s": 84.02994990348816,
+    "pred": "0",
+    "gold": "0"
+  },
+  "20": {
+    "text": "To determine the total number of doorbell rings made, we need to calculate the contributions from each of Jerome's friends and sum them up.\n\n1. **First Friend:**\n   - The first friend pressed 20 times.\n   \n2. **Second Friend:**\n   - The second friend pressed \\( \\frac{1}{4} \\) times more than the first friend.\n   - Calculation:\n     \\[\n     \\text{Additional presses by the second friend} = 20 \\times \\frac{1}{4} = 5\n     \\]\n   - Total presses by the second friend:\n     \\[\n     20 + 5 = 25\n     \\]\n\n3. **Third Friend:**\n   - The third friend pressed 10 times more than the fourth friend.\n   - Given that the fourth friend pressed 60 times, we calculate:\n     \\[\n     \\text{Presses by the third friend} = 60 + 10 = 70\n     \\]\n\n4. **Fourth Friend:**\n   - The fourth friend pressed 60 times.\n\nNow, summing up all the presses:\n\n\\[\n20 \\ (\\text{first friend}) + 25 \\ (\\text{second friend}) + 70 \\ (\\text{third friend}) + 60 \\ (\\text{fourth friend})\n\\]\n\nAdding these together:\n\n\\[\n20 + 25 = 45\n\\]\n\\[\n45 + 70 = 115\n\\]\n\\[\n115 + 60 = 175\n\\]\n\nThus, the total number of doorbell rings is \\( \\boxed{175} \\).",
+    "prompt_tokens": 140,
+    "eval_tokens": 358,
+    "total_ns": 60481898792,
+    "wall_s": 60.51531100273132,
+    "pred": "3",
+    "gold": "3"
+  },
+  "21": {
+    "text": "To solve this problem, we will follow these steps:\n\n1. **Determine the number of boys:**\n   - Given that 2/5 of the students are boys.\n   - Total number of students = 200.\n\n   \\[\n   \\text{Number of boys} = \\frac{2}{5} \\times 200 = \\frac{400}{5} = 80\n   \\]\n\n2. **Determine the number of girls:**\n   - Total number of students is 200, and we have already calculated that there are 80 boys.\n   \n   \\[\n   \\text{Number of girls} = 200 - 80 = 120\n   \\]\n\n3. **Determine the number of girls in the girl scout:**\n   - Given that 2/3 of the girls are in the girl scout.\n\n   \\[\n   \\text{Number of girls in the girl scout} = \\frac{2}{3} \\times 120 = \\frac{240}{3} = 80\n   \\]\n\n4. **Determine the number of girls not in the girl scout:**\n   - Total number of girls is 120, and we have calculated that 80 are in the girl scout.\n   \n   \\[\n   \\text{Number of girls not in the girl scout} = 120 - 80 = 40\n   \\]\n\n#### 40",
+    "prompt_tokens": 87,
+    "eval_tokens": 317,
+    "total_ns": 52240694708,
+    "wall_s": 52.270151138305664,
+    "pred": "0",
+    "gold": "0"
+  },
+  "22": {
+    "text": "To solve this problem, we need to determine the maximum distance Polly can throw the gold javelin when holding the sapphire gemstone, and ensure that this distance is outside the 1000 feet reach of the dragon's flames.\n\nStep 1: Determine the throwing distance without the gemstone.\n- Polly can throw the javelin for a distance of 400 feet without the gemstone.\n\nStep 2: Calculate the increased throwing distance with the gemstone.\n- When holding the sapphire gemstone, Polly can throw the javelin three times farther than when not holding it. Therefore, we multiply the original distance by 3:\n\\[ 400 \\text{ feet} \\times 3 = 1200 \\text{ feet} \\]\n\nStep 3: Verify that this distance is outside the dragon's reach.\n- The dragon can breathe fire within a distance of 1000 feet. Polly needs to stand at least 1000 + 1 feet (or any integer greater than 1000) away from the dragon to ensure she is safe.\n\nStep 4: Confirm that 1200 feet is outside the dragon's reach.\n- Since 1200 feet is more than 1000 feet, Polly can stand at this distance and still be able to hit the dragon with the javelin while staying out of harm's way.\n\nThus, the final integer representing how far outside the reach of the dragon's flames Polly could stand is:\n\\[ \\boxed{1200} \\]",
+    "prompt_tokens": 173,
+    "eval_tokens": 323,
+    "total_ns": 55060391125,
+    "wall_s": 55.08583211898804,
+    "pred": "0",
+    "gold": "0"
+  },
+  "23": {
+    "text": "To determine the number of fruit roll-ups each person ate and find the average, we need to calculate the total for each individual first.\n\n1. **Calculate Beatrice's Total:**\n   - Beatrice's roll-up is 2 roll-ups wide and 24 roll-ups long.\n   - To find the total number of roll-ups she has:\n     \\[\n     2 \\text{ (width)} \\times 24 \\text{ (length)} = 48\n     \\]\n\n2. **Calculate Marcell's Total:**\n   - Marcell's roll-up is 3 roll-ups wide and 14 roll-ups long.\n   - To find the total number of roll-ups he has:\n     \\[\n     3 \\text{ (width)} \\times 14 \\text{ (length)} = 42\n     \\]\n\n3. **Calculate the Total Number of Roll-Ups Eaten:**\n   - Add Beatrice's and Marcell's totals together to find the combined total:\n     \\[\n     48 + 42 = 90\n     \\]\n\n4. **Calculate the Average:**\n   - To find the average, divide the total number of roll-ups by the number of people (which is 2):\n     \\[\n     \\frac{90}{2} = 45\n     \\]\n\nThus, the average number of fruit roll-ups eaten is:\n\\[\n\\boxed{45}\n\\]",
+    "prompt_tokens": 132,
+    "eval_tokens": 305,
+    "total_ns": 51452194500,
+    "wall_s": 51.827337980270386,
+    "pred": "1",
+    "gold": "1"
+  },
+  "24": {
+    "text": "To determine how much Vincent saves by buying 18 flowers at the better price, we need to compare the cost of purchasing 18 flowers in both package types and find the difference.\n\n**Step 1: Calculate the cost for packages of 3.**\n\n- Each package contains 3 flowers.\n- The cost per package is $2.50.\n\nTo find out how many packages are needed:\n\\[\n\\frac{18 \\text{ flowers}}{3 \\text{ flowers/package}} = 6 \\text{ packages}\n\\]\n\nThe total cost for 6 packages of 3 flowers each:\n\\[\n6 \\text{ packages} \\times \\$2.50/\\text{package} = \\$15\n\\]\n\n**Step 2: Calculate the cost for packages of 2.**\n\n- Each package contains 2 flowers.\n- The cost per package is $1.\n\nTo find out how many packages are needed:\n\\[\n\\frac{18 \\text{ flowers}}{2 \\text{ flowers/package}} = 9 \\text{ packages}\n\\]\n\nThe total cost for 9 packages of 2 flowers each:\n\\[\n9 \\text{ packages} \\times \\$1/\\text{package} = \\$9\n\\]\n\n**Step 3: Determine the savings.**\n\nTo find out how much Vincent saves by buying at the better price, we subtract the lower cost from the higher cost:\n\\[\n\\$15 - \\$9 = \\$6\n\\]\n\nThus, Vincent saves \\(\\boxed{6}\\) dollars by buying 18 flowers at the better price.",
+    "prompt_tokens": 88,
+    "eval_tokens": 331,
+    "total_ns": 54197300375,
+    "wall_s": 54.52728605270386,
+    "pred": "2",
+    "gold": "2"
+  },
+  "25": {
+    "text": "To determine how many miles Rosie can run in 7 hours, we need to break down the problem into two parts based on her running speeds.\n\n1. **First Part of the Run:**\n   - Speed: 10 miles per hour\n   - Time: 3 hours\n\n   The distance covered during this part is calculated as:\n   \\[\n   \\text{Distance} = \\text{Speed} \\times \\text{Time}\n   \\]\n   Substituting the values, we get:\n   \\[\n   \\text{Distance}_1 = 10 \\, \\text{miles/hour} \\times 3 \\, \\text{hours} = 30 \\, \\text{miles}\n   \\]\n\n2. **Second Part of the Run:**\n   - Speed: 5 miles per hour\n   - Time: The remaining time after the first part\n\n   Since Rosie runs for a total of 7 hours and has already used 3 hours in the first part:\n   \\[\n   \\text{Remaining time} = 7 \\, \\text{hours} - 3 \\, \\text{hours} = 4 \\, \\text{hours}\n   \\]\n\n   The distance covered during this second part is calculated as:\n   \\[\n   \\text{Distance}_2 = \\text{Speed} \\times \\text{Time}\n   \\]\n   Substituting the values, we get:\n   \\[\n   \\text{Distance}_2 = 5 \\, \\text{miles/hour} \\times 4 \\, \\text{hours} = 20 \\, \\text{miles}\n   \\]\n\n3. **Total Distance Covered:**\n   - Sum of distances from both parts:\n   \\[\n   \\text{Total distance} = \\text{Distance}_1 + \\text{Distance}_2\n   \\]\n   Substituting the values, we get:\n   \\[\n   \\text{Total distance} = 30 \\, \\text{miles} + 20 \\, \\text{miles} = 50 \\, \\text{miles}\n   \\]\n\nThus, Rosie can run a total of \\(#### 50\\) miles in 7 hours.",
+    "prompt_tokens": 82,
+    "eval_tokens": 474,
+    "total_ns": 77376951375,
+    "wall_s": 77.58398509025574,
+    "pred": "2",
+    "gold": "2"
+  },
+  "26": {
+    "text": "Let's denote the number of silver coins as \\( S \\) and the number of gold coins as \\( G \\).\n\nFrom the problem statement, we know two things:\n1. The total number of coins is 110.\n2. There are 30 more gold coins than silver coins.\n\nWe can express these statements with equations:\n\\[ S + G = 110 \\]\n\\[ G = S + 30 \\]\n\nNow substitute the second equation into the first one to solve for \\( S \\):\n\\[ S + (S + 30) = 110 \\]\n\\[ 2S + 30 = 110 \\]\n\nNext, isolate \\( S \\) by subtracting 30 from both sides:\n\\[ 2S = 80 \\]\n\nThen divide by 2 to find the value of \\( S \\):\n\\[ S = 40 \\]\n\nNow that we know there are 40 silver coins, use the second equation to find the number of gold coins:\n\\[ G = S + 30 \\]\n\\[ G = 40 + 30 \\]\n\\[ G = 70 \\]\n\nSo, Gretchen has \\( 70 \\) gold coins.\n\n#### 70",
+    "prompt_tokens": 76,
+    "eval_tokens": 260,
+    "total_ns": 43453686375,
+    "wall_s": 43.518619775772095,
+    "pred": "2",
+    "gold": "2"
+  },
+  "27": {
+    "text": "Let's break down the problem step by step:\n\n1. **Initial Plants on Window Ledges:**\n   - Mary has 2 potted plants on each of the 40 window ledges.\n   - Total initial number of plants = \\( 2 \\times 40 = 80 \\) plants.\n\n2. **Plants Given Away:**\n   - She plans to give 1 plant from each ledge to friends and family.\n   - Number of plants given away = 40 (one per ledge).\n\n3. **New Plants Received:**\n   - Mary received 18 new potted plants yesterday.\n   \n4. **Total Plants Before Giving Away:**\n   - Total plants before giving any away = Initial plants + New plants\n   - \\( 80 \\text{ (initial)} + 18 \\text{ (new)} = 98 \\) plants.\n\n5. **Plants Remaining After Giving Away:**\n   - Plants remaining after giving away = Total plants before giving away - Plants given away\n   - \\( 98 - 40 = 58 \\)\n\nSo, the number of potted plants Mary will remain with is:\n\n#### 58",
+    "prompt_tokens": 127,
+    "eval_tokens": 248,
+    "total_ns": 42035107208,
+    "wall_s": 42.05320596694946,
+    "pred": "2",
+    "gold": "2"
+  },
+  "28": {
+    "text": "Let's denote the number of copies Harald sold as \\( H \\). According to the problem, Marilyn's first record sold 10 times as many copies as Harald's. Therefore, the number of copies Marilyn sold can be expressed as \\( 10H \\).\n\nThe total number of copies sold by both is given as 88,000. This gives us the equation:\n\\[ H + 10H = 88,000 \\]\n\nCombining like terms on the left side of the equation, we get:\n\\[ 11H = 88,000 \\]\n\nTo find \\( H \\), we divide both sides by 11:\n\\[ H = \\frac{88,000}{11} \\]\n\\[ H = 8,000 \\]\n\nSo, Harald sold \\( 8,000 \\) copies.\n\n#### 8000",
+    "prompt_tokens": 85,
+    "eval_tokens": 195,
+    "total_ns": 32483821875,
+    "wall_s": 32.512223958969116,
+    "pred": "0",
+    "gold": "0"
+  },
+  "29": {
+    "text": "To solve this problem, we will break it down into steps.\n\n1. **Determine the number of unicorns in the Scottish Highlands:**\n   - There are 27 unicorns in total.\n   - One third of these unicorns are in the Scottish Highlands.\n   \n   \\[\n   \\text{Number of Scottish unicorns} = \\frac{1}{3} \\times 27 = 9\n   \\]\n\n2. **Determine the number of female Scottish unicorns:**\n   - Two thirds of the Scottish unicorns are female.\n   \n   \\[\n   \\text{Number of female Scottish unicorns} = \\frac{2}{3} \\times 9 = 6\n   \\]\n\nThus, there are 6 female Scottish unicorns.\n\n#### 6",
+    "prompt_tokens": 89,
+    "eval_tokens": 164,
+    "total_ns": 27873082334,
+    "wall_s": 28.18758487701416,
+    "pred": "2",
+    "gold": "2"
+  },
+  "30": {
+    "text": "To solve this problem, we need to determine the distance Tom's ship travels and then use that information to find out how long it takes for the return trip.\n\n1. **Determine the time of travel:**\n   - Tom sails from 1 PM to 4 PM.\n   - The total time spent sailing is \\(4 \\text{ PM} - 1 \\text{ PM} = 3 \\text{ hours}\\).\n\n2. **Calculate the distance traveled during the first part of the trip:**\n   - Speed of the ship = 10 miles per hour.\n   - Time of travel = 3 hours.\n   - Distance = Speed \u00d7 Time\n   - Distance = \\(10 \\text{ mph} \\times 3 \\text{ hours} = 30 \\text{ miles}\\).\n\n3. **Determine the time required for the return trip:**\n   - The distance to be traveled back is the same, which is 30 miles.\n   - Speed of the ship on the return trip = 6 miles per hour.\n   - Time = Distance / Speed\n   - Time = \\( \\frac{30 \\text{ miles}}{6 \\text{ mph}} = 5 \\text{ hours}\\).\n\nThus, it takes Tom 5 hours to get back.\n\n#### 5",
+    "prompt_tokens": 94,
+    "eval_tokens": 272,
+    "total_ns": 45260919500,
+    "wall_s": 45.61461901664734,
+    "pred": "1",
+    "gold": "1"
+  },
+  "31": {
+    "text": "To determine the number of jewels Siobhan has, we need to follow these steps:\n\n1. **Find out how many jewels Aaron has:**\n   - We know that Raymond has 40 jewels.\n   - Aaron has 5 more jewels than half of Raymond's jewels.\n\nFirst, calculate half of Raymond's jewels:\n\\[\n\\frac{40}{2} = 20\n\\]\n\nNext, add 5 to this value to find the number of jewels Aaron has:\n\\[\n20 + 5 = 25\n\\]\nSo, Aaron has 25 jewels.\n\n2. **Find out how many jewels Siobhan has:**\n   - Siobhan has 2 fewer jewels than Aaron.\n   \nSubtract 2 from the number of jewels Aaron has:\n\\[\n25 - 2 = 23\n\\]\n\nTherefore, Siobhan has \\(\\boxed{23}\\) jewels.",
+    "prompt_tokens": 86,
+    "eval_tokens": 194,
+    "total_ns": 32116998125,
+    "wall_s": 32.144734144210815,
+    "pred": "3",
+    "gold": "3"
+  },
+  "32": {
+    "text": "Let's denote the number of games the team won as \\( W \\) and the number of games they lost as \\( L \\).\n\nFrom the problem statement, we have two key pieces of information:\n1. The total number of games played is 22.\n2. They won 8 more games than they lost.\n\nWe can express these in equations:\n\\[ W + L = 22 \\]\n\\[ W = L + 8 \\]\n\nNow substitute the second equation into the first one to solve for \\( L \\):\n\\[ (L + 8) + L = 22 \\]\n\\[ 2L + 8 = 22 \\]\n\nSubtract 8 from both sides:\n\\[ 2L = 14 \\]\n\nDivide by 2:\n\\[ L = 7 \\]\n\nNow, substitute \\( L = 7 \\) back into the equation \\( W = L + 8 \\):\n\\[ W = 7 + 8 \\]\n\\[ W = 15 \\]\n\nSo, the number of games they won is \\( 15 \\).\n\n#### 15",
+    "prompt_tokens": 69,
+    "eval_tokens": 227,
+    "total_ns": 37262502250,
+    "wall_s": 37.286293029785156,
+    "pred": "3",
+    "gold": "3"
+  },
+  "33": {
+    "text": "To solve this problem, we need to determine how many bolts of each type of fiber are required for the robe and then sum them up.\n\n1. **Identify the amount of blue fiber needed:**\n   - The problem states that a robe takes 2 bolts of blue fiber.\n   \n2. **Determine the amount of white fiber needed:**\n   - It is given that the amount of white fiber needed is half that much as the blue fiber.\n   - Therefore, the amount of white fiber required is \\( \\frac{1}{2} \\times 2 = 1 \\) bolt.\n\n3. **Calculate the total number of bolts:**\n   - Add the bolts of blue fiber and white fiber together:\n     \\[\n     2 \\text{ (blue)} + 1 \\text{ (white)} = 3 \\text{ bolts}\n     \\]\n\n#### 3",
+    "prompt_tokens": 71,
+    "eval_tokens": 182,
+    "total_ns": 30252654917,
+    "wall_s": 30.37078094482422,
+    "pred": "3",
+    "gold": "3"
+  },
+  "34": {
+    "text": "Let's solve this problem step by step:\n\n1. **Initial number of lollipops**: Jean starts with 30 lollipops.\n2. **Lollipops eaten by Jean**: Jean eats 2 lollipops.\n\n   To find out how many lollipops are left, we subtract the lollipops eaten from the initial amount:\n   \\[\n   30 - 2 = 28\n   \\]\n\n3. **Number of lollipops per bag**: Jean wants to package 2 lollipops in one bag.\n\n4. **Calculate the number of bags**:\n   \n   To find out how many bags can be filled with the remaining lollipops, we divide the remaining lollipops by the number of lollipops per bag:\n   \\[\n   \\frac{28}{2} = 14\n   \\]\n\nSo, Jean can fill **14** bags.\n\n#### 14",
+    "prompt_tokens": 95,
+    "eval_tokens": 205,
+    "total_ns": 34635006583,
+    "wall_s": 34.73792600631714,
+    "pred": "2",
+    "gold": "2"
+  },
+  "35": {
+    "text": "To determine how many glasses of water John drinks in a week, we need to break down his daily routine and account for the differences between weekdays and weekends.\n\n1. **Calculate the number of glasses of water per weekday:**\n   - John has 3 glasses of water with breakfast.\n   - He has 1 glass of water with lunch.\n   - He has 1 glass of water with dinner.\n   - He also has 1 glass of water before bed.\n   \n   Therefore, each weekday he drinks:\n   \\[\n   3 + 1 + 1 + 1 = 6 \\text{ glasses of water}\n   \\]\n\n2. **Calculate the number of weekdays in a week:**\n   There are 5 weekdays (Monday through Friday).\n\n3. **Calculate the total number of glasses of water for the weekdays:**\n   Since he drinks 6 glasses each weekday, over 5 weekdays:\n   \\[\n   6 \\times 5 = 30 \\text{ glasses of water}\n   \\]\n\n4. **Calculate the number of glasses of water per weekend day:**\n   - John has 3 glasses of water with breakfast.\n   - He has 1 glass of water with lunch.\n   - Instead of a glass of water with dinner, he has 1 glass of soda.\n   - He still has 1 glass of water before bed.\n\n   Therefore, each weekend day he drinks:\n   \\[\n   3 + 1 + 0 + 1 = 5 \\text{ glasses of water}\n   \\]\n\n5. **Calculate the total number of glasses of water for the weekends:**\n   There are 2 weekend days (Saturday and Sunday), so over the weekend:\n   \\[\n   5 \\times 2 = 10 \\text{ glasses of water}\n   \\]\n\n6. **Add the total glasses of water from weekdays and weekends:**\n   \\[\n   30 + 10 = 40\n   \\]\n\n#### 40",
+    "prompt_tokens": 110,
+    "eval_tokens": 414,
+    "total_ns": 68261843416,
+    "wall_s": 68.36220288276672,
+    "pred": "0",
+    "gold": "2"
+  },
+  "36": {
+    "text": "To determine Sasha's profit from selling her leftover lumber, we need to follow these steps:\n\n1. **Calculate the total cost of the 2 x 4 x 10 boards:**\n   - Each board originally costs $10.\n   - She has ten such boards.\n   \\[\n   \\text{Total cost for 2 x 4 x 10 boards} = 10 \\times 10 = \\$100\n   \\]\n\n2. **Calculate the total cost of the 4 x 4 x 10 boards:**\n   - Each board originally costs $16.\n   - She has five such boards.\n   \\[\n   \\text{Total cost for 4 x 4 x 10 boards} = 5 \\times 16 = \\$80\n   \\]\n\n3. **Calculate the total original cost of all the lumber:**\n   \\[\n   \\text{Total original cost} = \\$100 + \\$80 = \\$180\n   \\]\n\n4. **Determine the new price per board after a 50% increase in prices:**\n   - The original price for each 2 x 4 x 10 board is $10.\n   - A 50% increase means the new price is:\n     \\[\n     10 + (0.5 \\times 10) = 10 + 5 = \\$15\n     \\]\n   - The original price for each 4 x 4 x 10 board is $16.\n   - A 50% increase means the new price is:\n     \\[\n     16 + (0.5 \\times 16) = 16 + 8 = \\$24\n     \\]\n\n5. **Calculate the total selling price of all the lumber:**\n   - For the ten 2 x 4 x 10 boards at $15 each:\n     \\[\n     10 \\times 15 = \\$150\n     \\]\n   - For the five 4 x 4 x 10 boards at $24 each:\n     \\[\n     5 \\times 24 = \\$120\n     \\]\n   - Total selling price:\n     \\[\n     \\$150 + \\$120 = \\$270\n     \\]\n\n6. **Calculate the profit:**\n   - Profit is the",
+    "prompt_tokens": 138,
+    "eval_tokens": 512,
+    "total_ns": 84865297041,
+    "wall_s": 84.9303879737854,
+    "pred": "2",
+    "gold": "2"
+  },
+  "37": {
+    "text": "Let's break down Sadie's sleeping pattern day by day to find out how many hours she slept in total throughout the week.\n\n1. **Monday:**\n   - Sadie slept 8 hours.\n   \n2. **Tuesday and Wednesday:**\n   - She slept 2 hours less than Monday each of these days.\n   - Therefore, on Tuesday and Wednesday, she slept \\(8 - 2 = 6\\) hours each day.\n   \n3. **Total for Tuesday and Wednesday:**\n   - Since both days had the same amount of sleep:\n     \\[\n     6 + 6 = 12 \\text{ hours}\n     \\]\n\n4. **Thursday through Sunday:**\n   - Sadie slept 1 hour more than she did on Tuesday and Wednesday each day.\n   - Therefore, from Thursday to Sunday, she slept \\(6 + 1 = 7\\) hours each day.\n\n5. **Total for Thursday through Sunday:**\n   - Since there are 4 days (Thursday, Friday, Saturday, Sunday):\n     \\[\n     7 \\times 4 = 28 \\text{ hours}\n     \\]\n\n6. **Total sleep for the week:**\n   - Adding up all the hours:\n     \\[\n     8 \\text{ (Monday)} + 12 \\text{ (Tuesday and Wednesday)} + 28 \\text{ (Thursday through Sunday)} = 48 \\text{ hours}\n     \\]\n\n#### 48",
+    "prompt_tokens": 106,
+    "eval_tokens": 304,
+    "total_ns": 56414502917,
+    "wall_s": 56.46866774559021,
+    "pred": "0",
+    "gold": "0"
+  },
+  "38": {
+    "text": "To determine how many times Peter can go to the movies, we need to calculate the total cost of one movie outing and see how many such outings fit into his budget.\n\n1. **Calculate the cost per outing:**\n   - Ticket price = $7\n   - Popcorn price = $7\n   - Total cost per outing = \\( 7 + 7 = 14 \\) dollars\n\n2. **Determine Peter's total budget for the week:**\n   - Total budget = 42 dollars\n\n3. **Calculate how many outings he can afford with his budget:**\n   - Number of outings = Total budget \u00f7 Cost per outing\n   - Number of outings = \\( \\frac{42}{14} = 3 \\)\n\nTherefore, Peter can go to the movies 3 times.\n\n#### 3",
+    "prompt_tokens": 90,
+    "eval_tokens": 172,
+    "total_ns": 29471461667,
+    "wall_s": 29.493983030319214,
+    "pred": "3",
+    "gold": "3"
+  },
+  "39": {
+    "text": "To solve this problem, we need to follow a series of logical steps based on the information provided.\n\nFirstly, let's denote:\n- \\( B \\) as the maximum number of photographs Brittany's phone can hold.\n- \\( D \\) as the number of ducks in Jamal's photograph at the zoo.\n\nFrom the problem statement, we know that:\n1. Jamal's phone can hold 6 times more photographs than Brittany's phone.\n2. The maximum number of photographs Brittany's phone can hold is 50 times the number of ducks in Jamal's photograph.\n3. Jamal's phone can hold 1800 photographs.\n\nLet's start by using the first piece of information:\n\\[ \\text{Number of photos Jamal's phone can hold} = 6 \\times B \\]\nGiven that Jamal's phone can hold 1800 photographs, we have:\n\\[ 6B = 1800 \\]\n\nTo find \\( B \\), we solve for \\( B \\):\n\\[ B = \\frac{1800}{6} = 300 \\]\n\nNext, using the second piece of information:\n\\[ B = 50D \\]\nSince we found that \\( B = 300 \\), we substitute this value into the equation:\n\\[ 300 = 50D \\]\n\nTo find \\( D \\), we solve for \\( D \\):\n\\[ D = \\frac{300}{50} = 6 \\]\n\nThus, the number of ducks in Jamal's photograph is:\n\\[\n\\boxed{6}\n\\]",
+    "prompt_tokens": 126,
+    "eval_tokens": 326,
+    "total_ns": 54557004792,
+    "wall_s": 54.58212089538574,
+    "pred": "2",
+    "gold": "2"
+  }
+}

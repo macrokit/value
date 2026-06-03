@@ -10,14 +10,17 @@
 > Pre-registered in [`sim/real/shapes/PREREGISTRATION_lever2.md`](../sim/real/shapes/PREREGISTRATION_lever2.md)
 > (frozen before any run; SHA precedes results). Reuses v2's exact pipeline.
 >
-> **Result (at the pre-registered ≥6-model minimum; 8-model extension in progress):**
-> **the out-of-sample bridge `ΔG ~ I` generalizes across all three new shapes and is
-> consistent with classification** — pooled slope **0.956**, cross-shape-with-classification
-> slope **0.953** (≈ v2's 0.935), ρ **0.924**. `I`-tracks-capability holds cleanly for
-> **reasoning** and **sequential/agentic** shapes; for **code** it is **underpowered**
-> (compressed capability spread at this scale), not a clean break. **11/12 frozen checks
-> pass.** The strict full-LAW verdict (every shape passes *both* checks) awaits the
-> 8-model extension that adds the strong models to widen code's capability range.
+> **Result (final at the pre-registered ≥6-model minimum; 8-model extension blocked by
+> hardware — §5): the out-of-sample bridge `ΔG ~ I` generalizes across all three new
+> shapes and is consistent with classification** — pooled slope **0.956**,
+> cross-shape-with-classification slope **0.953** (≈ v2's 0.935), ρ **0.924**.
+> `I`-tracks-capability holds cleanly for **reasoning** and **sequential/agentic** shapes;
+> for **code** it is **underpowered** (compressed capability spread at ≤3B), not a clean
+> break. **11/12 frozen checks pass.** The strict full-LAW verdict (every shape passes
+> *both* checks) is **not met**: code's `I`-vs-capability sub-check is underpowered, and
+> the pre-registered remedy (adding the 7B/8B models to widen code's range) **could not be
+> run** — those models stall on the 16 GB China-Mac host at 512-token CoT (§5). Reported
+> honestly as a strong-generalization-with-one-underpowered-sub-check, not forced.
 
 ## 0. System (identical pipeline to v2)
 
@@ -36,7 +39,7 @@ with discrete gold:
 
 8-model ladder pre-registered (0.5B→8B, 3 families); **this report covers the 6 completed
 models** (qwen0.5b, llama1b, qwen1.5b, gemma2b, qwen3b, llama3b — the pre-registered ≥6
-minimum); qwen7b + llama8b are still generating (§5). Code executed in a restricted
+minimum); qwen7b + llama8b **could not be run** on the available host (§5). Code executed in a restricted
 sandbox on the China Mac (off the main Mac); 5 s timeout, blocked imports. Parse/exec
 rates within the ≤50% degraded guard for every point.
 
@@ -138,21 +141,38 @@ is the pre-registered path to resolve code's L2-a.
   not claimed here.
 - **6 of 8 models** (the pre-registered minimum); see §5.
 
-## 5. 8-model extension (in progress) and next steps
+## 5. 8-model extension — attempted, blocked by hardware (honest infrastructure limit)
 
 The full pre-registered ladder adds **qwen2.5:7b** and **llama3.1:8b** — both materially
-stronger, especially on MBPP. They are still generating on the China-Mac fleet (the
-generative grind is ~12 h total; resumable, cached). When complete:
-1. re-run `execute_code.py` + `analyze_shapes.py` (cache-only) over 8 models;
-2. the most likely effect is to **widen code's capability range** and lift its L2-a
-   Spearman — potentially flipping the strict full-LAW verdict — and to tighten every CI;
-3. this document's code/L2-a line and the cross-shape numbers will be updated in place,
-   honestly versioned in git (no goalpost change — same frozen thresholds).
+stronger, especially on MBPP, and the pre-registered path to widen code's capability range
+and resolve its underpowered L2-a. **They could not be run at usable throughput.** On the
+16 GB China-Mac host, qwen2.5:7b with 512-token chain-of-thought **stalled**: ~40 of 150
+items over the multi-hour window, 0 progress across a 10-minute observation, the process
+blocked at 0 % CPU (RAM-pressure / swap thrashing — the same 7B+-on-16 GB ceiling v2
+documented for phi3.5). Throughput was effectively zero; an 8-model run would take days, if
+it completed at all.
 
-If code's L2-a remains < 0.70 with a *tight* CI even at 8 models, that is a real
-**shape-specific** finding (the bridge's capability-tracking is weaker for code), reported
-as such. If it clears 0.70, the strict cross-shape LAW verdict is met and a Zenodo v3
-(bridge promoted from demonstration to law) is *prepared* — owner sign-off gated.
+Per this thread's no-fishing / honest-limits discipline, we do **not** force inadequate
+hardware, and we do **not** reduce `num_predict` or swap models for the big two (that would
+be a post-hoc design change making them non-comparable to the 6). The result is therefore
+**finalized at the pre-registered ≥6-model minimum** (which the pre-registration explicitly
+permits: "analysis requires ≥6 actually run per shape"). The partial qwen7b run (<142 items)
+is auto-excluded by the analysis and left in the cache for audit.
+
+**Consequence for the verdict, stated plainly:** the strict full-LAW verdict (every shape
+passes both L2-a and L2-b) is **not met**, because code's L2-a is underpowered and the
+remedy was unrunnable here. What *is* established stands on its own and is strong: the
+out-of-sample `ΔG ~ I` bridge generalizes across reasoning, sequential, and code shapes
+(every L2-b passes), pooled (slope 0.956) and cross-shape with classification (ρ 0.924,
+slope 0.953 ≈ v2's 0.935); `I`-tracks-capability is confirmed for two of three new shapes.
+
+**To actually complete the test** (future, on adequate hardware): re-run the *frozen*
+8-model design on a host that can serve 7B–8B at 512-token CoT (≥32–48 GB, or a faster
+fleet), then `execute_code.py` + `analyze_shapes.py` cache-only. If code's L2-a then clears
+0.70, the strict cross-shape LAW verdict is met → prepare a Zenodo v3 (bridge promoted from
+demonstration to law), owner sign-off gated. If it remains < 0.70 with a *tight* CI, that is
+a real **shape-specific** finding (capability-tracking weaker for code), reported as such.
+Neither can be claimed from the current underpowered code L2-a.
 
 *Author byline: Cheng Qian. Pre-registration + analysis-addendum SHAs precede the results
 commit. All numbers re-derive offline from `sim/real/shapes/results/` + the v2 cache.*
