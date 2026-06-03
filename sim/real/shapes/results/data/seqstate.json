@@ -1,0 +1,2129 @@
+{
+  "domain": "seqstate",
+  "classes": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "gloss": {
+    "0": "final register value = 0 (mod 6)",
+    "1": "final register value = 1 (mod 6)",
+    "2": "final register value = 2 (mod 6)",
+    "3": "final register value = 3 (mod 6)",
+    "4": "final register value = 4 (mod 6)",
+    "5": "final register value = 5 (mod 6)"
+  },
+  "items": [
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +4, *3, *1, *1, -2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 4,
+      "ops": [
+        "+4",
+        "*3",
+        "*1",
+        "*1",
+        "-2"
+      ],
+      "id": 0
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *1, -3, -5, -3, -3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 5,
+      "ops": [
+        "*1",
+        "-3",
+        "-5",
+        "-3",
+        "-3"
+      ],
+      "id": 1
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +1, +4, -1, +1, *4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "+1",
+        "+4",
+        "-1",
+        "+1",
+        "*4"
+      ],
+      "id": 2
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): -5, *3, *1, *1, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 2,
+      "ops": [
+        "-5",
+        "*3",
+        "*1",
+        "*1",
+        "+2"
+      ],
+      "id": 3
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +4, *1, -2, -3, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 5,
+      "ops": [
+        "+4",
+        "*1",
+        "-2",
+        "-3",
+        "-5"
+      ],
+      "id": 4
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): -1, -3, -5, -2, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 2,
+      "ops": [
+        "-1",
+        "-3",
+        "-5",
+        "-2",
+        "+3"
+      ],
+      "id": 5
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): *3, *1, +2, +1, -3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "*3",
+        "*1",
+        "+2",
+        "+1",
+        "-3"
+      ],
+      "id": 6
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +3, *4, *3, -4, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 5,
+      "ops": [
+        "+3",
+        "*4",
+        "*3",
+        "-4",
+        "-5"
+      ],
+      "id": 7
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): -4, +3, *5, *2, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 3,
+      "ops": [
+        "-4",
+        "+3",
+        "*5",
+        "*2",
+        "+5"
+      ],
+      "id": 8
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): *4, -5, +1, *2, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 2,
+      "ops": [
+        "*4",
+        "-5",
+        "+1",
+        "*2",
+        "+2"
+      ],
+      "id": 9
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -4, *3, *2, +3, -2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 1,
+      "ops": [
+        "-4",
+        "*3",
+        "*2",
+        "+3",
+        "-2"
+      ],
+      "id": 10
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -1, +3, *4, *2, -4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 4,
+      "ops": [
+        "-1",
+        "+3",
+        "*4",
+        "*2",
+        "-4"
+      ],
+      "id": 11
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *2, +5, +3, -3, *5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 5,
+      "ops": [
+        "*2",
+        "+5",
+        "+3",
+        "-3",
+        "*5"
+      ],
+      "id": 12
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +4, +4, *1, -4, *1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 5,
+      "ops": [
+        "+4",
+        "+4",
+        "*1",
+        "-4",
+        "*1"
+      ],
+      "id": 13
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): *2, -4, +5, +5, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 0,
+      "ops": [
+        "*2",
+        "-4",
+        "+5",
+        "+5",
+        "-5"
+      ],
+      "id": 14
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -3, +4, +2, *1, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 1,
+      "ops": [
+        "-3",
+        "+4",
+        "+2",
+        "*1",
+        "-5"
+      ],
+      "id": 15
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): +3, +2, -2, -3, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 3,
+      "ops": [
+        "+3",
+        "+2",
+        "-2",
+        "-3",
+        "+5"
+      ],
+      "id": 16
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *3, *1, -5, *4, *5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 5,
+      "ops": [
+        "*3",
+        "*1",
+        "-5",
+        "*4",
+        "*5"
+      ],
+      "id": 17
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +1, -5, +3, -1, +4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 5,
+      "ops": [
+        "+1",
+        "-5",
+        "+3",
+        "-1",
+        "+4"
+      ],
+      "id": 18
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +5, +4, *5, -3, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 4,
+      "ops": [
+        "+5",
+        "+4",
+        "*5",
+        "-3",
+        "-5"
+      ],
+      "id": 19
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): -3, +2, *2, +5, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 3,
+      "ops": [
+        "-3",
+        "+2",
+        "*2",
+        "+5",
+        "-5"
+      ],
+      "id": 20
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): +1, +2, -1, +2, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 1,
+      "ops": [
+        "+1",
+        "+2",
+        "-1",
+        "+2",
+        "*3"
+      ],
+      "id": 21
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -2, +2, +2, -5, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 1,
+      "ops": [
+        "-2",
+        "+2",
+        "+2",
+        "-5",
+        "+3"
+      ],
+      "id": 22
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): +4, +4, -1, *2, *4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 1,
+      "ops": [
+        "+4",
+        "+4",
+        "-1",
+        "*2",
+        "*4"
+      ],
+      "id": 23
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): +2, -4, *3, +4, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 3,
+      "ops": [
+        "+2",
+        "-4",
+        "*3",
+        "+4",
+        "*3"
+      ],
+      "id": 24
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): +2, +1, +5, *2, +4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 1,
+      "ops": [
+        "+2",
+        "+1",
+        "+5",
+        "*2",
+        "+4"
+      ],
+      "id": 25
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -1, -4, +5, -3, -2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 0,
+      "ops": [
+        "-1",
+        "-4",
+        "+5",
+        "-3",
+        "-2"
+      ],
+      "id": 26
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +3, *3, *2, -5, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 5,
+      "ops": [
+        "+3",
+        "*3",
+        "*2",
+        "-5",
+        "*3"
+      ],
+      "id": 27
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): +2, +5, *1, *4, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 0,
+      "ops": [
+        "+2",
+        "+5",
+        "*1",
+        "*4",
+        "+5"
+      ],
+      "id": 28
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): *2, +4, *3, +1, +4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 1,
+      "ops": [
+        "*2",
+        "+4",
+        "*3",
+        "+1",
+        "+4"
+      ],
+      "id": 29
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *4, -4, *3, +4, -2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 5,
+      "ops": [
+        "*4",
+        "-4",
+        "*3",
+        "+4",
+        "-2"
+      ],
+      "id": 30
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -4, -3, -3, *3, -2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 1,
+      "ops": [
+        "-4",
+        "-3",
+        "-3",
+        "*3",
+        "-2"
+      ],
+      "id": 31
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): *5, *5, -1, *1, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 2,
+      "ops": [
+        "*5",
+        "*5",
+        "-1",
+        "*1",
+        "+2"
+      ],
+      "id": 32
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): *1, +5, +5, *4, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 0,
+      "ops": [
+        "*1",
+        "+5",
+        "+5",
+        "*4",
+        "+2"
+      ],
+      "id": 33
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): +2, +3, *3, *2, -4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 2,
+      "ops": [
+        "+2",
+        "+3",
+        "*3",
+        "*2",
+        "-4"
+      ],
+      "id": 34
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): +1, -5, +1, +5, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 3,
+      "ops": [
+        "+1",
+        "-5",
+        "+1",
+        "+5",
+        "+5"
+      ],
+      "id": 35
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): -5, -1, +4, *4, -2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 5,
+      "ops": [
+        "-5",
+        "-1",
+        "+4",
+        "*4",
+        "-2"
+      ],
+      "id": 36
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): *4, +2, +1, +5, +4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 4,
+      "ops": [
+        "*4",
+        "+2",
+        "+1",
+        "+5",
+        "+4"
+      ],
+      "id": 37
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): *2, -3, +3, +1, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 4,
+      "ops": [
+        "*2",
+        "-3",
+        "+3",
+        "+1",
+        "+5"
+      ],
+      "id": 38
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): +1, *3, *2, +3, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 2,
+      "ops": [
+        "+1",
+        "*3",
+        "*2",
+        "+3",
+        "-5"
+      ],
+      "id": 39
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): *3, +5, +5, -1, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 1,
+      "ops": [
+        "*3",
+        "+5",
+        "+5",
+        "-1",
+        "*3"
+      ],
+      "id": 40
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -2, +4, -1, *4, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 1,
+      "ops": [
+        "-2",
+        "+4",
+        "-1",
+        "*4",
+        "+5"
+      ],
+      "id": 41
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -5, +5, +5, *1, -2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 4,
+      "ops": [
+        "-5",
+        "+5",
+        "+5",
+        "*1",
+        "-2"
+      ],
+      "id": 42
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): +1, *3, -3, -5, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 2,
+      "ops": [
+        "+1",
+        "*3",
+        "-3",
+        "-5",
+        "+3"
+      ],
+      "id": 43
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): *1, +2, +3, *5, +1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 4,
+      "ops": [
+        "*1",
+        "+2",
+        "+3",
+        "*5",
+        "+1"
+      ],
+      "id": 44
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): *2, *1, *3, +4, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 4,
+      "ops": [
+        "*2",
+        "*1",
+        "*3",
+        "+4",
+        "+5"
+      ],
+      "id": 45
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +2, +1, +5, -2, *5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 5,
+      "ops": [
+        "+2",
+        "+1",
+        "+5",
+        "-2",
+        "*5"
+      ],
+      "id": 46
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +1, +3, +2, *5, *4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 5,
+      "ops": [
+        "+1",
+        "+3",
+        "+2",
+        "*5",
+        "*4"
+      ],
+      "id": 47
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -5, +1, +5, -2, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 0,
+      "ops": [
+        "-5",
+        "+1",
+        "+5",
+        "-2",
+        "*3"
+      ],
+      "id": 48
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -5, -1, +3, -1, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 4,
+      "ops": [
+        "-5",
+        "-1",
+        "+3",
+        "-1",
+        "+3"
+      ],
+      "id": 49
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): -1, +5, -5, *5, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 3,
+      "ops": [
+        "-1",
+        "+5",
+        "-5",
+        "*5",
+        "-5"
+      ],
+      "id": 50
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): +3, -2, *2, +1, -4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 1,
+      "ops": [
+        "+3",
+        "-2",
+        "*2",
+        "+1",
+        "-4"
+      ],
+      "id": 51
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -4, +1, *5, -3, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 1,
+      "ops": [
+        "-4",
+        "+1",
+        "*5",
+        "-3",
+        "*3"
+      ],
+      "id": 52
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): *4, -5, +3, -1, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 0,
+      "ops": [
+        "*4",
+        "-5",
+        "+3",
+        "-1",
+        "*2"
+      ],
+      "id": 53
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): -3, *4, +2, +2, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 5,
+      "ops": [
+        "-3",
+        "*4",
+        "+2",
+        "+2",
+        "+2"
+      ],
+      "id": 54
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -1, *4, *5, +4, -4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 0,
+      "ops": [
+        "-1",
+        "*4",
+        "*5",
+        "+4",
+        "-4"
+      ],
+      "id": 55
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): *4, +2, +3, +1, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 0,
+      "ops": [
+        "*4",
+        "+2",
+        "+3",
+        "+1",
+        "+3"
+      ],
+      "id": 56
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -3, *3, +5, *2, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 0,
+      "ops": [
+        "-3",
+        "*3",
+        "+5",
+        "*2",
+        "+3"
+      ],
+      "id": 57
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -1, +3, -1, -2, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 1,
+      "ops": [
+        "-1",
+        "+3",
+        "-1",
+        "-2",
+        "-5"
+      ],
+      "id": 58
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -2, -2, *5, *3, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "-2",
+        "-2",
+        "*5",
+        "*3",
+        "*2"
+      ],
+      "id": 59
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): +1, +3, +5, *2, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 2,
+      "ops": [
+        "+1",
+        "+3",
+        "+5",
+        "*2",
+        "+3"
+      ],
+      "id": 60
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): +2, -5, +3, +3, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 1,
+      "ops": [
+        "+2",
+        "-5",
+        "+3",
+        "+3",
+        "-5"
+      ],
+      "id": 61
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +4, +2, -2, *2, -4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "+4",
+        "+2",
+        "-2",
+        "*2",
+        "-4"
+      ],
+      "id": 62
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): +5, *2, +3, *2, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 0,
+      "ops": [
+        "+5",
+        "*2",
+        "+3",
+        "*2",
+        "-5"
+      ],
+      "id": 63
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -4, +1, +3, -3, +4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 1,
+      "ops": [
+        "-4",
+        "+1",
+        "+3",
+        "-3",
+        "+4"
+      ],
+      "id": 64
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -1, -3, -1, +1, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 0,
+      "ops": [
+        "-1",
+        "-3",
+        "-1",
+        "+1",
+        "*3"
+      ],
+      "id": 65
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): +3, -1, *4, *5, +1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 2,
+      "ops": [
+        "+3",
+        "-1",
+        "*4",
+        "*5",
+        "+1"
+      ],
+      "id": 66
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): -5, *4, +2, *2, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 2,
+      "ops": [
+        "-5",
+        "*4",
+        "+2",
+        "*2",
+        "+2"
+      ],
+      "id": 67
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): +2, +5, +3, +3, *4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 0,
+      "ops": [
+        "+2",
+        "+5",
+        "+3",
+        "+3",
+        "*4"
+      ],
+      "id": 68
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +4, *2, -2, *5, *5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 4,
+      "ops": [
+        "+4",
+        "*2",
+        "-2",
+        "*5",
+        "*5"
+      ],
+      "id": 69
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): -1, -4, *1, -4, -1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 2,
+      "ops": [
+        "-1",
+        "-4",
+        "*1",
+        "-4",
+        "-1"
+      ],
+      "id": 70
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): *4, +3, *4, +3, -4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 0,
+      "ops": [
+        "*4",
+        "+3",
+        "*4",
+        "+3",
+        "-4"
+      ],
+      "id": 71
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): -4, -4, +1, -5, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 5,
+      "ops": [
+        "-4",
+        "-4",
+        "+1",
+        "-5",
+        "+2"
+      ],
+      "id": 72
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *3, *2, -2, -1, -4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 5,
+      "ops": [
+        "*3",
+        "*2",
+        "-2",
+        "-1",
+        "-4"
+      ],
+      "id": 73
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): +4, +1, -5, -4, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 3,
+      "ops": [
+        "+4",
+        "+1",
+        "-5",
+        "-4",
+        "+2"
+      ],
+      "id": 74
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): -1, +2, -2, *3, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 2,
+      "ops": [
+        "-1",
+        "+2",
+        "-2",
+        "*3",
+        "*3"
+      ],
+      "id": 75
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): +2, -3, +2, -5, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 1,
+      "ops": [
+        "+2",
+        "-3",
+        "+2",
+        "-5",
+        "+5"
+      ],
+      "id": 76
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +2, +2, -5, *1, *1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 4,
+      "ops": [
+        "+2",
+        "+2",
+        "-5",
+        "*1",
+        "*1"
+      ],
+      "id": 77
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +4, +2, -1, *1, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 4,
+      "ops": [
+        "+4",
+        "+2",
+        "-1",
+        "*1",
+        "-5"
+      ],
+      "id": 78
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): +2, -1, +3, +2, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 2,
+      "ops": [
+        "+2",
+        "-1",
+        "+3",
+        "+2",
+        "*3"
+      ],
+      "id": 79
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -5, +2, *2, *3, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 0,
+      "ops": [
+        "-5",
+        "+2",
+        "*2",
+        "*3",
+        "+5"
+      ],
+      "id": 80
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +1, *3, -3, -2, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 4,
+      "ops": [
+        "+1",
+        "*3",
+        "-3",
+        "-2",
+        "-5"
+      ],
+      "id": 81
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): -4, +3, *2, -4, +1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 2,
+      "ops": [
+        "-4",
+        "+3",
+        "*2",
+        "-4",
+        "+1"
+      ],
+      "id": 82
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +3, -5, +2, +3, *5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 4,
+      "ops": [
+        "+3",
+        "-5",
+        "+2",
+        "+3",
+        "*5"
+      ],
+      "id": 83
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): -3, *2, -4, *3, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 5,
+      "ops": [
+        "-3",
+        "*2",
+        "-4",
+        "*3",
+        "-5"
+      ],
+      "id": 84
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -3, *2, +5, *2, *5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 0,
+      "ops": [
+        "-3",
+        "*2",
+        "+5",
+        "*2",
+        "*5"
+      ],
+      "id": 85
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -3, +3, +2, -1, -1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 4,
+      "ops": [
+        "-3",
+        "+3",
+        "+2",
+        "-1",
+        "-1"
+      ],
+      "id": 86
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *3, +3, +4, -4, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 5,
+      "ops": [
+        "*3",
+        "+3",
+        "+4",
+        "-4",
+        "+2"
+      ],
+      "id": 87
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *3, -3, +5, *1, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 5,
+      "ops": [
+        "*3",
+        "-3",
+        "+5",
+        "*1",
+        "+2"
+      ],
+      "id": 88
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -2, -1, +3, *1, +1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 4,
+      "ops": [
+        "-2",
+        "-1",
+        "+3",
+        "*1",
+        "+1"
+      ],
+      "id": 89
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *1, *5, *3, +4, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 5,
+      "ops": [
+        "*1",
+        "*5",
+        "*3",
+        "+4",
+        "*2"
+      ],
+      "id": 90
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): *1, +3, +2, -5, +4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 1,
+      "ops": [
+        "*1",
+        "+3",
+        "+2",
+        "-5",
+        "+4"
+      ],
+      "id": 91
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -2, +1, *1, +2, -3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 4,
+      "ops": [
+        "-2",
+        "+1",
+        "*1",
+        "+2",
+        "-3"
+      ],
+      "id": 92
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): -4, -5, +1, *4, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 3,
+      "ops": [
+        "-4",
+        "-5",
+        "+1",
+        "*4",
+        "+3"
+      ],
+      "id": 93
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -5, *3, +5, *1, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 4,
+      "ops": [
+        "-5",
+        "*3",
+        "+5",
+        "*1",
+        "-5"
+      ],
+      "id": 94
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): *2, -2, +1, -2, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "*2",
+        "-2",
+        "+1",
+        "-2",
+        "-5"
+      ],
+      "id": 95
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): *5, +4, *2, +3, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 2,
+      "ops": [
+        "*5",
+        "+4",
+        "*2",
+        "+3",
+        "*2"
+      ],
+      "id": 96
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): *3, -5, -2, +3, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 1,
+      "ops": [
+        "*3",
+        "-5",
+        "-2",
+        "+3",
+        "-5"
+      ],
+      "id": 97
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): *3, +5, -1, +1, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 3,
+      "ops": [
+        "*3",
+        "+5",
+        "-1",
+        "+1",
+        "-5"
+      ],
+      "id": 98
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): -4, -5, +3, -3, -4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 3,
+      "ops": [
+        "-4",
+        "-5",
+        "+3",
+        "-3",
+        "-4"
+      ],
+      "id": 99
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): *1, -5, +3, -1, -4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 0,
+      "ops": [
+        "*1",
+        "-5",
+        "+3",
+        "-1",
+        "-4"
+      ],
+      "id": 100
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): -3, +3, -5, *4, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 2,
+      "ops": [
+        "-3",
+        "+3",
+        "-5",
+        "*4",
+        "-5"
+      ],
+      "id": 101
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): *4, -5, -1, +4, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 2,
+      "ops": [
+        "*4",
+        "-5",
+        "-1",
+        "+4",
+        "+5"
+      ],
+      "id": 102
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): +2, +2, -2, -2, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 2,
+      "ops": [
+        "+2",
+        "+2",
+        "-2",
+        "-2",
+        "-5"
+      ],
+      "id": 103
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -4, -3, *2, -3, -3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 0,
+      "ops": [
+        "-4",
+        "-3",
+        "*2",
+        "-3",
+        "-3"
+      ],
+      "id": 104
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +1, *5, *2, -1, *1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 5,
+      "ops": [
+        "+1",
+        "*5",
+        "*2",
+        "-1",
+        "*1"
+      ],
+      "id": 105
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +5, -2, -1, *4, *4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "+5",
+        "-2",
+        "-1",
+        "*4",
+        "*4"
+      ],
+      "id": 106
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): *4, -4, +4, *3, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 1,
+      "ops": [
+        "*4",
+        "-4",
+        "+4",
+        "*3",
+        "+5"
+      ],
+      "id": 107
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -4, *4, -3, +2, +4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 1,
+      "ops": [
+        "-4",
+        "*4",
+        "-3",
+        "+2",
+        "+4"
+      ],
+      "id": 108
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): -1, -5, -4, *1, -3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 5,
+      "ops": [
+        "-1",
+        "-5",
+        "-4",
+        "*1",
+        "-3"
+      ],
+      "id": 109
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -3, +5, *2, *1, *4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 0,
+      "ops": [
+        "-3",
+        "+5",
+        "*2",
+        "*1",
+        "*4"
+      ],
+      "id": 110
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): *4, +4, +4, +4, +1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 0,
+      "ops": [
+        "*4",
+        "+4",
+        "+4",
+        "+4",
+        "+1"
+      ],
+      "id": 111
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): *3, +5, *2, +1, *1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 3,
+      "ops": [
+        "*3",
+        "+5",
+        "*2",
+        "+1",
+        "*1"
+      ],
+      "id": 112
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): +1, *4, *1, +4, -5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 2,
+      "ops": [
+        "+1",
+        "*4",
+        "*1",
+        "+4",
+        "-5"
+      ],
+      "id": 113
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +3, +3, -4, *5, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 5,
+      "ops": [
+        "+3",
+        "+3",
+        "-4",
+        "*5",
+        "+3"
+      ],
+      "id": 114
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): +2, +2, -3, -4, -1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 3,
+      "ops": [
+        "+2",
+        "+2",
+        "-3",
+        "-4",
+        "-1"
+      ],
+      "id": 115
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): *3, -1, +4, -4, -3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 2,
+      "ops": [
+        "*3",
+        "-1",
+        "+4",
+        "-4",
+        "-3"
+      ],
+      "id": 116
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -4, -3, -2, +1, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 0,
+      "ops": [
+        "-4",
+        "-3",
+        "-2",
+        "+1",
+        "+3"
+      ],
+      "id": 117
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +1, +3, *5, +4, -2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 5,
+      "ops": [
+        "+1",
+        "+3",
+        "*5",
+        "+4",
+        "-2"
+      ],
+      "id": 118
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *1, *4, -1, -2, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 5,
+      "ops": [
+        "*1",
+        "*4",
+        "-1",
+        "-2",
+        "*2"
+      ],
+      "id": 119
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): -4, +1, *4, *5, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 5,
+      "ops": [
+        "-4",
+        "+1",
+        "*4",
+        "*5",
+        "*2"
+      ],
+      "id": 120
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): +2, -2, +5, -3, *1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "+2",
+        "-2",
+        "+5",
+        "-3",
+        "*1"
+      ],
+      "id": 121
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): +1, *3, *3, -2, *1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 0,
+      "ops": [
+        "+1",
+        "*3",
+        "*3",
+        "-2",
+        "*1"
+      ],
+      "id": 122
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -4, -2, *5, -4, *3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 0,
+      "ops": [
+        "-4",
+        "-2",
+        "*5",
+        "-4",
+        "*3"
+      ],
+      "id": 123
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): +4, *1, +5, +3, *1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 2,
+      "ops": [
+        "+4",
+        "*1",
+        "+5",
+        "+3",
+        "*1"
+      ],
+      "id": 124
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): *1, -4, *1, *3, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 2,
+      "ops": [
+        "*1",
+        "-4",
+        "*1",
+        "*3",
+        "+2"
+      ],
+      "id": 125
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +3, *5, *4, -3, +1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 5,
+      "ops": [
+        "+3",
+        "*5",
+        "*4",
+        "-3",
+        "+1"
+      ],
+      "id": 126
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -5, -2, +3, +2, -3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 4,
+      "ops": [
+        "-5",
+        "-2",
+        "+3",
+        "+2",
+        "-3"
+      ],
+      "id": 127
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -2, +3, -1, -3, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 1,
+      "ops": [
+        "-2",
+        "+3",
+        "-1",
+        "-3",
+        "*2"
+      ],
+      "id": 128
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): -2, -2, *1, -4, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 1,
+      "ops": [
+        "-2",
+        "-2",
+        "*1",
+        "-4",
+        "+2"
+      ],
+      "id": 129
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): *3, *2, *3, +4, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "*3",
+        "*2",
+        "*3",
+        "+4",
+        "+2"
+      ],
+      "id": 130
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *2, -3, +4, +5, *1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 5,
+      "ops": [
+        "*2",
+        "-3",
+        "+4",
+        "+5",
+        "*1"
+      ],
+      "id": 131
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): +4, -4, *5, +4, -3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 1,
+      "ops": [
+        "+4",
+        "-4",
+        "*5",
+        "+4",
+        "-3"
+      ],
+      "id": 132
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): +4, +4, *5, +5, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 3,
+      "ops": [
+        "+4",
+        "+4",
+        "*5",
+        "+5",
+        "+2"
+      ],
+      "id": 133
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): -5, +5, *5, +5, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 5,
+      "ops": [
+        "-5",
+        "+5",
+        "*5",
+        "+5",
+        "*2"
+      ],
+      "id": 134
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): +1, +3, +4, -5, +1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 0,
+      "ops": [
+        "+1",
+        "+3",
+        "+4",
+        "-5",
+        "+1"
+      ],
+      "id": 135
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 2.\nApply these operations in order (each: op then take mod 6): *5, -4, -4, +5, +3.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 2,
+      "ops": [
+        "*5",
+        "-4",
+        "-4",
+        "+5",
+        "+3"
+      ],
+      "id": 136
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): -5, +4, -4, -2, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "-5",
+        "+4",
+        "-4",
+        "-2",
+        "*2"
+      ],
+      "id": 137
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 4.\nApply these operations in order (each: op then take mod 6): *5, +3, -5, *4, *2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 4,
+      "ops": [
+        "*5",
+        "+3",
+        "-5",
+        "*4",
+        "*2"
+      ],
+      "id": 138
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): *4, *4, -4, +3, -1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "2",
+      "s0": 1,
+      "ops": [
+        "*4",
+        "*4",
+        "-4",
+        "+3",
+        "-1"
+      ],
+      "id": 139
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): +3, +4, *3, -2, *5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 0,
+      "ops": [
+        "+3",
+        "+4",
+        "*3",
+        "-2",
+        "*5"
+      ],
+      "id": 140
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): +1, +3, -2, +1, *4.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 0,
+      "ops": [
+        "+1",
+        "+3",
+        "-2",
+        "+1",
+        "*4"
+      ],
+      "id": 141
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): +3, +5, +3, -5, *5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 3,
+      "ops": [
+        "+3",
+        "+5",
+        "+3",
+        "-5",
+        "*5"
+      ],
+      "id": 142
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): *4, +3, +4, -2, -1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 5,
+      "ops": [
+        "*4",
+        "+3",
+        "+4",
+        "-2",
+        "-1"
+      ],
+      "id": 143
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): *2, +4, -1, *2, -1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "5",
+      "s0": 3,
+      "ops": [
+        "*2",
+        "+4",
+        "-1",
+        "*2",
+        "-1"
+      ],
+      "id": 144
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 1.\nApply these operations in order (each: op then take mod 6): +5, +2, *5, -3, +5.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 1,
+      "ops": [
+        "+5",
+        "+2",
+        "*5",
+        "-3",
+        "+5"
+      ],
+      "id": 145
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 5.\nApply these operations in order (each: op then take mod 6): +3, +5, +1, -1, -1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "0",
+      "s0": 5,
+      "ops": [
+        "+3",
+        "+5",
+        "+1",
+        "-1",
+        "-1"
+      ],
+      "id": 146
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): -4, -1, -4, +2, +2.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "4",
+      "s0": 3,
+      "ops": [
+        "-4",
+        "-1",
+        "-4",
+        "+2",
+        "+2"
+      ],
+      "id": 147
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 0.\nApply these operations in order (each: op then take mod 6): -4, +5, +4, -3, -1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "1",
+      "s0": 0,
+      "ops": [
+        "-4",
+        "+5",
+        "+4",
+        "-3",
+        "-1"
+      ],
+      "id": 148
+    },
+    {
+      "text": "A register holds an integer, reduced modulo 6 after every operation (so it stays in 0..5).\nStart: register = 3.\nApply these operations in order (each: op then take mod 6): +4, *3, +4, -4, *1.\nApply them one at a time, show each intermediate value, then end with `#### <final value 0..5>`.",
+      "gold": "3",
+      "s0": 3,
+      "ops": [
+        "+4",
+        "*3",
+        "+4",
+        "-4",
+        "*1"
+      ],
+      "id": 149
+    }
+  ],
+  "split": {
+    "fit": [
+      0,
+      2,
+      3,
+      4,
+      7,
+      11,
+      18,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      34,
+      36,
+      37,
+      38,
+      46,
+      47,
+      48,
+      49,
+      51,
+      53,
+      56,
+      57,
+      59,
+      60,
+      62,
+      67,
+      68,
+      69,
+      72,
+      73,
+      74,
+      77,
+      81,
+      82,
+      83,
+      84,
+      86,
+      88,
+      90,
+      98,
+      103,
+      106,
+      108,
+      110,
+      112,
+      113,
+      114,
+      115,
+      118,
+      119,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      130,
+      131,
+      133,
+      135,
+      137,
+      139,
+      142,
+      143,
+      145,
+      146,
+      149
+    ],
+    "holdout": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20,
+      21,
+      24,
+      30,
+      32,
+      33,
+      35,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      50,
+      52,
+      54,
+      55,
+      58,
+      61,
+      63,
+      64,
+      65,
+      66,
+      70,
+      71,
+      75,
+      76,
+      78,
+      79,
+      80,
+      85,
+      87,
+      89,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      99,
+      100,
+      101,
+      102,
+      104,
+      105,
+      107,
+      109,
+      111,
+      116,
+      117,
+      120,
+      121,
+      122,
+      129,
+      132,
+      134,
+      136,
+      138,
+      140,
+      141,
+      144,
+      147,
+      148
+    ]
+  },
+  "n": 150,
+  "K": 6
+}

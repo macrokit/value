@@ -1,0 +1,890 @@
+{
+  "domain": "code",
+  "classes": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "gloss": {
+    "0": "executed output hashes to class 0 (mod 4)",
+    "1": "executed output hashes to class 1 (mod 4)",
+    "2": "executed output hashes to class 2 (mod 4)",
+    "3": "executed output hashes to class 3 (mod 4)"
+  },
+  "items": [
+    {
+      "text": "Write a Python function named `closest_num` that solves:\nWrite a function to find the closest smaller number than n.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "closest_num",
+      "call": "closest_num(11)",
+      "gold_out_repr": "10",
+      "id": 0
+    },
+    {
+      "text": "Write a Python function named `is_Diff` that solves:\nWrite a python function to find the difference between sum of even and odd digits.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "is_Diff",
+      "call": "is_Diff(12345)",
+      "gold_out_repr": "False",
+      "id": 1
+    },
+    {
+      "text": "Write a Python function named `frequency_lists` that solves:\nWrite a function to find frequency count of list of lists.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "frequency_lists",
+      "call": "frequency_lists([[1, 2, 3, 2], [4, 5, 6, 2], [7, 8, 9, 5]])",
+      "gold_out_repr": "{1: 1, 2: 3, 3: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}",
+      "id": 2
+    },
+    {
+      "text": "Write a Python function named `len_log` that solves:\nWrite a python function to find the length of the longest word.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "len_log",
+      "call": "len_log([\"python\",\"PHP\",\"bigdata\"])",
+      "gold_out_repr": "7",
+      "id": 3
+    },
+    {
+      "text": "Write a Python function named `max_Prime_Factors` that solves:\nWrite a python function to find the largest prime factor of a given number.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "max_Prime_Factors",
+      "call": "max_Prime_Factors(15)",
+      "gold_out_repr": "5",
+      "id": 4
+    },
+    {
+      "text": "Write a Python function named `tn_gp` that solves:\nWrite a function to find t-nth term of geometric series.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "tn_gp",
+      "call": "tn_gp(1,5,2)",
+      "gold_out_repr": "16",
+      "id": 5
+    },
+    {
+      "text": "Write a Python function named `smallest_num` that solves:\nWrite a python function to find smallest number in a list.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "smallest_num",
+      "call": "smallest_num([10, 20, 1, 45, 99])",
+      "gold_out_repr": "1",
+      "id": 6
+    },
+    {
+      "text": "Write a Python function named `sort_matrix` that solves:\nWrite a function to sort a given matrix in ascending order according to the sum of its rows.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "sort_matrix",
+      "call": "sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])",
+      "gold_out_repr": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
+      "id": 7
+    },
+    {
+      "text": "Write a Python function named `remove_Occ` that solves:\nWrite a python function to remove first and last occurrence of a given character from the string.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "remove_Occ",
+      "call": "remove_Occ(\"hello\",\"l\")",
+      "gold_out_repr": "'heo'",
+      "id": 8
+    },
+    {
+      "text": "Write a Python function named `multiply_num` that solves:\nWrite a function to multiply all the numbers in a list and divide with the length of the list.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "multiply_num",
+      "call": "multiply_num((8, 2, 3, -1, 7))",
+      "gold_out_repr": "-67.2",
+      "id": 9
+    },
+    {
+      "text": "Write a Python function named `multiple_split` that solves:\nWrite a function to split the given string with multiple delimiters by using regex.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "multiple_split",
+      "call": "multiple_split('Forces of the \\ndarkness*are coming into the play.')",
+      "gold_out_repr": "['Forces of the ', 'darkness', 'are coming into the play.']",
+      "id": 10
+    },
+    {
+      "text": "Write a Python function named `text_match` that solves:\nWrite a function to find sequences of lowercase letters joined with an underscore using regex.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "text_match",
+      "call": "text_match(\"aab_cbbbc\")",
+      "gold_out_repr": "'Found a match!'",
+      "id": 11
+    },
+    {
+      "text": "Write a Python function named `specified_element` that solves:\nWrite a function to extract every first or specified element from a given two-dimensional list.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "specified_element",
+      "call": "specified_element([[1, 2, 3, 2], [4, 5, 6, 2], [7, 1, 9, 5]],0)",
+      "gold_out_repr": "[1, 4, 7]",
+      "id": 12
+    },
+    {
+      "text": "Write a Python function named `is_octagonal` that solves:\nWrite a function to find the nth octagonal number.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "is_octagonal",
+      "call": "is_octagonal(5)",
+      "gold_out_repr": "65",
+      "id": 13
+    },
+    {
+      "text": "Write a Python function named `Find_Min_Length` that solves:\nWrite a python function to find the minimum length of sublist.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "Find_Min_Length",
+      "call": "Find_Min_Length([[1],[1,2]])",
+      "gold_out_repr": "1",
+      "id": 14
+    },
+    {
+      "text": "Write a Python function named `max_len_sub` that solves:\nWrite a function to find the maximum length of the subsequence with difference between adjacent elements for the given array.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "max_len_sub",
+      "call": "max_len_sub([2, 5, 6, 3, 7, 6, 5, 8], 8)",
+      "gold_out_repr": "5",
+      "id": 15
+    },
+    {
+      "text": "Write a Python function named `check_Equality` that solves:\nWrite a python function to check whether the first and last characters of a given string are equal or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "check_Equality",
+      "call": "check_Equality(\"abcda\")",
+      "gold_out_repr": "'Equal'",
+      "id": 16
+    },
+    {
+      "text": "Write a Python function named `freq_count` that solves:\nWrite a function to get the frequency of the elements in a list.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "freq_count",
+      "call": "freq_count([10,10,10,10,20,20,20,20,40,40,50,50,30])",
+      "gold_out_repr": "{10: 4, 20: 4, 40: 2, 50: 2, 30: 1}",
+      "id": 17
+    },
+    {
+      "text": "Write a Python function named `text_match_string` that solves:\nWrite a function that matches a word at the beginning of a string.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "text_match_string",
+      "call": "text_match_string(\" python\")",
+      "gold_out_repr": "'Not matched!'",
+      "id": 18
+    },
+    {
+      "text": "Write a Python function named `find_Product` that solves:\nWrite a python function to find the product of non-repeated elements in a given array.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "find_Product",
+      "call": "find_Product([1,1,2,3],4)",
+      "gold_out_repr": "6",
+      "id": 19
+    },
+    {
+      "text": "Write a Python function named `multiples_of_num` that solves:\nWrite a function to find m number of multiples of n.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "multiples_of_num",
+      "call": "multiples_of_num(4,3)",
+      "gold_out_repr": "[3, 6, 9, 12]",
+      "id": 20
+    },
+    {
+      "text": "Write a Python function named `add_lists` that solves:\nWrite a function to add the given list to the given tuples.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "add_lists",
+      "call": "add_lists([5, 6, 7], (9, 10))",
+      "gold_out_repr": "(9, 10, 5, 6, 7)",
+      "id": 21
+    },
+    {
+      "text": "Write a Python function named `remove` that solves:\nWrite a python function to remove all digits from a list of strings.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "remove",
+      "call": "remove(['4words', '3letters', '4digits'])",
+      "gold_out_repr": "['words', 'letters', 'digits']",
+      "id": 22
+    },
+    {
+      "text": "Write a Python function named `dif_Square` that solves:\nWrite a python function to check whether the given number can be represented as difference of two squares or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "dif_Square",
+      "call": "dif_Square(5)",
+      "gold_out_repr": "True",
+      "id": 23
+    },
+    {
+      "text": "Write a Python function named `get_Odd_Occurrence` that solves:\nWrite a python function to find the element occurring odd number of times.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "get_Odd_Occurrence",
+      "call": "get_Odd_Occurrence([1,2,3,1,2,3,1],7)",
+      "gold_out_repr": "1",
+      "id": 24
+    },
+    {
+      "text": "Write a Python function named `count_common` that solves:\nWrite a function to count the most common words in a dictionary.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "count_common",
+      "call": "count_common(['red','green','black','pink','black','white','black','eyes','white','black','orange','pink','pink','red','red','white','orange','white',\"black\",'pink','green','green','pink','green','pink','white','orange',\"orange\",'red'])",
+      "gold_out_repr": "[('pink', 6), ('black', 5), ('white', 5), ('red', 4)]",
+      "id": 25
+    },
+    {
+      "text": "Write a Python function named `get_equal` that solves:\nWrite a function to find whether all the given tuples have equal length or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "get_equal",
+      "call": "get_equal([(11, 22, 33), (44, 55, 66)], 3)",
+      "gold_out_repr": "'All tuples have same length'",
+      "id": 26
+    },
+    {
+      "text": "Write a Python function named `find_rect_num` that solves:\nWrite a function to find the n-th rectangular number.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "find_rect_num",
+      "call": "find_rect_num(4)",
+      "gold_out_repr": "20",
+      "id": 27
+    },
+    {
+      "text": "Write a Python function named `decimal_To_Binary` that solves:\nWrite a python function to convert a decimal number to binary number.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "decimal_To_Binary",
+      "call": "decimal_To_Binary(10)",
+      "gold_out_repr": "1010",
+      "id": 28
+    },
+    {
+      "text": "Write a Python function named `count_Squares` that solves:\nWrite a python function to count the number of squares in a rectangle.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "count_Squares",
+      "call": "count_Squares(4,3)",
+      "gold_out_repr": "20",
+      "id": 29
+    },
+    {
+      "text": "Write a Python function named `find_Nth_Digit` that solves:\nWrite a python function to find the nth digit in the proper fraction of two given numbers.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "find_Nth_Digit",
+      "call": "find_Nth_Digit(1,2,1)",
+      "gold_out_repr": "5",
+      "id": 30
+    },
+    {
+      "text": "Write a Python function named `volume_sphere` that solves:\nWrite a function to find the volume of a sphere.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "volume_sphere",
+      "call": "volume_sphere(10)",
+      "gold_out_repr": "4188.790204786391",
+      "id": 31
+    },
+    {
+      "text": "Write a Python function named `is_Monotonic` that solves:\nWrite a python function to check whether the given array is monotonic or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "is_Monotonic",
+      "call": "is_Monotonic([6, 5, 4, 4])",
+      "gold_out_repr": "True",
+      "id": 32
+    },
+    {
+      "text": "Write a Python function named `opposite_Signs` that solves:\nWrite a python function to check whether the given two integers have opposite sign or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "opposite_Signs",
+      "call": "opposite_Signs(1,-2)",
+      "gold_out_repr": "True",
+      "id": 33
+    },
+    {
+      "text": "Write a Python function named `check` that solves:\nWrite a python function to check if a given number is one less than twice its reverse.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "check",
+      "call": "check(70)",
+      "gold_out_repr": "False",
+      "id": 34
+    },
+    {
+      "text": "Write a Python function named `freq_element` that solves:\nWrite a function to find frequency of the elements in a given list of lists using collections module.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "freq_element",
+      "call": "freq_element([[1, 2, 3, 2], [4, 5, 6, 2], [7, 1, 9, 5]])",
+      "gold_out_repr": "{2: 3, 1: 2, 5: 2, 3: 1, 4: 1, 6: 1, 7: 1, 9: 1}",
+      "id": 35
+    },
+    {
+      "text": "Write a Python function named `func` that solves:\nWrite a function to find the top k integers that occur most frequently from given lists of sorted and distinct integers using heap queue algorithm.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "func",
+      "call": "func([[1, 2, 6], [1, 3, 4, 5, 7, 8], [1, 3, 5, 6, 8, 9], [2, 5, 7, 11], [1, 4, 7, 8, 12]],3)",
+      "gold_out_repr": "[5, 7, 1]",
+      "id": 36
+    },
+    {
+      "text": "Write a Python function named `eulerian_num` that solves:\nWrite a function to find eulerian number a(n, m).\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "eulerian_num",
+      "call": "eulerian_num(3, 1)",
+      "gold_out_repr": "4",
+      "id": 37
+    },
+    {
+      "text": "Write a Python function named `comb_sort` that solves:\nWrite a function to sort a list of elements using comb sort.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "comb_sort",
+      "call": "comb_sort([5, 15, 37, 25, 79])",
+      "gold_out_repr": "[5, 15, 25, 37, 79]",
+      "id": 38
+    },
+    {
+      "text": "Write a Python function named `find_Sum` that solves:\nWrite a python function to find the sum of repeated elements in a given array.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "find_Sum",
+      "call": "find_Sum([1,2,3,1,1,4,5,6],8)",
+      "gold_out_repr": "3",
+      "id": 39
+    },
+    {
+      "text": "Write a Python function named `binary_to_decimal` that solves:\nWrite a function to convert the given binary number to its decimal equivalent.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "binary_to_decimal",
+      "call": "binary_to_decimal(100)",
+      "gold_out_repr": "4",
+      "id": 40
+    },
+    {
+      "text": "Write a Python function named `min_length_list` that solves:\nWrite a function to find the list with minimum length using lambda function.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "min_length_list",
+      "call": "min_length_list([[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]])",
+      "gold_out_repr": "(1, [0])",
+      "id": 41
+    },
+    {
+      "text": "Write a Python function named `find_Volume` that solves:\nWrite a python function to find the volume of a triangular prism.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "find_Volume",
+      "call": "find_Volume(10,8,6)",
+      "gold_out_repr": "240",
+      "id": 42
+    },
+    {
+      "text": "Write a Python function named `next_smallest_palindrome` that solves:\nWrite a function to find the next smallest palindrome of a specified number.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "next_smallest_palindrome",
+      "call": "next_smallest_palindrome(99)",
+      "gold_out_repr": "101",
+      "id": 43
+    },
+    {
+      "text": "Write a Python function named `power` that solves:\nWrite a function to calculate the value of 'a' to the power 'b'.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "power",
+      "call": "power(3,4)",
+      "gold_out_repr": "81",
+      "id": 44
+    },
+    {
+      "text": "Write a Python function named `bell_number` that solves:\nWrite a function to find the number of ways to partition a set of bell numbers.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "bell_number",
+      "call": "bell_number(2)",
+      "gold_out_repr": "2",
+      "id": 45
+    },
+    {
+      "text": "Write a Python function named `find_substring` that solves:\nWrite a function to check if a substring is present in a given list of string values.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "find_substring",
+      "call": "find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")",
+      "gold_out_repr": "True",
+      "id": 46
+    },
+    {
+      "text": "Write a Python function named `find_missing` that solves:\nWrite a python function to find the missing number in a sorted array.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "find_missing",
+      "call": "find_missing([1,2,3,5],4)",
+      "gold_out_repr": "4",
+      "id": 47
+    },
+    {
+      "text": "Write a Python function named `decimal_to_binary` that solves:\nWrite a function to convert the given decimal number to its binary equivalent.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "decimal_to_binary",
+      "call": "decimal_to_binary(8)",
+      "gold_out_repr": "'1000'",
+      "id": 48
+    },
+    {
+      "text": "Write a Python function named `check_equilateral` that solves:\nWrite a function to print check if the triangle is equilateral or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "check_equilateral",
+      "call": "check_equilateral(6,8,12)",
+      "gold_out_repr": "False",
+      "id": 49
+    },
+    {
+      "text": "Write a Python function named `is_sublist` that solves:\nWrite a function to check whether a list contains the given sublist or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "is_sublist",
+      "call": "is_sublist([2,4,3,5,7],[3,7])",
+      "gold_out_repr": "False",
+      "id": 50
+    },
+    {
+      "text": "Write a Python function named `is_samepatterns` that solves:\nWrite a function to check whether it follows the sequence given in the patterns array.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "is_samepatterns",
+      "call": "is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \"b\"])",
+      "gold_out_repr": "True",
+      "id": 51
+    },
+    {
+      "text": "Write a Python function named `count_With_Odd_SetBits` that solves:\nWrite a python function to find number of integers with odd number of set bits.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "count_With_Odd_SetBits",
+      "call": "count_With_Odd_SetBits(5)",
+      "gold_out_repr": "3",
+      "id": 52
+    },
+    {
+      "text": "Write a Python function named `merge_dictionaries_three` that solves:\nWrite a function to merge three dictionaries into a single expression.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "merge_dictionaries_three",
+      "call": "merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{ \"O\": \"Orange\", \"W\": \"White\", \"B\": \"Black\" })",
+      "gold_out_repr": "{'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}",
+      "id": 53
+    },
+    {
+      "text": "Write a Python function named `counting_sort` that solves:\nWrite a function to sort the given array by using counting sort.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "counting_sort",
+      "call": "counting_sort([1,23,4,5,6,7,8])",
+      "gold_out_repr": "[1, 4, 5, 6, 7, 8, 23]",
+      "id": 54
+    },
+    {
+      "text": "Write a Python function named `max_difference` that solves:\nWrite a function to find the maximum difference between available pairs in the given tuple list.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "max_difference",
+      "call": "max_difference([(3, 5), (1, 7), (10, 3), (1, 2)])",
+      "gold_out_repr": "7",
+      "id": 55
+    },
+    {
+      "text": "Write a Python function named `test_distinct` that solves:\nWrite a python function to determine whether all the numbers are different from each other are not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "test_distinct",
+      "call": "test_distinct([1,5,7,9])",
+      "gold_out_repr": "True",
+      "id": 56
+    },
+    {
+      "text": "Write a Python function named `count` that solves:\nWrite a python function to count true booleans in the given list.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "count",
+      "call": "count([True,False,True])",
+      "gold_out_repr": "2",
+      "id": 57
+    },
+    {
+      "text": "Write a Python function named `compute_Last_Digit` that solves:\nWrite a python function to find the last digit when factorial of a divides factorial of b.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "compute_Last_Digit",
+      "call": "compute_Last_Digit(2,4)",
+      "gold_out_repr": "2",
+      "id": 58
+    },
+    {
+      "text": "Write a Python function named `tetrahedral_number` that solves:\nWrite a function to find the nth tetrahedral number.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "tetrahedral_number",
+      "call": "tetrahedral_number(5)",
+      "gold_out_repr": "35.0",
+      "id": 59
+    },
+    {
+      "text": "Write a Python function named `get_gcd` that solves:\nWrite a function to find the gcd of the given array elements.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "get_gcd",
+      "call": "get_gcd([2, 4, 6, 8, 16])",
+      "gold_out_repr": "2",
+      "id": 60
+    },
+    {
+      "text": "Write a Python function named `kth_element` that solves:\nWrite a function to find the kth element in the given array.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "kth_element",
+      "call": "kth_element([12,3,5,7,19], 5, 2)",
+      "gold_out_repr": "3",
+      "id": 61
+    },
+    {
+      "text": "Write a Python function named `sort_mixed_list` that solves:\nWrite a function to sort a given mixed list of integers and strings.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "sort_mixed_list",
+      "call": "sort_mixed_list([19,'red',12,'green','blue', 10,'white','green',1])",
+      "gold_out_repr": "[1, 10, 12, 19, 'blue', 'green', 'green', 'red', 'white']",
+      "id": 62
+    },
+    {
+      "text": "Write a Python function named `odd_bit_set_number` that solves:\nWrite a python function to set all odd bits of a given number.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "odd_bit_set_number",
+      "call": "odd_bit_set_number(10)",
+      "gold_out_repr": "15",
+      "id": 63
+    },
+    {
+      "text": "Write a Python function named `binomial_Coeff` that solves:\nWrite a python function to find binomial co-efficient.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "binomial_Coeff",
+      "call": "binomial_Coeff(5,2)",
+      "gold_out_repr": "10",
+      "id": 64
+    },
+    {
+      "text": "Write a Python function named `text_lowercase_underscore` that solves:\nWrite a function to find sequences of lowercase letters joined with an underscore.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "text_lowercase_underscore",
+      "call": "text_lowercase_underscore(\"aab_cbbbc\")",
+      "gold_out_repr": "'Found a match!'",
+      "id": 65
+    },
+    {
+      "text": "Write a Python function named `centered_hexagonal_number` that solves:\nWrite a function to find nth centered hexagonal number.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "centered_hexagonal_number",
+      "call": "centered_hexagonal_number(10)",
+      "gold_out_repr": "271",
+      "id": 66
+    },
+    {
+      "text": "Write a Python function named `snake_to_camel` that solves:\nWrite a function to convert snake case string to camel case string.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "snake_to_camel",
+      "call": "snake_to_camel('python_program')",
+      "gold_out_repr": "'PythonProgram'",
+      "id": 67
+    },
+    {
+      "text": "Write a Python function named `sort_sublists` that solves:\nWrite a function to sort each sublist of strings in a given list of lists using lambda function.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "sort_sublists",
+      "call": "sort_sublists(([\"green\", \"orange\"], [\"black\", \"white\"], [\"white\", \"black\", \"orange\"]))",
+      "gold_out_repr": "[['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]",
+      "id": 68
+    },
+    {
+      "text": "Write a Python function named `sequence` that solves:\nWrite a function to find the n-th number in newman conway sequence.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "sequence",
+      "call": "sequence(10)",
+      "gold_out_repr": "6",
+      "id": 69
+    },
+    {
+      "text": "Write a Python function named `rearange_string` that solves:\nWrite a function to check if the letters of a given string can be rearranged so that two characters that are adjacent to each other are different.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "rearange_string",
+      "call": "rearange_string(\"aab\")",
+      "gold_out_repr": "'aba'",
+      "id": 70
+    },
+    {
+      "text": "Write a Python function named `check_k_elements` that solves:\nWrite a function to check if the given tuple list has all k elements.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "check_k_elements",
+      "call": "check_k_elements([(4, 4), (4, 4, 4), (4, 4), (4, 4, 4, 4), (4, )], 4)",
+      "gold_out_repr": "True",
+      "id": 71
+    },
+    {
+      "text": "Write a Python function named `get_Char` that solves:\nWrite a python function to find the character made by adding all the characters of the given string.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "get_Char",
+      "call": "get_Char(\"abc\")",
+      "gold_out_repr": "'f'",
+      "id": 72
+    },
+    {
+      "text": "Write a Python function named `divisor` that solves:\nWrite a python function to find the number of divisors of a given integer.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "divisor",
+      "call": "divisor(15)",
+      "gold_out_repr": "4",
+      "id": 73
+    },
+    {
+      "text": "Write a Python function named `recursive_list_sum` that solves:\nWrite a function of recursion list sum.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "recursive_list_sum",
+      "call": "recursive_list_sum(([1, 2, [3,4],[5,6]]))",
+      "gold_out_repr": "21",
+      "id": 74
+    },
+    {
+      "text": "Write a Python function named `zip_tuples` that solves:\nWrite a function to zip the two given tuples.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "zip_tuples",
+      "call": "zip_tuples((7, 8, 4, 5, 9, 10),(1, 5, 6) )",
+      "gold_out_repr": "[(7, 1), (8, 5), (4, 6), (5, 1), (9, 5), (10, 6)]",
+      "id": 75
+    },
+    {
+      "text": "Write a Python function named `is_undulating` that solves:\nWrite a function to check whether the given number is undulating or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "is_undulating",
+      "call": "is_undulating(\"1212121\")",
+      "gold_out_repr": "True",
+      "id": 76
+    },
+    {
+      "text": "Write a Python function named `filter_evennumbers` that solves:\nWrite a function to filter even numbers using lambda function.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "filter_evennumbers",
+      "call": "filter_evennumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])",
+      "gold_out_repr": "[2, 4, 6, 8, 10]",
+      "id": 77
+    },
+    {
+      "text": "Write a Python function named `test_duplicate` that solves:\nWrite a function to find whether a given array of integers contains any duplicate element.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "test_duplicate",
+      "call": "test_duplicate(([1,2,3,4,5]))",
+      "gold_out_repr": "False",
+      "id": 78
+    },
+    {
+      "text": "Write a Python function named `subject_marks` that solves:\nWrite a function to sort a list of tuples using lambda.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "subject_marks",
+      "call": "subject_marks([('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])",
+      "gold_out_repr": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]",
+      "id": 79
+    },
+    {
+      "text": "Write a Python function named `pos_count` that solves:\nWrite a python function to count positive numbers in a list.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "1",
+      "fn": "pos_count",
+      "call": "pos_count([1,-2,3,-4])",
+      "gold_out_repr": "2",
+      "id": 80
+    },
+    {
+      "text": "Write a Python function named `find_first_duplicate` that solves:\nWrite a function to find the first duplicate element in a given array of integers.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "find_first_duplicate",
+      "call": "find_first_duplicate(([1, 2, 3, 4, 4, 5]))",
+      "gold_out_repr": "4",
+      "id": 81
+    },
+    {
+      "text": "Write a Python function named `split_lowerstring` that solves:\nWrite a function to split a string at lowercase letters.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "split_lowerstring",
+      "call": "split_lowerstring(\"AbCd\")",
+      "gold_out_repr": "['bC', 'd']",
+      "id": 82
+    },
+    {
+      "text": "Write a Python function named `div_even_odd` that solves:\nWrite a function to find the division of first even and odd number of a given list.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "div_even_odd",
+      "call": "div_even_odd([1,3,5,7,4,1,6,8])",
+      "gold_out_repr": "4",
+      "id": 83
+    },
+    {
+      "text": "Write a Python function named `find_tuples` that solves:\nWrite a function to find tuples which have all elements divisible by k from the given list of tuples.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "find_tuples",
+      "call": "find_tuples([(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6)",
+      "gold_out_repr": "'[(6, 24, 12)]'",
+      "id": 84
+    },
+    {
+      "text": "Write a Python function named `remove_dirty_chars` that solves:\nWrite a function to remove characters from the first string which are present in the second string.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "remove_dirty_chars",
+      "call": "remove_dirty_chars(\"probasscurve\", \"pros\")",
+      "gold_out_repr": "'bacuve'",
+      "id": 85
+    },
+    {
+      "text": "Write a Python function named `surfacearea_sphere` that solves:\nWrite a function to find the surface area of a sphere.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "surfacearea_sphere",
+      "call": "surfacearea_sphere(10)",
+      "gold_out_repr": "1256.6370614359173",
+      "id": 86
+    },
+    {
+      "text": "Write a Python function named `find_Max_Num` that solves:\nWrite a python function to find the largest number that can be formed with the given digits.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "find_Max_Num",
+      "call": "find_Max_Num([1,2,3],3)",
+      "gold_out_repr": "321",
+      "id": 87
+    },
+    {
+      "text": "Write a Python function named `maximum_Sum` that solves:\nWrite a python function to find the maximum sum of elements of list in a list of lists.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "maximum_Sum",
+      "call": "maximum_Sum([[1,2,3],[4,5,6],[10,11,12],[7,8,9]])",
+      "gold_out_repr": "33",
+      "id": 88
+    },
+    {
+      "text": "Write a Python function named `word_len` that solves:\nWrite a python function to check whether the length of the word is odd or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "word_len",
+      "call": "word_len(\"Hadoop\")",
+      "gold_out_repr": "False",
+      "id": 89
+    },
+    {
+      "text": "Write a Python function named `is_woodall` that solves:\nWrite a function to check if the given number is woodball or not.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "0",
+      "fn": "is_woodall",
+      "call": "is_woodall(383)",
+      "gold_out_repr": "True",
+      "id": 90
+    },
+    {
+      "text": "Write a Python function named `square_perimeter` that solves:\nWrite a function to find the perimeter of a square.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "square_perimeter",
+      "call": "square_perimeter(10)",
+      "gold_out_repr": "40",
+      "id": 91
+    },
+    {
+      "text": "Write a Python function named `index_minimum` that solves:\nWrite a function to extract the index minimum value record from the given tuples.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "index_minimum",
+      "call": "index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)])",
+      "gold_out_repr": "'Varsha'",
+      "id": 92
+    },
+    {
+      "text": "Write a Python function named `count_Substrings` that solves:\nWrite a python function to count number of substrings with the sum of digits equal to their length.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "count_Substrings",
+      "call": "count_Substrings('112112',6)",
+      "gold_out_repr": "6",
+      "id": 93
+    },
+    {
+      "text": "Write a Python function named `count_Substring_With_Equal_Ends` that solves:\nWrite a python function to count all the substrings starting and ending with same characters.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "2",
+      "fn": "count_Substring_With_Equal_Ends",
+      "call": "count_Substring_With_Equal_Ends(\"abc\")",
+      "gold_out_repr": "3",
+      "id": 94
+    },
+    {
+      "text": "Write a Python function named `parallelogram_area` that solves:\nWrite a function to caluclate area of a parallelogram.\nReply with ONLY the function definition in a ```python code block.",
+      "gold": "3",
+      "fn": "parallelogram_area",
+      "call": "parallelogram_area(10,20)",
+      "gold_out_repr": "200",
+      "id": 95
+    }
+  ],
+  "split": {
+    "fit": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      19,
+      21,
+      22,
+      27,
+      29,
+      30,
+      31,
+      32,
+      33,
+      35,
+      36,
+      37,
+      42,
+      44,
+      45,
+      47,
+      49,
+      52,
+      53,
+      55,
+      57,
+      58,
+      63,
+      66,
+      67,
+      71,
+      72,
+      73,
+      77,
+      78,
+      82,
+      83,
+      84,
+      85,
+      86,
+      88,
+      89,
+      90,
+      92,
+      94,
+      95
+    ],
+    "holdout": [
+      0,
+      2,
+      3,
+      4,
+      9,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      23,
+      24,
+      25,
+      26,
+      28,
+      34,
+      38,
+      39,
+      40,
+      41,
+      43,
+      46,
+      48,
+      50,
+      51,
+      54,
+      56,
+      59,
+      60,
+      61,
+      62,
+      64,
+      65,
+      68,
+      69,
+      70,
+      74,
+      75,
+      76,
+      79,
+      80,
+      81,
+      87,
+      91,
+      93
+    ]
+  },
+  "n": 96,
+  "K": 4,
+  "K_hash": 4
+}
