@@ -1,0 +1,1352 @@
+{
+  "0": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +4 (register = 4 + 4)  = **8**  (mod 6 = 2)\n\n**Step 2:** *3 (register = 8 * 3) = **24** (mod 6 = 0)\n\n**Step 3:** *1 (register = 24 * 1) = **24** (mod 6 = 0)\n\n**Step 4:** *1 (register = 24 * 1) = **24** (mod 6 = 0)\n\n**Step 5:** -2 (register = 24 - 2) = **22** (mod 6 = 2)\n\n####  <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 182,
+    "total_ns": 10099651625,
+    "wall_s": 10.436259984970093,
+    "pred": "2",
+    "gold": "4"
+  },
+  "1": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n* **Start:**  register = 5\n* **1:**  (5 * 1) % 6 = 5 % 6 = 5\n* **-3:** (5 - 3) % 6 = 2 % 6 = 2\n* **-5:** (2 - 5) % 6 = -3 % 6 = -3 \n* **-3:** (-3 - 3) % 6 = -6 % 6 = 0\n* **-3:** (0 - 3) % 6 = -3 % 6 = -3\n\n####  <final value -3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 158,
+    "total_ns": 8491768208,
+    "wall_s": 8.789701223373413,
+    "pred": "3",
+    "gold": "3"
+  },
+  "2": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +1 (register = 4 + 1 = 5)  mod 6 = **5** \n**Step 2:** +4 (register = 5 + 4 = 9) mod 6 = **3**\n**Step 3:** -1 (register = 9 - 1 = 8) mod 6 = **2**\n**Step 4:** +1 (register = 2 + 1 = 3) mod 6 = **3**\n**Step 5:** *4 (register = 3 * 4 = 12) mod 6 = **0**\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 166,
+    "total_ns": 8879880208,
+    "wall_s": 9.1134672164917,
+    "pred": "0",
+    "gold": "0"
+  },
+  "3": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** -5 (mod 6) = -5  (remainder is -5)\n   * **Register:** 2 -> -5 \n\n**Step 2:** *3 (mod 6) = 3  (remainder is 3)\n   * **Register:** -5 -> 3\n\n**Step 3:** *1 (mod 6) = 1  (remainder is 1)\n   * **Register:** 3 -> 1\n\n**Step 4:** *1 (mod 6) = 1  (remainder is 1)\n   * **Register:** 1 -> 1\n\n**Step 5:** +2 (mod 6) = 2  (remainder is 2)\n   * **Register:** 1 -> 2\n\n#### <final value 2> \n\n\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 213,
+    "total_ns": 11456333000,
+    "wall_s": 11.570878982543945,
+    "pred": "2",
+    "gold": "5"
+  },
+  "4": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +4 (register = 5 + 4)  =>  9  (mod 6 = 3)\n**Step 2:** *1 (register = 3)  =>  3  (mod 6 = 3)**\n**Step 3:** -2 (register = 3 - 2)  =>  1  (mod 6 = 1)\n**Step 4:** -3 (register = 1 - 3)  =>  -2 (mod 6 = -2, remember modulo is 0..5)\n**Step 5:** -5 (register = -2 - 5)  =>  -7 (mod 6 = -1)\n\n#### -1 <final value 0..5> \n\n\n\nLet me know if you'd like to explore more complex register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 202,
+    "total_ns": 10883481375,
+    "wall_s": 10.912099123001099,
+    "pred": "5",
+    "gold": "5"
+  },
+  "5": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 2\n* **-1 (mod 6):**  2 - 1 = 1  (register = 1)\n* **-3 (mod 6):**  1 - 3 = -2  (register = -2) \n* **-5 (mod 6):** -2 - 5 = -7  (register = -7) \n* **-2 (mod 6):** -7 + 2 = -5  (register = -5)\n* **+3 (mod 6):** -5 + 3 = -2  (register = -2)\n\n#### <final value -2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 163,
+    "total_ns": 8957264292,
+    "wall_s": 8.989561796188354,
+    "pred": "4",
+    "gold": "0"
+  },
+  "6": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** *3 (register = 4) ->  (4 * 3) % 6 = 12 % 6 = 0 ** \n**Step 2:** *1 (register = 0) -> (0 * 1) % 6 = 0 % 6 = 0 **\n**Step 3:** +2 (register = 0) -> (0 + 2) % 6 = 2 % 6 = 2 **\n**Step 4:** +1 (register = 2) -> (2 + 1) % 6 = 3 % 6 = 3 **\n**Step 5:** -3 (register = 3) -> (3 - 3) % 6 = 0 % 6 = 0 **\n\n#### <final value 0> \n\n\n\nLet me know if you'd like to explore other register operations or sequences! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 217,
+    "total_ns": 11748389625,
+    "wall_s": 11.785057783126831,
+    "pred": "0",
+    "gold": "0"
+  },
+  "7": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **+3:**  Start = 5 + 3 = 8 (mod 6) = 2\n   \n2. ***4:**  Register = 2 * 4 = 8 (mod 6) = 2\n\n3. ***3:**  Register = 2 * 3 = 6 (mod 6) = 0\n\n4. **-4:**  Register = 0 - 4 = -4 (mod 6) = 2\n\n5. **-5:**  Register = 2 - 5 = -3 (mod 6) = **3** \n   #### <final value 3> \n\n\n\nLet me know if you'd like to explore more register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 177,
+    "total_ns": 9753173083,
+    "wall_s": 9.990346908569336,
+    "pred": "3",
+    "gold": "3"
+  },
+  "8": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 3\n2. **-4:** (3 - 4) mod 6 = -1 mod 6 = **5** \n3. **+3:** (5 + 3) mod 6 = 8 mod 6 = **2**\n4. ***5:** (2 * 5) mod 6 = 10 mod 6 = **4**\n5. ***2:** (4 * 2) mod 6 = 8 mod 6 = **2**\n6. **+5:** (2 + 5) mod 6 = 7 mod 6 = **1**\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 170,
+    "total_ns": 9195128375,
+    "wall_s": 9.585924863815308,
+    "pred": "1",
+    "gold": "1"
+  },
+  "9": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *4 (mod 6) = 4 \n   * Register = 2 * 4 = 8 \n   * Register = 8 mod 6 = **2**\n\n**Step 2:** -5 (mod 6) = -5\n   * Register = 2 - 5 = -3\n   * Register = -3 mod 6 = **-3 + 6 = 3**\n\n**Step 3:** +1 (mod 6) = 1\n   * Register = 3 + 1 = 4\n   * Register = 4 mod 6 = **4**\n\n**Step 4:** *2 (mod 6) = 2\n   * Register = 4 * 2 = 8\n   * Register = 8 mod 6 = **2**\n\n**Step 5:** +2 (mod 6) = 2\n   * Register = 2 + 2 = 4\n   * Register = 4 mod 6 = **4**\n\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 252,
+    "total_ns": 13412434459,
+    "wall_s": 13.657615184783936,
+    "pred": "4",
+    "gold": "4"
+  },
+  "10": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 1\n2. **-4:**  (1 - 4) mod 6 = -3 mod 6 = **3** \n3. ***3:**   (3 * 3) mod 6 = 9 mod 6 = **3**\n4. ***2:**   (3 * 2) mod 6 = 6 mod 6 = **0**\n5. **+3:**   (0 + 3) mod 6 = 3 mod 6 = **3**\n6. **-2:**   (3 - 2) mod 6 = 1 mod 6 = **1**\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 174,
+    "total_ns": 9391108917,
+    "wall_s": 9.523847103118896,
+    "pred": "1",
+    "gold": "1"
+  },
+  "11": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 4` (Start)\n   * -1 (mod 6) = **3** \n   * `#### <value 3> `\n\n**Step 2:** `register = 3`\n   * +3 (mod 6) = **0** \n   * `#### <value 0> `\n\n**Step 3:** `register = 0`\n   * *4 (mod 6) = **4** \n   * `#### <value 4> `\n\n**Step 4:** `register = 4`\n   * *2 (mod 6) = **2** \n   * `#### <value 2> `\n\n**Step 5:** `register = 2`\n   * -4 (mod 6) = **-2**  (Note: We take the remainder after subtracting 4 from the value, which is negative. To get a positive result within the range of 0..5, we add 6)\n   * `#### <value -2> `\n\n**Step 6:** `register = -2`\n   *  +6 (mod 6) = **0** \n   * `#### <value 0> `\n\n\n**Final Value: 0**\n\n\n\nLet me know if you'd like to explore other register operations or sequences! ",
+    "prompt_tokens": 121,
+    "eval_tokens": 314,
+    "total_ns": 16878626250,
+    "wall_s": 17.190521955490112,
+    "pred": "0",
+    "gold": "2"
+  },
+  "12": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 5\n2. ***2:**  (5 * 2) % 6 = 10 % 6 = **4** \n3. **+5:** (4 + 5) % 6 = 9 % 6 = **3**\n4. **+3:** (3 + 3) % 6 = 6 % 6 = **0**  (Result is 0, as 6%6 always equals 0)\n5. **-3:** (0 - 3) % 6 = -3 % 6 = **-3** (Result is -3, as -3 modulo 6 is -3)\n6. ***5:** (-3 * 5) % 6 = -15 % 6 = **3**\n\n####  <final value 3> \n\n\n\nLet me know if you'd like to explore more complex sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 225,
+    "total_ns": 12038642917,
+    "wall_s": 12.065458059310913,
+    "pred": "3",
+    "gold": "3"
+  },
+  "13": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +4 (register = 5 + 4)  = 9.  Mod 6: 9 % 6 = **3** \n**Step 2:** +4 (register = 3 + 4) = 7. Mod 6: 7 % 6 = **1**\n**Step 3:** *1 (register = 1) * 1 = 1. Mod 6: 1 % 6 = **1**\n**Step 4:** -4 (register = 1 - 4) = -3. Mod 6: -3 % 6 = **-3**  (Note: We use modulo 6 to keep the value within 0..5)\n**Step 5:** *1 (register = -3 * 1) = -3. Mod 6: -3 % 6 = **-3**\n\n####  <final value -3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 221,
+    "total_ns": 11892594958,
+    "wall_s": 12.049965620040894,
+    "pred": "3",
+    "gold": "3"
+  },
+  "14": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 0\n2. ***2:**  (0 * 2) % 6 = 0 % 6 = 0\n3. **-4:** (0 - 4) % 6 = -4 % 6 = 2 \n4. **+5:** (2 + 5) % 6 = 7 % 6 = 1\n5. **+5:** (1 + 5) % 6 = 6 % 6 = 0\n6. **-5:** (0 - 5) % 6 = -5 % 6 = 1\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 165,
+    "total_ns": 8958364083,
+    "wall_s": 8.978998184204102,
+    "pred": "1",
+    "gold": "1"
+  },
+  "15": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  -3 (mod 6) = -3 \n   * Register = -3\n\n**Step 2:** +4 (mod 6) = 4\n   * Register = 4\n\n**Step 3:** +2 (mod 6) = 2\n   * Register = 2\n\n**Step 4:** *1 (mod 6) = 1**\n   * Register = 1\n\n**Step 5:** -5 (mod 6) = 1\n   * Register = 1\n\n\n#### <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 144,
+    "total_ns": 7986094042,
+    "wall_s": 8.273717880249023,
+    "pred": "1",
+    "gold": "5"
+  },
+  "16": {
+    "text": "Here's the breakdown of the register operations:\n\n1. **Start:**  register = 3\n2. **+3:**  (3 + 3) mod 6 = 6 mod 6 = 0\n   * Register = 0\n3. **+2:** (0 + 2) mod 6 = 2 mod 6 = 2\n   * Register = 2\n4. **-2:** (2 - 2) mod 6 = 0 mod 6 = 0\n   * Register = 0\n5. **-3:** (0 - 3) mod 6 = -3 mod 6 = 3\n   * Register = 3\n6. **+5:** (3 + 5) mod 6 = 8 mod 6 = 2\n   * Register = 2\n\n####  <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 194,
+    "total_ns": 10370905458,
+    "wall_s": 10.662515878677368,
+    "pred": "2",
+    "gold": "2"
+  },
+  "17": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *3 (register = 5) -> 8  (mod 6 = 2)**\n**Step 2:** *1 (register = 2) -> 3  (mod 6 = 3)**\n**Step 3:** -5 (register = 3) -> -8 (mod 6 = **-2**) \n**Step 4:** *4 (register = -2) -> 0  (mod 6 = 0)**\n**Step 5:** *5 (register = 0) -> 5  (mod 6 = 5)**\n\n#### 5 <final value 0..5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 162,
+    "total_ns": 8729206916,
+    "wall_s": 8.757376909255981,
+    "pred": "5",
+    "gold": "2"
+  },
+  "18": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 5\n* **+1:** (5 + 1) mod 6 = 6 mod 6 = 0\n* **-5:** (0 - 5) mod 6 = -5 mod 6 = 1 \n* **+3:** (1 + 3) mod 6 = 4 mod 6 = 4\n* **-1:** (4 - 1) mod 6 = 3 mod 6 = 3\n* **+4:** (3 + 4) mod 6 = 7 mod 6 = 1\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 153,
+    "total_ns": 8274342625,
+    "wall_s": 8.30173397064209,
+    "pred": "1",
+    "gold": "1"
+  },
+  "19": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 4\n2. **+5 (mod 6):**  4 + 5 = 9,  9 mod 6 = 3\n3. **+4 (mod 6):**  3 + 4 = 7,  7 mod 6 = 1\n4. ***5 (mod 6):**  1 * 5 = 5,  5 mod 6 = 5\n5. **-3 (mod 6):**  5 - 3 = 2,  2 mod 6 = 2\n6. **-5 (mod 6):**  2 - 5 = -3, -3 mod 6 = -3  (-3 is equivalent to 3 in modulo 6)\n\n####  <final value 3> \n\n\n\nLet me know if you'd like to explore more complex sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 215,
+    "total_ns": 11673774459,
+    "wall_s": 11.716538906097412,
+    "pred": "3",
+    "gold": "3"
+  },
+  "20": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 3\n2. **-3:**  (3 - 3) mod 6 = 0\n3. **+2:**   (0 + 2) mod 6 = 2\n4. ***2:**    (2 * 2) mod 6 = 4\n5. **+5:**    (4 + 5) mod 6 = 1\n6. **-5:**    (1 - 5) mod 6 = -4  (-4 is equivalent to 2 in modulo 6, so the final value is 2)\n\n#### <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 158,
+    "total_ns": 8667828375,
+    "wall_s": 8.714792013168335,
+    "pred": "2",
+    "gold": "4"
+  },
+  "21": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +1 (register = 1 + 1 = 2)  -> **2 mod 6 = 2** \n**Step 2:** +2 (register = 2 + 2 = 4) -> **4 mod 6 = 4**\n**Step 3:** -1 (register = 4 - 1 = 3) -> **3 mod 6 = 3**\n**Step 4:** +2 (register = 3 + 2 = 5) -> **5 mod 6 = 5**\n**Step 5:** *3 (register = 5 * 3 = 15) -> **15 mod 6 = 3**\n\n####  <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 182,
+    "total_ns": 9927543083,
+    "wall_s": 9.955234050750732,
+    "pred": "3",
+    "gold": "3"
+  },
+  "22": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 1\n2. **-2:**  (1 - 2) mod 6 = -1 mod 6 = **5**\n3. **+2:**   (5 + 2) mod 6 = 7 mod 6 = **1**\n4. **+2:**    (1 + 2) mod 6 = 3 mod 6 = **3**\n5. **-5:**   (3 - 5) mod 6 = -2 mod 6 = **4**\n6. **+3:**    (4 + 3) mod 6 = 7 mod 6 = **1**\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 173,
+    "total_ns": 9358788625,
+    "wall_s": 9.377613067626953,
+    "pred": "1",
+    "gold": "1"
+  },
+  "23": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +4 (register = 1 + 4)  =>  **5** (mod 6 = 5)\n\n**Step 2:** +4 (register = 5 + 4)  => **9** (mod 6 = 3)\n\n**Step 3:** -1 (register = 9 - 1)  => **8** (mod 6 = 2)\n\n**Step 4:** *2 (register = 8 * 2)  => **16** (mod 6 = 4)\n\n**Step 5:** *4 (register = 16 * 4)  => **64** (mod 6 = 4)\n\n#### **final value: 4** \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 181,
+    "total_ns": 9721960958,
+    "wall_s": 9.747262001037598,
+    "pred": "4",
+    "gold": "4"
+  },
+  "24": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 3\n2. **+2 (mod 6):**  3 + 2 = 5,  register = 5\n3. **-4 (mod 6):** 5 - 4 = 1, register = 1\n4. ***3 (mod 6):** 1 * 3 = 3, register = 3\n5. **+4 (mod 6):** 3 + 4 = 7,  register = 1  (Note: We take the remainder after division by 6)\n6. ***3 (mod 6):** 1 * 3 = 3, register = 3\n\n####  <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 179,
+    "total_ns": 9790097917,
+    "wall_s": 9.818828105926514,
+    "pred": "3",
+    "gold": "3"
+  },
+  "25": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +2 (register = 1 + 2)  = **3** (mod 6 = 3)\n\n**Step 2:** +1 (register = 3 + 1) = **4** (mod 6 = 4)\n\n**Step 3:** +5 (register = 4 + 5) = **9** (mod 6 = 3)\n\n**Step 4:** *2 (register = 9 * 2) = 18** (mod 6 = 0)\n\n**Step 5:** +4 (register = 0 + 4) = **4** (mod 6 = 4)\n\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 175,
+    "total_ns": 9625195291,
+    "wall_s": 9.982563018798828,
+    "pred": "4",
+    "gold": "4"
+  },
+  "26": {
+    "text": "Here's the breakdown of the register's journey:\n\n* **Start:**  register = 0\n* **-1 (mod 6):**  0 - 1 = -1.  (-1 mod 6) = **5**\n* **-4 (mod 6):** 5 - 4 = 1.  (1 mod 6) = **1**\n* **+5 (mod 6):** 1 + 5 = 6.  (6 mod 6) = **0**\n* **-3 (mod 6):** 0 - 3 = -3. (-3 mod 6) = **3**\n* **-2 (mod 6):** 3 - 2 = 1. (1 mod 6) = **1**\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 187,
+    "total_ns": 10053132000,
+    "wall_s": 10.485859155654907,
+    "pred": "1",
+    "gold": "1"
+  },
+  "27": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **+3:**  Start = 5 + 3 = 8 (mod 6) = 2\n   \n2. ***3:**  Register = 2 * 3 = 6 (mod 6) = 0\n\n3. ***2:**  Register = 0 * 2 = 0 (mod 6) = 0\n\n4. **-5:**  Register = 0 - 5 = -5 (mod 6) = 1 \n\n5. ***3:**  Register = 1 * 3 = 3 (mod 6) = 3\n\n**#### <final value 3>** \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 161,
+    "total_ns": 8639587292,
+    "wall_s": 8.936689138412476,
+    "pred": "3",
+    "gold": "3"
+  },
+  "28": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +2 (register = 0 + 2 = 2)  mod 6 = **2** \n**Step 2:** +5 (register = 2 + 5 = 7) mod 6 = **1**\n**Step 3:** *1 (register = 1 * 1 = 1) mod 6 = **1**\n**Step 4:** *4 (register = 1 * 4 = 4) mod 6 = **4**\n**Step 5:** +5 (register = 4 + 5 = 9) mod 6 = **3**\n\n####  <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 165,
+    "total_ns": 8900909084,
+    "wall_s": 8.928255081176758,
+    "pred": "3",
+    "gold": "3"
+  },
+  "29": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *2 (register = 1 * 2 = 2)  mod 6 = 2\n**Step 2:** +4 (register = 2 + 4 = 6) mod 6 = 0\n**Step 3:** *3 (register = 0 * 3 = 0) mod 6 = 0\n**Step 4:** +1 (register = 0 + 1 = 1) mod 6 = 1\n**Step 5:** +4 (register = 1 + 4 = 5) mod 6 = 5\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 159,
+    "total_ns": 8740726292,
+    "wall_s": 8.76760196685791,
+    "pred": "5",
+    "gold": "5"
+  },
+  "30": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 5\n2. ***4:**  (5 * 4) % 6 = 20 % 6 = 2\n3. **-4:** (2 - 4) % 6 = -2 % 6 = 4\n4. ***3:** (4 * 3) % 6 = 12 % 6 = 0\n5. **+4:** (0 + 4) % 6 = 4 % 6 = 4\n6. **-2:** (4 - 2) % 6 = 2 % 6 = 2\n\n**####  <final value 2>** \n\n\nLet me know if you'd like to explore other sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 186,
+    "total_ns": 10135456583,
+    "wall_s": 10.242857933044434,
+    "pred": "2",
+    "gold": "2"
+  },
+  "31": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 1\n2. **-4 (mod 6):**  1 - 4 = -3  (remainder is -3, so we take mod 6) -> register = -3 \n3. **-3 (mod 6):** -3 - 3 = -6  (remainder is -6, so we take mod 6) -> register = -6\n4. **-3 (mod 6):** -6 + 3 = -3  (remainder is -3, so we take mod 6) -> register = -3\n5. ***3 (mod 6):** -3 * 3 = -9  (remainder is -9, so we take mod 6) -> register = -9\n6. **-2 (mod 6):** -9 + 2 = -7  (remainder is -7, so we take mod 6) -> register = -7\n\n#### -7 <final value 0..5> \n\n\n\nLet me know if you'd like to explore more complex sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 256,
+    "total_ns": 13797367333,
+    "wall_s": 13.98508906364441,
+    "pred": "5",
+    "gold": "1"
+  },
+  "32": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *5 (register = 2 * 5) = 10.  Mod 6 = 4\n   **Intermediate Value:** 4\n\n**Step 2:** *5 (register = 4 * 5) = 20. Mod 6 = 4\n   **Intermediate Value:** 4\n\n**Step 3:** -1 (register = 4 - 1) = 3. Mod 6 = 3\n   **Intermediate Value:** 3\n\n**Step 4:** *1 (register = 3 * 1) = 3. Mod 6 = 3\n   **Intermediate Value:** 3\n\n**Step 5:** +2 (register = 3 + 2) = 5. Mod 6 = 5\n   **Final Value:** 5 #### <final value 0..5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 206,
+    "total_ns": 11083861584,
+    "wall_s": 11.114382028579712,
+    "pred": "5",
+    "gold": "3"
+  },
+  "33": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *1 (mod 6) = 1** \n   Register: 0 + 1 = **1**\n\n**Step 2:** +5 (mod 6) = **1**\n   Register: 1 + 5 = **6** \u2261 **0** (mod 6)\n\n**Step 3:** +5 (mod 6) = **5**\n   Register: 0 + 5 = **5**\n\n**Step 4:** *4 (mod 6) = **4**\n   Register: 5 * 4 = **20** \u2261 **4** (mod 6)\n\n**Step 5:** +2 (mod 6) = **2**\n   Register: 4 + 2 = **6** \u2261 **0** (mod 6)\n\n\n####  <final value 0..5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 212,
+    "total_ns": 11457243542,
+    "wall_s": 11.51137089729309,
+    "pred": "5",
+    "gold": "0"
+  },
+  "34": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 2\n2. **+2:**  (2 + 2) mod 6 = 4\n3. **+3:**  (4 + 3) mod 6 = 7 mod 6 = 1\n4. ***3:**   (1 * 3) mod 6 = 3 mod 6 = 3\n5. ***2:**   (3 * 2) mod 6 = 6 mod 6 = 0\n6. **-4:**  (0 - 4) mod 6 = -4 mod 6 = 2\n\n**#### <final value 2>** \n\n\nLet me know if you'd like to explore more register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 179,
+    "total_ns": 9753851959,
+    "wall_s": 9.776854038238525,
+    "pred": "2",
+    "gold": "2"
+  },
+  "35": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 3\n* **+1:** (3 + 1) mod 6 = 4\n* **-5:** (4 - 5) mod 6 = -1 mod 6 = 5\n* **+1:** (5 + 1) mod 6 = 6 mod 6 = 0\n* **+5:** (0 + 5) mod 6 = 5 mod 6 = 5\n* **+5:** (5 + 5) mod 6 = 10 mod 6 = 4\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 147,
+    "total_ns": 8102517334,
+    "wall_s": 8.121467113494873,
+    "pred": "4",
+    "gold": "4"
+  },
+  "36": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  -5 (mod 6 = 1)\n   * Register: 5 - 5 = 0\n\n**Step 2:** -1 (mod 6 = 1)\n   * Register: 0 - 1 = -1 (Remember, modulo 6 means we're looking for the remainder after division by 6.  Since -1 is congruent to 5 in modulo 6)\n\n**Step 3:** +4 (mod 6 = 4)\n   * Register: 5 - 1 = 4\n\n**Step 4:** *4 (mod 6 = 4)\n   * Register: 4 * 4 = 16 (mod 6 = 4)\n\n**Step 5:** -2 (mod 6 = 4)\n   * Register: 4 - 2 = 2\n\n\n####  <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 216,
+    "total_ns": 11500063250,
+    "wall_s": 11.942262172698975,
+    "pred": "2",
+    "gold": "4"
+  },
+  "37": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 4\n* **op * 4:**  register = (4 * 4) % 6 = 16 % 6 = 10 % 6 = 10\n* **op + 2:**  register = (10 + 2) % 6 = 12 % 6 = 0 % 6 = 0\n* **op + 1:**  register = (0 + 1) % 6 = 1 % 6 = 1\n* **op + 5:**  register = (1 + 5) % 6 = 6 % 6 = 0 % 6 = 0\n* **op + 4:**  register = (0 + 4) % 6 = 4 % 6 = 4\n\n#### <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 199,
+    "total_ns": 10824029167,
+    "wall_s": 10.860635995864868,
+    "pred": "4",
+    "gold": "4"
+  },
+  "38": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 4\n* **Step 1:** *2 (multiply by 2) ->  8  (mod 6) = 2**\n* **Step 2:** -3 (subtract 3) -> 5  (mod 6) = 5**\n* **Step 3:** +3 (add 3) -> 8  (mod 6) = 2**\n* **Step 4:** +1 (add 1) -> 9  (mod 6) = 3**\n* **Step 5:** +5 (add 5) -> 10 (mod 6) = 4**\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 168,
+    "total_ns": 9015966292,
+    "wall_s": 9.072480916976929,
+    "pred": "4",
+    "gold": "2"
+  },
+  "39": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +1 (register = 2 + 1 = 3)  -> **3** <mod 6> **3** \n**Step 2:** *3 (register = 3 * 3 = 9) -> **9** <mod 6> **9**\n**Step 3:** *2 (register = 9 * 2 = 18) -> **18** <mod 6> **10**  (Note: We're reducing modulo 6, so 18 becomes 2)\n**Step 4:** +3 (register = 2 + 3 = 5) -> **5** <mod 6> **5**\n**Step 5:** -5 (register = 5 - 5 = 0) -> **0** <mod 6> **0**\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 213,
+    "total_ns": 11517220959,
+    "wall_s": 11.577744007110596,
+    "pred": "0",
+    "gold": "4"
+  },
+  "40": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *3 (mod 6) = 3. Register = 3**\n\n**Step 2:** +5 (mod 6) = 5. Register = 8 **\n\n**Step 3:** +5 (mod 6) = 5. Register = 13 **\n\n**Step 4:** -1 (mod 6) = 5. Register = 8 **\n\n**Step 5:** *3 (mod 6) = 3. Register = 8 **\n\n\n####  <final value 0..5> = 8 \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 144,
+    "total_ns": 7966604500,
+    "wall_s": 7.98766016960144,
+    "pred": "2",
+    "gold": "0"
+  },
+  "41": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 1` (Start)\n   * -2 (mod 6) = -2 \n   * `register = -2` \n\n**Step 2:**  `register = -2` (after Step 1)\n   * +4 (mod 6) = 0 \n   * `register = 0`\n\n**Step 3:**  `register = 0` (after Step 2)\n   * -1 (mod 6) = -1\n   * `register = -1`\n\n**Step 4:**  `register = -1` (after Step 3)\n   * *4 (mod 6) = 4\n   * `register = 4`\n\n**Step 5:**  `register = 4` (after Step 4)\n   * +5 (mod 6) = 5\n   * `register = 5`\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 232,
+    "total_ns": 12333788167,
+    "wall_s": 12.45287299156189,
+    "pred": "5",
+    "gold": "1"
+  },
+  "42": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 4` (Start)\n   * -5 (mod 6) = **-1** \n   * `#### <final value: -1> `\n\n**Step 2:**  `register = -1` (after step 1)\n   * +5 (mod 6) = **1**\n   * `#### <final value: 1> `\n\n**Step 3:**  `register = 1` (after step 2)\n   * +5 (mod 6) = **1**\n   * `#### <final value: 1> `\n\n**Step 4:**  `register = 1` (after step 3)\n   * *1 (mod 6) = **1**\n   * `#### <final value: 1> `\n\n**Step 5:**  `register = 1` (after step 4)\n   * -2 (mod 6) = **-2**\n   * `#### <final value: -2> `\n\n\nLet me know if you'd like to explore more complex register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 264,
+    "total_ns": 14287384875,
+    "wall_s": 14.588413953781128,
+    "pred": "4",
+    "gold": "1"
+  },
+  "43": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +1 (register = 2 + 1 = 3)  -> **3** <mod 6> \n**Step 2:** *3 (register = 3 * 3 = 9) -> **9** <mod 6> \n**Step 3:** -3 (register = 9 - 3 = 6) -> **6** <mod 6> \n**Step 4:** -5 (register = 6 - 5 = 1) -> **1** <mod 6> \n**Step 5:** +3 (register = 1 + 3 = 4) -> **4** <mod 6> \n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 179,
+    "total_ns": 9612610041,
+    "wall_s": 9.961351156234741,
+    "pred": "4",
+    "gold": "4"
+  },
+  "44": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *1 (mod 6) = 1** \n   Register: 4 * 1 = 4\n\n**Step 2:** +2 (mod 6) = 2**\n   Register: 4 + 2 = 6 ** \n   (Since 6 is divisible by 6, the register value stays at 0)\n\n**Step 3:** +3 (mod 6) = 3**\n   Register: 6 + 3 = 9 **\n   (Since 9 is greater than 6, we take the remainder after dividing by 6)\n\n**Step 4:** *5 (mod 6) = 5**\n   Register: 9 * 5 = 45 **\n   (Since 45 is greater than 6, we take the remainder after dividing by 6)\n\n**Step 5:** +1 (mod 6) = 1**\n   Register: 45 + 1 = 46 **\n   (Since 46 is greater than 6, we take the remainder after dividing by 6)\n\n\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 270,
+    "total_ns": 14399877083,
+    "wall_s": 14.478250980377197,
+    "pred": "1",
+    "gold": "4"
+  },
+  "45": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n* **Start:**  register = 4\n* ***2:**  (4 * 2) % 6 = 8 % 6 = **2** \n* ***1:** (2 * 1) % 6 = 2 % 6 = **2**\n* ***3:** (2 * 3) % 6 = 6 % 6 = **0**\n* **+4:** (0 + 4) % 6 = 4 % 6 = **4**\n* **+5:** (4 + 5) % 6 = 9 % 6 = **3**\n\n####  <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 164,
+    "total_ns": 8829526542,
+    "wall_s": 8.91267204284668,
+    "pred": "3",
+    "gold": "3"
+  },
+  "46": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +2 (register = 5 + 2 = 7)  -> **7 mod 6 = 1** \n**Step 2:** +1 (register = 1 + 7 = 8) -> **8 mod 6 = 2**\n**Step 3:** +5 (register = 2 + 8 = 10) -> **10 mod 6 = 4**\n**Step 4:** -2 (register = 4 - 2 = 2)  -> **2 mod 6 = 2**\n**Step 5:** *5 (register = 2 * 5 = 10) -> **10 mod 6 = 4**\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 185,
+    "total_ns": 10012152209,
+    "wall_s": 10.16623592376709,
+    "pred": "4",
+    "gold": "1"
+  },
+  "47": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +1 (register = 5 + 1 = 6)  -> **6 mod 6 = 0** \n**Step 2:** +3 (register = 0 + 3 = 3) -> **3 mod 6 = 3**\n**Step 3:** +2 (register = 3 + 2 = 5) -> **5 mod 6 = 5**\n**Step 4:** *5 (register = 5 * 5 = 25) -> **25 mod 6 = 1**\n**Step 5:** *4 (register = 1 * 4 = 4) -> **4 mod 6 = 4**\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 182,
+    "total_ns": 9752114333,
+    "wall_s": 9.97747802734375,
+    "pred": "4",
+    "gold": "4"
+  },
+  "48": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  -5 (mod 6 = -5 + 6 = 1)\n   * Register = 1\n\n**Step 2:** +1 (mod 6 = 1 + 6 = 7, which is equivalent to 1 modulo 6)\n   * Register = 2\n\n**Step 3:** +5 (mod 6 = 5 + 6 = 11, which is equivalent to 5 modulo 6)\n   * Register = 5\n\n**Step 4:** -2 (mod 6 = -2 + 6 = 4)\n   * Register = 4\n\n**Step 5:** *3 (mod 6 = 3 * 6 = 18, which is equivalent to 0 modulo 6)\n   * Register = 0\n\n\n#### <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 204,
+    "total_ns": 10939222250,
+    "wall_s": 10.958105087280273,
+    "pred": "0",
+    "gold": "3"
+  },
+  "49": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 4\n* **-5 (mod 6):**  4 - 5 = -1  (Result: -1)\n* **-1 (mod 6):** -1 + 6 = 5  (Result: 5)\n* **+3 (mod 6):** 5 + 3 = 8  (Result: 2)\n* **-1 (mod 6):** 2 - 1 = 1  (Result: 1)\n* **+3 (mod 6):** 1 + 3 = 4  (Result: 4)\n\n#### <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 161,
+    "total_ns": 8864879166,
+    "wall_s": 8.888174295425415,
+    "pred": "4",
+    "gold": "3"
+  },
+  "50": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 3` (Start)\n   * -1 (mod 6) = **2** \n   * `register = 2`\n\n**Step 2:**  `register = 2`\n   * +5 (mod 6) = **1**\n   * `register = 1`\n\n**Step 3:**  `register = 1`\n   * -5 (mod 6) = **-1**\n   * `register = -1`\n\n**Step 4:**  `register = -1`\n   * *5 (mod 6) = **1**\n   * `register = 1`\n\n**Step 5:**  `register = 1`\n   * -5 (mod 6) = **-1**\n   * `register = -1`\n\n\n#### <final value 0..5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 214,
+    "total_ns": 11619141458,
+    "wall_s": 11.640959024429321,
+    "pred": "5",
+    "gold": "5"
+  },
+  "51": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +3 (register = 1 + 3)  =>  4  (mod 6 = 4)\n\n**Step 2:** -2 (register = 4 - 2)  =>  2  (mod 6 = 2)\n\n**Step 3:** *2 (register = 2 * 2)  =>  4  (mod 6 = 4)\n\n**Step 4:** +1 (register = 4 + 1)  =>  5  (mod 6 = 5)\n\n**Step 5:** -4 (register = 5 - 4)  =>  1  (mod 6 = 1)\n\n\n#### <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 177,
+    "total_ns": 9743822458,
+    "wall_s": 9.763159036636353,
+    "pred": "1",
+    "gold": "1"
+  },
+  "52": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  -4 (mod 6 = -4 + 6 = 2)\n   * Register = 2\n\n**Step 2:** +1 (mod 6 = 1 + 6 = 7, which is equivalent to 1 modulo 6)\n   * Register = 3\n\n**Step 3:** *5 (mod 6 = 5 * 5 = 25, which is equivalent to 1 modulo 6)\n   * Register = 1\n\n**Step 4:** -3 (mod 6 = -3 + 6 = 3)\n   * Register = 3\n\n**Step 5:** *3 (mod 6 = 3 * 3 = 9, which is equivalent to 3 modulo 6)\n   * Register = 3\n\n\n#### <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 203,
+    "total_ns": 10850742750,
+    "wall_s": 10.956785917282104,
+    "pred": "3",
+    "gold": "3"
+  },
+  "53": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *4 (mod 6) = 4** \n   * Register: 0 + 4 = 4\n\n**Step 2:** -5 (mod 6) = 1\n   * Register: 4 - 5 = -1 \n\n**Step 3:** +3 (mod 6) = 3\n   * Register: -1 + 3 = 2\n\n**Step 4:** -1 (mod 6) = -1\n   * Register: 2 - 1 = 1\n\n**Step 5:** *2 (mod 6) = 2\n   * Register: 1 + 2 = 3\n\n**#### <final value 3> ** \n\n\nLet me know if you'd like to explore other sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 195,
+    "total_ns": 10484606917,
+    "wall_s": 10.514401912689209,
+    "pred": "3",
+    "gold": "0"
+  },
+  "54": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 5\n2. **-3 (mod 6):**  5 - 3 = 2 \n   * intermediate value: 2\n3. ***4 (mod 6):**  2 * 4 = 8  \n   * intermediate value: 8 \n4. **+2 (mod 6):**  8 + 2 = 10\n   * intermediate value: 10\n5. **+2 (mod 6):**  10 + 2 = 12\n   * intermediate value: 12\n6. **+2 (mod 6):**  12 + 2 = 14\n   * intermediate value: 14\n7. **+2 (mod 6):**  14 + 2 = 16\n   * intermediate value: 16\n\nNow, since the register is modulo 6, we need to reduce it to a value between 0 and 5. \n\n\n####  <final value 0..5> **1** \n\n\n\nLet me know if you'd like to explore more complex sequences of operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 270,
+    "total_ns": 14562461958,
+    "wall_s": 14.656266927719116,
+    "pred": "1",
+    "gold": "2"
+  },
+  "55": {
+    "text": "Here's the breakdown of the register's journey:\n\n**Step 1:**  -1 (mod 6 = -1 + 6 = 5)\n**Step 2:** *4 (mod 6 = 4)\n**Step 3:** *5 (mod 6 = 5)\n**Step 4:** +4 (mod 6 = 4)\n**Step 5:** -4 (mod 6 = -4 + 6 = 2)\n\n####  <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 117,
+    "total_ns": 6512435000,
+    "wall_s": 6.5610010623931885,
+    "pred": "2",
+    "gold": "4"
+  },
+  "56": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Step 1:**  `register = 0` (Start)\n* **Step 2:** `register = 4`  (4 % 6 = 4)\n* **Step 3:** `register = 7`  (4 + 2 = 6, then 6 % 6 = 0)\n* **Step 4:** `register = 1`  (7 + 3 = 10, then 10 % 6 = 4)\n* **Step 5:** `register = 4`  (1 + 3 = 4, then 4 % 6 = 4)\n\n#### <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 162,
+    "total_ns": 8748044666,
+    "wall_s": 8.774545907974243,
+    "pred": "4",
+    "gold": "3"
+  },
+  "57": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 0\n2. **-3 (mod 6):**  0 - 3 = -3.  Since we want a result in 0-5, let's take the remainder after dividing by 6: -3 mod 6 = **-3 + 6 = 3** \n   * intermediate value: 3\n3. ** *3 (mod 6):** 3 * 3 = 9.  9 mod 6 = **9 - 6 = 3**\n   * intermediate value: 3\n4. **+5 (mod 6):** 3 + 5 = 8.  8 mod 6 = **8 - 6 = 2**\n   * intermediate value: 2\n5. ** *2 (mod 6):** 2 * 2 = 4.  4 mod 6 = **4 - 6 = -2**. We need to adjust this to be in the range 0-5, so we add 6: -2 + 6 = **4**\n   * intermediate value: 4\n6. **+3 (mod 6):** 4 + 3 = 7.  7 mod 6 = **7 - 6 = 1**\n   * final value: **1**\n\n#### <final value 1> \n\n\n\nLet me know if you'd like to explore more register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 330,
+    "total_ns": 17563601041,
+    "wall_s": 17.59323811531067,
+    "pred": "1",
+    "gold": "1"
+  },
+  "58": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 1\n* **-1:**  (1 - 1) mod 6 = 0\n* **+3:**   (0 + 3) mod 6 = 3\n* **-1:**    (3 - 1) mod 6 = 2\n* **-2:**    (2 - 2) mod 6 = 0\n* **-5:**    (0 - 5) mod 6 = 1\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 127,
+    "total_ns": 7022772417,
+    "wall_s": 7.143963813781738,
+    "pred": "1",
+    "gold": "1"
+  },
+  "59": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 4\n2. **-2:**  (4 - 2) mod 6 = 2\n3. **-2:**  (2 - 2) mod 6 = 0\n4. ***5:**   (0 * 5) mod 6 = 0\n5. ***3:**   (0 * 3) mod 6 = 0\n6. ***2:**   (0 * 2) mod 6 = 0\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 138,
+    "total_ns": 7692346041,
+    "wall_s": 7.833939790725708,
+    "pred": "0",
+    "gold": "0"
+  },
+  "60": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +1 (register = 2 + 1 = 3)  -> **3** (mod 6)\n**Step 2:** +3 (register = 3 + 3 = 6) -> **0** (mod 6) \n**Step 3:** +5 (register = 0 + 5 = 5) -> **5** (mod 6)\n**Step 4:** *2 (register = 5 * 2 = 10) -> **4** (mod 6)\n**Step 5:** +3 (register = 4 + 3 = 7) -> **1** (mod 6)\n\n#### <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 175,
+    "total_ns": 9480107917,
+    "wall_s": 9.500794172286987,
+    "pred": "1",
+    "gold": "1"
+  },
+  "61": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 1\n2. **+2:** (1 + 2) mod 6 = 3\n3. **-5:** (3 - 5) mod 6 = -2  (Note: We need to adjust the result since it's negative, so we take the remainder after dividing by 6)\n4. **+3:** (-2 + 3) mod 6 = 1\n5. **+3:** (1 + 3) mod 6 = 4\n6. **-5:** (4 - 5) mod 6 = -1  (Again, adjust the result to get a remainder within 0..5)\n7. **#### <final value 0..5>**\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 197,
+    "total_ns": 10526933541,
+    "wall_s": 10.98995304107666,
+    "pred": "5",
+    "gold": "5"
+  },
+  "62": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 4\n2. **+4:**  (4 + 4) mod 6 = 8 mod 6 = 2\n3. **+2:**   (2 + 2) mod 6 = 4 mod 6 = 4\n4. **-2:**   (4 - 2) mod 6 = 2 mod 6 = 2\n5. ***2:**    (2 * 2) mod 6 = 4 mod 6 = 4\n6. **-4:**   (4 - 4) mod 6 = 0 mod 6 = 0\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 168,
+    "total_ns": 9184387000,
+    "wall_s": 9.21103310585022,
+    "pred": "0",
+    "gold": "0"
+  },
+  "63": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **+5:**  Register = 0 + 5 = 5 (mod 6) = 5\n2. ***2:** Register = 5 * 2 = 10 (mod 6) = 4\n3. **+3:** Register = 4 + 3 = 7 (mod 6) = 1\n4. ***2:** Register = 1 * 2 = 2 (mod 6) = 2\n5. **-5:** Register = 2 - 5 = -3 (mod 6) = **3**\n\n####  <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 155,
+    "total_ns": 8528747542,
+    "wall_s": 8.554229974746704,
+    "pred": "3",
+    "gold": "3"
+  },
+  "64": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 1\n* **-4 (mod 6):**  1 - 4 = -3  (We need to make it positive, so we add 6)\n    * register = 1 + 6 = 7 \n* **+1 (mod 6):** 7 + 1 = 8  (We need to make it positive, so we add 6)\n    * register = 8 + 6 = 14\n* **+3 (mod 6):** 14 + 3 = 17  (We need to make it positive, so we add 6)\n    * register = 17 + 6 = 23\n* **-3 (mod 6):** 23 - 3 = 20  (We need to make it positive, so we add 6)\n    * register = 20 + 6 = 26\n* **+4 (mod 6):** 26 + 4 = 30  (We need to make it positive, so we add 6)\n    * register = 30 + 6 = 36\n\nNow, since the register is now greater than 5, we take the remainder: \n#### **final value 0..5:** 0 \n\n\n\nLet me know if you'd like to explore other sequences of operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 320,
+    "total_ns": 17197282958,
+    "wall_s": 17.313477039337158,
+    "pred": "0",
+    "gold": "2"
+  },
+  "65": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 0` (Start)\n   * -1 (mod 6) = -1 \n   * **Register = -1** \n\n**Step 2:** `register = -1` (from Step 1)\n   * -3 (mod 6) = -3\n   * **Register = -3**\n\n**Step 3:** `register = -3` (from Step 2)\n   * -1 (mod 6) = -1\n   * **Register = -4**\n\n**Step 4:** `register = -4` (from Step 3)\n   * +1 (mod 6) = 5\n   * **Register = 5**\n\n**Step 5:** `register = 5` (from Step 4)\n   * *3 (mod 6) = 3\n   * **Register = 3**\n\n**#### <final value 3>** \n\n\n\nLet me know if you'd like to explore other sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 246,
+    "total_ns": 13198134458,
+    "wall_s": 13.221242904663086,
+    "pred": "3",
+    "gold": "0"
+  },
+  "66": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +3 (register = 2 + 3)  =>  **5** (mod 6 = 5)\n\n**Step 2:** -1 (register = 5 - 1)  => **4** (mod 6 = 4)\n\n**Step 3:** *4 (register = 4 * 4) => **16** (mod 6 = 1)\n\n**Step 4:** *5 (register = 16 * 5) => **80** (mod 6 = 4)\n\n**Step 5:** +1 (register = 80 + 1)  => **81** (mod 6 = 3)\n\n\n#### 3 <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 183,
+    "total_ns": 9949399875,
+    "wall_s": 9.967308044433594,
+    "pred": "3",
+    "gold": "3"
+  },
+  "67": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 2\n2. **-5 (mod 6):**  2 - 5 = -3  (We need to adjust this to be within 0-5) (-3 mod 6 = 3)\n3. ***4 (mod 6):**  3 * 4 = 12  (Mod 6: 12 mod 6 = 0)\n4. **+2 (mod 6):**  0 + 2 = 2 (Mod 6: 2 mod 6 = 2)\n5. ***2 (mod 6):**  2 * 2 = 4  (Mod 6: 4 mod 6 = 4)\n6. **+2 (mod 6):**  4 + 2 = 6 (Mod 6: 6 mod 6 = 0)\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 222,
+    "total_ns": 11915398125,
+    "wall_s": 11.940250873565674,
+    "pred": "0",
+    "gold": "0"
+  },
+  "68": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **+2:**  Register = 0 + 2 = 2 (mod 6) -> 2\n2. **+5:**  Register = 2 + 5 = 7 (mod 6) -> 1\n3. **+3:**  Register = 1 + 3 = 4 (mod 6) -> 4\n4. **+3:**  Register = 4 + 3 = 7 (mod 6) -> 1\n5. ***4:**  Register = 1 * 4 = 4 (mod 6) -> 4\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 157,
+    "total_ns": 8635806208,
+    "wall_s": 8.71350884437561,
+    "pred": "4",
+    "gold": "4"
+  },
+  "69": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **+4:**  Register = 4 + 4 = 8 (mod 6) -> 8 % 6 = 2\n2. ***2:** Register = 2 * 2 = 4 (mod 6) -> 4 % 6 = 4\n3. **-2:** Register = 4 - 2 = 2 (mod 6) -> 2 % 6 = 2\n4. ***5:** Register = 2 * 5 = 10 (mod 6) -> 10 % 6 = 4\n5. ***5:** Register = 4 * 5 = 20 (mod 6) -> 20 % 6 = 4\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 187,
+    "total_ns": 10088911834,
+    "wall_s": 10.28759503364563,
+    "pred": "4",
+    "gold": "2"
+  },
+  "70": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 2` (Start)\n   * -1 mod 6 = **-1** (remainder is -1, but we need to stay in 0..5 range)\n   * `register = -1` \n\n**Step 2:** `register = -1`\n   * -4 mod 6 = **-4** (remainder is -4, but we need to stay in 0..5 range)\n   * `register = -4`\n\n**Step 3:** `register = -4`\n   * *1 mod 6 = **1** (remainder is 1, but we need to stay in 0..5 range)\n   * `register = 1`\n\n**Step 4:** `register = 1`\n   * -4 mod 6 = **-4** (remainder is -4, but we need to stay in 0..5 range)\n   * `register = -3`\n\n**Step 5:** `register = -3`\n   * -1 mod 6 = **-1** (remainder is -1, but we need to stay in 0..5 range)\n   * `register = -2`\n\n\n####  <final value 2> \n\n\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 307,
+    "total_ns": 16402115750,
+    "wall_s": 16.444771766662598,
+    "pred": "2",
+    "gold": "4"
+  },
+  "71": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 0\n2. ***4:**  (0 * 4) % 6 = 0 % 6 = 0\n   **Intermediate:** register = 0\n3. **+3:** (0 + 3) % 6 = 3 % 6 = 3\n   **Intermediate:** register = 3\n4. ***4:**  (3 * 4) % 6 = 12 % 6 = 0\n   **Intermediate:** register = 0\n5. **+3:** (0 + 3) % 6 = 3 % 6 = 3\n   **Intermediate:** register = 3\n6. **-4:**  (3 - 4) % 6 = -1 % 6 = 5\n   **Final:** register = 5\n\n#### <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 211,
+    "total_ns": 11441016833,
+    "wall_s": 11.533912897109985,
+    "pred": "5",
+    "gold": "5"
+  },
+  "72": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 5\n* **-4:**  (5 - 4) mod 6 = 1\n* **-4:** (1 - 4) mod 6 = -3  (We need to adjust this to be within 0..5)\n* **+1:** (-3 + 1) mod 6 = -2 \n* **-5:** (-2 - 5) mod 6 = -7  (Again, we need to adjust to be in 0..5 range)\n* **+2:** (-7 + 2) mod 6 = -5 \n\n####  <final value -5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 157,
+    "total_ns": 8643629583,
+    "wall_s": 8.664194107055664,
+    "pred": "1",
+    "gold": "1"
+  },
+  "73": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** *3 (mod 6) = 3  \n   * Register = 5 + 3 = 8 \n   * **Register = 8 (mod 6) = 2**\n\n**Step 2:** *2 (mod 6) = 2\n   * Register = 2 + 2 = 4\n   * **Register = 4 (mod 6) = 4**\n\n**Step 3:** -2 (mod 6) = -2\n   * Register = 4 - 2 = 2\n   * **Register = 2 (mod 6) = 2**\n\n**Step 4:** -1 (mod 6) = -1\n   * Register = 2 - 1 = 1\n   * **Register = 1 (mod 6) = 1**\n\n**Step 5:** -4 (mod 6) = -4\n   * Register = 1 - 4 = -3\n   * **Register = -3 (mod 6) = -3**  \n\n\n#### <final value -3> \n\n\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 275,
+    "total_ns": 14637539125,
+    "wall_s": 14.67503309249878,
+    "pred": "3",
+    "gold": "5"
+  },
+  "74": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 3\n* **+4 (mod 6):**  3 + 4 = 7  ->  7 mod 6 = 1\n* **+1 (mod 6):**  1 + 1 = 2  ->  2 mod 6 = 2\n* **-5 (mod 6):**  2 - 5 = -3 -> -3 mod 6 = -3 (Remember, modulo is about the remainder)\n* **-4 (mod 6):**  -3 - 4 = -7 -> -7 mod 6 = -1 \n* **+2 (mod 6):**  -1 + 2 = 1  ->  1 mod 6 = 1\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 187,
+    "total_ns": 10196981625,
+    "wall_s": 10.225882053375244,
+    "pred": "1",
+    "gold": "1"
+  },
+  "75": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 2` (Start)\n   * -1 (mod 6) = **-1** \n   * `register = -1` \n\n**Step 2:**  `register = -1` (After Step 1)\n   * +2 (mod 6) = **0**\n   * `register = 0`\n\n**Step 3:**  `register = 0` (After Step 2)\n   * -2 (mod 6) = **-2**\n   * `register = -2`\n\n**Step 4:**  `register = -2` (After Step 3)\n   * *3 (mod 6) = **3**\n   * `register = 3`\n\n**Step 5:**  `register = 3` (After Step 4)\n   * *3 (mod 6) = **0**\n   * `register = 0`\n\n\n#### <final value 0> \n\n\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 253,
+    "total_ns": 13687542584,
+    "wall_s": 13.82308578491211,
+    "pred": "0",
+    "gold": "3"
+  },
+  "76": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 1\n2. **+2 (mod 6):**  1 + 2 = 3,  register = 3\n3. **-3 (mod 6):**  3 - 3 = 0, register = 0\n4. **+2 (mod 6):**  0 + 2 = 2, register = 2\n5. **-5 (mod 6):**  2 - 5 = -3, register = -3  (Note: We need to adjust the value since it's negative)\n6. **+5 (mod 6):**  -3 + 5 = 2, register = 2\n\n#### <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 180,
+    "total_ns": 9775983333,
+    "wall_s": 9.8117094039917,
+    "pred": "2",
+    "gold": "2"
+  },
+  "77": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +2 (register = 4 + 2 = 6)  -> **6 mod 6 = 0** \n**Step 2:** +2 (register = 0 + 2 = 2) -> **2 mod 6 = 2**\n**Step 3:** -5 (register = 2 - 5 = -3) -> **-3 mod 6 = 3**\n**Step 4:** *1 (register = 3 * 1 = 3) -> **3 mod 6 = 3**\n\n####  <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 150,
+    "total_ns": 8271750500,
+    "wall_s": 8.336595058441162,
+    "pred": "3",
+    "gold": "3"
+  },
+  "78": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +4 (register = 4 + 4)  =>  8  (mod 6) => **8** \n\n**Step 2:** +2 (register = 8 + 2)  =>  10  (mod 6) => **4**\n\n**Step 3:** -1 (register = 4 - 1)  =>  3  (mod 6) => **3**\n\n**Step 4:** *1 (register = 3 * 1)  =>  3  (mod 6) => **3**\n\n**Step 5:** -5 (register = 3 - 5)  =>  -2  (mod 6) => **-2** \n\n\n#### <final value -2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 186,
+    "total_ns": 9986087208,
+    "wall_s": 10.017539024353027,
+    "pred": "4",
+    "gold": "4"
+  },
+  "79": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +2 (register = 2 + 2 = 4)  mod 6 = **4** \n**Step 2:** -1 (register = 4 - 1 = 3) mod 6 = **3**\n**Step 3:** +3 (register = 3 + 3 = 6) mod 6 = **0**\n**Step 4:** +2 (register = 0 + 2 = 2) mod 6 = **2**\n**Step 5:** *3 (register = 2 * 3 = 6) mod 6 = **0**\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 165,
+    "total_ns": 9075605042,
+    "wall_s": 9.10162901878357,
+    "pred": "0",
+    "gold": "0"
+  },
+  "80": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 0\n2. **-5 (mod 6):**  0 - 5 = -5.  Since we want a result in 0..5, let's take the remainder after dividing by 6: -5 mod 6 = **1**.\n3. **+2 (mod 6):** 1 + 2 = 3.  Mod 6: 3 mod 6 = **3**.\n4. ***2 (mod 6):** 3 * 2 = 6. Mod 6: 6 mod 6 = **0**.\n5. ***3 (mod 6):** 0 * 3 = 0. Mod 6: 0 mod 6 = **0**.\n6. **+5 (mod 6):** 0 + 5 = 5. Mod 6: 5 mod 6 = **5**.\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 229,
+    "total_ns": 12407268542,
+    "wall_s": 12.441577911376953,
+    "pred": "5",
+    "gold": "5"
+  },
+  "81": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +1 (register = 4 + 1 = 5)  \n   * **Intermediate Value:** 5\n\n**Step 2:** *3 (register = 5 * 3 = 15) \n   * **Intermediate Value:** 15 (Note: 15 is greater than 6, so we take the remainder after dividing by 6)  \n   * **Final Value:** 15 % 6 = 3\n\n**Step 3:** -3 (register = 3 - 3 = 0)\n   * **Intermediate Value:** 0\n\n**Step 4:** -2 (register = 0 - 2 = -2)\n   * **Intermediate Value:** -2  (Remember, we're working modulo 6)\n   * **Final Value:** -2 % 6 = 4\n\n**Step 5:** -5 (register = 4 - 5 = -1)\n   * **Intermediate Value:** -1\n   * **Final Value:** -1 % 6 = 1\n\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 258,
+    "total_ns": 14015320500,
+    "wall_s": 14.057401180267334,
+    "pred": "1",
+    "gold": "5"
+  },
+  "82": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  -4 (mod 6 = -4 + 6 = 2)\n   * Register = 2\n\n**Step 2:** +3 (mod 6 = 3 + 6 = 9, which is equivalent to 3 in modulo 6)\n   * Register = 3\n\n**Step 3:** *2 (mod 6 = 2 * 2 = 4, which is equivalent to 4 in modulo 6)\n   * Register = 4\n\n**Step 4:** -4 (mod 6 = -4 + 6 = 2)\n   * Register = 2\n\n**Step 5:** +1 (mod 6 = 1 + 6 = 7, which is equivalent to 1 in modulo 6)\n   * Register = 1\n\n\n#### <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 205,
+    "total_ns": 11201885917,
+    "wall_s": 11.254719018936157,
+    "pred": "1",
+    "gold": "5"
+  },
+  "83": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 4\n2. **+3 (mod 6):**  4 + 3 = 7,  7 mod 6 = **1** \n3. **-5 (mod 6):** 1 - 5 = -4,  -4 mod 6 = **2**\n4. **+2 (mod 6):** 2 + 2 = 4,  4 mod 6 = **4**\n5. **+3 (mod 6):** 4 + 3 = 7,  7 mod 6 = **1**\n6. ***5 (mod 6):** 1 * 5 = 5,  5 mod 6 = **5**\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 190,
+    "total_ns": 10359743833,
+    "wall_s": 10.39407205581665,
+    "pred": "5",
+    "gold": "5"
+  },
+  "84": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 5\n2. **-3:**  (5 - 3) mod 6 = 2\n3. ***2:**   (2 * 2) mod 6 = 4\n4. **-4:**   (4 - 4) mod 6 = 0\n5. ***3:**   (0 * 3) mod 6 = 0\n6. **-5:**   (0 - 5) mod 6 = -5  (-5 is equivalent to 1 modulo 6)\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 150,
+    "total_ns": 8261894708,
+    "wall_s": 8.29028606414795,
+    "pred": "1",
+    "gold": "1"
+  },
+  "85": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 0\n2. **-3 (mod 6):**  0 - 3 = -3.  Since we want a result in 0-5, let's take the remainder after dividing by 6: -3 mod 6 = **-3 + 6 = 3** \n   * intermediate value: 3\n3. ** *2 (mod 6):** 3 * 2 = 6.  6 mod 6 = **0**\n   * intermediate value: 0\n4. **+5 (mod 6):** 0 + 5 = 5.  5 mod 6 = **5**\n   * intermediate value: 5\n5. ** *2 (mod 6):** 5 * 2 = 10. 10 mod 6 = **4**\n   * intermediate value: 4\n6. ** *5 (mod 6):** 4 * 5 = 20. 20 mod 6 = **2**\n   * final value: **2** #### <final value 2> \n\n\n\nLet me know if you'd like to explore more register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 279,
+    "total_ns": 14981512167,
+    "wall_s": 15.364942789077759,
+    "pred": "2",
+    "gold": "2"
+  },
+  "86": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  -3 (mod 6) = -3 + 6 = 3 \n   * Register = 3\n\n**Step 2:** +3 (mod 6) = 3 + 6 = 9 \n   * Register = 9\n\n**Step 3:** +2 (mod 6) = 9 + 2 = 11 \n   * Register = 11\n\n**Step 4:** -1 (mod 6) = 11 - 6 = 5\n   * Register = 5\n\n**Step 5:** -1 (mod 6) = 5 - 6 = -1  (mod 6) = 5 (mod 6) = 5\n   * Register = 5\n\n\n#### <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 195,
+    "total_ns": 10420997292,
+    "wall_s": 10.45673394203186,
+    "pred": "5",
+    "gold": "4"
+  },
+  "87": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 5\n2. ***3:**  (5 * 3) % 6 = 15 % 6 = 3\n   * intermediate value: 3\n3. **+3:** (3 + 3) % 6 = 6 % 6 = 0\n   * intermediate value: 0\n4. **+4:** (0 + 4) % 6 = 4 % 6 = 4\n   * intermediate value: 4\n5. **-4:** (4 - 4) % 6 = 0 % 6 = 0\n   * intermediate value: 0\n6. **+2:** (0 + 2) % 6 = 2 % 6 = 2\n   * final value: **#### 2** \n\n\n\nLet me know if you'd like to explore more register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 215,
+    "total_ns": 11638590500,
+    "wall_s": 11.675842046737671,
+    "pred": "2",
+    "gold": "2"
+  },
+  "88": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *3 (mod 6) = 3** \n   * Register: 5 * 3 = 15, then 15 mod 6 = **3**\n\n**Step 2:** -3 (mod 6) = -3\n   * Register: 3 - 3 = **0**\n\n**Step 3:** +5 (mod 6) = 5\n   * Register: 0 + 5 = **5**\n\n**Step 4:** *1 (mod 6) = 1**\n   * Register: 5 * 1 = 5, then 5 mod 6 = **5**\n\n**Step 5:** +2 (mod 6) = 2\n   * Register: 5 + 2 = **7**, then 7 mod 6 = **1**\n\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 213,
+    "total_ns": 11398673834,
+    "wall_s": 11.440391302108765,
+    "pred": "1",
+    "gold": "1"
+  },
+  "89": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** -2 (mod 6) =  -2  (register = -2)\n**Step 2:** -1 (mod 6) = -1  (register = -3)\n**Step 3:** +3 (mod 6) = 3   (register = 3)\n**Step 4:** *1 (mod 6) = 1   (register = 1)\n**Step 5:** +1 (mod 6) = 2    (register = 2)\n\n####  <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 143,
+    "total_ns": 7941282500,
+    "wall_s": 8.3490309715271,
+    "pred": "2",
+    "gold": "5"
+  },
+  "90": {
+    "text": "Here's the breakdown of the operations:\n\n* **Start:** register = 5\n* **1:**  register = (5 * 1) % 6 = 5 % 6 = 5\n* **5:**  register = (5 * 5) % 6 = 25 % 6 = 5\n* **3:**  register = (5 * 3) % 6 = 15 % 6 = 3\n* **+4:**  register = (3 + 4) % 6 = 7 % 6 = 1\n* **2:**  register = (1 * 2) % 6 = 2 % 6 = 2\n\n#### register = 2 \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 160,
+    "total_ns": 8565524833,
+    "wall_s": 8.594998121261597,
+    "pred": "2",
+    "gold": "2"
+  },
+  "91": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 1\n* **op * 1:**  register = 1 * 1 = 1 (mod 6) -> 1\n* **op + 3:**  register = 1 + 3 = 4 (mod 6) -> 4\n* **op + 2:**  register = 4 + 2 = 6 (mod 6) -> 0 \n* **op - 5:**  register = 0 - 5 = -5 (mod 6) -> -1 \n* **op + 4:**  register = -1 + 4 = 3 (mod 6) -> 3\n\n####  <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 169,
+    "total_ns": 9245855917,
+    "wall_s": 9.273451089859009,
+    "pred": "3",
+    "gold": "5"
+  },
+  "92": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 4` (Start)\n   * -2 (mod 6) = **-2** \n   * `#### <final value: -2>`\n\n**Step 2:**  `register = -2` (after step 1)\n   * +1 (mod 6) = **3**\n   * `#### <final value: 3>`\n\n**Step 3:**  `register = 3` (after step 2)\n   * *1 (mod 6) = **1**\n   * `#### <final value: 1>`\n\n**Step 4:**  `register = 1` (after step 3)\n   * +2 (mod 6) = **3**\n   * `#### <final value: 3>`\n\n**Step 5:**  `register = 3` (after step 4)\n   * -3 (mod 6) = **0**\n   * `#### <final value: 0>`\n\n\n**Final Value: 0** \n\n\n\nLet me know if you'd like to explore other register operations or sequences! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 268,
+    "total_ns": 14506498000,
+    "wall_s": 14.636097192764282,
+    "pred": "0",
+    "gold": "2"
+  },
+  "93": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** -4 (mod 6) = -4  (register = -4)\n**Step 2:** -5 (mod 6) = -1  (register = -1)\n**Step 3:** +1 (mod 6) = 5  (register = 5)\n**Step 4:** *4 (mod 6) = 4  (register = 4)\n**Step 5:** +3 (mod 6) = 3  (register = 3)\n\n#### <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 141,
+    "total_ns": 7698839417,
+    "wall_s": 7.864449739456177,
+    "pred": "3",
+    "gold": "1"
+  },
+  "94": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 4` (Start)\n   * -5 (mod 6) = **-1** \n   * `#### <final value: -1> `\n\n**Step 2:** `register = -1` (after step 1)\n   * *3 (mod 6) = **3**\n   * `#### <final value: 3> `\n\n**Step 3:** `register = 3` (after step 2)\n   * +5 (mod 6) = **1**\n   * `#### <final value: 1> `\n\n**Step 4:** `register = 1` (after step 3)\n   * *1 (mod 6) = **1**\n   * `#### <final value: 1> `\n\n**Step 5:** `register = 1` (after step 4)\n   * -5 (mod 6) = **-1**\n   * `#### <final value: -1> `\n\n\nLet me know if you'd like to explore more complex register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 260,
+    "total_ns": 13929646250,
+    "wall_s": 14.171450853347778,
+    "pred": "5",
+    "gold": "3"
+  },
+  "95": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n* **Start:**  register = 4\n* **Step 1:** *2 (multiply by 2) ->  8  (mod 6) = 2\n* **Step 2:** -2 (subtract 2) -> 6  (mod 6) = 0\n* **Step 3:** +1 (add 1) -> 7  (mod 6) = 1\n* **Step 4:** -2 (subtract 2) -> 5  (mod 6) = 5\n* **Step 5:** -5 (subtract 5) -> -0 (mod 6) = 0\n\n#### <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 166,
+    "total_ns": 8846888666,
+    "wall_s": 8.90531301498413,
+    "pred": "0",
+    "gold": "0"
+  },
+  "96": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 2\n2. ***5:**  (2 * 5) % 6 = 10 % 6 = **4** \n3. **+4:** (4 + 4) % 6 = 8 % 6 = **2**\n4. ***2:** (2 * 2) % 6 = 4 % 6 = **4**\n5. **+3:** (4 + 3) % 6 = 7 % 6 = **1**\n6. ***2:** (1 * 2) % 6 = 2 % 6 = **2**\n\n####  <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 171,
+    "total_ns": 9445324542,
+    "wall_s": 9.467400789260864,
+    "pred": "2",
+    "gold": "2"
+  },
+  "97": {
+    "text": "Here's the breakdown of the register operations:\n\n1. **Start:**  register = 1\n2. **op * 3:**  register = (1 * 3) mod 6 = 3 mod 6 = 3\n3. **op - 5:**  register = 3 - 5 = -2 mod 6 = 4 \n4. **op - 2:**  register = 4 - 2 = 2 mod 6 = 2\n5. **op + 3:**  register = 2 + 3 = 5 mod 6 = 5\n6. **op - 5:**  register = 5 - 5 = 0 mod 6 = 0\n\n#### <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 167,
+    "total_ns": 9161088708,
+    "wall_s": 9.194873094558716,
+    "pred": "0",
+    "gold": "0"
+  },
+  "98": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 3\n* **op * 3:**  register = (3 * 3) % 6 = 9 % 6 = 3\n* **op + 5:**  register = (3 + 5) % 6 = 8 % 6 = 2\n* **op - 1:**  register = (2 - 1) % 6 = 1 % 6 = 1\n* **op + 1:**  register = (1 + 1) % 6 = 2 % 6 = 2\n* **op - 5:**  register = (2 - 5) % 6 = -3 % 6 = 3\n\n#### <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 176,
+    "total_ns": 9605689084,
+    "wall_s": 9.637882232666016,
+    "pred": "3",
+    "gold": "3"
+  },
+  "99": {
+    "text": "Here's the breakdown of the register operations:\n\n1. **Start:**  register = 3\n2. **-4 (mod 6):**  3 - 4 = -1  (remainder is -1, so we need to adjust)\n   *  -1 mod 6 = **5** \n3. **-5 (mod 6):** 5 - 5 = 0  (remainder is 0)\n   *  0 mod 6 = **0**\n4. **+3 (mod 6):** 0 + 3 = 3  (remainder is 3)\n   *  3 mod 6 = **3**\n5. **-3 (mod 6):** 3 - 3 = 0  (remainder is 0)\n   *  0 mod 6 = **0**\n6. **-4 (mod 6):** 0 - 4 = -4  (remainder is -4, so we need to adjust)\n   *  -4 mod 6 = **2**\n\n####  <final value 2> \n\n\n\nLet me know if you'd like to explore more register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 259,
+    "total_ns": 13828781500,
+    "wall_s": 13.860790014266968,
+    "pred": "2",
+    "gold": "2"
+  },
+  "100": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 0\n* **op * 1:**  register = 0 * 1 = 0 (mod 6)\n* **op - 5:**  register = 0 - 5 = -5 (mod 6) ->  **-5**\n* **op + 3:**  register = -5 + 3 = -2 (mod 6) ->  **-2**\n* **op - 1:**  register = -2 - 1 = -3 (mod 6) ->  **-3**\n* **op - 4:**  register = -3 - 4 = -7 (mod 6) ->  **-1**\n\n#### -1 <final value 0..5> \n\n\n\nLet me know if you'd like to explore more complex sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 198,
+    "total_ns": 10745788667,
+    "wall_s": 10.855547904968262,
+    "pred": "5",
+    "gold": "5"
+  },
+  "101": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 2\n2. **-3:**  (2 - 3) mod 6 = -1 mod 6 = **5**\n3. **+3:**   (5 + 3) mod 6 = 8 mod 6 = **2**\n4. **-5:**   (2 - 5) mod 6 = -3 mod 6 = **3**\n5. ***4:**    (3 * 4) mod 6 = 12 mod 6 = **0** (Note: We're reducing modulo 6 after the multiplication)\n6. **-5:**   (0 - 5) mod 6 = -5 mod 6 = **1**\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 188,
+    "total_ns": 10272603000,
+    "wall_s": 10.321069717407227,
+    "pred": "1",
+    "gold": "1"
+  },
+  "102": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 2\n* **op * 4:**  register = (2 * 4) % 6 = 8 % 6 = **2**\n* **op - 5:**  register = (2 - 5) % 6 = -3 % 6 = **-3 + 6 = 3**\n* **op - 1:**  register = (3 - 1) % 6 = 2 % 6 = **2**\n* **op + 4:**  register = (2 + 4) % 6 = 6 % 6 = **0**\n* **op + 5:**  register = (0 + 5) % 6 = 5 % 6 = **5**\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 189,
+    "total_ns": 10159372041,
+    "wall_s": 10.26846694946289,
+    "pred": "5",
+    "gold": "5"
+  },
+  "103": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 2\n2. **+2:**  (2 + 2) mod 6 = 4\n3. **+2:**  (4 + 2) mod 6 = 6 mod 6 = 0\n4. **-2:**  (0 - 2) mod 6 = -2 mod 6 = 4\n5. **-2:**  (4 - 2) mod 6 = 2 mod 6 = 2\n6. **-5:**  (2 - 5) mod 6 = -3 mod 6 = 3\n\n**#### <final value 3>** \n\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 179,
+    "total_ns": 9514703250,
+    "wall_s": 9.647885084152222,
+    "pred": "3",
+    "gold": "3"
+  },
+  "104": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 0\n2. **-4 (mod 6):**  0 - 4 = -4.  (-4 mod 6) = **2** \n3. **-3 (mod 6):** 2 - 3 = -1. (-1 mod 6) = **5**\n4. ***2 (mod 6):** 5 * 2 = 10. (10 mod 6) = **4**\n5. **-3 (mod 6):** 4 - 3 = 1.  (1 mod 6) = **1**\n6. **-3 (mod 6):** 1 - 3 = -2. (-2 mod 6) = **4**\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 198,
+    "total_ns": 10777174167,
+    "wall_s": 11.100651979446411,
+    "pred": "4",
+    "gold": "4"
+  },
+  "105": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +1 (register = 5 + 1 = 6)  -> **6 mod 6 = 0** \n**Step 2:** *5 (register = 0 * 5 = 0) -> **0 mod 6 = 0**\n**Step 3:** *2 (register = 0 * 2 = 0) -> **0 mod 6 = 0**\n**Step 4:** -1 (register = 0 - 1 = -1) -> **-1 mod 6 = 5**\n**Step 5:** *1 (register = 5 * 1 = 5) -> **5 mod 6 = 5**\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 180,
+    "total_ns": 9636930250,
+    "wall_s": 9.759501695632935,
+    "pred": "5",
+    "gold": "5"
+  },
+  "106": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +5 (register = 4 + 5)  -> **9** (mod 6 = 3)\n\n**Step 2:** -2 (register = 9 - 2) -> **7** (mod 6 = 1)\n\n**Step 3:** -1 (register = 7 - 1) -> **6** (mod 6 = 0)\n\n**Step 4:** *4 (register = 6 * 4) -> **24** (mod 6 = 0)\n\n**Step 5:** *4 (register = 0 * 4) -> **0** (mod 6 = 0)\n\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 174,
+    "total_ns": 9475718500,
+    "wall_s": 9.49697995185852,
+    "pred": "0",
+    "gold": "0"
+  },
+  "107": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 1\n2. ***4:**  (1 * 4) % 6 = 4 % 6 = 4\n3. **-4:** (4 - 4) % 6 = 0 % 6 = 0\n4. **+4:** (0 + 4) % 6 = 4 % 6 = 4\n5. ***3:** (4 * 3) % 6 = 12 % 6 = 0\n6. **+5:** (0 + 5) % 6 = 5 % 6 = 5\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 165,
+    "total_ns": 9067831458,
+    "wall_s": 9.108673095703125,
+    "pred": "5",
+    "gold": "5"
+  },
+  "108": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 1\n2. **-4:**  (1 - 4) mod 6 = -3 mod 6 = **3**\n3. ***4:**   (3 * 4) mod 6 = 12 mod 6 = **0** \n4. **-3:**   (0 - 3) mod 6 = -3 mod 6 = **-3 + 6 = 3**\n5. **+2:**   (3 + 2) mod 6 = 5 mod 6 = **5**\n6. **+4:**   (5 + 4) mod 6 = 9 mod 6 = **3**\n\n####  <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 182,
+    "total_ns": 9794826500,
+    "wall_s": 9.908151149749756,
+    "pred": "3",
+    "gold": "3"
+  },
+  "109": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 5` (Start)\n   * -1 (mod 6) = **4** \n   * `#### <value 4>`\n\n**Step 2:**  `register = 4`\n   * -5 (mod 6) = **-1** \n   * `#### <value -1>`\n\n**Step 3:**  `register = -1`\n   * -4 (mod 6) = **-4** \n   * `#### <value -4>`\n\n**Step 4:**  `register = -4`\n   * *1 (mod 6) = **1** \n   * `#### <value 1>`\n\n**Step 5:**  `register = 1`\n   * -3 (mod 6) = **-3** \n   * `#### <value -3>`\n\n**Final Value: #### <final value 0..5> = 2** \n\n\n\nLet me know if you'd like to explore other sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 250,
+    "total_ns": 13462658000,
+    "wall_s": 13.631850004196167,
+    "pred": "2",
+    "gold": "4"
+  },
+  "110": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** -3 (mod 6) = -3  (register = -3)\n\n**Step 2:** +5 (mod 6) = 5  (register = 5)\n\n**Step 3:** *2 (mod 6) = 2  (register = 2)\n\n**Step 4:** *1 (mod 6) = 1  (register = 1)\n\n**Step 5:** *4 (mod 6) = 4  (register = 4)\n\n**#### <final value 4> ** \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 143,
+    "total_ns": 7828073333,
+    "wall_s": 7.856795072555542,
+    "pred": "4",
+    "gold": "4"
+  },
+  "111": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n* **Start:**  register = 0\n* **Step 1:** *4 (operation) -> register = 4 \n   *  4 % 6 = 4 \n* **Step 2:** +4 (operation) -> register = 8\n   * 8 % 6 = 2\n* **Step 3:** +4 (operation) -> register = 12\n   * 12 % 6 = 0\n* **Step 4:** +4 (operation) -> register = 16\n   * 16 % 6 = 4\n* **Step 5:** +1 (operation) -> register = 5\n   * 5 % 6 = 5\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 183,
+    "total_ns": 9905533500,
+    "wall_s": 9.92730975151062,
+    "pred": "5",
+    "gold": "1"
+  },
+  "112": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *3 (mod 6) = 3** \n   * Register: 3\n\n**Step 2:** +5 (mod 6) = 5**\n   * Register: 8\n\n**Step 3:** *2 (mod 6) = 2**\n   * Register: 8\n\n**Step 4:** +1 (mod 6) = 1**\n   * Register: 9\n\n**Step 5:** *1 (mod 6) = 1**\n   * Register: 9\n\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 149,
+    "total_ns": 8219376625,
+    "wall_s": 8.249566078186035,
+    "pred": "1",
+    "gold": "5"
+  },
+  "113": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +1 (register = 2 + 1 = 3)  -> **3** mod 6 = **3** \n**Step 2:** *4 (register = 3 * 4 = 12) -> **12** mod 6 = **0**\n**Step 3:** *1 (register = 0 * 1 = 0) -> **0** mod 6 = **0**\n**Step 4:** +4 (register = 0 + 4 = 4) -> **4** mod 6 = **4**\n**Step 5:** -5 (register = 4 - 5 = -1) -> **-1** mod 6 = **-1**  (Note: We need to adjust the negative value to be within the range of 0..5)\n\n**Final Value: #### <final value 0..5> = -1**\n\n\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 235,
+    "total_ns": 12684140875,
+    "wall_s": 12.76184606552124,
+    "pred": "5",
+    "gold": "5"
+  },
+  "114": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 5\n2. **+3:**  (5 + 3) mod 6 = 8 mod 6 = 2\n   * intermediate value: 2\n3. **+3:** (2 + 3) mod 6 = 5 mod 6 = 5\n   * intermediate value: 5\n4. **-4:** (5 - 4) mod 6 = 1 mod 6 = 1\n   * intermediate value: 1\n5. ***5:** (1 * 5) mod 6 = 5 mod 6 = 5\n   * intermediate value: 5\n6. **+3:** (5 + 3) mod 6 = 8 mod 6 = 2\n   * final value: #### 2 \n\n\n\nLet me know if you'd like to explore more register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 212,
+    "total_ns": 11402095000,
+    "wall_s": 11.428314924240112,
+    "pred": "2",
+    "gold": "2"
+  },
+  "115": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +2 (register = 3 + 2 = 5)  -> **5** (mod 6)\n**Step 2:** +2 (register = 5 + 2 = 7) -> **1** (mod 6)\n**Step 3:** -3 (register = 7 - 3 = 4) -> **4** (mod 6)\n**Step 4:** -4 (register = 4 - 4 = 0) -> **0** (mod 6)\n**Step 5:** -1 (register = 0 - 1 = -1) -> **-1** (mod 6)\n\n####  -1 \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 170,
+    "total_ns": 9301147792,
+    "wall_s": 9.526922941207886,
+    "pred": "5",
+    "gold": "5"
+  },
+  "116": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 2\n* **op * 3:**  (2 * 3) mod 6 = 6 mod 6 = 0\n* **op -1:** (0 - 1) mod 6 = -1 mod 6 = 5\n* **op + 4:** (5 + 4) mod 6 = 9 mod 6 = 3\n* **op - 4:** (3 - 4) mod 6 = -1 mod 6 = 5\n* **op - 3:** (5 - 3) mod 6 = 2 mod 6 = 2\n\n####  <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 162,
+    "total_ns": 8706948750,
+    "wall_s": 8.781464099884033,
+    "pred": "2",
+    "gold": "2"
+  },
+  "117": {
+    "text": "Here's the breakdown of the register's journey:\n\n* **Start:**  register = 0\n* **-4 (mod 6):**  0 - 4 = -4.  (-4 mod 6) = **2**\n* **-3 (mod 6):** 2 - 3 = -1. (-1 mod 6) = **5**\n* **-2 (mod 6):** 5 - 2 = 3. (3 mod 6) = **3**\n* **+1 (mod 6):** 3 + 1 = 4. (4 mod 6) = **4**\n* **+3 (mod 6):** 4 + 3 = 7. (7 mod 6) = **1**\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 185,
+    "total_ns": 10090515500,
+    "wall_s": 10.118335962295532,
+    "pred": "1",
+    "gold": "1"
+  },
+  "118": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +1 (register = 5 + 1 = 6) -> **6 mod 6 = 0** \n**Step 2:** +3 (register = 0 + 3 = 3) -> **3 mod 6 = 3**\n**Step 3:** *5 (register = 3 * 5 = 15) -> **15 mod 6 = 3**\n**Step 4:** +4 (register = 3 + 4 = 7) -> **7 mod 6 = 1**\n**Step 5:** -2 (register = 1 - 2 = -1) -> **-1 mod 6 = 5**\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 182,
+    "total_ns": 9933037083,
+    "wall_s": 9.953119039535522,
+    "pred": "5",
+    "gold": "5"
+  },
+  "119": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *1 (mod 6) = 1** \n   Register: 5 -> 1\n\n**Step 2:** *4 (mod 6) = 4**\n   Register: 1 -> 4\n\n**Step 3:** -1 (mod 6) = -1**\n   Register: 4 -> 3\n\n**Step 4:** -2 (mod 6) = -2**\n   Register: 3 -> 1\n\n**Step 5:** *2 (mod 6) = 2**\n   Register: 1 -> 2\n\n####  <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 159,
+    "total_ns": 8587578667,
+    "wall_s": 8.615978956222534,
+    "pred": "2",
+    "gold": "4"
+  },
+  "120": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** -4 (mod 6) = -4  (remainder is -4)\n   * **Register:** 5 -> -4 \n\n**Step 2:** +1 (mod 6) = 5  (remainder is 5)\n   * **Register:** -4 -> 5\n\n**Step 3:** *4 (mod 6) = 4  (remainder is 4)\n   * **Register:** 5 -> 4\n\n**Step 4:** *5 (mod 6) = 5  (remainder is 5)\n   * **Register:** 4 -> 5\n\n**Step 5:** *2 (mod 6) = 2  (remainder is 2)\n   * **Register:** 5 -> 2\n\n\n#### <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 197,
+    "total_ns": 10519418875,
+    "wall_s": 10.77977991104126,
+    "pred": "2",
+    "gold": "2"
+  },
+  "121": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +2 (register = 4 + 2)  ->  6 \n   * **Intermediate Value:** 6 \n   * **Mod 6:** 6 % 6 = 0 \n\n**Step 2:** -2 (register = 6 - 2) -> 4\n   * **Intermediate Value:** 4\n   * **Mod 6:** 4 % 6 = 4\n\n**Step 3:** +5 (register = 4 + 5) -> 9\n   * **Intermediate Value:** 9\n   * **Mod 6:** 9 % 6 = 3\n\n**Step 4:** -3 (register = 9 - 3) -> 6\n   * **Intermediate Value:** 6\n   * **Mod 6:** 6 % 6 = 0\n\n**Step 5:** *1 (register = 6 * 1) -> 6\n   * **Intermediate Value:** 6\n   * **Mod 6:** 6 % 6 = 0\n\n\n####  <final value 0..5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 259,
+    "total_ns": 13825735833,
+    "wall_s": 13.951392889022827,
+    "pred": "5",
+    "gold": "0"
+  },
+  "122": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** +1 (register = 0 + 1 = 1)  \n   * **Intermediate Value:** 1\n\n**Step 2:** *3 (register = 1 * 3 = 3) \n   * **Intermediate Value:** 3\n\n**Step 3:** *3 (register = 3 * 3 = 9) \n   * **Intermediate Value:** 9\n\n**Step 4:** -2 (register = 9 - 2 = 7)\n   * **Intermediate Value:** 7\n\n**Step 5:** *1 (register = 7 * 1 = 7)\n   * **Final Value:** 7 #### <final value 7> \n\n\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 189,
+    "total_ns": 10238372500,
+    "wall_s": 10.265352964401245,
+    "pred": "1",
+    "gold": "1"
+  },
+  "123": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 0\n2. **-4 (mod 6):**  0 - 4 = -4,  (-4) mod 6 = **2** \n3. **-2 (mod 6):** 2 - 2 = 0,  (0) mod 6 = **0**\n4. ***5 (mod 6):** 0 * 5 = 0,  (0) mod 6 = **0**\n5. **-4 (mod 6):** 0 - 4 = -4,  (-4) mod 6 = **2**\n6. ***3 (mod 6):** 2 * 3 = 6,  (6) mod 6 = **0**\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 199,
+    "total_ns": 10656287833,
+    "wall_s": 10.914031028747559,
+    "pred": "0",
+    "gold": "0"
+  },
+  "124": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +4 (register = 2 + 4)  ->  6 \n   * **Intermediate Value:** 6 \n   * **Mod 6:** 6 % 6 = 0 \n\n**Step 2:** *1 (register = 6 * 1) -> 6**\n   * **Intermediate Value:** 6\n   * **Mod 6:** 6 % 6 = 0\n\n**Step 3:** +5 (register = 6 + 5) -> 11\n   * **Intermediate Value:** 11\n   * **Mod 6:** 11 % 6 = 5\n\n**Step 4:** +3 (register = 11 + 3) -> 14\n   * **Intermediate Value:** 14\n   * **Mod 6:** 14 % 6 = 2\n\n**Step 5:** *1 (register = 14 * 1) -> 14**\n   * **Intermediate Value:** 14\n   * **Mod 6:** 14 % 6 = 2\n\n\n####  <final value 2> \n\n\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 286,
+    "total_ns": 15233667292,
+    "wall_s": 15.261173963546753,
+    "pred": "2",
+    "gold": "2"
+  },
+  "125": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *1 (mod 6) = 1** \n   Register: 2 * 1 = 2\n\n**Step 2:** -4 (mod 6) = 2\n   Register: 2 - 4 = -2 \n\n**Step 3:** *1 (mod 6) = 1**\n   Register: -2 * 1 = -2\n\n**Step 4:** *3 (mod 6) = 3**\n   Register: -2 * 3 = -6  (We need to adjust this to be within the range of 0-5)\n   Register: -6 + 6 = 0\n\n**Step 5:** +2 (mod 6) = 2**\n   Register: 0 + 2 = 2\n\n#### **<final value 2>** \n\n\n\nLet me know if you'd like to explore more complex sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 224,
+    "total_ns": 12002901833,
+    "wall_s": 12.031811952590942,
+    "pred": "2",
+    "gold": "2"
+  },
+  "126": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +3 (register = 5 + 3)  =>  8  (mod 6)  =>  2 \n\n**Step 2:** *5 (register = 2 * 5) => 10 (mod 6) => 4\n\n**Step 3:** *4 (register = 4 * 4) => 16 (mod 6) => 2\n\n**Step 4:** -3 (register = 2 - 3)  =>  -1 (mod 6) => **5**\n\n**Step 5:** +1 (register = 5 + 1)  =>  6 (mod 6) => **0**\n\n#### <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 178,
+    "total_ns": 9757213500,
+    "wall_s": 9.783851146697998,
+    "pred": "0",
+    "gold": "2"
+  },
+  "127": {
+    "text": "Here's the breakdown of the register operations:\n\n1. **-5 (mod 6):**  4 - 5 = -1  (-1 mod 6 = **5**)\n2. **-2 (mod 6):** 5 - 2 = 3   (3 mod 6 = **3**)\n3. **+3 (mod 6):** 3 + 3 = 6  (6 mod 6 = **0**)\n4. **+2 (mod 6):** 0 + 2 = 2   (2 mod 6 = **2**)\n5. **-3 (mod 6):** 2 - 3 = -1 (-1 mod 6 = **5**)\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 171,
+    "total_ns": 9363222166,
+    "wall_s": 9.394665002822876,
+    "pred": "5",
+    "gold": "5"
+  },
+  "128": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 1` (Start)\n   * -2 (mod 6) = **-2** \n   * `register = -2` \n\n**Step 2:**  `register = -2` (After Step 1)\n   * +3 (mod 6) = **3**\n   * `register = 3`\n\n**Step 3:**  `register = 3` (After Step 2)\n   * -1 (mod 6) = **-1**\n   * `register = -1`\n\n**Step 4:**  `register = -1` (After Step 3)\n   * -3 (mod 6) = **-3**\n   * `register = -3`\n\n**Step 5:**  `register = -3` (After Step 4)\n   * *2 (mod 6) = **2**\n   * `register = 2`\n\n####  <final value 2> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 239,
+    "total_ns": 12900421375,
+    "wall_s": 12.927570343017578,
+    "pred": "2",
+    "gold": "2"
+  },
+  "129": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  `register = 1` (Start)\n   * -2 (mod 6) = **-2** \n   * `register = -2` \n\n**Step 2:**  `register = -2`\n   * -2 (mod 6) = **-2** \n   * `register = -2`\n\n**Step 3:**  `register = -2`\n   * *1 (mod 6) = **1** \n   * `register = 1`\n\n**Step 4:**  `register = 1`\n   * -4 (mod 6) = **-4** \n   * `register = -3`\n\n**Step 5:**  `register = -3`\n   * +2 (mod 6) = **2** \n   * `register = 2`\n\n####  <final value 2> \n\n\n\nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 235,
+    "total_ns": 12561533167,
+    "wall_s": 12.940900802612305,
+    "pred": "2",
+    "gold": "1"
+  },
+  "130": {
+    "text": "Here's the breakdown of the operations step-by-step:\n\n1. **Start:** register = 4\n2. ***3:**  (4 * 3) % 6 = 12 % 6 = 0\n   * intermediate value: 0\n3. ***2:** (0 * 2) % 6 = 0 % 6 = 0\n   * intermediate value: 0\n4. ***3:** (0 * 3) % 6 = 0 % 6 = 0\n   * intermediate value: 0\n5. **+4:** (0 + 4) % 6 = 4 % 6 = 4\n   * intermediate value: 4\n6. **+2:** (4 + 2) % 6 = 6 % 6 = 0\n   * final value: #### 0 \n\n\n\nLet me know if you'd like to explore more complex sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 214,
+    "total_ns": 11399615458,
+    "wall_s": 11.448787212371826,
+    "pred": "0",
+    "gold": "0"
+  },
+  "131": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *2 (mod 6) = 2 \n   * Register: 5 * 2 = 10, then mod 6 = **10 % 6 = 4**\n\n**Step 2:** -3 (mod 6) = -3\n   * Register: 4 - 3 = 1, then mod 6 = **1 % 6 = 1**\n\n**Step 3:** +4 (mod 6) = 4\n   * Register: 1 + 4 = 5, then mod 6 = **5 % 6 = 5**\n\n**Step 4:** +5 (mod 6) = 5\n   * Register: 5 + 5 = 10, then mod 6 = **10 % 6 = 4**\n\n**Step 5:** *1 (mod 6) = 1\n   * Register: 4 * 1 = 4, then mod 6 = **4 % 6 = 4**\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 253,
+    "total_ns": 13617630292,
+    "wall_s": 13.64583706855774,
+    "pred": "4",
+    "gold": "4"
+  },
+  "132": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 1\n2. **+4 (mod 6):**  1 + 4 = 5,  register = 5\n3. **-4 (mod 6):**  5 - 4 = 1, register = 1\n4. ***5 (mod 6):**  1 * 5 = 5, register = 5\n5. **+4 (mod 6):**  5 + 4 = 9, register = 9 \n6. **-3 (mod 6):**  9 - 3 = 6, register = 0\n\n#### <final value 0..5> 0 \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 168,
+    "total_ns": 9215287667,
+    "wall_s": 9.515785932540894,
+    "pred": "0",
+    "gold": "0"
+  },
+  "133": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 3\n2. **+4:**  (3 + 4) mod 6 = 7 mod 6 = 1\n   * Register = 1\n3. **+4:** (1 + 4) mod 6 = 5 mod 6 = 5\n   * Register = 5\n4. ***5:** (5 * 5) mod 6 = 25 mod 6 = 5\n   * Register = 5\n5. **+5:** (5 + 5) mod 6 = 10 mod 6 = 4\n   * Register = 4\n6. **+2:** (4 + 2) mod 6 = 6 mod 6 = 0\n   * Register = 0\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 201,
+    "total_ns": 10783927417,
+    "wall_s": 11.008427143096924,
+    "pred": "0",
+    "gold": "2"
+  },
+  "134": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 5\n2. **-5:**  (5 - 5) mod 6 = 0\n3. **+5:**   (0 + 5) mod 6 = 5\n4. ***5:**    (5 * 5) mod 6 = 1 (Remember, we're working modulo 6)\n5. **+5:**    (1 + 5) mod 6 = 6  (Since 6 is divisible by 6, it becomes 0)\n6. ***2:**    (0 * 2) mod 6 = 0\n\n#### <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 164,
+    "total_ns": 8897005459,
+    "wall_s": 8.941763877868652,
+    "pred": "0",
+    "gold": "0"
+  },
+  "135": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 0\n* **+1 (mod 6):**  0 + 1 = 1 (mod 6) -> register = 1\n* **+3 (mod 6):** 1 + 3 = 4 (mod 6) -> register = 4\n* **+4 (mod 6):** 4 + 4 = 8 (mod 6) -> register = 2  (since 8 is greater than 6, we take the remainder: 8 % 6 = 2)\n* **-5 (mod 6):** 2 - 5 = -3 (mod 6) -> register = -3 \n* **+1 (mod 6):**  -3 + 1 = -2 (mod 6) -> register = -2 \n\n#### <final value -2> \n\n\n\nLet me know if you'd like to explore more complex sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 223,
+    "total_ns": 12072383833,
+    "wall_s": 12.098894834518433,
+    "pred": "4",
+    "gold": "4"
+  },
+  "136": {
+    "text": "Here's the breakdown of the register operations:\n\n1. **Start:**  register = 2\n2. **op * 5:**  register = (2 * 5) % 6 = 10 % 6 = **4**\n3. **op - 4:**  register = 4 - 4 = **0**\n4. **op - 4:**  register = 0 - 4 = **-4**\n5. **op + 5:**  register = (-4) + 5 = **1**\n6. **op + 3:**  register = 1 + 3 = **4**\n\n####  <final value 4> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 151,
+    "total_ns": 8330142125,
+    "wall_s": 8.350057125091553,
+    "pred": "4",
+    "gold": "4"
+  },
+  "137": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 4\n2. **-5 (mod 6):**  4 - 5 = -1  (We need to adjust this to be within 0-5) (-1 mod 6 = 5)\n3. **+4 (mod 6):** 5 + 4 = 9  (9 mod 6 = 3)\n4. **-4 (mod 6):** 3 - 4 = -1 (We need to adjust this to be within 0-5) (-1 mod 6 = 5)\n5. **-2 (mod 6):** 5 - 2 = 3  (3 mod 6 = 3)\n6. ***2 (mod 6):** 3 * 2 = 6  (6 mod 6 = 0)\n\n####  <final value 0> \n\n\n\nLet me know if you'd like to explore more complex sequences of modular operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 234,
+    "total_ns": 12646087208,
+    "wall_s": 12.669118881225586,
+    "pred": "0",
+    "gold": "0"
+  },
+  "138": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 4\n2. ***5:**  (4 * 5) % 6 = 20 % 6 = 2\n3. **+3:** (2 + 3) % 6 = 5 % 6 = 5\n4. **-5:** (5 - 5) % 6 = 0 % 6 = 0\n5. ***4:** (0 * 4) % 6 = 0 % 6 = 0\n6. ***2:** (0 * 2) % 6 = 0 % 6 = 0\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 165,
+    "total_ns": 8902842208,
+    "wall_s": 9.334965944290161,
+    "pred": "0",
+    "gold": "0"
+  },
+  "139": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:** *4 (register = 1 * 4)  = 4 (mod 6 = 4)**\n   * **Intermediate Value:** 4\n\n**Step 2:** *4 (register = 4 * 4) = 16 (mod 6 = 4)**\n   * **Intermediate Value:** 4\n\n**Step 3:** -4 (register = 4 - 4) = 0 (mod 6 = 0)**\n   * **Intermediate Value:** 0\n\n**Step 4:** +3 (register = 0 + 3) = 3 (mod 6 = 3)**\n   * **Intermediate Value:** 3\n\n**Step 5:** -1 (register = 3 - 1) = 2 (mod 6 = 2)**\n   * **Final Value:** 2 #### <final value 0..5> \n \nLet me know if you'd like to explore other register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 232,
+    "total_ns": 12351037459,
+    "wall_s": 12.37403416633606,
+    "pred": "5",
+    "gold": "2"
+  },
+  "140": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **+3:**  Register = 0 + 3 = 3 (mod 6) -> 3\n2. **+4:** Register = 3 + 4 = 7 (mod 6) -> 1\n3. ***3:** Register = 1 * 3 = 3 (mod 6) -> 3\n4. **-2:** Register = 3 - 2 = 1 (mod 6) -> 1\n5. ***5:** Register = 1 * 5 = 5 (mod 6) -> 5\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 153,
+    "total_ns": 8406182042,
+    "wall_s": 8.432040929794312,
+    "pred": "5",
+    "gold": "5"
+  },
+  "141": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +1 (register = 0 + 1 = 1)  mod 6 = **1** \n**Step 2:** +3 (register = 1 + 3 = 4) mod 6 = **4**\n**Step 3:** -2 (register = 4 - 2 = 2) mod 6 = **2**\n**Step 4:** +1 (register = 2 + 1 = 3) mod 6 = **3**\n**Step 5:** *4 (register = 3 * 4 = 12) mod 6 = **0**\n\n####  <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 166,
+    "total_ns": 8957936750,
+    "wall_s": 8.9854736328125,
+    "pred": "0",
+    "gold": "0"
+  },
+  "142": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 3\n2. **+3:**  (3 + 3) mod 6 = 6 mod 6 = 0\n   * Register = 0\n3. **+5:** (0 + 5) mod 6 = 5 mod 6 = 5\n   * Register = 5\n4. **+3:** (5 + 3) mod 6 = 8 mod 6 = 2\n   * Register = 2\n5. **-5:** (2 - 5) mod 6 = -3 mod 6 = 3\n   * Register = 3\n6. ***5:** (3 * 5) mod 6 = 15 mod 6 = 3\n   * Register = 3\n\n####  <final value 3> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 200,
+    "total_ns": 10886544583,
+    "wall_s": 11.091152906417847,
+    "pred": "3",
+    "gold": "3"
+  },
+  "143": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n* **Start:**  register = 5\n* **Step 1:** *4 (mod 6) = 4.  Register becomes 4\n* **Step 2:** +3 (mod 6) = 3. Register becomes 7 \n* **Step 3:** +4 (mod 6) = 4. Register becomes 4\n* **Step 4:** -2 (mod 6) = 4.  Register becomes 4\n* **Step 5:** -1 (mod 6) = 5.  Register becomes 5\n\n####  <final value 5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 151,
+    "total_ns": 8208655125,
+    "wall_s": 8.228368997573853,
+    "pred": "5",
+    "gold": "0"
+  },
+  "144": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  *2 (register = 3 * 2 = 6) ->  mod 6 = 0**\n\n**Step 2:** +4 (register = 0 + 4 = 4) -> mod 6 = 4**\n\n**Step 3:** -1 (register = 4 - 1 = 3) -> mod 6 = 3**\n\n**Step 4:** *2 (register = 3 * 2 = 6) -> mod 6 = 0**\n\n**Step 5:** -1 (register = 0 - 1 = -1) -> mod 6 = **5**  (Remember, modulo is the remainder after division by 6)\n\n\n#### 5 <final value 0..5> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 186,
+    "total_ns": 10131738625,
+    "wall_s": 10.179534912109375,
+    "pred": "5",
+    "gold": "5"
+  },
+  "145": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n1. **Start:**  register = 1\n2. **+5 (mod 6):**  1 + 5 = 6,  register = 6 % 6 = **0**\n3. **+2 (mod 6):**  0 + 2 = 2, register = 2 % 6 = **2**\n4. ***5 (mod 6):**  2 * 5 = 10, register = 10 % 6 = **4**\n5. **-3 (mod 6):**  4 - 3 = 1, register = 1 % 6 = **1**\n6. **+5 (mod 6):**  1 + 5 = 6, register = 6 % 6 = **0**\n\n#### <final value 0..5> **0** \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 205,
+    "total_ns": 11098750792,
+    "wall_s": 11.156429052352905,
+    "pred": "0",
+    "gold": "0"
+  },
+  "146": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +3 (register = 5 + 3)  = 8.  Mod 6: 8 % 6 = **2** \n**Step 2:** +5 (register = 2 + 5) = 7. Mod 6: 7 % 6 = **1**\n**Step 3:** +1 (register = 1 + 1) = 2. Mod 6: 2 % 6 = **2**\n**Step 4:** -1 (register = 2 - 1) = 1. Mod 6: 1 % 6 = **1**\n**Step 5:** -1 (register = 1 - 1) = 0. Mod 6: 0 % 6 = **0**\n\n#### <final value 0> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 200,
+    "total_ns": 10906271542,
+    "wall_s": 10.9338059425354,
+    "pred": "0",
+    "gold": "0"
+  },
+  "147": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 3\n* **-4 (mod 6):**  3 - 4 = -1  (Result: -1)\n* **-1 (mod 6):** -1 - 1 = -2  (Result: -2)\n* **-4 (mod 6):** -2 - 4 = -6  (Result: -6) \n* **+2 (mod 6):** -6 + 2 = -4  (Result: -4)\n* **+2 (mod 6):** -4 + 2 = -2  (Result: -2)\n\n#### -2 <final value 0..5> \n\n\n\nLet me know if you'd like to explore more register operations! \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 182,
+    "total_ns": 9925323625,
+    "wall_s": 9.952009916305542,
+    "pred": "4",
+    "gold": "4"
+  },
+  "148": {
+    "text": "Here's the breakdown of the register operations:\n\n* **Start:**  register = 0\n* **-4:**  (0 - 4) mod 6 = -4 mod 6 = **2**\n* **+5:**   (2 + 5) mod 6 = 7 mod 6 = **1**\n* **+4:**    (1 + 4) mod 6 = 5 mod 6 = **5**\n* **-3:**    (5 - 3) mod 6 = 2 mod 6 = **2**\n* **-1:**    (2 - 1) mod 6 = 1 mod 6 = **1**\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 162,
+    "total_ns": 8882069000,
+    "wall_s": 8.999361038208008,
+    "pred": "1",
+    "gold": "1"
+  },
+  "149": {
+    "text": "Here's the breakdown of the register operations step-by-step:\n\n**Step 1:**  +4 (register = 3 + 4)  ->  7  (mod 6 = 1)\n\n**Step 2:** *3 (register = 7 * 3) -> 21 (mod 6 = 1)**\n\n**Step 3:** +4 (register = 21 + 4) -> 25 (mod 6 = 5)\n\n**Step 4:** -4 (register = 25 - 4) -> 21 (mod 6 = 1)\n\n**Step 5:** *1 (register = 21 * 1) -> 21 (mod 6 = 1)**\n\n\n####  <final value 1> \n",
+    "prompt_tokens": 121,
+    "eval_tokens": 177,
+    "total_ns": 9592836000,
+    "wall_s": 9.745277166366577,
+    "pred": "1",
+    "gold": "3"
+  }
+}

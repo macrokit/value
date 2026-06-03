@@ -1,0 +1,962 @@
+{
+  "0": {
+    "text": "```python\ndef closest_num(n):\n    \"\"\"\n    Finds the closest smaller number than n.\n\n    Args:\n        n (int): The target number.\n\n    Returns:\n        int: The closest smaller number than n.\n    \"\"\"\n    if n == 0 or n == 1:\n        return n\n\n    # Find the first occurrence of 'n' in the list\n    i = bisect.bisect_left([i for i in range(n) if i != n], n)\n\n    # If 'n' is not present, it's the smallest number\n    if i == len(range(n)):\n        return n\n\n    # Find the next occurrence of 'n'\n    j = bisect.bisect_right([i for i in range(n) if i != n], n)\n    \n    # Return the smaller of the two occurrences\n    return min(i, j)\n\n# Test cases to verify the correctness of the function\nassert closest_num(10) == 9\nassert closest_num(5) == 4\nassert closest_num(2) == 1\n```",
+    "prompt_tokens": 57,
+    "eval_tokens": 224,
+    "total_ns": 4754792291,
+    "wall_s": 5.115234136581421,
+    "pred": "?",
+    "gold": "1",
+    "exec_out": "NameError"
+  },
+  "1": {
+    "text": "```python\ndef is_Diff(num):\n    \"\"\"\n    This function takes an integer as input, calculates the sum of its even and odd digits,\n    then returns the absolute difference between these two sums.\n\n    Example:\n    >>> is_Diff(1234)\n    6\n    >>> is_Diff(1579)\n    8\n    \"\"\"\n    # Convert the number to a string, iterate over each character (digit), convert it back to an integer,\n    # check if it's even or odd, and add it to the sum.\n    return abs(sum(int(digit) for digit in str(num)) - sum(int(digit) for digit in str(abs(num))))\n\n# Test cases\nprint(is_Diff(1234))  # Output: 6\nprint(is_Diff(1579))  # Output: 8\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 183,
+    "total_ns": 3705197125,
+    "wall_s": 3.735931873321533,
+    "pred": "1",
+    "gold": "2",
+    "exec_out": "0"
+  },
+  "2": {
+    "text": "```python\nfrom collections import defaultdict\n\ndef frequency_lists(list_of_lists):\n    \"\"\"\n    Finds the frequency count of each sublist within the given list of lists.\n\n    Args:\n        list_of_lists (list of lists): A list containing sublists as its elements.\n\n    Returns:\n        dict: A dictionary where keys are the unique elements from all sublists and values\n              are their respective frequencies.\n    \"\"\"\n    # Flatten the list of lists into a single list\n    flat_list = [item for sublist in list_of_lists for item in sublist]\n    \n    # Use defaultdict to count frequency of each element\n    freq_dict = defaultdict(int)\n    for item in flat_list:\n        freq_dict[item] += 1\n    \n    return dict(freq_dict)\n\n# Test the function with a sample input\nlist_of_lists = [[1, 2, 3], [4, 5, 6, 7], [8, 9]]\nprint(frequency_lists(list_of_lists))\n```",
+    "prompt_tokens": 57,
+    "eval_tokens": 202,
+    "total_ns": 4244839333,
+    "wall_s": 4.352981090545654,
+    "pred": "0",
+    "gold": "0",
+    "exec_out": "{1: 1, 2: 3, 3: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}"
+  },
+  "3": {
+    "text": "```python\ndef len_log(words):\n    \"\"\"\n    Finds the length of the longest word in a list.\n\n    Args:\n        words (list): A list of strings.\n\n    Returns:\n        int: The length of the longest word.\n    \"\"\"\n    if not words:\n        return 0\n\n    max_length = 0\n    for word in words:\n        if len(word) > max_length:\n            max_length = len(word)\n\n    return max_length\n\n# Test cases to verify the correctness of the function\nprint(len_log([\"hello\", \"world\"]))  # Output: 5\nprint(len_log([\"python\", \"programming\", \"is\", \"fun\"]))  # Output: 10\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 146,
+    "total_ns": 3003760166,
+    "wall_s": 3.1217639446258545,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "7"
+  },
+  "4": {
+    "text": "```python\nimport math\n\ndef max_Prime_Factors(n):\n    \"\"\"\n    Finds the largest prime factor of a given number n.\n\n    Parameters:\n    n (int): The number to find the largest prime factor for.\n\n    Returns:\n    int: The largest prime factor of n.\n    \"\"\"\n    # Initialize the smallest prime factor\n    smallest_prime_factor = 2\n\n    while n % smallest_prime_factor == 0:\n        smallest_prime_factor += 1\n\n    # If the current smallest prime factor is greater than sqrt(n),\n    # then n itself is a prime number and its largest prime factor.\n    if smallest_prime_factor > math.sqrt(n):\n        return n\n    else:\n        return smallest_prime_factor\n\n# Test cases to verify the correctness of the function\nprint(max_Prime_Factors(13))  # Expected output: 7 (since 7 is the largest prime factor of 13)\nprint(max_Prime_Factors(28))  # Expected output: 7 (since 7 is the largest prime factor of 28)\n```",
+    "prompt_tokens": 63,
+    "eval_tokens": 223,
+    "total_ns": 4649945375,
+    "wall_s": 4.6881890296936035,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "2"
+  },
+  "5": {
+    "text": "```python\ndef tn_gp(a, r, n):\n    \"\"\"\n    Calculate the nth term of a geometric series.\n\n    Parameters:\n    a (float): The first term of the geometric series.\n    r (float): The common ratio between terms.\n    n (int): The position in the series to calculate.\n\n    Returns:\n    float: The nth term of the geometric series.\n    \"\"\"\n    return a * (r ** (n - 1))\n\n# Test cases\nprint(tn_gp(5, 3, 2))  # Expected output: 8.0\nprint(tn_gp(4, 2, 3))  # Expected output: 8.0\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 145,
+    "total_ns": 3037030084,
+    "wall_s": 3.1464951038360596,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "5"
+  },
+  "6": {
+    "text": "```python\ndef smallest_num(nums):\n    \"\"\"\n    Find and return the smallest number in a given list.\n\n    Args:\n        nums (list): A list of numbers.\n\n    Returns:\n        int: The smallest number in the list.\n    \"\"\"\n    if not nums:\n        raise ValueError(\"The input list is empty.\")\n    \n    min_val = nums[0]\n    for num in nums:\n        if num < min_val:\n            min_val = num\n    return min_val\n\n# Test cases to verify the correctness of the function\nassert smallest_num([3, 1, 4, 1, 5, 9]) == 1\nassert smallest_num([-2, -5, -6, -8, -3]) == -8\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 158,
+    "total_ns": 3303378541,
+    "wall_s": 3.3334290981292725,
+    "pred": "3",
+    "gold": "3",
+    "exec_out": "1"
+  },
+  "7": {
+    "text": "```python\ndef sort_matrix(matrix):\n    \"\"\"\n    Sorts a given matrix in ascending order based on the sum of its rows.\n\n    Args:\n        matrix (list of list of int): The input matrix to be sorted.\n\n    Returns:\n        list of list of int: The sorted matrix.\n    \"\"\"\n    # Calculate the sum of each row\n    row_sums = [sum(row) for row in matrix]\n    \n    # Sort the rows based on their sums\n    sorted_matrix = sorted(matrix, key=lambda x: sum(x))\n    \n    return sorted_matrix\n\n# Test the function with a sample matrix\nsample_matrix = [\n    [3, 1, 4],\n    [5, 9, 2],\n    [6, 5, 3]\n]\n\nsorted_sample_matrix = sort_matrix(sample_matrix)\nprint(sorted_sample_matrix)  # Output: [[5, 9, 2], [3, 1, 4], [6, 5, 3]]\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 207,
+    "total_ns": 4323617583,
+    "wall_s": 4.361876964569092,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
+  },
+  "8": {
+    "text": "```python\ndef remove_Occ(s, char):\n    \"\"\"\n    Removes the first and last occurrence of a given character from the string.\n\n    Parameters:\n    s (str): The input string.\n    char: A single character to be removed from the string.\n\n    Returns:\n    str: The modified string with the first and last occurrence of the character removed.\n    \"\"\"\n    # Find the index of the first occurrence\n    i = 0\n    while i < len(s) - 1 and s[i] == char:\n        i += 1\n\n    # If no such character is found, return the original string\n    if i == len(s) - 1:\n        return s\n\n    # Find the index of the last occurrence\n    j = len(s) - 2\n    while j >= 0 and s[j] == char:\n        j -= 1\n\n    # Remove first and last occurrences\n    s = s[:i] + s[j+1:]\n    return s\n\n# Test cases to verify the correctness of the function\nprint(remove_Occ(\"banana\", \"a\"))  # Output: \"bnnbn\"\nprint(remove_Occ(\"banana\", \"n\"))  # Output: \"banan\"\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 257,
+    "total_ns": 5408527666,
+    "wall_s": 5.763398885726929,
+    "pred": "2",
+    "gold": "3",
+    "exec_out": "'llo'"
+  },
+  "9": {
+    "text": "```python\ndef multiply_num(nums):\n    \"\"\"\n    Multiply all the numbers in a list and divide it by the length of the list.\n\n    Args:\n        nums (list): A list of integers.\n\n    Returns:\n        float: The result of multiplying all elements in the list divided by its length.\n    \"\"\"\n    return sum(nums) / len(nums)\n\n# Test cases\nprint(multiply_num([1, 2, 3]))  # Output: 6.0\nprint(multiply_num([-1, -2, -3, -4]))  # Output: -12.0\n```",
+    "prompt_tokens": 65,
+    "eval_tokens": 126,
+    "total_ns": 2570235042,
+    "wall_s": 2.6233699321746826,
+    "pred": "3",
+    "gold": "0",
+    "exec_out": "3.8"
+  },
+  "10": {
+    "text": "```python\nimport re\n\ndef multiple_split(text, delimiters):\n    \"\"\"\n    Splits the given text into a list of strings based on multiple delimiters.\n\n    Parameters:\n    - text (str): The string to be split.\n    - delimiters (list): A list of delimiter characters.\n\n    Returns:\n    - list: A list of substrings obtained by splitting the input text using the provided delimiters.\n    \"\"\"\n    # Using regex to find all occurrences of each delimiter\n    results = [re.findall(r'\\b' + delimiter + r'\\b', text) for delimiter in delimiters]\n    \n    return results\n\n# Test cases to verify the correctness of the function\ndef check_function():\n    test_cases = [\n        (\"Hello, world! How are you?\", \", !?\"),\n        (\"One, two, three, four\", \", , -\"),\n        (\"No spaces here!\", \"here\")\n    ]\n    \n    for text, expected in test_cases:\n        result = multiple_split(text, [\".\", \",\", \";\"])\n        assert result == expected, f\"Expected {expected}, but got {result}.\"\n    print(\"All test cases passed.\")\n\ncheck_function()\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 242,
+    "total_ns": 5084243875,
+    "wall_s": 5.243518114089966,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "11": {
+    "text": "```python\nimport re\n\ndef text_match(text):\n    \"\"\"\n    This function takes a string and returns a new string where all sequences of lowercase letters\n    are joined with an underscore.\n\n    Example usage:\n    >>> text_match(\"hello_world\")\n    \"hello_world\"\n    >>> text_match(\"Python_is_fun\")\n    \"Python_is_fun\"\n    >>> text_match(\"1234567890\")\n    \"\"\n    \"\"\"\n    # Replace sequences of lowercase letters with underscores\n    return re.sub(r'(?<![a-z])\\b[a-z]+\\b', '_', text)\n\n# Test the function with provided data points\nprint(text_match(\"hello_world\"))  # Output: hello_world\nprint(text_match(\"Python_is_fun\"))  # Output: Python_is_fun\nprint(text_match(\"1234567890\"))  # Output: (empty string)\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 185,
+    "total_ns": 3831688500,
+    "wall_s": 3.992652654647827,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "'aab_cbbbc'"
+  },
+  "12": {
+    "text": "```python\ndef specified_element(matrix, index):\n    \"\"\"\n    Extracts elements from a 2D matrix based on a specified index.\n\n    Args:\n        matrix (list of lists): The 2D matrix to extract elements from.\n        index (int): The index of the element to be extracted. It can be either 'first' or an integer value.\n\n    Returns:\n        list: A list containing the extracted elements.\n    \"\"\"\n    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):\n        raise ValueError(\"The input must be a 2D list.\")\n\n    if index == \"first\":\n        return [row[0] for row in matrix]\n    else:\n        return [matrix[row][index] for row in range(len(matrix))]\n\n# Test the function\nmatrix = [\n    [\"a\", \"b\", \"c\"],\n    [1, 2, 3],\n    [4, 5, 6]\n]\n\nprint(specified_element(matrix, \"first\"))  # Output: ['a', 1, 4]\nprint(specified_element(matrix, \"second\"))  # Output: [1, 5, 6]\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 247,
+    "total_ns": 5115791500,
+    "wall_s": 5.144038915634155,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "[1, 4, 7]"
+  },
+  "13": {
+    "text": "```python\ndef is_octagonal(n):\n    \"\"\"\n    Calculate the nth octagonal number.\n\n    An octagonal number is a figurate number that represents an octagon. \n    The nth octagonal number is given by the formula: 8n^2 - n\n\n    Args:\n        n (int): The position in the sequence of octagonal numbers.\n\n    Returns:\n        int: The nth octagonal number.\n    \"\"\"\n    return 8 * n ** 2 - n\n\n# Test cases\nprint(is_octagonal(1))  # Output: 8\nprint(is_octagonal(3))  # Output: 72\n```",
+    "prompt_tokens": 57,
+    "eval_tokens": 135,
+    "total_ns": 2893116792,
+    "wall_s": 2.9974048137664795,
+    "pred": "1",
+    "gold": "3",
+    "exec_out": "195"
+  },
+  "14": {
+    "text": "```python\ndef Find_Min_Length(arr):\n    \"\"\"\n    Finds the minimum length of a subarray containing at least one element from the given list.\n\n    Parameters:\n    arr (list): A list of integers.\n\n    Returns:\n    int: The minimum length of a subarray with at least one element.\n    \"\"\"\n    min_length = float('inf')\n    current_min = 0\n    for i in range(len(arr)):\n        if current_min + 1 < len(arr) and arr[i] == arr[current_min + 1]:\n            current_min += 1\n        else:\n            min_length = min(min_length, current_min)\n            current_min = i + 1\n\n    return min_length\n\n# Test the function with a sample list\nsample_list = [4, 2, 3, 1, 5]\nprint(Find_Min_Length(sample_list))  # Output: 2\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 189,
+    "total_ns": 3969441125,
+    "wall_s": 4.0175440311431885,
+    "pred": "1",
+    "gold": "3",
+    "exec_out": "0"
+  },
+  "15": {
+    "text": "```python\nfrom typing import List\n\ndef max_len_sub(arr: List[int]) -> int:\n    \"\"\"\n    Finds the maximum length of the subsequence with differences between adjacent elements.\n\n    Args:\n        arr (List[int]): The input array of integers.\n\n    Returns:\n        int: The maximum length of the subsequence.\n    \"\"\"\n    if not arr or len(arr) < 2:\n        return 0\n\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(arr)):\n        if abs(arr[i] - arr[i-1]) == 1:\n            current_len += 1\n            max_len = max(max_len, current_len)\n        else:\n            current_len = 1\n\n    return max_len\n\n# Test the function\nprint(max_len_sub([2, 4, 6, 8, 10]))  # Output: 3\n```",
+    "prompt_tokens": 68,
+    "eval_tokens": 193,
+    "total_ns": 4026060666,
+    "wall_s": 4.104496002197266,
+    "pred": "?",
+    "gold": "1",
+    "exec_out": "ImportError"
+  },
+  "16": {
+    "text": "```python\ndef check_Equality(s):\n    \"\"\"\n    Check if the first and last character of a given string are equal.\n\n    Args:\n        s (str): The input string.\n\n    Returns:\n        bool: True if the first and last characters are equal, False otherwise.\n    \"\"\"\n    return s[0] == s[-1]\n\n# Test cases\nprint(check_Equality(\"coding\"))  # Expected output: True\nprint(check_Equality(\"hello\"))   # Expected output: False\n```",
+    "prompt_tokens": 67,
+    "eval_tokens": 104,
+    "total_ns": 2188111333,
+    "wall_s": 2.2242400646209717,
+    "pred": "0",
+    "gold": "0",
+    "exec_out": "True"
+  },
+  "17": {
+    "text": "```python\ndef freq_count(lst):\n    \"\"\"\n    This function takes a list as input and returns a dictionary where each key is an element from the list,\n    and its value is the count of how many times that element appears in the list.\n    \n    Example usage:\n    >>> freq_count([1, 2, 3, 4, 5, 1])\n    {1: 1, 2: 1, 3: 1, 4: 1, 5: 1}\n    \"\"\"\n    return dict.fromkeys(lst, lst.count)\n\n# Test the function\nprint(freq_count([1, 2, 3, 4, 5, 1]))  # Output: {1: 1, 2: 1, 3: 1, 4: 1, 5: 1}\n```",
+    "prompt_tokens": 59,
+    "eval_tokens": 182,
+    "total_ns": 3808107834,
+    "wall_s": 3.836650848388672,
+    "pred": "2",
+    "gold": "1",
+    "exec_out": "{10: <built-in method count of list object at 0x104e20040>, 20: <built-in method count of list object at 0x104e20040>, 40: <built-in method count of list object at 0x104e20040>, 50: <built-in method c"
+  },
+  "18": {
+    "text": "```python\ndef text_match_string(word, string):\n    \"\"\"\n    This function checks if the given string starts with the specified word.\n\n    Args:\n        word (str): The word to search for at the beginning of the string.\n        string (str): The string to be searched.\n\n    Returns:\n        bool: True if the string starts with the word, False otherwise.\n    \"\"\"\n    return string.startswith(word)\n\n# Test cases\nassert text_match_string(\"hello\", \"Hello\") == True, \"Test case 1 failed\"\nassert text_match_string(\"world\", \"Hello world\") == True, \"Test case 2 failed\"\nassert text_match_string(\"python\", \"Python programming\") == False, \"Test case 3 failed\"\n\nprint(\"All test cases passed!\")\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 159,
+    "total_ns": 3352422541,
+    "wall_s": 3.3955981731414795,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "19": {
+    "text": "```python\ndef find_product(arr):\n    \"\"\"\n    Finds the product of all non-repeated elements in an array.\n\n    Args:\n        arr (list): A list of integers.\n\n    Returns:\n        int: The product of all non-repeated elements.\n    \"\"\"\n    # Create a dictionary to count occurrences of each element\n    counts = {}\n    for num in arr:\n        if num not in counts:\n            counts[num] = 1\n        else:\n            counts[num] += 1\n\n    # Calculate the product of non-repeated elements\n    product = 1\n    for count in counts.values():\n        product *= count\n\n    return product\n\n# Test cases to verify the correctness of the function\nassert find_product([2, 4, 3, 6]) == 14, \"Test case 1 failed\"\nassert find_product([1, 7, 3])) == 9, \"Test case 2 failed\"\nassert find_product([-1, -2, -3, -4]) == -24, \"Test case 3 failed\"\n\nprint(\"All test cases passed!\")\n```",
+    "prompt_tokens": 63,
+    "eval_tokens": 232,
+    "total_ns": 4858088500,
+    "wall_s": 4.885215997695923,
+    "pred": "?",
+    "gold": "3",
+    "exec_out": "NameError"
+  },
+  "20": {
+    "text": "```python\ndef multiples_of_num(n, m):\n    \"\"\"\n    This function takes two integers, n and m, and returns a list containing \n    all the multiples of n up to (and including) m.\n\n    Example usage:\n    >>> multiples_of_num(5, 10)\n    [5, 10]\n    >>> multiples_of_num(7, 21)\n    [7, 14, 21]\n    \"\"\"\n    return list(range(n * m))\n\n# Test the function with provided data points\nprint(multiples_of_num(5, 10))  # Output: [5, 10]\nprint(multiples_of_num(7, 21))  # Output: [7, 14, 21]\n```",
+    "prompt_tokens": 59,
+    "eval_tokens": 165,
+    "total_ns": 3468264000,
+    "wall_s": 3.493253231048584,
+    "pred": "2",
+    "gold": "2",
+    "exec_out": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]"
+  },
+  "21": {
+    "text": "```python\ndef add_lists(list1, tuple_list):\n    \"\"\"\n    Adds each element of the first list (list1) to each element of the second list (tuple_list).\n    \n    Args:\n        list1: A list of integers.\n        tuple_list: A list of tuples, where each tuple contains two elements.\n        \n    Returns:\n        A new list containing the sum of corresponding elements from both lists.\n    \"\"\"\n    # Create a new list to store the sums\n    result = []\n    for i in range(len(list1)):\n        # Add the element from list1 to the current position in the result list\n        result.append(list1[i] + tuple_list[i][0])\n        # Add the second element of the current tuple to the next position in the result list\n        result.append(tuple_list[i][1] + tuple_list[i+1][0])\n    return result\n\n# Test cases\nprint(add_lists([1, 2, 3], [(4, 5), (6, 7)]))  # Output: [5, 8, 10]\nprint(add_lists([10, 20, 30], [(40, 50), (60, 70)]))  # Output: [50, 70, 90]\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 275,
+    "total_ns": 5721734709,
+    "wall_s": 5.782591104507446,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "22": {
+    "text": "```python\ndef remove(digits):\n    \"\"\"\n    Removes all digits from a given list of strings.\n\n    Parameters:\n    digits (list): A list of strings containing numbers.\n\n    Returns:\n    list: A new list without any digits.\n    \"\"\"\n    return [d for d in digits if not d.isdigit()]\n\n# Test the function\nprint(remove([\"123\", \"4567\", \"890\"]))  # Output: ['1', '2', '4', '5', '6', '8', '9']\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 113,
+    "total_ns": 2401151917,
+    "wall_s": 2.4281418323516846,
+    "pred": "3",
+    "gold": "2",
+    "exec_out": "['4words', '3letters', '4digits']"
+  },
+  "23": {
+    "text": "```python\nimport math\n\ndef dif_Square(n):\n    \"\"\"\n    Check if the given number n can be represented as the difference of two squares.\n\n    A number is called a perfect square if it can be expressed as the product of an integer with itself.\n    For example, 16 is a perfect square because it can be written as (4 * 4).\n\n    The function returns True if n can be represented as the difference of two squares,\n    and False otherwise.\n\n    Examples:\n    >>> dif_Square(10)\n    True\n    >>> dif_Square(25)\n    True\n    >>> dif_Square(36)\n    True\n    >>> dif_Square(7)\n    False\n    \"\"\"\n    if n < 0:\n        return False\n\n    # Check for the first perfect square less than or equal to n\n    a = int(math.sqrt(n))\n    b = a + 1\n\n    # If n is not a perfect square, it cannot be represented as the difference of two squares\n    if (a * a) != n:\n        return False\n\n    # Check for the second perfect square less than or equal to n\n    c = int(math.sqrt(n))\n    d = c + 1\n\n    # If n is not a perfect square, it cannot be represented as the difference of two squares\n    if (d * d) != n:\n        return False\n\n    # Check if the first and second perfect squares are equal\n    if a == b or a == c or b == d or c == d:\n        return True\n\n    return False\n\n# Test cases to verify the correctness of the function\nprint(dif_Square(10))  # True\nprint(dif_Square(25))  # True\nprint(dif_Square(36))  # True\nprint(dif_Square(7))   # False\n```",
+    "prompt_tokens": 67,
+    "eval_tokens": 396,
+    "total_ns": 8215465209,
+    "wall_s": 8.249865055084229,
+    "pred": "2",
+    "gold": "0",
+    "exec_out": "False"
+  },
+  "24": {
+    "text": "```python\nfrom collections import Counter\n\ndef get_Odd_Occurrence(arr):\n    \"\"\"\n    Finds the element occurring odd number of times in the given array.\n\n    Parameters:\n    arr (list): A list of integers.\n\n    Returns:\n    int: The element that occurs odd number of times.\n    \"\"\"\n    # Count occurrences of each element\n    counts = Counter(arr)\n    \n    # Find the element with an odd count\n    for num, count in counts.items():\n        if count % 2 != 0:\n            return num\n\n# Example usage\nif __name__ == \"__main__\":\n    arr = [1, 3, 5, 2, 3, 6, 4]\n    print(get_Odd_Occurrence(arr))  # Output: 6\n```",
+    "prompt_tokens": 63,
+    "eval_tokens": 166,
+    "total_ns": 3491145917,
+    "wall_s": 3.5190651416778564,
+    "pred": "?",
+    "gold": "3",
+    "exec_out": "TypeError"
+  },
+  "25": {
+    "text": "```python\nfrom collections import Counter\n\ndef count_common(words):\n    \"\"\"\n    Counts the number of occurrences of each word in a given list and returns the most common ones.\n\n    Parameters:\n    words (list): A list of strings representing the dictionary.\n\n    Returns:\n    dict: A dictionary containing the most common words along with their counts.\n    \"\"\"\n    # Count the frequency of each word\n    word_counts = Counter(words)\n    \n    # Find the maximum count among all words\n    max_count = max(word_counts.values())\n    \n    # Filter out words that do not have a count greater than or equal to 'max_count'\n    common_words = {word: count for word, count in word_counts.items() if count >= max_count}\n    \n    return common_words\n\n# Test the function with provided data points\nprint(count_common([\"apple\", \"banana\", \"apple\", \"orange\", \"pear\"]))  # Output: {'apple': 2, 'banana': 1, 'orange': 1, 'pear': 1}\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 214,
+    "total_ns": 4482185375,
+    "wall_s": 4.509277105331421,
+    "pred": "1",
+    "gold": "2",
+    "exec_out": "{'pink': 6}"
+  },
+  "26": {
+    "text": "```python\ndef get_equal(tuples):\n    \"\"\"\n    This function takes a list of tuples and returns True if all the tuples have the same length,\n    otherwise it returns False.\n\n    Example usage:\n    >>> get_equal([(1, 2), (3, 4), (5, 6)])\n    True\n    >>> get_equal([(1, 2), (3, 4), (5, 6, 7)])\n    False\n\n    \"\"\"\n    # Check if the length of the first tuple is equal to the total number of tuples\n    return len(tuples) == max(len(tuple) for tuple in tuples)\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 133,
+    "total_ns": 2828179792,
+    "wall_s": 2.9508960247039795,
+    "pred": "?",
+    "gold": "0",
+    "exec_out": "TypeError"
+  },
+  "27": {
+    "text": "```python\ndef find_rect_num(n):\n    \"\"\"\n    Finds the n-th rectangular number.\n\n    Parameters:\n    n (int): The position of the rectangular number to find.\n\n    Returns:\n    int: The n-th rectangular number.\n    \"\"\"\n    return n * (n + 1) // 2\n\n# Test cases\nprint(find_rect_num(1))  # Output: 1\nprint(find_rect_num(5))  # Output: 55\n```",
+    "prompt_tokens": 57,
+    "eval_tokens": 99,
+    "total_ns": 2120737750,
+    "wall_s": 2.164062976837158,
+    "pred": "1",
+    "gold": "3",
+    "exec_out": "10"
+  },
+  "28": {
+    "text": "```python\ndef decimal_To_Binary(decimal):\n    \"\"\"\n    Convert a decimal number to its binary representation.\n\n    Args:\n        decimal (int): A decimal number.\n\n    Returns:\n        str: The binary representation of the given decimal number.\n    \"\"\"\n    return bin(decimal)[2:]\n\n# Test cases\nprint(decimal_To_Binary(10))  # Output: '1010'\nprint(decimal_To_Binary(7))   # Output: '111'\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 100,
+    "total_ns": 2157148833,
+    "wall_s": 2.216644048690796,
+    "pred": "1",
+    "gold": "3",
+    "exec_out": "'1010'"
+  },
+  "29": {
+    "text": "```python\ndef count_Squares(width, height):\n    \"\"\"\n    Counts the number of squares in a given width and height rectangle.\n\n    Parameters:\n    width (int): The width of the rectangle.\n    height (int): The height of the rectangle.\n\n    Returns:\n    int: The total number of squares in the rectangle.\n    \"\"\"\n    return width * height\n\n# Test cases\nprint(count_Squares(3, 4))  # Expected output: 12\nprint(count_Squares(5, 6))  # Expected output: 30\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 119,
+    "total_ns": 2577573209,
+    "wall_s": 2.6616251468658447,
+    "pred": "0",
+    "gold": "3",
+    "exec_out": "12"
+  },
+  "30": {
+    "text": "```python\nfrom math import gcd\n\ndef find_Nth_Digit(num1, num2, n):\n    \"\"\"\n    Finds the N-th digit in the proper fractions of two given numbers.\n\n    Parameters:\n    num1 (int): First number.\n    num2 (int): Second number.\n    n (int): The position of the digit to be found.\n\n    Returns:\n    int: The N-th digit in the proper fraction of num1 and num2.\n    \"\"\"\n    def is_proper_fraction(num1, num2):\n        return gcd(abs(num1), abs(num2)) == 1\n\n    if not (is_proper_fraction(num1, num2)):\n        raise ValueError(\"The two numbers must be a proper fraction.\")\n\n    # Find the greatest common divisor\n    g = gcd(abs(num1), abs(num2))\n    \n    # Calculate the number of digits in each number\n    n1_digits = len(str(num1 // g)) if num1 else 0\n    n2_digits = len(str(num2 // g)) if num2 else 0\n    \n    # Find the position of the N-th digit\n    pos = (n - 1) * n1_digits + n2_digits - 1\n    \n    return int(str(num1 // g)[pos])\n\n# Test cases to verify the correctness of the function\nassert find_Nth_Digit(3, 5, 8) == 7\nassert find_Nth_Digit(4, 6, 9) == 0\n```",
+    "prompt_tokens": 66,
+    "eval_tokens": 315,
+    "total_ns": 6489938167,
+    "wall_s": 6.657747983932495,
+    "pred": "3",
+    "gold": "1",
+    "exec_out": "1"
+  },
+  "31": {
+    "text": "```python\nimport math\n\ndef volume_sphere(radius):\n    \"\"\"\n    Calculate the volume of a sphere given its radius.\n\n    Parameters:\n    radius (float): The radius of the sphere.\n\n    Returns:\n    float: The volume of the sphere.\n    \"\"\"\n    return (4/3) * math.pi * (radius ** 3)\n```",
+    "prompt_tokens": 56,
+    "eval_tokens": 71,
+    "total_ns": 1522638250,
+    "wall_s": 1.6354808807373047,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "4188.790204786391"
+  },
+  "32": {
+    "text": "```python\ndef is_Monotonic(arr):\n    \"\"\"\n    Check if an array is monotonic (either entirely non-increasing or non-decreasing).\n    \n    Parameters:\n    arr (list): A list of integers.\n\n    Returns:\n    bool: True if the array is monotonic, False otherwise.\n    \"\"\"\n    increasing = decreasing = True\n    for i in range(1, len(arr)):\n        if arr[i] > arr[i-1]:\n            increasing = False\n        elif arr[i] < arr[i-1]:\n            decreasing = False\n    return increasing or decreasing\n\n# Test the function with a check function\ndef check_monotonic():\n    assert is_Monotonic([2, 5, 1]) == True, \"Test case 1 failed\"\n    assert is_Monotonic([-3, -4, -6, -7]) == False, \"Test case 2 failed\"\n    assert is_Monotonic([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]) == True, \"Test case 3 failed\"\n    print(\"All test cases passed!\")\n\ncheck_monotonic()\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 254,
+    "total_ns": 5240481334,
+    "wall_s": 5.266450881958008,
+    "pred": "?",
+    "gold": "0",
+    "exec_out": "IndentationError"
+  },
+  "33": {
+    "text": "```python\ndef opposite_Signs(a, b):\n    \"\"\"\n    Check if the given two integers have opposite signs.\n\n    Parameters:\n    a (int): First integer.\n    b (int): Second integer.\n\n    Returns:\n    bool: True if both numbers have opposite signs, False otherwise.\n    \"\"\"\n    return (a > 0 and b < 0) or (a < 0 and b > 0)\n\n# Test cases\nprint(opposite_Signs(5, -3))  # Expected output: True\nprint(opposite_Signs(-2, 4))  # Expected output: True\nprint(opposite_Signs(-1, -1))  # Expected output: False\n```",
+    "prompt_tokens": 65,
+    "eval_tokens": 151,
+    "total_ns": 3173779125,
+    "wall_s": 3.3121109008789062,
+    "pred": "0",
+    "gold": "0",
+    "exec_out": "True"
+  },
+  "34": {
+    "text": "```python\ndef check(num):\n    \"\"\"\n    Check if a given number is one less than twice its reverse.\n\n    Parameters:\n    num (int): The number to be checked.\n\n    Returns:\n    bool: True if the condition is met, False otherwise.\n    \"\"\"\n    # Reverse the number and calculate twice its reverse\n    reversed_num = int(str(num)[::-1])\n    double_reversed_num = 2 * reversed_num\n\n    # Check if the given number is one less than twice its reverse\n    return num == double_reversed_num - 1\n\n# Test cases to verify the correctness of the function\nassert check(34) == True, \"The number 34 should satisfy the condition.\"\nassert check(29) == False, \"The number 29 does not satisfy the condition.\"\nassert check(56) == True, \"The number 56 should satisfy the condition.\"\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 190,
+    "total_ns": 3924314208,
+    "wall_s": 4.0166990756988525,
+    "pred": "2",
+    "gold": "2",
+    "exec_out": "False"
+  },
+  "35": {
+    "text": "```python\nfrom collections import Counter\n\ndef freq_element(list_of_lists):\n    \"\"\"\n    Finds the frequency of each element in a given list of lists.\n\n    Args:\n        list_of_lists (list): A list of lists where each sublist contains elements.\n\n    Returns:\n        dict: A dictionary with elements as keys and their frequencies as values.\n    \"\"\"\n    return Counter(tuple(sublist) for sublist in list_of_lists)\n\n# Test the function\nif __name__ == \"__main__\":\n    test_list = [[1, 2, 3], [4, 5, 6, 7], [8, 9]]\n    print(freq_element(test_list))\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 138,
+    "total_ns": 2906560375,
+    "wall_s": 3.0016796588897705,
+    "pred": "2",
+    "gold": "1",
+    "exec_out": "Counter({(1, 2, 3, 2): 1, (4, 5, 6, 2): 1, (7, 1, 9, 5): 1})"
+  },
+  "36": {
+    "text": "```python\nimport heapq\n\ndef func(nums1, nums2):\n    \"\"\"\n    Finds the top k integers that occur most frequently from two sorted lists of distinct integers.\n\n    Args:\n        nums1 (List[int]): A list of sorted and distinct integers.\n        nums2 (List[int]): Another list of sorted and distinct integers.\n\n    Returns:\n        List[int]: The top k integers that occur most frequently in the combined lists.\n    \"\"\"\n    # Combine both lists\n    combined_nums = nums1 + nums2\n    \n    # Use a max heap to find the k largest elements\n    max_heap = [(-num, num) for num in combined_nums]\n    heapq.heapify(max_heap)\n    \n    # Extract the top k elements from the heap\n    top_k_elements = [-heapq.heappop(max_heap)[1] for _ in range(k)]\n    \n    return top_k_elements\n\n# Example usage\nnums1 = [1, 2, 3, 4, 5]\nnums2 = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\nk = 5\n\nprint(func(nums1, nums2))  # Output: [-1, -1, 1, 1, 1]\n```",
+    "prompt_tokens": 70,
+    "eval_tokens": 277,
+    "total_ns": 5731237958,
+    "wall_s": 5.759646892547607,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "37": {
+    "text": "```python\ndef eulers_number(a, b):\n    \"\"\"\n    Calculate Euler's number (E) using the formula E = 1 + \u2211(n=0 to \u221e) (-1)^n * n / (2^n)\n    \n    Parameters:\n    a: int\n        The upper limit of the summation.\n    b: float\n        The base value for the summation.\n        \n    Returns:\n    eulers_number: float\n        Euler's number E calculated using the formula.\n    \"\"\"\n    return 1 + sum((-1)**n * (b / (2**n)) for n in range(a))\n\n# Test cases to verify the correctness of the function\ndef check_eulers_number():\n    assert abs(eulers_number(5, 3) - 0.847386962726901) < 1e-5, \"Test case 1 failed\"\n    assert abs(eulers_number(10, 2) - 2.718281828459045) < 1e-5, \"Test case 2 failed\"\n    print(\"All test cases passed!\")\n\ncheck_eulers_number()\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 255,
+    "total_ns": 5308056250,
+    "wall_s": 5.327836275100708,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "IndentationError"
+  },
+  "38": {
+    "text": "```python\ndef comb_sort(arr):\n    \"\"\"\n    Sorts an array using the Comb Sort algorithm.\n\n    Parameters:\n    arr (list): The list of elements to be sorted.\n\n    Returns:\n    list: A new list containing the sorted elements.\n    \"\"\"\n    n = len(arr)\n    gap = n\n\n    # Perform a gap sequence\n    while gap > 0:\n        gap = int(gap / 1.3)  # Use 1.3 as an approximation for the golden ratio\n\n        # The inner loop is now smaller than the outer loop\n        for i in range(n - gap):\n            if arr[i] > arr[i + gap]:\n                arr[i], arr[i + gap] = arr[i + gap], arr[i]\n\n    return arr\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 162,
+    "total_ns": 3426167208,
+    "wall_s": 3.5163731575012207,
+    "pred": "3",
+    "gold": "3",
+    "exec_out": "[5, 15, 25, 37, 79]"
+  },
+  "39": {
+    "text": "```python\ndef find_Sum(arr):\n    \"\"\"\n    This function takes an array as input and returns the sum of all elements that appear more than once.\n\n    Example:\n    >>> find_Sum([1, 2, 3, 4, 5, 6, 7, 8, 9])\n    10\n    \"\"\"\n    # Count occurrences of each element in the array\n    counts = {}\n    for num in arr:\n        if num not in counts:\n            counts[num] = 0\n        counts[num] += 1\n\n    # Sum up all elements that appear more than once\n    sum_of_repeated_elements = 0\n    for count in counts.values():\n        if count > 1:\n            sum_of_repeated_elements += count * (count - 1) // 2\n\n    return sum_of_repeated_elements\n\n# Test the function with a provided array\nprint(find_Sum([1, 2, 3, 4, 5, 6, 7, 8, 9]))  # Output: 10\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 231,
+    "total_ns": 4783185750,
+    "wall_s": 4.82011866569519,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "40": {
+    "text": "```python\ndef binary_to_decimal(binary):\n    \"\"\"\n    Convert a binary number (given as a string) to its decimal equivalent.\n\n    Args:\n        binary (str): A string representing a binary number.\n\n    Returns:\n        int: The decimal equivalent of the given binary number.\n    \"\"\"\n    return int(binary, 2)\n\n# Test cases\nbinary_numbers = [\"101\", \"1111\", \"1000\"]\ndecimal_results = {binary: binary_to_decimal(binary) for binary in binary_numbers}\nprint(decimal_results)\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 114,
+    "total_ns": 2425712083,
+    "wall_s": 2.4528369903564453,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "41": {
+    "text": "```python\nlist1 = [3, 2, 5, 1, 4]\nlist2 = [7, 8, 9, 6]\n\nmin_length_list = lambda l1, l2: min([len(l) for l in (l1, l2)])\nprint(min_length_list(list1, list2))  # Output: [3, 2, 5, 1]\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 90,
+    "total_ns": 1920556959,
+    "wall_s": 2.0320241451263428,
+    "pred": "?",
+    "gold": "1",
+    "exec_out": "TypeError"
+  },
+  "42": {
+    "text": "```python\ndef find_Volume(base, height):\n    \"\"\"\n    Calculate the volume of a triangular prism.\n\n    Parameters:\n    base (float): The length of the base side of the triangle.\n    height (float): The height of the triangle.\n\n    Returns:\n    float: The volume of the triangular prism.\n    \"\"\"\n    return 0.5 * base * height\n\n# Example usage\nbase = 4.0\nheight = 6.0\nprint(\"The volume is:\", find_Volume(base, height))\n```",
+    "prompt_tokens": 59,
+    "eval_tokens": 110,
+    "total_ns": 2364629750,
+    "wall_s": 2.4748432636260986,
+    "pred": "?",
+    "gold": "0",
+    "exec_out": "TypeError"
+  },
+  "43": {
+    "text": "```python\ndef next_smallest_palindrome(num):\n    \"\"\"\n    Finds the next smallest palindrome greater than or equal to a given number.\n\n    Parameters:\n    num (int): The input number.\n\n    Returns:\n    int: The next smallest palindrome.\n    \"\"\"\n    # Convert the number to its absolute value for easier manipulation\n    abs_num = abs(num)\n    \n    # Find the first digit that is not 0\n    first_non_zero_digit = len(str(abs_num)) - 1\n    \n    # If the number itself is a palindrome, return it as it's the next smallest palindrome\n    if num == int(str(abs_num)[first_non_zero_digit:]):\n        return abs_num\n    \n    # Find the rightmost digit that can be made into a palindrome by swapping with its adjacent digits\n    for i in range(first_non_zero_digit + 1, len(str(abs_num))):\n        if str(abs_num)[-i] != str(abs_num)[-i-1]:\n            break\n    \n    # If no such digit is found, the number itself is already a palindrome\n    if i == first_non_zero_digit:\n        return num\n    \n    # Find the smallest digit that can be made into a palindrome by swapping with its adjacent digits\n    for j in range(first_non_zero_digit + 1, len(str(abs_num))):\n        if str(abs_num)[-i] != str(abs_num)[-j]:\n            break\n    \n    # Swap the found digits and return the result\n    return int(''.join([str(abs_num)[first_non_zero_digit], str(abs_num)[-i], str(abs_num)[-j]]))\n\n# Test cases to verify the correctness of the function\nprint(next_smallest_palindrome(123))  # Expected output: 131\nprint(next_smallest_palindrome(4567))  # Expected output: 4568\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 383,
+    "total_ns": 7988491542,
+    "wall_s": 8.012665033340454,
+    "pred": "?",
+    "gold": "0",
+    "exec_out": "UnboundLocalError"
+  },
+  "44": {
+    "text": "```python\ndef power(a, b):\n    \"\"\"\n    Calculate the value of 'a' raised to the power 'b'.\n\n    Parameters:\n    a (float): The base number.\n    b (int): The exponent.\n\n    Returns:\n    float: The result of 'a' raised to the power 'b'.\n    \"\"\"\n    return a ** b\n\n# Test cases\nprint(power(2, 3))  # Output: 8.0\nprint(power(5, -2))  # Output: 0.04\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 114,
+    "total_ns": 2442196042,
+    "wall_s": 2.6377880573272705,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "81"
+  },
+  "45": {
+    "text": "```python\nfrom math import comb\n\ndef bell_number(n):\n    \"\"\"\n    Calculate the nth Bell number.\n\n    The Bell numbers B_n are defined as:\n    B_0 = 1, B_1 = 1,\n    B_n = \u03a3 j=0 to n-1 C_j * B_{n-j}\n\n    where C_j is a binomial coefficient.\n    \"\"\"\n    if n == 0:\n        return 1\n    elif n == 1:\n        return 1\n    else:\n        return comb(n, 0) + comb(n, 1)\n\n# Test the function with some data points\nprint(bell_number(5))  # Output: 52\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 148,
+    "total_ns": 3041170166,
+    "wall_s": 3.1751248836517334,
+    "pred": "2",
+    "gold": "1",
+    "exec_out": "3"
+  },
+  "46": {
+    "text": "```python\ndef find_substring(lst, value):\n    \"\"\"\n    Check if a given substring is present in a list of string values.\n\n    Args:\n        lst (list): A list of strings.\n        value: The substring to search for.\n\n    Returns:\n        bool: True if the substring is found in the list, False otherwise.\n    \"\"\"\n    return value in lst\n\n# Test cases\ntest_cases = [\n    (\"hello\", \"l\"),\n    (\"world\", \"w\"),\n    (\"python\", \"py\"),\n    (\"code\", \"o\")\n]\n\nfor test_case in test_cases:\n    print(f\"Checking if '{test_case[0]}' is a substring of {test_case[1]}: {find_substring(test_case[0], test_case[1])}\")\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 162,
+    "total_ns": 3363582125,
+    "wall_s": 3.4799129962921143,
+    "pred": "?",
+    "gold": "0",
+    "exec_out": "IndentationError"
+  },
+  "47": {
+    "text": "```python\ndef find_missing(arr):\n    \"\"\"\n    Find the missing number in a sorted array.\n\n    Args:\n        arr (List[int]): A sorted list of integers.\n\n    Returns:\n        int: The missing number in the array.\n    \"\"\"\n    n = len(arr)\n    expected_sum = (n * (n + 1)) // 2\n    actual_sum = sum(arr)\n\n    return expected_sum - actual_sum\n\n# Test cases to verify the correctness of the function\nassert find_missing([3, 7, 1, 2]) == 5\nassert find_missing([0, 1, 2, 3]) == 4\n```",
+    "prompt_tokens": 59,
+    "eval_tokens": 139,
+    "total_ns": 2924503459,
+    "wall_s": 2.946260929107666,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "48": {
+    "text": "```python\ndef decimal_to_binary(decimal):\n    \"\"\"\n    Convert a given decimal number to its binary representation.\n\n    Args:\n        decimal (int): The decimal number to be converted.\n\n    Returns:\n        str: The binary representation of the decimal number.\n    \"\"\"\n    return bin(decimal)[2:]\n\n# Test cases to verify the correctness of the function\nprint(decimal_to_binary(10))  # Output: '1010'\nprint(decimal_to_binary(52))  # Output: '110100'\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 111,
+    "total_ns": 2386367500,
+    "wall_s": 2.4390981197357178,
+    "pred": "2",
+    "gold": "2",
+    "exec_out": "'1000'"
+  },
+  "49": {
+    "text": "```python\ndef check_equilateral(a, b, c):\n    \"\"\"\n    Check if a, b, and c form an equilateral triangle.\n\n    Parameters:\n    a (float): length of side 1\n    b (float): length of side 2\n    c (float): length of side 3\n\n    Returns:\n    bool: True if the sides form an equilateral triangle, False otherwise.\n    \"\"\"\n    return a == b and b == c\n\n# Test cases to verify the correctness of the function\ndef check():\n    assert check_equilateral(5, 5, 5) == True, \"Test case 1 failed\"\n    assert check_equilateral(3, 4, 5) == False, \"Test case 2 failed\"\n    assert check_equilateral(8.5, 8.5, 8.5) == True, \"Test case 3 failed\"\n    assert check_equilateral(7, 10, 10) == False, \"Test case 4 failed\"\n\ncheck()\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 219,
+    "total_ns": 4539467125,
+    "wall_s": 4.565964698791504,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "IndentationError"
+  },
+  "50": {
+    "text": "```python\ndef is_sublist(lst, sub):\n    \"\"\"\n    Check if lst is a sublist of sub.\n\n    Args:\n        lst (List): The main list.\n        sub (List): The sublist to check for.\n\n    Returns:\n        bool: True if lst is a sublist of sub, False otherwise.\n    \"\"\"\n    return all((lst[i] == sub[i]) or (lst[i] in sub) for i in range(len(lst)))\n\n# Test cases\nassert is_sublist([1, 2, 3, 4], [2, 3]) == True\nassert is_sublist([1, 2, 3, 4], [4, 5]) == False\nassert is_sublist([], [1, 2, 3]) == True\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 165,
+    "total_ns": 3456245250,
+    "wall_s": 3.66784405708313,
+    "pred": "2",
+    "gold": "2",
+    "exec_out": "False"
+  },
+  "51": {
+    "text": "```python\ndef is_samepatterns(patterns):\n    \"\"\"\n    Check if all patterns in the list are identical.\n\n    Args:\n        patterns (list): A list of strings representing the patterns to be checked.\n\n    Returns:\n        bool: True if all patterns are identical, False otherwise.\n    \"\"\"\n    return len(set(patterns)) == 1\n\n# Test cases\nprint(is_samepatterns([\"a\", \"b\", \"c\"]))  # Expected output: True\nprint(is_samepatterns([\"a\", \"b\", \"b\"]))  # Expected output: False\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 117,
+    "total_ns": 2397433875,
+    "wall_s": 2.4498302936553955,
+    "pred": "?",
+    "gold": "0",
+    "exec_out": "TypeError"
+  },
+  "52": {
+    "text": "```python\ndef count_With_Odd_SetBits(n):\n    \"\"\"\n    This function takes an integer n and returns the count of integers with odd number of set bits.\n\n    Parameters:\n    n (int): An integer\n\n    Returns:\n    int: Count of integers with odd number of set bits.\n    \"\"\"\n    # Initialize a counter for numbers with odd number of set bits\n    count = 0\n    \n    # Iterate through each bit position in the binary representation of n\n    for i in range(31):\n        # Get the current bit and its corresponding integer value\n        bit, num = divmod(n, (1 << i))\n        \n        # If the number of set bits is odd, increment the counter\n        if bit % 2 == 1:\n            count += 1\n    \n    return count\n\n# Test cases to verify the correctness of the function\nassert count_With_Odd_SetBits(5) == 4, \"Test case 1 failed\"\nassert count_With_Odd_SetBits(7) == 3, \"Test case 2 failed\"\nassert count_With_Odd_SetBits(8) == 0, \"Test case 3 failed\"\n\nprint(\"All test cases passed!\")\n```",
+    "prompt_tokens": 66,
+    "eval_tokens": 255,
+    "total_ns": 5337045667,
+    "wall_s": 5.383507013320923,
+    "pred": "1",
+    "gold": "2",
+    "exec_out": "2"
+  },
+  "53": {
+    "text": "```python\ndef merge_dictionaries_three(dict1, dict2, dict3):\n    \"\"\"\n    Merge three dictionaries into a single expression.\n\n    Args:\n        dict1 (dict): The first dictionary.\n        dict2 (dict): The second dictionary.\n        dict3 (dict): The third dictionary.\n\n    Returns:\n        dict: A new dictionary containing the merged keys and values from all input dictionaries.\n    \"\"\"\n    return {**dict1, **dict2, **dict3}\n\n# Test cases to verify the correctness of the function\ndef check_function():\n    d1 = {'a': 1, 'b': 2}\n    d2 = {'b': 3, 'c': 4}\n    d3 = {'d': 5, 'e': 6}\n    \n    expected_output = {'a': 1, 'b': 3, 'c': 4, 'd': 5, 'e': 6}\n    assert merge_dictionaries_three(d1, d2, d3) == expected_output, \"Test case failed!\"\n\n    print(\"All test cases passed!\")\n\ncheck_function()\n```",
+    "prompt_tokens": 59,
+    "eval_tokens": 233,
+    "total_ns": 4851278625,
+    "wall_s": 4.907186269760132,
+    "pred": "1",
+    "gold": "3",
+    "exec_out": "{'R': 'Red', 'B': 'Black', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}"
+  },
+  "54": {
+    "text": "```python\ndef counting_sort(arr):\n    \"\"\"\n    Sorts an array of integers using counting sort algorithm.\n\n    Args:\n        arr (list): The input list of integers.\n\n    Returns:\n        list: A new list containing the sorted elements.\n    \"\"\"\n    # Find the maximum value in the array to determine the range of values\n    max_val = max(arr)\n    \n    # Initialize count array with zeros, size of the input array\n    count_arr = [0] * (max_val + 1)\n\n    # Count the occurrences of each number in the input array\n    for num in arr:\n        count_arr[num] += 1\n\n    # Build the output array by placing elements at their correct positions\n    sorted_arr = []\n    for i, value in enumerate(arr):\n        sorted_arr.append(i)\n        count_arr[value] -= 1\n    \n    return sorted_arr\n\n# Test the function with a sample input\nsample_input = [4, 2, 2, 8, 3, 3, 1]\nsorted_sample = counting_sort(sample_input)\nprint(sorted_sample)  # Output: [1, 2, 2, 3, 3, 4, 8]\n```",
+    "prompt_tokens": 59,
+    "eval_tokens": 253,
+    "total_ns": 5260175000,
+    "wall_s": 5.282052040100098,
+    "pred": "3",
+    "gold": "2",
+    "exec_out": "[0, 1, 2, 3, 4, 5, 6]"
+  },
+  "55": {
+    "text": "```python\ndef max_difference(tuples):\n    \"\"\"\n    Finds the maximum difference between any two elements in a given tuple list.\n\n    Args:\n        tuples (list): A list of tuples, where each tuple contains at least 2 elements.\n\n    Returns:\n        int: The maximum difference found among all pairs.\n    \"\"\"\n    # Sort the tuples to make it easier to find the max difference\n    sorted_tuples = sorted(tuples)\n    \n    # Calculate the differences between consecutive elements in the sorted list\n    differences = [sorted_tuples[i + 1] - sorted_tuples[i] for i in range(len(sorted_tuples) - 1)]\n    \n    # Find the maximum difference from the differences list\n    max_difference = max(differences)\n    \n    return max_difference\n\n# Test cases to verify the correctness of the function\nassert max_difference([(5, 3), (4, 2), (1, 0)]) == 8\nassert max_difference([(-1, -2), (-3, -4), (-5, -6)]) == 7\nassert max_difference([(-9, -8), (-7, -6), (-5, -4)]) == 1\n\nprint(\"All test cases passed!\")\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 253,
+    "total_ns": 5275606125,
+    "wall_s": 5.306506872177124,
+    "pred": "?",
+    "gold": "1",
+    "exec_out": "TypeError"
+  },
+  "56": {
+    "text": "```python\ndef test_distinct(numbers):\n    \"\"\"\n    Determine if all elements in the list are distinct.\n\n    Args:\n        numbers (list): A list of integers.\n\n    Returns:\n        bool: True if all elements are distinct, False otherwise.\n    \"\"\"\n    return len(set(numbers)) == len(numbers)\n\n# Test cases to verify the correctness of the function\nassert test_distinct([1, 2, 3, 4]) == True, \"Test case 1 failed\"\nassert test_distinct([1, 2, 2, 3]) == False, \"Test case 2 failed\"\nassert test_distinct([]) == True, \"Test case 3 failed\"\n\nprint(\"All tests passed!\")\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 150,
+    "total_ns": 3155838542,
+    "wall_s": 3.1831181049346924,
+    "pred": "0",
+    "gold": "0",
+    "exec_out": "True"
+  },
+  "57": {
+    "text": "```python\ndef count_true_booleans(lst):\n    \"\"\"\n    Counts the number of True booleans in the given list.\n\n    Args:\n        lst (list): A list containing boolean values.\n\n    Returns:\n        int: The count of True booleans in the list.\n    \"\"\"\n    return sum([bool(x) for x in lst])\n\n# Test cases\nprint(count_true_booleans([True, False, True]))  # Output: 2\nprint(count_true_booleans([False, False, False]))  # Output: 0\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 113,
+    "total_ns": 2421928459,
+    "wall_s": 2.478801965713501,
+    "pred": "?",
+    "gold": "1",
+    "exec_out": "NameError"
+  },
+  "58": {
+    "text": "```python\ndef compute_Last_Digit(n, b):\n    \"\"\"\n    Compute the last digit of (n!) / (b! * n!)\n    \n    Parameters:\n    n (int): The first integer.\n    b (int): The second integer.\n    \n    Returns:\n    int: The last digit of (n!) / (b! * n!)\n    \"\"\"\n    # Calculate factorial\n    n_fact = 1\n    for i in range(1, n + 1):\n        n_fact *= i\n    \n    # Calculate b! and n!\n    b_fact = 1\n    for i in range(1, b + 1):\n        b_fact *= i\n    \n    # Compute the last digit of (n!) / (b! * n!)\n    return int(n_fact // (b_fact * n_fact))\n\n# Test cases to verify the correctness of the function\nassert compute_Last_Digit(5, 4) == 2, \"Test case 1 failed\"\nassert compute_Last_Digit(6, 7) == 0, \"Test case 2 failed\"\nassert compute_Last_Digit(8, 9) == 3, \"Test case 3 failed\"\n\nprint(\"All test cases passed!\")\n```",
+    "prompt_tokens": 65,
+    "eval_tokens": 256,
+    "total_ns": 5304119958,
+    "wall_s": 5.337695121765137,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "0"
+  },
+  "59": {
+    "text": "```python\ndef tetrahedral_number(n):\n    \"\"\"\n    Calculate the n-th tetrahedral number.\n\n    A tetrahedral number, or triangular number of order n, is the sum of the first n natural numbers:\n    T_n = 1 + 2 + ... + (n-1) + n\n\n    Parameters:\n    n (int): The order of the tetrahedral number to calculate.\n\n    Returns:\n    int: The nth tetrahedral number.\n    \"\"\"\n    return n * (n + 1) // 2\n\n# Test cases\nprint(tetrahedral_number(3))  # Output: 10\nprint(tetrahedral_number(4))  # Output: 20\n```",
+    "prompt_tokens": 59,
+    "eval_tokens": 154,
+    "total_ns": 3336934667,
+    "wall_s": 3.7739367485046387,
+    "pred": "3",
+    "gold": "0",
+    "exec_out": "15"
+  },
+  "60": {
+    "text": "```python\nfrom math import gcd\n\ndef get_gcd(arr):\n    \"\"\"\n    Calculate the greatest common divisor (GCD) of an array of integers.\n\n    Parameters:\n    arr (list): A list of integers.\n\n    Returns:\n    int: The GCD of the given array elements.\n    \"\"\"\n    return gcd(*arr)\n\n# Test cases\nprint(get_gcd([21, 64, 80]))  # Expected output: 1\nprint(get_gcd([35, 77, 91]))  # Expected output: 7\n```",
+    "prompt_tokens": 59,
+    "eval_tokens": 122,
+    "total_ns": 2417963834,
+    "wall_s": 2.62239408493042,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "2"
+  },
+  "61": {
+    "text": "```python\ndef kth_element(arr, n):\n    \"\"\"\n    Find the kth element in the given array.\n\n    Parameters:\n    arr (list): The input list of integers.\n    n (int): The position of the element to find (1-based index).\n\n    Returns:\n    int: The kth element in the array.\n    \"\"\"\n    return arr[n-1]\n\n# Test cases\nprint(kth_element([3, 2, 1, 5, 6], 4))  # Output: 5\nprint(kth_element([10, 9, 8, 7, 6, 5, 4, 3, 2, 1], 5))  # Output: 4\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 158,
+    "total_ns": 3294662083,
+    "wall_s": 3.467026948928833,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "62": {
+    "text": "```python\ndef sort_mixed_list(lst):\n    \"\"\"\n    Sorts a given mixed list of integers and strings.\n\n    Args:\n        lst (list): A list containing both integers and strings.\n\n    Returns:\n        list: A sorted version of the input list.\n    \"\"\"\n    # Convert the list to a set to remove duplicates, then sort it\n    sorted_lst = sorted(set(lst))\n    return sorted_lst\n\n# Test cases to verify the correctness of the function\nassert sort_mixed_list([3, 1, \"banana\", \"apple\"]) == [1, \"apple\", \"banana\", 3]\nassert sort_mixed_list([\"dog\", \"cat\", \"elephant\", \"monkey\"]) == [\"elephant\", \"monkey\", \"cat\", \"dog\"]\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 160,
+    "total_ns": 3308650625,
+    "wall_s": 3.420994758605957,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "63": {
+    "text": "```python\ndef odd_bit_set_number(num):\n    \"\"\"\n    Sets all odd bits of a given number.\n\n    Parameters:\n    num (int): The integer number whose odd bits are to be set.\n\n    Returns:\n    int: The new number with all odd bits set.\n    \"\"\"\n    # Convert the number to binary and remove the '0b' prefix\n    binary_num = bin(num)[2:]\n    \n    # Set all odd bits by XORing each bit with 1\n    result = 0\n    for i in range(len(binary_num)):\n        if i % 2 == 0:\n            result |= (int(binary_num[i]) ^ 1)\n        else:\n            result |= int(binary_num[i])\n    \n    return result\n\n# Test the function\nprint(odd_bit_set_number(14))  # Output: 18\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 178,
+    "total_ns": 3683084000,
+    "wall_s": 3.7925209999084473,
+    "pred": "1",
+    "gold": "3",
+    "exec_out": "0"
+  },
+  "64": {
+    "text": "```python\ndef binomial_Coeff(n, k):\n    \"\"\"\n    Calculate the binomial coefficient C(n, k) = n! / (k! * (n - k)!)\n    \n    Args:\n        n (int): The total number of items.\n        k (int): The number of items to choose.\n\n    Returns:\n        int: The binomial coefficient.\n    \"\"\"\n    return int((n * (n-1) // (k*(k-1))) if n >= k else 0)\n\n# Test the function\nprint(binomial_Coeff(5, 2))  # Output: 10\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 132,
+    "total_ns": 2770137667,
+    "wall_s": 2.790330171585083,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "10"
+  },
+  "65": {
+    "text": "```python\ndef text_lowercase_underscore(text):\n    \"\"\"\n    This function takes a string and returns a new string where each sequence of lowercase letters is separated by an underscore.\n\n    Example:\n    >>> text_lowercase_underscore(\"HelloWorld\")\n    'h_e_l_lo_w_o_r_l_d'\n    >>> text_lowercase_underscore(\"PythonProgramming\")\n    'p_y_t_h_n_p_r_i_m_a_g_r_e'\n    \"\"\"\n    return ''.join([char.lower() for char in text if char.islower()])\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 107,
+    "total_ns": 2289205833,
+    "wall_s": 2.316243886947632,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "'aabcbbbc'"
+  },
+  "66": {
+    "text": "```python\ndef centered_hexagonal_number(n):\n    \"\"\"\n    Calculate the n-th centered hexagonal number.\n\n    A centered hexagonal number is a figurate number that represents a hexagon with a dot at each corner of the hexagon.\n    The formula for the nth centered hexagonal number is: 3n^2 - n\n    where n is the position in the sequence starting from 1.\n\n    Parameters:\n    n (int): The position in the sequence of centered hexagonal numbers.\n\n    Returns:\n    int: The n-th centered hexagonal number.\n    \"\"\"\n    return 3 * n ** 2 - n\n\n# Test cases\nprint(centered_hexagonal_number(1))  # Output: 4\nprint(centered_hexagonal_number(2))  # Output: 9\nprint(centered_hexagonal_number(5))  # Output: 75\n```",
+    "prompt_tokens": 59,
+    "eval_tokens": 185,
+    "total_ns": 3967611500,
+    "wall_s": 3.9961209297180176,
+    "pred": "0",
+    "gold": "0",
+    "exec_out": "290"
+  },
+  "67": {
+    "text": "```python\ndef snake_to_camel(snake_str):\n    \"\"\"\n    Convert a given snake_case string to camelCase.\n\n    Args:\n        snake_str (str): The snake_case string to be converted.\n\n    Returns:\n        str: The converted camelCase string.\n    \"\"\"\n    # Split the snake case into words, capitalize each word except the first one,\n    # and join them together\n    return ''.join(word.capitalize() for word in snake_str.split('_'))\n\n# Test cases to verify the correctness of the function\nassert snake_to_camel(\"this_is_a_test_string\") == \"thisIsATestString\"\nassert snake_to_camel(\"snake_case_to_camel_case\") == \"snakeCaseToCamelCase\"\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 150,
+    "total_ns": 3176475584,
+    "wall_s": 3.2829208374023438,
+    "pred": "0",
+    "gold": "0",
+    "exec_out": "'PythonProgram'"
+  },
+  "68": {
+    "text": "```python\nimport functools\n\ndef sort_sublists(lst):\n    \"\"\"\n    Sorts each sublist of strings in the given list of lists using the lambda function.\n\n    :param lst: List of lists, where each inner list contains strings.\n    :return: A new list of lists with each sublist sorted.\n    \"\"\"\n    return [sorted(sublist) for sublist in lst]\n\n# Test the function\ntest_list = [[\"banana\", \"apple\"], [\"orange\", \"grape\"], [\"kiwi\", \"lemon\"]]\nprint(sort_sublists(test_list))\n```",
+    "prompt_tokens": 65,
+    "eval_tokens": 114,
+    "total_ns": 2392278125,
+    "wall_s": 2.417510986328125,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "[['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]"
+  },
+  "69": {
+    "text": "```python\ndef sequence(n):\n    \"\"\"\n    This function calculates the n-th element of the newman-conway sequence.\n\n    Parameters:\n    n (int): The position in the sequence to calculate.\n\n    Returns:\n    int: The n-th element of the newman-conway sequence.\n    \"\"\"\n    if n == 1:\n        return 0\n    elif n == 2:\n        return 1\n    else:\n        a, b = 0, 1\n        for _ in range(3, n + 1):\n            a, b = b, (a + b) % 10\n        return b\n\n# Test the function with provided data points\nprint(sequence(1))  # Output: 0\nprint(sequence(2))  # Output: 1\nprint(sequence(3))  # Output: 1\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 180,
+    "total_ns": 3799283125,
+    "wall_s": 3.827608108520508,
+    "pred": "2",
+    "gold": "3",
+    "exec_out": "4"
+  },
+  "70": {
+    "text": "```python\nfrom collections import Counter\n\ndef rearange_string(s):\n    \"\"\"\n    Check if the letters of a given string can be rearranged so that two characters that are adjacent to each other are different.\n\n    Args:\n        s (str): The input string consisting of lowercase English letters.\n\n    Returns:\n        bool: True if the letters can be rearranged so that two characters that are adjacent to each other are different, False otherwise.\n    \"\"\"\n    char_count = Counter(s)\n    for i in range(1, len(char_count)):\n        if char_count[char_count[i]] == char_count[i-1]:\n            return False\n    return True\n\n# Test the function\nprint(rearange_string(\"abcba\"))  # Output: True\nprint(rearange_string(\"abccba\"))  # Output: False\n```",
+    "prompt_tokens": 75,
+    "eval_tokens": 171,
+    "total_ns": 3621300291,
+    "wall_s": 3.7171900272369385,
+    "pred": "2",
+    "gold": "1",
+    "exec_out": "False"
+  },
+  "71": {
+    "text": "```python\ndef check_k_elements(lst, k):\n    \"\"\"\n    Check if the given tuple list has all k elements.\n\n    Args:\n        lst (tuple): The input tuple list.\n        k (int): The number of elements to check for.\n\n    Returns:\n        bool: True if all k elements are present in the list, False otherwise.\n    \"\"\"\n    return len(lst) == k\n\n# Test cases\nprint(check_k_elements((1, 2, 3), 4))  # Expected output: True\nprint(check_k_elements((1, 2, 3, 4, 5), 4))  # Expected output: False\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 139,
+    "total_ns": 2925995958,
+    "wall_s": 3.1442768573760986,
+    "pred": "2",
+    "gold": "0",
+    "exec_out": "False"
+  },
+  "72": {
+    "text": "```python\ndef get_Char(s):\n    \"\"\"\n    This function takes a string s as input and returns the character made by adding all the characters of the string.\n\n    Example:\n    >>> get_Char(\"hello\")\n    'l'\n    >>> get_Char(\"world\")\n    'w'\n    \"\"\"\n    return ''.join(sorted(set(s)))\n\n# Test cases\nprint(get_Char(\"hello\"))  # Output: 'l'\nprint(get_Char(\"world\"))  # Output: 'w'\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 100,
+    "total_ns": 2065986292,
+    "wall_s": 2.0892717838287354,
+    "pred": "1",
+    "gold": "0",
+    "exec_out": "'abc'"
+  },
+  "73": {
+    "text": "```python\ndef divisor(n):\n    \"\"\"\n    Calculate and return the number of divisors of a given integer n.\n\n    Parameters:\n    n (int): The integer to calculate the divisors for.\n\n    Returns:\n    int: The number of divisors of n.\n    \"\"\"\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count\n\n# Test cases\nprint(divisor(6))   # Output: 4 (divisors are 1, 2, 3, 6)\nprint(divisor(8))   # Output: 5 (divisors are 1, 2, 4, 8, 8)\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 160,
+    "total_ns": 3370661750,
+    "wall_s": 3.4737629890441895,
+    "pred": "2",
+    "gold": "2",
+    "exec_out": "4"
+  },
+  "74": {
+    "text": "```python\ndef recursive_list_sum(lst):\n    \"\"\"\n    Recursively calculates the sum of all elements in a given list.\n\n    Args:\n        lst (list): A list of numbers.\n\n    Returns:\n        int: The sum of all elements in the list.\n    \"\"\"\n    if not lst:\n        return 0\n    else:\n        return lst[0] + recursive_list_sum(lst[1:])\n```",
+    "prompt_tokens": 54,
+    "eval_tokens": 84,
+    "total_ns": 1776750750,
+    "wall_s": 2.1169819831848145,
+    "pred": "?",
+    "gold": "3",
+    "exec_out": "TypeError"
+  },
+  "75": {
+    "text": "```python\ndef zip_tuples(tup1, tup2):\n    \"\"\"\n    Zips two input tuples into one tuple.\n\n    Args:\n        tup1 (tuple): The first input tuple.\n        tup2 (tuple): The second input tuple.\n\n    Returns:\n        tuple: A new tuple containing elements from both input tuples.\n    \"\"\"\n    return tuple(tup1 + tup2)\n\n# Test the function\ntup1 = (1, 2, 3)\ntup2 = ('a', 'b', 'c')\nresult = zip_tuples(tup1, tup2)\nprint(result)  # Output: ('1', 'a', '2', 'b', '3', 'c')\n```",
+    "prompt_tokens": 55,
+    "eval_tokens": 147,
+    "total_ns": 2941278792,
+    "wall_s": 3.174488067626953,
+    "pred": "0",
+    "gold": "1",
+    "exec_out": "(7, 8, 4, 5, 9, 10, 1, 5, 6)"
+  },
+  "76": {
+    "text": "```python\ndef is_undulating(n):\n    \"\"\"\n    Check if a given integer n is undulating.\n\n    A number is considered undulating if it has at least one digit that appears more than once consecutively.\n    \n    Parameters:\n    n (int): The integer to check.\n\n    Returns:\n    bool: True if the number is undulating, False otherwise.\n    \"\"\"\n    # Convert the number to a string and iterate through each character\n    for char in str(n):\n        # Check if any digit appears more than once consecutively\n        if n % 10 == int(char) or (n // 10) % 10 == int(char):\n            return True\n    return False\n\n# Test cases to verify the correctness of the function\nassert is_undulating(123456789) == True, \"The number 123456789 is undulating.\"\nassert is_undulating(111111111) == False, \"The number 111111111 is not undulating.\"\nassert is_undulating(100000000) == True, \"The number 100000000 is undulating.\"\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 271,
+    "total_ns": 5561370125,
+    "wall_s": 5.632253170013428,
+    "pred": "?",
+    "gold": "0",
+    "exec_out": "TypeError"
+  },
+  "77": {
+    "text": "```python\neven_numbers = list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6]))\nprint(even_numbers)\n```\n\nThis Python code defines a lambda function that checks if an input number is even (i.e., divisible by 2). The `filter` function then applies this lambda to the list `[1, 2, 3, 4, 5, 6]`, returning only those numbers which are even. Finally, it prints the resulting list of even numbers.",
+    "prompt_tokens": 57,
+    "eval_tokens": 119,
+    "total_ns": 2460807625,
+    "wall_s": 2.607316017150879,
+    "pred": "?",
+    "gold": "0",
+    "exec_out": "NameError"
+  },
+  "78": {
+    "text": "```python\ndef test_duplicate(arr):\n    \"\"\"\n    Check if an array contains any duplicates.\n\n    Args:\n        arr (list): A list of integers.\n\n    Returns:\n        bool: True if there are duplicates, False otherwise.\n    \"\"\"\n    # Sort the array and check for consecutive elements\n    sorted_arr = sorted(arr)\n    for i in range(len(sorted_arr) - 1):\n        if sorted_arr[i] == sorted_arr[i + 1]:\n            return True\n    return False\n\n# Test cases to verify the correctness of the function\ndef test_function():\n    assert test_duplicate([1, 2, 3, 4]) == True, \"Test case 1 failed\"\n    assert test_duplicate([1, 2, 3, 4, 5]) == False, \"Test case 2 failed\"\n    assert test_duplicate([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]) == True, \"Test case 3 failed\"\n    assert test_duplicate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == False, \"Test case 4 failed\"\n\ntest_function()\n```",
+    "prompt_tokens": 61,
+    "eval_tokens": 267,
+    "total_ns": 5488623791,
+    "wall_s": 5.600486993789673,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "IndentationError"
+  },
+  "79": {
+    "text": "```python\nmarks = [(\"Alice\", 90), (\"Bob\", 85), (\"Charlie\", 92)]\nsorted_marks = sorted(marks, key=lambda x: x[1])\nprint(sorted_marks)\n```\n\nIn this solution, we use the `sorted()` function with a lambda function as the key argument to sort the list of tuples based on the second element (marks).",
+    "prompt_tokens": 57,
+    "eval_tokens": 81,
+    "total_ns": 1731591125,
+    "wall_s": 1.841242790222168,
+    "pred": "?",
+    "gold": "3",
+    "exec_out": "NameError"
+  },
+  "80": {
+    "text": "```python\ndef pos_count(numbers):\n    \"\"\"\n    Counts the number of positive numbers in a given list.\n\n    Args:\n        numbers (list): A list of integers.\n\n    Returns:\n        int: The count of positive numbers in the list.\n    \"\"\"\n    return sum(1 for num in numbers if num > 0)\n\n# Test cases\nprint(pos_count([1, -2, 3, -4, 5]))  # Output: 3\nprint(pos_count([-1, -2, -3, -4, -5]))  # Output: 0\n```",
+    "prompt_tokens": 57,
+    "eval_tokens": 123,
+    "total_ns": 2587203292,
+    "wall_s": 2.6449012756347656,
+    "pred": "1",
+    "gold": "1",
+    "exec_out": "2"
+  },
+  "81": {
+    "text": "```python\ndef find_first_duplicate(nums):\n    \"\"\"\n    Finds the first duplicate number in an array.\n\n    Args:\n        nums (List[int]): A list of integers.\n\n    Returns:\n        int: The first duplicate number found.\n    \"\"\"\n    seen = set()\n    for num in nums:\n        if num in seen:\n            return num\n        seen.add(num)\n    return None\n\n# Test the function with a provided array\nnums = [1, 3, 4, 2, 5]\nprint(find_first_duplicate(nums))  # Output: 1\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 120,
+    "total_ns": 2548861875,
+    "wall_s": 2.79672908782959,
+    "pred": "2",
+    "gold": "2",
+    "exec_out": "4"
+  },
+  "82": {
+    "text": "```python\nimport re\n\ndef split_lowerstring(s: str) -> list:\n    \"\"\"\n    Splits a given string at lowercase letters.\n\n    Parameters:\n    s (str): The input string to be split.\n\n    Returns:\n    list: A list of substrings, each containing one or more characters from the original string.\n    \"\"\"\n    # Using regular expression to find all substrings starting with a lowercase letter\n    return re.findall(r'\\b[a-z]+\\b', s)\n\n# Test cases to verify the correctness of the function\nassert split_lowerstring(\"HelloWorld\") == [\"H\", \"e\", \"l\", \"l\", \"o\", \"W\", \"or\", \"d\"]\nassert split_lowerstring(\"PythonProgramming\") == [\"P\", \"y\", \"t\", \"h\", \"o\", \"p\", \"r\", \"g\", \"r\", \"a\", \"m\", \"p\", \"i\", \"n\", \"g\"]\n\nprint(\"All test cases passed!\")\n```",
+    "prompt_tokens": 57,
+    "eval_tokens": 206,
+    "total_ns": 4225687416,
+    "wall_s": 4.254122018814087,
+    "pred": "1",
+    "gold": "0",
+    "exec_out": "[]"
+  },
+  "83": {
+    "text": "```python\ndef div_even_odd(lst):\n    \"\"\"\n    This function takes a list as input, finds the division between the first even and odd numbers,\n    and returns the result.\n\n    :param lst: List of integers\n    :return: Division result\n    \"\"\"\n    evens = [x for x in lst if x % 2 == 0]\n    odds = [x for x in lst if x % 2 != 0]\n\n    return min(evens) / max(odds)\n\n# Test the function with a list of numbers\nprint(div_even_odd([1, 2, 3, 4, 5]))  # Output: 0.6666666666666666\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 158,
+    "total_ns": 3326356334,
+    "wall_s": 3.616645097732544,
+    "pred": "2",
+    "gold": "2",
+    "exec_out": "0.5714285714285714"
+  },
+  "84": {
+    "text": "```python\nfrom typing import List\n\ndef find_tuples(tuples: List[tuple], k: int) -> List[tuple]:\n    \"\"\"\n    Finds all tuples from the given list that have all elements divisible by k.\n\n    Args:\n        tuples (List[tuple]): A list of tuples.\n        k (int): The divisor to check for divisibility in each tuple element.\n\n    Returns:\n        List[tuple]: A list of tuples with all elements divisible by k.\n    \"\"\"\n    return [tup for tup in tuples if all(x % k == 0 for x in tup)]\n\n# Test the function\nif __name__ == \"__main__\":\n    test_tuples = [(1, 2), (3, 4), (5, 6, 7), (8, 9, 10)]\n    print(find_tuples(test_tuples, 2))  # Output: [(1, 2), (5, 6, 7)]\n```",
+    "prompt_tokens": 65,
+    "eval_tokens": 199,
+    "total_ns": 4090961500,
+    "wall_s": 4.185408115386963,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "ImportError"
+  },
+  "85": {
+    "text": "```python\ndef remove_dirty_chars(s1, s2):\n    \"\"\"\n    Removes characters from the first string which are present in the second string.\n\n    Parameters:\n    s1 (str): The original string.\n    s2 (str): A string containing characters to be removed from s1.\n\n    Returns:\n    str: A new string with characters from s2 removed from s1.\n    \"\"\"\n    return ''.join([char for char in s1 if char not in s2])\n\n# Test the function\ns1 = \"abcdef\"\ns2 = \"abxy\"\nprint(remove_dirty_chars(s1, s2))  # Output: cdef\n\ns3 = \"hello world\"\ns4 = \"world!python\"\nprint(remove_dirty_chars(s3, s4))  # Output: hello python\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 168,
+    "total_ns": 3500248500,
+    "wall_s": 3.669344902038574,
+    "pred": "3",
+    "gold": "3",
+    "exec_out": "'bacuve'"
+  },
+  "86": {
+    "text": "```python\nimport math\n\ndef surfacearea_sphere(radius):\n    \"\"\"\n    Calculate the surface area of a sphere given its radius.\n\n    Parameters:\n    radius (float): The radius of the sphere.\n\n    Returns:\n    float: The surface area of the sphere.\n    \"\"\"\n    return 4 * math.pi * radius ** 2\n```",
+    "prompt_tokens": 58,
+    "eval_tokens": 70,
+    "total_ns": 1463260208,
+    "wall_s": 1.575010061264038,
+    "pred": "0",
+    "gold": "0",
+    "exec_out": "1256.6370614359173"
+  },
+  "87": {
+    "text": "```python\ndef find_Max_Num(digits):\n    \"\"\"\n    This function takes a list of integers (digits) and returns the maximum integer that can be formed by rearranging its digits.\n\n    :param digits: List[int] - A list of integers representing the digits.\n    :return: int - The largest number that can be formed from the given digits.\n    \"\"\"\n    # Sort the digits in descending order\n    sorted_digits = sorted(digits, reverse=True)\n    \n    # Convert the sorted digits back to an integer and return it\n    return int(''.join(map(str, sorted_digits)))\n\n# Test cases\nprint(find_Max_Num([3, 30, 34, 5, 9]))  # Output: 5934330\nprint(find_Max_Num([18, 42, 9, 6]))    # Output: 964218\n```",
+    "prompt_tokens": 64,
+    "eval_tokens": 190,
+    "total_ns": 3967648625,
+    "wall_s": 4.193974018096924,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "TypeError"
+  },
+  "88": {
+    "text": "```python\ndef maximum_Sum(lst):\n    \"\"\"\n    Finds the maximum sum of elements in a list of lists.\n\n    Args:\n        lst (list): A list of lists containing integers.\n\n    Returns:\n        int: The maximum sum of elements.\n    \"\"\"\n    max_sum = float('-inf')\n    for sublist in lst:\n        current_sum = 0\n        for num in sublist:\n            current_sum += num\n        if current_sum > max_sum:\n            max_sum = current_sum\n    return max_sum\n\n# Test the function with a sample list of lists\nlst = [[-2, -3, 4], [1, -2, -1], [-3, 5, -1]]\nprint(maximum_Sum(lst))  # Output: 6\n```",
+    "prompt_tokens": 65,
+    "eval_tokens": 163,
+    "total_ns": 3345915500,
+    "wall_s": 3.4686279296875,
+    "pred": "0",
+    "gold": "0",
+    "exec_out": "33"
+  },
+  "89": {
+    "text": "```python\ndef word_len(word):\n    \"\"\"\n    Check if the length of the given word is odd.\n\n    Args:\n        word (str): The input word.\n\n    Returns:\n        bool: True if the length of the word is odd, False otherwise.\n    \"\"\"\n    return len(word) % 2 != 0\n\n# Test cases\nprint(word_len(\"hello\"))  # Expected output: True\nprint(word_len(\"world\"))  # Expected output: False\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 99,
+    "total_ns": 2078581916,
+    "wall_s": 2.1057047843933105,
+    "pred": "2",
+    "gold": "2",
+    "exec_out": "False"
+  },
+  "90": {
+    "text": "```python\ndef is_woodball(number):\n    \"\"\"\n    Check if a given number is a Woodball number.\n\n    A Woodball number is defined as a positive integer that satisfies the following conditions:\n    - It has exactly 10 divisors.\n    - The sum of its divisors (excluding itself) equals the number itself.\n\n    Parameters:\n    - number: An integer to check if it's a Woodball number.\n\n    Returns:\n    - A boolean value indicating whether the given number is a Woodball number or not.\n    \"\"\"\n    def divisor_sum(n):\n        \"\"\"Calculate the sum of divisors of n.\"\"\"\n        return sum(i for i in range(1, int(n**0.5) + 1) if n % i == 0)\n\n    # Check if the number has exactly 10 divisors\n    if divisor_sum(number) != number:\n        return False\n\n    # Check if the sum of divisors (excluding itself) equals the number\n    return divisor_sum(2 * number - 1) == number\n\n# Test cases to verify the correctness of the function\nprint(is_woodball(36))  # True, because 36 has exactly 10 divisors: 1, 2, 3, 4, 6, 9, 12, 18, 36\nprint(is_woodball(77))  # False, because 77 does not have exactly 10 divisors (excluding itself)\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 315,
+    "total_ns": 6537684750,
+    "wall_s": 6.563598155975342,
+    "pred": "?",
+    "gold": "0",
+    "exec_out": "NameError"
+  },
+  "91": {
+    "text": "```python\ndef square_perimeter(side_length):\n    \"\"\"\n    Calculate and return the perimeter of a square.\n\n    The perimeter of a square is the total distance around it, which can be calculated as 4 times the side length.\n    \n    Parameters:\n    side_length (float or int): The length of one side of the square.\n\n    Returns:\n    float: The perimeter of the square.\n    \"\"\"\n    return 4 * side_length\n\n# Test cases\nprint(square_perimeter(5))  # Expected output: 20.0\nprint(square_perimeter(10))  # Expected output: 40.0\n```",
+    "prompt_tokens": 57,
+    "eval_tokens": 133,
+    "total_ns": 2836910208,
+    "wall_s": 2.865372896194458,
+    "pred": "3",
+    "gold": "3",
+    "exec_out": "40"
+  },
+  "92": {
+    "text": "```python\ndef index_minimum(tuples):\n    \"\"\"\n    Extracts and returns the index of the tuple with the smallest first element.\n\n    Parameters:\n    tuples (list of tuples): A list of tuples, where each tuple contains at least one element.\n\n    Returns:\n    int: The index of the tuple with the smallest first element.\n    \"\"\"\n    return min(range(len(tuples)), key=lambda i: tuples[i][0])\n\n# Test cases\ntuples1 = [(5, 'a'), (3, 'b'), (4, 'c')]\nprint(index_minimum(tuples1))  # Expected output: 2\n\ntuples2 = [(6, 'x'), (7, 'y'), (8, 'z')]\nprint(index_minimum(tuples2))  # Expected output: 0\n```",
+    "prompt_tokens": 60,
+    "eval_tokens": 167,
+    "total_ns": 3504466833,
+    "wall_s": 3.712163209915161,
+    "pred": "3",
+    "gold": "3",
+    "exec_out": "1"
+  },
+  "93": {
+    "text": "```python\nfrom collections import defaultdict\n\ndef count_Substrings(s: str) -> int:\n    \"\"\"\n    Counts the number of substrings within a given string s that have the same sum of digits as their length.\n\n    Parameters:\n    s (str): The input string consisting of digits and spaces.\n\n    Returns:\n    int: The count of substrings meeting the criteria.\n    \"\"\"\n    # Count the occurrences of each digit in the string\n    digit_counts = defaultdict(int)\n    for char in s:\n        if '0' <= char <= '9':\n            digit_counts[char] += 1\n\n    result = 0\n    current_sum = sum(digit_counts.values())\n    \n    for i, count in enumerate(digit_counts):\n        # If the current substring has a length equal to its sum of digits\n        if len(s) == current_sum:\n            result += 1\n        else:\n            # Otherwise, update the current sum and reset the result\n            current_sum = sum(digit_counts.values())\n            result += 1\n\n    return result\n\n# Test cases\nprint(count_Substrings(\"42\"))  # Output: 0\nprint(count_Substrings(\"698551006\"))  # Output: 3\n```",
+    "prompt_tokens": 66,
+    "eval_tokens": 261,
+    "total_ns": 5366682750,
+    "wall_s": 5.399237871170044,
+    "pred": "?",
+    "gold": "3",
+    "exec_out": "TypeError"
+  },
+  "94": {
+    "text": "```python\nfrom typing import List\n\ndef count_substrings_with_equal_ends(s: str) -> int:\n    \"\"\"\n    Counts all substrings that start and end with the same character.\n\n    Args:\n        s (str): The input string.\n\n    Returns:\n        int: The total number of substrings starting and ending with the same character.\n    \"\"\"\n    if not s or len(s) < 2:\n        return 0\n\n    count = 1\n    for i in range(1, len(s)):\n        if s[i] == s[i-1]:\n            count += 1\n    return count\n\n# Test cases\nprint(count_substrings_with_equal_ends(\"abc\"))  # Output: 3\nprint(count_substrings_with_equal_ends(\"aaa\"))  # Output: 6\n```",
+    "prompt_tokens": 69,
+    "eval_tokens": 167,
+    "total_ns": 3509068250,
+    "wall_s": 3.538638114929199,
+    "pred": "?",
+    "gold": "2",
+    "exec_out": "ImportError"
+  },
+  "95": {
+    "text": "```python\ndef parallelogram_area(base, height):\n    \"\"\"\n    Calculate the area of a parallelogram.\n\n    Parameters:\n    base (float): The length of the base of the parallelogram.\n    height (float): The perpendicular height from the base to the opposite side.\n\n    Returns:\n    float: The area of the parallelogram.\n    \"\"\"\n    return base * height\n\n# Test the function\nprint(parallelogram_area(10, 5))  # Expected output: 50.0\n```",
+    "prompt_tokens": 62,
+    "eval_tokens": 112,
+    "total_ns": 2386093125,
+    "wall_s": 2.761381149291992,
+    "pred": "3",
+    "gold": "3",
+    "exec_out": "200"
+  }
+}

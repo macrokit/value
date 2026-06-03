@@ -1,0 +1,1352 @@
+{
+  "0": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: +4\nRegister = 4 + 4 = 8\nModulo 6: 8 % 6 = 2\nNew register value: 2\n\nOperation 2: *3\nRegister = 2 * 3 = 6\nModulo 6: 6 % 6 = 0\nNew register value: 0\n\nOperation 3: *1\nRegister = 0 * 1 = 0\nModulo 6: 0 % 6 = 0\nNew register value: 0\n\nOperation 4: *1\nRegister = 0 * 1 = 0\nModulo 6: 0 % 6 = 0\nNew register value: 0\n\nOperation 5: -2\nRegister = 0 - 2 = -2\nModulo 6: -2 % 6 = 4 (since we're working with positive values, we can add 6 to get a positive result)\nNew register value: 4\n\n#### <final value 4>",
+    "prompt_tokens": 129,
+    "eval_tokens": 238,
+    "total_ns": 9566852583,
+    "wall_s": 9.699550867080688,
+    "pred": "4",
+    "gold": "4"
+  },
+  "1": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: *1\nRegister = 5 * 1 = 5\nModulo 6: 5 % 6 = 5\nIntermediate value: 5\n\nOperation 2: -3\nRegister = 5 - 3 = 2\nModulo 6: 2 % 6 = 2\nIntermediate value: 2\n\nOperation 3: -5\nRegister = 2 - 5 = -3\nModulo 6: -3 % 6 = 3 (since -3 is equivalent to 3 modulo 6)\nIntermediate value: 3\n\nOperation 4: -3\nRegister = 3 - 3 = 0\nModulo 6: 0 % 6 = 0\nIntermediate value: 0\n\nOperation 5: -3\nRegister = 0 - 3 = -3\nModulo 6: -3 % 6 = 3 (since -3 is equivalent to 3 modulo 6)\nFinal value: 3\n\n#### <final value 3>",
+    "prompt_tokens": 129,
+    "eval_tokens": 238,
+    "total_ns": 9341967875,
+    "wall_s": 9.435195207595825,
+    "pred": "3",
+    "gold": "3"
+  },
+  "2": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: +1\nRegister = 4 + 1 = 5\nModulo 6: 5 % 6 = 5\n#### <5>\n\nOperation 2: +4\nRegister = 5 + 4 = 9\nModulo 6: 9 % 6 = 3\n#### <3>\n\nOperation 3: -1\nRegister = 3 - 1 = 2\nModulo 6: 2 % 6 = 2\n#### <2>\n\nOperation 4: +1\nRegister = 2 + 1 = 3\nModulo 6: 3 % 6 = 3\n#### <3>\n\nOperation 5: *4\nRegister = 3 * 4 = 12\nModulo 6: 12 % 6 = 0\n#### <0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 197,
+    "total_ns": 7774327625,
+    "wall_s": 7.938957691192627,
+    "pred": "0",
+    "gold": "0"
+  },
+  "3": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: -5\nRegister = 2 - 5 = -3\nModulo 6: -3 \u2261 3 (mod 6)\nNew register value: 3\n\nOperation 2: *3\nRegister = 3 * 3 = 9\nModulo 6: 9 \u2261 3 (mod 6)\nNew register value: 3\n\nOperation 3: *1\nRegister = 3 * 1 = 3\nModulo 6: 3 \u2261 3 (mod 6)\nNew register value: 3\n\nOperation 4: *1\nRegister = 3 * 1 = 3\nModulo 6: 3 \u2261 3 (mod 6)\nNew register value: 3\n\nOperation 5: +2\nRegister = 3 + 2 = 5\nNew register value: 5\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 217,
+    "total_ns": 8523691458,
+    "wall_s": 8.549099922180176,
+    "pred": "5",
+    "gold": "5"
+  },
+  "4": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: +4\nRegister = 5 + 4 = 9\nMod 6: 9 % 6 = 3\nNew register value: 3\n\nOperation 2: *1\nRegister = 3 * 1 = 3\nNo change, as multiplying by 1 doesn't affect the value.\nNew register value: 3\n\nOperation 3: -2\nRegister = 3 - 2 = 1\nMod 6: 1 % 6 = 1\nNew register value: 1\n\nOperation 4: -3\nRegister = 1 - 3 = -2\nMod 6: -2 % 6 = 4 (since we're working with positive values, we add 6 to get a positive result)\nNew register value: 4\n\nOperation 5: -5\nRegister = 4 - 5 = -1\nMod 6: -1 % 6 = 5 (again, adding 6 to get a positive result)\nNew register value: 5\n\n#### <final value 0..5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 246,
+    "total_ns": 9704434917,
+    "wall_s": 9.732144117355347,
+    "pred": "5",
+    "gold": "5"
+  },
+  "5": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: -1\nRegister = 2 - 1 = 1\nMod 6: 1 % 6 = 1\n#### <1>\n\nOperation 2: -3\nRegister = 1 - 3 = -2\nMod 6: (-2) % 6 = 4\n#### <4>\n\nOperation 3: -5\nRegister = 4 - 5 = -1\nMod 6: (-1) % 6 = 5\n#### <5>\n\nOperation 4: -2\nRegister = 5 - 2 = 3\nMod 6: 3 % 6 = 3\n#### <3>\n\nOperation 5: +3\nRegister = 3 + 3 = 6\nMod 6: 6 % 6 = 0\n#### <0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 194,
+    "total_ns": 7670870250,
+    "wall_s": 7.728474855422974,
+    "pred": "0",
+    "gold": "0"
+  },
+  "6": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: Multiply by 3\nRegister = 4 * 3 = 12\nModulo 6: 12 % 6 = 0\nNew register value: 0\n\n#### <0>\n\nOperation 2: Multiply by 1\nRegister = 0 * 1 = 0\nModulo 6: 0 % 6 = 0\nNew register value: 0\n\n#### <0>\n\nOperation 3: Add 2\nRegister = 0 + 2 = 2\nModulo 6: 2 % 6 = 2\nNew register value: 2\n\n#### <2>\n\nOperation 4: Add 1\nRegister = 2 + 1 = 3\nModulo 6: 3 % 6 = 3\nNew register value: 3\n\n#### <3>\n\nOperation 5: Subtract 3\nRegister = 3 - 3 = 0\nModulo 6: 0 % 6 = 0\nNew register value: 0\n\n#### <0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 239,
+    "total_ns": 9367378958,
+    "wall_s": 9.395089864730835,
+    "pred": "0",
+    "gold": "0"
+  },
+  "7": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 5\n   +3: 5 + 3 = 8 (mod 6) = 2\n   #### 2\n\n2. *4: 2 * 4 = 8 (mod 6) = 2\n   #### 2\n\n3. *3: 2 * 3 = 6 (mod 6) = 0\n   #### 0\n\n4. -4: 0 - 4 = -4 (mod 6) = 2\n   #### 2\n\n5. -5: 2 - 5 = -3 (mod 6) = 3\n   #### 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 152,
+    "total_ns": 6093485083,
+    "wall_s": 6.114555835723877,
+    "pred": "3",
+    "gold": "3"
+  },
+  "8": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 3\n   -4 (subtraction): 3 - 4 = -1\n   Modulo 6: -1 % 6 = 5\n   So, after applying -4, the value is: 5\n\n2. +3 (addition): 5 + 3 = 8\n   Modulo 6: 8 % 6 = 2\n   So, after applying +3, the value is: 2\n\n3. *5 (multiplication): 2 * 5 = 10\n   Modulo 6: 10 % 6 = 4\n   So, after applying *5, the value is: 4\n\n4. *2 (multiplication): 4 * 2 = 8\n   Modulo 6: 8 % 6 = 2\n   So, after applying *2, the value is: 2\n\n5. +5 (addition): 2 + 5 = 7\n   Modulo 6: 7 % 6 = 1\n   So, after applying +5, the final value is: 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 265,
+    "total_ns": 10396385083,
+    "wall_s": 10.909415006637573,
+    "pred": "1",
+    "gold": "1"
+  },
+  "9": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: *4\nRegister = 2 * 4 = 8\nModulo 6: 8 % 6 = 2\n\n#### 2\n\nOperation 2: -5\nRegister = 2 - 5 = -3\nModulo 6: -3 % 6 = 3 (since we're working with modulo, negative values wrap around)\n\n#### 3\n\nOperation 3: +1\nRegister = 3 + 1 = 4\n\n#### 4\n\nOperation 4: *2\nRegister = 4 * 2 = 8\nModulo 6: 8 % 6 = 2\n\n#### 2\n\nOperation 5: +2\nRegister = 2 + 2 = 4\n\n#### 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 180,
+    "total_ns": 7157470333,
+    "wall_s": 7.263509035110474,
+    "pred": "4",
+    "gold": "4"
+  },
+  "10": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   Operation: -4\n   Register = 1 - 4 = -3 (mod 6) = 3\n\n2. Register = 3\n   Operation: *3\n   Register = 3 * 3 = 9 (mod 6) = 3\n\n3. Register = 3\n   Operation: *2\n   Register = 3 * 2 = 6 (mod 6) = 0\n\n4. Register = 0\n   Operation: +3\n   Register = 0 + 3 = 3\n\n5. Register = 3\n   Operation: -2\n   Register = 3 - 2 = 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 172,
+    "total_ns": 6837492167,
+    "wall_s": 6.866684913635254,
+    "pred": "1",
+    "gold": "1"
+  },
+  "11": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: -1\nRegister = 4 - 1 = 3\nModulo 6: 3 (no change)\n\n#### 3\n\nOperation 2: +3\nRegister = 3 + 3 = 6\nModulo 6: 0\n\n#### 0\n\nOperation 3: *4\nRegister = 0 * 4 = 0\nModulo 6: 0 (no change)\n\n#### 0\n\nOperation 4: *2\nRegister = 0 * 2 = 0\nModulo 6: 0 (no change)\n\n#### 0\n\nOperation 5: -4\nRegister = 0 - 4 = -4\nModulo 6: 2\n\n#### 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 175,
+    "total_ns": 6969646875,
+    "wall_s": 6.9914610385894775,
+    "pred": "2",
+    "gold": "2"
+  },
+  "12": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 5\n   Operation 1: *2\n   Register = 5 * 2 = 10\n   Modulo 6: 10 % 6 = 4\n   Intermediate value: 4\n\n2. Operation 2: +5\n   Register = 4 + 5 = 9\n   Modulo 6: 9 % 6 = 3\n   Intermediate value: 3\n\n3. Operation 3: +3\n   Register = 3 + 3 = 6\n   Modulo 6: 6 % 6 = 0\n   Intermediate value: 0\n\n4. Operation 4: -3\n   Register = 0 - 3 = -3\n   Modulo 6: -3 % 6 = 3 (since we're working with modulo, negative values wrap around)\n   Intermediate value: 3\n\n5. Operation 5: *5\n   Register = 3 * 5 = 15\n   Modulo 6: 15 % 6 = 3\n   Final value: 3\n\n#### <final value 3>",
+    "prompt_tokens": 129,
+    "eval_tokens": 252,
+    "total_ns": 9865600792,
+    "wall_s": 9.938758134841919,
+    "pred": "3",
+    "gold": "3"
+  },
+  "13": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: +4\nRegister = 5 + 4 = 9\nModulo 6: 9 % 6 = 3\n\nIntermediate value: 3\n\nOperation 2: +4\nRegister = 3 + 4 = 7\nModulo 6: 7 % 6 = 1\n\nIntermediate value: 1\n\nOperation 3: *1\nRegister = 1 * 1 = 1 (no change)\n\nIntermediate value: 1\n\nOperation 4: -4\nRegister = 1 - 4 = -3\nModulo 6: -3 % 6 = 3 (since -3 is equivalent to 3 modulo 6)\n\nIntermediate value: 3\n\nOperation 5: *1\nRegister = 3 * 1 = 3 (no change)\n\nFinal value: #### <3>",
+    "prompt_tokens": 129,
+    "eval_tokens": 198,
+    "total_ns": 7863557667,
+    "wall_s": 7.88248610496521,
+    "pred": "3",
+    "gold": "3"
+  },
+  "14": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\n   *2: register = 0 * 2 = 0\n   mod 6: 0 % 6 = 0\n\n2. -4: register = 0 - 4 = -4\n   mod 6: -4 % 6 = 2\n\n3. +5: register = 2 + 5 = 7\n   mod 6: 7 % 6 = 1\n\n4. +5: register = 1 + 5 = 6\n   mod 6: 6 % 6 = 0\n\n5. -5: register = 0 - 5 = -5\n   mod 6: -5 % 6 = 1\n\n#### <final value 1>",
+    "prompt_tokens": 129,
+    "eval_tokens": 175,
+    "total_ns": 6886100083,
+    "wall_s": 6.915722846984863,
+    "pred": "1",
+    "gold": "1"
+  },
+  "15": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n\nOperation 1: -3\nRegister = 1 - 3 = -2\nModulo 6: -2 % 6 = 4\nNew register value: 4\n\nOperation 2: +4\nRegister = 4 + 4 = 8\nModulo 6: 8 % 6 = 2\nNew register value: 2\n\nOperation 3: +2\nRegister = 2 + 2 = 4\nNew register value: 4\n\nOperation 4: *1\nRegister = 4 * 1 = 4\nNew register value: 4 (no change)\n\nOperation 5: -5\nRegister = 4 - 5 = -1\nModulo 6: -1 % 6 = 5\nNew register value: 5\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 198,
+    "total_ns": 7811917542,
+    "wall_s": 7.899535655975342,
+    "pred": "5",
+    "gold": "5"
+  },
+  "16": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 3\n   Operation 1: +3\n   Register = 3 + 3 = 6 (mod 6) = 0\n\n2. Operation 2: +2\n   Register = 0 + 2 = 2\n\n3. Operation 3: -2\n   Register = 2 - 2 = 0\n\n4. Operation 4: -3\n   Register = 0 - 3 = -3 (mod 6) = 3\n\n5. Operation 5: +5\n   Register = 3 + 5 = 8 (mod 6) = 2\n\n#### <final value 0..5> = 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 159,
+    "total_ns": 6321371250,
+    "wall_s": 6.458599805831909,
+    "pred": "2",
+    "gold": "2"
+  },
+  "17": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: Multiply by 3\nRegister = 5 * 3 = 15\nModulo 6: 15 % 6 = 3\nNew register value: 3\n\nOperation 2: Multiply by 1\nRegister = 3 * 1 = 3\nModulo 6: 3 % 6 = 3 (no change)\nNew register value: 3\n\nOperation 3: Subtract 5\nRegister = 3 - 5 = -2\nModulo 6: -2 % 6 = 4\nNew register value: 4\n\nOperation 4: Multiply by 4\nRegister = 4 * 4 = 16\nModulo 6: 16 % 6 = 4\nNew register value: 4\n\nOperation 5: Multiply by 5\nRegister = 4 * 5 = 20\nModulo 6: 20 % 6 = 2\nNew register value: 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 235,
+    "total_ns": 9223933417,
+    "wall_s": 9.252718925476074,
+    "pred": "2",
+    "gold": "2"
+  },
+  "18": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: +1\nRegister = 5 + 1 = 6\nModulo 6: 6 % 6 = 0\n\n#### 0\n\nOperation 2: -5\nRegister = 0 - 5 = -5\nModulo 6: -5 % 6 = 1 (since -5 is equivalent to 1 modulo 6)\n\n#### 1\n\nOperation 3: +3\nRegister = 1 + 3 = 4\nModulo 6: 4 % 6 = 4\n\n#### 4\n\nOperation 4: -1\nRegister = 4 - 1 = 3\nModulo 6: 3 % 6 = 3\n\n#### 3\n\nOperation 5: +4\nRegister = 3 + 4 = 7\nModulo 6: 7 % 6 = 1\n\n#### 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 208,
+    "total_ns": 8200026041,
+    "wall_s": 8.246971130371094,
+    "pred": "1",
+    "gold": "1"
+  },
+  "19": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 4\n   Operation 1: +5\n   Register = 4 + 5 = 9\n   Modulo 6: 9 % 6 = 3\n   New register: 3\n\n2. Operation 2: +4\n   Register = 3 + 4 = 7\n   Modulo 6: 7 % 6 = 1\n   New register: 1\n\n3. Operation 3: *5\n   Register = 1 * 5 = 5\n   No modulo needed, new register remains 5.\n\n4. Operation 4: -3\n   Register = 5 - 3 = 2\n   Modulo 6: 2 % 6 = 2\n   New register: 2\n\n5. Operation 5: -5\n   Register = 2 - 5 = -3\n   Modulo 6: -3 % 6 = 3 (since -3 is equivalent to 3 modulo 6)\n   New register: 3\n\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 245,
+    "total_ns": 9614162083,
+    "wall_s": 9.928047180175781,
+    "pred": "3",
+    "gold": "3"
+  },
+  "20": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 3\n   Operation: -3\n   Register = 3 - 3 = 0\n   Modulo 6: 0 % 6 = 0\n\n2. Operation: +2\n   Register = 0 + 2 = 2\n   Modulo 6: 2 % 6 = 2\n\n3. Operation: *2\n   Register = 2 * 2 = 4\n   Modulo 6: 4 % 6 = 4\n\n4. Operation: +5\n   Register = 4 + 5 = 9\n   Modulo 6: 9 % 6 = 3\n\n5. Operation: -5\n   Register = 3 - 5 = -2\n   Modulo 6: -2 % 6 = 4 (since we're working with positive values, we can add 6 to get a positive result)\n\n#### <final value 0..5> 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 218,
+    "total_ns": 8672273292,
+    "wall_s": 8.733181953430176,
+    "pred": "4",
+    "gold": "4"
+  },
+  "21": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n--------------------\n\nOperation 1: +1\nNew value: 1 + 1 = 2\nModulo 6: 2 % 6 = 2\n--------------------\nRegister: 2\n\nOperation 2: +2\nNew value: 2 + 2 = 4\nModulo 6: 4 % 6 = 4\n--------------------\nRegister: 4\n\nOperation 3: -1\nNew value: 4 - 1 = 3\nModulo 6: 3 % 6 = 3\n--------------------\nRegister: 3\n\nOperation 4: +2\nNew value: 3 + 2 = 5\nModulo 6: 5 % 6 = 5\n--------------------\nRegister: 5\n\nOperation 5: *3\nNew value: 5 * 3 = 15\nModulo 6: 15 % 6 = 3\n--------------------\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 225,
+    "total_ns": 8896140333,
+    "wall_s": 9.11580491065979,
+    "pred": "3",
+    "gold": "3"
+  },
+  "22": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   Operation: -2\n   Register = 1 - 2 = -1 (mod 6) = 5\n\n2. Operation: +2\n   Register = 5 + 2 = 7 (mod 6) = 1\n\n3. Operation: +2\n   Register = 1 + 2 = 3\n\n4. Operation: -5\n   Register = 3 - 5 = -2 (mod 6) = 4\n\n5. Operation: +3\n   Register = 4 + 3 = 7 (mod 6) = 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 156,
+    "total_ns": 6194160541,
+    "wall_s": 6.227082014083862,
+    "pred": "1",
+    "gold": "1"
+  },
+  "23": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n--------------------\n\nOperation 1: +4\nNew value: 1 + 4 = 5\nModulo 6: 5 (no change)\n--------------------\nRegister: 5\n\nOperation 2: +4\nNew value: 5 + 4 = 9\nModulo 6: 3\n--------------------\nRegister: 3\n\nOperation 3: -1\nNew value: 3 - 1 = 2\nModulo 6: 2 (no change)\n--------------------\nRegister: 2\n\nOperation 4: *2\nNew value: 2 * 2 = 4\nModulo 6: 4 (no change)\n--------------------\nRegister: 4\n\nOperation 5: *4\nNew value: 4 * 4 = 16\nModulo 6: 4\n--------------------\nRegister: 4\n\n#### <final value 0..5> 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 8264015333,
+    "wall_s": 8.295706033706665,
+    "pred": "4",
+    "gold": "4"
+  },
+  "24": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 3\n   Operation 1: +2\n   Register = 3 + 2 = 5\n   Modulo 6: 5 % 6 = 5\n\n2. Operation 2: -4\n   Register = 5 - 4 = 1\n   Modulo 6: 1 % 6 = 1\n\n3. Operation 3: *3\n   Register = 1 * 3 = 3\n   Modulo 6: 3 % 6 = 3\n\n4. Operation 4: +4\n   Register = 3 + 4 = 7\n   Modulo 6: 7 % 6 = 1\n\n5. Operation 5: *3\n   Register = 1 * 3 = 3\n   Modulo 6: 3 % 6 = 3\n\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 8221870917,
+    "wall_s": 8.238889217376709,
+    "pred": "3",
+    "gold": "3"
+  },
+  "25": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n--------------------\n\nOperation 1: +2\nNew value: 1 + 2 = 3\nModulo 6: 3 % 6 = 3\n--------------------\nRegister: 3\n\nOperation 2: +1\nNew value: 3 + 1 = 4\nModulo 6: 4 % 6 = 4\n--------------------\nRegister: 4\n\nOperation 3: +5\nNew value: 4 + 5 = 9\nModulo 6: 9 % 6 = 3\n--------------------\nRegister: 3\n\nOperation 4: *2\nNew value: 3 * 2 = 6\nModulo 6: 6 % 6 = 0\n--------------------\nRegister: 0\n\nOperation 5: +4\nNew value: 0 + 4 = 4\nModulo 6: 4 % 6 = 4\n--------------------\n#### <final value 4>",
+    "prompt_tokens": 129,
+    "eval_tokens": 221,
+    "total_ns": 8682923250,
+    "wall_s": 9.212637901306152,
+    "pred": "4",
+    "gold": "4"
+  },
+  "26": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: -1\nRegister = 0 - 1 = -1\nModulo 6: -1 % 6 = 5\nNew register value: 5\n\n#### <final value 0..5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 65,
+    "total_ns": 2770199583,
+    "wall_s": 3.1492650508880615,
+    "pred": "5",
+    "gold": "1"
+  },
+  "27": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 5\n   +3: 5 + 3 = 8 (mod 6) = 2\n   #### 2\n\n2. *3: 2 * 3 = 6 (mod 6) = 0\n   #### 0\n\n3. *2: 0 * 2 = 0 (mod 6) = 0\n   #### 0\n\n4. -5: 0 - 5 = -5 (mod 6) = 1\n   #### 1\n\n5. *3: 1 * 3 = 3 (mod 6) = 3\n   #### 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 152,
+    "total_ns": 6107359584,
+    "wall_s": 6.134599208831787,
+    "pred": "3",
+    "gold": "3"
+  },
+  "28": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: +2\nRegister = 0 + 2 = 2\nModulo 6: 2 % 6 = 2\nResult: 2\n\nOperation 2: +5\nRegister = 2 + 5 = 7\nModulo 6: 7 % 6 = 1\nResult: 1\n\nOperation 3: *1\nRegister = 1 * 1 = 1\nModulo 6: 1 % 6 = 1\nResult: 1\n\nOperation 4: *4\nRegister = 1 * 4 = 4\nModulo 6: 4 % 6 = 4\nResult: 4\n\nOperation 5: +5\nRegister = 4 + 5 = 9\nModulo 6: 9 % 6 = 3\nResult: 3\n\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 213,
+    "total_ns": 8375093000,
+    "wall_s": 8.402244806289673,
+    "pred": "3",
+    "gold": "3"
+  },
+  "29": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n--------------------\n\nOperation 1: Multiply by 2 (mod 6)\nNew value = 1 * 2 = 2\nRegister value after operation 1: 2\n--------------------\n\nOperation 2: Add 4 (mod 6)\nNew value = 2 + 4 = 6\n6 mod 6 = 0\nRegister value after operation 2: 0\n--------------------\n\nOperation 3: Multiply by 3 (mod 6)\nNew value = 0 * 3 = 0\nRegister value after operation 3: 0\n--------------------\n\nOperation 4: Add 1 (mod 6)\nNew value = 0 + 1 = 1\nRegister value after operation 4: 1\n--------------------\n\nOperation 5: Add 4 (mod 6)\nNew value = 1 + 4 = 5\nRegister value after operation 5: 5\n\n#### <final value 5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 214,
+    "total_ns": 8447169292,
+    "wall_s": 8.467449188232422,
+    "pred": "5",
+    "gold": "5"
+  },
+  "30": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 5\n   Operation 1: *4\n   Register = (5 * 4) mod 6 = 20 mod 6 = 2\n   Intermediate value: 2\n\n2. Operation 2: -4\n   Register = 2 - 4 = -2\n   Since we're working with modulo, we can add 6 to get a positive number:\n   Register = -2 + 6 = 4\n   Intermediate value: 4\n\n3. Operation 3: *3\n   Register = (4 * 3) mod 6 = 12 mod 6 = 0\n   Intermediate value: 0\n\n4. Operation 4: +4\n   Register = 0 + 4 = 4\n   Intermediate value: 4\n\n5. Operation 5: -2\n   Register = 4 - 2 = 2\n   Intermediate value: 2\n\n#### <final value 2>",
+    "prompt_tokens": 129,
+    "eval_tokens": 216,
+    "total_ns": 8501668209,
+    "wall_s": 8.52713394165039,
+    "pred": "2",
+    "gold": "2"
+  },
+  "31": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   Operation: -4\n   Register = 1 + (-4) = -3 (mod 6) = 3\n\n2. Register = 3\n   Operation: -3\n   Register = 3 + (-3) = 0 (mod 6) = 0\n\n3. Register = 0\n   Operation: -3\n   Register = 0 + (-3) = -3 (mod 6) = 3\n\n4. Register = 3\n   Operation: *3\n   Register = 3 * 3 = 9 (mod 6) = 3\n\n5. Register = 3\n   Operation: -2\n   Register = 3 + (-2) = 1 (mod 6) = 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 192,
+    "total_ns": 7583257250,
+    "wall_s": 7.647394180297852,
+    "pred": "1",
+    "gold": "1"
+  },
+  "32": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: *5\nResult = 2 * 5 = 10\nModulo 6: 10 % 6 = 4\nRegister value after operation 1: 4\n\nOperation 2: *5\nResult = 4 * 5 = 20\nModulo 6: 20 % 6 = 2\nRegister value after operation 2: 2\n\nOperation 3: -1\nResult = 2 - 1 = 1\nModulo 6: 1 % 6 = 1\nRegister value after operation 3: 1\n\nOperation 4: *1\nResult = 1 * 1 = 1\nModulo 6: 1 % 6 = 1\nRegister value after operation 4: 1\n\nOperation 5: +2\nResult = 1 + 2 = 3\nModulo 6: 3 % 6 = 3\nRegister value after operation 5: 3\n\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 238,
+    "total_ns": 9332890042,
+    "wall_s": 9.37456488609314,
+    "pred": "3",
+    "gold": "3"
+  },
+  "33": {
+    "text": "Let's apply the operations step by step:\n\nInitial register: 0\n\nOperation 1: *1\nRegister = 0 * 1 = 0\nModulo 6: 0 % 6 = 0\n\nIntermediate value: 0\n\nOperation 2: +5\nRegister = 0 + 5 = 5\nModulo 6: 5 % 6 = 5\n\nIntermediate value: 5\n\nOperation 3: +5\nRegister = 5 + 5 = 10\nModulo 6: 10 % 6 = 4\n\nIntermediate value: 4\n\nOperation 4: *4\nRegister = 4 * 4 = 16\nModulo 6: 16 % 6 = 4\n\nIntermediate value: 4\n\nOperation 5: +2\nRegister = 4 + 2 = 6\nModulo 6: 6 % 6 = 0\n\nFinal value: #### <0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 207,
+    "total_ns": 8157729000,
+    "wall_s": 8.23723816871643,
+    "pred": "0",
+    "gold": "0"
+  },
+  "34": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 2\n   Operation 1: +2\n   Register = 2 + 2 = 4 (mod 6) = 4\n\n2. Operation 2: +3\n   Register = 4 + 3 = 7 (mod 6) = 1\n\n3. Operation 3: *3\n   Register = 1 * 3 = 3\n\n4. Operation 4: *2\n   Register = 3 * 2 = 6 (mod 6) = 0\n\n5. Operation 5: -4\n   Register = 0 - 4 = -4 (mod 6) = 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 166,
+    "total_ns": 6603694625,
+    "wall_s": 6.646290063858032,
+    "pred": "2",
+    "gold": "2"
+  },
+  "35": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: +1\nRegister = 3 + 1 = 4\nModulo 6: 4 % 6 = 4\n#### <4>\n\nOperation 2: -5\nRegister = 4 - 5 = -1\nModulo 6: -1 % 6 = 5 (since -1 is equivalent to 5 modulo 6)\n#### <5>\n\nOperation 3: +1\nRegister = 5 + 1 = 6\nModulo 6: 6 % 6 = 0\n#### <0>\n\nOperation 4: +5\nRegister = 0 + 5 = 5\n#### <5>\n\nOperation 5: +5\nRegister = 5 + 5 = 10\nModulo 6: 10 % 6 = 4\n#### <4>",
+    "prompt_tokens": 129,
+    "eval_tokens": 195,
+    "total_ns": 7722070000,
+    "wall_s": 7.7514660358428955,
+    "pred": "4",
+    "gold": "4"
+  },
+  "36": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: -5\nRegister = 5 - 5 = 0 (mod 6) = 0\n\nOperation 2: -1\nRegister = 0 - 1 = -1 (mod 6) = 5\n\nOperation 3: +4\nRegister = 5 + 4 = 9 (mod 6) = 3\n\nOperation 4: *4\nRegister = 3 * 4 = 12 (mod 6) = 0\n\nOperation 5: -2\nRegister = 0 - 2 = -2 (mod 6) = 4\n\n#### <final value 0..5> 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 158,
+    "total_ns": 6271999250,
+    "wall_s": 6.292193174362183,
+    "pred": "4",
+    "gold": "4"
+  },
+  "37": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: *4\nRegister = 4 * 4 = 16\nMod 6: 16 % 6 = 4\n#### <4>\n\nOperation 2: +2\nRegister = 4 + 2 = 6\nMod 6: 6 % 6 = 0\n#### <0>\n\nOperation 3: +1\nRegister = 0 + 1 = 1\n#### <1>\n\nOperation 4: +5\nRegister = 1 + 5 = 6\nMod 6: 6 % 6 = 0\n#### <0>\n\nOperation 5: +4\nRegister = 0 + 4 = 4\n#### <4>",
+    "prompt_tokens": 129,
+    "eval_tokens": 166,
+    "total_ns": 6613112041,
+    "wall_s": 6.7536749839782715,
+    "pred": "4",
+    "gold": "4"
+  },
+  "38": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: *2\nRegister = 4 * 2 = 8\nModulo 6: 8 % 6 = 2\nRegister = 2\n\nOperation 2: -3\nRegister = 2 - 3 = -1\nModulo 6: -1 % 6 = 5 (since we're working with modulo, the negative value wraps around)\nRegister = 5\n\nOperation 3: +3\nRegister = 5 + 3 = 8\nModulo 6: 8 % 6 = 2\nRegister = 2\n\nOperation 4: +1\nRegister = 2 + 1 = 3\nRegister = 3 (no modulo needed here, just the result of the addition)\n\nOperation 5: +5\nRegister = 3 + 5 = 8\nModulo 6: 8 % 6 = 2\nRegister = 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 224,
+    "total_ns": 8832246959,
+    "wall_s": 8.882069826126099,
+    "pred": "2",
+    "gold": "2"
+  },
+  "39": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: +1\nRegister = 2 + 1 = 3\nModulo 6: 3 % 6 = 3\n\n#### 3\n\nOperation 2: *3\nRegister = 3 * 3 = 9\nModulo 6: 9 % 6 = 3\n\n#### 3\n\nOperation 3: *2\nRegister = 3 * 2 = 6\nModulo 6: 6 % 6 = 0\n\n#### 0\n\nOperation 4: +3\nRegister = 0 + 3 = 3\nModulo 6: 3 % 6 = 3\n\n#### 3\n\nOperation 5: -5\nRegister = 3 - 5 = -2\nModulo 6: -2 % 6 = 4 (since we're working with positive values, we can add 6 to get a positive result)\n\n#### 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 215,
+    "total_ns": 8446953000,
+    "wall_s": 8.46789813041687,
+    "pred": "4",
+    "gold": "4"
+  },
+  "40": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n--------------------\n\nOperation 1: Multiply by 3 (mod 6)\nNew value = 1 * 3 = 3\nRegister value after operation 1: 3\n--------------------\n\nOperation 2: Add 5 (mod 6)\nNew value = 3 + 5 = 8\nTake mod 6: 8 % 6 = 2\nRegister value after operation 2: 2\n--------------------\n\nOperation 3: Add 5 (mod 6)\nNew value = 2 + 5 = 7\nTake mod 6: 7 % 6 = 1\nRegister value after operation 3: 1\n--------------------\n\nOperation 4: Subtract 1 (mod 6)\nNew value = 1 - 1 = 0\nRegister value after operation 4: 0\n--------------------\n\nOperation 5: Multiply by 3 (mod 6)\nNew value = 0 * 3 = 0\nRegister value after operation 5: 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 234,
+    "total_ns": 9185007583,
+    "wall_s": 9.206272840499878,
+    "pred": "0",
+    "gold": "0"
+  },
+  "41": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\nOperation 1: -2 (mod 6)\nRegister = 1 - 2 = -1\n-1 mod 6 = 5\nIntermediate value: 5\n\nOperation 2: +4 (mod 6)\nRegister = 5 + 4 = 9\n9 mod 6 = 3\nIntermediate value: 3\n\nOperation 3: -1 (mod 6)\nRegister = 3 - 1 = 2\nIntermediate value: 2\n\nOperation 4: *4 (mod 6)\nRegister = 2 * 4 = 8\n8 mod 6 = 2\nIntermediate value: 2\n\nOperation 5: +5 (mod 6)\nRegister = 2 + 5 = 7\n7 mod 6 = 1\nFinal value: 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 189,
+    "total_ns": 7477723291,
+    "wall_s": 7.528388023376465,
+    "pred": "1",
+    "gold": "1"
+  },
+  "42": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: -5\nRegister = 4 - 5 = -1\nModulo 6: -1 % 6 = 5\nRegister = 5\n\nOperation 2: +5\nRegister = 5 + 5 = 10\nModulo 6: 10 % 6 = 4\nRegister = 4\n\nOperation 3: +5\nRegister = 4 + 5 = 9\nModulo 6: 9 % 6 = 3\nRegister = 3\n\nOperation 4: *1\nRegister = 3 * 1 = 3 (no change)\nRegister = 3\n\nOperation 5: -2\nRegister = 3 - 2 = 1\nRegister = 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 188,
+    "total_ns": 7429379250,
+    "wall_s": 7.469365835189819,
+    "pred": "1",
+    "gold": "1"
+  },
+  "43": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: +1\nRegister = 2 + 1 = 3\nModulo 6: 3 % 6 = 3\n\n#### 3\n\nOperation 2: *3\nRegister = 3 * 3 = 9\nModulo 6: 9 % 6 = 3\n\n#### 3\n\nOperation 3: -3\nRegister = 3 - 3 = 0\nModulo 6: 0 % 6 = 0\n\n#### 0\n\nOperation 4: -5\nRegister = 0 - 5 = -5\nModulo 6: -5 % 6 = 1 (since -5 is equivalent to 1 modulo 6)\n\n#### 1\n\nOperation 5: +3\nRegister = 1 + 3 = 4\nModulo 6: 4 % 6 = 4\n\n#### 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 208,
+    "total_ns": 8231469375,
+    "wall_s": 8.430198907852173,
+    "pred": "4",
+    "gold": "4"
+  },
+  "44": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: Multiply by 1\nRegister = 4 * 1 = 4 (mod 6) = 4\n\nIntermediate value: 4\n\nOperation 2: Add 2\nRegister = 4 + 2 = 6 (mod 6) = 0\n\nIntermediate value: 0\n\nOperation 3: Add 3\nRegister = 0 + 3 = 3 (mod 6) = 3\n\nIntermediate value: 3\n\nOperation 4: Multiply by 5\nRegister = 3 * 5 = 15 (mod 6) = 3\n\nIntermediate value: 3\n\nOperation 5: Add 1\nRegister = 3 + 1 = 4 (mod 6) = 4\n\nFinal value: #### <4>",
+    "prompt_tokens": 129,
+    "eval_tokens": 185,
+    "total_ns": 7321925584,
+    "wall_s": 7.359014987945557,
+    "pred": "4",
+    "gold": "4"
+  },
+  "45": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: *2\nRegister = 4 * 2 = 8\nModulo 6: 8 % 6 = 2\nRegister = 2\n\nOperation 2: *1\nRegister = 2 * 1 = 2\nModulo 6: 2 % 6 = 2 (no change)\nRegister = 2\n\nOperation 3: *3\nRegister = 2 * 3 = 6\nModulo 6: 6 % 6 = 0\nRegister = 0\n\nOperation 4: +4\nRegister = 0 + 4 = 4\nModulo 6: 4 % 6 = 4 (no change)\nRegister = 4\n\nOperation 5: +5\nRegister = 4 + 5 = 9\nModulo 6: 9 % 6 = 3\nRegister = 3\n\n#### <final value 3>",
+    "prompt_tokens": 129,
+    "eval_tokens": 215,
+    "total_ns": 8439955834,
+    "wall_s": 8.48940396308899,
+    "pred": "3",
+    "gold": "3"
+  },
+  "46": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: +2\nRegister = 5 + 2 = 7\nMod 6: 7 % 6 = 1\nNew register value: 1\n\nOperation 2: +1\nRegister = 1 + 1 = 2\nMod 6: 2 % 6 = 2\nNew register value: 2\n\nOperation 3: +5\nRegister = 2 + 5 = 7\nMod 6: 7 % 6 = 1\nNew register value: 1\n\nOperation 4: -2\nRegister = 1 - 2 = -1\nMod 6: -1 % 6 = 5 (since we're working with positive values, we wrap around)\nNew register value: 5\n\nOperation 5: *5\nRegister = 5 * 5 = 25\nMod 6: 25 % 6 = 1\nNew register value: 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 230,
+    "total_ns": 9036223583,
+    "wall_s": 9.121766328811646,
+    "pred": "1",
+    "gold": "1"
+  },
+  "47": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: +1\nRegister = 5 + 1 = 6\nModulo 6: 6 % 6 = 0\nNew register value: 0\n\n#### <0>\n\nOperation 2: +3\nRegister = 0 + 3 = 3\nModulo 6: 3 % 6 = 3\nNew register value: 3\n\n#### <3>\n\nOperation 3: +2\nRegister = 3 + 2 = 5\nModulo 6: 5 % 6 = 5\nNew register value: 5\n\n#### <5>\n\nOperation 4: *5\nRegister = 5 * 5 = 25\nModulo 6: 25 % 6 = 1\nNew register value: 1\n\n#### <1>\n\nOperation 5: *4\nRegister = 1 * 4 = 4\nNew register value: 4\n\n#### <4>",
+    "prompt_tokens": 129,
+    "eval_tokens": 218,
+    "total_ns": 8593832292,
+    "wall_s": 8.702997922897339,
+    "pred": "4",
+    "gold": "4"
+  },
+  "48": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: -5\nRegister = 0 - 5 = -5\nModulo 6: -5 % 6 = 1\nNew register value: 1\n\nOperation 2: +1\nRegister = 1 + 1 = 2\nNew register value: 2\n\nOperation 3: +5\nRegister = 2 + 5 = 7\nModulo 6: 7 % 6 = 1\nNew register value: 1\n\nOperation 4: -2\nRegister = 1 - 2 = -1\nModulo 6: -1 % 6 = 5\nNew register value: 5\n\nOperation 5: *3\nRegister = 5 * 3 = 15\nModulo 6: 15 % 6 = 3\nNew register value: 3\n\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 8233785125,
+    "wall_s": 8.261625051498413,
+    "pred": "3",
+    "gold": "3"
+  },
+  "49": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: -5\nRegister = 4 - 5 = -1\nModulo 6: -1 % 6 = 5\nRegister = 5\n\nOperation 2: -1\nRegister = 5 - 1 = 4\nModulo 6: 4 % 6 = 4 (no change)\n\nOperation 3: +3\nRegister = 4 + 3 = 7\nModulo 6: 7 % 6 = 1\n\nOperation 4: -1\nRegister = 1 - 1 = 0\nModulo 6: 0 % 6 = 0 (no change)\n\nOperation 5: +3\nRegister = 0 + 3 = 3\nModulo 6: 3 % 6 = 3\n\n#### <final value 3>",
+    "prompt_tokens": 129,
+    "eval_tokens": 195,
+    "total_ns": 7694870834,
+    "wall_s": 7.730920314788818,
+    "pred": "3",
+    "gold": "3"
+  },
+  "50": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: -1\nRegister = 3 - 1 = 2\nModulo 6: 2 (no change)\n\n#### 2\n\nOperation 2: +5\nRegister = 2 + 5 = 7\nModulo 6: 7 -> 1 (since 7 mod 6 = 1)\n\n#### 1\n\nOperation 3: -5\nRegister = 1 - 5 = -4\nModulo 6: -4 -> 2 (since -4 mod 6 = 2)\n\n#### 2\n\nOperation 4: *5\nRegister = 2 * 5 = 10\nModulo 6: 10 -> 4 (since 10 mod 6 = 4)\n\n#### 4\n\nOperation 5: -5\nRegister = 4 - 5 = -1\nModulo 6: -1 -> 5 (since -1 mod 6 = 5)\n\n#### 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 221,
+    "total_ns": 8751847833,
+    "wall_s": 8.845706939697266,
+    "pred": "5",
+    "gold": "5"
+  },
+  "51": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n-------------------\n\nOperation 1: +3\nNew value = 1 + 3 = 4\nModulo 6: 4 % 6 = 4\nRegister after operation 1: 4\n\nOperation 2: -2\nNew value = 4 - 2 = 2\nModulo 6: 2 % 6 = 2\nRegister after operation 2: 2\n\nOperation 3: *2\nNew value = 2 * 2 = 4\nModulo 6: 4 % 6 = 4\nRegister after operation 3: 4\n\nOperation 4: +1\nNew value = 4 + 1 = 5\nModulo 6: 5 % 6 = 5\nRegister after operation 4: 5\n\nOperation 5: -4\nNew value = 5 - 4 = 1\nModulo 6: 1 % 6 = 1\nRegister after operation 5: 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 240,
+    "total_ns": 9436277500,
+    "wall_s": 9.465602159500122,
+    "pred": "1",
+    "gold": "1"
+  },
+  "52": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n\nOperation 1: -4\nRegister = 1 - 4 = -3\nModulo 6: -3 \u2261 3 (mod 6)\nNew register value: 3\n\nOperation 2: +1\nRegister = 3 + 1 = 4\nNew register value: 4\n\nOperation 3: *5\nRegister = 4 * 5 = 20\nModulo 6: 20 \u2261 2 (mod 6)\nNew register value: 2\n\nOperation 4: -3\nRegister = 2 - 3 = -1\nModulo 6: -1 \u2261 5 (mod 6)\nNew register value: 5\n\nOperation 5: *3\nRegister = 5 * 3 = 15\nModulo 6: 15 \u2261 3 (mod 6)\nNew register value: 3\n\n#### <final value 3>",
+    "prompt_tokens": 129,
+    "eval_tokens": 213,
+    "total_ns": 8400956709,
+    "wall_s": 8.42746376991272,
+    "pred": "3",
+    "gold": "3"
+  },
+  "53": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: *4\nRegister value = 0 * 4 = 0\nModulo 6: 0 % 6 = 0\n\nIntermediate value: 0\n\nOperation 2: -5\nRegister value = 0 - 5 = -5\nModulo 6: -5 % 6 = 1 (since -5 is equivalent to 1 modulo 6)\n\nIntermediate value: 1\n\nOperation 3: +3\nRegister value = 1 + 3 = 4\nModulo 6: 4 % 6 = 4\n\nIntermediate value: 4\n\nOperation 4: -1\nRegister value = 4 - 1 = 3\nModulo 6: 3 % 6 = 3\n\nIntermediate value: 3\n\nOperation 5: *2\nRegister value = 3 * 2 = 6\nModulo 6: 6 % 6 = 0\n\nFinal value: #### <0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 225,
+    "total_ns": 8835645042,
+    "wall_s": 8.86447286605835,
+    "pred": "0",
+    "gold": "0"
+  },
+  "54": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 5\n   -3 (mod 6) = 5 - 3 = 2\n   So, after applying -3, the register becomes 2.\n\n2. *4 (mod 6)\n   Multiply 2 by 4: 2 \u00d7 4 = 8\n   Take mod 6 of 8: 8 % 6 = 2\n   So, after multiplying by 4, the register becomes 2.\n\n3. +2 (mod 6)\n   Add 2 to 2: 2 + 2 = 4\n   So, after adding 2, the register becomes 4.\n\n4. +2 (mod 6)\n   Add 2 to 4: 4 + 2 = 6\n   Take mod 6 of 6: 6 % 6 = 0\n   So, after adding 2 again, the register becomes 0.\n\n5. +2 (mod 6)\n   Add 2 to 0: 0 + 2 = 2\n   So, after adding 2 for the third time, the register becomes 2.\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 264,
+    "total_ns": 10403594958,
+    "wall_s": 10.46196985244751,
+    "pred": "2",
+    "gold": "2"
+  },
+  "55": {
+    "text": "Let's apply the operations step by step:\n\nInitial register: 0\nOperation 1: -1 (mod 6)\nRegister = 0 - 1 = -1\n-1 mod 6 = 5\nRegister = 5\n\nOperation 2: *4 (mod 6)\nRegister = 5 * 4 = 20\n20 mod 6 = 2\nRegister = 2\n\nOperation 3: *5 (mod 6)\nRegister = 2 * 5 = 10\n10 mod 6 = 4\nRegister = 4\n\nOperation 4: +4 (mod 6)\nRegister = 4 + 4 = 8\n8 mod 6 = 2\nRegister = 2\n\nOperation 5: -4 (mod 6)\nRegister = 2 - 4 = -2\n-2 mod 6 = 4\nRegister = 4\n\n#### <final value 0..5> 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 204,
+    "total_ns": 8036752459,
+    "wall_s": 8.061218023300171,
+    "pred": "4",
+    "gold": "4"
+  },
+  "56": {
+    "text": "Let's apply the operations step by step:\n\nInitial register: 0\n-----------------\n\nOperation 1: *4 (multiply by 4)\nResult: 0 * 4 = 0\nModulo 6: 0 % 6 = 0\nNew register: 0\n\n-----------------\n\nOperation 2: +2 (add 2)\nResult: 0 + 2 = 2\nModulo 6: 2 % 6 = 2\nNew register: 2\n\n-----------------\n\nOperation 3: +3 (add 3)\nResult: 2 + 3 = 5\nModulo 6: 5 % 6 = 5\nNew register: 5\n\n-----------------\n\nOperation 4: +1 (add 1)\nResult: 5 + 1 = 6\nModulo 6: 6 % 6 = 0\nNew register: 0\n\n-----------------\n\nOperation 5: +3 (add 3)\nResult: 0 + 3 = 3\nModulo 6: 3 % 6 = 3\nNew register: 3\n\n#### <final value 3>",
+    "prompt_tokens": 129,
+    "eval_tokens": 244,
+    "total_ns": 9564592167,
+    "wall_s": 9.592296123504639,
+    "pred": "3",
+    "gold": "3"
+  },
+  "57": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\n   -3 (mod 6) = 3\n   register = 3\n\n2. *3 (mod 6) = 9 % 6 = 3\n   register = 3\n\n3. +5 (mod 6) = 8 % 6 = 2\n   register = 2\n\n4. *2 (mod 6) = 4 % 6 = 4\n   register = 4\n\n5. +3 (mod 6) = 7 % 6 = 1\n   register = 1\n\n#### <final value 0..5> = 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 149,
+    "total_ns": 5946719500,
+    "wall_s": 5.97609806060791,
+    "pred": "1",
+    "gold": "1"
+  },
+  "58": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\nOperation 1: -1 (mod 6)\nRegister = 1 - 1 = 0\n#### <0>\n\nOperation 2: +3 (mod 6)\nRegister = 0 + 3 = 3\n#### <3>\n\nOperation 3: -1 (mod 6)\nRegister = 3 - 1 = 2\n#### <2>\n\nOperation 4: -2 (mod 6)\nRegister = 2 - 2 = 0\n#### <0>\n\nOperation 5: -5 (mod 6)\nRegister = 0 - 5 = -5, but since we're working modulo 6, this is equivalent to 1 (since -5 + 6 = 1).\n#### <1>",
+    "prompt_tokens": 129,
+    "eval_tokens": 173,
+    "total_ns": 6921833625,
+    "wall_s": 6.9820921421051025,
+    "pred": "1",
+    "gold": "1"
+  },
+  "59": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: -2\nRegister = 4 - 2 = 2\nModulo 6: 2 (no change)\n\nIntermediate value: 2\n\nOperation 2: -2\nRegister = 2 - 2 = 0\nModulo 6: 0 (no change)\n\nIntermediate value: 0\n\nOperation 3: *5\nRegister = 0 * 5 = 0\nModulo 6: 0 (no change)\n\nIntermediate value: 0\n\nOperation 4: *3\nRegister = 0 * 3 = 0\nModulo 6: 0 (no change)\n\nIntermediate value: 0\n\nOperation 5: *2\nRegister = 0 * 2 = 0\nModulo 6: 0 (no change)\n\nFinal value: #### <0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 193,
+    "total_ns": 7666801833,
+    "wall_s": 7.700860977172852,
+    "pred": "0",
+    "gold": "0"
+  },
+  "60": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: +1\nRegister = 2 + 1 = 3\nModulo 6: 3 % 6 = 3\n\n#### 3\n\nOperation 2: +3\nRegister = 3 + 3 = 6\nModulo 6: 6 % 6 = 0\n\n#### 0\n\nOperation 3: +5\nRegister = 0 + 5 = 5\nModulo 6: 5 % 6 = 5\n\n#### 5\n\nOperation 4: *2\nRegister = 5 * 2 = 10\nModulo 6: 10 % 6 = 4\n\n#### 4\n\nOperation 5: +3\nRegister = 4 + 3 = 7\nModulo 6: 7 % 6 = 1\n\n#### 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 196,
+    "total_ns": 7734758708,
+    "wall_s": 7.864314079284668,
+    "pred": "1",
+    "gold": "1"
+  },
+  "61": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   Operation 1: +2\n   Register = 1 + 2 = 3\n   Modulo 6: 3 % 6 = 3\n\n2. Operation 2: -5\n   Register = 3 - 5 = -2\n   Modulo 6: -2 % 6 = 4 (since we're working with modulo, the negative value wraps around)\n\n3. Operation 3: +3\n   Register = 4 + 3 = 7\n   Modulo 6: 7 % 6 = 1\n\n4. Operation 4: +3\n   Register = 1 + 3 = 4\n\n5. Operation 5: -5\n   Register = 4 - 5 = -1\n   Modulo 6: -1 % 6 = 5 (since we're working with modulo, the negative value wraps around)\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 220,
+    "total_ns": 8691337375,
+    "wall_s": 8.721650123596191,
+    "pred": "5",
+    "gold": "5"
+  },
+  "62": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 4\n   Operation 1: +4\n   Register = 4 + 4 = 8\n   Modulo 6: 8 % 6 = 2\n\n2. Operation 2: +2\n   Register = 2 + 2 = 4\n   Modulo 6: 4 % 6 = 4\n\n3. Operation 3: -2\n   Register = 4 - 2 = 2\n   Modulo 6: 2 % 6 = 2\n\n4. Operation 4: *2\n   Register = 2 * 2 = 4\n   Modulo 6: 4 % 6 = 4\n\n5. Operation 5: -4\n   Register = 4 - 4 = 0\n   Modulo 6: 0 % 6 = 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 205,
+    "total_ns": 8105720166,
+    "wall_s": 8.218266010284424,
+    "pred": "0",
+    "gold": "0"
+  },
+  "63": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\n   Operation 1: +5\n   Register = 0 + 5 = 5\n   Modulo 6: 5 % 6 = 5\n   Intermediate value: 5\n\n2. Operation 2: *2\n   Register = 5 * 2 = 10\n   Modulo 6: 10 % 6 = 4\n   Intermediate value: 4\n\n3. Operation 3: +3\n   Register = 4 + 3 = 7\n   Modulo 6: 7 % 6 = 1\n   Intermediate value: 1\n\n4. Operation 4: *2\n   Register = 1 * 2 = 2\n   Modulo 6: 2 % 6 = 2\n   Intermediate value: 2\n\n5. Operation 5: -5\n   Register = 2 - 5 = -3\n   Modulo 6: -3 % 6 = 3 (since we're working with modulo, negative numbers wrap around)\n   Intermediate value: 3\n\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 256,
+    "total_ns": 10027912542,
+    "wall_s": 10.29761004447937,
+    "pred": "3",
+    "gold": "3"
+  },
+  "64": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\nOperation 1: -4 (new value = 1 - 4 = -3)\nModulo 6: -3 % 6 = 3\nRegister after first operation: 3\n\nOperation 2: +1 (new value = 3 + 1 = 4)\nModulo 6: 4 % 6 = 4\nRegister after second operation: 4\n\nOperation 3: +3 (new value = 4 + 3 = 7)\nModulo 6: 7 % 6 = 1\nRegister after third operation: 1\n\nOperation 4: -3 (new value = 1 - 3 = -2)\nModulo 6: -2 % 6 = 4\nRegister after fourth operation: 4\n\nOperation 5: +4 (new value = 4 + 4 = 8)\nModulo 6: 8 % 6 = 2\nRegister after fifth operation: 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 233,
+    "total_ns": 9242650542,
+    "wall_s": 9.419705867767334,
+    "pred": "2",
+    "gold": "2"
+  },
+  "65": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: -1\nRegister = 0 - 1 = -1\nModulo 6: -1 % 6 = 5\nNew register value: 5\n\n#### <final value 0..5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 65,
+    "total_ns": 2787044292,
+    "wall_s": 2.867908239364624,
+    "pred": "5",
+    "gold": "0"
+  },
+  "66": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: +3\nRegister = 2 + 3 = 5\nModulo 6: 5 % 6 = 5\nNew register value: 5\n\nOperation 2: -1\nRegister = 5 - 1 = 4\nModulo 6: 4 % 6 = 4\nNew register value: 4\n\nOperation 3: *4\nRegister = 4 * 4 = 16\nModulo 6: 16 % 6 = 4\nNew register value: 4\n\nOperation 4: *5\nRegister = 4 * 5 = 20\nModulo 6: 20 % 6 = 2\nNew register value: 2\n\nOperation 5: +1\nRegister = 2 + 1 = 3\nNew register value: 3\n\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 8241013875,
+    "wall_s": 8.39674711227417,
+    "pred": "3",
+    "gold": "3"
+  },
+  "67": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 2\n   -5 (subtraction): 2 - 5 = -3\n   Modulo 6: -3 % 6 = 3\n   So, after applying -5, the register is: 3\n\n2. *4 (multiplication): 3 * 4 = 12\n   Modulo 6: 12 % 6 = 0\n   So, after applying *4, the register is: 0\n\n3. +2 (addition): 0 + 2 = 2\n   Modulo 6: 2 % 6 = 2\n   So, after applying +2, the register is: 2\n\n4. *2 (multiplication): 2 * 2 = 4\n   Modulo 6: 4 % 6 = 4\n   So, after applying *2, the register is: 4\n\n5. +2 (addition): 4 + 2 = 6\n   Modulo 6: 6 % 6 = 0\n   So, after applying +2, the final value of the register is: 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 264,
+    "total_ns": 10707871917,
+    "wall_s": 10.970990896224976,
+    "pred": "0",
+    "gold": "0"
+  },
+  "68": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\n   Operation 1: +2\n   Register = 0 + 2 = 2\n   Modulo 6: 2 % 6 = 2\n\n2. Operation 2: +5\n   Register = 2 + 5 = 7\n   Modulo 6: 7 % 6 = 1\n\n3. Operation 3: +3\n   Register = 1 + 3 = 4\n   Modulo 6: 4 % 6 = 4\n\n4. Operation 4: +3\n   Register = 4 + 3 = 7\n   Modulo 6: 7 % 6 = 1\n\n5. Operation 5: *4\n   Register = 1 * 4 = 4\n   Modulo 6: 4 % 6 = 4\n\n#### <final value 0..5> 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 8532575667,
+    "wall_s": 8.579582929611206,
+    "pred": "4",
+    "gold": "4"
+  },
+  "69": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 4\n   +4: 4 + 4 = 8 (mod 6) = 2\n   #### 2\n\n2. *2: 2 * 2 = 4\n   #### 4\n\n3. -2: 4 - 2 = 2\n   #### 2\n\n4. *5: 2 * 5 = 10 (mod 6) = 4\n   #### 4\n\n5. *5: 4 * 5 = 20 (mod 6) = 2\n   #### 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 136,
+    "total_ns": 5618448375,
+    "wall_s": 5.946823835372925,
+    "pred": "2",
+    "gold": "2"
+  },
+  "70": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: -1\nRegister = 2 - 1 = 1\nMod 6: 1 % 6 = 1\n#### <1>\n\nOperation 2: -4\nRegister = 1 - 4 = -3\nMod 6: -3 % 6 = 3 (since -3 is equivalent to 3 modulo 6)\n#### <3>\n\nOperation 3: *1\nRegister = 3 * 1 = 3\n#### <3>\n\nOperation 4: -4\nRegister = 3 - 4 = -1\nMod 6: -1 % 6 = 5 (since -1 is equivalent to 5 modulo 6)\n#### <5>\n\nOperation 5: -1\nRegister = 5 - 1 = 4\n#### <4>",
+    "prompt_tokens": 129,
+    "eval_tokens": 190,
+    "total_ns": 7787237792,
+    "wall_s": 7.987135171890259,
+    "pred": "4",
+    "gold": "4"
+  },
+  "71": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\n   Operation 1: *4\n   Register = 0 * 4 = 0\n   Modulo 6: 0 % 6 = 0\n\n2. Operation 2: +3\n   Register = 0 + 3 = 3\n   Modulo 6: 3 % 6 = 3\n\n3. Operation 3: *4\n   Register = 3 * 4 = 12\n   Modulo 6: 12 % 6 = 0\n\n4. Operation 4: +3\n   Register = 0 + 3 = 3\n   Modulo 6: 3 % 6 = 3\n\n5. Operation 5: -4\n   Register = 3 - 4 = -1\n   Modulo 6: -1 % 6 = 5 (since we're working with modulo, the negative value wraps around to its equivalent positive value)\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 227,
+    "total_ns": 9225047000,
+    "wall_s": 9.5226731300354,
+    "pred": "5",
+    "gold": "5"
+  },
+  "72": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: -4\nRegister = 5 - 4 = 1\nModulo 6: 1 % 6 = 1\n#### <1>\n\nOperation 2: -4\nRegister = 1 - 4 = -3\nModulo 6: (-3) % 6 = 3 (since -3 is equivalent to 3 modulo 6)\n#### <3>\n\nOperation 3: +1\nRegister = 3 + 1 = 4\n#### <4>\n\nOperation 4: -5\nRegister = 4 - 5 = -1\nModulo 6: (-1) % 6 = 5 (since -1 is equivalent to 5 modulo 6)\n#### <5>\n\nOperation 5: +2\nRegister = 5 + 2 = 7\nModulo 6: 7 % 6 = 1\n#### <1>",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 8562271292,
+    "wall_s": 8.838709831237793,
+    "pred": "1",
+    "gold": "1"
+  },
+  "73": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: Multiply by 3\nRegister = 5 * 3 = 15\nModulo 6: 15 % 6 = 3\n#### <3>\n\nOperation 2: Multiply by 2\nRegister = 3 * 2 = 6\nModulo 6: 6 % 6 = 0\n#### <0>\n\nOperation 3: Subtract 2\nRegister = 0 - 2 = -2\nModulo 6: -2 % 6 = 4 (since we're working with modulo, the negative value wraps around)\n#### <4>\n\nOperation 4: Subtract 1\nRegister = 4 - 1 = 3\nModulo 6: 3 % 6 = 3\n#### <3>\n\nOperation 5: Subtract 4\nRegister = 3 - 4 = -1\nModulo 6: -1 % 6 = 5 (since we're working with modulo, the negative value wraps around)\n#### <5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 230,
+    "total_ns": 9393798334,
+    "wall_s": 9.49063229560852,
+    "pred": "5",
+    "gold": "5"
+  },
+  "74": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: +4\nNew value = 3 + 4 = 7\nModulo 6: 7 % 6 = 1\nRegister value after operation 1: 1\n\nOperation 2: +1\nNew value = 1 + 1 = 2\nModulo 6: 2 % 6 = 2\nRegister value after operation 2: 2\n\nOperation 3: -5\nNew value = 2 - 5 = -3\nModulo 6: -3 % 6 = 3 (since -3 is equivalent to 3 modulo 6)\nRegister value after operation 3: 3\n\nOperation 4: -4\nNew value = 3 - 4 = -1\nModulo 6: -1 % 6 = 5\nRegister value after operation 4: 5\n\nOperation 5: +2\nNew value = 5 + 2 = 7\nModulo 6: 7 % 6 = 1\nRegister value after operation 5: 1\n\n#### <final value 0..5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 253,
+    "total_ns": 10253213541,
+    "wall_s": 10.274562120437622,
+    "pred": "5",
+    "gold": "1"
+  },
+  "75": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: -1\nRegister = 2 - 1 = 1\nMod 6: 1 (no change)\n\n#### 1\n\nOperation 2: +2\nRegister = 1 + 2 = 3\nMod 6: 3 (no change)\n\n#### 3\n\nOperation 3: -2\nRegister = 3 - 2 = 1\nMod 6: 1 (no change)\n\n#### 1\n\nOperation 4: *3\nRegister = 1 * 3 = 3\nMod 6: 3 (no change)\n\n#### 3\n\nOperation 5: *3\nRegister = 3 * 3 = 9\nMod 6: 3 (reduced modulo 6)\n\n#### 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 179,
+    "total_ns": 7354343958,
+    "wall_s": 7.373165845870972,
+    "pred": "3",
+    "gold": "3"
+  },
+  "76": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   Operation 1: +2\n   Register = 1 + 2 = 3 (mod 6) = 3\n\n2. Operation 2: -3\n   Register = 3 - 3 = 0 (mod 6) = 0\n\n3. Operation 3: +2\n   Register = 0 + 2 = 2 (mod 6) = 2\n\n4. Operation 4: -5\n   Register = 2 - 5 = -3 (mod 6) = 3\n\n5. Operation 5: +5\n   Register = 3 + 5 = 8 (mod 6) = 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 174,
+    "total_ns": 7136818834,
+    "wall_s": 7.542322158813477,
+    "pred": "2",
+    "gold": "2"
+  },
+  "77": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: +2\nRegister = 4 + 2 = 6 (mod 6) = 0\n\nIntermediate value: 0\n\nOperation 2: +2\nRegister = 0 + 2 = 2\n\nIntermediate value: 2\n\nOperation 3: -5\nRegister = 2 - 5 = -3 (mod 6) = 3\n\nIntermediate value: 3\n\nOperation 4: *1\nRegister = 3 * 1 = 3\n\nIntermediate value: 3\n\nOperation 5: *1\nRegister = 3 * 1 = 3\n\nFinal result:\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 161,
+    "total_ns": 6649533625,
+    "wall_s": 6.758354187011719,
+    "pred": "3",
+    "gold": "3"
+  },
+  "78": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: +4\nRegister = 4 + 4 = 8\nModulo 6: 8 % 6 = 2\n\n#### 2\n\nOperation 2: +2\nRegister = 2 + 2 = 4\nModulo 6: 4 % 6 = 4\n\n#### 4\n\nOperation 3: -1\nRegister = 4 - 1 = 3\nModulo 6: 3 % 6 = 3\n\n#### 3\n\nOperation 4: *1\nRegister = 3 * 1 = 3\nModulo 6: 3 % 6 = 3 (no change)\n\n#### 3\n\nOperation 5: -5\nRegister = 3 - 5 = -2\nModulo 6: -2 % 6 = 4\n\n#### 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 199,
+    "total_ns": 8131039667,
+    "wall_s": 8.193429946899414,
+    "pred": "4",
+    "gold": "4"
+  },
+  "79": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: +2\nRegister = 2 + 2 = 4\nModulo 6: 4 % 6 = 4\n\n#### <register = 4>\n\nOperation 2: -1\nRegister = 4 - 1 = 3\nModulo 6: 3 % 6 = 3\n\n#### <register = 3>\n\nOperation 3: +3\nRegister = 3 + 3 = 6\nModulo 6: 6 % 6 = 0\n\n#### <register = 0>\n\nOperation 4: +2\nRegister = 0 + 2 = 2\nModulo 6: 2 % 6 = 2\n\n#### <register = 2>\n\nOperation 5: *3\nRegister = 2 * 3 = 6\nModulo 6: 6 % 6 = 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 212,
+    "total_ns": 8629996917,
+    "wall_s": 8.65613603591919,
+    "pred": "0",
+    "gold": "0"
+  },
+  "80": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\nOperation 1: -5\nregister = 0 - 5 = -5\nModulo 6: -5 % 6 = 1\nregister = 1\n\n2. Operation 2: +2\nregister = 1 + 2 = 3\n\n3. Operation 3: *2\nregister = 3 * 2 = 6\nModulo 6: 6 % 6 = 0\nregister = 0\n\n4. Operation 4: *3\nregister = 0 * 3 = 0\n\n5. Operation 5: +5\nregister = 0 + 5 = 5\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 166,
+    "total_ns": 6848319292,
+    "wall_s": 6.903215169906616,
+    "pred": "5",
+    "gold": "5"
+  },
+  "81": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: +1\nRegister = 4 + 1 = 5\nModulo 6: 5 % 6 = 5\n#### <5>\n\nOperation 2: *3\nRegister = 5 * 3 = 15\nModulo 6: 15 % 6 = 3\n#### <3>\n\nOperation 3: -3\nRegister = 3 - 3 = 0\nModulo 6: 0 % 6 = 0\n#### <0>\n\nOperation 4: -2\nRegister = 0 - 2 = -2\nModulo 6: -2 % 6 = 4 (since we're working with positive values, we add 6 to get a positive result)\n#### <4>\n\nOperation 5: -5\nRegister = 4 - 5 = -1\nModulo 6: -1 % 6 = 5\n#### <5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 215,
+    "total_ns": 8770401500,
+    "wall_s": 8.825103044509888,
+    "pred": "5",
+    "gold": "5"
+  },
+  "82": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: -4\nRegister = 2 - 4 = -2\nModulo 6: -2 % 6 = 4\nNew register value: 4\n\nOperation 2: +3\nRegister = 4 + 3 = 7\nModulo 6: 7 % 6 = 1\nNew register value: 1\n\nOperation 3: *2\nRegister = 1 * 2 = 2\nModulo 6: 2 % 6 = 2\nNew register value: 2\n\nOperation 4: -4\nRegister = 2 - 4 = -2\nModulo 6: -2 % 6 = 4\nNew register value: 4\n\nOperation 5: +1\nRegister = 4 + 1 = 5\nNew register value: 5\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 8514371000,
+    "wall_s": 8.619791030883789,
+    "pred": "5",
+    "gold": "5"
+  },
+  "83": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 4\n   Operation 1: +3\n   Register = 4 + 3 = 7\n   Modulo 6: 7 % 6 = 1\n   Intermediate value: 1\n\n2. Operation 2: -5\n   Register = 1 - 5 = -4\n   Modulo 6: -4 % 6 = 2 (since we're working with modulo, negative numbers wrap around)\n   Intermediate value: 2\n\n3. Operation 3: +2\n   Register = 2 + 2 = 4\n   Intermediate value: 4\n\n4. Operation 4: +3\n   Register = 4 + 3 = 7\n   Modulo 6: 7 % 6 = 1\n   Intermediate value: 1\n\n5. Operation 5: *5\n   Register = 1 * 5 = 5\n   Intermediate value: 5\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 226,
+    "total_ns": 9220877250,
+    "wall_s": 9.280831813812256,
+    "pred": "5",
+    "gold": "5"
+  },
+  "84": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 5\n   Operation: -3\n   Register = 5 - 3 = 2 (mod 6) = 2\n\n2. Register = 2\n   Operation: *2\n   Register = 2 * 2 = 4\n\n3. Register = 4\n   Operation: -4\n   Register = 4 - 4 = 0 (mod 6) = 0\n\n4. Register = 0\n   Operation: *3\n   Register = 0 * 3 = 0\n\n5. Register = 0\n   Operation: -5\n   Register = 0 - 5 = -5 (mod 6) = 1\n\n#### <final value 0..5> = 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 173,
+    "total_ns": 7110254375,
+    "wall_s": 7.139739990234375,
+    "pred": "1",
+    "gold": "1"
+  },
+  "85": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\n   -3 (mod 6) = 3\n   register = 3\n\n2. *2 (mod 6) = 6 (which is equivalent to 0 mod 6)\n   register = 0\n\n3. +5 (mod 6) = 1\n   register = 1\n\n4. *2 (mod 6) = 2\n   register = 2\n\n5. *5 (mod 6) = 10 (which is equivalent to 4 mod 6)\n   register = 4\n\n#### <final value 0..5> = 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 145,
+    "total_ns": 6035382042,
+    "wall_s": 6.318078994750977,
+    "pred": "4",
+    "gold": "2"
+  },
+  "86": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: -3\nRegister = 4 - 3 = 1\nModulo 6: 1 % 6 = 1\n#### <1>\n\nOperation 2: +3\nRegister = 1 + 3 = 4\nModulo 6: 4 % 6 = 4\n#### <4>\n\nOperation 3: +2\nRegister = 4 + 2 = 6\nModulo 6: 6 % 6 = 0\n#### <0>\n\nOperation 4: -1\nRegister = 0 - 1 = -1\nModulo 6: -1 % 6 = 5\n#### <5>\n\nOperation 5: -1\nRegister = 5 - 1 = 4\n#### <4>",
+    "prompt_tokens": 129,
+    "eval_tokens": 183,
+    "total_ns": 7508836667,
+    "wall_s": 7.869375944137573,
+    "pred": "4",
+    "gold": "4"
+  },
+  "87": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 5\n   *3: (5 * 3) mod 6 = 15 mod 6 = 3\n   #### 3\n\n2. +3: (3 + 3) mod 6 = 6 mod 6 = 0\n   #### 0\n\n3. +4: (0 + 4) mod 6 = 4 mod 6 = 4\n   #### 4\n\n4. -4: (4 - 4) mod 6 = 0 mod 6 = 0\n   #### 0\n\n5. +2: (0 + 2) mod 6 = 2 mod 6 = 2\n   #### 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 162,
+    "total_ns": 6698413084,
+    "wall_s": 6.818182945251465,
+    "pred": "2",
+    "gold": "2"
+  },
+  "88": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: Multiply by 3\nRegister = 5 * 3 = 15\nModulo 6: 15 % 6 = 3\n#### <3>\n\nOperation 2: Subtract 3\nRegister = 3 - 3 = 0\n#### <0>\n\nOperation 3: Add 5\nRegister = 0 + 5 = 5\n#### <5>\n\nOperation 4: Multiply by 1\nRegister = 5 * 1 = 5\n#### <5>\n\nOperation 5: Add 2\nRegister = 5 + 2 = 7\nModulo 6: 7 % 6 = 1\n#### <1>",
+    "prompt_tokens": 129,
+    "eval_tokens": 162,
+    "total_ns": 6677342959,
+    "wall_s": 6.7068798542022705,
+    "pred": "1",
+    "gold": "1"
+  },
+  "89": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: -2\nRegister = 4 - 2 = 2\nModulo 6: 2 % 6 = 2\n#### <2>\n\nOperation 2: -1\nRegister = 2 - 1 = 1\nModulo 6: 1 % 6 = 1\n#### <1>\n\nOperation 3: +3\nRegister = 1 + 3 = 4\nModulo 6: 4 % 6 = 4\n#### <4>\n\nOperation 4: *1 (multiplication by 1 doesn't change the value)\nRegister = 4\nModulo 6: 4 % 6 = 4\n#### <4>\n\nOperation 5: +1\nRegister = 4 + 1 = 5\nModulo 6: 5 % 6 = 5\n#### <5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 202,
+    "total_ns": 8237360542,
+    "wall_s": 8.360907077789307,
+    "pred": "5",
+    "gold": "5"
+  },
+  "90": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: *1\nRegister = 5 * 1 = 5\nModulo 6: 5 % 6 = 5\nNew register value: 5\n\nOperation 2: *5\nRegister = 5 * 5 = 25\nModulo 6: 25 % 6 = 1\nNew register value: 1\n\nOperation 3: *3\nRegister = 1 * 3 = 3\nModulo 6: 3 % 6 = 3\nNew register value: 3\n\nOperation 4: +4\nRegister = 3 + 4 = 7\nModulo 6: 7 % 6 = 1\nNew register value: 1\n\nOperation 5: *2\nRegister = 1 * 2 = 2\nNew register value: 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 8520872583,
+    "wall_s": 8.549501895904541,
+    "pred": "2",
+    "gold": "2"
+  },
+  "91": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n--------------------\n\nOperation 1: *1 (multiply by 1)\nRegister value after operation: 1 * 1 = 1\nModulo 6: 1 % 6 = 1\nFinal value after operation 1: 1\n\n--------------------\n\nOperation 2: +3 (add 3)\nRegister value after operation: 1 + 3 = 4\nModulo 6: 4 % 6 = 4\nFinal value after operation 2: 4\n\n--------------------\n\nOperation 3: +2 (add 2)\nRegister value after operation: 4 + 2 = 6\nModulo 6: 6 % 6 = 0\nFinal value after operation 3: 0\n\n--------------------\n\nOperation 4: -5 (subtract 5)\nRegister value after operation: 0 - 5 = -5\nModulo 6: -5 % 6 = 1\nFinal value after operation 4: 1\n\n--------------------\n\nOperation 5: +4 (add 4)\nRegister value after operation: 1 + 4 = 5\nFinal value after operation 5: 5\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 270,
+    "total_ns": 10941091750,
+    "wall_s": 10.987682104110718,
+    "pred": "5",
+    "gold": "5"
+  },
+  "92": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: -2\nRegister = 4 - 2 = 2\nModulo 6: 2 % 6 = 2\n#### <2>\n\nOperation 2: +1\nRegister = 2 + 1 = 3\n#### <3>\n\nOperation 3: *1 (multiplication by 1 doesn't change the value)\nRegister = 3 (no change)\n#### <3>\n\nOperation 4: +2\nRegister = 3 + 2 = 5\n#### <5>\n\nOperation 5: -3\nRegister = 5 - 3 = 2\n#### <2>",
+    "prompt_tokens": 129,
+    "eval_tokens": 149,
+    "total_ns": 6171848792,
+    "wall_s": 6.267344951629639,
+    "pred": "2",
+    "gold": "2"
+  },
+  "93": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: -4\nRegister = 3 - 4 = -1\nModulo 6: -1 % 6 = 5\nNew register value: 5\n\nOperation 2: -5\nRegister = 5 - 5 = 0\nModulo 6: 0 % 6 = 0\nNew register value: 0\n\nOperation 3: +1\nRegister = 0 + 1 = 1\nModulo 6: 1 % 6 = 1\nNew register value: 1\n\nOperation 4: *4\nRegister = 1 * 4 = 4\nModulo 6: 4 % 6 = 4\nNew register value: 4\n\nOperation 5: +3\nRegister = 4 + 3 = 7\nModulo 6: 7 % 6 = 1\nNew register value: 1\n\n#### <final value 0..5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 221,
+    "total_ns": 8983236500,
+    "wall_s": 9.025460958480835,
+    "pred": "5",
+    "gold": "1"
+  },
+  "94": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: -5\nRegister = 4 - 5 = -1\nModulo 6: -1 % 6 = 5\nRegister = 5\n\nOperation 2: *3\nRegister = 5 * 3 = 15\nModulo 6: 15 % 6 = 3\nRegister = 3\n\nOperation 3: +5\nRegister = 3 + 5 = 8\nModulo 6: 8 % 6 = 2\nRegister = 2\n\nOperation 4: *1\nRegister = 2 * 1 = 2\nNo change, as multiplying by 1 doesn't alter the value.\n\nOperation 5: -5\nRegister = 2 - 5 = -3\nModulo 6: -3 % 6 = 3\nRegister = 3\n\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 208,
+    "total_ns": 8503275917,
+    "wall_s": 8.620157957077026,
+    "pred": "3",
+    "gold": "3"
+  },
+  "95": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: *2\nRegister = 4 * 2 = 8\nModulo 6: 8 % 6 = 2\nNew register value: 2\n\nOperation 2: -2\nRegister = 2 - 2 = 0\nModulo 6: 0 % 6 = 0\nNew register value: 0\n\nOperation 3: +1\nRegister = 0 + 1 = 1\nModulo 6: 1 % 6 = 1\nNew register value: 1\n\nOperation 4: -2\nRegister = 1 - 2 = -1\nModulo 6: -1 % 6 = 5 (since -1 is equivalent to 5 modulo 6)\nNew register value: 5\n\nOperation 5: -5\nRegister = 5 - 5 = 0\nModulo 6: 0 % 6 = 0\nNew register value: 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 231,
+    "total_ns": 9388127500,
+    "wall_s": 9.635486841201782,
+    "pred": "0",
+    "gold": "0"
+  },
+  "96": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 2\n   Op 1: *5 (multiply by 5)\n   Register = 2 * 5 = 10\n   Mod 6: 10 % 6 = 4\n   Intermediate value: 4\n\n2. Op 2: +4 (add 4)\n   Register = 4 + 4 = 8\n   Mod 6: 8 % 6 = 2\n   Intermediate value: 2\n\n3. Op 3: *2 (multiply by 2)\n   Register = 2 * 2 = 4\n   Mod 6: 4 % 6 = 4\n   Intermediate value: 4\n\n4. Op 4: +3 (add 3)\n   Register = 4 + 3 = 7\n   Mod 6: 7 % 6 = 1\n   Intermediate value: 1\n\n5. Op 5: *2 (multiply by 2)\n   Register = 1 * 2 = 2\n   Mod 6: 2 % 6 = 2\n   Final value: 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 262,
+    "total_ns": 10557338459,
+    "wall_s": 10.810871839523315,
+    "pred": "2",
+    "gold": "2"
+  },
+  "97": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   *3: (1 * 3) mod 6 = 3\n   #### 3\n\n2. -5: (3 - 5) mod 6 = 2\n   #### 2\n\n3. -2: (2 - 2) mod 6 = 0\n   #### 0\n\n4. +3: (0 + 3) mod 6 = 3\n   #### 3\n\n5. -5: (3 - 5) mod 6 = 4\n   #### 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 132,
+    "total_ns": 5487869208,
+    "wall_s": 5.624640941619873,
+    "pred": "4",
+    "gold": "0"
+  },
+  "98": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: *3\nResult: 3 * 3 = 9\nMod 6: 9 % 6 = 3\nRegister after operation 1: 3\n\nOperation 2: +5\nResult: 3 + 5 = 8\nMod 6: 8 % 6 = 2\nRegister after operation 2: 2\n\nOperation 3: -1\nResult: 2 - 1 = 1\nMod 6: 1 % 6 = 1\nRegister after operation 3: 1\n\nOperation 4: +1\nResult: 1 + 1 = 2\nMod 6: 2 % 6 = 2\nRegister after operation 4: 2\n\nOperation 5: -5\nResult: 2 - 5 = -3\nMod 6: -3 % 6 = 3 (since -3 is equivalent to 3 modulo 6)\nRegister after operation 5: 3\n\n#### <final value 3>",
+    "prompt_tokens": 129,
+    "eval_tokens": 236,
+    "total_ns": 9588371000,
+    "wall_s": 9.643486976623535,
+    "pred": "3",
+    "gold": "3"
+  },
+  "99": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 3\n   Operation: -4\n   Register = 3 - 4 = -1 (mod 6) = 5\n\n2. Register = 5\n   Operation: -5\n   Register = 5 - 5 = -10 (mod 6) = 4\n\n3. Register = 4\n   Operation: +3\n   Register = 4 + 3 = 7 (mod 6) = 1\n\n4. Register = 1\n   Operation: -3\n   Register = 1 - 3 = -2 (mod 6) = 4\n\n5. Register = 4\n   Operation: -4\n   Register = 4 - 4 = -8 (mod 6) = 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 188,
+    "total_ns": 7700189333,
+    "wall_s": 7.9982593059539795,
+    "pred": "2",
+    "gold": "2"
+  },
+  "100": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: *1\nRegister = 0 * 1 = 0\nModulo 6: 0 % 6 = 0\n\nIntermediate value: 0\n\nOperation 2: -5\nRegister = 0 - 5 = -5\nModulo 6: -5 % 6 = 1 (since -5 + 6 = 1)\n\nIntermediate value: 1\n\nOperation 3: +3\nRegister = 1 + 3 = 4\nModulo 6: 4 % 6 = 4\n\nIntermediate value: 4\n\nOperation 4: -1\nRegister = 4 - 1 = 3\nModulo 6: 3 % 6 = 3\n\nIntermediate value: 3\n\nOperation 5: -4\nRegister = 3 - 4 = -1\nModulo 6: -1 % 6 = 5 (since -1 + 6 = 5)\n\nFinal value: 5\n\n#### <final value 5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 234,
+    "total_ns": 9522689292,
+    "wall_s": 9.9581937789917,
+    "pred": "5",
+    "gold": "5"
+  },
+  "101": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 2\n   Operation: -3\n   Register = 2 - 3 = -1 (mod 6) = 5\n\n2. Register = 5\n   Operation: +3\n   Register = 5 + 3 = 8 (mod 6) = 2\n\n3. Register = 2\n   Operation: -5\n   Register = 2 - 5 = -3 (mod 6) = 3\n\n4. Register = 3\n   Operation: *4\n   Register = 3 * 4 = 12 (mod 6) = 0\n\n5. Register = 0\n   Operation: -5\n   Register = 0 - 5 = -5 (mod 6) = 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 188,
+    "total_ns": 7697138667,
+    "wall_s": 7.865264892578125,
+    "pred": "1",
+    "gold": "1"
+  },
+  "102": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: *4\nResult = 2 * 4 = 8\nModulo 6: 8 % 6 = 2\n\n#### 2\n\nOperation 2: -5\nResult = 2 - 5 = -3\nModulo 6: -3 % 6 = 3 (since we're working with positive values, we can add 6 to get a positive result)\n\n#### 3\n\nOperation 3: -1\nResult = 3 - 1 = 2\nModulo 6: 2 % 6 = 2\n\n#### 2\n\nOperation 4: +4\nResult = 2 + 4 = 6\nModulo 6: 6 % 6 = 0\n\n#### 0\n\nOperation 5: +5\nResult = 0 + 5 = 5\nModulo 6: 5 % 6 = 5\n\n#### 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 215,
+    "total_ns": 8774866459,
+    "wall_s": 8.917171955108643,
+    "pred": "5",
+    "gold": "5"
+  },
+  "103": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 2\n   Operation 1: +2\n   Register = 2 + 2 = 4 (mod 6) = 4\n\n2. Operation 2: +2\n   Register = 4 + 2 = 6 (mod 6) = 0\n\n3. Operation 3: -2\n   Register = 0 - 2 = -2 (mod 6) = 4\n\n4. Operation 4: -2\n   Register = 4 - 2 = 2 (mod 6) = 2\n\n5. Operation 5: -5\n   Register = 2 - 5 = -3 (mod 6) = 3\n\n#### <final value 0..5> = 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 175,
+    "total_ns": 7195733292,
+    "wall_s": 7.214831829071045,
+    "pred": "3",
+    "gold": "3"
+  },
+  "104": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\n   Operation: -4\n   Register = 0 - 4 = -4\n   Modulo 6: -4 % 6 = 2\n   New register: 2\n\n2. Operation: -3\n   Register = 2 - 3 = -1\n   Modulo 6: -1 % 6 = 5\n   New register: 5\n\n3. Operation: *2\n   Register = 5 * 2 = 10\n   Modulo 6: 10 % 6 = 4\n   New register: 4\n\n4. Operation: -3\n   Register = 4 - 3 = 1\n   Modulo 6: 1 % 6 = 1\n   New register: 1\n\n5. Operation: -3\n   Register = 1 - 3 = -2\n   Modulo 6: -2 % 6 = 4\n   New register: 4\n\n#### <final value 0..5> 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 234,
+    "total_ns": 9492330167,
+    "wall_s": 9.552700996398926,
+    "pred": "4",
+    "gold": "4"
+  },
+  "105": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: +1\nRegister = 5 + 1 = 6 (mod 6) = 0\n\nIntermediate value: 0\n\nOperation 2: *5\nRegister = 0 * 5 = 0\n\nIntermediate value: 0\n\nOperation 3: *2\nRegister = 0 * 2 = 0\n\nIntermediate value: 0\n\nOperation 4: -1\nRegister = 0 - 1 = -1 (mod 6) = 5\n\nIntermediate value: 5\n\nOperation 5: *1\nRegister = 5 * 1 = 5\n\nFinal value: #### <5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 154,
+    "total_ns": 6265196208,
+    "wall_s": 6.294009208679199,
+    "pred": "5",
+    "gold": "5"
+  },
+  "106": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: +5\nRegister = 4 + 5 = 9\nMod 6: 9 % 6 = 3\n\n#### 3\n\nOperation 2: -2\nRegister = 3 - 2 = 1\nMod 6: 1 % 6 = 1\n\n#### 1\n\nOperation 3: -1\nRegister = 1 - 1 = 0\nMod 6: 0 % 6 = 0\n\n#### 0\n\nOperation 4: *4\nRegister = 0 * 4 = 0\nMod 6: 0 % 6 = 0 (no change)\n\n#### 0\n\nOperation 5: *4\nRegister = 0 * 4 = 0\nMod 6: 0 % 6 = 0 (no change)\n\n#### 0",
+    "prompt_tokens": 129,
+    "eval_tokens": 197,
+    "total_ns": 7771810583,
+    "wall_s": 7.792377948760986,
+    "pred": "0",
+    "gold": "0"
+  },
+  "107": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   Op: *4\n   Register = (1 * 4) mod 6 = 4\n   Intermediate value: 4\n\n2. Op: -4\n   Register = (4 - 4) mod 6 = 0\n   Intermediate value: 0\n\n3. Op: +4\n   Register = (0 + 4) mod 6 = 4\n   Intermediate value: 4\n\n4. Op: *3\n   Register = (4 * 3) mod 6 = 2\n   Intermediate value: 2\n\n5. Op: +5\n   Register = (2 + 5) mod 6 = 0\n   Final value: 0",
+    "prompt_tokens": 129,
+    "eval_tokens": 167,
+    "total_ns": 6673121667,
+    "wall_s": 6.905224084854126,
+    "pred": "0",
+    "gold": "5"
+  },
+  "108": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   Operation: -4\n   Register = 1 - 4 = -3 (mod 6) = 3\n\n2. Register = 3\n   Operation: *4\n   Register = 3 * 4 = 12 (mod 6) = 0\n\n3. Register = 0\n   Operation: -3\n   Register = 0 - 3 = -3 (mod 6) = 3\n\n4. Register = 3\n   Operation: +2\n   Register = 3 + 2 = 5\n\n5. Register = 5\n   Operation: +4\n   Register = 5 + 4 = 9 (mod 6) = 3\n\n#### <final value 0..5> 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 180,
+    "total_ns": 7127805500,
+    "wall_s": 7.153745889663696,
+    "pred": "3",
+    "gold": "3"
+  },
+  "109": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: -1\nRegister = 5 - 1 = 4\nModulo 6: 4 (no change)\n\n#### 4\n\nOperation 2: -5\nRegister = 4 - 5 = -1\nModulo 6: -1 + 6 = 5 (wraparound)\n#### 5\n\nOperation 3: -4\nRegister = 5 - 4 = 1\n#### 1\n\nOperation 4: *1\nRegister = 1 * 1 = 1\n#### 1\n\nOperation 5: -3\nRegister = 1 - 3 = -2\nModulo 6: -2 + 6 = 4\n#### 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 168,
+    "total_ns": 6657836167,
+    "wall_s": 6.86409592628479,
+    "pred": "4",
+    "gold": "4"
+  },
+  "110": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: -3\nRegister = 0 - 3 = -3\nModulo 6: -3 % 6 = 3 (since -3 is equivalent to 3 modulo 6)\nNew register value: 3\n\nOperation 2: +5\nRegister = 3 + 5 = 8\nModulo 6: 8 % 6 = 2\nNew register value: 2\n\nOperation 3: *2\nRegister = 2 * 2 = 4\nNew register value: 4\n\nOperation 4: *1\nRegister = 4 * 1 = 4 (no change)\nNew register value: 4\n\nOperation 5: *4\nRegister = 4 * 4 = 16\nModulo 6: 16 % 6 = 4\nNew register value: 4\n\n#### <final value 0..5> 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 210,
+    "total_ns": 8296307750,
+    "wall_s": 8.33321499824524,
+    "pred": "4",
+    "gold": "4"
+  },
+  "111": {
+    "text": "Let's apply the operations step by step:\n\nInitial register: 0\n-----------------\n\nOperation 1: *4 (multiply by 4)\nResult: 0 \u00d7 4 = 0\nModulo 6: 0 % 6 = 0\nNew register: 0\n\n-----------------\n\nOperation 2: +4 (add 4)\nResult: 0 + 4 = 4\nModulo 6: 4 % 6 = 4\nNew register: 4\n\n-----------------\n\nOperation 3: +4 (add 4)\nResult: 4 + 4 = 8\nModulo 6: 8 % 6 = 2\nNew register: 2\n\n-----------------\n\nOperation 4: +4 (add 4)\nResult: 2 + 4 = 6\nModulo 6: 6 % 6 = 0\nNew register: 0\n\n-----------------\n\nOperation 5: +1 (add 1)\nResult: 0 + 1 = 1\nModulo 6: 1 % 6 = 1\nNew register: 1\n\n#### <final value 1>",
+    "prompt_tokens": 129,
+    "eval_tokens": 244,
+    "total_ns": 9561269917,
+    "wall_s": 9.993628978729248,
+    "pred": "1",
+    "gold": "1"
+  },
+  "112": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: Multiply by 3\nNew value = 3 \u00d7 3 = 9\nModulo 6: 9 % 6 = 3\nRegister after operation 1: 3\n\nOperation 2: Add 5\nNew value = 3 + 5 = 8\nModulo 6: 8 % 6 = 2\nRegister after operation 2: 2\n\nOperation 3: Multiply by 2\nNew value = 2 \u00d7 2 = 4\nModulo 6: 4 % 6 = 4\nRegister after operation 3: 4\n\nOperation 4: Add 1\nNew value = 4 + 1 = 5\nModulo 6: 5 % 6 = 5\nRegister after operation 4: 5\n\nOperation 5: Multiply by 1\nNew value = 5 \u00d7 1 = 5\nModulo 6: 5 % 6 = 5\nRegister after operation 5: 5\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 246,
+    "total_ns": 9645794125,
+    "wall_s": 9.900696277618408,
+    "pred": "5",
+    "gold": "5"
+  },
+  "113": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: +1\nRegister = 2 + 1 = 3\nModulo 6: 3 % 6 = 3\n\n#### 3\n\nOperation 2: *4\nRegister = 3 * 4 = 12\nModulo 6: 12 % 6 = 0\n\n#### 0\n\nOperation 3: *1\nRegister = 0 * 1 = 0\nModulo 6: 0 % 6 = 0\n\n#### 0\n\nOperation 4: +4\nRegister = 0 + 4 = 4\nModulo 6: 4 % 6 = 4\n\n#### 4\n\nOperation 5: -5\nRegister = 4 - 5 = -1\nModulo 6: -1 % 6 = 5 (since we're working with modulo, the negative value wraps around to its equivalent positive value)\n\n#### 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 214,
+    "total_ns": 8429847625,
+    "wall_s": 8.460254192352295,
+    "pred": "5",
+    "gold": "5"
+  },
+  "114": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 5\n   Operation 1: +3\n   Register = 5 + 3 = 8\n   Modulo 6: 8 % 6 = 2\n   New register: 2\n\n2. Operation 2: +3\n   Register = 2 + 3 = 5\n   Modulo 6: 5 % 6 = 5\n   New register: 5\n\n3. Operation 3: -4\n   Register = 5 - 4 = 1\n   Modulo 6: 1 % 6 = 1\n   New register: 1\n\n4. Operation 4: *5\n   Register = 1 * 5 = 5\n   Modulo 6: 5 % 6 = 5\n   New register: 5\n\n5. Operation 5: +3\n   Register = 5 + 3 = 8\n   Modulo 6: 8 % 6 = 2\n   New register: 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 244,
+    "total_ns": 9587524042,
+    "wall_s": 9.62105393409729,
+    "pred": "2",
+    "gold": "2"
+  },
+  "115": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: +2\nNew value = 3 + 2 = 5\nModulo 6: 5 (no change)\n\n#### 5\n\nOperation 2: +2\nNew value = 5 + 2 = 7\nModulo 6: 7 -> 1 (since 7 mod 6 = 1)\n#### 1\n\nOperation 3: -3\nNew value = 1 - 3 = -2\nModulo 6: -2 -> 4 (since -2 mod 6 = 4, and we wrap around to the positive side of the modulo range)\n#### 4\n\nOperation 4: -4\nNew value = 4 - 4 = 0\nModulo 6: 0 (no change)\n#### 0\n\nOperation 5: -1\nNew value = 0 - 1 = -1\nModulo 6: -1 -> 5 (since -1 mod 6 = 5, and we wrap around to the positive side of the modulo range)\n#### 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 242,
+    "total_ns": 15657775208,
+    "wall_s": 15.683820009231567,
+    "pred": "5",
+    "gold": "5"
+  },
+  "116": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: *3\nRegister = 2 * 3 = 6\nModulo 6: 6 % 6 = 0\nNew register value: 0\n\n#### <0>\n\nOperation 2: -1\nRegister = 0 - 1 = -1\nModulo 6: (-1) % 6 = 5 (since we wrap around)\nNew register value: 5\n\n#### <5>\n\nOperation 3: +4\nRegister = 5 + 4 = 9\nModulo 6: 9 % 6 = 3\nNew register value: 3\n\n#### <3>\n\nOperation 4: -4\nRegister = 3 - 4 = -1\nModulo 6: (-1) % 6 = 5 (since we wrap around)\nNew register value: 5\n\n#### <5>\n\nOperation 5: -3\nRegister = 5 - 3 = 2\nNew register value: 2\n\n#### <2>",
+    "prompt_tokens": 129,
+    "eval_tokens": 230,
+    "total_ns": 17132365583,
+    "wall_s": 17.15847086906433,
+    "pred": "2",
+    "gold": "2"
+  },
+  "117": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: -4\nRegister = 0 - 4 = -4\nModulo 6: -4 % 6 = 2\nNew register value: 2\n\n#### <final value 0..5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 65,
+    "total_ns": 5194874292,
+    "wall_s": 5.216536045074463,
+    "pred": "5",
+    "gold": "1"
+  },
+  "118": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: +1\nRegister = 5 + 1 = 6\nModulo 6: 6 % 6 = 0\n\n#### 0\n\nOperation 2: +3\nRegister = 0 + 3 = 3\n\n#### 3\n\nOperation 3: *5\nRegister = 3 * 5 = 15\nModulo 6: 15 % 6 = 3\n\n#### 3\n\nOperation 4: +4\nRegister = 3 + 4 = 7\nModulo 6: 7 % 6 = 1\n\n#### 1\n\nOperation 5: -2\nRegister = 1 - 2 = -1\nModulo 6: -1 % 6 = 5 (since we're working with positive values, we wrap around)\n\n#### 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 194,
+    "total_ns": 14376224584,
+    "wall_s": 14.638263940811157,
+    "pred": "5",
+    "gold": "5"
+  },
+  "119": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: *1\nRegister = 5 * 1 = 5\nModulo 6: 5 % 6 = 5\nNew register value: 5\n\nOperation 2: *4\nRegister = 5 * 4 = 20\nModulo 6: 20 % 6 = 2\nNew register value: 2\n\nOperation 3: -1\nRegister = 2 - 1 = 1\nModulo 6: 1 % 6 = 1\nNew register value: 1\n\nOperation 4: -2\nRegister = 1 - 2 = -1\nModulo 6: -1 % 6 = 5 (since -1 is equivalent to 5 modulo 6)\nNew register value: 5\n\nOperation 5: *2\nRegister = 5 * 2 = 10\nModulo 6: 10 % 6 = 4\nNew register value: 4\n\n#### <final value 0..5> 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 235,
+    "total_ns": 17196118042,
+    "wall_s": 17.31696105003357,
+    "pred": "4",
+    "gold": "4"
+  },
+  "120": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: -4\nRegister = 5 - 4 = 1\nModulo 6: 1 % 6 = 1\n\n#### 1\n\nOperation 2: +1\nRegister = 1 + 1 = 2\nModulo 6: 2 % 6 = 2\n\n#### 2\n\nOperation 3: *4\nRegister = 2 * 4 = 8\nModulo 6: 8 % 6 = 2\n\n#### 2\n\nOperation 4: *5\nRegister = 2 * 5 = 10\nModulo 6: 10 % 6 = 4\n\n#### 4\n\nOperation 5: *2\nRegister = 4 * 2 = 8\nModulo 6: 8 % 6 = 2\n\n#### 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 196,
+    "total_ns": 14506855792,
+    "wall_s": 14.864300012588501,
+    "pred": "2",
+    "gold": "2"
+  },
+  "121": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 4\n\nOperation 1: +2\nRegister = 4 + 2 = 6\nModulo 6: 6 % 6 = 0\n\nIntermediate value: 0\n\nOperation 2: -2\nRegister = 0 - 2 = -2\nModulo 6: -2 % 6 = 4 (since we're working with modulo, the negative result wraps around)\n\nIntermediate value: 4\n\nOperation 3: +5\nRegister = 4 + 5 = 9\nModulo 6: 9 % 6 = 3\n\nIntermediate value: 3\n\nOperation 4: -3\nRegister = 3 - 3 = 0\nModulo 6: 0 % 6 = 0\n\nIntermediate value: 0\n\nOperation 5: *1 (multiplication by 1 doesn't change the value)\nRegister remains: 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 213,
+    "total_ns": 15796792625,
+    "wall_s": 15.821896076202393,
+    "pred": "0",
+    "gold": "0"
+  },
+  "122": {
+    "text": "Let's apply the operations step by step:\n\nInitial register: 0\n\nOperation 1: +1\nRegister = 0 + 1 = 1\nModulo 6: 1 % 6 = 1\nResult: 1\n\nOperation 2: *3\nRegister = 1 * 3 = 3\nModulo 6: 3 % 6 = 3\nResult: 3\n\nOperation 3: *3\nRegister = 3 * 3 = 9\nModulo 6: 9 % 6 = 3\nResult: 3\n\nOperation 4: -2\nRegister = 3 - 2 = 1\nModulo 6: 1 % 6 = 1\nResult: 1\n\nOperation 5: *1\nRegister = 1 * 1 = 1\nModulo 6: 1 % 6 = 1\nResult: 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 212,
+    "total_ns": 15420211667,
+    "wall_s": 15.862267971038818,
+    "pred": "1",
+    "gold": "1"
+  },
+  "123": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\n   Operation: -4\n   Register = 0 - 4 = -4\n   Modulo 6: -4 % 6 = 2 (since -4 is equivalent to 2 modulo 6)\n   So, register = 2\n\n2. Operation: -2\n   Register = 2 - 2 = 0\n   Modulo 6: 0 % 6 = 0\n\n3. Operation: *5\n   Register = 0 * 5 = 0\n   Modulo 6: 0 % 6 = 0\n\n4. Operation: -4\n   Register = 0 - 4 = -4\n   Modulo 6: -4 % 6 = 2 (since -4 is equivalent to 2 modulo 6)\n   So, register = 2\n\n5. Operation: *3\n   Register = 2 * 3 = 6\n   Modulo 6: 6 % 6 = 0\n\n#### <final value 0..5> 0",
+    "prompt_tokens": 129,
+    "eval_tokens": 239,
+    "total_ns": 17606617750,
+    "wall_s": 18.121617794036865,
+    "pred": "0",
+    "gold": "0"
+  },
+  "124": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: +4\nRegister = 2 + 4 = 6 (mod 6) = 0\n\nIntermediate value: 0\n\nOperation 2: *1\nRegister = 0 * 1 = 0\n\nIntermediate value: 0\n\nOperation 3: +5\nRegister = 0 + 5 = 5\n\nIntermediate value: 5\n\nOperation 4: +3\nRegister = 5 + 3 = 8 (mod 6) = 2\n\nIntermediate value: 2\n\nOperation 5: *1\nRegister = 2 * 1 = 2\n\nFinal value: #### <2>",
+    "prompt_tokens": 129,
+    "eval_tokens": 154,
+    "total_ns": 11276434042,
+    "wall_s": 11.536080121994019,
+    "pred": "2",
+    "gold": "2"
+  },
+  "125": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 2\n\nOperation 1: Multiply by 1\nRegister = 2 * 1 = 2 (mod 6) = 2\n\nIntermediate value: 2\n\nOperation 2: Subtract 4\nRegister = 2 - 4 = -2 (mod 6) = 4\n\nIntermediate value: 4\n\nOperation 3: Multiply by 1\nRegister = 4 * 1 = 4 (mod 6) = 4\n\nIntermediate value: 4\n\nOperation 4: Multiply by 3\nRegister = 4 * 3 = 12 (mod 6) = 0\n\nIntermediate value: 0\n\nOperation 5: Add 2\nRegister = 0 + 2 = 2 (mod 6) = 2\n\nFinal value: #### <2>",
+    "prompt_tokens": 129,
+    "eval_tokens": 186,
+    "total_ns": 13680931875,
+    "wall_s": 13.70921802520752,
+    "pred": "2",
+    "gold": "2"
+  },
+  "126": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: +3\nRegister = 5 + 3 = 8\nModulo 6: 8 % 6 = 2\nNew register value: 2\n\nOperation 2: *5\nRegister = 2 * 5 = 10\nModulo 6: 10 % 6 = 4\nNew register value: 4\n\nOperation 3: *4\nRegister = 4 * 4 = 16\nModulo 6: 16 % 6 = 4\nNew register value: 4 (no change)\n\nOperation 4: -3\nRegister = 4 - 3 = 1\nNew register value: 1\n\nOperation 5: +1\nRegister = 1 + 1 = 2\nNew register value: 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 198,
+    "total_ns": 14676789625,
+    "wall_s": 14.713989734649658,
+    "pred": "2",
+    "gold": "2"
+  },
+  "127": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 4\n   Operation: -5\n   New value: 4 - 5 = -1 (mod 6) = 5\n   Intermediate value: 5\n\n2. Operation: -2\n   New value: 5 - 2 = 3\n   Intermediate value: 3\n\n3. Operation: +3\n   New value: 3 + 3 = 6 (mod 6) = 0\n   Intermediate value: 0\n\n4. Operation: +2\n   New value: 0 + 2 = 2\n   Intermediate value: 2\n\n5. Operation: -3\n   New value: 2 - 3 = -1 (mod 6) = 5\n   Final value: 5\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 188,
+    "total_ns": 13940295125,
+    "wall_s": 13.985660791397095,
+    "pred": "5",
+    "gold": "5"
+  },
+  "128": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\nOperation 1: -2 (register = 1 - 2 = -1)\nModulo 6: -1 % 6 = 5\nRegister after operation 1: 5\n\nOperation 2: +3 (register = 5 + 3 = 8)\nModulo 6: 8 % 6 = 2\nRegister after operation 2: 2\n\nOperation 3: -1 (register = 2 - 1 = 1)\nModulo 6: 1 % 6 = 1\nRegister after operation 3: 1\n\nOperation 4: -3 (register = 1 - 3 = -2)\nModulo 6: -2 % 6 = 4\nRegister after operation 4: 4\n\nOperation 5: *2 (register = 4 * 2 = 8)\nModulo 6: 8 % 6 = 2\nRegister after operation 5: 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 233,
+    "total_ns": 17003535458,
+    "wall_s": 17.036595821380615,
+    "pred": "2",
+    "gold": "2"
+  },
+  "129": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\nOperation 1: -2 (mod 6)\nRegister = 1 - 2 = -1\n-1 mod 6 = 5\nIntermediate value: 5\n\nOperation 2: -2 (mod 6)\nRegister = 5 - 2 = 3\nIntermediate value: 3\n\nOperation 3: *1 (mod 6)\nRegister = 3 * 1 = 3\nIntermediate value: 3\n\nOperation 4: -4 (mod 6)\nRegister = 3 - 4 = -1\n-1 mod 6 = 5\nIntermediate value: 5\n\nOperation 5: +2 (mod 6)\nRegister = 5 + 2 = 7\n7 mod 6 = 1\nFinal value: 1\n\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 194,
+    "total_ns": 14316284541,
+    "wall_s": 14.48825192451477,
+    "pred": "1",
+    "gold": "1"
+  },
+  "130": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 4\n   Operation 1: *3\n   Register = 4 * 3 = 12\n   Modulo 6: 12 % 6 = 0\n   New register: 0\n\n2. Operation 2: *2\n   Register = 0 * 2 = 0\n   Modulo 6: 0 % 6 = 0 (no change)\n\n3. Operation 3: *3\n   Register = 0 * 3 = 0\n   Modulo 6: 0 % 6 = 0 (no change)\n\n4. Operation 4: +4\n   Register = 0 + 4 = 4\n   Modulo 6: 4 % 6 = 4\n\n5. Operation 5: +2\n   Register = 4 + 2 = 6\n   Modulo 6: 6 % 6 = 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 218,
+    "total_ns": 15930373292,
+    "wall_s": 16.04678511619568,
+    "pred": "0",
+    "gold": "0"
+  },
+  "131": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: *2\nRegister value = 5 * 2 = 10\nModulo 6: 10 % 6 = 4\nNew register value: 4\n\n#### <4>\n\nOperation 2: -3\nRegister value = 4 - 3 = 1\nModulo 6: 1 % 6 = 1\nNew register value: 1\n\n#### <1>\n\nOperation 3: +4\nRegister value = 1 + 4 = 5\nModulo 6: 5 % 6 = 5\nNew register value: 5\n\n#### <5>\n\nOperation 4: +5\nRegister value = 5 + 5 = 10\nModulo 6: 10 % 6 = 4\nNew register value: 4\n\n#### <4>\n\nOperation 5: *1\nRegister value = 4 * 1 = 4\nModulo 6: 4 % 6 = 4\nNew register value: 4\n\n#### <4>",
+    "prompt_tokens": 129,
+    "eval_tokens": 237,
+    "total_ns": 17339852625,
+    "wall_s": 17.525446891784668,
+    "pred": "4",
+    "gold": "4"
+  },
+  "132": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   Operation 1: +4\n   Register = 1 + 4 = 5\n   Modulo 6: 5 % 6 = 5\n\n2. Operation 2: -4\n   Register = 5 - 4 = 1\n   Modulo 6: 1 % 6 = 1\n\n3. Operation 3: *5\n   Register = 1 * 5 = 5\n   Modulo 6: 5 % 6 = 5\n\n4. Operation 4: +4\n   Register = 5 + 4 = 9\n   Modulo 6: 9 % 6 = 3\n\n5. Operation 5: -3\n   Register = 3 - 3 = 0\n   Modulo 6: 0 % 6 = 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 205,
+    "total_ns": 15096301083,
+    "wall_s": 15.12381911277771,
+    "pred": "0",
+    "gold": "0"
+  },
+  "133": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 3\n   Operation 1: +4\n   Register = 3 + 4 = 7\n   Modulo 6: 7 % 6 = 1\n   Intermediate value: 1\n\n2. Operation 2: +4\n   Register = 1 + 4 = 5\n   Intermediate value: 5\n\n3. Operation 3: *5\n   Register = 5 * 5 = 25\n   Modulo 6: 25 % 6 = 1\n   Intermediate value: 1\n\n4. Operation 4: +5\n   Register = 1 + 5 = 6\n   Intermediate value: 6\n\n5. Operation 5: +2\n   Register = 6 + 2 = 8\n   Modulo 6: 8 % 6 = 2\n   Final value: 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 214,
+    "total_ns": 15736702916,
+    "wall_s": 15.768723011016846,
+    "pred": "2",
+    "gold": "2"
+  },
+  "134": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 5\nOperation 1: -5\nregister = 5 - 5 = 0 (mod 6) = 0\n\n2. Operation 2: +5\nregister = 0 + 5 = 5\n\n3. Operation 3: *5\nregister = 5 * 5 = 25 (mod 6) = 1\n\n4. Operation 4: +5\nregister = 1 + 5 = 6 (mod 6) = 0\n\n5. Operation 5: *2\nregister = 0 * 2 = 0",
+    "prompt_tokens": 129,
+    "eval_tokens": 140,
+    "total_ns": 10512066209,
+    "wall_s": 10.535712003707886,
+    "pred": "0",
+    "gold": "0"
+  },
+  "135": {
+    "text": "Let's apply the operations step by step:\n\nInitial register: 0\n-----------------\n\nOperation 1: +1\nNew register: 0 + 1 = 1\nModulo 6: 1 % 6 = 1\n-----------------\n#### <final value 0..5> 1",
+    "prompt_tokens": 129,
+    "eval_tokens": 64,
+    "total_ns": 5032822625,
+    "wall_s": 5.208615064620972,
+    "pred": "1",
+    "gold": "4"
+  },
+  "136": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 2\n   *5: (2 * 5) mod 6 = 10 mod 6 = 4\n   #### 4\n\n2. -4: (4 - 4) mod 6 = 0\n   #### 0\n\n3. -4: (0 - 4) mod 6 = -4 mod 6 = 2\n   #### 2\n\n4. +5: (2 + 5) mod 6 = 7 mod 6 = 1\n   #### 1\n\n5. +3: (1 + 3) mod 6 = 4\n   #### 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 150,
+    "total_ns": 11155911875,
+    "wall_s": 11.212210893630981,
+    "pred": "4",
+    "gold": "4"
+  },
+  "137": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 4\nOperation 1: -5 (register = 4 - 5 = -1)\n-1 mod 6 = 5\nRegister = 5\n\n2. Operation 2: +4 (register = 5 + 4 = 9)\n9 mod 6 = 3\nRegister = 3\n\n3. Operation 3: -4 (register = 3 - 4 = -1)\n-1 mod 6 = 5\nRegister = 5\n\n4. Operation 4: -2 (register = 5 - 2 = 3)\nRegister = 3\n\n5. Operation 5: *2 (register = 3 * 2 = 6)\n6 mod 6 = 0\nRegister = 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 183,
+    "total_ns": 13562015583,
+    "wall_s": 13.597676992416382,
+    "pred": "0",
+    "gold": "0"
+  },
+  "138": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 4\n   Op 1: *5 (multiply by 5)\n   Register = 4 * 5 = 20\n   Mod 6: 20 % 6 = 2\n   Intermediate value: 2\n\n2. Op 2: +3 (add 3)\n   Register = 2 + 3 = 5\n   Mod 6: 5 % 6 = 5\n   Intermediate value: 5\n\n3. Op 3: -5 (subtract 5)\n   Register = 5 - 5 = 0\n   Mod 6: 0 % 6 = 0\n   Intermediate value: 0\n\n4. Op 4: *4 (multiply by 4)\n   Register = 0 * 4 = 0\n   Mod 6: 0 % 6 = 0\n   Intermediate value: 0\n\n5. Op 5: *2 (multiply by 2)\n   Register = 0 * 2 = 0\n   Mod 6: 0 % 6 = 0\n   Final value: 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 258,
+    "total_ns": 18923475583,
+    "wall_s": 19.028774976730347,
+    "pred": "0",
+    "gold": "0"
+  },
+  "139": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 1\n--------------------\n\nOperation 1: *4 (multiply by 4)\nNew value = 1 * 4 = 4\nModulo 6: 4 % 6 = 4\nRegister value after operation 1: 4\n\nOperation 2: *4 (multiply by 4)\nNew value = 4 * 4 = 16\nModulo 6: 16 % 6 = 4\nRegister value after operation 2: 4\n\nOperation 3: -4 (subtract 4)\nNew value = 4 - 4 = 0\nModulo 6: 0 % 6 = 0\nRegister value after operation 3: 0\n\nOperation 4: +3 (add 3)\nNew value = 0 + 3 = 3\nModulo 6: 3 % 6 = 3\nRegister value after operation 4: 3\n\nOperation 5: -1 (subtract 1)\nNew value = 3 - 1 = 2\nModulo 6: 2 % 6 = 2\nRegister value after operation 5: 2\n\n#### <final value 0..5> 2",
+    "prompt_tokens": 129,
+    "eval_tokens": 267,
+    "total_ns": 19442564459,
+    "wall_s": 19.478951930999756,
+    "pred": "2",
+    "gold": "2"
+  },
+  "140": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 0\n   Operation 1: +3\n   Register = 0 + 3 = 3\n   Modulo 6: 3 % 6 = 3\n\n2. Operation 2: +4\n   Register = 3 + 4 = 7\n   Modulo 6: 7 % 6 = 1\n\n3. Operation 3: *3\n   Register = 1 * 3 = 3\n   Modulo 6: 3 % 6 = 3\n\n4. Operation 4: -2\n   Register = 3 - 2 = 1\n   Modulo 6: 1 % 6 = 1\n\n5. Operation 5: *5\n   Register = 1 * 5 = 5\n   Modulo 6: 5 % 6 = 5\n\n#### <final value 0..5> 5",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 15389269916,
+    "wall_s": 15.413807153701782,
+    "pred": "5",
+    "gold": "5"
+  },
+  "141": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: +1\nRegister = 0 + 1 = 1\nModulo 6: 1 % 6 = 1\nResult: 1\n\nOperation 2: +3\nRegister = 1 + 3 = 4\nModulo 6: 4 % 6 = 4\nResult: 4\n\nOperation 3: -2\nRegister = 4 - 2 = 2\nModulo 6: 2 % 6 = 2\nResult: 2\n\nOperation 4: +1\nRegister = 2 + 1 = 3\nModulo 6: 3 % 6 = 3\nResult: 3\n\nOperation 5: *4\nRegister = 3 * 4 = 12\nModulo 6: 12 % 6 = 0\nResult: 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 209,
+    "total_ns": 15335216500,
+    "wall_s": 15.434654951095581,
+    "pred": "0",
+    "gold": "0"
+  },
+  "142": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 3\n   Operation 1: +3\n   Register = 3 + 3 = 6 (mod 6) = 0\n\n2. Operation 2: +5\n   Register = 0 + 5 = 5\n\n3. Operation 3: +3\n   Register = 5 + 3 = 8 (mod 6) = 2\n\n4. Operation 4: -5\n   Register = 2 - 5 = -3 (mod 6) = 3\n\n5. Operation 5: *5\n   Register = 3 * 5 = 15 (mod 6) = 3\n\n#### <final value 0..5> = 3",
+    "prompt_tokens": 129,
+    "eval_tokens": 167,
+    "total_ns": 12341112667,
+    "wall_s": 12.789355993270874,
+    "pred": "3",
+    "gold": "3"
+  },
+  "143": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: *4\nResult: (5 * 4) mod 6 = 20 mod 6 = 2\nRegister value after operation 1: 2\n\nOperation 2: +3\nResult: (2 + 3) mod 6 = 5 mod 6 = 5\nRegister value after operation 2: 5\n\nOperation 3: +4\nResult: (5 + 4) mod 6 = 9 mod 6 = 3\nRegister value after operation 3: 3\n\nOperation 4: -2\nResult: (3 - 2) mod 6 = 1 mod 6 = 1\nRegister value after operation 4: 1\n\nOperation 5: -1\nResult: (1 - 1) mod 6 = 0 mod 6 = 0\nRegister value after operation 5: 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 214,
+    "total_ns": 15402328792,
+    "wall_s": 15.430876016616821,
+    "pred": "0",
+    "gold": "0"
+  },
+  "144": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: *2\nNew value = 3 * 2 = 6\nModulo 6: 6 % 6 = 0\nRegister value after operation 1: 0\n\nOperation 2: +4\nNew value = 0 + 4 = 4\nModulo 6: 4 % 6 = 4\nRegister value after operation 2: 4\n\nOperation 3: -1\nNew value = 4 - 1 = 3\nModulo 6: 3 % 6 = 3\nRegister value after operation 3: 3\n\nOperation 4: *2\nNew value = 3 * 2 = 6\nModulo 6: 6 % 6 = 0\nRegister value after operation 4: 0\n\nOperation 5: -1\nNew value = 0 - 1 = -1\nModulo 6: -1 % 6 = 5 (since we wrap around to the positive side)\nRegister value after operation 5: 5\n\n#### <final value 5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 248,
+    "total_ns": 18040639500,
+    "wall_s": 18.147696018218994,
+    "pred": "5",
+    "gold": "5"
+  },
+  "145": {
+    "text": "Let's apply the operations step by step:\n\n1. Start: register = 1\n   Operation 1: +5\n   Register = 1 + 5 = 6 (mod 6) = 0\n\n2. Operation 2: +2\n   Register = 0 + 2 = 2\n\n3. Operation 3: *5\n   Register = 2 * 5 = 10 (mod 6) = 4\n\n4. Operation 4: -3\n   Register = 4 - 3 = 1\n\n5. Operation 5: +5\n   Register = 1 + 5 = 6 (mod 6) = 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 154,
+    "total_ns": 11404998500,
+    "wall_s": 11.50738000869751,
+    "pred": "0",
+    "gold": "0"
+  },
+  "146": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 5\n\nOperation 1: +3\nRegister = 5 + 3 = 8\nModulo 6: 8 % 6 = 2\nNew register value: 2\n\nOperation 2: +5\nRegister = 2 + 5 = 7\nModulo 6: 7 % 6 = 1\nNew register value: 1\n\nOperation 3: +1\nRegister = 1 + 1 = 2\nModulo 6: 2 % 6 = 2\nNew register value: 2\n\nOperation 4: -1\nRegister = 2 - 1 = 1\nModulo 6: 1 % 6 = 1\nNew register value: 1\n\nOperation 5: -1\nRegister = 1 - 1 = 0\nModulo 6: 0 % 6 = 0\nNew register value: 0\n\n#### <final value 0>",
+    "prompt_tokens": 129,
+    "eval_tokens": 219,
+    "total_ns": 16039637167,
+    "wall_s": 16.06918978691101,
+    "pred": "0",
+    "gold": "0"
+  },
+  "147": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: -4\nRegister = 3 - 4 = -1\nModulo 6: -1 % 6 = 5\nNew register value: 5\n\nOperation 2: -1\nRegister = 5 - 1 = 4\nModulo 6: 4 (no change)\nNew register value: 4\n\nOperation 3: -4\nRegister = 4 - 4 = 0\nModulo 6: 0 (no change)\nNew register value: 0\n\nOperation 4: +2\nRegister = 0 + 2 = 2\nModulo 6: 2 (no change)\nNew register value: 2\n\nOperation 5: +2\nRegister = 2 + 2 = 4\nModulo 6: 4 (no change)\nNew register value: 4\n\n#### <final value 0..5> 4",
+    "prompt_tokens": 129,
+    "eval_tokens": 211,
+    "total_ns": 15580108792,
+    "wall_s": 15.908684968948364,
+    "pred": "4",
+    "gold": "4"
+  },
+  "148": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 0\n\nOperation 1: -4\nRegister = 0 - 4 = -4\nModulo 6: -4 % 6 = 2\nNew register value: 2\n\n#### <final value 0..5>",
+    "prompt_tokens": 129,
+    "eval_tokens": 65,
+    "total_ns": 4958619625,
+    "wall_s": 5.246718883514404,
+    "pred": "5",
+    "gold": "1"
+  },
+  "149": {
+    "text": "Let's apply the operations step by step:\n\nInitial register value: 3\n\nOperation 1: +4\nNew value = 3 + 4 = 7\nModulo 6: 7 % 6 = 1\nRegister value after operation 1: 1\n\nOperation 2: *3\nNew value = 1 * 3 = 3\nModulo 6: 3 % 6 = 3\nRegister value after operation 2: 3\n\nOperation 3: +4\nNew value = 3 + 4 = 7\nModulo 6: 7 % 6 = 1\nRegister value after operation 3: 1\n\nOperation 4: -4\nNew value = 1 - 4 = -3\nModulo 6: -3 % 6 = 3 (since -3 is equivalent to 3 modulo 6)\nRegister value after operation 4: 3\n\nOperation 5: *1\nNew value = 3 * 1 = 3\nModulo 6: 3 % 6 = 3\nRegister value after operation 5: 3\n\n#### <final value 3>",
+    "prompt_tokens": 129,
+    "eval_tokens": 251,
+    "total_ns": 18281487667,
+    "wall_s": 18.306477785110474,
+    "pred": "3",
+    "gold": "3"
+  }
+}
