@@ -31,14 +31,26 @@ does not cover, with measured (not weak-model-elicited) quantities.
   does not.
 
 ## Research directions (gated behind the published core)
-- [ ] **Cross-frame / price layer — real-data test** ([`cross-frame-applications`](cross-frame-applications.md)).
-  The *one empirical arena that reaches the multi-agent half* of the theory (docs [`03`](03-cross-frame-value.md)/
-  [`04`](04-multi-agent-capacity-region.md)) — which the LLM-agent tests could not, because here the quantities
-  are *measured, not elicited from a weak model*. Pre-registered test: does observable value flow across
-  substrates obey doc 03 — (i) flows down the value/price gradient, (ii) friction-gated transfer
-  (`V_j − V_i > f`), (iii) price as the frame-independent coordinate? Honest confound: social processes
-  dominate; physics-envy is the failure mode — pre-register and report either way. *This is the most valuable
-  next empirical shot* (real agents, abundant data, the untested multi-agent layer).
+- [x] **Cross-frame / price layer — real-data test → STRUCTURAL CAP** ([`15`](15-cross-frame-realdata.md),
+  pre-reg `f3bc720`, verdict `81780fc`; branch `claude/goofy-hawking-2c1df2` — merge to main). Worked to a frozen
+  pre-registration and stopped honestly (the charter's "say so and stop"): **the cross-frame layer has no
+  observational test that is both discriminating and resolvable.** The flow/friction/price predictions are
+  arbitrage / law-of-one-price / GE-repainted (trivial). The only divergent-from-Kelly prediction — the cut-set
+  ceiling `Σ_{a∈S} G_a ≤ I(X;Y_S) ≤ H(X)` — lives in the *coupled-but-separate* multi-agent regime that
+  observational data never exposes (only the degenerate uncoupled / fully-pooled corners; forecasting makes it a
+  data-processing tautology). Sharpens red-team A7 from "untested" to a precise structural claim, and specifies
+  the **only resolving route: a controlled multi-agent experiment with counterfactual sub-coalition throughputs
+  + varied perception overlap.** That is the LLM-agent route — gated on a **stronger agent instrument** than
+  small LLMs (the ceiling that sank Lever 1).
+
+### ⊕ Convergence finding (the clarified state of the whole program)
+Every escape-Kelly route is now mapped and they **all converge on one gate**: the distinctively-*value* claim is
+testable *in principle* only via a **controlled multi-agent experiment** (counterfactual coalition throughputs,
+varied perception overlap) with **agents capable enough to play the value game** — and *neither observational
+data (degenerate corners) nor small LLMs (capability ceiling) can deliver it.* So: single-agent bridge = Kelly's
+turf; governance (Lever 1) = small-LLM CAP; wave theory = real-agent negative; cross-frame = structural CAP.
+**"Great" is now precisely specified and currently blocked on a stronger-agent instrument** — revisit the one
+controlled-multi-agent experiment when such an instrument exists. No current move delivers the upside.
 - [ ] **Wave / field theory — gate not cleared** (docs [`08`](08-field-theory-of-value.md),
   [`11`](11-real-agent-field-test.md)). Derived + toy-emergent, but real small-LLM agents coordinate by
   *Schelling focal points*, not spontaneous flocking. Options (no model-escalation fishing): a motile,
