@@ -18,10 +18,10 @@ The cross-frame/price **real-data test is the highest-leverage shot** precisely 
 does not cover, with measured (not weak-model-elicited) quantities.
 
 ## Near-term (in flight / logistics)
-- [ ] **Publish v3** — the cross-shape generalization ([`14`](14-bridge-generalization.md)) + the two-route
-  derivation hardening ([`01`](01-core-formalization.md)). *Blocker:* reconcile the cross-shape `n=42` line in
-  the paper's §Cross-shape (make the point count reconstructable), final proof. Then owner-gated Zenodo
-  "New version". Draft prepared in `paper/ZENODO.md`.
+- [x] **Publish v3 — DONE (live 2026-06-03):** `zenodo.org/records/20530824` (Version v3, under concept DOI
+  `10.5281/zenodo.20487041`; v1/v2 preserved). The cross-shape generalization ([`14`](14-bridge-generalization.md))
+  + two-route derivation hardening ([`01`](01-core-formalization.md)); `n=42` reconciled; PDF md5 `1fb3a85e…`.
+  **This is now the canonical link** for citation/dissemination.
 - [ ] **v3-completeness (optional):** close the code **capability-ranking** sub-check (currently 11/12 —
   underpowered, ρ=0.429). Needs a **≥32 GB host** to run 7B/8B coders without the 16 GB RAM thrash; would turn
   11/12 → 12/12. Not a blocker for v3; would let a later version drop the caveat.
