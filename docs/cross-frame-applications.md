@@ -90,3 +90,13 @@ that reaches the cross-frame/price layer the LLM-agent tests could not, with rea
 a genuinely different shot than the agent experiments, in a domain where the data is abundant and the
 quantities are measured rather than elicited. Whether it confirms or falsifies [`03`](03-cross-frame-value.md)'s
 flow/friction/price predictions, it would be the first real-world test of the multi-agent half of the theory.
+
+> **Update — tested and resolved (verdict).** This direction was pre-registered
+> ([`sim/realdata/PREREGISTRATION.md`](../sim/realdata/PREREGISTRATION.md)) and worked through to a verdict in
+> [`15-cross-frame-realdata.md`](15-cross-frame-realdata.md): **(b) CAP — not resolvable on observational
+> data.** The flow/friction/price predictions are §0-trivial (arbitrage / law of one price / GE); the *one*
+> distinctively-value prediction (the multi-agent capacity-region cut-set ceiling) is **structurally** not
+> falsifiable on observational value-flow, because every observable arena collapses it into Kelly, Sharpe, GE,
+> or arbitrage. It is testable only in a *controlled* multi-agent experiment that can measure counterfactual
+> sub-coalition throughputs — i.e. the LLM-agent route, which hit the small-model ceiling. The upside survives
+> as a well-specified future experiment, not a result available now.
