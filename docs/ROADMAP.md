@@ -29,6 +29,17 @@ does not cover, with measured (not weak-model-elicited) quantities.
   problem, not a versioning one. Move: post the is/ought-as-control note (drafted, `drafts/`) to the relevant
   audience + an arXiv cross-listing + sharing. This is what converts the record into readers; another version
   does not.
+- [x] **Priority / novelty check — DONE (2026-06-06):** deep-research pass against the nearest neighbors. Verdict:
+  components anticipated (result 1(ii) ← ergodicity economics; result 2 ← Kelly/info-rate, Moffett–Eckford 2021,
+  Touchette–Lloyd 2000; **result 3 ← Still, Sivak, Bell & Crooks 2012 "thermodynamics of prediction" — the one
+  genuine priority threat**), **synthesis + result 5 (is/ought-as-control) appear novel** (nearest neighbor,
+  active inference, makes the *opposite* move). `related-work.md` patched to cite the flagged neighbors.
+- [ ] **Close the two open priority gaps (follow-up pass).** The novelty check left two threads unverified:
+  **(a)** result 4 — is "Fisher–Rao is the cross-frame invariant" merely **Čencov's uniqueness theorem** restated,
+  and does the value-vs-price frame split add anything beyond Hayek + Arrow–Debreu non-comparability? **(b)**
+  result 5 — clear it *outside* active inference (formal is/ought / fact–value treatments in control theory or
+  analytic alignment philosophy). Also: confirm no work literally framed as a "mathematical/thermodynamic theory
+  of value" exists. Low-priority hardening, not a blocker.
 
 ## Research directions (gated behind the published core)
 - [x] **Cross-frame / price layer — real-data test → STRUCTURAL CAP** ([`15`](15-cross-frame-realdata.md),

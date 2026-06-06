@@ -33,6 +33,18 @@ and alignment layer (doc 05); and (iv) the unifying claim that Kelly's theorem i
 *special case* of a general law of value. Kelly proposed a betting strategy; we propose that the same
 mathematics is the structure of value for any goal-directed agent.
 
+The modern information-theoretic form of this duality is sharp and we credit it explicitly: Moffett & Eckford
+(2021) show Kelly's optimum attains a rate–distortion bound with equality, and Hirono & Hidaka (2015) derive
+Jarzynski-type equalities linking information to the full statistics of capital growth; on the control side,
+Touchette & Lloyd (2000) bound a closed-loop controller's performance by the mutual information it acquires.
+Our `ΔG ≤ I(X;Y)` shares this skeleton — value/growth-rate bounded by mutual information, achieved by
+proportional play — and we do not claim that skeleton as new; the generalization is to an arbitrary
+goal-directed value quantity on a physical substrate, not a betting payoff or a control objective. A separate
+information-theoretic notion of intrinsic value, **empowerment** (Klyubin, Polani & Nehaniv, 2005; Salge &
+Polani, 2013), defines an agent's value as the channel capacity from its actions to its future perceptions; it
+measures controllability rather than value-generation rate and offers no Kelly-style achievability, so it is a
+neighbor to — not an instance of — the capacity theorem.
+
 ## Reinforcement learning
 
 "Value function" is a central, precisely-defined object in reinforcement learning (Bellman, 1957; Sutton and
@@ -46,9 +58,18 @@ given one.
 ## Thermodynamics of computation and the free-energy principle
 
 That information has thermodynamic cost is established by Landauer (1961) and Bennett (1982); Jaynes (1957)
-recast statistical mechanics as inference; England (2013) studied dissipation-driven adaptation. Most relevant
-is Friston's free-energy principle and active inference (2010), which casts agents as minimizers of variational
-free energy (surprise). Our belief dynamics (doc 05 §1) is free-energy-principle-like, and we adopt the
+recast statistical mechanics as inference; England (2013) studied dissipation-driven adaptation. Most directly
+relevant to our **Second Law of value** (doc 02) is the **thermodynamics of prediction** (Still, Sivak, Bell &
+Crooks, 2012): they prove that a system's *model inefficiency* — information retained about the past that is
+useless for predicting the future — is equal to its thermodynamic dissipation, `β⟨W_diss⟩ = I_mem − I_pred`,
+holding arbitrarily far from equilibrium. This is the closest prior result to our identification of misalignment
+with dissipated value, and we credit it as such; the relative-entropy-as-free-energy identity underlying both
+terms of our decomposition is itself standard (H. Qian, 2001; a generalized H-theorem). Our departure is the
+specific two-divergence value form `G = D(q‖r) − D(q‖p)` — available potential minus dissipation — and its
+reading as *realized value* for a goal-directed agent rather than dissipated work for a physical system: the
+structural correspondence is real and conceded, the value-theoretic packaging is ours. Also central is Friston's
+free-energy principle and active inference (2010), which casts agents as minimizers of variational free energy
+(surprise). Our belief dynamics (doc 05 §1) is free-energy-principle-like, and we adopt the
 information-geometric machinery (the Fisher–Rao metric; Čencov, 1982; Amari's natural gradient) that the FEP
 also uses. The distinction is precise and, we argue, illuminating: the free-energy principle is a theory of the
 *perception/belief* half — the "is" — whereas our value layer (`k`, its measure, the capacity theorem) is the
@@ -60,7 +81,9 @@ seam between the two frameworks is exactly the is/ought asymmetry of doc 05 §0.
 Our cross-frame price layer (doc 03) is general-equilibrium theory (Arrow and Debreu, 1954; Debreu, 1959) and
 its negative companion, the impossibility of canonical interpersonal comparison (Arrow, 1951). We use these
 results rather than extend them: we *concede* that cardinal cross-agent value comparison is impossible and route
-around it via an emergent price, precisely as Arrow–Debreu economies coordinate non-comparable utilities. The
+around it via an emergent price, precisely as Arrow–Debreu economies coordinate non-comparable utilities — and, as Hayek
+(1945) argued, the price itself is the information-bearing signal that makes decentralized coordination of
+dispersed knowledge possible, a reading our information-theoretic substrate makes literal. The
 contribution is the synthesis — fusing the general-equilibrium price layer with the information-theoretic value
 layer under a single physical substrate — and the application to populations of artificial agents, not new
 equilibrium theorems.
@@ -94,7 +117,12 @@ Arrow (1951) *Social Choice and Individual Values*; Arrow & Debreu (1954) *Econo
 Bostrom (2014) *Superintelligence*; Breiman (1961) *Proc. 4th Berkeley Symp.*; Čencov (1982) *Statistical
 Decision Rules*; Cover & Thomas, *Elements of Information Theory*; Cover (1991) *Math. Finance* (universal
 portfolios); Debreu (1959) *Theory of Value*; England (2013) *J. Chem. Phys.*; Friston (2010) *Nat. Rev.
-Neurosci.*; Jaynes (1957) *Phys. Rev.*; Kelly (1956) *Bell Syst. Tech. J.*; Landauer (1961) *IBM J. Res. Dev.*;
-von Neumann & Morgenstern (1944) *Theory of Games and Economic Behavior*; Omohundro (2008) *Proc. AGI*; Peters
-(2019) *Nat. Phys.*; Savage (1954) *Foundations of Statistics*; Shannon (1948) *Bell Syst. Tech. J.*; Sutton &
-Barto, *Reinforcement Learning*.
+Neurosci.*; Hayek (1945) *Am. Econ. Rev.* (The Use of Knowledge in Society); Hirono & Hidaka (2015) *J. Stat.
+Phys.*; Jaynes (1957) *Phys. Rev.*; Kelly (1956) *Bell Syst. Tech. J.*; Klyubin, Polani & Nehaniv (2005) *IEEE
+CEC* (empowerment); Landauer (1961) *IBM J. Res. Dev.*; Moffett & Eckford (2021/2025) *IEEE Trans. Inf. Theory*
+(Kelly bets and single-letter codes); von Neumann & Morgenstern (1944) *Theory of Games and Economic Behavior*;
+Omohundro (2008) *Proc. AGI*; Peters (2019) *Nat. Phys.*; Qian, H. (2001) *Phys. Rev. E* (relative entropy as
+free energy); Salge & Polani (2013) (empowerment — an introduction); Savage (1954) *Foundations of Statistics*;
+Shannon (1948) *Bell Syst. Tech. J.*; Still, Sivak, Bell & Crooks (2012) *Phys. Rev. Lett.* (thermodynamics of
+prediction); Sutton & Barto, *Reinforcement Learning*; Touchette & Lloyd (2000) *Phys. Rev. Lett.*
+(information-theoretic limits of control).
