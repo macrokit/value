@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Value-Meter">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="0.55" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#3730a3"/>
+    </linearGradient>
+  </defs>
+  <!-- brand tile -->
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#tile)"/>
+  <!-- gauge arc (the "meter") -->
+  <path d="M 14 41 A 18 18 0 0 1 50 41" fill="none" stroke="#ffffff"
+        stroke-width="4.5" stroke-linecap="round" opacity="0.92"/>
+  <!-- ticks -->
+  <g stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" opacity="0.55">
+    <line x1="16.6" y1="34.0" x2="19.7" y2="35.6"/>
+    <line x1="24.4" y1="27.0" x2="26.0" y2="30.1"/>
+    <line x1="32.0" y1="24.4" x2="32.0" y2="28.0"/>
+    <line x1="39.6" y1="27.0" x2="38.0" y2="30.1"/>
+  </g>
+  <!-- needle pointing to the high end (value rising) -->
+  <line x1="32" y1="42" x2="45.5" y2="32.5" stroke="#ffffff"
+        stroke-width="3.6" stroke-linecap="round"/>
+  <!-- pivot -->
+  <circle cx="32" cy="42" r="4.4" fill="#1E1B4B"/>
+  <circle cx="32" cy="42" r="2.0" fill="#ffffff"/>
+</svg>

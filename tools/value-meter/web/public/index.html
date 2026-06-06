@@ -5,12 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A Mathematical Theory of Value</title>
 <meta name="description" content="A mathematical theory of value, built the way Shannon built information: a frame-relative but lawful quantity with a measure, a capacity limit (ΔG ≤ I(X;Y)), and an exact accounting of value created versus dissipated — aimed at governing populations of AI agents.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#1E1B4B">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://value.macrokit.dev/">
+<meta property="og:title" content="A Mathematical Theory of Value">
+<meta property="og:description" content="Built the way Shannon built information — a lawful quantity with a measure, a capacity limit ΔG ≤ I(X;Y), and an exact accounting of value created versus dissipated.">
+<meta property="og:image" content="https://value.macrokit.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://value.macrokit.dev/og.png">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
 <header class="hero">
   <div class="wrap">
+    <img class="brandmark" src="/favicon.svg" alt="" width="58" height="58">
     <div class="kicker">a research program · byline <strong>Cheng Qian</strong> ·
       <a href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">preprint ↗</a></div>
     <h1>A Mathematical Theory of <span class="grad">Value</span></h1>
@@ -138,6 +151,39 @@
       new — the single-agent core is <em>generalized Kelly</em> (1956). The contribution is their unification
       under one substrate-grounded quantity, the cross-frame/price layer, and the is/ought asymmetry from which
       alignment falls out as a control-stability condition. Claims are scoped to match.</p>
+  </section>
+
+  <section class="block">
+    <h2>Read the theory</h2>
+    <p class="read-intro">The full development is public — the preprint is the polished read; the
+      source repository has the derivations, the pre-registered experiments, and an explicit
+      "where this breaks" section at the end of every doc.</p>
+    <div class="read-grid">
+      <a class="read-card primary" href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">
+        <span class="rk">Preprint (PDF)</span>
+        <span class="rt">A Mathematical Theory of Value</span>
+        <span class="rd">The complete paper on Zenodo — measure, capacity theorem, cross-frame layer, evidence.</span>
+      </a>
+      <a class="read-card" href="https://github.com/macrokit/value" target="_blank" rel="noopener">
+        <span class="rk">Repository</span>
+        <span class="rt">github.com/macrokit/value</span>
+        <span class="rd">Docs, the simulation suite (20/20 checks), and the real-agent harness.</span>
+      </a>
+      <a class="read-card" href="https://github.com/macrokit/value/blob/main/docs/02-coding-theorem-of-value.md" target="_blank" rel="noopener">
+        <span class="rk">Doc 02</span>
+        <span class="rt">The capacity theorem</span>
+        <span class="rd">ΔG ≤ I(X;Y) with achievability + converse, and the exact Second-Law decomposition.</span>
+      </a>
+      <a class="read-card" href="https://github.com/macrokit/value/blob/main/docs/14-bridge-generalization.md" target="_blank" rel="noopener">
+        <span class="rk">Doc 14</span>
+        <span class="rt">Cross-shape generalization</span>
+        <span class="rd">The out-of-sample bridge ΔG ~ I across classification, reasoning, sequential, and code.</span>
+      </a>
+    </div>
+    <p class="read-order">New to it? Reading order: <code>00</code> framing → <code>01</code> the measure →
+      <code>02</code> the limit → <code>03</code> many agents → <code>04</code> the fleet →
+      <code>05</code> dynamics → <code>06</code> the real-agent test. Each is self-contained enough
+      to skim from its headline box.</p>
   </section>
 
   <section class="cta-band">

@@ -169,3 +169,20 @@ ul.why li{font-size:.98rem;color:#41465c;margin:10px 0}
 .cta-band h2{margin:0 0 10px;font-size:1.5rem}
 .cta-band p{max-width:620px;margin:0 auto 20px;color:#41465c}
 footer .fine{font-size:.8rem;color:var(--muted);margin-top:6px}
+
+/* brand mark + docs read-cards */
+.brandmark{display:block;margin-bottom:14px;border-radius:14px;
+  box-shadow:0 6px 20px rgba(79,70,229,.35)}
+.read-intro{color:var(--muted);max-width:760px;margin:0 0 18px}
+.read-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:680px){.read-grid{grid-template-columns:1fr}}
+.read-card{display:block;border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#fff;
+  transition:.15s}
+.read-card:hover{border-color:var(--indigo);box-shadow:0 4px 14px rgba(79,70,229,.12);text-decoration:none;
+  transform:translateY(-1px)}
+.read-card.primary{background:linear-gradient(180deg,#f5f5ff,#eef0fb);border-color:#d9dcf6}
+.read-card .rk{display:block;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--indigo);
+  font-weight:600;margin-bottom:5px}
+.read-card .rt{display:block;font-size:1.06rem;font-weight:700;color:var(--navy);margin-bottom:5px}
+.read-card .rd{display:block;font-size:.88rem;color:#41465c}
+.read-order{margin-top:16px;font-size:.9rem;color:var(--muted)}
