@@ -64,8 +64,9 @@ cost-aware routing from first principles --- it ties good hand-tuned routing und
 cost-blind router under a compute budget, and does not outperform a cost-aware engineer; its contribution is
 principled measurement, not outperformance. The laws hold in the smooth, concave (diminishing-returns) regime;
 threshold, satiation, and risk-seeking goals lie outside it. None of the underlying mechanisms is individually
-new; the contribution is their unification under one substrate-grounded quantity, and the is/ought asymmetry that
-follows.
+new --- the single-agent core is generalized Kelly, the is/ought asymmetry's value-side is \citet{armstrong2018occam},
+and the alignment-stability algebra is classical control; the contribution is their unification under one
+substrate-grounded quantity and the governance mapping (incentive design over oversight) that follows.
 \end{abstract}
 
 \tableofcontents
@@ -626,10 +627,18 @@ reward \emph{is}.
 \emph{Thermodynamics of computation and the free-energy principle.} That information has thermodynamic cost is
 \citet{landauer1961} and \citet{bennett1982}; \citet{jaynes1957} recast statistical mechanics as inference;
 \citet{england2013} studied dissipation-driven adaptation; \citet{friston2010} casts agents as free-energy
-minimizers. Our belief dynamics (\S\ref{sec:dynamics}) is free-energy-principle-like and shares the information
-geometry \citep{cencov1982,amari2016}. The distinction is precise: the free-energy principle is a theory of the
-perception/belief half --- the ``is'' --- whereas our value layer is the goal/value half --- the ``ought'' ---
-plus a multi-agent price economics the FEP does not contain. The seam between them is the is/ought asymmetry.
+minimizers. Most directly relevant to our Second Law of value (\S\ref{sec:capacity}) is the thermodynamics of
+prediction \citep{still2012}: a system's model inefficiency --- information retained about the past that is
+useless for predicting the future --- equals its thermodynamic dissipation. This is the closest prior to our
+identification of misalignment with dissipated value, and we credit it as such; our departure is only the
+two-divergence value form $G=D(q\|r)-D(q\|p)$ read as realized value for a goal-directed agent. Our belief
+dynamics (\S\ref{sec:dynamics}) is free-energy-principle-like and shares the information geometry
+\citep{cencov1982,amari2016}; we note plainly that our use of the Fisher--Rao metric as the cross-frame
+invariant is an \emph{application} of \citeauthor{cencov1982}'s uniqueness theorem (it is the unique metric
+invariant under sufficient statistics), not a new geometric result. The distinction is precise: the free-energy
+principle is a theory of the perception/belief half --- the ``is'' --- whereas our value layer is the goal/value
+half --- the ``ought'' --- plus a multi-agent price economics the FEP does not contain. The seam between them is
+the is/ought asymmetry.
 
 \emph{General equilibrium and social choice.} Our price layer (\S\ref{sec:crossframe}) is
 \citet{arrowdebreu1954,debreu1959} and its companion impossibility \citep{arrow1951}. We use these rather than
@@ -640,7 +649,15 @@ application to artificial-agent populations.
 \emph{AI alignment.} Instrumental convergence \citep{omohundro2008,bostrom2014} we derive from the compounding
 dynamics of value (\S\ref{sec:dynamics}): goal-directions correlated with resource capture are selected
 regardless of terminal content. We recast alignment as a dynamical stability condition (\S\ref{sec:alignment}),
-which to our knowledge is a new framing.
+and are careful about what in that recasting is and is not new. The \emph{value-side} of the is/ought asymmetry
+--- that an agent's goals cannot be inferred from its behavior --- is not ours: \citet{armstrong2018occam} prove
+it as a No-Free-Lunch result and explicitly frame it as Hume's is/ought gap. The control mathematics is likewise
+elementary: the stability criterion is high-gain stabilization of an unstable mode, and the closed-form residual
+$\|Vg\|/\gamma$ is the textbook steady-state velocity error of a servo tracking a ramp (a drifting goal being a
+ramp reference) \citep{astrom2008feedback}. We claim neither as new. The contribution is the \emph{mapping}:
+that goal-drift-under-selection is a ramp-tracking control problem, yielding the governance ordering that
+incentive design (reshaping what resource capture rewards) dominates oversight (raising the correction gain)
+under a fixed budget --- an application of known tools to alignment, not a new theorem.
 
 \section{Discussion: governing a population of agents}\label{sec:discussion}
 
