@@ -29,6 +29,14 @@ does not cover, with measured (not weak-model-elicited) quantities.
   problem, not a versioning one. Move: post the is/ought-as-control note (drafted, `drafts/`) to the relevant
   audience + an arXiv cross-listing + sharing. This is what converts the record into readers; another version
   does not.
+- [ ] **v4 paper revision — STAGED, pending owner Zenodo publish (2026-06-06).** The published v3 predated the
+  priority audit; `paper/main.tex` now folds the concessions into the paper itself (Armstrong & Mindermann 2018
+  for the is/ought value-side; classical control / Åström–Murray for the alignment-stability algebra; Still 2012
+  for the Second Law; Čencov-as-uniqueness for Fisher–Rao; reworded abstract closer). `main.pdf` rebuilt
+  (md5 `1eebf7f…`), citations resolve, committed `24125cd`. **Remaining (owner-gated):** publish Zenodo **v4**
+  (new version under concept DOI `10.5281/zenodo.20487041`), then **resync `drafts/arxiv-metadata.md` abstract to
+  the v4 abstract** before any arXiv deposit (they must match the deposited PDF). Do this *before* the
+  dissemination push so readers land on the honest version (v3 has ~0 views — zero cost to supersede now).
 - [x] **Priority / novelty check — DONE (2026-06-06):** deep-research pass against the nearest neighbors. Verdict:
   components anticipated (result 1(ii) ← ergodicity economics; result 2 ← Kelly/info-rate, Moffett–Eckford 2021,
   Touchette–Lloyd 2000; **result 3 ← Still, Sivak, Bell & Crooks 2012 "thermodynamics of prediction" — the one
