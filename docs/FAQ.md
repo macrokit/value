@@ -6,6 +6,46 @@ lives.
 
 ---
 
+## "What is value's nature — and is it value that *drives* a human or an AI agent to decide?"
+
+**Value's nature: a relation, not a substance.** Strip the semantic clothing and value is the rate at which an
+agent converts a scarce resource into progress toward a goal, relative to a frame the goal fixes. Three faces:
+its **currency is substance** (free energy / exergy — what's spent), its **structure is information**
+(organized by `H, D, I`), and its **frame is the goal** (what gives it direction). That is the precise sense of
+"value sits between substance and information": *value is information given a direction by a goal, paid for in
+substrate.* Remove the goal and there is no value — only energy and bits.
+
+Three consequences, stated with the honesty the rest of this project uses:
+- **It is relational, not fundamental.** Energy exists with no observer; information needs only a distribution;
+  value needs an *agent with a goal*. It is a *derived*, frame-relative quantity — real and lawful (the same
+  *type* of thing as information), **not** a newly-discovered fundamental substance.
+- **It is not conserved.** Value is created by an agent aligned with its world and destroyed by miscalibration
+  (the Second Law of value, [`02`](02-coding-theorem-of-value.md)). Non-conservation is part of its nature.
+- **Its reference is agent-supplied** — the is/ought asymmetry ([`05`](05-dynamics.md) §0): the world pins a
+  Hamiltonian (substance) and a source distribution (information), but it does *not* pin the goal.
+
+**Does value drive decisions?** Only in two honest senses — not as a literal cause.
+- *As a model — yes, almost tautologically:* any agent that chooses consistently can be *described* as
+  maximizing something. But that is a lens we impose, not an engine we find — and you **cannot** uniquely
+  recover an agent's value function from its behavior (Armstrong & Mindermann, 2018). There is no fact of the
+  matter about *the one value* driving it.
+- *For humans — no, not cleanly:* real decisions come from habit, emotion, social context, and conflicting,
+  time-inconsistent drives. "Value" is a useful first-order story and an after-the-fact reconstruction, not the
+  mechanism.
+- *For today's AI — no, literally:* an LLM agent completes patterns shaped by training; it is not running a
+  value function at decision time.
+- *For engineered/future AI — this is the project's bet, and it is **prescriptive**, not descriptive:* *if* we
+  build agents around explicit goal/value representations, *then* value is the right quantity to route, align,
+  and govern them with.
+
+So: **value does not drive decisions the way force drives motion (world-given, deterministic); it *organizes
+and governs* them as a frame the agent — or its designer — supplies.** The reason is value's one distinctive
+feature: its reference is unpinned. Because the goal is agent-supplied and not readable from behavior, value
+can only be the *lens* that makes decisions legible and the *control quantity* used to steer agent populations —
+which is exactly why this project's defensible contribution is a governance lens, not a discovered mechanism.
+
+---
+
 ## "Isn't value just a price, or a number? Why do you need a mathematical theory at all?"
 
 A price *is* a number — but it is value seen from **one frame: the market's**, not value itself. This is
