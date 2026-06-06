@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — A Mathematical Theory of Value</title>
+<meta name="description" content="Honest answers to the common first objections to a mathematical theory of value: isn't value just a price? can it price the unpriced? is value stored like money? isn't this just Kelly? Concedes where the math is not necessary; claims only what is earned.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#1E1B4B">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://value.macrokit.dev/faq">
+<meta property="og:title" content="FAQ — A Mathematical Theory of Value">
+<meta property="og:description" content="Honest answers to the common first objections — including where the math is not necessary.">
+<meta property="og:image" content="https://value.macrokit.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://value.macrokit.dev/og.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="hero hero-slim">
+  <div class="wrap">
+    <div class="kicker"><a href="/">← A Mathematical Theory of Value</a> · byline <strong>Cheng Qian</strong> ·
+      <a href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">preprint ↗</a></div>
+    <h1>Frequently asked <span class="grad">questions</span></h1>
+    <p class="tag">The common first objections, answered honestly. The discipline here is the same as the rest of
+      the project: <em>concede where the math is not necessary; claim only what is earned.</em></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <article class="faq-item">
+    <h2>Value is, literally, already a number — even a price. So why measure it with mathematics at all? Is it necessary?</h2>
+    <p>This is the sharpest challenge the whole project has to survive, so it deserves a serious answer —
+      including where the honest answer is <strong>"no."</strong></p>
+
+    <h3>"Value is already a price" is the trap, not the refutation</h3>
+    <p>This is exactly the situation Shannon faced. Before 1948 you could have said the same about information:
+      <em>"Information is just the message — the words, the telegram. It is already concrete. Why do I need
+      mathematics?"</em> Shannon's move was to notice that the visible thing (the message, its meaning) was
+      <strong>not</strong> the lawful quantity — the lawful quantity (bits, reduction of uncertainty) was hiding
+      underneath, and only once you stripped away the meaning did the <strong>laws</strong> appear (channel
+      capacity, the coding theorems).</p>
+    <p>Price is the same. <strong>Price is not value — price is value seen from one particular frame: the
+      market's.</strong> The theory's central distinction:</p>
+    <blockquote class="bet">Value is <strong>frame-relative</strong> (it depends on the agent's goal
+      <code>k</code>); price is <strong>frame-independent</strong> (the one scalar all traders agree on at
+      equilibrium, the shadow price <code>λ = K/E</code>).</blockquote>
+    <p>Price is what value <em>collapses to</em> when many agents trade the same resource in a market — an
+      emergent coordination signal, not the underlying quantity. Saying "value is just a price" is like saying
+      "information is just the message." You have mistaken one projection for the thing.</p>
+
+    <h3>Three things a number/price cannot give you</h3>
+    <ol>
+      <li><strong>Most AI agents have no price.</strong> An agent classifying intents, triaging papers, or
+        routing tickets is creating value but producing no price, trading in no market. If your only instrument
+        is price, you cannot measure it at all. You need a measure that works <strong>without a market</strong> —
+        that is <code>ΔG</code> and <code>I(X;Y)</code>, defined from the agent's outputs and the world, no
+        trading required.</li>
+      <li><strong>A price is a point; you need the laws.</strong> Price gives an exchange ratio now, at
+        equilibrium. It says nothing about how much value an agent can possibly generate (the ceiling
+        <code>ΔG ≤ I(X;Y)</code>, set by its perception, not its price), how much it wastes through
+        overconfidence (dissipation <code>D(q‖p)</code>), or how much a whole fleet can produce together (capped
+        by <code>H(X)</code>). Those are limits and dynamics — a number cannot carry them, only a theory can. It
+        is the difference between knowing the price of electricity and having thermodynamics.</li>
+      <li><strong>Governing requires the substrate, not the exchange rate.</strong> To manage populations of
+        separated AI agents you must connect value to the physical resource they burn (compute, energy) and ask
+        "is this agent converting joules into goal-progress efficiently, or dissipating them?" Price does not
+        touch the substrate; the value measure (<code>V = Σ kᵢ ln eᵢ</code>, resource → goal-progress) is built
+        on it.</li>
+    </ol>
+
+    <h3>The honest part — where the answer is "no"</h3>
+    <p>This is the half most people will not tell you, and it is the project's credibility:
+      <strong>the math is necessary for some claims and not for others.</strong></p>
+    <ul>
+      <li><strong>Necessary</strong> for: the value-generation <em>ceiling</em> (<code>I(X;Y)</code> — pure
+        information theory, no price equivalent), the <em>dissipation</em> accounting, and the
+        <strong>is/ought asymmetry</strong> (beliefs have a world-given target, goals do not → alignment as a
+        control problem). Price and standard economics genuinely do not give you these.</li>
+      <li><strong>Not necessary</strong> for: the cross-frame <em>flow</em> predictions — there the math just
+        re-derives arbitrage / law-of-one-price / general equilibrium. Economists already have those; there the
+        equations are "price, repainted." The project itself concluded exactly this — the cross-frame real-data
+        test came back <strong>not resolvable</strong>: it collapses to Kelly / general equilibrium.</li>
+    </ul>
+    <blockquote class="bet"><strong>For trading goods between humans in a market — no.</strong> Price already
+      does it; you do not need this. <strong>For measuring and governing AI agents that mostly do not
+      trade</strong> — where you need ceilings, dissipation, and alignment — <strong>yes.</strong> Price cannot
+      reach those, and that is the only place the theory earns its keep.</blockquote>
+    <p>The mathematics is necessary <em>exactly</em> where it tells you something a price cannot — and the
+      discipline of the work is admitting it is redundant everywhere else. That honesty is the point.</p>
+  </article>
+
+  <article class="faq-item">
+    <h2>Can it estimate the price of things that do not currently have one?</h2>
+    <p>Yes for one meaning of "price," no for the other.</p>
+    <ul>
+      <li><span class="yes">✓ Internal / shadow prices — yes.</span> For things with no market, the theory
+        assigns a principled valuation <em>relative to a stated goal</em>: the shadow price of the budget
+        <code>λ = K/E</code>, and the value-per-cost of each agent <code>I_a / cost_a</code>. This is exactly
+        what the <a href="/tools/value-meter/">Value-Meter</a> does: take agents with no prices, return a
+        defensible price for each, and decide where to spend a budget. Pricing the unpriced <em>within a frame
+        you choose</em> is a core use.</li>
+      <li><span class="no">✗ External market price — no.</span> A market price is frame-independent because the
+        market makes it so — it is the equilibrium of many frames plus supply, liquidity, and expectations. You
+        cannot conjure it from one agent's value function; you need the actual market. And where a market exists,
+        the theory reproduces general equilibrium and adds no pricing edge. For a genuinely unpriced external
+        good no frame-free "true price" even exists — interpersonal value comparison is provably non-canonical
+        (Arrow).</li>
+    </ul>
+    <blockquote class="bet">It gives a <strong>frame-relative valuation</strong> and an <strong>internal shadow
+      price</strong> for the unpriced — useful for allocating resources inside agent systems — but it does not
+      discover the objective external price, which by definition only exists once a market produces it.</blockquote>
+  </article>
+
+  <article class="faq-item">
+    <h2>Can value be stored and transferred like money?</h2>
+    <p>The storable, transferable thing is <strong>price and resource</strong> — not value itself — and the
+      difference is the reason money exists.</p>
+    <p>Value in this theory is <strong>exergy</strong> (available useful work), not conserved energy. So unlike
+      money it is:</p>
+    <ol>
+      <li><strong>Not conserved — it dissipates.</strong> The Second Law of Value: realized value = available
+        potential minus dissipation (<code>G = D(q‖r) − D(q‖p)</code>), and a moving world floors dissipation
+        above zero. Value leaks; a dollar does not.</li>
+      <li><strong>Frame-relative — no single magnitude to move.</strong> The same item is worth different amounts
+        to agents with different goals; there is no one number to transfer.</li>
+      <li><strong>Lossy to transfer.</strong> Cross-frame transfer is friction-limited and never lossless: move
+        <code>i→j</code> only when <code>V_j − V_i &gt; f</code>, with <code>f &gt; 0</code>.</li>
+    </ol>
+    <p><strong>Money is the transferable shadow of value, not value itself.</strong> Because value is
+      frame-relative and lossy to move, a frame-independent, conserved, storable token (money, or the shadow
+      price <code>λ</code>) is invented to stand in for value during exchange. The physics analogy is energy: you
+      can store it in a battery and send it down a wire, but the <em>useful</em> part (exergy) degrades on every
+      store and round-trip. So you can store the <strong>substrate</strong> (free energy, compute, a budget
+      <code>E</code>) — but it is exergy, it dissipates, not a frozen stock; and you <strong>transfer via
+      price</strong>, because raw value cannot cross frames intact. This is why the theory coordinates agents
+      through a price on shared resources rather than by moving value between them.</p>
+  </article>
+
+  <article class="faq-item">
+    <h2>Isn't this just generalized Kelly with new terminology?</h2>
+    <p>At the single-agent core, <strong>yes — and the project concedes it up front.</strong> The capacity
+      theorem <code>ΔG ≤ I(X;Y)</code> and the fleet's Kelly-portfolio operating point are Kelly/Cover results
+      re-read for an arbitrary scarce resource. None of the underlying mechanisms is individually new.</p>
+    <p>What is added — and what Kelly does not cover — is their <strong>unification under one substrate-grounded
+      quantity</strong>, the <strong>cross-frame / price layer</strong>, the <strong>fleet ceiling</strong>
+      (<code>Σ G_a ≤ H(X)</code>), and the <strong>is/ought asymmetry</strong> — beliefs have a target the world
+      supplies, goals do not — from which alignment emerges as a control-stability condition. The full prior-art
+      comparison and contribution statement are in
+      <a href="https://github.com/macrokit/value/blob/main/docs/related-work.md" target="_blank" rel="noopener">docs/related-work.md</a>.</p>
+  </article>
+
+  <p class="disclosure"><strong>Authorship note.</strong> The argument and theory are the author's (Cheng Qian);
+    this FAQ's prose was drafted with AI assistance and reviewed by the author — the same honesty disclosure used
+    on the project's other writing.</p>
+
+  <section class="cta-band">
+    <h2>See it for yourself</h2>
+    <p>The most direct use of the theory: a tool that takes an agent's outputs versus ground truth and returns its
+      value ceiling, realized rate, dissipation, and value-per-compute — in nats, with nulls and CIs, running
+      entirely in your browser.</p>
+    <a class="btn-cta primary big" href="/tools/value-meter/">Open the Value-Meter →</a>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p><strong>A Mathematical Theory of Value</strong> · author byline <strong>Cheng Qian</strong> ·
+    <a href="/">home</a> ·
+    <a href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">Zenodo preprint</a> ·
+    concept DOI <a href="https://doi.org/10.5281/zenodo.20487041" target="_blank" rel="noopener">10.5281/zenodo.20487041</a> ·
+    <a href="https://github.com/macrokit/value" target="_blank" rel="noopener">research repository</a></p>
+  <p class="fine">A theory repository — definitions, derivations, and honest limits. Not a product; it does not
+    resolve interpersonal value comparison (provably non-canonical) or produce a single fleet-wide value number.</p>
+</footer>
+
+</body>
+</html>

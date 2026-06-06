@@ -186,3 +186,19 @@ footer .fine{font-size:.8rem;color:var(--muted);margin-top:6px}
 .read-card .rt{display:block;font-size:1.06rem;font-weight:700;color:var(--navy);margin-bottom:5px}
 .read-card .rd{display:block;font-size:.88rem;color:#41465c}
 .read-order{margin-top:16px;font-size:.9rem;color:var(--muted)}
+
+/* ── FAQ page ───────────────────────────────────────────────────────────── */
+.hero-slim{padding:40px 0 34px}
+.hero-slim h1{font-size:2.3rem}
+.faq-item{margin:34px 0;padding-bottom:30px;border-bottom:1px solid var(--line)}
+.faq-item:last-of-type{border-bottom:none}
+.faq-item h2{font-size:1.32rem;color:var(--navy);margin:0 0 14px;letter-spacing:-.01em;line-height:1.3}
+.faq-item h3{font-size:1.02rem;color:var(--ink);margin:22px 0 8px}
+.faq-item p{margin:0 0 12px;color:#2a2e40}
+.faq-item ol,.faq-item ul{padding-left:22px;margin:10px 0 14px}
+.faq-item li{margin:9px 0;color:#2a2e40}
+.faq-item blockquote.bet{margin:16px 0}
+.yes{color:var(--ok);font-weight:700}
+.no{color:var(--chance);font-weight:700}
+.disclosure{margin:36px 0 8px;padding:16px 20px;background:#eef0fb;border:1px solid #d9dcf6;
+  border-radius:12px;font-size:.9rem;color:#41465c}
