@@ -22,3 +22,6 @@ docs/red-team.md
 # Session/process material and run logs — local only
 docs/prompts.txt
 *.log
+
+# Disanalogy doc build charter — local only
+HANDOFF-disanalogy.md
