@@ -43,7 +43,14 @@ goal-directed value quantity on a physical substrate, not a betting payoff or a 
 information-theoretic notion of intrinsic value, **empowerment** (Klyubin, Polani & Nehaniv, 2005; Salge &
 Polani, 2013), defines an agent's value as the channel capacity from its actions to its future perceptions; it
 measures controllability rather than value-generation rate and offers no Kelly-style achievability, so it is a
-neighbor to — not an instance of — the capacity theorem.
+neighbor to — not an instance of — the capacity theorem. The fleet-level ceiling we derive — collective
+value-throughput bounded by the world's entropy, `Σ_a G_a ≤ H(X)` (doc 04) — is, by contrast, *not* a
+restatement of single-agent Kelly: the Kelly/Cover conservation law `W* + H = log m` and the directed-information
+growth bounds (Permuter, Kim & Weissman, 2011) are single-agent, and the nearest multi-agent results treat
+competitive wealth-*shares* (which sum to one by construction) or find group growth can *exceed* the sum. We
+have found no prior statement of an additive, source-entropy ceiling on collective growth — but have not
+exhausted network-information-theory / multi-user-gambling venues, so we hold it as plausibly-novel rather than
+certainly-first.
 
 ## Reinforcement learning
 
@@ -71,7 +78,11 @@ structural correspondence is real and conceded, the value-theoretic packaging is
 free-energy principle and active inference (2010), which casts agents as minimizers of variational free energy
 (surprise). Our belief dynamics (doc 05 §1) is free-energy-principle-like, and we adopt the
 information-geometric machinery (the Fisher–Rao metric; Čencov, 1982; Amari's natural gradient) that the FEP
-also uses. The distinction is precise and, we argue, illuminating: the free-energy principle is a theory of the
+also uses. We flag this plainly as the most derivative step in the theory: our use of Fisher–Rao as the
+*cross-frame invariant* (doc 03) is an *application* of Čencov's uniqueness theorem (Čencov 1982; extended by
+Campbell 1986; Lê 2017; Bauer–Bruveris–Michor 2016) — the Fisher–Rao metric is the unique metric invariant
+under sufficient statistics / Markov morphisms — not a new geometric result. We claim only its *interpretation*
+as the geometry distinct agent-frames must agree on; the invariance theorem itself is textbook. The distinction is precise and, we argue, illuminating: the free-energy principle is a theory of the
 *perception/belief* half — the "is" — whereas our value layer (`k`, its measure, the capacity theorem) is the
 *goal/value* half — the "ought" — together with a multi-agent price economics the FEP does not contain. The
 seam between the two frameworks is exactly the is/ought asymmetry of doc 05 §0.
@@ -95,7 +106,13 @@ articulated by Omohundro (2008) and Bostrom (2014). We *derive* this tendency fr
 value (doc 05 §3): goal-directions correlated with resource capture are selected regardless of terminal
 content. We further recast alignment as a *dynamical stability condition* rather than a static property
 (doc 05 §4, formalized in [`07-alignment-stability.md`](07-alignment-stability.md)), which to our knowledge is a
-new framing.
+new framing. An emerging agenda independently argues alignment should be recast in formal control-theoretic
+terms (Perrier, 2025); that work is *programmatic* — it calls for control-theoretic alignment without supplying
+a stability condition or a closed-form misalignment residual — which is exactly what doc 07 provides (the
+residual `‖Vg‖/γ` and the gain-exceeds-drift criterion `γ > λ_max`). The is/ought asymmetry this rests on we
+have likewise not found formalized elsewhere; the nearest large framework, active inference, makes the *opposite*
+move (collapsing goals into beliefs as preferences-as-priors). We hold both as plausibly-novel, noting we have
+not exhaustively searched formal metaethics or the corrigibility-as-stability literature.
 
 ## Statement of contribution
 
@@ -114,15 +131,19 @@ treatments do not.
 
 Arrow (1951) *Social Choice and Individual Values*; Arrow & Debreu (1954) *Econometrica*; Bellman (1957)
 *Dynamic Programming*; Bennett (1982) *Int. J. Theor. Phys.*; Bernoulli (1738) *Comm. Acad. Sci. Petrop.*;
-Bostrom (2014) *Superintelligence*; Breiman (1961) *Proc. 4th Berkeley Symp.*; Čencov (1982) *Statistical
-Decision Rules*; Cover & Thomas, *Elements of Information Theory*; Cover (1991) *Math. Finance* (universal
+Bostrom (2014) *Superintelligence*; Breiman (1961) *Proc. 4th Berkeley Symp.*; Bauer, Bruveris & Michor (2016)
+*Bull. LMS* (uniqueness of the Fisher–Rao metric); Campbell (1986) *Proc. AMS* (extended Čencov
+characterization); Čencov (1982) *Statistical Decision Rules*; Cover & Thomas, *Elements of Information
+Theory*; Cover (1991) *Math. Finance* (universal
 portfolios); Debreu (1959) *Theory of Value*; England (2013) *J. Chem. Phys.*; Friston (2010) *Nat. Rev.
 Neurosci.*; Hayek (1945) *Am. Econ. Rev.* (The Use of Knowledge in Society); Hirono & Hidaka (2015) *J. Stat.
 Phys.*; Jaynes (1957) *Phys. Rev.*; Kelly (1956) *Bell Syst. Tech. J.*; Klyubin, Polani & Nehaniv (2005) *IEEE
-CEC* (empowerment); Landauer (1961) *IBM J. Res. Dev.*; Moffett & Eckford (2021/2025) *IEEE Trans. Inf. Theory*
-(Kelly bets and single-letter codes); von Neumann & Morgenstern (1944) *Theory of Games and Economic Behavior*;
-Omohundro (2008) *Proc. AGI*; Peters (2019) *Nat. Phys.*; Qian, H. (2001) *Phys. Rev. E* (relative entropy as
-free energy); Salge & Polani (2013) (empowerment — an introduction); Savage (1954) *Foundations of Statistics*;
+CEC* (empowerment); Landauer (1961) *IBM J. Res. Dev.*; Lê (2017) *Ann. Inst. Stat. Math.* (uniqueness of the Fisher metric);
+Moffett & Eckford (2021/2025) *IEEE Trans. Inf. Theory* (Kelly bets and single-letter codes); von Neumann &
+Morgenstern (1944) *Theory of Games and Economic Behavior*; Omohundro (2008) *Proc. AGI*; Permuter, Kim &
+Weissman (2011) *IEEE Trans. Inf. Theory* (directed information & portfolio growth); Perrier (2025)
+*arXiv:2506.17846* (alignment needs formal control theory); Peters (2019) *Nat. Phys.*; Qian, H. (2001)
+*Phys. Rev. E* (relative entropy as free energy); Salge & Polani (2013) (empowerment — an introduction); Savage (1954) *Foundations of Statistics*;
 Shannon (1948) *Bell Syst. Tech. J.*; Still, Sivak, Bell & Crooks (2012) *Phys. Rev. Lett.* (thermodynamics of
 prediction); Sutton & Barto, *Reinforcement Learning*; Touchette & Lloyd (2000) *Phys. Rev. Lett.*
 (information-theoretic limits of control).
