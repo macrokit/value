@@ -1,0 +1,38 @@
+# License
+
+**Copyright © 2026 Cheng Qian.**
+
+This repository is dual-licensed by the *type* of material it contains.
+
+## Written / creative content — CC BY 4.0
+
+The written work — documentation (`docs/`), the paper (`paper/`), `README.md`,
+`DATA_SOURCES.md`, `FAQ`, and all prose, figures, and text — is licensed under the
+**Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+Full text: [`LICENSE-CONTENT`](LICENSE-CONTENT) · https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt this material, including commercially, **provided you give
+appropriate credit to Cheng Qian, link to the license, and indicate if changes were
+made.** Reusing or republishing the text without attribution violates this license.
+
+## Software / code — Apache License 2.0
+
+All source code — e.g. `sim/`, `tools/` (including the website under
+`tools/value-meter/web/`), and any scripts — is licensed under the
+**Apache License, Version 2.0**.
+Full text: [`LICENSE-CODE`](LICENSE-CODE) · https://www.apache.org/licenses/LICENSE-2.0
+
+## Third-party data
+
+Benchmark evaluation slices under `sim/real/*/results/data/` are derived from external
+datasets that retain their own upstream licenses — see [`DATA_SOURCES.md`](DATA_SOURCES.md).
+
+```
+SPDX-License-Identifier: Apache-2.0 AND CC-BY-4.0
+```
+
+## How to cite / attribute
+
+> Qian, Cheng. *A Mathematical Theory of Value.* Zenodo.
+> Concept DOI: [10.5281/zenodo.20487041](https://doi.org/10.5281/zenodo.20487041)
+> (resolves to the latest version).

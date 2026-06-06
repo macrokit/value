@@ -176,3 +176,11 @@ it against prior art.
 - This is a *theory* repo — definitions, derivations, and honest limits. It is **not** a product, and it does
   not aim to resolve interpersonal value comparison (provably non-canonical) or to produce a single fleet-wide
   "total value" number (there isn't one — that's the point of price).
+
+## License
+
+Copyright © 2026 **Cheng Qian**. Dual-licensed by material type (see [`LICENSE`](LICENSE)):
+the **written work** (docs, paper, prose, figures) under **CC BY 4.0** — reuse is welcome *with
+attribution to Cheng Qian*; the **code** (`sim/`, `tools/`, the website) under **Apache 2.0**.
+Cite as: *Qian, Cheng. A Mathematical Theory of Value. Zenodo, concept DOI
+[10.5281/zenodo.20487041](https://doi.org/10.5281/zenodo.20487041).*
