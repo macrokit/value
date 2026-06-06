@@ -54,10 +54,30 @@ does not cover, with measured (not weak-model-elicited) quantities.
   eigenvalue criterion), Powers PCT (`1/(1+G)` but vs *exogenous* disturbance, not goal-drift Jacobian).
   `related-work.md` rewritten to concede Part 1's value-side and claim only Part 2. **Net: result 5's headline
   novelty narrows from "the is/ought asymmetry" to "the control-stability theorem."**
-- [ ] **(Optional) One remaining priority gap.** The cybernetic regulator theorems (Ashby's requisite variety;
-  Conant–Ashby good-regulator, 1970) were named but not closed — the most plausible un-checked source of an
-  earlier gain-vs-drift bound on Part 2. Also unclosed: control-barrier-function / safe-control AI-safety. Check
-  before any strong public priority claim on the `γ > λ_max` result. Not a blocker for v3.
+- [x] **Fourth pass (cybernetics + classical control) — DONE (2026-06-06); result 5 / Part 2 fully demoted.**
+  Blunt verdict: the alignment-layer **control result is elementary classical control**, not new theory.
+  **(a)** `γ > λ_max` = textbook high-gain / root-locus stabilization of an unstable pole. **(b)** the `‖Vg‖/γ`
+  residual = the classic steady-state **velocity error `e_ss = 1/K_v`** (a drifting goal is a ramp reference) —
+  a near-exact textbook match (Ogata; Åström & Murray; Franklin–Powell–Emami-Naeini; internal-model principle,
+  Francis & Wonham 1976). Cybernetics (Conant–Ashby, requisite variety) = **dead end**, does not anticipate.
+  **The only contribution of the alignment layer is the APPLICATION/mapping** (goal-drift-under-selection as
+  ramp-tracking → incentive-beats-oversight ordering). `related-work.md` + the contribution statement rewritten
+  to concede this; dissemination drafts cite Ogata/Åström–Murray to front-run the controls reviewer.
+- [ ] **(Optional) Only genuine-departure left to probe.** Whether the goal-drift Jacobian `∂(Vg)/∂k̄` is
+  state-dependent / non-LTI / has multi-dimensional eigenvalue coupling that the scalar LTI textbook results do
+  **not** cover — the one place a *mathematical* (not merely applied) novelty for Part 2 could survive. Not
+  currently claimed. Probe only if a stronger control-theoretic claim is ever wanted.
+
+### ⊕ Priority-check program — final tally (four passes, 2026-06-06)
+Across four adversarial deep-research passes, the honest verdict on *A Mathematical Theory of Value*:
+**components anticipated, synthesis novel, and three specific over-claims caught and conceded** —
+(1) Fisher–Rao cross-frame invariant = Čencov restated; (2) is/ought value-side = Armstrong & Mindermann 2018;
+(3) the alignment control result = elementary classical control (novelty is the application). **Surviving
+distinctively-novel claims:** the *synthesis* itself, the **fleet ceiling `Σ G_a ≤ H(X)`**, the value/price
+*frame split*, and — at the application level — the *governance mapping* (goal-drift as ramp-tracking →
+incentive-beats-oversight). The single-agent core remains, by the paper's own statement, generalized Kelly. Net:
+the work's defensible contribution is **unification + honest scoping**, not a stack of new theorems — which is
+exactly what the paper claims, now verified the hard way.
 
 ## Research directions (gated behind the published core)
 - [x] **Cross-frame / price layer — real-data test → STRUCTURAL CAP** ([`15`](15-cross-frame-realdata.md),

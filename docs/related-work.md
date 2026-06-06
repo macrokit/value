@@ -119,28 +119,36 @@ as a structural asymmetry between an agent's two update dynamics. We flag honest
 this as a re-packaging of the established one-sided result rather than a new theorem; the active-inference
 framework, by contrast, makes the *opposite* move (collapsing goals into beliefs as preferences-as-priors).
 
-**Alignment as control-stability (doc 07) — the genuine surviving novelty.** The part with no clear prior is the
-*formal* one: deriving alignment as a gain-versus-drift stability condition `γ > λ_max(∂(Vg)/∂k̄)` with a
-closed-form residual misalignment `‖Vg‖/γ`. The nearest works fall short of exactly this. Perrier (2025)
-advocates control-theoretic alignment but is programmatic — no criterion, no residual. Goertzel (2024) gives a
-contraction-mapping fixed-point condition for goal stability under self-modification, but no eigenvalue criterion
-and no `‖Vg‖/γ` residual (and disclaims rigor). Perceptual control theory (Powers) supplies a structurally
-analogous inverse-gain disturbance-suppression residual `1/(1+G)` — but bounds tracking against *exogenous*
-disturbances, not an *endogenous* goal-drift Jacobian, and states no Lyapunov/eigenvalue criterion. Instrumental
-convergence (Omohundro 2008; Turner et al. 2021) is a *statistical tendency over reward functions*, not a
-controller; corrigibility (Soares et al. 2015) is *utility specification*, static, not dynamical. We hold the
-`γ > λ_max` / `‖Vg‖/γ` result as plausibly-novel, with one prior-art gap we name explicitly and have *not*
-closed: the cybernetic regulator theorems (Ashby's law of requisite variety; the Conant–Ashby good-regulator
-theorem, 1970) — the most plausible source of an earlier gain-vs-variety bound, and the right place for a future
-check before any strong priority claim.
+**Alignment as control-stability (doc 07) — the *application* is the contribution, not the control result.** We
+state this as plainly as the Kelly and Čencov concessions, because a controls reviewer will otherwise state it
+for us: the two pillars of doc 07 are **elementary classical control theory**. (a) The stability criterion
+`γ > λ_max(∂(Vg)/∂k̄)` is textbook high-gain / root-locus stabilization of an unstable mode (a right-half-plane
+pole driven into the left half-plane by raising loop gain). (b) The closed-form residual `‖Vg‖/γ` is the classic
+steady-state **velocity error** `e_ss = 1/K_v` of a Type-1 system tracking a *ramp* — and a drifting goal is
+exactly a ramp reference, so the inverse-gain residual is the standard result, not a new one (Ogata; Åström &
+Murray, *Feedback Systems*; Franklin, Powell & Emami-Naeini; the internal-model principle of Francis & Wonham,
+1976, governs whether the residual can be driven to zero). We do **not** claim the control mathematics as novel.
+What we claim is the *mapping*: that goal-drift-under-selection — the Price-equation selection term `Vg` acting
+on a population's effective goal — is a ramp-tracking control problem, from which the governance ordering
+(*incentive design `g→0` dominates oversight `↑γ`*) follows quantitatively. Nearer-but-not-closer framings:
+Perrier (2025) advocates control-theoretic alignment programmatically (no criterion); Goertzel (2024) gives a
+contraction fixed-point, no residual; Powers' PCT gives the analogous `1/(1+G)` against *exogenous* disturbance.
+The cybernetic regulator theorems (Conant–Ashby good-regulator, 1970; Ashby's requisite variety, 1956) were
+checked and **do not** anticipate either pillar — they are variety/information-counting and existence statements
+with no gain, eigenvalue, or `1/gain` residual. The one place a genuine *mathematical* (not merely applied)
+departure could survive is if the goal-drift Jacobian `∂(Vg)/∂k̄` is state-dependent / non-LTI / has
+multi-dimensional eigenvalue coupling that the scalar textbook results do not cover — an open question we do not
+currently claim to have resolved.
 
 ## Statement of contribution
 
-In descending order of defensibility, this work contributes: (1) **alignment as a control-stability condition** —
-the closed-form residual misalignment `‖Vg‖/γ` and the gain-exceeds-drift criterion `γ > λ_max` (doc 07), which
-we have not found derived elsewhere (the *value-side* of the underlying is/ought asymmetry is, however,
-anticipated — Armstrong & Mindermann, 2018 — so our contribution there is the two-sided belief-vs-goal dynamical
-framing, which is more presentational than formal, and one un-closed cybernetics gap remains); (2) a
+In descending order of defensibility, this work contributes: (1) the **governance mapping** of the alignment
+layer — recognizing goal-drift-under-selection (the Price-equation term `Vg`) as a *ramp-tracking control
+problem*, from which the ordering *incentive design (`g→0`) dominates oversight (`↑γ`)* follows quantitatively.
+We are explicit that the *control mathematics* here is **not** new (the `γ > λ_max` criterion is high-gain
+stabilization; the `‖Vg‖/γ` residual is the textbook velocity error `1/K_v`) and the *value-side* of the
+underlying is/ought asymmetry is **not** new either (Armstrong & Mindermann, 2018); the contribution is the
+application and the prescription it yields, not a new theorem — held with corresponding modesty; (2) a
 **unification** under one substrate-grounded quantity of
 otherwise-separate accounts of value (expected utility, log-optimal growth, reinforcement value, thermodynamic
 free energy, and general-equilibrium price); (3) the **substrate grounding** of value in free energy, supplying
@@ -155,19 +163,21 @@ treatments do not.
 Arrow (1951) *Social Choice and Individual Values*; Arrow & Debreu (1954) *Econometrica*; Bellman (1957)
 *Dynamic Programming*; Bennett (1982) *Int. J. Theor. Phys.*; Bernoulli (1738) *Comm. Acad. Sci. Petrop.*;
 Armstrong & Mindermann (2018) *NeurIPS* (Occam's razor is insufficient to infer the preferences of irrational
-agents); Ashby (1956) *An Introduction to Cybernetics* (requisite variety); Bostrom (2014) *Superintelligence*;
+agents); Ashby (1956) *An Introduction to Cybernetics* (requisite variety); Åström & Murray (2008) *Feedback
+Systems*; Bostrom (2014) *Superintelligence*;
 Breiman (1961) *Proc. 4th Berkeley Symp.*; Bauer, Bruveris & Michor (2016)
 *Bull. LMS* (uniqueness of the Fisher–Rao metric); Campbell (1986) *Proc. AMS* (extended Čencov
 characterization); Čencov (1982) *Statistical Decision Rules*; Conant & Ashby (1970) *Int. J. Systems Sci.* (good
 regulator theorem); Cover & Thomas, *Elements of Information Theory*; Cover (1991) *Math. Finance* (universal
-portfolios); Debreu (1959) *Theory of Value*; England (2013) *J. Chem. Phys.*; Friston (2010) *Nat. Rev.
+portfolios); Debreu (1959) *Theory of Value*; England (2013) *J. Chem. Phys.*; Francis & Wonham (1976) *Automatica* (internal model
+principle); Franklin, Powell & Emami-Naeini, *Feedback Control of Dynamic Systems*; Friston (2010) *Nat. Rev.
 Neurosci.*; Goertzel (2024) *arXiv:2412.16559* (goal stability under self-modification); Hayek (1945) *Am. Econ. Rev.* (The Use of Knowledge in Society); Hirono & Hidaka (2015) *J. Stat.
 Phys.*; Jaynes (1957) *Phys. Rev.*; Kelly (1956) *Bell Syst. Tech. J.*; Klyubin, Polani & Nehaniv (2005) *IEEE
 CEC* (empowerment); Landauer (1961) *IBM J. Res. Dev.*; Lê (2017) *Ann. Inst. Stat. Math.* (uniqueness of the Fisher metric);
 Moffett & Eckford (2021/2025) *IEEE Trans. Inf. Theory* (Kelly bets and single-letter codes); von Neumann &
 Morgenstern (1944) *Theory of Games and Economic Behavior*; Omohundro (2008) *Proc. AGI*; Permuter, Kim &
 Weissman (2011) *IEEE Trans. Inf. Theory* (directed information & portfolio growth); Perrier (2025)
-*arXiv:2506.17846* (alignment needs formal control theory); Peters (2019) *Nat. Phys.*; Powers (1973) *Behavior: The Control of
+*arXiv:2506.17846* (alignment needs formal control theory); Ogata, *Modern Control Engineering*; Peters (2019) *Nat. Phys.*; Powers (1973) *Behavior: The Control of
 Perception* (perceptual control theory); Qian, H. (2001) *Phys. Rev. E* (relative entropy as free energy);
 Soares, Fallenstein, Yudkowsky & Armstrong (2015) *AAAI Workshop* (corrigibility); Spizzirri (2026)
 *arXiv:2512.03048* (the specification trap); Turner et al. (2021) *NeurIPS* (optimal policies tend to seek power); Salge & Polani (2013) (empowerment — an introduction); Savage (1954) *Foundations of Statistics*;
