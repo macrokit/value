@@ -3,123 +3,161 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agent Value-Meter — measure any agent's value profile</title>
-<meta name="description" content="Measure any AI agent's value-generation on a task, in nats, grounded in a published information-theoretic theory of value. Runs the real tool in your browser.">
-<link rel="stylesheet" href="style.css">
+<title>A Mathematical Theory of Value</title>
+<meta name="description" content="A mathematical theory of value, built the way Shannon built information: a frame-relative but lawful quantity with a measure, a capacity limit (ΔG ≤ I(X;Y)), and an exact accounting of value created versus dissipated — aimed at governing populations of AI agents.">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
 <header class="hero">
   <div class="wrap">
-    <div class="kicker">grounded in a published theory · <a href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">preprint ↗</a></div>
-    <h1>Agent <span class="grad">Value-Meter</span></h1>
-    <p class="tag">Measure <em>any</em> agent's <strong>value profile</strong> on a task — how much value it
-      <em>can</em> generate, how much it <em>actually</em> generates out-of-sample, how much it
-      <em>dissipates</em>, and what it buys <em>per unit of compute</em>. All in nats, with nulls and
-      confidence intervals, and the honesty caveats printed in the output.</p>
-    <p class="sub">This page runs the <strong>real tool</strong> — the published <code>value_meter.py</code> —
-      in your browser via Pyodide. No server, no upload, no API key: your records never leave the page.</p>
+    <div class="kicker">a research program · byline <strong>Cheng Qian</strong> ·
+      <a href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">preprint ↗</a></div>
+    <h1>A Mathematical Theory of <span class="grad">Value</span></h1>
+    <p class="tag">Built the way Shannon built information. Strip value of its semantic clothing — morality,
+      price, preference — and a <strong>lawful, structural quantity</strong> remains: with a measure, a
+      capacity limit, and an exact accounting of value <em>created</em> versus <em>dissipated</em>.</p>
+    <p class="sub">The motivating premise: in the near future, AI agents are driven by values. If so, a theory of
+      value is not philosophy — it is the <strong>control theory for agent populations</strong>.</p>
+    <div class="cta-row">
+      <a class="btn-cta primary" href="/tools/value-meter/">Try the Value-Meter →</a>
+      <a class="btn-cta" href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">Read the preprint</a>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="panel">
-    <div class="panel-head">
-      <h2>Run it</h2>
-      <div id="status" class="status">booting Python runtime…</div>
+  <section class="lead">
+    <blockquote class="bet">
+      <strong>The bet.</strong> Value is a lawful, structural quantity — in the same category as information —
+      currently left undefined only because, like information before 1948, it is confused with its semantic
+      clothing. Strip the clothing and a structural quantity remains.
+    </blockquote>
+    <p class="aside"><strong>A theory of value is to agency what relativity is to motion.</strong> Value is
+      frame-dependent on the agent's goal; the laws relating value across frames are universal. Relativity
+      doesn't disqualify a quantity from being fundamental — it forces the theory to make the frame explicit.</p>
+  </section>
+
+  <section class="block">
+    <h2>The three load-bearing equations</h2>
+    <div class="eq-cards">
+      <div class="eq-card">
+        <div class="eq">V = Σ kᵢ ln eᵢ</div>
+        <h3>The measure</h3>
+        <p>The <strong>Logarithmic Value Law</strong> — forced by a single scale-invariance axiom, and
+          independently by multiplicative compounding. Optimal allocation puts resource where the goal-weight
+          is: <code>eᵢ* ∝ kᵢ</code>.</p>
+      </div>
+      <div class="eq-card">
+        <div class="eq">ΔG ≤ I(X;Y)</div>
+        <h3>The capacity</h3>
+        <p>A <strong>coding theorem for value</strong>: an agent's value-generation rate is bounded by the
+          mutual information between the world <code>X</code> and its perception <code>Y</code>. Value-throughput
+          is information-throughput.</p>
+      </div>
+      <div class="eq-card">
+        <div class="eq">G = D(q‖r) − D(q‖p)</div>
+        <h3>The Second Law</h3>
+        <p>Realized value = available value minus the value <strong>dissipated</strong> to miscalibration.
+          Confident error drives growth <em>negative</em> — an exact, signed accounting in nats.</p>
+      </div>
     </div>
+    <p class="note-line">Shannon's quantities recur, load-bearing not decorative: entropy <code>H</code> as a
+      dissipation penalty, KL divergence <code>D</code> as available-minus-dissipated value, mutual information
+      <code>I</code> as the value ceiling, and the Fisher metric as the cross-frame invariant.</p>
+  </section>
 
-    <div class="examples">
-      <span class="examples-label">Load an example:</span>
-      <button class="chip" data-ex="examples/intent_qwen0.5b.json">qwen0.5b · intent</button>
-      <button class="chip" data-ex="examples/seqstate_llama3b.json">llama3b · seqstate</button>
-      <button class="chip" data-ex="examples/topic_llama1b.json">llama1b · topic (near-chance)</button>
-      <button class="chip" data-ex="examples/toy_agent_with_belief.json">toy · with stated belief</button>
-    </div>
-    <p id="note" class="note"></p>
-
-    <textarea id="input" spellcheck="false" placeholder='Paste records JSON here, e.g.
-{
-  "classes": ["a", "b", "c"],
-  "records": [
-    {"gold": "a", "pred": "a", "cost_tokens": 62, "cost_latency": 0.41},
-    {"gold": "b", "pred": "c", "cost_tokens": 58}
-  ]
-}'></textarea>
-
-    <div class="controls">
-      <button id="run" class="btn-primary" disabled>Measure value profile</button>
-      <label class="split">fit split
-        <input id="split" type="number" min="0.1" max="0.9" step="0.1" value="0.5">
-      </label>
-      <span id="err" class="err"></span>
+  <section class="block">
+    <h2>The method, copied from Shannon — deliberately</h2>
+    <div class="twocol">
+      <p>Shannon's 1948 paper worked because of one ruthless abstraction: he threw away <strong>meaning</strong>
+        and defined information as nothing but the reduction of uncertainty. From that came a measure
+        (<code>−log p</code>), a unit (the bit), and hard limits (channel capacity, the coding theorems).</p>
+      <p>The analogous move here: <strong>throw away morality, price, and human psychology.</strong> What
+        remains is value as a frame-relative but lawful quantity — relative to an agent's goal the way
+        information is relative to a prior, or energy to a reference frame. The frame is made explicit, not
+        wished away.</p>
     </div>
   </section>
 
-  <section id="result" class="result hidden"></section>
-
-  <section class="explain">
-    <h2>What it measures</h2>
-    <div class="cards-doc">
-      <div class="card-doc">
-        <h3>1 · Value ceiling — I(X;Y)</h3>
-        <p>The mutual information between the correct action <code>X</code> and the agent's choice
-          <code>Y</code>: the most value this agent could realize on this task. Reported against a
-          <strong>permutation null</strong> so it's above-chance, not raw. Plus <code>H(X)</code> and
-          <strong>saturation</strong> <code>I/H(X)</code> — how close to the ceiling it already is.</p>
+  <section class="block evidence">
+    <h2>Evidence — the theory predicts its own instantiation</h2>
+    <div class="ev-grid">
+      <div class="ev">
+        <div class="ev-num">20/20</div>
+        <p>closed-form predictions reproduced by a Monte-Carlo world — including value going
+          <em>negative</em> under confident error, and a priced fleet that grows from agents that individually
+          don't (<em>Shannon's demon</em>).</p>
       </div>
-      <div class="card-doc">
-        <h3>2 · Realized rate — ΔG</h3>
-        <p>Two numbers, clearly labelled. <strong>In-sample <code>ΔG = I</code></strong> is an arithmetic
-          identity (definitional, no empirical weight). The <strong>out-of-sample</strong> number —
-          calibrate the posterior on a fit split, score on a holdout — is the empirical one, with a
-          <strong>bootstrap CI</strong>.</p>
+      <div class="ev">
+        <div class="ev-num">ρ = 0.977</div>
+        <p>across <strong>30 model×domain points</strong> (10-model ladder × 3 domains, pre-registered),
+          <code>I(X;Y)</code> tracks realized <strong>capability — not parameter count</strong>; out-of-sample
+          <code>ΔG</code> tracks <code>I</code> at slope 0.935.</p>
       </div>
-      <div class="card-doc">
-        <h3>3 · Dissipation — D(q‖p)</h3>
-        <p>The Second-Law term: value lost to miscalibration. If your records carry a <code>prob</code>
-          (the agent's stated belief), it's measured against that. Otherwise a <strong>constructed</strong>
-          over-confident belief is used — and the output says which.</p>
-      </div>
-      <div class="card-doc">
-        <h3>4 · Value per compute</h3>
-        <p><code>I / tokens</code> (primary, load-free) and <code>I / median-latency</code> (secondary;
-          median is load-robust). What each unit of compute actually buys in value.</p>
+      <div class="ev">
+        <div class="ev-num">4 shapes</div>
+        <p>the out-of-sample bridge <code>ΔG ~ I(X;Y)</code> generalizes across classification, reasoning,
+          sequential decision, and code — one relationship, slope ≈ 1, with one honestly-flagged
+          underpowered sub-check.</p>
       </div>
     </div>
-
-    <div class="caveats-box">
-      <h3>The caveats are the instrument</h3>
-      <p>The meter <strong>measures</strong>; it does not call an agent good or bad, and makes no
-        benchmark-beating claim. Every run carries these:</p>
-      <ul>
-        <li><strong>Task-relative.</strong> A per-(agent, task) profile, not a universal agent score.</li>
-        <li><strong>In-sample ΔG = I is definitional.</strong> The empirical content is the out-of-sample number and its CI.</li>
-        <li><strong>Dissipation is of a stated <em>or constructed</em> belief</strong> — the output says which.</li>
-        <li><strong>Intervals, not point estimates.</strong> Read the null and the bootstrap CI.</li>
-        <li><strong>Single-agent scope only.</strong> No multi-agent coordination/governance (that layer is unvalidated).</li>
-      </ul>
-    </div>
-
-    <h2>Run it on your own agent</h2>
-    <p>For each task item, log the correct answer and your agent's answer (plus tokens/latency if you have
-      them). Dump them as records JSON and paste above — or run it from the command line:</p>
-<pre class="code">cd tools/value-meter
-python3 -m value_meter your_run.json          # human-readable profile
-python3 -m value_meter your_run.json --json    # machine-readable</pre>
-    <p>There is no model dependency — it works on any agent's recorded outputs. The information-theoretic
-      primitives are reused from the value theory's reference implementation, and a self-test reproduces the
-      paper's published numbers exactly on the cached runs.</p>
+    <p class="cta-inline">These are measured on <em>real LLM outputs</em>, with the same instrument you can run
+      yourself → <a href="/tools/value-meter/">the Value-Meter</a>.</p>
   </section>
+
+  <section class="block">
+    <h2>Why this serves governing AI agents</h2>
+    <ul class="why">
+      <li><strong>Per agent.</strong> Value-generation is capped by its perception's mutual information
+        <code>I(X;Y)</code>. Raising <code>I</code> per joule is the formal reason a cheap reflex can match
+        expensive deliberation on a narrow task.</li>
+      <li><strong>Across agents.</strong> Values are <em>not</em> cardinally comparable (Arrow). Coordinate them
+        through an <strong>emergent price</strong> on shared resources — as economies coordinate incomparable
+        utilities — never a god's-eye utility sum.</li>
+      <li><strong>Fleet design.</strong> Cultivate goal- and perception-diversity (positive-sum, covers more of
+        <code>H(X)</code>); suppress belief-divergence and goal-conflict. Headcount past
+        perception-saturation buys nothing.</li>
+    </ul>
+  </section>
+
+  <section class="block status">
+    <h2>Honest status</h2>
+    <div class="status-grid">
+      <div class="st proven"><h3>Proven (within stated axioms)</h3>
+        <p>the log law, the capacity theorem (achievability + converse), the Second-Law decomposition, the
+          cross-frame exchange rate + Fisher invariant, and the fleet outer bounds.</p></div>
+      <div class="st conj"><h3>Conjecture</h3>
+        <p>the Second Law of Value as a global tendency; equilibrium-price existence beyond the convex regime.</p></div>
+      <div class="st open"><h3>Open</h3>
+        <p>the exact multi-agent capacity region; cross-frame <em>cardinal</em> comparison (deliberately
+          unsolved); the full dynamics of how goals, beliefs, and prices co-evolve.</p></div>
+    </div>
+    <p class="whatsnew"><strong>What is and isn't new.</strong> None of the underlying mechanisms is individually
+      new — the single-agent core is <em>generalized Kelly</em> (1956). The contribution is their unification
+      under one substrate-grounded quantity, the cross-frame/price layer, and the is/ought asymmetry from which
+      alignment falls out as a control-stability condition. Claims are scoped to match.</p>
+  </section>
+
+  <section class="cta-band">
+    <h2>Measure any agent's value profile</h2>
+    <p>The most direct use of the theory: a tool that takes an agent's outputs vs ground truth and returns its
+      value ceiling, realized rate, dissipation, and value-per-compute — in nats, with nulls and CIs, running
+      entirely in your browser.</p>
+    <a class="btn-cta primary big" href="/tools/value-meter/">Open the Value-Meter →</a>
+  </section>
+
 </main>
 
 <footer class="wrap">
-  <p>Agent Value-Meter — the most direct use of the value theory.
-    Author: <strong>Cheng Qian</strong> · <a href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">preprint</a> ·
-    runs entirely client-side (Pyodide). Your data never leaves the browser.</p>
+  <p><strong>A Mathematical Theory of Value</strong> · author byline <strong>Cheng Qian</strong> ·
+    <a href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">Zenodo preprint</a> ·
+    concept DOI <a href="https://doi.org/10.5281/zenodo.20487041" target="_blank" rel="noopener">10.5281/zenodo.20487041</a> ·
+    <a href="https://github.com/macrokit/value" target="_blank" rel="noopener">research repository</a></p>
+  <p class="fine">A theory repository — definitions, derivations, and honest limits. Not a product; it does not
+    resolve interpersonal value comparison (provably non-canonical) or produce a single fleet-wide value number.</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
-<script src="app.js"></script>
 </body>
 </html>

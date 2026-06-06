@@ -104,3 +104,68 @@ pre.rawout{margin-top:10px}
 .caveats-box li{font-size:.93rem;margin:6px 0;color:#5a5340}
 
 footer{padding:30px 0 50px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);margin-top:40px}
+
+/* ============================================================== */
+/* homepage (theory landing) — shares the design system above     */
+/* ============================================================== */
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn-cta{display:inline-block;font-weight:600;font-size:.98rem;padding:11px 22px;border-radius:10px;
+  border:1px solid #3a3780;color:#dfe1fb;background:#2a2766;transition:.15s}
+.btn-cta:hover{background:#332f7a;text-decoration:none}
+.btn-cta.primary{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.btn-cta.primary:hover{background:#4338ca}
+.btn-cta.big{font-size:1.08rem;padding:14px 28px}
+
+.lead{margin:34px 0 10px}
+blockquote.bet{margin:0;padding:18px 22px;border-left:4px solid var(--indigo);background:#fff;
+  border:1px solid var(--line);border-left-width:4px;border-radius:0 12px 12px 0;font-size:1.08rem;color:#33365a}
+.aside{margin:18px 2px 0;color:var(--muted);font-size:.98rem}
+
+.block{margin:40px 0}
+.block h2{font-size:1.5rem;letter-spacing:-.01em;margin:0 0 18px}
+.eq-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:760px){.eq-cards{grid-template-columns:1fr}}
+.eq-card{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff;
+  box-shadow:0 1px 3px rgba(20,22,60,.05)}
+.eq-card .eq{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:1.15rem;font-weight:600;
+  color:var(--navy);background:#eef0fb;border-radius:8px;padding:12px 14px;text-align:center;margin-bottom:14px}
+.eq-card h3{margin:0 0 8px;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:var(--indigo)}
+.eq-card p{margin:0;font-size:.93rem;color:#41465c}
+.note-line{margin-top:16px;font-size:.9rem;color:var(--muted)}
+
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:680px){.twocol{grid-template-columns:1fr;gap:12px}}
+.twocol p{margin:0;font-size:.98rem;color:#41465c}
+
+.evidence{background:var(--navy);color:#e9eaf6;border-radius:18px;padding:30px 28px;margin:46px 0}
+.evidence h2{color:#fff}
+.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:760px){.ev-grid{grid-template-columns:1fr}}
+.ev{background:#262357;border:1px solid #393680;border-radius:12px;padding:18px}
+.ev-num{font-size:1.9rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;
+  background-clip:text;color:transparent;font-variant-numeric:tabular-nums;margin-bottom:6px}
+.ev p{margin:0;font-size:.9rem;color:#c7cbef}
+.evidence code{background:#332f7a;color:#dfe1fb}
+.evidence em{color:#fff;font-style:normal;font-weight:600}
+.cta-inline{margin:20px 2px 0;color:#c7cbef;font-size:.98rem}
+.cta-inline a{color:#fff;text-decoration:underline}
+
+ul.why{margin:0;padding-left:20px}
+ul.why li{font-size:.98rem;color:#41465c;margin:10px 0}
+
+.status-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:760px){.status-grid{grid-template-columns:1fr}}
+.st{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#fff;border-top:3px solid}
+.st h3{margin:0 0 8px;font-size:.95rem}
+.st p{margin:0;font-size:.9rem;color:#41465c}
+.st.proven{border-top-color:var(--ok)} .st.proven h3{color:var(--ok)}
+.st.conj{border-top-color:var(--warn)} .st.conj h3{color:var(--warn)}
+.st.open{border-top-color:var(--muted)} .st.open h3{color:var(--muted)}
+.whatsnew{margin-top:18px;font-size:.93rem;color:#5a5340;background:#fffaf0;border:1px solid #ecdcc4;
+  border-radius:12px;padding:14px 18px}
+
+.cta-band{text-align:center;margin:54px 0 20px;padding:34px 24px;border:1px solid var(--line);
+  border-radius:18px;background:linear-gradient(180deg,#fff,#f4f5fe)}
+.cta-band h2{margin:0 0 10px;font-size:1.5rem}
+.cta-band p{max-width:620px;margin:0 auto 20px;color:#41465c}
+footer .fine{font-size:.8rem;color:var(--muted);margin-top:6px}
