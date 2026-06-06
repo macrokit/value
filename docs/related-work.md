@@ -105,20 +105,43 @@ The tendency of capable agents to acquire resources and preserve their goals (in
 articulated by Omohundro (2008) and Bostrom (2014). We *derive* this tendency from the compounding dynamics of
 value (doc 05 §3): goal-directions correlated with resource capture are selected regardless of terminal
 content. We further recast alignment as a *dynamical stability condition* rather than a static property
-(doc 05 §4, formalized in [`07-alignment-stability.md`](07-alignment-stability.md)), which to our knowledge is a
-new framing. An emerging agenda independently argues alignment should be recast in formal control-theoretic
-terms (Perrier, 2025); that work is *programmatic* — it calls for control-theoretic alignment without supplying
-a stability condition or a closed-form misalignment residual — which is exactly what doc 07 provides (the
-residual `‖Vg‖/γ` and the gain-exceeds-drift criterion `γ > λ_max`). The is/ought asymmetry this rests on we
-have likewise not found formalized elsewhere; the nearest large framework, active inference, makes the *opposite*
-move (collapsing goals into beliefs as preferences-as-priors). We hold both as plausibly-novel, noting we have
-not exhaustively searched formal metaethics or the corrigibility-as-stability literature.
+(doc 05 §4, formalized in [`07-alignment-stability.md`](07-alignment-stability.md)). Two separable claims live
+here and they have very different priority status, which we are careful to keep apart.
+
+**The is/ought asymmetry (doc 05 §0) — value-side is *not* ours.** That an agent's goals/values cannot be
+inferred from its behavior — an "ought" cannot be read off what "is" — is established prior art: Armstrong &
+Mindermann (2018) prove a No-Free-Lunch result that a policy does not uniquely decompose into a planning
+algorithm and a reward function, and *explicitly* label it "an instance of the well-known is-ought problem from
+metaethics"; Spizzirri (2026) states the same descriptive-cannot-ground-normative underdetermination. We concede
+the value-side of the asymmetry to them. What we add is the *two-sided* framing — pairing that target-less
+goal-update with a truth-targeted belief-update (a minimizable `D(q‖r)` toward the true `r`) and reading the pair
+as a structural asymmetry between an agent's two update dynamics. We flag honestly that a reviewer may regard
+this as a re-packaging of the established one-sided result rather than a new theorem; the active-inference
+framework, by contrast, makes the *opposite* move (collapsing goals into beliefs as preferences-as-priors).
+
+**Alignment as control-stability (doc 07) — the genuine surviving novelty.** The part with no clear prior is the
+*formal* one: deriving alignment as a gain-versus-drift stability condition `γ > λ_max(∂(Vg)/∂k̄)` with a
+closed-form residual misalignment `‖Vg‖/γ`. The nearest works fall short of exactly this. Perrier (2025)
+advocates control-theoretic alignment but is programmatic — no criterion, no residual. Goertzel (2024) gives a
+contraction-mapping fixed-point condition for goal stability under self-modification, but no eigenvalue criterion
+and no `‖Vg‖/γ` residual (and disclaims rigor). Perceptual control theory (Powers) supplies a structurally
+analogous inverse-gain disturbance-suppression residual `1/(1+G)` — but bounds tracking against *exogenous*
+disturbances, not an *endogenous* goal-drift Jacobian, and states no Lyapunov/eigenvalue criterion. Instrumental
+convergence (Omohundro 2008; Turner et al. 2021) is a *statistical tendency over reward functions*, not a
+controller; corrigibility (Soares et al. 2015) is *utility specification*, static, not dynamical. We hold the
+`γ > λ_max` / `‖Vg‖/γ` result as plausibly-novel, with one prior-art gap we name explicitly and have *not*
+closed: the cybernetic regulator theorems (Ashby's law of requisite variety; the Conant–Ashby good-regulator
+theorem, 1970) — the most plausible source of an earlier gain-vs-variety bound, and the right place for a future
+check before any strong priority claim.
 
 ## Statement of contribution
 
-In descending order of defensibility, this work contributes: (1) the **is/ought asymmetry** as a structural
-property of agent dynamics — beliefs have a target the world supplies, goals do not — which we argue is the
-mathematical shape of the alignment problem; (2) a **unification** under one substrate-grounded quantity of
+In descending order of defensibility, this work contributes: (1) **alignment as a control-stability condition** —
+the closed-form residual misalignment `‖Vg‖/γ` and the gain-exceeds-drift criterion `γ > λ_max` (doc 07), which
+we have not found derived elsewhere (the *value-side* of the underlying is/ought asymmetry is, however,
+anticipated — Armstrong & Mindermann, 2018 — so our contribution there is the two-sided belief-vs-goal dynamical
+framing, which is more presentational than formal, and one un-closed cybernetics gap remains); (2) a
+**unification** under one substrate-grounded quantity of
 otherwise-separate accounts of value (expected utility, log-optimal growth, reinforcement value, thermodynamic
 free energy, and general-equilibrium price); (3) the **substrate grounding** of value in free energy, supplying
 a unit and a cross-frame exchange rate; and (4) the **fleet-governance** results — the world-entropy ceiling on
@@ -131,19 +154,23 @@ treatments do not.
 
 Arrow (1951) *Social Choice and Individual Values*; Arrow & Debreu (1954) *Econometrica*; Bellman (1957)
 *Dynamic Programming*; Bennett (1982) *Int. J. Theor. Phys.*; Bernoulli (1738) *Comm. Acad. Sci. Petrop.*;
-Bostrom (2014) *Superintelligence*; Breiman (1961) *Proc. 4th Berkeley Symp.*; Bauer, Bruveris & Michor (2016)
+Armstrong & Mindermann (2018) *NeurIPS* (Occam's razor is insufficient to infer the preferences of irrational
+agents); Ashby (1956) *An Introduction to Cybernetics* (requisite variety); Bostrom (2014) *Superintelligence*;
+Breiman (1961) *Proc. 4th Berkeley Symp.*; Bauer, Bruveris & Michor (2016)
 *Bull. LMS* (uniqueness of the Fisher–Rao metric); Campbell (1986) *Proc. AMS* (extended Čencov
-characterization); Čencov (1982) *Statistical Decision Rules*; Cover & Thomas, *Elements of Information
-Theory*; Cover (1991) *Math. Finance* (universal
+characterization); Čencov (1982) *Statistical Decision Rules*; Conant & Ashby (1970) *Int. J. Systems Sci.* (good
+regulator theorem); Cover & Thomas, *Elements of Information Theory*; Cover (1991) *Math. Finance* (universal
 portfolios); Debreu (1959) *Theory of Value*; England (2013) *J. Chem. Phys.*; Friston (2010) *Nat. Rev.
-Neurosci.*; Hayek (1945) *Am. Econ. Rev.* (The Use of Knowledge in Society); Hirono & Hidaka (2015) *J. Stat.
+Neurosci.*; Goertzel (2024) *arXiv:2412.16559* (goal stability under self-modification); Hayek (1945) *Am. Econ. Rev.* (The Use of Knowledge in Society); Hirono & Hidaka (2015) *J. Stat.
 Phys.*; Jaynes (1957) *Phys. Rev.*; Kelly (1956) *Bell Syst. Tech. J.*; Klyubin, Polani & Nehaniv (2005) *IEEE
 CEC* (empowerment); Landauer (1961) *IBM J. Res. Dev.*; Lê (2017) *Ann. Inst. Stat. Math.* (uniqueness of the Fisher metric);
 Moffett & Eckford (2021/2025) *IEEE Trans. Inf. Theory* (Kelly bets and single-letter codes); von Neumann &
 Morgenstern (1944) *Theory of Games and Economic Behavior*; Omohundro (2008) *Proc. AGI*; Permuter, Kim &
 Weissman (2011) *IEEE Trans. Inf. Theory* (directed information & portfolio growth); Perrier (2025)
-*arXiv:2506.17846* (alignment needs formal control theory); Peters (2019) *Nat. Phys.*; Qian, H. (2001)
-*Phys. Rev. E* (relative entropy as free energy); Salge & Polani (2013) (empowerment — an introduction); Savage (1954) *Foundations of Statistics*;
+*arXiv:2506.17846* (alignment needs formal control theory); Peters (2019) *Nat. Phys.*; Powers (1973) *Behavior: The Control of
+Perception* (perceptual control theory); Qian, H. (2001) *Phys. Rev. E* (relative entropy as free energy);
+Soares, Fallenstein, Yudkowsky & Armstrong (2015) *AAAI Workshop* (corrigibility); Spizzirri (2026)
+*arXiv:2512.03048* (the specification trap); Turner et al. (2021) *NeurIPS* (optimal policies tend to seek power); Salge & Polani (2013) (empowerment — an introduction); Savage (1954) *Foundations of Statistics*;
 Shannon (1948) *Bell Syst. Tech. J.*; Still, Sivak, Bell & Crooks (2012) *Phys. Rev. Lett.* (thermodynamics of
 prediction); Sutton & Barto, *Reinforcement Learning*; Touchette & Lloyd (2000) *Phys. Rev. Lett.*
 (information-theoretic limits of control).

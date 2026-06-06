@@ -43,11 +43,21 @@ does not cover, with measured (not weak-model-elicited) quantities.
   aggregate; held as plausibly-novel. **(B, result 5)**: **no clear prior** — only an *agenda* paper (Perrier
   2025) exists, no formal stability condition / residual; `related-work.md` now positions doc 07 as supplying
   what that agenda calls for. **(C)** no unified "mathematical/thermodynamic theory of value" framing found.
-- [ ] **(Optional) Third pass on result-5 residual.** GAP B was under-covered: formal metaethics (is/ought),
-  Omohundro/Bostrom goal-content-integrity formalizations, orthogonality, no-free-lunch-for-value-learning, and
-  corrigibility-as-stability / Lyapunov-alignment were not exhausted. Highest residual priority risk since it is
-  the headline novelty — run before any high-stakes claim of priority on result 5. Not a blocker for the
-  published v3.
+- [x] **Third pass on result-5 residual — DONE (2026-06-06); verdict SHIFTED, be honest about it.** The deeper
+  search found real prior art the first two passes missed, so result 5 splits:
+  **Part 1 (is/ought asymmetry):** the *value-side* (goals can't be read off behavior) is **anticipated** —
+  **Armstrong & Mindermann (2018)** prove it as a No-Free-Lunch result and *explicitly call it Hume's is/ought
+  gap formalized*; Spizzirri (2026) restates it. Our surviving Part-1 novelty is only the *two-sided*
+  belief-vs-goal dynamical framing (+ the `D(q‖r)` belief target) — **presentational, contestable.**
+  **Part 2 (alignment-as-control-stability, `γ > λ_max`, `‖Vg‖/γ`):** **no clear prior found** — the genuine
+  surviving novelty. Closest analogs: Perrier 2025 (agenda only), Goertzel 2024 (contraction fixed-point, no
+  eigenvalue criterion), Powers PCT (`1/(1+G)` but vs *exogenous* disturbance, not goal-drift Jacobian).
+  `related-work.md` rewritten to concede Part 1's value-side and claim only Part 2. **Net: result 5's headline
+  novelty narrows from "the is/ought asymmetry" to "the control-stability theorem."**
+- [ ] **(Optional) One remaining priority gap.** The cybernetic regulator theorems (Ashby's requisite variety;
+  Conant–Ashby good-regulator, 1970) were named but not closed — the most plausible un-checked source of an
+  earlier gain-vs-drift bound on Part 2. Also unclosed: control-barrier-function / safe-control AI-safety. Check
+  before any strong public priority claim on the `γ > λ_max` result. Not a blocker for v3.
 
 ## Research directions (gated behind the published core)
 - [x] **Cross-frame / price layer — real-data test → STRUCTURAL CAP** ([`15`](15-cross-frame-realdata.md),
