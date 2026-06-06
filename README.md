@@ -3,8 +3,9 @@
 *A mathematical theory of value — built the way Shannon built information.*
 
 This is the research repository behind the preprint *A Mathematical Theory of Value*
-([Zenodo, concept DOI 10.5281/zenodo.20487041](https://doi.org/10.5281/zenodo.20487041); byline Cheng Qian).
-It develops one bet to its consequences:
+([Zenodo record v3](https://zenodo.org/records/20530824) · concept DOI
+[10.5281/zenodo.20487041](https://doi.org/10.5281/zenodo.20487041), always resolves to the latest version ·
+byline Cheng Qian). It develops one bet to its consequences:
 
 > **Value is a lawful, structural quantity** — in the same category as information — currently
 > left undefined only because, like information before 1948, it is confused with its semantic clothing
