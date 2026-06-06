@@ -100,6 +100,22 @@ data (degenerate corners) nor small LLMs (capability ceiling) can deliver it.* S
 turf; governance (Lever 1) = small-LLM CAP; wave theory = real-agent negative; cross-frame = structural CAP.
 **"Great" is now precisely specified and currently blocked on a stronger-agent instrument** — revisit the one
 controlled-multi-agent experiment when such an instrument exists. No current move delivers the upside.
+
+### ⊕ Goal-maintenance-cost pre-check — verdict ANTICIPATED, thread closed (2026-06-06)
+Doc [`16`](16-the-disanalogy.md) §4 flagged one open candidate in the disanalogy region: an *irreducible exergy
+floor on maintaining an agent-supplied, world-unpinned goal/frame against a drifting world* — distinct from the
+belief-side tracking floor already conceded to Still et al. 2012. A focused fifth priority pass (same adversarial
+method) **breaks it**: the floor is **housekeeping heat** (drift-independent cost of maintaining any
+detailed-balance-violating steady state; Speck & Seifert 2005, *J. Phys. A* 38, L581) plus **excess heat** (the
+drift-scaled transition cost; Hatano & Sasa 2001, *PRL* 86, 3463). Decisive discriminator fails: both results are
+explicitly **setpoint-origin-agnostic** — they price maintaining *any* steady state "regardless of how the
+nonequilibrium condition is established" / "regardless of the physical origin," so an *agent-chosen* reference
+costs the same to hold as a world-given one and opens no thermodynamic gap. The only goal-specific feature (no
+predictive-information discount, Still 2012, when there is no world target) is a **corollary of the already-conceded
+is/ought asymmetry** (Armstrong & Mindermann 2018), not a new dissipation law. **Outcome:** the disanalogy yields
+no new *law* (it remains the right place to *look* — it locates where the distinctively-value subject matter lives,
+doc 16 §3); the distinctively-value contribution stays the *synthesis* + fleet ceiling + value/price frame split +
+governance mapping. Thread closed; no `docs/17` written.
 - [ ] **Wave / field theory — gate not cleared** (docs [`08`](08-field-theory-of-value.md),
   [`11`](11-real-agent-field-test.md)). Derived + toy-emergent, but real small-LLM agents coordinate by
   *Schelling focal points*, not spontaneous flocking. Options (no model-escalation fishing): a motile,

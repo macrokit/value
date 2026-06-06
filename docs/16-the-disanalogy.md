@@ -187,12 +187,43 @@ caution:
    (σ-modification / e-modification; Ioannou & Sun; Narendra & Annaswamy), and a drifting goal versus a
    controller is structurally a drifting-parameter tracking problem.
 
-**Required before any claim:** run a focused priority pass (the same four-pass method) against (a) Still et al.
-(2012) and the thermodynamics-of-prediction lineage, and (b) the adaptive-control drift-residual bounds, to
-establish whether an *irreducible exergy floor on goal-maintenance* — on the unpinned coordinate specifically —
-is distinct from "cost of tracking a changing environment" (belief side, Still's) and from "drift-scaled
-residual bound" (control side, adaptive control's). If it survives both, it is the first genuinely-new candidate
-in the disanalogy region. Until then it is a flagged direction, not a result.
+**Pre-check run — verdict: ANTICIPATED (the candidate does not survive; thread closed).** A focused priority
+pass (the same adversarial method as the four prior passes, 2026-06-06) tried hard to break the goal-side
+candidate against the housekeeping-heat / NESS-maintenance lineage, Still 2012, adaptive-control drift residuals,
+self-evidencing (FEP), and feedback thermodynamics (Sagawa–Ueda). It does not survive:
+
+- **The floor already exists, drift-independent part included.** The irreducible dissipation required to *hold* a
+  system away from equilibrium — even with no drift — is **housekeeping heat**: "the dissipated heat necessary to
+  maintain the violation of detailed balance in a nonequilibrium steady state" (Speck & Seifert 2005,
+  *J. Phys. A* 38, L581; integral fluctuation theorem `⟨e^{−βQ_hk}⟩ = 1`). The *drift-dependent* part — the
+  cost that scales with how fast the world's parameters change — is **excess heat** and its Clausius-like
+  inequality for transitions between steady states (Hatano & Sasa 2001, *PRL* 86, 3463). Together these *are* "an
+  irreducible exergy floor on maintaining a reference against a drifting world, set by the drift speed."
+- **The decisive discriminator fails.** The candidate was meant to survive only if a floor exists for a
+  *world-unpinned, agent-chosen* reference, distinct from maintaining a *given* one. But both primary results are
+  explicit that the framework is **setpoint-origin-agnostic**: housekeeping heat is valid "for arbitrary driven
+  transitions between steady states... regardless of how the nonequilibrium condition is established" (Speck &
+  Seifert), and the steady-state-thermodynamic framework "applies to any steady state defined by control
+  parameters, regardless of the physical origin" (Hatano & Sasa). Dissipation depends on the steady-state
+  currents and the parameter-change protocol — **not on the semantic origin of the setpoint.** An agent-chosen
+  reference and a world-given one cost the same to hold; the "chosen vs given" distinction is invisible to the
+  thermodynamic accounting, so it opens no gap. (Self-evidencing / Markov-blanket maintenance, Friston, is a
+  special case — maintaining the *self* as the reference — and is priced by the same housekeeping cost;
+  Sagawa–Ueda feedback bounds price maintaining a state via measurement, also setpoint-agnostic.)
+- **The one genuinely goal-specific feature is a corollary, not a law.** What *is* specific to the unpinned
+  coordinate is that the predictive-information discount available for a world-given target — better prediction
+  lowers the tracking floor (Still, Sivak, Bell & Crooks 2012, *PRL* 109, 120604) — is **unavailable** when there
+  is no world target to predict. But that is not a new dissipation floor; it is the statement that the belief-side
+  reduction tool does not apply on the goal side, which follows directly from the is/ought asymmetry already
+  conceded (goals have no world-given target, [`05`](05-dynamics.md) §0; value-side conceded to Armstrong &
+  Mindermann 2018). The floor itself is unchanged housekeeping + excess heat.
+
+**Net:** the disanalogy yields no genuinely-new *law*. It remains the right place to look — it correctly locates
+where the distinctively-value subject matter lives (§3) — but the one forward candidate that looked open is
+anticipated by steady-state thermodynamics. The honest outcome is to say so and close the thread. The
+distinctively-value contribution stays where the priority program already put it: the *synthesis*, the fleet
+ceiling, the value/price frame split, and the governance mapping — held with the modesty those concessions
+require. (Recorded in [`ROADMAP.md`](ROADMAP.md).)
 
 ## 5. What this doc did and did not do
 
@@ -202,8 +233,10 @@ in the disanalogy region. Until then it is a flagged direction, not a result.
   agent-supplied reference — as the organizing idea (§3).
 - **Did not:** announce a new theorem. The is/ought value-side is Armstrong & Mindermann (2018); the
   alignment-stability law is classical control; the single-agent core is generalized Kelly; the
-  interface reading is Still 2012 / Landauer / FEP. The disanalogy is where the subject matter *lives*, and the
-  one forward candidate (§4) is explicitly gated behind a pre-check it has not yet passed.
+  interface reading is Still 2012 / Landauer / FEP. The disanalogy is where the subject matter *lives*, and its
+  one forward candidate (§4) was pre-checked and found **anticipated** by steady-state thermodynamics
+  (housekeeping + excess heat; Speck & Seifert 2005; Hatano & Sasa 2001) — the thread is closed, no new law
+  claimed.
 
 This is a reframing-and-locating doc, in the spirit the whole program is held to: the credibility of the *good*
 result is worth more than the appearance of a *great* one.
