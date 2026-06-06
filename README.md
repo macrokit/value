@@ -55,6 +55,8 @@ it forces the theory to make the frame explicit.
 Supporting: [`docs/related-work.md`](docs/related-work.md) — paper-ready prior-art section (utility theory,
 Kelly/info theory, RL, thermodynamics/FEP, general equilibrium, alignment) with an honest statement of
 contribution. The preprint built from these docs is in [`paper/`](paper/) (`paper/main.pdf`).
+New here? [`docs/FAQ.md`](docs/FAQ.md) answers the common first objections (*isn't value just a price? can it
+price the unpriced? is value stored like money? isn't this just Kelly?*) honestly and in brief.
 
 ### The three load-bearing equations
 
