@@ -1,0 +1,913 @@
+{
+ "classes": [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5"
+ ],
+ "note": "llama3b on a synthetic register-machine rollout (the widest-information shape). Reproduces I=1.5629 nats, \u0394G=1.3427; note the high dissipation and high token cost.",
+ "records": [
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 367,
+   "cost_latency": 9.5669
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 367,
+   "cost_latency": 9.342
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 326,
+   "cost_latency": 7.7743
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 346,
+   "cost_latency": 8.5237
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 375,
+   "cost_latency": 9.7044
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 323,
+   "cost_latency": 7.6709
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 368,
+   "cost_latency": 9.3674
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 281,
+   "cost_latency": 6.0935
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 394,
+   "cost_latency": 10.3964
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 309,
+   "cost_latency": 7.1575
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 301,
+   "cost_latency": 6.8375
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 304,
+   "cost_latency": 6.9696
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 381,
+   "cost_latency": 9.8656
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 327,
+   "cost_latency": 7.8636
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 304,
+   "cost_latency": 6.8861
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 327,
+   "cost_latency": 7.8119
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 288,
+   "cost_latency": 6.3214
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 364,
+   "cost_latency": 9.2239
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 337,
+   "cost_latency": 8.2
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 374,
+   "cost_latency": 9.6142
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 347,
+   "cost_latency": 8.6723
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 354,
+   "cost_latency": 8.8961
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 285,
+   "cost_latency": 6.1942
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 338,
+   "cost_latency": 8.264
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 338,
+   "cost_latency": 8.2219
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 350,
+   "cost_latency": 8.6829
+  },
+  {
+   "gold": "1",
+   "pred": "5",
+   "cost_tokens": 194,
+   "cost_latency": 2.7702
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 281,
+   "cost_latency": 6.1074
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 342,
+   "cost_latency": 8.3751
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 343,
+   "cost_latency": 8.4472
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 345,
+   "cost_latency": 8.5017
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 321,
+   "cost_latency": 7.5833
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 367,
+   "cost_latency": 9.3329
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 336,
+   "cost_latency": 8.1577
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 295,
+   "cost_latency": 6.6037
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 324,
+   "cost_latency": 7.7221
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 287,
+   "cost_latency": 6.272
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 295,
+   "cost_latency": 6.6131
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 353,
+   "cost_latency": 8.8322
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 344,
+   "cost_latency": 8.447
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 363,
+   "cost_latency": 9.185
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 318,
+   "cost_latency": 7.4777
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 317,
+   "cost_latency": 7.4294
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 337,
+   "cost_latency": 8.2315
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 314,
+   "cost_latency": 7.3219
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 344,
+   "cost_latency": 8.44
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 359,
+   "cost_latency": 9.0362
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 347,
+   "cost_latency": 8.5938
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 338,
+   "cost_latency": 8.2338
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 324,
+   "cost_latency": 7.6949
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 350,
+   "cost_latency": 8.7518
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 369,
+   "cost_latency": 9.4363
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 342,
+   "cost_latency": 8.401
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 354,
+   "cost_latency": 8.8356
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 393,
+   "cost_latency": 10.4036
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 333,
+   "cost_latency": 8.0368
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 373,
+   "cost_latency": 9.5646
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 278,
+   "cost_latency": 5.9467
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 302,
+   "cost_latency": 6.9218
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 322,
+   "cost_latency": 7.6668
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 325,
+   "cost_latency": 7.7348
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 349,
+   "cost_latency": 8.6913
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 334,
+   "cost_latency": 8.1057
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 385,
+   "cost_latency": 10.0279
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 362,
+   "cost_latency": 9.2427
+  },
+  {
+   "gold": "0",
+   "pred": "5",
+   "cost_tokens": 194,
+   "cost_latency": 2.787
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 338,
+   "cost_latency": 8.241
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 393,
+   "cost_latency": 10.7079
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 338,
+   "cost_latency": 8.5326
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 265,
+   "cost_latency": 5.6184
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 319,
+   "cost_latency": 7.7872
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 356,
+   "cost_latency": 9.225
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 338,
+   "cost_latency": 8.5623
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 359,
+   "cost_latency": 9.3938
+  },
+  {
+   "gold": "1",
+   "pred": "5",
+   "cost_tokens": 382,
+   "cost_latency": 10.2532
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 308,
+   "cost_latency": 7.3543
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 303,
+   "cost_latency": 7.1368
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 290,
+   "cost_latency": 6.6495
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 328,
+   "cost_latency": 8.131
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 341,
+   "cost_latency": 8.63
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 295,
+   "cost_latency": 6.8483
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 344,
+   "cost_latency": 8.7704
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 338,
+   "cost_latency": 8.5144
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 355,
+   "cost_latency": 9.2209
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 302,
+   "cost_latency": 7.1103
+  },
+  {
+   "gold": "2",
+   "pred": "4",
+   "cost_tokens": 274,
+   "cost_latency": 6.0354
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 312,
+   "cost_latency": 7.5088
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 291,
+   "cost_latency": 6.6984
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 291,
+   "cost_latency": 6.6773
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 331,
+   "cost_latency": 8.2374
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 338,
+   "cost_latency": 8.5209
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 399,
+   "cost_latency": 10.9411
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 278,
+   "cost_latency": 6.1718
+  },
+  {
+   "gold": "1",
+   "pred": "5",
+   "cost_tokens": 350,
+   "cost_latency": 8.9832
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 337,
+   "cost_latency": 8.5033
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 360,
+   "cost_latency": 9.3881
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 391,
+   "cost_latency": 10.5573
+  },
+  {
+   "gold": "0",
+   "pred": "4",
+   "cost_tokens": 261,
+   "cost_latency": 5.4879
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 365,
+   "cost_latency": 9.5884
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 317,
+   "cost_latency": 7.7002
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 363,
+   "cost_latency": 9.5227
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 317,
+   "cost_latency": 7.6971
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 344,
+   "cost_latency": 8.7749
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 304,
+   "cost_latency": 7.1957
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 363,
+   "cost_latency": 9.4923
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 283,
+   "cost_latency": 6.2652
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 326,
+   "cost_latency": 7.7718
+  },
+  {
+   "gold": "5",
+   "pred": "0",
+   "cost_tokens": 296,
+   "cost_latency": 6.6731
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 309,
+   "cost_latency": 7.1278
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 297,
+   "cost_latency": 6.6578
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 339,
+   "cost_latency": 8.2963
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 373,
+   "cost_latency": 9.5613
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 375,
+   "cost_latency": 9.6458
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 343,
+   "cost_latency": 8.4298
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 373,
+   "cost_latency": 9.5875
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 371,
+   "cost_latency": 15.6578
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 359,
+   "cost_latency": 17.1324
+  },
+  {
+   "gold": "1",
+   "pred": "5",
+   "cost_tokens": 194,
+   "cost_latency": 5.1949
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 323,
+   "cost_latency": 14.3762
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 364,
+   "cost_latency": 17.1961
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 325,
+   "cost_latency": 14.5069
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 342,
+   "cost_latency": 15.7968
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 341,
+   "cost_latency": 15.4202
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 368,
+   "cost_latency": 17.6066
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 283,
+   "cost_latency": 11.2764
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 315,
+   "cost_latency": 13.6809
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 327,
+   "cost_latency": 14.6768
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 317,
+   "cost_latency": 13.9403
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 362,
+   "cost_latency": 17.0035
+  },
+  {
+   "gold": "1",
+   "pred": "1",
+   "cost_tokens": 323,
+   "cost_latency": 14.3163
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 347,
+   "cost_latency": 15.9304
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 366,
+   "cost_latency": 17.3399
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 334,
+   "cost_latency": 15.0963
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 343,
+   "cost_latency": 15.7367
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 269,
+   "cost_latency": 10.5121
+  },
+  {
+   "gold": "4",
+   "pred": "1",
+   "cost_tokens": 193,
+   "cost_latency": 5.0328
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 279,
+   "cost_latency": 11.1559
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 312,
+   "cost_latency": 13.562
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 387,
+   "cost_latency": 18.9235
+  },
+  {
+   "gold": "2",
+   "pred": "2",
+   "cost_tokens": 396,
+   "cost_latency": 19.4426
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 338,
+   "cost_latency": 15.3893
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 338,
+   "cost_latency": 15.3352
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 296,
+   "cost_latency": 12.3411
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 343,
+   "cost_latency": 15.4023
+  },
+  {
+   "gold": "5",
+   "pred": "5",
+   "cost_tokens": 377,
+   "cost_latency": 18.0406
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 283,
+   "cost_latency": 11.405
+  },
+  {
+   "gold": "0",
+   "pred": "0",
+   "cost_tokens": 348,
+   "cost_latency": 16.0396
+  },
+  {
+   "gold": "4",
+   "pred": "4",
+   "cost_tokens": 340,
+   "cost_latency": 15.5801
+  },
+  {
+   "gold": "1",
+   "pred": "5",
+   "cost_tokens": 194,
+   "cost_latency": 4.9586
+  },
+  {
+   "gold": "3",
+   "pred": "3",
+   "cost_tokens": 380,
+   "cost_latency": 18.2815
+  }
+ ]
+}

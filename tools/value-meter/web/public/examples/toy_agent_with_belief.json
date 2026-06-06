@@ -1,0 +1,1990 @@
+{
+ "classes": [
+  "a",
+  "b",
+  "c"
+ ],
+ "records": [
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 44,
+   "cost_latency": 0.302
+  },
+  {
+   "gold": "b",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 64,
+   "cost_latency": 0.515
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 64,
+   "cost_latency": 0.373
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 57,
+   "cost_latency": 0.489
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 46,
+   "cost_latency": 0.561
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 74,
+   "cost_latency": 0.204
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 67,
+   "cost_latency": 0.49
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 68,
+   "cost_latency": 0.576
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 54,
+   "cost_latency": 0.471
+  },
+  {
+   "gold": "b",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 66,
+   "cost_latency": 0.535
+  },
+  {
+   "gold": "c",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 51,
+   "cost_latency": 0.452
+  },
+  {
+   "gold": "c",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 61,
+   "cost_latency": 0.558
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 67,
+   "cost_latency": 0.403
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 58,
+   "cost_latency": 0.435
+  },
+  {
+   "gold": "b",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 77,
+   "cost_latency": 0.541
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 65,
+   "cost_latency": 0.366
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 63,
+   "cost_latency": 0.235
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 50,
+   "cost_latency": 0.408
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 41,
+   "cost_latency": 0.388
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 79,
+   "cost_latency": 0.437
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 50,
+   "cost_latency": 0.401
+  },
+  {
+   "gold": "a",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 65,
+   "cost_latency": 0.406
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 57,
+   "cost_latency": 0.464
+  },
+  {
+   "gold": "c",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 64,
+   "cost_latency": 0.513
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 48,
+   "cost_latency": 0.407
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 43,
+   "cost_latency": 0.392
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 52,
+   "cost_latency": 0.576
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 62,
+   "cost_latency": 0.366
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 79,
+   "cost_latency": 0.515
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 41,
+   "cost_latency": 0.522
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 77,
+   "cost_latency": 0.272
+  },
+  {
+   "gold": "a",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 42,
+   "cost_latency": 0.537
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 41,
+   "cost_latency": 0.381
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 47,
+   "cost_latency": 0.519
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 44,
+   "cost_latency": 0.267
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 50,
+   "cost_latency": 0.463
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 69,
+   "cost_latency": 0.481
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 41,
+   "cost_latency": 0.325
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 52,
+   "cost_latency": 0.303
+  },
+  {
+   "gold": "b",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 78,
+   "cost_latency": 0.373
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 65,
+   "cost_latency": 0.259
+  },
+  {
+   "gold": "c",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 72,
+   "cost_latency": 0.471
+  },
+  {
+   "gold": "c",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 54,
+   "cost_latency": 0.41
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 76,
+   "cost_latency": 0.521
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 43,
+   "cost_latency": 0.495
+  },
+  {
+   "gold": "a",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 59,
+   "cost_latency": 0.228
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 59,
+   "cost_latency": 0.498
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 48,
+   "cost_latency": 0.203
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 53,
+   "cost_latency": 0.585
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 79,
+   "cost_latency": 0.404
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 46,
+   "cost_latency": 0.282
+  },
+  {
+   "gold": "c",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 71,
+   "cost_latency": 0.242
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 72,
+   "cost_latency": 0.4
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 65,
+   "cost_latency": 0.56
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 60,
+   "cost_latency": 0.524
+  },
+  {
+   "gold": "c",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 67,
+   "cost_latency": 0.285
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 64,
+   "cost_latency": 0.573
+  },
+  {
+   "gold": "b",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 74,
+   "cost_latency": 0.294
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 48,
+   "cost_latency": 0.268
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 61,
+   "cost_latency": 0.44
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 61,
+   "cost_latency": 0.246
+  },
+  {
+   "gold": "a",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 48,
+   "cost_latency": 0.432
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 66,
+   "cost_latency": 0.229
+  },
+  {
+   "gold": "a",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 47,
+   "cost_latency": 0.446
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 75,
+   "cost_latency": 0.289
+  },
+  {
+   "gold": "a",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 58,
+   "cost_latency": 0.426
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 57,
+   "cost_latency": 0.243
+  },
+  {
+   "gold": "a",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 79,
+   "cost_latency": 0.468
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 42,
+   "cost_latency": 0.275
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 47,
+   "cost_latency": 0.38
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 46,
+   "cost_latency": 0.374
+  },
+  {
+   "gold": "b",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 75,
+   "cost_latency": 0.301
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 53,
+   "cost_latency": 0.461
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 58,
+   "cost_latency": 0.491
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 60,
+   "cost_latency": 0.359
+  },
+  {
+   "gold": "a",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 47,
+   "cost_latency": 0.3
+  },
+  {
+   "gold": "c",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 62,
+   "cost_latency": 0.304
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 52,
+   "cost_latency": 0.299
+  },
+  {
+   "gold": "a",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 68,
+   "cost_latency": 0.236
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 54,
+   "cost_latency": 0.356
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 51,
+   "cost_latency": 0.327
+  },
+  {
+   "gold": "c",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 55,
+   "cost_latency": 0.334
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 78,
+   "cost_latency": 0.237
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 55,
+   "cost_latency": 0.361
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 44,
+   "cost_latency": 0.492
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 58,
+   "cost_latency": 0.5
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 49,
+   "cost_latency": 0.24
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 51,
+   "cost_latency": 0.272
+  },
+  {
+   "gold": "a",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 59,
+   "cost_latency": 0.243
+  },
+  {
+   "gold": "c",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 48,
+   "cost_latency": 0.558
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 42,
+   "cost_latency": 0.512
+  },
+  {
+   "gold": "c",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 51,
+   "cost_latency": 0.32
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 55,
+   "cost_latency": 0.301
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 68,
+   "cost_latency": 0.523
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 68,
+   "cost_latency": 0.541
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 61,
+   "cost_latency": 0.269
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 66,
+   "cost_latency": 0.591
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 62,
+   "cost_latency": 0.432
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 56,
+   "cost_latency": 0.593
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 65,
+   "cost_latency": 0.269
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 40,
+   "cost_latency": 0.271
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 68,
+   "cost_latency": 0.572
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 55,
+   "cost_latency": 0.325
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 54,
+   "cost_latency": 0.485
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 57,
+   "cost_latency": 0.589
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 44,
+   "cost_latency": 0.505
+  },
+  {
+   "gold": "c",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 72,
+   "cost_latency": 0.506
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 59,
+   "cost_latency": 0.54
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 69,
+   "cost_latency": 0.438
+  },
+  {
+   "gold": "a",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 51,
+   "cost_latency": 0.262
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 76,
+   "cost_latency": 0.488
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 65,
+   "cost_latency": 0.487
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 50,
+   "cost_latency": 0.418
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 45,
+   "cost_latency": 0.523
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 45,
+   "cost_latency": 0.584
+  },
+  {
+   "gold": "a",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 68,
+   "cost_latency": 0.54
+  },
+  {
+   "gold": "a",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 67,
+   "cost_latency": 0.359
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 79,
+   "cost_latency": 0.564
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 78,
+   "cost_latency": 0.414
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 57,
+   "cost_latency": 0.299
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 52,
+   "cost_latency": 0.411
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 80,
+   "cost_latency": 0.589
+  },
+  {
+   "gold": "a",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 51,
+   "cost_latency": 0.314
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 59,
+   "cost_latency": 0.434
+  },
+  {
+   "gold": "b",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 50,
+   "cost_latency": 0.418
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 47,
+   "cost_latency": 0.508
+  },
+  {
+   "gold": "c",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 58,
+   "cost_latency": 0.524
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 40,
+   "cost_latency": 0.418
+  },
+  {
+   "gold": "c",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 44,
+   "cost_latency": 0.4
+  },
+  {
+   "gold": "c",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 72,
+   "cost_latency": 0.471
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 47,
+   "cost_latency": 0.377
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 74,
+   "cost_latency": 0.36
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 71,
+   "cost_latency": 0.245
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 75,
+   "cost_latency": 0.202
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 72,
+   "cost_latency": 0.28
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 73,
+   "cost_latency": 0.364
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 59,
+   "cost_latency": 0.481
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 73,
+   "cost_latency": 0.279
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 64,
+   "cost_latency": 0.432
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 79,
+   "cost_latency": 0.434
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 44,
+   "cost_latency": 0.397
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 58,
+   "cost_latency": 0.452
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 49,
+   "cost_latency": 0.453
+  },
+  {
+   "gold": "b",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 44,
+   "cost_latency": 0.526
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 56,
+   "cost_latency": 0.519
+  },
+  {
+   "gold": "b",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 49,
+   "cost_latency": 0.385
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 69,
+   "cost_latency": 0.404
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 77,
+   "cost_latency": 0.369
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 68,
+   "cost_latency": 0.208
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 50,
+   "cost_latency": 0.476
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 57,
+   "cost_latency": 0.442
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 55,
+   "cost_latency": 0.554
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 73,
+   "cost_latency": 0.464
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 43,
+   "cost_latency": 0.267
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 75,
+   "cost_latency": 0.308
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 65,
+   "cost_latency": 0.424
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 56,
+   "cost_latency": 0.547
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 56,
+   "cost_latency": 0.586
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 41,
+   "cost_latency": 0.541
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 67,
+   "cost_latency": 0.573
+  },
+  {
+   "gold": "a",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 44,
+   "cost_latency": 0.45
+  },
+  {
+   "gold": "a",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 77,
+   "cost_latency": 0.565
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 56,
+   "cost_latency": 0.384
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 48,
+   "cost_latency": 0.558
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 65,
+   "cost_latency": 0.296
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 59,
+   "cost_latency": 0.227
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 71,
+   "cost_latency": 0.571
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 78,
+   "cost_latency": 0.209
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 71,
+   "cost_latency": 0.482
+  },
+  {
+   "gold": "c",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 61,
+   "cost_latency": 0.465
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 51,
+   "cost_latency": 0.238
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 68,
+   "cost_latency": 0.351
+  },
+  {
+   "gold": "a",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 58,
+   "cost_latency": 0.385
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 68,
+   "cost_latency": 0.486
+  },
+  {
+   "gold": "b",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 47,
+   "cost_latency": 0.564
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 40,
+   "cost_latency": 0.543
+  },
+  {
+   "gold": "b",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 52,
+   "cost_latency": 0.36
+  },
+  {
+   "gold": "c",
+   "pred": "c",
+   "prob": {
+    "a": 0.15,
+    "b": 0.15,
+    "c": 0.7
+   },
+   "cost_tokens": 41,
+   "cost_latency": 0.206
+  },
+  {
+   "gold": "a",
+   "pred": "b",
+   "prob": {
+    "a": 0.15,
+    "b": 0.7,
+    "c": 0.15
+   },
+   "cost_tokens": 76,
+   "cost_latency": 0.352
+  },
+  {
+   "gold": "a",
+   "pred": "a",
+   "prob": {
+    "a": 0.7,
+    "b": 0.15,
+    "c": 0.15
+   },
+   "cost_tokens": 59,
+   "cost_latency": 0.562
+  }
+ ],
+ "note": "a synthetic agent that REPORTS its own belief (prob vector) \u2014 so dissipation is measured against its stated probabilities, not a constructed one. ~75% accurate, well-calibrated."
+}

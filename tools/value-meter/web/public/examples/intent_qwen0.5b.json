@@ -1,0 +1,1453 @@
+{
+ "classes": [
+  "alarm",
+  "timer",
+  "reminder",
+  "calendar",
+  "todo_list",
+  "meeting_schedule"
+ ],
+ "note": "qwen0.5b on a 6-way intent router (CLINC150 slice). A 0.5B model already near the ceiling: reproduces the paper's I=1.4166 nats, out-of-sample \u0394G=1.3077.",
+ "records": [
+  {
+   "gold": "reminder",
+   "pred": "todo_list",
+   "cost_tokens": 151,
+   "cost_latency": 0.2202
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 157,
+   "cost_latency": 0.1952
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 157,
+   "cost_latency": 0.1301
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 156,
+   "cost_latency": 0.1771
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 152,
+   "cost_latency": 0.121
+  },
+  {
+   "gold": "todo_list",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.1098
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 157,
+   "cost_latency": 0.1165
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 149,
+   "cost_latency": 0.1225
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 146,
+   "cost_latency": 0.1327
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 160,
+   "cost_latency": 0.1473
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 151,
+   "cost_latency": 0.1179
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 152,
+   "cost_latency": 0.1436
+  },
+  {
+   "gold": "todo_list",
+   "pred": "reminder",
+   "cost_tokens": 151,
+   "cost_latency": 0.1107
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 151,
+   "cost_latency": 0.1204
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 148,
+   "cost_latency": 0.1474
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1088
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 151,
+   "cost_latency": 0.1102
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 151,
+   "cost_latency": 0.1307
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 151,
+   "cost_latency": 0.1091
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 152,
+   "cost_latency": 0.1199
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 146,
+   "cost_latency": 0.1063
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 148,
+   "cost_latency": 0.1172
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 146,
+   "cost_latency": 0.1088
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 149,
+   "cost_latency": 0.1084
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 155,
+   "cost_latency": 0.1093
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 152,
+   "cost_latency": 0.1096
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 145,
+   "cost_latency": 0.1069
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.108
+  },
+  {
+   "gold": "todo_list",
+   "pred": "reminder",
+   "cost_tokens": 146,
+   "cost_latency": 0.1065
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 148,
+   "cost_latency": 0.1056
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 152,
+   "cost_latency": 0.1093
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 147,
+   "cost_latency": 0.1027
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 151,
+   "cost_latency": 0.1178
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 153,
+   "cost_latency": 0.1087
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 150,
+   "cost_latency": 0.1061
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 150,
+   "cost_latency": 0.1181
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 152,
+   "cost_latency": 0.1193
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1105
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 151,
+   "cost_latency": 0.1185
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 152,
+   "cost_latency": 0.111
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 154,
+   "cost_latency": 0.1099
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 157,
+   "cost_latency": 0.1775
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 152,
+   "cost_latency": 0.1881
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 146,
+   "cost_latency": 0.1172
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "reminder",
+   "cost_tokens": 156,
+   "cost_latency": 0.1074
+  },
+  {
+   "gold": "timer",
+   "pred": "alarm",
+   "cost_tokens": 148,
+   "cost_latency": 0.1078
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 148,
+   "cost_latency": 0.1202
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 156,
+   "cost_latency": 0.1478
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 161,
+   "cost_latency": 0.1807
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 158,
+   "cost_latency": 0.1869
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 147,
+   "cost_latency": 0.1183
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 150,
+   "cost_latency": 0.109
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 156,
+   "cost_latency": 0.1219
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 154,
+   "cost_latency": 0.1476
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 148,
+   "cost_latency": 0.1088
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.108
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 159,
+   "cost_latency": 0.1048
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.1053
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 161,
+   "cost_latency": 0.1056
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 154,
+   "cost_latency": 0.1189
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 153,
+   "cost_latency": 0.1108
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 155,
+   "cost_latency": 0.1094
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 148,
+   "cost_latency": 0.1082
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 150,
+   "cost_latency": 0.1187
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 147,
+   "cost_latency": 0.108
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.1062
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 157,
+   "cost_latency": 0.1785
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 158,
+   "cost_latency": 0.1297
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 152,
+   "cost_latency": 0.1183
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 149,
+   "cost_latency": 0.1082
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 148,
+   "cost_latency": 0.1083
+  },
+  {
+   "gold": "timer",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1083
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 156,
+   "cost_latency": 0.1037
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 146,
+   "cost_latency": 0.1076
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 148,
+   "cost_latency": 0.1235
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 148,
+   "cost_latency": 0.1512
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 148,
+   "cost_latency": 0.1187
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 159,
+   "cost_latency": 0.1783
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 151,
+   "cost_latency": 0.1884
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 149,
+   "cost_latency": 0.1201
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 151,
+   "cost_latency": 0.1091
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 150,
+   "cost_latency": 0.1086
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 148,
+   "cost_latency": 0.1186
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.1075
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 152,
+   "cost_latency": 0.1195
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 153,
+   "cost_latency": 0.1107
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 156,
+   "cost_latency": 0.1056
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 148,
+   "cost_latency": 0.106
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 149,
+   "cost_latency": 0.1188
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 148,
+   "cost_latency": 0.1189
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 148,
+   "cost_latency": 0.119
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "reminder",
+   "cost_tokens": 148,
+   "cost_latency": 0.1098
+  },
+  {
+   "gold": "todo_list",
+   "pred": "reminder",
+   "cost_tokens": 147,
+   "cost_latency": 0.108
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 145,
+   "cost_latency": 0.105
+  },
+  {
+   "gold": "todo_list",
+   "pred": "reminder",
+   "cost_tokens": 148,
+   "cost_latency": 0.107
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 154,
+   "cost_latency": 0.1208
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 149,
+   "cost_latency": 0.1079
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 146,
+   "cost_latency": 0.1051
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 148,
+   "cost_latency": 0.1069
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.108
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 146,
+   "cost_latency": 0.1052
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.1119
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 150,
+   "cost_latency": 0.1184
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 160,
+   "cost_latency": 0.1092
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 154,
+   "cost_latency": 0.1738
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 152,
+   "cost_latency": 0.119
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 149,
+   "cost_latency": 0.1183
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 153,
+   "cost_latency": 0.1096
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 151,
+   "cost_latency": 0.1161
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 149,
+   "cost_latency": 0.117
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 154,
+   "cost_latency": 0.1197
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.1086
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 148,
+   "cost_latency": 0.1192
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.1085
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 146,
+   "cost_latency": 0.1064
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 149,
+   "cost_latency": 0.1193
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1072
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 147,
+   "cost_latency": 0.1062
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 144,
+   "cost_latency": 0.1584
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "reminder",
+   "cost_tokens": 151,
+   "cost_latency": 0.1169
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 148,
+   "cost_latency": 0.1456
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 154,
+   "cost_latency": 0.1225
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 148,
+   "cost_latency": 0.1087
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 148,
+   "cost_latency": 0.1074
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 154,
+   "cost_latency": 0.1085
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 151,
+   "cost_latency": 0.1081
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 162,
+   "cost_latency": 0.1063
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 151,
+   "cost_latency": 0.1075
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.1068
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.1068
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 155,
+   "cost_latency": 0.1116
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 149,
+   "cost_latency": 0.1106
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 149,
+   "cost_latency": 0.1196
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 156,
+   "cost_latency": 0.1223
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 152,
+   "cost_latency": 0.1083
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.1071
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "reminder",
+   "cost_tokens": 151,
+   "cost_latency": 0.109
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "reminder",
+   "cost_tokens": 156,
+   "cost_latency": 0.106
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 156,
+   "cost_latency": 0.1215
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 157,
+   "cost_latency": 0.1179
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 155,
+   "cost_latency": 0.11
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 152,
+   "cost_latency": 0.1405
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 151,
+   "cost_latency": 0.1188
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 155,
+   "cost_latency": 0.12
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 150,
+   "cost_latency": 0.1376
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 146,
+   "cost_latency": 0.1059
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 159,
+   "cost_latency": 0.1767
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 153,
+   "cost_latency": 0.142
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.107
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 154,
+   "cost_latency": 0.177
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 155,
+   "cost_latency": 0.1356
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 151,
+   "cost_latency": 0.1194
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 154,
+   "cost_latency": 0.1782
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 151,
+   "cost_latency": 0.1406
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 150,
+   "cost_latency": 0.1191
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 152,
+   "cost_latency": 0.1074
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 151,
+   "cost_latency": 0.1064
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 155,
+   "cost_latency": 0.177
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 154,
+   "cost_latency": 0.1889
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 154,
+   "cost_latency": 0.1484
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 155,
+   "cost_latency": 0.1095
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 153,
+   "cost_latency": 0.1214
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 149,
+   "cost_latency": 0.1431
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 145,
+   "cost_latency": 0.1091
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 148,
+   "cost_latency": 0.1058
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 148,
+   "cost_latency": 0.1185
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.1083
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 152,
+   "cost_latency": 0.1085
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 154,
+   "cost_latency": 0.108
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 165,
+   "cost_latency": 0.1768
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 150,
+   "cost_latency": 0.1312
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 156,
+   "cost_latency": 0.1789
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1208
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.1075
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.1067
+  },
+  {
+   "gold": "todo_list",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.1088
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 155,
+   "cost_latency": 0.1104
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.107
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 146,
+   "cost_latency": 0.1073
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 162,
+   "cost_latency": 0.1167
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 148,
+   "cost_latency": 0.1187
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 151,
+   "cost_latency": 0.11
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 158,
+   "cost_latency": 0.1773
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 153,
+   "cost_latency": 0.1294
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.1162
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 147,
+   "cost_latency": 0.1078
+  },
+  {
+   "gold": "todo_list",
+   "pred": "reminder",
+   "cost_tokens": 150,
+   "cost_latency": 0.1079
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 147,
+   "cost_latency": 0.117
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 153,
+   "cost_latency": 0.1107
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 162,
+   "cost_latency": 0.1061
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 153,
+   "cost_latency": 0.1115
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 150,
+   "cost_latency": 0.117
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1078
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 146,
+   "cost_latency": 0.1055
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1067
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 149,
+   "cost_latency": 0.1059
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 152,
+   "cost_latency": 0.1112
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 163,
+   "cost_latency": 0.1056
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 151,
+   "cost_latency": 0.1174
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 150,
+   "cost_latency": 0.1102
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 152,
+   "cost_latency": 0.1084
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 164,
+   "cost_latency": 0.1756
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 151,
+   "cost_latency": 0.1181
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 146,
+   "cost_latency": 0.1239
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 153,
+   "cost_latency": 0.1183
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "reminder",
+   "cost_tokens": 154,
+   "cost_latency": 0.111
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1086
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 154,
+   "cost_latency": 0.1101
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 154,
+   "cost_latency": 0.1193
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 163,
+   "cost_latency": 0.118
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 152,
+   "cost_latency": 0.1199
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 147,
+   "cost_latency": 0.1175
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 149,
+   "cost_latency": 0.1072
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 153,
+   "cost_latency": 0.1083
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 151,
+   "cost_latency": 0.1079
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "meeting_schedule",
+   "cost_tokens": 151,
+   "cost_latency": 0.12
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 151,
+   "cost_latency": 0.1093
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 156,
+   "cost_latency": 0.1774
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 155,
+   "cost_latency": 0.203
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 148,
+   "cost_latency": 0.1198
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 146,
+   "cost_latency": 0.1073
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 147,
+   "cost_latency": 0.1128
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 160,
+   "cost_latency": 0.1789
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 152,
+   "cost_latency": 0.1209
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 152,
+   "cost_latency": 0.1194
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 148,
+   "cost_latency": 0.107
+  },
+  {
+   "gold": "timer",
+   "pred": "timer",
+   "cost_tokens": 151,
+   "cost_latency": 0.1083
+  },
+  {
+   "gold": "calendar",
+   "pred": "calendar",
+   "cost_tokens": 158,
+   "cost_latency": 0.1787
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 155,
+   "cost_latency": 0.1216
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1097
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 152,
+   "cost_latency": 0.1076
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 148,
+   "cost_latency": 0.1218
+  },
+  {
+   "gold": "calendar",
+   "pred": "reminder",
+   "cost_tokens": 152,
+   "cost_latency": 0.1079
+  },
+  {
+   "gold": "meeting_schedule",
+   "pred": "reminder",
+   "cost_tokens": 148,
+   "cost_latency": 0.1091
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 153,
+   "cost_latency": 0.1069
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 148,
+   "cost_latency": 0.1059
+  },
+  {
+   "gold": "todo_list",
+   "pred": "todo_list",
+   "cost_tokens": 151,
+   "cost_latency": 0.12
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 149,
+   "cost_latency": 0.1086
+  },
+  {
+   "gold": "alarm",
+   "pred": "alarm",
+   "cost_tokens": 147,
+   "cost_latency": 0.1063
+  },
+  {
+   "gold": "reminder",
+   "pred": "reminder",
+   "cost_tokens": 155,
+   "cost_latency": 0.1096
+  }
+ ]
+}

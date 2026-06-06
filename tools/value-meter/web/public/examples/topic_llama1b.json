@@ -1,0 +1,1451 @@
+{
+ "classes": [
+  "world",
+  "sports",
+  "business",
+  "scitech"
+ ],
+ "note": "llama1b on AG-News topic classification \u2014 a near-chance point: I\u22480.029 nats, barely above the permutation null. Shows what 'no value extracted' looks like.",
+ "records": [
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 151,
+   "cost_latency": 0.3097
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.2166
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 156,
+   "cost_latency": 0.2159
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 138,
+   "cost_latency": 0.1969
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 148,
+   "cost_latency": 0.1892
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 161,
+   "cost_latency": 0.2334
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 264,
+   "cost_latency": 0.3317
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 129,
+   "cost_latency": 0.2172
+  },
+  {
+   "gold": "sports",
+   "pred": "sports",
+   "cost_tokens": 129,
+   "cost_latency": 0.2154
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 147,
+   "cost_latency": 0.2183
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 154,
+   "cost_latency": 0.2193
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 171,
+   "cost_latency": 0.2276
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 154,
+   "cost_latency": 0.2286
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 133,
+   "cost_latency": 0.1989
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 265,
+   "cost_latency": 0.3358
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.2231
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.1923
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 139,
+   "cost_latency": 0.1894
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.1896
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 177,
+   "cost_latency": 0.2178
+  },
+  {
+   "gold": "world",
+   "pred": "?",
+   "cost_tokens": 150,
+   "cost_latency": 0.2474
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 154,
+   "cost_latency": 0.2284
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.2048
+  },
+  {
+   "gold": "world",
+   "pred": "business",
+   "cost_tokens": 122,
+   "cost_latency": 0.1884
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 139,
+   "cost_latency": 0.1969
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 147,
+   "cost_latency": 0.1874
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 147,
+   "cost_latency": 0.2187
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 139,
+   "cost_latency": 0.191
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 154,
+   "cost_latency": 0.2479
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.1996
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 149,
+   "cost_latency": 0.1942
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.1872
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 171,
+   "cost_latency": 0.211
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 138,
+   "cost_latency": 0.1966
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 128,
+   "cost_latency": 0.1845
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 156,
+   "cost_latency": 0.2182
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 119,
+   "cost_latency": 0.1968
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 139,
+   "cost_latency": 0.2203
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 141,
+   "cost_latency": 0.1927
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 137,
+   "cost_latency": 0.1854
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 136,
+   "cost_latency": 0.2071
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 149,
+   "cost_latency": 0.189
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 148,
+   "cost_latency": 0.2162
+  },
+  {
+   "gold": "world",
+   "pred": "business",
+   "cost_tokens": 128,
+   "cost_latency": 0.1888
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 145,
+   "cost_latency": 0.2105
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 147,
+   "cost_latency": 0.1907
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 114,
+   "cost_latency": 0.1856
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 148,
+   "cost_latency": 0.1818
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 119,
+   "cost_latency": 0.1839
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 135,
+   "cost_latency": 0.1871
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 120,
+   "cost_latency": 0.1871
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 130,
+   "cost_latency": 0.1902
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 134,
+   "cost_latency": 0.1861
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 114,
+   "cost_latency": 0.1586
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 145,
+   "cost_latency": 0.1834
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 138,
+   "cost_latency": 0.1849
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 150,
+   "cost_latency": 0.2308
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.2197
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 120,
+   "cost_latency": 0.196
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 119,
+   "cost_latency": 0.1866
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 177,
+   "cost_latency": 0.2266
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 144,
+   "cost_latency": 0.2015
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 134,
+   "cost_latency": 0.1982
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 129,
+   "cost_latency": 0.1892
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.217
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 156,
+   "cost_latency": 0.2168
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.2123
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 192,
+   "cost_latency": 0.2682
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 132,
+   "cost_latency": 0.215
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.2207
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 147,
+   "cost_latency": 0.1906
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 131,
+   "cost_latency": 0.1872
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 203,
+   "cost_latency": 0.2589
+  },
+  {
+   "gold": "world",
+   "pred": "business",
+   "cost_tokens": 123,
+   "cost_latency": 0.2063
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 150,
+   "cost_latency": 0.2189
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 153,
+   "cost_latency": 0.2349
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 134,
+   "cost_latency": 0.2019
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 140,
+   "cost_latency": 0.1858
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 126,
+   "cost_latency": 0.2127
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.1919
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 136,
+   "cost_latency": 0.2153
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 152,
+   "cost_latency": 0.2174
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 113,
+   "cost_latency": 0.1821
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 144,
+   "cost_latency": 0.1804
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 201,
+   "cost_latency": 0.2543
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 166,
+   "cost_latency": 0.2387
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 144,
+   "cost_latency": 0.2189
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 128,
+   "cost_latency": 0.1923
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 154,
+   "cost_latency": 0.2419
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 132,
+   "cost_latency": 0.1976
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 246,
+   "cost_latency": 0.3223
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 158,
+   "cost_latency": 0.2473
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 166,
+   "cost_latency": 0.2299
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 152,
+   "cost_latency": 0.2306
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 259,
+   "cost_latency": 0.3273
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 122,
+   "cost_latency": 0.2154
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 132,
+   "cost_latency": 0.2087
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 154,
+   "cost_latency": 0.2168
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.2083
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 144,
+   "cost_latency": 0.1976
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.1891
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 149,
+   "cost_latency": 0.217
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 152,
+   "cost_latency": 0.2178
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 134,
+   "cost_latency": 0.2163
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 160,
+   "cost_latency": 0.2177
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.215
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 175,
+   "cost_latency": 0.2192
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 157,
+   "cost_latency": 0.2437
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 172,
+   "cost_latency": 0.2471
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 229,
+   "cost_latency": 0.2952
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 133,
+   "cost_latency": 0.2196
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 152,
+   "cost_latency": 0.2205
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 128,
+   "cost_latency": 0.1978
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.1873
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 116,
+   "cost_latency": 0.1578
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 147,
+   "cost_latency": 0.2073
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 115,
+   "cost_latency": 0.1562
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 191,
+   "cost_latency": 0.2413
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 150,
+   "cost_latency": 0.237
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 158,
+   "cost_latency": 0.2265
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 209,
+   "cost_latency": 0.2628
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 116,
+   "cost_latency": 0.1812
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 145,
+   "cost_latency": 0.1807
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 155,
+   "cost_latency": 0.2196
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 121,
+   "cost_latency": 0.1962
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 125,
+   "cost_latency": 0.1852
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 159,
+   "cost_latency": 0.244
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 129,
+   "cost_latency": 0.1989
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 141,
+   "cost_latency": 0.2022
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 131,
+   "cost_latency": 0.1918
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.2155
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 147,
+   "cost_latency": 0.1895
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 151,
+   "cost_latency": 0.2444
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.199
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 153,
+   "cost_latency": 0.23
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 134,
+   "cost_latency": 0.201
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 151,
+   "cost_latency": 0.2287
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 145,
+   "cost_latency": 0.1978
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 134,
+   "cost_latency": 0.2065
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 137,
+   "cost_latency": 0.1895
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 156,
+   "cost_latency": 0.2425
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 160,
+   "cost_latency": 0.2289
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 148,
+   "cost_latency": 0.1997
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 112,
+   "cost_latency": 0.1878
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 111,
+   "cost_latency": 0.1812
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.2194
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 130,
+   "cost_latency": 0.2173
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 152,
+   "cost_latency": 0.218
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 138,
+   "cost_latency": 0.2132
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 129,
+   "cost_latency": 0.188
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 138,
+   "cost_latency": 0.2153
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 120,
+   "cost_latency": 0.206
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 150,
+   "cost_latency": 0.2176
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.2004
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 131,
+   "cost_latency": 0.2049
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 126,
+   "cost_latency": 0.1867
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 198,
+   "cost_latency": 0.2839
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 140,
+   "cost_latency": 0.2138
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 123,
+   "cost_latency": 0.1846
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 156,
+   "cost_latency": 0.2177
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 144,
+   "cost_latency": 0.2171
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 118,
+   "cost_latency": 0.1841
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 131,
+   "cost_latency": 0.2128
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 148,
+   "cost_latency": 0.1881
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 176,
+   "cost_latency": 0.2464
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 155,
+   "cost_latency": 0.2326
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 176,
+   "cost_latency": 0.2339
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 124,
+   "cost_latency": 0.2005
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 163,
+   "cost_latency": 0.229
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 129,
+   "cost_latency": 0.1993
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 165,
+   "cost_latency": 0.2363
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 149,
+   "cost_latency": 0.1988
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.1993
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 116,
+   "cost_latency": 0.1588
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 124,
+   "cost_latency": 0.1783
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 149,
+   "cost_latency": 0.186
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 161,
+   "cost_latency": 0.216
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 133,
+   "cost_latency": 0.2034
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.1865
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 122,
+   "cost_latency": 0.2188
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 148,
+   "cost_latency": 0.1918
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 144,
+   "cost_latency": 0.2121
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 163,
+   "cost_latency": 0.2171
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.2174
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 131,
+   "cost_latency": 0.1902
+  },
+  {
+   "gold": "world",
+   "pred": "business",
+   "cost_tokens": 114,
+   "cost_latency": 0.1785
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 127,
+   "cost_latency": 0.1772
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 119,
+   "cost_latency": 0.186
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 182,
+   "cost_latency": 0.2486
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 148,
+   "cost_latency": 0.2101
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 145,
+   "cost_latency": 0.1877
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 129,
+   "cost_latency": 0.1862
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 145,
+   "cost_latency": 0.2057
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 138,
+   "cost_latency": 0.1879
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 183,
+   "cost_latency": 0.2774
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 149,
+   "cost_latency": 0.2083
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 150,
+   "cost_latency": 0.2169
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 148,
+   "cost_latency": 0.1988
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.2089
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 135,
+   "cost_latency": 0.1913
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 145,
+   "cost_latency": 0.2109
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.1899
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 144,
+   "cost_latency": 0.2092
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 139,
+   "cost_latency": 0.1908
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 116,
+   "cost_latency": 0.1871
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 179,
+   "cost_latency": 0.2115
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 145,
+   "cost_latency": 0.22
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 132,
+   "cost_latency": 0.1879
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 135,
+   "cost_latency": 0.2099
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 127,
+   "cost_latency": 0.1848
+  },
+  {
+   "gold": "business",
+   "pred": "business",
+   "cost_tokens": 131,
+   "cost_latency": 0.2144
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.1877
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 157,
+   "cost_latency": 0.2513
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 163,
+   "cost_latency": 0.2311
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 157,
+   "cost_latency": 0.2275
+  },
+  {
+   "gold": "scitech",
+   "pred": "world",
+   "cost_tokens": 134,
+   "cost_latency": 0.1999
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.2004
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 125,
+   "cost_latency": 0.1859
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 185,
+   "cost_latency": 0.2482
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 140,
+   "cost_latency": 0.2126
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 176,
+   "cost_latency": 0.2205
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 146,
+   "cost_latency": 0.1987
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 131,
+   "cost_latency": 0.1867
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 141,
+   "cost_latency": 0.1866
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 115,
+   "cost_latency": 0.1585
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 144,
+   "cost_latency": 0.1819
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 169,
+   "cost_latency": 0.2185
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 132,
+   "cost_latency": 0.2216
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 151,
+   "cost_latency": 0.2177
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 139,
+   "cost_latency": 0.2041
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 158,
+   "cost_latency": 0.2165
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.1995
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 147,
+   "cost_latency": 0.1892
+  },
+  {
+   "gold": "scitech",
+   "pred": "business",
+   "cost_tokens": 118,
+   "cost_latency": 0.186
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 149,
+   "cost_latency": 0.2117
+  },
+  {
+   "gold": "world",
+   "pred": "world",
+   "cost_tokens": 142,
+   "cost_latency": 0.1898
+  },
+  {
+   "gold": "business",
+   "pred": "world",
+   "cost_tokens": 151,
+   "cost_latency": 0.2464
+  },
+  {
+   "gold": "sports",
+   "pred": "business",
+   "cost_tokens": 128,
+   "cost_latency": 0.1986
+  },
+  {
+   "gold": "world",
+   "pred": "business",
+   "cost_tokens": 120,
+   "cost_latency": 0.1962
+  },
+  {
+   "gold": "sports",
+   "pred": "world",
+   "cost_tokens": 143,
+   "cost_latency": 0.2598
+  }
+ ]
+}

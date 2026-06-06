@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Value-Meter — measure any agent's value profile</title>
+<meta name="description" content="Measure any AI agent's value-generation on a task, in nats, grounded in a published information-theoretic theory of value. Runs the real tool in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">grounded in a published theory · <a href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">preprint ↗</a></div>
+    <h1>Agent <span class="grad">Value-Meter</span></h1>
+    <p class="tag">Measure <em>any</em> agent's <strong>value profile</strong> on a task — how much value it
+      <em>can</em> generate, how much it <em>actually</em> generates out-of-sample, how much it
+      <em>dissipates</em>, and what it buys <em>per unit of compute</em>. All in nats, with nulls and
+      confidence intervals, and the honesty caveats printed in the output.</p>
+    <p class="sub">This page runs the <strong>real tool</strong> — the published <code>value_meter.py</code> —
+      in your browser via Pyodide. No server, no upload, no API key: your records never leave the page.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Run it</h2>
+      <div id="status" class="status">booting Python runtime…</div>
+    </div>
+
+    <div class="examples">
+      <span class="examples-label">Load an example:</span>
+      <button class="chip" data-ex="examples/intent_qwen0.5b.json">qwen0.5b · intent</button>
+      <button class="chip" data-ex="examples/seqstate_llama3b.json">llama3b · seqstate</button>
+      <button class="chip" data-ex="examples/topic_llama1b.json">llama1b · topic (near-chance)</button>
+      <button class="chip" data-ex="examples/toy_agent_with_belief.json">toy · with stated belief</button>
+    </div>
+    <p id="note" class="note"></p>
+
+    <textarea id="input" spellcheck="false" placeholder='Paste records JSON here, e.g.
+{
+  "classes": ["a", "b", "c"],
+  "records": [
+    {"gold": "a", "pred": "a", "cost_tokens": 62, "cost_latency": 0.41},
+    {"gold": "b", "pred": "c", "cost_tokens": 58}
+  ]
+}'></textarea>
+
+    <div class="controls">
+      <button id="run" class="btn-primary" disabled>Measure value profile</button>
+      <label class="split">fit split
+        <input id="split" type="number" min="0.1" max="0.9" step="0.1" value="0.5">
+      </label>
+      <span id="err" class="err"></span>
+    </div>
+  </section>
+
+  <section id="result" class="result hidden"></section>
+
+  <section class="explain">
+    <h2>What it measures</h2>
+    <div class="cards-doc">
+      <div class="card-doc">
+        <h3>1 · Value ceiling — I(X;Y)</h3>
+        <p>The mutual information between the correct action <code>X</code> and the agent's choice
+          <code>Y</code>: the most value this agent could realize on this task. Reported against a
+          <strong>permutation null</strong> so it's above-chance, not raw. Plus <code>H(X)</code> and
+          <strong>saturation</strong> <code>I/H(X)</code> — how close to the ceiling it already is.</p>
+      </div>
+      <div class="card-doc">
+        <h3>2 · Realized rate — ΔG</h3>
+        <p>Two numbers, clearly labelled. <strong>In-sample <code>ΔG = I</code></strong> is an arithmetic
+          identity (definitional, no empirical weight). The <strong>out-of-sample</strong> number —
+          calibrate the posterior on a fit split, score on a holdout — is the empirical one, with a
+          <strong>bootstrap CI</strong>.</p>
+      </div>
+      <div class="card-doc">
+        <h3>3 · Dissipation — D(q‖p)</h3>
+        <p>The Second-Law term: value lost to miscalibration. If your records carry a <code>prob</code>
+          (the agent's stated belief), it's measured against that. Otherwise a <strong>constructed</strong>
+          over-confident belief is used — and the output says which.</p>
+      </div>
+      <div class="card-doc">
+        <h3>4 · Value per compute</h3>
+        <p><code>I / tokens</code> (primary, load-free) and <code>I / median-latency</code> (secondary;
+          median is load-robust). What each unit of compute actually buys in value.</p>
+      </div>
+    </div>
+
+    <div class="caveats-box">
+      <h3>The caveats are the instrument</h3>
+      <p>The meter <strong>measures</strong>; it does not call an agent good or bad, and makes no
+        benchmark-beating claim. Every run carries these:</p>
+      <ul>
+        <li><strong>Task-relative.</strong> A per-(agent, task) profile, not a universal agent score.</li>
+        <li><strong>In-sample ΔG = I is definitional.</strong> The empirical content is the out-of-sample number and its CI.</li>
+        <li><strong>Dissipation is of a stated <em>or constructed</em> belief</strong> — the output says which.</li>
+        <li><strong>Intervals, not point estimates.</strong> Read the null and the bootstrap CI.</li>
+        <li><strong>Single-agent scope only.</strong> No multi-agent coordination/governance (that layer is unvalidated).</li>
+      </ul>
+    </div>
+
+    <h2>Run it on your own agent</h2>
+    <p>For each task item, log the correct answer and your agent's answer (plus tokens/latency if you have
+      them). Dump them as records JSON and paste above — or run it from the command line:</p>
+<pre class="code">cd tools/value-meter
+python3 -m value_meter your_run.json          # human-readable profile
+python3 -m value_meter your_run.json --json    # machine-readable</pre>
+    <p>There is no model dependency — it works on any agent's recorded outputs. The information-theoretic
+      primitives are reused from the value theory's reference implementation, and a self-test reproduces the
+      paper's published numbers exactly on the cached runs.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Agent Value-Meter — the most direct use of the value theory.
+    Author: <strong>Cheng Qian</strong> · <a href="https://zenodo.org/records/20530824" target="_blank" rel="noopener">preprint</a> ·
+    runs entirely client-side (Pyodide). Your data never leaves the browser.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
