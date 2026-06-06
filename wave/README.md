@@ -11,7 +11,7 @@
 > economy. What remains unproven is the one thing that would make it science rather
 > than internal consistency: a measurement on a **real** agent population or market.
 > Until then this is suggestive + derived, **not** validated — and it stays out of the
-> core preprint (Zenodo 10.5281/zenodo.20487042).
+> core preprint (Zenodo concept DOI 10.5281/zenodo.20487041; latest published record v3).
 >
 > Canonical sources (this is a digest of them):
 > [`docs/08-field-theory-of-value.md`](../docs/08-field-theory-of-value.md) (construction),
