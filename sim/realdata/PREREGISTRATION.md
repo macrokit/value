@@ -23,9 +23,9 @@ predictions, instantiated in any money-market, **collapse into textbook economic
 - "transfer only when `V_j − V_i > f`" → **arbitrage-with-transaction-cost**;
 - "price equalizes across venues" → the **law of one price**;
 - "a price emerges that coordinates incomparable holders" → **Arrow–Debreu general equilibrium** (and the
-  paper's own red-team A4 already concedes doc 03 is "GE repainted");
+  paper's own adversarial review already concedes doc 03 is "GE repainted");
 - "shadow price `λ_a = K_a/E_a`, resource flows low-`λ`→high-`λ`" → **log-utility / Kelly** (the very "just
-  Kelly" critique the project is trying to escape; red-team A2 concedes the free-energy substrate is currently
+  Kelly" critique the project is trying to escape; the adversarial review concedes the free-energy substrate is currently
   decorative, so `λ = K/E` cannot be distinguished from a preference-based price on observable data).
 
 Confirming any of those proves **nothing distinctively value**. This pre-registration therefore commits, before
@@ -58,7 +58,7 @@ ceiling** (doc 04 §2), in its *exact, region* form — not the scalar:
 > **redundant perception buys zero marginal collective throughput**: collective growth saturates at
 > `I(X;Y_{1:m})`, which sits *below* `Σ_a I(X;Y_a)` by exactly the conditional redundancy
 > `Σ` of `I(Y_a;Y_b\mid X)` terms. Standard finance has no `H(X)`-denominated collective ceiling and no
-> cut-set region; this is the prediction the handoff and red-team A7 both single out as the honest candidate
+> cut-set region; this is the prediction the handoff and the adversarial review both single out as the honest candidate
 > for a *novel, surprising, quantitative* claim.
 
 ## 2. The standard-economics null P★ must beat (frozen, explicit)

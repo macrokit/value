@@ -13,7 +13,7 @@
 A confirmation only counts if it is **distinctively value** — something Kelly / information theory / decision
 theory cannot produce. The cross-frame flow predictions fail that bar by inspection: instantiated in any
 money-market they *are* arbitrage, the law of one price, Arrow–Debreu equilibrium, and log-utility shadow
-prices (`λ = K/E`). The project's own red-team already concedes this (A4: doc 03 is "GE repainted"; A2: the
+prices (`λ = K/E`). The project's own adversarial review already concedes this (doc 03 is "GE repainted"; the
 free-energy substrate that would distinguish `λ = K/E` from a preference price is "decorative"). So the first
 and hardest job was not to find data — it was to **isolate a prediction that diverges from standard theory at
 all**, then ask whether *that* one is measurable.
@@ -29,7 +29,7 @@ The distinctive content is **not** "you can't grow faster than `H(X)`" as a slog
 **all-subsets cut-set shape** (the multiple-access region), and (ii) its corollary that **redundant perception
 buys zero marginal collective throughput**: collective growth saturates at `I(X;Y_{1:m})`, which lies *below*
 `Σ_a I(X;Y_a)` by the measured redundancy `Σ I(Y_a;Y_b\mid X)`. Standard finance has **no `H(X)`-denominated
-collective ceiling and no cut-set region.** This is the prediction the handoff and red-team A7 both name as the
+collective ceiling and no cut-set region.** This is the prediction the handoff and the adversarial review both name as the
 honest candidate for a novel, quantitative claim.
 
 It must beat a named null on the same data (prereg §2): **Grinold breadth** (saturation level a free parameter,

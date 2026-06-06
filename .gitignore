@@ -15,3 +15,10 @@ PATH-TO-GREAT.md
 HANDOFF-dissemination.md
 HANDOFF-cross-frame.md
 HANDOFF-value-meter.md
+
+# Internal "strongest case against" doc — kept local, not for the public repo
+docs/red-team.md
+
+# Session/process material and run logs — local only
+docs/prompts.txt
+*.log

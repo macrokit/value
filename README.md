@@ -2,16 +2,25 @@
 
 *A mathematical theory of value — built the way Shannon built information.*
 
-This is a private research repository. It develops one bet to its consequences:
+This is the research repository behind the preprint *A Mathematical Theory of Value*
+([Zenodo, concept DOI 10.5281/zenodo.20487041](https://doi.org/10.5281/zenodo.20487041); byline Cheng Qian).
+It develops one bet to its consequences:
 
-> **Value is a real, lawful quantity** — in the same category as matter, energy, and information — currently
+> **Value is a lawful, structural quantity** — in the same category as information — currently
 > left undefined only because, like information before 1948, it is confused with its semantic clothing
-> (morality, price, preference). Strip the clothing and a structural quantity remains, with measures, limits,
-> and conservation laws. The end goal is concrete: a quantity precise enough to **govern populations of
-> separated AI individuals.**
+> (morality, price, preference). Strip the clothing and a structural quantity remains, with a measure, a
+> capacity limit, and an exact accounting of value created versus dissipated. The end goal is concrete: a
+> quantity precise enough to **govern populations of separated AI individuals.**
 
 The motivating premise: *in the near future, all AI agents are driven by values.* If so, a theory of value is
 not philosophy — it is the **control theory for agent populations.**
+
+> **What is and isn't new (up front).** None of the underlying mechanisms is individually new: the single-agent
+> core is *generalized Kelly* (J. L. Kelly, 1956) — the capacity theorem `ΔG ≤ I(X;Y)` and the fleet's
+> Kelly-portfolio operating point are Kelly/Cover results re-read for an arbitrary scarce resource. The
+> contribution is their **unification under one substrate-grounded quantity**, the cross-frame/price layer, and
+> the **is/ought asymmetry** — beliefs have a target the world supplies, goals do not — from which alignment
+> falls out as a control-stability condition. Claims are scoped to match; the honesty is deliberate.
 
 ## The method (copied from Shannon, deliberately)
 
@@ -37,7 +46,7 @@ it forces the theory to make the frame explicit.
 | [`03`](docs/03-cross-frame-value.md) | Cross-frame / multi-agent | **Value is frame-relative; price is frame-independent.** Exchange via shadow price `λ=K/E`; invariant = Fisher–Rao metric (Čencov); alignment `cos θ` sets positive/negative-sum |
 | [`04`](docs/04-multi-agent-capacity-region.md) | Fleet governance | **Collective value-throughput ≤ H(X)** — the world's entropy caps the whole fleet; region shaped by alignment; operating point set by price |
 | [`05`](docs/05-dynamics.md) | The equations of motion | **Learning = value-recovery, dissipation = regret**; natural-gradient (Fisher) belief flow, tâtonnement price flow, control+selection goal flow; alignment = a stability condition; a moving world forbids zero dissipation |
-| [`06`](docs/06-real-agent-test.md) | **Real-agent test** | Four live LLMs obey the laws on their own outputs: `I(X;Y)` tracks realized **capability not size** (**r=0.99**; a cross-family 8B, bigger-but-weaker, lands at lower `I`); `ΔG`∝`I(X;Y)`; over-confidence dissipates value (weakest → negative growth); diversity > redundancy; **pricing beats pooling and wins under a compute budget — but no demon on correlated agents** (honest negative) |
+| [`06`](docs/06-real-agent-test.md) | **Real-agent test** (v1, n=4) | Four live LLMs obey the laws on their own outputs: `I(X;Y)` tracks realized **capability not size** (a cross-family 8B, bigger-but-weaker, lands at lower `I`); `ΔG`∝`I(X;Y)`; over-confidence dissipates value (weakest → negative growth); diversity > redundancy; **pricing beats pooling and wins under a compute budget — but no demon on correlated agents** (honest negative). Generalized in `09`/`14`. |
 | [`07`](docs/07-alignment-stability.md) | Alignment theorem | Coupled control+selection flow solved: residual misalignment `= ‖Vg‖/γ`; stable iff `γ > λ_max(∂(Vg)/∂k̄)`; **incentive design (`g→0`) beats brute-force control (`↑γ`)** |
 | [`08`](docs/08-field-theory-of-value.md) | **Field theory (speculative)** | Continuum limit: value as a field; **demand-shocks are waves** (telegrapher's eq, dispersion crossover); collective goals are a **phase transition** (active matter / Toner–Tu); is/ought = **beliefs massive, goals Goldstone**. A research program, not a result — §9 is blunt about it. |
 | [`09`](docs/09-v2-empirics.md) | **v2 empirics (pre-registered)** | Scale-up to **3 domains × 10 models** with 95% CIs: `I(X;Y)` tracks capability at **ρ=0.977** (R1 generalizes); over-confidence dissipates in every domain (R2 generalizes); value-price routing **beats naive + cost-blind hand-tuned under a compute budget** (ties under tokens, loses to cost-aware) — pricing = cost-awareness derived, scoped honestly |
@@ -54,13 +63,14 @@ V   = Σ kᵢ ln eᵢ                  the measure            (doc 01)
 G   = D(q‖r) − D(q‖p)             available − dissipated  (doc 02)
 ```
 
-Two structural facts give confidence the abstraction is real, not decorative:
+Two structural facts give some confidence the abstraction is real, not decorative:
 
-1. **The logarithm is over-determined** — forced independently by diminishing marginal value (doc 01) *and*
-   by multiplicative compounding dynamics (doc 02). Fundamental quantities are over-determined like that.
-2. **Shannon's own quantities reappear unbidden** — entropy `H` as a value-dissipation penalty (doc 01), KL
-   divergence `D` as available-minus-dissipated value (doc 02), mutual information `I` as the value ceiling
-   (doc 02), the Fisher metric as the cross-frame invariant (doc 03). The bridge is load-bearing.
+1. **The logarithm is over-determined** — forced independently by a scale-invariance axiom (doc 01) *and*
+   by multiplicative compounding dynamics (doc 02), with no shared premises. The over-determination is the
+   structural signal, not a proof of fundamentality.
+2. **Shannon's quantities recur** — entropy `H` as a value-dissipation penalty (doc 01), KL divergence `D`
+   as available-minus-dissipated value (doc 02), mutual information `I` as the value ceiling (doc 02), and the
+   Fisher metric as the cross-frame invariant (doc 03). The information bridge is load-bearing, not decorative.
 
 ## Why this serves "governing separated AI individuals"
 
@@ -94,9 +104,10 @@ are built from the distributions the formulas assume), so the next step is **rea
 measures the value quantities from their *actual outputs* (`python3 sim/real/experiments_real.py`; full write-up
 in [`docs/06`](docs/06-real-agent-test.md)):
 
-- **R1** `I(X;Y)` tracks realized **capability, not parameter count** (**Pearson r = 0.99** vs accuracy): the
+- **R1** `I(X;Y)` tracks realized **capability, not parameter count** (here `r ≈ 0.99` vs accuracy on just
+  four models — small-`n`, generalized below to **Spearman ρ = 0.977 over 30 model×domain points**): the
   cross-family 8B is *bigger yet weaker* than the 7B and its `I` lands lower accordingly. Out-of-sample `ΔG`
-  tracks `I` at r = 0.99 — value-throughput is information-throughput, on real behavior.
+  tracks `I` — value-throughput is information-throughput, on real behavior.
 - **R2** over-confidence is dissipation in nats, *shrinking* with capability (4.17 → 0.69 over the qwen ladder);
   the least-capable models' confident error drives realized growth **negative**.
 - **R3** the cheapest model delivers the most `I(X;Y)` **per second of compute** (0.74 vs 0.30 nats/s).
@@ -150,7 +161,7 @@ assumptions.
 `00` (framing) → `01` (the measure) → `02` (the limit) → `03` (many agents) → `04` (the fleet) → `05`
 (dynamics) → `06` (the real-agent test) → `07` (the alignment theorem) → `08` (the field-theory frontier).
 Each builds on the last; each is self-contained enough to skim from its headline box. Docs 01–04 are the
-**statics** (conservation laws, equilibria); `05` and `07` are the **dynamics** (equations of motion + the
+**statics** (the measure, the capacity bound, equilibria); `05` and `07` are the **dynamics** (equations of motion + the
 alignment-stability theorem); `06` is the **evidence** (live LLMs measured against the laws); `08` is the
 **speculative frontier** (a continuum/field-theory extension — read its §9 caveats; a research program, not a
 result). Together they form a thermodynamics of value, with a real-agent test. `docs/related-work.md` situates

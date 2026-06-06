@@ -38,7 +38,7 @@ does not cover, with measured (not weak-model-elicited) quantities.
   arbitrage / law-of-one-price / GE-repainted (trivial). The only divergent-from-Kelly prediction — the cut-set
   ceiling `Σ_{a∈S} G_a ≤ I(X;Y_S) ≤ H(X)` — lives in the *coupled-but-separate* multi-agent regime that
   observational data never exposes (only the degenerate uncoupled / fully-pooled corners; forecasting makes it a
-  data-processing tautology). Sharpens red-team A7 from "untested" to a precise structural claim, and specifies
+  data-processing tautology). Sharpens the project's own adversarial-review concern from "untested" to a precise structural claim, and specifies
   the **only resolving route: a controlled multi-agent experiment with counterfactual sub-coalition throughputs
   + varied perception overlap.** That is the LLM-agent route — gated on a **stronger agent instrument** than
   small LLMs (the ceiling that sank Lever 1).
