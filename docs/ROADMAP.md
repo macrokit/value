@@ -139,6 +139,26 @@ governance mapping. Thread closed; no `docs/17` written.
   compounding route, so scale-invariance is no longer load-bearing) — so lower priority. A first-principles
   argument for why value has no privileged scale would still harden the foundation.
 
+### ⊕ Two future-directions from the GPT-5.5 review (2026-06-07) — captured, not yet acted on
+An external review independently converged on the audited position (it reached "this is a theory of
+goal-directed agency, not value" and "the frame split is the most original part" on its own). It surfaced two
+ideas worth keeping:
+- [ ] **Reframe the scope/pitch → "a mathematical theory of goal-directed agency under resource constraints."**
+  Strategic, not a rename of the artifact: lead the *positioning* (and possibly the title) with this rather than
+  "theory of value." It is more defensible and more publishable, and it matches the honest scoping
+  (`docs/FAQ.md`: value is relational, requires a goal-having agent). Weigh for the dissemination framing.
+- [ ] **Candidate alternative grounding: value ≈ increase in *attainable futures* (option value), not exergy.**
+  The reviewer's one substantive technical criticism: a theorem / proof / standard has value not proportional to
+  joules spent but to the reachable state-space it opens; exergy is the most vulnerable anchor. **Honest caveat:
+  "increase in attainable futures" is essentially *empowerment* (mutual information between actions and reachable
+  futures; Klyubin/Polani — already flagged as a known neighbor in pass 2).** So this is a reframing of the
+  *substrate*, not an escape from anticipation — but it may be a more defensible grounding than exergy for
+  non-physical value. Probe only as a deliberate foundational revision; pre-check against empowerment/option-value
+  first (same discipline as the goal-floor pre-check).
+- *(Note: the review's enthusiasm for the is/ought asymmetry and the alignment dynamical system as novel is
+  behind this audit — both are conceded in v4 (A&M 2018; classical control). Do NOT re-inflate them on the
+  strength of the review.)*
+
 ## Standing discipline (applies to every item above)
 Pre-register before fitting; keep pre-registered vs exploratory strictly separate; report negatives as results;
 no instrument-fishing (no escalating model size / forcing hardware to manufacture a positive); the publish gate
