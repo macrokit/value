@@ -1,7 +1,7 @@
 # Agent Value-Meter
 
 Measure **any agent's value profile** on a task — grounded in a published
-information-theoretic theory of value ([preprint](https://zenodo.org/records/20530824)).
+information-theoretic theory of value ([preprint](https://doi.org/10.5281/zenodo.20487041)).
 
 Give it an agent's recorded outputs versus ground truth (and, optionally, per-item
 cost), and it returns — all in **nats** — how much value the agent *can* generate on

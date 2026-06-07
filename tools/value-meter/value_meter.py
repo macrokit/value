@@ -1,7 +1,7 @@
 """
 value_meter — measure any agent's *value profile* on a task (nats).
 
-The most direct way to *use* the value theory (preprint: zenodo.org/records/20530824):
+The most direct way to *use* the value theory (preprint: doi.org/10.5281/zenodo.20487041):
 give it an agent's recorded outputs vs ground truth and it returns a principled,
 information-theoretic profile of how much value the agent generates, how much it
 dissipates, and how much value it buys per unit of compute — with nulls, CIs, and

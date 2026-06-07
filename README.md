@@ -3,7 +3,7 @@
 *A mathematical theory of value — built the way Shannon built information.*
 
 This is the research repository behind the preprint *A Mathematical Theory of Value*
-([Zenodo record v3](https://zenodo.org/records/20530824) · concept DOI
+([Zenodo (latest version)](https://doi.org/10.5281/zenodo.20487041) · concept DOI
 [10.5281/zenodo.20487041](https://doi.org/10.5281/zenodo.20487041), always resolves to the latest version ·
 byline Cheng Qian). It develops one bet to its consequences:
 
