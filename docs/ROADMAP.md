@@ -172,6 +172,33 @@ governance mapping. Thread closed; no `docs/17` written.
   compounding route, so scale-invariance is no longer load-bearing) — so lower priority. A first-principles
   argument for why value has no privileged scale would still harden the foundation.
 
+### ⊕ The Maxwell program — concrete path to the continuation gate (2026-06-10)
+The v5 paper names the decisive prediction (the "displacement-current candidate"): for a **coupled** fleet,
+(i) the capacity-region structure on jointly-achievable growth vectors under varied perception overlap, and
+(ii) the `‖Vg‖/γ` residual scaling on real populations. The path, cheapest-first — and note the correctness
+audit *clarified* the experiment: the sum-form was false precisely because the base model lacked coupling, so
+the experiment must **implement the payout coupling explicitly** (shared bankroll or parimutuel) and measure
+the region. Standing guardrails apply at every stage: pre-register before any run; report negatives as
+verdicts; no instrument-fishing for positives.
+- [ ] **Stage 0 — synthetic pilot of the COUPLED fleet (cheap, runnable now).** Extend `sim/` with an explicit
+  payout-coupled fleet (one shared bankroll betting fused posteriors; and/or parimutuel odds), vary perception
+  overlap, measure counterfactual sub-coalition throughputs, and check the predicted region structure. This
+  validates the *experimental design* and the corrected theory's coupled-regime predictions before any real
+  agents — and is the first test of prediction (i) in any form.
+- [ ] **Stage 1 — the `‖Vg‖/γ` redo (feasible NOW — design-blocked, not instrument-blocked).** Doc 13's own
+  verdict says the fix is the *design*, not bigger models: de-saturated continuous/large-K goal space, larger
+  `δ`, more seeds. Expected lean-negative (g-exponent ≈ 0 last time) — run it for a **definitive verdict**: a
+  clean negative honestly retires half the displacement current per the paper's own continuation-gate language
+  (itself a publishable, decision-grade result); a positive is half the discovery.
+- [ ] **Stage 2 — the real Maxwell test (the stronger-agent instrument now exists commercially).** The
+  convergence finding's blocker was "agents capable enough to play the value game" — small local models failed.
+  Frontier-model agents via API plausibly clear that bar today. The experiment: a payout-coupled multi-agent
+  economy (Stage-0 design), counterfactual sub-coalition throughputs, varied perception overlap, frontier
+  agents, **pre-registered before the first token**. Real costs (API spend, careful design) — budget and
+  pre-registration first. Decision rule is already printed in the paper: predictions pass → the unification
+  earns the stronger word; fail/CAP → the distinctively-unified layer retires, and the cleanly-falsified
+  program is itself the contribution.
+
 ### ⊕ Two future-directions from the GPT-5.5 review (2026-06-07) — captured, not yet acted on
 An external review independently converged on the audited position (it reached "this is a theory of
 goal-directed agency, not value" and "the frame split is the most original part" on its own). It surfaced two
