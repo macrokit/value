@@ -15,9 +15,10 @@ yielding a utility unique up to positive affine transformation. The logarithmic 
 Weber–Fechner and Gossen. We do not claim the functional form as novel. Our departure is threefold: we
 *derive* it from a scale-invariance axiom on a physical resource rather than positing it as psychology; we
 ground it in a substrate (free energy) that supplies a unit and a cross-frame exchange rate, which expected
-utility explicitly lacks (its utils are not interpersonally comparable); and we show the same form is forced a
-*second* time by multiplicative compounding (Peters' ergodicity-economics argument, 2019), making the logarithm
-over-determined rather than a modeling choice.
+utility explicitly lacks (its utils are not interpersonally comparable); and we show the same form is recovered a
+*second* time by multiplicative compounding (Peters' ergodicity-economics argument, 2019) — noting honestly
+that the two routes are kin (scale-invariance is compounding's static shadow), so the agreement is a
+consistency check rather than independent over-determination.
 
 ## Information rate, log-optimal growth, and portfolio theory
 

@@ -27,11 +27,16 @@ unit of effective progress. The vector `k = (k₁,…,kₙ)` **is the agent-fram
 The budget `E` is frame-independent (the cross-frame invariant of [`00`](00-thesis-seed.md) §3); `k` is what
 varies between agents.
 
-## 2. Two independent confirmations of the logarithmic form
+## 2. Two confirmations of the logarithmic form — kin, not independent
 
-The form `V(e) = Σᵢ kᵢ ln eᵢ` is forced by two structurally different arguments that share no premises.
-Their agreement — the same logarithm reached from opposite directions — is the signal that the form is
-a real structural law rather than a modeling choice.
+The form `V(e) = Σᵢ kᵢ ln eᵢ` is reached by two structurally different arguments, one static and one dynamic.
+**Honesty note (2026-06-07, after external review):** an earlier version called these "independent, sharing no
+premises." That overstates. Axiom A3 (scale-invariant proportional increments) is the *static shadow* of
+multiplicative compounding — "equal multiplicative increments yield equal value increments" already encodes the
+logarithm, as §3's proof makes visible (a parallel *additive* axiom would force a linear `v` by the identical
+Cauchy argument). So the two routes share their load-bearing premise in static vs dynamic form, and their
+agreement is a **consistency check** on the functional form — evidence the choice is coherent, not an
+independent over-determination.
 
 ### Confirmation A (static): axioms uniquely determine the functional form
 
@@ -71,7 +76,7 @@ lands on the same shape.
 ## 3. The theorem (Confirmation A — rigorous static proof)
 
 **Claim.** Any `vᵢ` satisfying (A1)–(A3) has the form `vᵢ(eᵢ) = kᵢ ln eᵢ + cᵢ` with `kᵢ ≥ 0`.
-The same form is independently forced by Confirmation B; their agreement is the over-determination signal.
+The same form is reached by Confirmation B's dynamic route; per §2's honesty note, their agreement is a consistency check, not independent over-determination.
 
 **Proof.** Put `g(x) := vᵢ(eˣ)`. A3 with `e = eˣ`, `λ = eʸ` gives
 `g(x+y) − g(x) = φᵢ(eʸ) =: ψ(y)`, independent of `x`. Setting `x = 0`: `ψ(y) = g(y) − g(0)`. Substitute:

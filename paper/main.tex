@@ -41,8 +41,9 @@ lawful structural quantity, in the same category as information, once stripped o
 value is the rate at which an agent converts a physical resource into goal-progress, relative to a frame fixed
 by the agent's goal. A scale-invariance axiom forces a logarithmic measure of value, $V=\sum_i k_i\ln e_i$, via a Cauchy
 functional equation; the compounding dynamics of a reinvested resource force the same form independently via
-the ergodicity argument of \citet{peters2019}. Two routes, no shared premises --- the over-determination is
-the structural signal. From the compounding dynamics we also derive a \emph{coding theorem of value}: the rate at which an agent can create value through a perception channel $Y$ of
+the ergodicity argument of \citet{peters2019}. The two routes are kin rather than independent --- the
+scale-invariance axiom is the static shadow of multiplicative compounding --- so their agreement is a
+consistency check on the form, not an independent over-determination. From the compounding dynamics we also derive a \emph{coding theorem of value}: the rate at which an agent can create value through a perception channel $Y$ of
 the world $X$ is bounded by the mutual information, $\Delta G \le \I(X;Y)$, achieved by Bayes-proportional
 allocation; and realized value decomposes exactly as available potential minus dissipation,
 $G=\KL{q}{r}-\KL{q}{p}$, identifying misalignment with measurable waste. For populations we show value is
@@ -168,11 +169,12 @@ V^\star \;=\; K\ln E \;-\; K\, H(\hat k)\,,\qquad H(\hat k)=-\textstyle\sum_i \h
 \end{theorem}
 \noindent Two features deserve note. First, Shannon's entropy $H$ reappears \emph{unbidden} as a penalty: a goal
 spread thinly over many channels (high $H(\hat k)$) realizes less value than a focused one ---
-\emph{focus is worth $K\,H(\hat k)$ nats of value}. Second, the logarithm is over-determined: the static
+\emph{focus is worth $K\,H(\hat k)$ nats of value}. Second, the logarithm arrives twice: the static
 Axioms~\ref{ax:concave}--\ref{ax:scale} force it via the Cauchy equation (Appendix~\ref{app:log}), and
-the dynamic compounding argument forces it again from \S\ref{sec:capacity} --- two routes that share no
-premises and address different questions. A form over-determined this way is the signature of a real
-structural law, not a modeling convenience.
+the dynamic compounding argument recovers it from \S\ref{sec:capacity}. We are explicit that these routes are
+kin rather than independent --- the scale-invariance axiom is the static shadow of multiplicative compounding
+(a parallel additive axiom would force a linear $v$ by the identical Cauchy argument) --- so their agreement
+is a consistency check on the functional form, not an independent over-determination.
 
 \section{The capacity theorem: value is bounded by information}\label{sec:capacity}
 
@@ -351,7 +353,10 @@ with fixed point and residual misalignment
 \begin{equation}
 \boxed{\;\bar k^\star=k^\star+\gamma^{-1}Vg,\qquad \|\bar k^\star-k^\star\|=\gamma^{-1}\|Vg\|\;,}
 \end{equation}
-and the aligned fixed point is locally stable iff $\gamma>\lambda_{\max}\!\big(\partial(Vg)/\partial\bar k\big)$.
+and the aligned fixed point is locally stable iff $\gamma$ exceeds the spectral abscissa (largest real part of
+the eigenvalues) of $\partial(Vg)/\partial\bar k$ --- written $\gamma>\lambda_{\max}$ for the normal/symmetric
+case; for non-normal Jacobians, non-normality additionally permits transient misalignment growth even when the
+fixed point is asymptotically stable.
 \end{theorem}
 \noindent The fleet does not in general settle at the target; it settles a distance $\|Vg\|/\gamma$ away ---
 goal-dispersion times reward-pull over control gain. Perfect alignment holds iff $Vg=0$: either the environment
@@ -474,7 +479,11 @@ beating the best single model's density. Pricing therefore pays exactly where \S
 as the lever that chooses the operating point under a resource constraint, not as a free lunch that beats the
 best agent when compute is unlimited. The demon needs \emph{perception diversity} --- different slices of $H(X)$,
 i.e.\ specialists rather than generalists of varying strength --- which a set of same-task generalists lacks by
-construction. We mark this as a falsifiable boundary, not a defeat.
+construction. We mark this as a falsifiable boundary, not a defeat. One further disclosure: on these ladders
+the $\I/\mathrm{cost}$ price selects the \emph{same} models an accuracy-per-cost heuristic would select --- the
+routing layer is extensionally equivalent to the obvious baseline here, and its contribution is that the
+cost-aware rule is \emph{derived} from the value framework rather than hand-chosen, not that it makes different
+choices.
 
 \section{Generalization: a pre-registered scale-up}\label{sec:v2}
 

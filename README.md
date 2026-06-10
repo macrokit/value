@@ -68,9 +68,10 @@ G   = D(q‖r) − D(q‖p)             available − dissipated  (doc 02)
 
 Two structural facts give some confidence the abstraction is real, not decorative:
 
-1. **The logarithm is over-determined** — forced independently by a scale-invariance axiom (doc 01) *and*
-   by multiplicative compounding dynamics (doc 02), with no shared premises. The over-determination is the
-   structural signal, not a proof of fundamentality.
+1. **The logarithm arrives twice** — from a scale-invariance axiom (doc 01) *and* from multiplicative
+   compounding dynamics (doc 02). The two routes are kin, not independent (scale-invariance is compounding's
+   static shadow), so their agreement is a consistency check on the form — not an independent
+   over-determination, and not a proof of fundamentality.
 2. **Shannon's quantities recur** — entropy `H` as a value-dissipation penalty (doc 01), KL divergence `D`
    as available-minus-dissipated value (doc 02), mutual information `I` as the value ceiling (doc 02), and the
    Fisher metric as the cross-frame invariant (doc 03). The information bridge is load-bearing, not decorative.

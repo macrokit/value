@@ -108,9 +108,14 @@ world-given target, they are governed by *what pays* (selection, via `g`) and *w
 
 ## 6. What this adds to the thesis
 
-A second *new* theorem (beside the capacity theorem of [`02`](02-coding-theorem-of-value.md)), and the one
-aimed squarely at alignment: it turns "keep agents aligned" from a slogan into a control law with a measurable
+The result aimed squarely at alignment — with its status stated honestly (per the priority audit, the control
+mathematics here is *classical*: the threshold is high-gain stabilization, the residual is the textbook
+velocity error; the contribution is the **mapping** of goal-drift-under-selection onto that machinery, not a
+new control theorem). It turns "keep agents aligned" from a slogan into a control law with a measurable
 threshold (`γ > λ_max(∂(Vg)/∂\bar k)`), a closed-form residual (`‖Vg‖/γ`), and a clear prescription (design
-`g → 0` before spending on `γ`). Together with the real-agent test it is the natural core of a v1 paper:
-*statics* (the measure, capacity, fleet ceiling) + *one sharp dynamical theorem* (alignment stability) +
-*evidence* (sim + real agents).
+`g → 0` before spending on `γ`). **Technical note (2026-06-07, after external review):** for a *non-normal*
+Jacobian the precise asymptotic criterion is the **spectral abscissa** (largest *real part* of the eigenvalues
+of the linearized flow), and non-normality permits *transient* misalignment growth even when the fixed point is
+asymptotically stable — read the eigenvalue threshold as the spectral-abscissa condition in general. Together
+with the real-agent test this is the natural core of the paper: *statics* (the measure, capacity, pooled-fleet
+ceiling) + *one sharp dynamical mapping* (alignment stability) + *evidence* (sim + real agents).

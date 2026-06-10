@@ -73,6 +73,12 @@ tracks mutual information:
 - **Slope of `ΔG_holdout` on `I` = 0.935**, 95% CI [0.915, 0.954] — excludes 0, and is ≈ 1, i.e. realized
   out-of-sample value-growth *is* perceived mutual information.
 
+> **Scope of what R1 risks (disclosed 2026-06-07).** `I`, accuracy, and `ΔG` are all computed from the *same
+> confusion matrix*, so a strong correlation is close to guaranteed for any proper scoring rule — R1 risks
+> little *distinctively*; it validates that the value quantities are coherent units on real outputs (and the
+> capability-not-size ordering), not a surprising new law. The genuinely-risky predictions live in the
+> shape-generalization test ([`14`](14-bridge-generalization.md)) and the negatives (docs 11/13/15).
+
 The cross-family points sharpen the v1 reframe ("`I` tracks capability, not parameter count"): Phi-3.5 is strong
 on MMLU (acc 0.53 → `I` 0.19) but weak on topic (0.30 → 0.09); Llama-3.1-8B is the reverse (topic 0.80 → 0.82).
 Size does not predict `I`; *capability on the task* does.
@@ -139,11 +145,17 @@ every domain (+0.095 intent, +0.132 mcqa, +0.134 topic), approaching `H(X)`.
 | **R2-v2** over-confidence dissipation > 0 in every domain | **PASS** |
 | **Fleet-R5 required** value-price > round-robin AND equal-weight | **PASS** (all three cost metrics) |
 | **Fleet-R5 strong** value-price > cost-blind hand-tuned | **primary (tokens): tie (FAIL)** · sensitivity (latency + FLOPs): **PASS, robust** — reported honestly |
-| **Ceiling** `Σ`-throughput ≤ `H(X)`; diverse > redundant | **PASS** |
+| **Ceiling** pairwise *joint* `I(X;Y_a,Y_b) ≤ H(X)`; diverse > redundant | **PASS** (the joint/fused form — the only form the harness ever tested; the doc-04 sum-form was separately found false and corrected, see doc 04 §2 erratum) |
 
 The publication gate (prereg §4: R1-v2 ∧ R2-v2 ∧ Fleet-R5-required all PASS) is **met**.
 
 ## 6. Where this breaks (scope honesty)
+
+- **The value-price router is extensionally equivalent to the obvious baseline here (disclosed 2026-06-07).**
+  On these ladders the `I/cost` price selects the *same* models an accuracy-per-cost heuristic selects, in every
+  condition. The routing layer's contribution is that the cost-aware rule is **derived** from the value
+  framework rather than hand-chosen — principled measurement, not different choices. Where the two could
+  diverge (miscalibrated models whose `I` and accuracy disagree), this ladder does not probe.
 
 - **Tokens are a weak compute-cost proxy here.** Same prompt + one-token answer ⇒ token counts vary only ~1.2×
   across a 0.5B→8B ladder, so a *token* budget cannot express the real cost gradient and cost-aware routing
