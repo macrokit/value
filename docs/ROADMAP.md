@@ -31,7 +31,9 @@ does not cover, with measured (not weak-model-elicited) quantities.
   does not.
 - [x] **v4 paper revision — PUBLISHED (2026-06-06):** record `zenodo.org/records/20572360`; folds the priority
   concessions into the paper. Superseded by the v5 candidate below.
-- [ ] **v5 paper revision — STAGED, pending owner Zenodo publish (2026-06-07). BLOCKS dissemination.** The
+- [x] **v5 paper revision — PUBLISHED (2026-06-10):** `zenodo.org/records/20621815`, title now carries the
+  subtitle, description = the v5 abstract verbatim, md5 `11ab30c5…` verified live. **Dissemination is
+  UNBLOCKED.** Original entry:** The
   sixth (correctness) pass found the sum-form fleet ceiling **false**; v4 carries it in the abstract and §fleet.
   `paper/main.tex` now: corrects the abstract + fleet section (pooled/fused ceiling, explicit erratum +
   counterexample, sum-form only under payout coupling); cites **Barron & Cover 1988** as the primary source for
