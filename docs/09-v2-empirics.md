@@ -53,6 +53,16 @@ scored out-of-sample on the holdout. Point estimates carry **95% CIs** (2000-sam
 in nats via [`sim/value_sim.py`](../sim/value_sim.py); all model outputs cached so every number re-derives
 offline.
 
+> **Statistical corrections (2026-06-07, after external review).** Two issues were flagged and fixed.
+> **(a) Clustering.** The 30 pooled points are 10 models × 3 domains — clustered by model — and the original
+> bootstrap resampled them i.i.d., which is anti-conservative (effective n ≈ 10). The harness now also reports
+> a **cluster bootstrap by model**; re-run on the cached data, the conclusions are unchanged: R1a pooled ρ =
+> 0.977 with clustered CI **[0.943, 0.995]**, R1b slope = 0.935 with clustered CI **[0.914, 0.956]** — both
+> still clear their registered thresholds. **(b) Threshold disclosure.** The code's original pass condition
+> added an unregistered `CI-low > 0.5` check alongside the registered `ρ > 0.8`; the registered criterion alone
+> now decides the verdict and the extra check is reported as the unregistered diagnostic it is (it passes
+> either way here, but the deviation should have been disclosed).
+
 ## 2. R1-v2 — the capacity bridge generalizes  ✅ PASS
 
 Across all 30 model×domain points, mutual information tracks realized capability, and out-of-sample value-growth

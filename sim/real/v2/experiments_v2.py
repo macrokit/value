@@ -127,10 +127,27 @@ def spearman(x, y):
     return float(np.corrcoef(rx, ry)[0, 1])
 
 def boot_ci(stat_fn, n, level=0.95):
-    """Bootstrap CI by resampling indices 0..n-1."""
+    """Bootstrap CI by resampling indices 0..n-1 i.i.d.
+
+    NOTE (2026-06-07, post-review): for pooled model×domain analyses the points
+    are clustered by model (10 models × 3 domains), so i.i.d. resampling is
+    anti-conservative (effective n ≈ #models). Use cluster_boot_ci for those."""
     vals = []
     for _ in range(N_BOOT):
         idx = RNG.integers(0, n, n)
+        vals.append(stat_fn(idx))
+    lo, hi = np.percentile(vals, [(1-level)/2*100, (1+level)/2*100])
+    return float(lo), float(hi)
+
+def cluster_boot_ci(stat_fn, clusters, level=0.95):
+    """Cluster bootstrap: resample CLUSTERS (models) with replacement, taking
+    all of each selected cluster's point indices. `clusters` = list of
+    index-lists, one per cluster. Conservative for model-clustered points."""
+    m = len(clusters)
+    vals = []
+    for _ in range(N_BOOT):
+        picked = RNG.integers(0, m, m)
+        idx = [i for c in picked for i in clusters[c]]
         vals.append(stat_fn(idx))
     lo, hi = np.percentile(vals, [(1-level)/2*100, (1+level)/2*100])
     return float(lo), float(hi)
@@ -158,10 +175,20 @@ def R1_v2():
         print(f"     {dom:8} {short:9} {acc:6.3f} {I:8.4f} {dG:8.4f}")
     accs = [p[3] for p in pts]; Is = [p[4] for p in pts]; dGs = [p[5] for p in pts]
     # R1a: pooled Spearman(I, accuracy) > 0.8 with CI
+    # DISCLOSURE (2026-06-07): the prereg criterion is rho > 0.8 (CI reported).
+    # The original pass condition here also required lo > 0.5 — an UNREGISTERED
+    # extra condition; it is kept but flagged, and the registered criterion is
+    # what decides the verdict. CIs are now ALSO cluster-bootstrapped by model
+    # (points are 10 models × 3 domains; i.i.d. CI is anti-conservative).
     rho = spearman(accs, Is)
-    lo, hi = boot_ci(lambda idx: spearman([accs[i] for i in idx], [Is[i] for i in idx]), len(pts))
-    rec("R1a pooled Spearman(I, accuracy) > 0.8", rho > 0.8 and lo > 0.5,
-        f"ρ={rho:.3f}  95%CI[{lo:.3f},{hi:.3f}]  (n={len(pts)} model×domain points)")
+    sfn = lambda idx: spearman([accs[i] for i in idx], [Is[i] for i in idx])
+    lo, hi = boot_ci(sfn, len(pts))
+    models = sorted({p[0] for p in pts})
+    clusters = [[i for i, p in enumerate(pts) if p[0] == m_] for m_ in models]
+    clo, chi = cluster_boot_ci(sfn, clusters)
+    rec("R1a pooled Spearman(I, accuracy) > 0.8 [registered criterion]", rho > 0.8,
+        f"ρ={rho:.3f}  iid 95%CI[{lo:.3f},{hi:.3f}]  CLUSTERED-by-model 95%CI[{clo:.3f},{chi:.3f}]"
+        f"  (n={len(pts)} points, {len(models)} model clusters; unregistered lo>0.5 check: {lo > 0.5})")
     # per-domain rho > 0.6
     perdom_ok = True
     for domain in D.DOMAINS:
@@ -174,8 +201,9 @@ def R1_v2():
         X = np.array([Is[i] for i in idx]); Y = np.array([dGs[i] for i in idx])
         return float(np.polyfit(X, Y, 1)[0])
     s = slope(range(len(pts))); slo, shi = boot_ci(slope, len(pts))
-    rec("R1b slope(ΔG_hold ~ I) CI excludes 0 (positive)", slo > 0,
-        f"slope={s:.3f}  95%CI[{slo:.3f},{shi:.3f}]")
+    cslo, cshi = cluster_boot_ci(slope, clusters)
+    rec("R1b slope(ΔG_hold ~ I) CI excludes 0 (positive)", slo > 0 and cslo > 0,
+        f"slope={s:.3f}  iid 95%CI[{slo:.3f},{shi:.3f}]  CLUSTERED-by-model 95%CI[{cslo:.3f},{cshi:.3f}]")
     json.dump([{"model": s_, "domain": d_, "params": p_, "acc": a_, "I": i_, "dG_hold": g_}
                for s_, d_, p_, a_, i_, g_ in pts],
               open(os.path.join(HERE, "results", "r1_points.json"), "w"), indent=2)

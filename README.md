@@ -45,7 +45,7 @@ it forces the theory to make the frame explicit.
 | [`01`](docs/01-core-formalization.md) | The measure | **Logarithmic Value Law** `V = Σ kᵢ ln eᵢ` (forced by one Cauchy axiom); optimal allocation `eᵢ* ∝ kᵢ`; focus penalty `V* = K ln E − K·H(k̂)` |
 | [`02`](docs/02-coding-theorem-of-value.md) | The capacity theorem | **`ΔG ≤ I(X;Y)`** — value-throughput is bounded by information-throughput; **Second Law** `G = D(q‖r) − D(q‖p)` exact |
 | [`03`](docs/03-cross-frame-value.md) | Cross-frame / multi-agent | **Value is frame-relative; price is frame-independent.** Exchange via shadow price `λ=K/E`; invariant = Fisher–Rao metric (Čencov); alignment `cos θ` sets positive/negative-sum |
-| [`04`](docs/04-multi-agent-capacity-region.md) | Fleet governance | **Collective value-throughput ≤ H(X)** — the world's entropy caps the whole fleet; region shaped by alignment; operating point set by price |
+| [`04`](docs/04-multi-agent-capacity-region.md) | Fleet governance | **Pooled-fleet value-throughput ≤ H(X)** — a fleet that fuses its perception is one agent, so doc 02's ceiling applies (a corollary, not a new theorem; the earlier *sum-form* claim was wrong and is corrected in §2's erratum); region shaped by alignment; operating point set by price |
 | [`05`](docs/05-dynamics.md) | The equations of motion | **Learning = value-recovery, dissipation = regret**; natural-gradient (Fisher) belief flow, tâtonnement price flow, control+selection goal flow; alignment = a stability condition; a moving world forbids zero dissipation |
 | [`06`](docs/06-real-agent-test.md) | **Real-agent test** (v1, n=4) | Four live LLMs obey the laws on their own outputs: `I(X;Y)` tracks realized **capability not size** (a cross-family 8B, bigger-but-weaker, lands at lower `I`); `ΔG`∝`I(X;Y)`; over-confidence dissipates value (weakest → negative growth); diversity > redundancy; **pricing beats pooling and wins under a compute budget — but no demon on correlated agents** (honest negative). Generalized in `09`/`14`. |
 | [`07`](docs/07-alignment-stability.md) | Alignment theorem | Coupled control+selection flow solved: residual misalignment `= ‖Vg‖/γ`; stable iff `γ > λ_max(∂(Vg)/∂k̄)`; **incentive design (`g→0`) beats brute-force control (`↑γ`)** |
@@ -84,7 +84,7 @@ Two structural facts give some confidence the abstraction is real, not decorativ
   as economies coordinate incomparable utilities — never through a god's-eye utility sum.
 - **Fleet design:** cultivate **goal-diversity** (trades to positive-sum) and **perception-diversity** (covers
   more of `H(X)`); suppress **belief-divergence** (zero/negative-sum speculation) and **goal-conflict**
-  (negative `cos θ`). Headcount past perception-saturation buys nothing.
+  (negative `cos θ`). Headcount past perception-saturation adds nothing to what the fleet *jointly knows* (the pooled-fleet reading of doc 04 §2).
 
 ## Evidence — the theory predicts its own instantiation
 

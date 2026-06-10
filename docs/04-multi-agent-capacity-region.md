@@ -27,28 +27,42 @@ added one at a time.
 
 ## 2. Coupling I — the shared world (information outer bound)
 
-The agents perceive the **same** `X` through different channels, so their perceptions are correlated and
-*redundant*. By the chain rule and data-processing, for every subset `S ⊆ {1,…,m}`:
+> **⚠️ Erratum (2026-06-07).** An earlier version of this section boxed a **sum-rate** bound,
+> `Σ_a G_a ≤ I(X;Y_{1:m}) ≤ H(X)`, claimed "by the chain rule and data-processing." **That claim is false in
+> the model as stated**, and external review caught it. Counterexample: two agents with identical perfect
+> channels `Y₁ = Y₂ = X`, each compounding **its own** budget against fixed reference odds, each achieve
+> `G_a = H(X)` by [`02`](02-coding-theorem-of-value.md)'s own achievability — so `Σ_a G_a = 2H(X) > H(X)`.
+> The chain rule bounds the *joint* information `I(X;Y_{1:m})`, but nothing in the model couples
+> *separately-compounded* growth rates to it; for redundant channels `Σ_a I(X;Y_a) ≥ I(X;Y_{1:m})` — the wrong
+> direction. The multiple-access analogy fails at exactly this point: Shannon's transmitters share one physical
+> medium, whereas independently-bankrolled agents do not. What follows is the corrected statement; the
+> simulation suite (E3) always tested the *joint* version below, never the false sum form.
 
-$$\sum_{a\in S} G_a \;\le\; I\big(X;\, Y_S\big) \;\le\; H(X),\qquad Y_S := \{Y_a : a\in S\}.$$
+What the shared world *does* bound is the fleet acting as **one decision-maker**. Pool the budgets into a
+single bankroll and bet the **fused posterior** `p(x \mid Y_1,…,Y_m)`: the fused fleet is a single agent with
+channel `Y_{1:m}`, so [`02`](02-coding-theorem-of-value.md) applies verbatim:
 
-The per-agent bound `G_a ≤ I(X;Y_a)` ([`02`](02-coding-theorem-of-value.md)) is the singleton case; the
-**sum-rate** bound is the whole-fleet case:
+$$\boxed{\,G_{\text{fleet}} \;\le\; I\big(X;\,Y_{1:m}\big) \;\le\; H(X)\,}\qquad\text{(pooled bankroll, fused posterior)}$$
 
-$$\boxed{\,\sum_{a=1}^{m} G_a \;\le\; I(X;\,Y_{1:m}) \;\le\; H(X).\,}$$
+> **Joint Fleet Ceiling.** A fleet that pools its resource and fuses its perception cannot compound value
+> faster than the world produces resolvable uncertainty, `H(X)` per round. **This is a one-line corollary of
+> the single-agent capacity theorem applied to the product channel — we do not claim it as a new result.**
 
-> **Fleet Value Ceiling.** No fleet, however large, can compound value faster than the world produces
-> resolvable uncertainty `H(X)` per round.
+Per-agent, only the singleton bound survives: `G_a ≤ I(X;Y_a)`. A **sum-form** constraint `Σ_a G_a ≤ H(X)`
+holds only under an *explicit payout coupling* the base model lacks — e.g. agents drawing from one finite
+world-produced payout stream, or betting against each other (parimutuel), where one agent's gain is another's
+loss. We state that as an assumption for those settings, not a theorem of this model.
 
-This is the value analog of the **multiple-access sum-rate constraint**: agents are "transmitters," the shared
-world/resource is the channel, growth rates are rates, and the region has the polymatroidal subset structure
-`Σ_{a∈S} G_a ≤ I(X; Y_S)`. Two immediate governance corollaries:
+The governance corollaries survive, **re-scoped to the fused reading** (they are claims about joint
+*information*, not about sums of independent growth rates):
 
-- **Diminishing returns to headcount.** Once `I(X; Y_{1:m})` saturates toward the available observable
-  information (≤ `H(X)`), adding more agents with redundant perception buys **zero** marginal throughput. The
-  binding constraint becomes *perception diversity*, not headcount.
-- **Perception diversity is the lever.** Fleet throughput grows only as the agents' channels cover *different*
-  parts of `H(X)` (small `I(Y_a;Y_b)` given `X`). Redundant clones are dead weight.
+- **Diminishing returns to headcount — for what the fleet *knows*.** Once `I(X; Y_{1:m})` saturates toward
+  `H(X)`, adding agents with redundant perception adds **zero** joint information: a pooled/coordinating fleet
+  gains nothing from clones. (Independently-compounding clones still each grow privately — redundancy is dead
+  weight for the *fleet's knowledge*, not for any individual's bankroll.)
+- **Perception diversity is the lever.** The fused ceiling `I(X;Y_{1:m})` rises only as the agents' channels
+  cover *different* parts of `H(X)` (small redundancy given `X`). For any fleet that acts on shared knowledge,
+  diverse specialists beat redundant clones.
 
 ## 3. Coupling II — the shared resource (the operating point is a Kelly portfolio)
 
@@ -94,7 +108,8 @@ multi-user channels (region expands) and **interference** channels (region shrin
 Collecting the three couplings, the achievable region `𝓡` is bounded by:
 
 1. **per-agent ceilings** `G_a ≤ I(X;Y_a)` (own perception, doc 02);
-2. **subset sum-rate** `Σ_{a∈S} G_a ≤ I(X;Y_S) ≤ H(X)` (shared world, §2);
+2. **the joint fleet ceiling** `G_fleet ≤ I(X;Y_{1:m}) ≤ H(X)` for a pooled/fused fleet (shared world, §2 —
+   corrected; sum-form bounds hold only under explicit payout coupling);
 3. **frontier curvature** set by the alignment matrix `M` (shared world action, §4);
 
 and the fleet's **operating point** within `𝓡` is selected by the resource **price** `π`, with a Kelly-portfolio
@@ -136,7 +151,8 @@ macro library" = "tile `H(X)` with non-redundant cheap perception channels" = "r
 
 ## 8. What this closes, and the one thread left
 
-**Closed.** The trilogy 01–03 unifies into a fleet theory: a value capacity region bounded by `H(X)`, shaped
+**Closed.** The trilogy 01–03 unifies into a fleet theory: a value capacity region whose pooled/fused
+throughput is bounded by `H(X)` (§2, corrected), shaped
 by the alignment matrix, with the operating point priced à la Kelly. Governance splits into *shaping the
 region* (alignment + perception design) and *pricing the point* (resource allocation). The Macrokit pattern is
 revealed as the fleet's perception-design instrument. Every prior result feeds in: the log law (per-agent

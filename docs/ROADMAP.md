@@ -29,14 +29,18 @@ does not cover, with measured (not weak-model-elicited) quantities.
   problem, not a versioning one. Move: post the is/ought-as-control note (drafted, `drafts/`) to the relevant
   audience + an arXiv cross-listing + sharing. This is what converts the record into readers; another version
   does not.
-- [ ] **v4 paper revision — STAGED, pending owner Zenodo publish (2026-06-06).** The published v3 predated the
-  priority audit; `paper/main.tex` now folds the concessions into the paper itself (Armstrong & Mindermann 2018
-  for the is/ought value-side; classical control / Åström–Murray for the alignment-stability algebra; Still 2012
-  for the Second Law; Čencov-as-uniqueness for Fisher–Rao; reworded abstract closer). `main.pdf` rebuilt
-  (md5 `1eebf7f…`), citations resolve, committed `24125cd`. **Remaining (owner-gated):** publish Zenodo **v4**
-  (new version under concept DOI `10.5281/zenodo.20487041`), then **resync `drafts/arxiv-metadata.md` abstract to
-  the v4 abstract** before any arXiv deposit (they must match the deposited PDF). Do this *before* the
-  dissemination push so readers land on the honest version (v3 has ~0 views — zero cost to supersede now).
+- [x] **v4 paper revision — PUBLISHED (2026-06-06):** record `zenodo.org/records/20572360`; folds the priority
+  concessions into the paper. Superseded by the v5 candidate below.
+- [ ] **v5 paper revision — STAGED, pending owner Zenodo publish (2026-06-07). BLOCKS dissemination.** The
+  sixth (correctness) pass found the sum-form fleet ceiling **false**; v4 carries it in the abstract and §fleet.
+  `paper/main.tex` now: corrects the abstract + fleet section (pooled/fused ceiling, explicit erratum +
+  counterexample, sum-form only under payout coupling); cites **Barron & Cover 1988** as the primary source for
+  the side-information bound (+ Blackwell 1953, Sims 2003, Ortega & Braun 2013); reframes the contribution list
+  ("pooled-fleet ceiling … both corollaries of Kelly–Cover, claimed as such"). `main.pdf` rebuilt
+  (md5 `667ac774cad96613b9b3b08c1290f33f`), citations resolve. **Remaining (owner-gated):** publish Zenodo
+  **v5** (new version under the concept DOI), then resync `drafts/arxiv-metadata.md` to the v5 abstract. v4 has
+  ~0 views — zero cost to supersede; do this BEFORE any posting (the predicted top comment is "the fleet
+  ceiling is wrong," and v5 removes it).
 - [x] **Priority / novelty check — DONE (2026-06-06):** deep-research pass against the nearest neighbors. Verdict:
   components anticipated (result 1(ii) ← ergodicity economics; result 2 ← Kelly/info-rate, Moffett–Eckford 2021,
   Touchette–Lloyd 2000; **result 3 ← Still, Sivak, Bell & Crooks 2012 "thermodynamics of prediction" — the one
@@ -76,16 +80,43 @@ does not cover, with measured (not weak-model-elicited) quantities.
   **not** cover — the one place a *mathematical* (not merely applied) novelty for Part 2 could survive. Not
   currently claimed. Probe only if a stronger control-theoretic claim is ever wanted.
 
-### ⊕ Priority-check program — final tally (four passes, 2026-06-06)
+### ⊕ Sixth pass — the CORRECTNESS audit (external review, 2026-06-07): fleet ceiling was FALSE
+A Fable-5 external-style review did what the five priority passes never did — checked **truth**, not just
+priority — and found **one outright error in a headline result**, verified line-by-line before acting:
+- **🔴 The sum-form Fleet Value Ceiling (`Σ_a G_a ≤ H(X)`, doc 04 §2) was false as stated.** Counterexample:
+  two agents with identical perfect channels, each on its own bankroll, each achieve `G_a = H(X)` → sum
+  `2H(X)`. The chain rule bounds *joint* information, not sums of independently-compounded growth rates; the
+  MAC analogy fails (no shared medium). The sim's E3 always tested the *joint* version, never the false sum.
+  **Fixed everywhere** (doc 04 erratum + corrected Joint Fleet Ceiling `G_fleet ≤ I(X;Y_{1:m}) ≤ H(X)` for a
+  pooled/fused fleet — a corollary of doc 02, claimed as such; README, repo+site FAQ, paper → v5 candidate).
+  **Lesson recorded: a novelty pass answers "did someone publish this?", not "is it true?"** Pass 2's
+  "plausibly-novel" verdict on the sum-form ceiling found no prior because the claim was wrong.
+- **🟠 Doc 03 §0/§2 self-contradiction (verified):** λ-equalization maximizes the *unweighted sum* `Σ V_a` —
+  the equal-Negishi-weight planner — exactly the interpersonal comparison §0 forbids; not invariant under
+  per-agent rescaling; gameable via self-declared `K_a` (mechanism design is the missing, now-acknowledged
+  prior art). Honest caveat added to doc 03 §2 + honest limits.
+- **🟠 Doc 03 vs 05 flow laws (verified):** λ-routing vs replicator selection govern the same quantity and
+  generically disagree; reconciled as two *institutions* (governed reallocation vs ungoverned compounding) in
+  both docs; doc 07 lives in the selection regime.
+- **🟡 Empirics hygiene (verified + fixed):** pooled CIs now also cluster-bootstrapped by model — conclusions
+  unchanged (R1a clustered CI [0.943,0.995]; R1b [0.914,0.956]); the unregistered `lo>0.5` pass-condition is
+  disclosed; **Barron & Cover (1988)** (+ Blackwell 1953, Sims 2003, Ortega & Braun 2013) now cited as the
+  primary source for the side-information growth bound.
+
+### ⊕ Priority-check program — final tally (four passes, 2026-06-06; CORRECTED by the sixth pass, 2026-06-07)
 Across four adversarial deep-research passes, the honest verdict on *A Mathematical Theory of Value*:
 **components anticipated, synthesis novel, and three specific over-claims caught and conceded** —
 (1) Fisher–Rao cross-frame invariant = Čencov restated; (2) is/ought value-side = Armstrong & Mindermann 2018;
-(3) the alignment control result = elementary classical control (novelty is the application). **Surviving
-distinctively-novel claims:** the *synthesis* itself, the **fleet ceiling `Σ G_a ≤ H(X)`**, the value/price
-*frame split*, and — at the application level — the *governance mapping* (goal-drift as ramp-tracking →
-incentive-beats-oversight). The single-agent core remains, by the paper's own statement, generalized Kelly. Net:
-the work's defensible contribution is **unification + honest scoping**, not a stack of new theorems — which is
-exactly what the paper claims, now verified the hard way.
+(3) the alignment control result = elementary classical control (novelty is the application); and — added by
+the sixth pass — (4) **the sum-form fleet ceiling was not novel but FALSE**; the corrected pooled-fleet version
+is a Kelly–Cover corollary. **Surviving distinctively-novel claims (post-correction):** the *synthesis* itself,
+the value/price *frame split*, the *focus penalty* `V* = K ln E − K·H(k̂)` (flagged by external review as the
+most original interpretive move), the *governance mapping* (goal-drift as ramp-tracking →
+incentive-beats-oversight), and the **concession discipline itself**. The single-agent core remains, by the
+paper's own statement, generalized Kelly (primary source for the side-information bound: Barron & Cover 1988).
+Net: the work's defensible contribution is **unification + honest scoping**, not a stack of new theorems —
+which is exactly what the paper claims, now verified the hard way across six passes (five priority + one
+correctness).
 
 ## Research directions (gated behind the published core)
 - [x] **Cross-frame / price layer — real-data test → STRUCTURAL CAP** ([`15`](15-cross-frame-realdata.md),

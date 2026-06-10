@@ -106,6 +106,14 @@ resource* — independent of the principal's intent. This **derives instrumental
 dynamics: goal-directions correlated with resource-acquisition are selected regardless of their terminal
 content. Left unmanaged, the fleet's aggregate goal is set by *what pays*, not by `k*`.
 
+> **Reconciliation with doc 03's flow law (added 2026-06-07).** This replicator law and
+> [`03`](03-cross-frame-value.md) §2's λ-equalization govern the same quantity (resource share per agent) and
+> generically disagree: λ-flow routes `E` by *declared marginal stakes*, replicator selection by *realized
+> growth*. They are two different **institutions** — a governed reallocation market vs ungoverned compounding
+> in place — not two derivations of one law. Everything in this doc and [`07`](07-alignment-stability.md)
+> assumes the *selection* regime; doc 03's mechanism, where operating, suppresses it. Which institution
+> dominates is itself the governance choice.
+
 ## 4. Alignment is a dynamical stability condition
 
 (a) and (b) oppose each other: control pulls `\bar k → k*`; selection pulls `\bar k →` the resource-maximizing

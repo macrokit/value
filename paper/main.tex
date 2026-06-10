@@ -46,8 +46,9 @@ the structural signal. From the compounding dynamics we also derive a \emph{codi
 the world $X$ is bounded by the mutual information, $\Delta G \le \I(X;Y)$, achieved by Bayes-proportional
 allocation; and realized value decomposes exactly as available potential minus dissipation,
 $G=\KL{q}{r}-\KL{q}{p}$, identifying misalignment with measurable waste. For populations we show value is
-frame-relative while \emph{price} is frame-independent, that the collective value throughput of a fleet is
-capped by the world's entropy $\sum_a G_a\le H(X)$, and that the fleet's operating point is a Kelly portfolio
+frame-relative while \emph{price} is frame-independent, that a fleet which pools its resource and fuses its
+perception is one agent and so inherits the capacity ceiling, $G_{\mathrm{fleet}}\le \I(X;Y_{1:m})\le H(X)$ (a
+corollary; an earlier sum-form claim was wrong and is corrected in v5), and that the fleet's operating point is a Kelly portfolio
 over agents selected by an emergent price. A dynamical layer gives the equations of motion and an
 is/ought asymmetry --- beliefs have a target the world supplies, goals do not --- from which alignment emerges
 as a control-stability condition with a closed-form residual misalignment. We then test the single-frame laws on
@@ -100,9 +101,9 @@ the concession here rather than leave it for a referee --- our capacity theorem 
 generalized Kelly; what we add is not the betting result but everything built upon it: the free-energy substrate
 that supplies a unit, the cross-frame price, and the dynamics and alignment layers. Our contribution is
 fourfold and we state it plainly (\S\ref{sec:related}): (i) the \emph{unification} of these accounts under one
-substrate-grounded quantity; (ii) the \emph{capacity theorem} and \emph{fleet ceiling} that the unification
-makes visible; (iii) the \emph{is/ought asymmetry} as a structural property of agent dynamics; and (iv) an
-\emph{empirical test} on live models. Throughout, each result is followed by the assumptions that make it bite,
+substrate-grounded quantity; (ii) the \emph{capacity theorem} and the \emph{pooled-fleet ceiling} that the
+unification makes visible (both corollaries of Kelly--Cover, claimed as such); (iii) the \emph{is/ought
+asymmetry} as a structural property of agent dynamics; and (iv) an \emph{empirical test} on live models. Throughout, each result is followed by the assumptions that make it bite,
 in Shannon's spirit of naming the model.
 
 \bigskip
@@ -274,15 +275,27 @@ positive- or negative-sum.
 
 Consider $m$ agents acting on one world $X$ and drawing on one resource pool.
 
-\paragraph{The ceiling.} Each agent's growth is bounded by its own perception (Theorem~\ref{thm:capacity}),
-$G_a\le \I(X;Y_a)$. Jointly, the data-processing inequality gives the sum-rate bound
+\paragraph{The ceiling (corrected in v5).} Each agent's growth is bounded by its own perception
+(Theorem~\ref{thm:capacity}), $G_a\le \I(X;Y_a)$. An earlier version of this paper (v1--v4) additionally boxed
+a \emph{sum-rate} bound, $\sum_{a\in S} G_a \le \I(X;Y_S) \le H(X)$, claimed via data-processing. \textbf{That
+claim is false in the model as stated}, and external review caught it: two agents with identical perfect
+channels $Y_1=Y_2=X$, each compounding its \emph{own} budget against fixed reference odds, each achieve
+$G_a=H(X)$ by Theorem~\ref{thm:capacity}'s achievability, so $\sum_a G_a = 2H(X) > H(X)$. The chain rule bounds
+the \emph{joint} information, not the sum of separately-compounded growth rates; for redundant channels
+$\sum_a \I(X;Y_a) \ge \I(X;Y_{1:m})$ --- the wrong direction --- and the multiple-access analogy fails because
+independently-bankrolled agents, unlike transmitters, share no coupling medium. What the shared world does
+bound is the fleet acting as \emph{one} decision-maker: pooling the budgets and betting the fused posterior
+$p(x\mid y_1,\dots,y_m)$ makes the fleet a single agent with channel $Y_{1:m}$, so Theorem~\ref{thm:capacity}
+applies verbatim,
 \begin{equation}\label{eq:ceiling}
-\boxed{\;\sum_{a\in S} G_a \;\le\; \I(X;Y_S)\;\le\; H(X)\;}\qquad\text{for any subset }S,
+\boxed{\;G_{\mathrm{fleet}} \;\le\; \I(X;Y_{1:m})\;\le\; H(X)\;}\qquad\text{(pooled bankroll, fused posterior)},
 \end{equation}
-the collective value throughput of a fleet is capped by the entropy of the world it acts on. Headcount past
-perception-saturation buys nothing. \emph{Perception diversity} (agents that perceive different slices of $X$)
-lifts $\I(X;Y_S)$ toward $H(X)$; \emph{redundancy} (agents perceiving the same slice) adds exactly zero. We
-confirm both on live models in \S\ref{sec:real} (R4).
+a one-line corollary we do not claim as new. A sum-form constraint holds only under an explicit payout
+coupling (a single shared bankroll, or parimutuel odds where agents bet against each other), stated as an
+assumption for those settings. The governance corollaries survive re-scoped to the fused reading: once
+$\I(X;Y_{1:m})$ saturates, redundant agents add zero to what the fleet \emph{jointly knows} — \emph{perception
+diversity} lifts the fused ceiling toward $H(X)$, \emph{redundancy} adds exactly zero. We confirm the joint
+(fused) version on live models in \S\ref{sec:real} (R4); the simulation suite likewise tests the joint form.
 
 \paragraph{The operating point.} Under multiplicative dynamics the shared pool multiplies each round by
 $\sum_a w_a R_a$ for resource weights $w_a$, so the fleet is a \emph{Kelly portfolio over agents}: for
@@ -613,6 +626,11 @@ candidate) supplying a unit and a cross-frame exchange rate that expected utilit
 \emph{Information rate and log-optimal growth.} The closest prior art, which we credit most carefully, is
 \citet{kelly1956}: the exponential growth rate of wealth is an information rate, optimized by betting one's
 beliefs; \citet{breiman1961} proved asymptotic optimality and \citet{cover1991} developed universal portfolios.
+The side-information form of our capacity theorem --- the growth value of a channel bounded by mutual
+information --- was proved in the financial setting by \citet{barroncover1988}, which any reader should treat
+as the primary source for that bound; the value-of-information ordering behind it goes back to
+\citet{blackwell1953}. The same capacity-constrained-decision structure lives natively in economics as
+rational inattention \citep{sims2003} and in decision-theoretic thermodynamics \citep{ortegabraun2013}.
 Our capacity theorem (\S\ref{sec:capacity}) is generalized Kelly, and the fleet operating point (\S\ref{sec:fleet})
 is a Kelly--Cover portfolio over agents. What we add is the reinterpretation of wealth as any conserved scarce resource (free energy being the physical
 candidate rather than a monetary one), the cross-frame price layer, the dynamics/alignment layer, and the claim that

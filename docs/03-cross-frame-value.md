@@ -51,17 +51,28 @@ This is the value-theory analog of a Lorentz factor / a currency cross-rate: the
 
 ### The shadow price equalizes — and that is the emergent price
 
-Transferring `dE` from A to B changes total realized value by `dV = (\lambda_B - \lambda_A)\,dE`. So resource
-flows from **low-shadow-price to high-shadow-price** agents, raising total value, until a single `λ*` clears
-the fleet:
+Transferring `dE` from A to B changes the **sum** `V_A + V_B` by `dV = (\lambda_B - \lambda_A)\,dE`. So under
+this rule resource flows from **low-shadow-price to high-shadow-price** agents until a single `λ*` clears the
+fleet:
 
 $$\lambda_A = \lambda_B = \cdots = \lambda^\* \quad\text{at equilibrium.}$$
 
 This is mechanically a **thermodynamic equilibration** — `λ` equalizes across agents like temperature across
-bodies in thermal contact, or chemical potential across a membrane. The common value `λ*` is the
-**frame-independent price of free energy** — pinned not by any interpersonal comparison but by the
-conservation of the shared resource. *This is the first invariant beyond `E` itself: not a quantity of value,
-but a price.*
+bodies in thermal contact, or chemical potential across a membrane.
+
+> **⚠️ Honest caveat (added 2026-06-07, after external review).** §0 forbids cardinal interpersonal
+> comparison — and writing `dV = (\lambda_B - \lambda_A)\,dE` quietly performs one: it subtracts B-value/joule
+> from A-value/joule, i.e. it maximizes the **unweighted sum** `Σ_a V_a`. That is the **equal-Negishi-weight
+> social planner's** objective — a specific, defensible-but-chosen normalization, not a frame-free fact. The
+> temperature analogy breaks at exactly this point: temperature is observer-independent, while each `K_a` is
+> frame-relative by our own axioms (each agent's value scale is arbitrary up to its constant), so
+> "`λ_A = λ_B`" is **not invariant** under the per-agent rescaling freedom the theory grants. Two further
+> consequences we own: (i) **gameability** — `K_a` is agent-declared, so unweighted λ-equalization hands the
+> most resource to whoever claims the largest stakes; making the mechanism strategy-proof is a
+> **mechanism-design** problem (Hurwicz; Vickrey–Clarke–Groves; Myerson) this theory has not done; (ii) the
+> right reading of this section is therefore *conditional*: **given** a chosen normalization of the agents'
+> scales (Negishi weights), λ-equalization is the efficient allocation under it — the *price* `λ*` that emerges
+> is the useful coordination object, while "total value rises" is true only relative to that chosen weighting.
 
 ## 3. The directional part — the irreducible inter-frame structure
 
@@ -153,7 +164,9 @@ The cross-frame machinery yields a concrete control surface:
    *incomparable* values — no need to (and no way to) put them on one util scale. This is how to manage
    "separated" individuals without a central utility function.
 2. **Equalize shadow prices `λ_a`** by routing free energy from low-`λ` to high-`λ` agents — the value analog
-   of pressure equalization; raises total realized value monotonically.
+   of pressure equalization. (Per §2's caveat: "raises total value" holds only under a chosen Negishi
+   normalization of the agents' scales, and the rule is gameable under self-declared `K_a` without a
+   strategy-proof mechanism.)
 3. **Track the alignment matrix `\cos θ_{ab}`.** Co-locate aligned agents (pool); separate opposed agents
    (their coexistence dissipates value); exploit orthogonal/complementary agents via trade.
 4. **Separate the two frictions.** Goal-conflict (negative `\cos θ`) is structural — fix by re-aiming `k` or
@@ -172,6 +185,18 @@ The cross-frame machinery yields a concrete control surface:
   near a reference state and approximate globally.
 - **`λ_A = K_A/E_A` assumed the single-frame optimum.** Out of equilibrium, or with coupled budgets, `λ` is a
   local linearization, not a global constant.
+- **λ-equalization embeds a normalization and is not incentive-compatible (see §2 caveat).** Unweighted
+  equalization is the equal-Negishi-weight planner; under per-agent scale freedom it is not invariant; and with
+  self-declared `K_a` it rewards stake-inflation. A strategy-proof version is an open **mechanism-design**
+  problem (VCG-style transfers, scoring-rule elicitation of `K`) that this theory poses but does not solve.
+- **This doc's flow law and doc 05's selection law are different institutions — and we say which is which.**
+  Here, resource is *reallocated by design* (a governed market routing `E` by declared marginal value); in
+  [`05`](05-dynamics.md) §3, resource shares evolve by *replicator selection* (`ẇ_a = w_a(G_a − Ḡ)`: realized
+  growth compounds in place, no reallocation). They generically disagree — a high-stakes/low-growth agent gains
+  under this doc's rule and loses under doc 05's — and the alignment-stability theorem
+  ([`07`](07-alignment-stability.md)) lives in the *selection* regime. Real fleets sit between the two
+  institutions; which one dominates is itself the governance choice (and is exactly what "incentive design vs
+  oversight" is about).
 
 ## 9. What B closed and opened
 

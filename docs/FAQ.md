@@ -63,8 +63,9 @@ So the math is necessary precisely where a price cannot reach:
   price. The measure `ΔG` / `I(X;Y)` ([`02`](02-coding-theorem-of-value.md)) is defined from outputs and the
   world — no market required.
 - **Limits, not points.** A price is one equilibrium number. The theory gives the *ceiling* on value an agent
-  can generate (`ΔG ≤ I(X;Y)`), the *dissipation* it wastes (`D(q‖p)`), and the *fleet cap* (`Σ G_a ≤ H(X)`,
-  [`04`](04-multi-agent-capacity-region.md)). A number can't carry laws; a theory can.
+  can generate (`ΔG ≤ I(X;Y)`), the *dissipation* it wastes (`D(q‖p)`), and the *pooled-fleet cap* (`G_fleet ≤ H(X)` for a fleet that
+  fuses its perception — a corollary of doc 02; the earlier sum-form claim was wrong, see
+  [`04`](04-multi-agent-capacity-region.md) §2 erratum). A number can't carry laws; a theory can.
 
 **Honest boundary:** the math is *not* necessary everywhere. For trading goods between humans in a market,
 price already suffices and standard economics has it. And where a market exists, the cross-frame flow
@@ -129,8 +130,9 @@ capacity theorem `ΔG ≤ I(X;Y)` and the fleet's Kelly-portfolio operating poin
 for an arbitrary scarce resource. None of the underlying mechanisms is individually new.
 
 What is added — and what Kelly does not cover — is their **unification under one substrate-grounded quantity**,
-the **cross-frame / price layer** ([`03`](03-cross-frame-value.md)), the **fleet ceiling**
-([`04`](04-multi-agent-capacity-region.md)), and the **is/ought asymmetry** — beliefs have a target the world
+the **cross-frame / price layer** ([`03`](03-cross-frame-value.md)), the **pooled-fleet ceiling**
+([`04`](04-multi-agent-capacity-region.md) §2, as corrected — a corollary, not a new theorem), and the
+**is/ought asymmetry** — beliefs have a target the world
 supplies, goals do not — from which alignment emerges as a control-stability condition
 ([`07`](07-alignment-stability.md)). The full prior-art comparison and contribution statement are in
 [`docs/related-work.md`](related-work.md).

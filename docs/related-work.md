@@ -25,8 +25,11 @@ The closest prior art, and the one we are most careful to credit, is Kelly (1956
 exponential growth rate of wealth with an information rate, with the optimum achieved by betting proportional to
 one's beliefs. Breiman (1961) established its asymptotic optimality, Thorp applied it, and Cover (1991)
 developed universal portfolios. Our capacity theorem (doc 02) — `G* = D(q‖r)` and the side-information gain
-`ΔG = I(X;Y)` — is a generalization of Kelly's result, and our fleet operating point (doc 04 §3) is a Kelly/
-Cover portfolio over agents. We state this plainly: **doc 02 is generalized Kelly.** What we add is (i) the
+`ΔG = I(X;Y)` — is a generalization of Kelly's result; the side-information bound itself was proved in the
+financial setting by **Barron & Cover (1988)**, the primary source for it, with the value-of-information
+ordering going back to Blackwell (1953), and the same capacity-constrained-decision structure living natively
+in economics as rational inattention (Sims, 2003) and in decision-theoretic thermodynamics (Ortega & Braun,
+2013). Our fleet operating point (doc 04 §3) is a Kelly/Cover portfolio over agents. We state this plainly: **doc 02 is generalized Kelly.** What we add is (i) the
 reinterpretation of "wealth" as free energy, making the substrate physical rather than monetary; (ii) the
 cross-frame price layer (doc 03), which is genuinely beyond a single-agent betting result; (iii) the dynamics
 and alignment layer (doc 05); and (iv) the unifying claim that Kelly's theorem is the single-agent monetary
@@ -43,14 +46,14 @@ goal-directed value quantity on a physical substrate, not a betting payoff or a 
 information-theoretic notion of intrinsic value, **empowerment** (Klyubin, Polani & Nehaniv, 2005; Salge &
 Polani, 2013), defines an agent's value as the channel capacity from its actions to its future perceptions; it
 measures controllability rather than value-generation rate and offers no Kelly-style achievability, so it is a
-neighbor to — not an instance of — the capacity theorem. The fleet-level ceiling we derive — collective
-value-throughput bounded by the world's entropy, `Σ_a G_a ≤ H(X)` (doc 04) — is, by contrast, *not* a
-restatement of single-agent Kelly: the Kelly/Cover conservation law `W* + H = log m` and the directed-information
-growth bounds (Permuter, Kim & Weissman, 2011) are single-agent, and the nearest multi-agent results treat
-competitive wealth-*shares* (which sum to one by construction) or find group growth can *exceed* the sum. We
-have found no prior statement of an additive, source-entropy ceiling on collective growth — but have not
-exhausted network-information-theory / multi-user-gambling venues, so we hold it as plausibly-novel rather than
-certainly-first.
+neighbor to — not an instance of — the capacity theorem. **Correction (2026-06-07).** An earlier version of
+this section held the *sum-form* fleet ceiling `Σ_a G_a ≤ H(X)` as plausibly-novel ("no prior found"). External
+review then showed why no prior exists: **the sum-form claim is false** in the model as stated (two agents with
+identical perfect channels, each on its own bankroll, each achieve `G_a = H(X)`; the sum is `2H(X)`). The
+corrected statement — a fleet that *pools its bankroll and fuses its perception* is one agent, so
+`G_fleet ≤ I(X;Y_{1:m}) ≤ H(X)` — is true but is a **one-line corollary of the single-agent Kelly/Cover
+capacity theorem**, and we claim it only as such (doc 04 §2 erratum). The lesson is recorded: a novelty search
+answers "did someone publish this?", not "is it true?" — those are different audits.
 
 ## Reinforcement learning
 
@@ -161,11 +164,11 @@ treatments do not.
 ## References (to be formatted for the venue)
 
 Arrow (1951) *Social Choice and Individual Values*; Arrow & Debreu (1954) *Econometrica*; Bellman (1957)
-*Dynamic Programming*; Bennett (1982) *Int. J. Theor. Phys.*; Bernoulli (1738) *Comm. Acad. Sci. Petrop.*;
+*Dynamic Programming*; Bennett (1982) *Int. J. Theor. Phys.*; Bernoulli (1738) *Comm. Acad. Sci. Petrop.*; Blackwell (1953) *Ann. Math. Stat.* (comparison of experiments);
 Armstrong & Mindermann (2018) *NeurIPS* (Occam's razor is insufficient to infer the preferences of irrational
 agents); Ashby (1956) *An Introduction to Cybernetics* (requisite variety); Åström & Murray (2008) *Feedback
 Systems*; Bostrom (2014) *Superintelligence*;
-Breiman (1961) *Proc. 4th Berkeley Symp.*; Bauer, Bruveris & Michor (2016)
+Breiman (1961) *Proc. 4th Berkeley Symp.*; Barron & Cover (1988) *IEEE Trans. Inf. Theory* (a bound on the financial value of information); Bauer, Bruveris & Michor (2016)
 *Bull. LMS* (uniqueness of the Fisher–Rao metric); Campbell (1986) *Proc. AMS* (extended Čencov
 characterization); Čencov (1982) *Statistical Decision Rules*; Conant & Ashby (1970) *Int. J. Systems Sci.* (good
 regulator theorem); Cover & Thomas, *Elements of Information Theory*; Cover (1991) *Math. Finance* (universal
@@ -181,6 +184,6 @@ Weissman (2011) *IEEE Trans. Inf. Theory* (directed information & portfolio grow
 Perception* (perceptual control theory); Qian, H. (2001) *Phys. Rev. E* (relative entropy as free energy);
 Soares, Fallenstein, Yudkowsky & Armstrong (2015) *AAAI Workshop* (corrigibility); Spizzirri (2026)
 *arXiv:2512.03048* (the specification trap); Turner et al. (2021) *NeurIPS* (optimal policies tend to seek power); Salge & Polani (2013) (empowerment — an introduction); Savage (1954) *Foundations of Statistics*;
-Shannon (1948) *Bell Syst. Tech. J.*; Still, Sivak, Bell & Crooks (2012) *Phys. Rev. Lett.* (thermodynamics of
+Shannon (1948) *Bell Syst. Tech. J.*; Sims (2003) *J. Monetary Econ.* (rational inattention); Ortega & Braun (2013) *Proc. R. Soc. A*; Still, Sivak, Bell & Crooks (2012) *Phys. Rev. Lett.* (thermodynamics of
 prediction); Sutton & Barto, *Reinforcement Learning*; Touchette & Lloyd (2000) *Phys. Rev. Lett.*
 (information-theoretic limits of control).
