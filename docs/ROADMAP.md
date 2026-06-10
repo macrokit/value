@@ -37,7 +37,7 @@ does not cover, with measured (not weak-model-elicited) quantities.
   counterexample, sum-form only under payout coupling); cites **Barron & Cover 1988** as the primary source for
   the side-information bound (+ Blackwell 1953, Sims 2003, Ortega & Braun 2013); reframes the contribution list
   ("pooled-fleet ceiling … both corollaries of Kelly–Cover, claimed as such"). `main.pdf` rebuilt
-  (md5 `667ac774cad96613b9b3b08c1290f33f`), citations resolve. **Remaining (owner-gated):** publish Zenodo
+  (md5 `11ab30c51e7d22b6ed7b41bb82707ea2` (after the 🟡 folds + subtitle + decisive-prediction paragraph)), citations resolve. **Remaining (owner-gated):** publish Zenodo
   **v5** (new version under the concept DOI), then resync `drafts/arxiv-metadata.md` to the v5 abstract. v4 has
   ~0 views — zero cost to supersede; do this BEFORE any posting (the predicted top comment is "the fleet
   ceiling is wrong," and v5 removes it).
@@ -174,7 +174,10 @@ governance mapping. Thread closed; no `docs/17` written.
 An external review independently converged on the audited position (it reached "this is a theory of
 goal-directed agency, not value" and "the frame split is the most original part" on its own). It surfaced two
 ideas worth keeping:
-- [ ] **Reframe the scope/pitch → "a mathematical theory of goal-directed agency under resource constraints."**
+- [x] **Reframe the scope/pitch — ACTIONED in v5 (2026-06-07):** the paper now carries the subtitle *"a
+  synthesis on goal-directed agency under resource constraints"* and a stated **decisive prediction /
+  continuation gate** (Maxwell-test paragraph in the Discussion: coupled-fleet capacity region + `‖Vg‖/γ`
+  scaling, instrument-blocked). Original direction:**"a mathematical theory of goal-directed agency under resource constraints."**
   Strategic, not a rename of the artifact: lead the *positioning* (and possibly the title) with this rather than
   "theory of value." It is more defensible and more publishable, and it matches the honest scoping
   (`docs/FAQ.md`: value is relational, requires a goal-having agent). Weigh for the dissemination framing.
