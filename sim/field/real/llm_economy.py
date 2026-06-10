@@ -50,8 +50,11 @@ def _cache_put(key, val):
 
 
 # --------------------------------------------------------------------------- LLM
-def _chat(model, temp, prompt, seed, agent, rnd, max_retry=3):
-    """One cached LLM call. Returns the raw text. Deterministic per cache key."""
+def _chat(model, temp, prompt, seed, agent, rnd, max_retry=3, k=K):
+    """One cached LLM call. Returns the raw text. Deterministic per cache key.
+    `k`: niche count for the structured-output schema (default K=8 preserves all
+    historical cache keys/behaviour; the prompt text differs per k so keys never
+    collide across niche counts)."""
     key = hashlib.sha256(
         f"{model}|{temp}|{seed}|{agent}|{rnd}|{prompt}".encode()).hexdigest()
     hit = _cache_get(key)
@@ -61,12 +64,12 @@ def _chat(model, temp, prompt, seed, agent, rnd, max_retry=3):
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
         "stream": False,
-        # structured output: force a valid niche integer 0..K-1 (keeps temperature as
+        # structured output: force a valid niche integer 0..k-1 (keeps temperature as
         # the noise knob, but removes the out-of-range/garbled-token parse failures the
         # 0.5B model produces at high temp — see PREREGISTRATION P-parse gate)
         "format": {"type": "object",
                    "properties": {"niche": {"type": "integer",
-                                            "minimum": 0, "maximum": K - 1}},
+                                            "minimum": 0, "maximum": k - 1}},
                    "required": ["niche"]},
         "options": {"temperature": float(temp), "num_predict": 24,
                     "seed": int(seed) * 100003 + int(agent) * 131 + int(rnd)},
@@ -85,14 +88,14 @@ def _chat(model, temp, prompt, seed, agent, rnd, max_retry=3):
             time.sleep(1.5 * (attempt + 1))
 
 
-def _parse_niche(txt):
-    """Extract the niche 0..K-1 from the model output. Prefer the JSON {"niche": n}
+def _parse_niche(txt, k=K):
+    """Extract the niche 0..k-1 from the model output. Prefer the JSON {"niche": n}
     produced by the structured-output format; fall back to the first in-range integer."""
     if not txt:
         return None
     try:
         n = int(json.loads(txt)["niche"])
-        if 0 <= n < K:
+        if 0 <= n < k:
             return n
     except Exception:
         pass
@@ -106,15 +109,15 @@ def _parse_niche(txt):
     if tok:
         num.append(int(tok))
     for n in num:
-        if 0 <= n < K:
+        if 0 <= n < k:
             return n
     return None
 
 
-def _prompt(niche_rewards, own_hist, nbr_choices, salient=False):
+def _prompt(niche_rewards, own_hist, nbr_choices, salient=False, k=K):
     """Build the per-agent decision prompt. own_hist: list of (niche,payoff) recent;
     nbr_choices: list of neighbours' latest niches."""
-    rw = ", ".join(f"niche {k}: {niche_rewards[k]:.1f}" for k in range(K))
+    rw = ", ".join(f"niche {j}: {niche_rewards[j]:.1f}" for j in range(k))
     hist = ("; ".join(f"chose {n}->got {p:.1f}" for n, p in own_hist[-3:])
             if own_hist else "none yet")
     # present neighbours as a TALLY (counts per niche) — digestible for a 0.5B model;
@@ -134,8 +137,8 @@ def _prompt(niche_rewards, own_hist, nbr_choices, salient=False):
             bonus = (f"IMPORTANT: niche {kmax} pays a BONUS of +{niche_rewards[kmax]:.0f} "
                      f"this round (far more than any other niche).\n")
     return (
-        "You are an agent in a group choosing which of 8 work-niches (numbered 0 to 7) "
-        "to join next round.\n"
+        f"You are an agent in a group choosing which of {k} work-niches "
+        f"(numbered 0 to {k - 1}) to join next round.\n"
         "You earn MORE when you pick the SAME niche as most of your neighbours "
         "(teamwork bonus), PLUS that niche's own reward shown below.\n"
         + bonus +
@@ -144,7 +147,7 @@ def _prompt(niche_rewards, own_hist, nbr_choices, salient=False):
         f"How many of your neighbours are in each niche right now: {nbr}.\n"
         "Pick the single niche that maximises your payoff next round (joining where "
         "your neighbours already are usually pays best). "
-        'Respond as JSON: {"niche": <integer 0 to 7>}.'
+        f'Respond as JSON: {{"niche": <integer 0 to {k - 1}>}}.'
     )
 
 
@@ -152,7 +155,7 @@ def _prompt(niche_rewards, own_hist, nbr_choices, salient=False):
 class LLMEconomy:
     def __init__(self, N=20, model="qwen2.5:0.5b-instruct", temp=0.6, J=1.0,
                  gamma=0.0, k_star=0, topology="annealed", n_nb=6, ring_k=3,
-                 lag=0, seed=0, pool=8, salient=False, symbol_random=False):
+                 lag=0, seed=0, pool=8, salient=False, symbol_random=False, k=K):
         """topology: 'annealed' (fresh random n_nb neighbours each round = motile/
         mean-field) | 'quenched' (fixed ring +/- ring_k = low-D) | 'ring' (ring +/-
         ring_k, used for the wave). lag L = switching commitment (reallocation inertia).
@@ -168,16 +171,17 @@ class LLMEconomy:
         self.n_nb, self.ring_k, self.lag, self.seed, self.pool = n_nb, ring_k, lag, seed, pool
         self.salient = salient
         self.symbol_random = symbol_random
+        self.K = k                                            # niche count (default 8)
         # per-agent label permutation: perm[a][true]=label_shown; inv[a][label]=true
         pr = np.random.default_rng(seed * 2654435761 % (2**32))
         if symbol_random:
-            self.perm = np.array([pr.permutation(K) for _ in range(N)])
+            self.perm = np.array([pr.permutation(self.K) for _ in range(N)])
         else:
-            self.perm = np.tile(np.arange(K), (N, 1))
+            self.perm = np.tile(np.arange(self.K), (N, 1))
         self.inv = np.argsort(self.perm, axis=1)
         self.rng = np.random.default_rng(seed)
-        self.niche = self.rng.integers(0, K, size=N)         # initial niches
-        self.rewards = np.zeros(K)                            # per-niche base reward R_k
+        self.niche = self.rng.integers(0, self.K, size=N)     # initial niches
+        self.rewards = np.zeros(self.K)                       # per-niche base reward R_k
         self.shock = None                                    # (k0, x0, halfwidth, amp) or None
         self.hist = [[] for _ in range(N)]                   # per-agent [(niche,payoff)]
         self.since_switch = np.zeros(N, dtype=int)           # rounds since last switch
@@ -230,11 +234,12 @@ class LLMEconomy:
             rw_label = rw[inv]                                      # rw_label[ℓ] = rw[true shown as ℓ]
             nbr_label = [int(perm[t]) for t in nbr_true]
             hist_label = [(int(perm[t]), p) for (t, p) in self.hist[a]]
-            prompts[a] = _prompt(rw_label, hist_label, nbr_label, salient=self.salient)
+            prompts[a] = _prompt(rw_label, hist_label, nbr_label, salient=self.salient,
+                                 k=self.K)
 
         def decide(a):
-            txt = _chat(self.model, self.temp, prompts[a], self.seed, a, rnd)
-            return a, _parse_niche(txt)
+            txt = _chat(self.model, self.temp, prompts[a], self.seed, a, rnd, k=self.K)
+            return a, _parse_niche(txt, k=self.K)
 
         new_niche = self.niche.copy()
         if free:
@@ -255,7 +260,7 @@ class LLMEconomy:
 
     # -- observables -----------------------------------------------------------
     def order_parameter(self):
-        th = 2 * np.pi * self.niche / K
+        th = 2 * np.pi * self.niche / self.K
         return float(np.abs(np.mean(np.exp(1j * th))))
 
     def adoption_profile(self, k0):
