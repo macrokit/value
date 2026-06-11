@@ -184,16 +184,19 @@ audit *clarified* the experiment: the sum-form was false precisely because the b
 the experiment must **implement the payout coupling explicitly** (shared bankroll or parimutuel) and measure
 the region. Standing guardrails apply at every stage: pre-register before any run; report negatives as
 verdicts; no instrument-fishing for positives.
-- [ ] **Stage 0 — synthetic pilot of the COUPLED fleet (cheap, runnable now).** Extend `sim/` with an explicit
-  payout-coupled fleet (one shared bankroll betting fused posteriors; and/or parimutuel odds), vary perception
-  overlap, measure counterfactual sub-coalition throughputs, and check the predicted region structure. This
-  validates the *experimental design* and the corrected theory's coupled-regime predictions before any real
-  agents — and is the first test of prediction (i) in any form.
-- [ ] **Stage 1 — the `‖Vg‖/γ` redo (feasible NOW — design-blocked, not instrument-blocked).** Doc 13's own
-  verdict says the fix is the *design*, not bigger models: de-saturated continuous/large-K goal space, larger
-  `δ`, more seeds. Expected lean-negative (g-exponent ≈ 0 last time) — run it for a **definitive verdict**: a
-  clean negative honestly retires half the displacement current per the paper's own continuation-gate language
-  (itself a publishable, decision-grade result); a positive is half the discovery.
+- [x] **Stage 0 — synthetic pilot of the COUPLED fleet — DONE (2026-06-10): 15/15 pre-registered checks pass**
+  (`docs/17-coupled-fleet-pilot.md`, `sim/coupled/`). Shared-bankroll coalition throughputs `G_S = I(X;Y_S)`
+  (±0.003 nats), conditional submodularity + the XOR control failing as predicted, the erratum counterexample
+  reproduced, the parimutuel gap law `G_a − G_b = I_a − I_b` (±0.0016 nats — a calibration-free Stage-2 target),
+  aggregate sum-collapse, and the first doc-04 §4 curvature check. Necessary-not-sufficient (synthetic);
+  validates the corrected math + the Stage-2 design.
+- [x] **Stage 1 — the `‖Vg‖/γ` redo — DONE (2026-06-11): CAP again (mirror-image reason) + direction FALSIFIED
+  per the frozen rule; the small-model thread CLOSES** (`docs/18-residual-scaling-redo.md`). The de-saturated
+  K=16 tent design dissolved responsiveness instead of saturating: the population sits at uniform scatter in
+  all 9 conditions (8× per-axis grid); exploratory exponents (+0.05, −0.05) vs theorem (+1, −1); the direction
+  trigger fired via non-response (eff_γ < 0 at both points), disclosed in full. K=8 saturates, K=16 doesn't
+  respond — the 1.5b instrument class is affirmatively exhausted; the residual-scaling question moves to
+  Stage 2 with a mandatory pre-registered responsiveness gate.
 - [ ] **Stage 2 — the real Maxwell test (the stronger-agent instrument now exists commercially).** The
   convergence finding's blocker was "agents capable enough to play the value game" — small local models failed.
   Frontier-model agents via API plausibly clear that bar today. The experiment: a payout-coupled multi-agent
