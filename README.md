@@ -3,7 +3,8 @@
 *A mathematical theory of value — built the way Shannon built information.*
 
 This is the research repository behind the preprint *A Mathematical Theory of Value*
-([Zenodo (latest version)](https://doi.org/10.5281/zenodo.20487041) · concept DOI
+([arXiv:2606.12502](https://arxiv.org/abs/2606.12502) ·
+[Zenodo (latest version)](https://doi.org/10.5281/zenodo.20487041) · concept DOI
 [10.5281/zenodo.20487041](https://doi.org/10.5281/zenodo.20487041), always resolves to the latest version ·
 byline Cheng Qian). It develops one bet to its consequences:
 
@@ -183,5 +184,5 @@ it against prior art.
 Copyright © 2026 **Cheng Qian**. Dual-licensed by material type (see [`LICENSE`](LICENSE)):
 the **written work** (docs, paper, prose, figures) under **CC BY 4.0** — reuse is welcome *with
 attribution to Cheng Qian*; the **code** (`sim/`, `tools/`, the website) under **Apache 2.0**.
-Cite as: *Qian, Cheng. A Mathematical Theory of Value. Zenodo, concept DOI
+Cite as: *Qian, Cheng. A Mathematical Theory of Value. arXiv:2606.12502; Zenodo, concept DOI
 [10.5281/zenodo.20487041](https://doi.org/10.5281/zenodo.20487041).*

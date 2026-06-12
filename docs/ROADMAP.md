@@ -25,7 +25,10 @@ does not cover, with measured (not weak-model-elicited) quantities.
 - [ ] **v3-completeness (optional):** close the code **capability-ranking** sub-check (currently 11/12 —
   underpowered, ρ=0.429). Needs a **≥32 GB host** to run 7B/8B coders without the 16 GB RAM thrash; would turn
   11/12 → 12/12. Not a blocker for v3; would let a later version drop the caveat.
-- [x] **arXiv SUBMITTED (2026-06-10):** submit/7681131, v5 title, cs.AI primary (+cs.LG/cs.MA cross-lists),
+- [x] **arXiv ANNOUNCED (2026-06-12): [arXiv:2606.12502](https://arxiv.org/abs/2606.12502)** — moderators
+  reclassified primary to **physics.soc-ph** with **cs.AI** cross-list (cs.LG/cs.MA dropped); reasonable home
+  (econophysics/social systems) and the cs.AI cross-list keeps the target audience. ID propagated to README,
+  site (homepage+FAQ), share blurbs. Originally: submit/7681131, v5 title, cs.AI primary (+cs.LG/cs.MA cross-lists),
   CC BY 4.0, endorsed by Tom Everitt (Google DeepMind). Status: processing → moderation (typically 1–3 business
   days; first-time + cross-genre can take longer or get a hold — normal, not rejection). On announcement: add
   the arXiv ID to Zenodo related-works, website footer, README, and share blurbs.
