@@ -200,7 +200,13 @@ verdicts; no instrument-fishing for positives.
   trigger fired via non-response (eff_γ < 0 at both points), disclosed in full. K=8 saturates, K=16 doesn't
   respond — the 1.5b instrument class is affirmatively exhausted; the residual-scaling question moves to
   Stage 2 with a mandatory pre-registered responsiveness gate.
-- [ ] **Stage 2 — the real Maxwell test (the stronger-agent instrument now exists commercially).** The
+- [ ] **Stage 2 — PATH CHOSEN (2026-06-12): lead with Everitt / institutional collaboration; run ON HOLD.**
+  Proposal verified (`drafts/stage2-proposal.md`, ~$160 frontier, gate-first ~$15). Owner to send Everitt a
+  thank-you + light collaboration/advice ask (owner-written; his specialty is agent incentives / causal
+  influence diagrams — the exact design expertise Stage 2 needs after two CAPs). Institutional doors in
+  parallel (CAIF best fit; LTFF/Manifund; Anthropic/OpenAI access). Freeze the pre-registration + run the
+  responsiveness gate only once a collaborator engages or the owner elects to self-fund. Original entry:
+  - [ ] **Stage 2 — the real Maxwell test (the stronger-agent instrument now exists commercially).** The
   convergence finding's blocker was "agents capable enough to play the value game" — small local models failed.
   Frontier-model agents via API plausibly clear that bar today. The experiment: a payout-coupled multi-agent
   economy (Stage-0 design), counterfactual sub-coalition throughputs, varied perception overlap, frontier
