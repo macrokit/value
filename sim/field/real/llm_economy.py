@@ -155,7 +155,8 @@ def _prompt(niche_rewards, own_hist, nbr_choices, salient=False, k=K):
 class LLMEconomy:
     def __init__(self, N=20, model="qwen2.5:0.5b-instruct", temp=0.6, J=1.0,
                  gamma=0.0, k_star=0, topology="annealed", n_nb=6, ring_k=3,
-                 lag=0, seed=0, pool=8, salient=False, symbol_random=False, k=K):
+                 lag=0, seed=0, pool=8, salient=False, symbol_random=False, k=K,
+                 chat_fn=None):
         """topology: 'annealed' (fresh random n_nb neighbours each round = motile/
         mean-field) | 'quenched' (fixed ring +/- ring_k = low-D) | 'ring' (ring +/-
         ring_k, used for the wave). lag L = switching commitment (reallocation inertia).
@@ -171,6 +172,10 @@ class LLMEconomy:
         self.n_nb, self.ring_k, self.lag, self.seed, self.pool = n_nb, ring_k, lag, seed, pool
         self.salient = salient
         self.symbol_random = symbol_random
+        # chat backend: default = module _chat (Ollama). Stage 2 passes an API client
+        # with the SAME signature (model, temp, prompt, seed, agent, rnd, k=) and the
+        # same cache contract. Default None preserves all historical behaviour.
+        self.chat_fn = chat_fn if chat_fn is not None else _chat
         self.K = k                                            # niche count (default 8)
         # per-agent label permutation: perm[a][true]=label_shown; inv[a][label]=true
         pr = np.random.default_rng(seed * 2654435761 % (2**32))
@@ -238,7 +243,7 @@ class LLMEconomy:
                                  k=self.K)
 
         def decide(a):
-            txt = _chat(self.model, self.temp, prompts[a], self.seed, a, rnd, k=self.K)
+            txt = self.chat_fn(self.model, self.temp, prompts[a], self.seed, a, rnd, k=self.K)
             return a, _parse_niche(txt, k=self.K)
 
         new_niche = self.niche.copy()
