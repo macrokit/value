@@ -1,0 +1,162 @@
+{
+  "params": {
+    "eps_A": 0.15,
+    "eps_B": 0.25,
+    "kappa": 0.2,
+    "rho": 1.0,
+    "cost": 1.0,
+    "cos_thetas": [
+      -0.8,
+      -0.4,
+      0.0,
+      0.4,
+      0.8
+    ]
+  },
+  "part1": {
+    "I_A": 0.2704380927539544,
+    "I_B": 0.130812035941137,
+    "Ihat_A": 0.2693149385705906,
+    "Ihat_B": 0.1305538620533,
+    "G_null": 0.4773700771185136,
+    "slope": 0.20000000000000007,
+    "pred_slope": 0.2,
+    "r2_cos": 1.0,
+    "rows": [
+      {
+        "cos_theta": -0.8,
+        "G_coupled": 0.3173700771185135,
+        "G_null": 0.4773700771185136,
+        "dividend": -0.1600000000000001,
+        "kelly_weights": [
+          0.5318586345280104,
+          0.46814136547198965
+        ]
+      },
+      {
+        "cos_theta": -0.4,
+        "G_coupled": 0.39737007711851374,
+        "G_null": 0.4773700771185136,
+        "dividend": -0.07999999999999985,
+        "kelly_weights": [
+          0.5318586345280104,
+          0.46814136547198965
+        ]
+      },
+      {
+        "cos_theta": 0.0,
+        "G_coupled": 0.4773700771185136,
+        "G_null": 0.4773700771185136,
+        "dividend": 0.0,
+        "kelly_weights": [
+          0.5318586345280104,
+          0.46814136547198965
+        ]
+      },
+      {
+        "cos_theta": 0.4,
+        "G_coupled": 0.5573700771185136,
+        "G_null": 0.4773700771185136,
+        "dividend": 0.08000000000000002,
+        "kelly_weights": [
+          0.5318586345280104,
+          0.46814136547198965
+        ]
+      },
+      {
+        "cos_theta": 0.8,
+        "G_coupled": 0.6373700771185137,
+        "G_null": 0.4773700771185136,
+        "dividend": 0.1600000000000001,
+        "kelly_weights": [
+          0.5318586345280104,
+          0.46814136547198965
+        ]
+      }
+    ]
+  },
+  "part2": {
+    "rho_nash": 0.2,
+    "rows": [
+      {
+        "cos_theta": -0.8,
+        "G_iso": 0.43930448609231054,
+        "G_nash": 0.3753044860923105,
+        "G_coop": 0.40090448609231055,
+        "nash_minus_iso": -0.06400000000000006,
+        "coop_minus_nash": 0.025600000000000067
+      },
+      {
+        "cos_theta": -0.4,
+        "G_iso": 0.43930448609231054,
+        "G_nash": 0.4073044860923105,
+        "G_coop": 0.4137044860923105,
+        "nash_minus_iso": -0.03200000000000003,
+        "coop_minus_nash": 0.006399999999999961
+      },
+      {
+        "cos_theta": 0.0,
+        "G_iso": 0.43930448609231054,
+        "G_nash": 0.43930448609231054,
+        "G_coop": 0.43930448609231054,
+        "nash_minus_iso": 0.0,
+        "coop_minus_nash": 0.0
+      },
+      {
+        "cos_theta": 0.4,
+        "G_iso": 0.43930448609231054,
+        "G_nash": 0.47130448609231057,
+        "G_coop": 0.47770448609231053,
+        "nash_minus_iso": 0.03200000000000003,
+        "coop_minus_nash": 0.006399999999999961
+      },
+      {
+        "cos_theta": 0.8,
+        "G_iso": 0.43930448609231054,
+        "G_nash": 0.5033044860923105,
+        "G_coop": 0.5289044860923106,
+        "nash_minus_iso": 0.06399999999999995,
+        "coop_minus_nash": 0.025600000000000067
+      }
+    ]
+  },
+  "checks": [
+    [
+      "K1 information clamp: \u00ca[ln R_perc]=I(X;Y) and I is cos\u03b8-invariant",
+      true,
+      "\u00ce_A=0.2693(I=0.2704) \u00ce_B=0.1306(I=0.1308); I identical for every cos\u03b8 by construction"
+    ],
+    [
+      "K2 Kelly-null growth is constant in cos\u03b8 (one number, all conditions)",
+      true,
+      "G_null=0.4774 for every cos\u03b8 (isolated streams independent of cos\u03b8)"
+    ],
+    [
+      "K3 dividend monotone & linear in cos\u03b8 with slope \u03ba\u03c1 (\u22641% abs, \u22642e-3 resid)",
+      true,
+      "slope=0.2000 (\u03ba\u03c1=0.2000); intercept=+0.0000; max resid=1.39e-16; monotone=True"
+    ],
+    [
+      "K4 sign law: dividend>0 (cos\u03b8>0), <0 (cos\u03b8<0), \u22480 (orthogonal)",
+      true,
+      "neg=[-0.16, -0.08]  zero=+0.00e+00  pos=[0.08, 0.16]"
+    ],
+    [
+      "K5 Kelly-orthogonality: cos\u03b8 explains ~all variance, info explains 0",
+      true,
+      "Var(G_coupled)=1.280e-02>0 across cos\u03b8; R\u00b2(cos\u03b8)=1.00000; R\u00b2(I_A,I_B,G_null)=0.0 (they are constants)"
+    ],
+    [
+      "K6 conflict tax: Nash\u2212isolation = (2\u03ba\u00b2/c)\u00b7cos\u03b8, <0 for cos\u03b8<0",
+      true,
+      "measured=[-0.064, -0.032, 0.0, 0.032, 0.064]  predicted=[-0.064, -0.032, 0.0, 0.032, 0.064]"
+    ],
+    [
+      "K7 free-riding gap: cooperative\u2212Nash = (\u03ba\u00b2/c)\u00b7cos\u00b2\u03b8 \u2265 0 (zero at orthogonal)",
+      true,
+      "measured=[0.0256, 0.0064, 0.0, 0.0064, 0.0256]  predicted=[0.0256, 0.0064, 0.0, 0.0064, 0.0256]"
+    ]
+  ],
+  "n_pass": 7,
+  "n_total": 7
+}

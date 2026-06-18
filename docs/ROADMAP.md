@@ -214,6 +214,12 @@ verdicts; no instrument-fishing for positives.
   pre-registration first. Decision rule is already printed in the paper: predictions pass → the unification
   earns the stronger word; fail/CAP → the distinctively-unified layer retires, and the cleanly-falsified
   program is itself the contribution.
+  - **Grid prereg should adopt the Kelly-orthogonality signal+null** (`docs/20-kelly-orthogonality.md`,
+    `sim/coupled/kelly_orthogonal.py`, 7/7): primary endpoint = slope of the fleet-growth dividend in `cos θ`
+    measured at **fixed `I(X;Y_a)`**; null = Kelly/Cover portfolio over each agent's **isolated** return stream
+    (constant in `cos θ`). A clamped-`I`, varied-`cos θ` contrast no information-theoretic account can move.
+    (NB the "novel seam" framing in doc 20 §5 is un-audited — owes a prior-art priority pass vs
+    info-constrained / evolutionary game theory + informational GE before any external claim of novelty.)
 
 ### ⊕ Two future-directions from the GPT-5.5 review (2026-06-07) — captured, not yet acted on
 An external review independently converged on the audited position (it reached "this is a theory of
