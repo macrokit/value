@@ -107,6 +107,21 @@ ways this construction may simply re-instantiate. Per the project's concession d
 a claim like this earns the word "novel" only *after* a deep-research priority pass clears those literatures.
 Until then it is a flag, not a flag-planting. **Priority check owed before any external framing of this as new.**
 
+**First concrete entries for that priority pass (do not skip):**
+- **van Merwijk, Carey & Everitt, *A Complete Criterion for Value of Information in Soluble Influence Diagrams*
+  (arXiv:2202.11629, 2022).** The "value of information" (VoI) lineage is the direct ancestor of doc 02's
+  *value-of-perception* claim: VoI is the expected gain to a goal-directed agent from observing a variable.
+  This paper gives the *complete graphical* criterion for *when* VoI ≠ 0 (qualitative, general-utility,
+  single-agent / multi-decision). Our `ΔG = I(X;Y)` is the *quantitative* law in the **log-utility / compounding**
+  slice (classical VoI = mutual information only there — Kelly 1956), so it is **not** anticipated quantitatively
+  — but the *framing* is squarely in this tradition and must be cited as such, the way is/ought was conceded to
+  Armstrong & Mindermann and the side-info bound to Barron–Cover. (NB: Everitt endorsed the arXiv submission and
+  is the Stage-2 collaboration target — this is common ground, not a priority threat.)
+- **Multi-Agent Influence Diagrams (MAIDs; Koller–Milch; Hammond, Fox, Everitt et al.)** — the *game-theoretic*
+  extension of the above, coupling informational structure to strategic interaction. This is the literature
+  **most likely to anticipate the §5 "seam"** (info structure bounding a strategic, alignment-shaped outcome).
+  Clear MAIDs (and informational-GE / info-constrained game theory) before claiming the seam is new.
+
 ## 6. What it does NOT show
 
 - **It assumes the coupling form.** The whole effect rides on real agents' value-streams coupling through an
