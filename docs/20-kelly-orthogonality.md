@@ -121,6 +121,17 @@ Until then it is a flag, not a flag-planting. **Priority check owed before any e
   extension of the above, coupling informational structure to strategic interaction. This is the literature
   **most likely to anticipate the §5 "seam"** (info structure bounding a strategic, alignment-shaped outcome).
   Clear MAIDs (and informational-GE / info-constrained game theory) before claiming the seam is new.
+- **Jing Chen, *An entropy theory of value* (Structural Change and Economic Dynamics, 2018); Galbraith & Chen,
+  *Entropy Economics* (2024); Georgescu-Roegen (1971).** *This is prior art for the FOUNDATIONAL layer, not the
+  §5 seam — recorded here and folded into [`related-work.md`](related-work.md) "Entropy theories of value".*
+  Chen independently and earlier makes our doc-00/01 core moves: value = `−log(scarcity)` = Shannon entropy,
+  derived from additivity axioms; "an entropy theory of value is inevitably an information theory of value";
+  thermodynamic low-entropy grounding; value-of-information ≈ mutual information. **Must-cite** in any public
+  framing — a value paper titled *A Mathematical Theory of Value* that omits it reads as a novelty overclaim to
+  the physics.soc-ph / ecological-economics audience. NOT in Chen's line (our departures): compounding/Kelly
+  growth-rate, the `ΔG=I(X;Y)` capacity theorem with converse, the `G=D(q‖r)−D(q‖p)` Second Law, and the entire
+  multi-agent price/alignment/fleet/dynamics layer. Net: it *sharpens* the standing verdict that originality
+  rests on the multi-agent layer, and closes a real gap (Chen was absent from related-work.md).
 
 ## 6. What it does NOT show
 

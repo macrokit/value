@@ -56,6 +56,46 @@ corrected statement — a fleet that *pools its bankroll and fuses its perceptio
 capacity theorem**, and we claim it only as such (doc 04 §2 erratum). The lesson is recorded: a novelty search
 answers "did someone publish this?", not "is it true?" — those are different audits.
 
+## Entropy theories of value (the closest prior framing of our foundational move)
+
+The single closest prior framing of doc 00–01 — value as a Shannon-style entropy/information quantity — is the
+**entropy theory of value**, and we credit it as directly as we credit Kelly and Čencov. **Georgescu-Roegen
+(1971)** first proposed that all economic value reduces to a common denominator of low entropy. **Jing Chen, "An
+entropy theory of value"** (*Structural Change and Economic Dynamics*, 2018; developed earlier in Chen 2005,
+2016, and now book-length in **Galbraith & Chen, *Entropy Economics: The Living Basis of Value and Production*,
+2024**) makes, independently and eight years earlier, the core moves of our foundational layer:
+
+- Value is defined as `V(P) = −log_b P`, derived as the *unique* functional form satisfying monotonicity,
+  additivity over independent (non-substitute) products, and non-negativity — the same additivity-forces-the-
+  logarithm argument that gives our `V = Σ k_i ln e_i` (doc 01); the expected value `V(X) = Σ p_i(−log_b p_i)` is
+  literally the **Shannon entropy**, exactly as our focus penalty makes entropy reappear inside the value law.
+- The explicit thesis that **"an entropy theory of value is inevitably an information theory of value"** (Shannon
+  1948 as the stimulus), grounded in the **thermodynamic** low-entropy substrate (second law, Georgescu-Roegen) —
+  the same information↔thermodynamics framing we use for the substrate.
+- A value-of-information reading via **mutual information** `R = H(X) − H_Y(X)` (Chen §5), the qualitative kin of
+  our `ΔG = I(X;Y)` (doc 02).
+
+We concede plainly that the **framing, the logarithmic-value-from-axioms derivation, the entropy=value=information
+identity, and the thermodynamic grounding are prior art** — earlier, peer-reviewed, and now with the visibility of
+a Galbraith co-authored book. Our foundational (single-agent) layer does not claim these as new; per the standing
+strategic verdict, it should not.
+
+What is *not* in Chen's line, and where our departures live: (i) the **compounding / log-optimal growth-rate**
+formulation and its Kelly/ergodic derivation — Chen's value is a *static* measure of commodity scarcity, with no
+`G(b) = E[log Σ b_i o_i]`, no `G* = D(q‖r)`; (ii) the **capacity theorem with achievability and a Gibbs converse**
+(`ΔG = I(X;Y)` as an achieved bound), where Chen states only a qualitative value-of-information ≈ mutual-
+information correspondence; (iii) the **two-divergence Second Law** `G = D(q‖r) − D(q‖p)` (misalignment as
+dissipation, learning as value-recovery); and (iv) the **entire multi-agent layer** — cross-frame price, the
+Fisher–Rao/Čencov invariant, alignment `cos θ` curvature, the fleet capacity region, the equations of motion, and
+the is/ought asymmetry — none of which appears in the entropy-theory-of-value literature, whose "many producers"
+is classical scarcity/monopoly economics, not a frame-covector price geometry. One genuine *conceptual* divergence
+is worth stating and not overstating: Chen's value `−log(scarcity)` is essentially **observer-independent** (a
+market/physical property of a commodity), whereas ours is **frame-relative to an agent's goal `k`** — but a
+reviewer may reasonably read our `k`-weighted version as a *generalization* of this line rather than a new
+paradigm, and we hold the foundational layer's originality with corresponding modesty. The upshot reinforces the
+paper's own emphasis: whatever escapes prior art rests on the multi-agent/dynamics layer, not the value-as-entropy
+foundation.
+
 ## Reinforcement learning
 
 "Value function" is a central, precisely-defined object in reinforcement learning (Bellman, 1957; Sutton and
@@ -169,7 +209,7 @@ Arrow (1951) *Social Choice and Individual Values*; Arrow & Debreu (1954) *Econo
 Armstrong & Mindermann (2018) *NeurIPS* (Occam's razor is insufficient to infer the preferences of irrational
 agents); Ashby (1956) *An Introduction to Cybernetics* (requisite variety); Åström & Murray (2008) *Feedback
 Systems*; Bostrom (2014) *Superintelligence*;
-Breiman (1961) *Proc. 4th Berkeley Symp.*; Barron & Cover (1988) *IEEE Trans. Inf. Theory* (a bound on the financial value of information); Bauer, Bruveris & Michor (2016)
+Breiman (1961) *Proc. 4th Berkeley Symp.*; Barron & Cover (1988) *IEEE Trans. Inf. Theory* (a bound on the financial value of information); Chen (2018) *Structural Change and Economic Dynamics* 47:73–81 (an entropy theory of value); Chen (2005) *The Physical Foundation of Economics: An Analytical Thermodynamic Theory*; Galbraith & Chen (2024) *Entropy Economics: The Living Basis of Value and Production* (Univ. Chicago Press); Georgescu-Roegen (1971) *The Entropy Law and the Economic Process*; Bauer, Bruveris & Michor (2016)
 *Bull. LMS* (uniqueness of the Fisher–Rao metric); Campbell (1986) *Proc. AMS* (extended Čencov
 characterization); Čencov (1982) *Statistical Decision Rules*; Conant & Ashby (1970) *Int. J. Systems Sci.* (good
 regulator theorem); Cover & Thomas, *Elements of Information Theory*; Cover (1991) *Math. Finance* (universal
