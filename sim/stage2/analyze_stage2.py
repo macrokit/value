@@ -87,10 +87,23 @@ def part_A(rep):
     reports = rep["elicitation"]
     structures = make_structures()
     out = {"G_coalition": {}, "G_product": {}, "I_exact": {}, "Ihat": {},
-           "elic_gate_fail": []}
+           "elic_gate_fail": [], "protocol_capped_structures": []}
+
+    # A3.1: ENFORCE the §5 elicitation gate — a structure with any <6/12 cell is
+    # protocol-CAP'd for this pass (reported, not fitted).
+    capped = set()
+    for key, v in reports.items():
+        if v["n_good"] < 6:
+            out["elic_gate_fail"].append(key)
+            capped.add(key.split("|")[0])
+    out["protocol_capped_structures"] = sorted(capped)
+    if capped:
+        print(f"  [gate] protocol-CAP'd structures (cells <6/12): {sorted(capped)}")
 
     # per-structure quantities
     for name, st in structures.items():
+        if name in capped:
+            continue
         q = q_of(st)
         for size in range(1, st["m"] + 1):
             for Sset in itertools.combinations(range(st["m"]), size):
@@ -111,7 +124,9 @@ def part_A(rep):
 
     # P1 gap law — equal-weight parimutuel with individual reports, (a)–(d)
     worst_gap, gaps = 0.0, {}
-    for name in ["a_disjoint", "b_overlap", "c_clones", "d_noisy"]:
+    p1_names = [n for n in ["a_disjoint", "b_overlap", "c_clones", "d_noisy"]
+                if n not in capped]
+    for name in p1_names:
         st = structures[name]; q = q_of(st); m = st["m"]
         G = np.zeros(m)
         for p, x, ys in st["atoms"]:
@@ -130,12 +145,13 @@ def part_A(rep):
                 gaps[f"{name}|{a}{c}"] = dev
                 worst_gap = max(worst_gap, dev)
     out["P1_worst_gap"] = worst_gap
-    chk("P1 gap law |ΔĜ − ΔÎ| ≤ 0.05 (all pairs, (a)–(d))", worst_gap <= P1_TOL,
-        f"worst = {worst_gap:.4f} nats")
+    chk(f"P1 gap law |ΔĜ − ΔÎ| ≤ 0.05 (pairs, {p1_names})", worst_gap <= P1_TOL,
+        f"worst = {worst_gap:.4f} nats" +
+        (f" [protocol-CAP'd: {sorted(capped)}]" if capped else ""))
 
     # P2 submodularity (coalition-level Ĝ_S) + the (e) control
     worst_margin = 1e9
-    for name in ["a_disjoint", "b_overlap", "c_clones", "d_noisy"]:
+    for name in p1_names:
         m = structures[name]["m"]
         Gd = {S: out["G_coalition"][f"{name}|{S}"]
               for size in range(1, m + 1) for S in itertools.combinations(range(m), size)}
@@ -148,13 +164,17 @@ def part_A(rep):
                             mS = Gd[tuple(sorted(set(S) | {a}))] - Gd[S]
                             mT = Gd[tuple(sorted(set(T) | {a}))] - Gd[T]
                             worst_margin = min(worst_margin, mS - mT)
-    ge = {S: out["G_coalition"][f"e_xor|{S}"] for S in [(0,), (1,), (0, 1)]}
-    e_gap = (ge[(0, 1)] - ge[(0,)]) - (ge[(1,)] - 0.0)
-    out["P2_worst_margin"], out["P2e_gap"] = worst_margin, e_gap
-    chk("P2 submodularity (a)–(d) margins ≥ −0.03", worst_margin >= P2_MARGIN,
+    out["P2_worst_margin"] = worst_margin
+    chk(f"P2 submodularity margins ≥ −0.03 ({p1_names})", worst_margin >= P2_MARGIN,
         f"worst margin = {worst_margin:.4f}")
-    chk("P2e XOR control supermodular gap ≥ ln2/2", e_gap >= P2E_GAP,
-        f"gap = {e_gap:.4f} (ln2 = {LN2:.4f})")
+    if "e_xor" in capped:
+        chk("P2e XOR control (protocol-CAP'd this pass)", False, "gate-excluded")
+    else:
+        ge = {S: out["G_coalition"][f"e_xor|{S}"] for S in [(0,), (1,), (0, 1)]}
+        e_gap = (ge[(0, 1)] - ge[(0,)]) - (ge[(1,)] - 0.0)
+        out["P2e_gap"] = e_gap
+        chk("P2e XOR control supermodular gap ≥ ln2/2", e_gap >= P2E_GAP,
+            f"gap = {e_gap:.4f} (ln2 = {LN2:.4f})")
 
     # P3 ceiling
     worst_ceil = -1e9
@@ -165,8 +185,14 @@ def part_A(rep):
     chk("P3 joint ceiling Ĝ_S ≤ H(X) + 0.02", worst_ceil <= P3_SLACK,
         f"worst overage = {worst_ceil:.4f}")
 
-    # P4 live market
+    # P4 live market (A3.2 parse gate 0.90)
     mk = rep["market"]
+    all_pr = [p for nm in mk for r in mk[nm] for p in r.get("parse_by_agent", [0.0])]
+    mkt_parse = float(np.mean(all_pr)) if all_pr else 0.0
+    out["market_parse"] = mkt_parse
+    if mkt_parse < 0.90:
+        chk("P4 market (protocol-CAP: parse < 0.90)", False,
+            f"overall parse = {mkt_parse:.2f}")
     order_hits = sum(1 for r in mk["L_ladder"]
                      if r["final_wealth"][0] > r["final_wealth"][1] > r["final_wealth"][2])
     clone_ok_runs, clone_gaps = 0, []
@@ -175,21 +201,24 @@ def part_A(rep):
         gap = abs(w1 - w2) / max((w1 + w2) / 2, 1e-9)
         clone_gaps.append(gap)
         clone_ok_runs += gap <= P4_CLONE_GAP
-    out["P4"] = {"ladder_order_hits": order_hits, "clone_gaps": clone_gaps}
-    chk("P4a ladder wealth ordered by Î (≥4/5 seeds)", order_hits >= P4_ORDER_REQ,
-        f"{order_hits}/5 seeds ordered")
-    chk("P4b clone terminal-wealth gap ≤ 10% (≥4/5 seeds)", clone_ok_runs >= P4_ORDER_REQ,
-        f"gaps = {[round(g,3) for g in clone_gaps]}")
+    out["P4"] = {"ladder_order_hits": order_hits, "clone_gaps": clone_gaps,
+                 "market_parse": mkt_parse}
+    if mkt_parse >= 0.90:
+        chk("P4a ladder wealth ordered by Î (≥4/5 seeds)", order_hits >= P4_ORDER_REQ,
+            f"{order_hits}/5 seeds ordered (parse {mkt_parse:.2f})")
+        chk("P4b clone terminal-wealth gap ≤ 10% (≥4/5 seeds)", clone_ok_runs >= P4_ORDER_REQ,
+            f"gaps = {[round(g,3) for g in clone_gaps]}")
 
     # secondary diagnostic: product fusion tracks (a)–(d), fails (e)
-    prod_dev = max(abs(out["G_product"][k] - out["G_coalition"][k])
-                   for k in out["G_coalition"] if not k.startswith("e_xor"))
-    e_prod = out["G_product"]["e_xor|(0, 1)"]
-    out["secondary_product_fusion"] = {
-        "max_dev_ad": prod_dev, "e_pair_product_G": e_prod,
-        "note": "diagnostic only (A2.1): expected small dev on (a)-(d), ~0 on (e)"}
-    print(f"  [diag] product fusion: max|Δ| (a)–(d) = {prod_dev:.4f}; "
-          f"(e) pair Ĝ_product = {e_prod:.4f} (coalition-level = {ge[(0,1)]:.4f})")
+    non_e = [k for k in out["G_coalition"] if not k.startswith("e_xor")]
+    if non_e:
+        prod_dev = max(abs(out["G_product"][k] - out["G_coalition"][k]) for k in non_e)
+        e_prod = out["G_product"].get("e_xor|(0, 1)")
+        out["secondary_product_fusion"] = {
+            "max_dev_ad": prod_dev, "e_pair_product_G": e_prod,
+            "note": "diagnostic only (A2.1): expected small dev on (a)-(d), ~0 on (e)"}
+        print(f"  [diag] product fusion: max|Δ| (fit structs) = {prod_dev:.4f}; "
+              f"(e) pair Ĝ_product = {e_prod}")
     return out
 
 

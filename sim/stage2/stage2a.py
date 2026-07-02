@@ -98,7 +98,14 @@ def make_structures():
                     f"to X on its own); C = {y}")
         return (f"you see the value of X XOR C = {y}, where C is an independent "
                 f"fair coin whose value you do NOT see")
-    S["e_xor"] = dict(n=2, world=WORLD2, m=2, atoms=atoms, obs=obs_e)
+    # A3.2: neutral composition for coalition prompts (the singleton text for agent 2
+    # contradicts a coalition prompt that also shows C)
+    def obs_e_coal(a, y):
+        if a == 0:
+            return f"the independent fair coin C = {y}"
+        return f"the value of X XOR C = {y}"
+    S["e_xor"] = dict(n=2, world=WORLD2, m=2, atoms=atoms, obs=obs_e,
+                      obs_coal=obs_e_coal)
     return S
 
 
@@ -126,23 +133,49 @@ def exact_I(st, Sset):
 # ───────────────────────────────────────────────────────────────── elicitation
 def elicit_prompt(st, Sset, y_S):
     lines = [st["world"]]
+    obs_fn = st.get("obs_coal", st["obs"]) if len(Sset) > 1 else st["obs"]
     if len(Sset) == 1:
-        lines.append(f"You receive one clean observation: {st['obs'](Sset[0], y_S[0])}.")
+        lines.append(f"You receive one observation: {obs_fn(Sset[0], y_S[0])}.")
     else:
         lines.append("You receive the following observations together:")
         for i, a in enumerate(Sset):
-            lines.append(f"  - {st['obs'](a, y_S[i])}")
+            lines.append(f"  - Observation {i + 1}: {obs_fn(a, y_S[i])}")
     n = st["n"]
     ps = ", ".join(f"p{i}" for i in range(n))
+    # A3.2: JSON-first protocol — the object must come first, on its own line
     lines.append(f"Give your probability that X equals each value 0..{n-1}, using "
                  "all observations jointly.")
-    lines.append(f'Respond with ONLY the JSON object and no other text: '
-                 f'{{"probs": [{ps}]}} ({n} non-negative numbers summing to 1).')
+    lines.append(f'Your reply MUST START with the JSON object on its own first line: '
+                 f'{{"probs": [{ps}]}} ({n} non-negative numbers summing to 1). '
+                 "Any explanation must come AFTER the JSON, never before.")
     return "\n".join(lines)
+
+RETRY_NUDGE = ('\nIMPORTANT: your previous reply was not machine-parseable. '
+               'Reply with the JSON object ONLY — first line, nothing before it.')
+
+def _first_json_obj(txt):
+    """First parseable JSON object in txt (JSON-first protocol tolerant of trailing
+    prose containing braces)."""
+    start = txt.find("{")
+    while start != -1:
+        depth = 0
+        for i in range(start, len(txt)):
+            if txt[i] == "{":
+                depth += 1
+            elif txt[i] == "}":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        return json.loads(txt[start:i + 1])
+                    except Exception:
+                        break
+        start = txt.find("{", start + 1)
+    return None
 
 def parse_probs(txt, n):
     try:
-        arr = json.loads(txt[txt.index("{"):txt.rindex("}") + 1])["probs"]
+        obj = _first_json_obj(txt)
+        arr = obj["probs"]
         p = np.array([float(v) for v in arr], dtype=float)
         if p.shape != (n,) or not np.all(np.isfinite(p)) or p.sum() <= 0:
             return None
@@ -157,11 +190,13 @@ def true_posterior(st, Sset, y_S):
             num[x] += p
     return num / num.sum()
 
-def run_elicitation(tier, chat_fn):
+def run_elicitation(tier, chat_fn, only=None):
     structures = make_structures()
     reports = {}
     cells = []
     for name, st in structures.items():
+        if only is not None and name not in only:
+            continue
         for size in range(1, st["m"] + 1):
             for Sset in itertools.combinations(range(st["m"]), size):
                 for y_S in sorted(coalition_cells(st, Sset)):
@@ -182,6 +217,10 @@ def run_elicitation(tier, chat_fn):
             for rep in range(REPS):
                 txt = chat_fn(MODEL, None, prompt, seed=1, agent=idx, rnd=rep, k=8)
                 p = parse_probs(txt, st["n"])
+                if p is None:   # A3.2: one pre-stated parse-retry (distinct cached rep)
+                    txt = chat_fn(MODEL, None, prompt + RETRY_NUDGE,
+                                  seed=1, agent=idx, rnd=rep + 1000, k=8)
+                    p = parse_probs(txt, st["n"])
                 if p is not None:
                     good.append(p)
         mean_p = np.mean(good, axis=0) if good else np.full(st["n"], 1 / st["n"])
@@ -216,12 +255,14 @@ def market_prompt(world, sensor_desc, obs_v, wealth, last_odds):
         f"Last round's market odds (total bet fraction on each outcome): {odds}.\n"
         "Each round the whole pool is paid to those who bet on the realised X, "
         "pro-rata. You must bet ALL your wealth, split across the 8 outcomes.\n"
-        'Respond with ONLY the JSON object and no other text: '
-        '{"bets": [f0, f1, f2, f3, f4, f5, f6, f7]} (8 non-negative fractions summing to 1).')
+        'Your reply MUST START with the JSON object on its own first line: '
+        '{"bets": [f0, f1, f2, f3, f4, f5, f6, f7]} (8 non-negative fractions '
+        "summing to 1). Any explanation must come AFTER the JSON, never before.")
 
 def parse_bets(txt):
     try:
-        arr = json.loads(txt[txt.index("{"):txt.rindex("}") + 1])["bets"]
+        obj = _first_json_obj(txt)
+        arr = obj["bets"]
         p = np.array([float(v) for v in arr], dtype=float)
         if p.shape != (8,) or not np.all(np.isfinite(p)) or p.sum() <= 0:
             return None
@@ -244,6 +285,8 @@ def run_market(tier, chat_fn, rounds=40, seeds=(0, 1, 2, 3, 4)):
             w = np.full(3, 1 / 3)
             last_odds = None
             traj = [w.tolist()]
+            parse_ok = np.zeros(3, dtype=int)
+            parse_tot = np.zeros(3, dtype=int)
             for rnd in range(rounds):
                 x = int(rng.integers(0, 8))
                 b = bits(x)
@@ -252,12 +295,12 @@ def run_market(tier, chat_fn, rounds=40, seeds=(0, 1, 2, 3, 4)):
                     j, fl = spec["bits_idx"][a], spec["flips"][a]
                     v = b[j] ^ (1 if rng.random() < fl else 0)
                     if tier == "mock":
-                        post = np.array([1.0 if ((bits(z)[j] == v) if fl == 0 else True)
-                                         else 0.0 for z in range(8)])
-                        if fl > 0:   # mock noisy posterior
-                            post = np.array([(1 - fl) if bits(z)[j] == v else fl
-                                             for z in range(8)])
+                        post = np.array([(1 - fl) if bits(z)[j] == v else fl
+                                         for z in range(8)]) if fl > 0 else \
+                               np.array([1.0 if bits(z)[j] == v else 0.0
+                                         for z in range(8)])
                         bets[a] = post / post.sum()
+                        parse_ok[a] += 1; parse_tot[a] += 1
                     else:
                         prompt = market_prompt(spec["world"],
                                                sensor_desc(j, fl), v,
@@ -265,16 +308,25 @@ def run_market(tier, chat_fn, rounds=40, seeds=(0, 1, 2, 3, 4)):
                         txt = chat_fn(MODEL, None, prompt,
                                       seed=seed, agent=a, rnd=rnd + 500, k=8)
                         p = parse_bets(txt)
+                        if p is None:   # A3.2: one pre-stated parse-retry
+                            txt = chat_fn(MODEL, None, prompt + RETRY_NUDGE,
+                                          seed=seed, agent=a, rnd=rnd + 2500, k=8)
+                            p = parse_bets(txt)
+                        parse_tot[a] += 1
+                        if p is not None:
+                            parse_ok[a] += 1
                         bets[a] = p if p is not None else np.full(8, 1 / 8)
                 B = w @ bets
                 w = w * bets[:, x] / max(B[x], 1e-12)
                 w = w / w.sum()
                 last_odds = B.tolist()
                 traj.append(w.tolist())
-            runs.append({"seed": seed, "final_wealth": w.tolist(), "traj_every5": traj[::5]})
+            pr = (parse_ok / np.maximum(parse_tot, 1)).tolist()
+            runs.append({"seed": seed, "final_wealth": w.tolist(),
+                         "traj_every5": traj[::5], "parse_by_agent": pr})
             print(f"  market {name} seed={seed}: final w = "
-                  f"{[round(v,3) for v in w]} (spent ${api_client.spent_usd():.2f})",
-                  flush=True)
+                  f"{[round(v,3) for v in w]} parse={[round(p,2) for p in pr]} "
+                  f"(spent ${api_client.spent_usd():.2f})", flush=True)
         out[name] = runs
     return out
 
@@ -283,6 +335,10 @@ def run_market(tier, chat_fn, rounds=40, seeds=(0, 1, 2, 3, 4)):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tier", choices=["mock", "frontier"], required=True)
+    ap.add_argument("--redo", default=None,
+                    help="comma list: structures to re-elicit (e.g. b_overlap,d_noisy,"
+                         "e_xor) and/or 'market'. Merges into the existing reports "
+                         "file per Amendment 3 (passed components kept).")
     args = ap.parse_args()
 
     chat_fn = None
@@ -292,14 +348,27 @@ def main():
             print(f"HEALTH FAIL ({MODEL}): {msg}")
             raise SystemExit(1)
         print(f"Health OK: {MODEL}")
-        chat_fn = api_client.make_chat(MODEL, cap_usd=CAP_USD, max_tokens=600)
+        # A3.2: ceiling 900 (JSON-first protocol; explanation allowed after)
+        chat_fn = api_client.make_chat(MODEL, cap_usd=CAP_USD, max_tokens=900)
 
-    print(f"=== STAGE 2A — tier={args.tier} model={MODEL} ===")
-    reports = run_elicitation(args.tier, chat_fn)
-    market = run_market(args.tier, chat_fn)
+    print(f"=== STAGE 2A — tier={args.tier} model={MODEL} "
+          f"redo={args.redo or '(full)'} ===")
+    redo = set(args.redo.split(",")) if args.redo else None
+
+    prev = json.load(open(OUT_PATH)) if (redo and os.path.exists(OUT_PATH)) else None
+    only_structs = None if redo is None else {s for s in redo if s != "market"}
+    reports = run_elicitation(args.tier, chat_fn, only=only_structs)
+    market = (run_market(args.tier, chat_fn)
+              if (redo is None or "market" in redo) else prev["market"])
+    if prev:
+        merged = dict(prev["elicitation"])
+        merged.update(reports)          # re-run cells replace; others kept (A3.3)
+        reports = merged
 
     out = {"tier": args.tier, "model": MODEL,
            "spent_usd": round(api_client.spent_usd(), 4) if args.tier != "mock" else 0.0,
+           "protocol": "A3.2 (json-first, ceiling 900, parse-retry)" if redo or True else "",
+           "redo": args.redo,
            "elicitation": reports, "market": market}
     with open(OUT_PATH, "w") as f:
         json.dump(out, f, indent=1)
