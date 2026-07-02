@@ -104,9 +104,12 @@ def make_chat(model: str, cap_usd: float, max_tokens: int = 64, max_retry: int =
         body = {
             "model": model,
             "max_tokens": max_tokens,
-            "temperature": float(temp),
             "messages": [{"role": "user", "content": prompt}],
         }
+        # AMENDMENT 1: Claude 5-family / Opus 4.8 reject explicit temperature
+        # ("deprecated for this model"); temp=None ⇒ omit (provider default).
+        if temp is not None:
+            body["temperature"] = float(temp)
         if system:
             body["system"] = system
         data = json.dumps(body).encode()
@@ -137,7 +140,7 @@ def health_check(model: str):
     """One tiny live call to confirm key + model + parsing. Counts against the cache."""
     try:
         fn = make_chat(model, cap_usd=1.0, max_tokens=16)
-        txt = fn("", 0.0, 'Reply with only the JSON {"niche": 3}.', 0, 0, -1, k=8)
+        txt = fn("", None, 'Reply with only the JSON {"niche": 3}.', 0, 0, -1, k=8)
         return ('"niche"' in txt or "3" in txt), txt.strip()[:40]
     except Exception as e:
         return False, str(e)[:120]

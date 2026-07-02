@@ -30,7 +30,9 @@ import api_client                              # noqa: E402
 N, T_WARM, T_MEAS = 12, 4, 4
 T_TOTAL = T_WARM + T_MEAS
 SEEDS = [0, 1, 2, 3]
-TEMP, J, N_NB = 0.6, 1.0, 6
+# AMENDMENT 1: TEMP=None ⇒ temperature omitted (provider default); the frozen
+# models reject an explicit temperature. See PREREGISTRATION-gate-amendment1.md.
+TEMP, J, N_NB = None, 1.0, 6
 POOL = 6
 LN2 = float(np.log(2))
 
