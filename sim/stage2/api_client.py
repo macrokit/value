@@ -87,8 +87,9 @@ def make_chat(model: str, cap_usd: float, max_tokens: int = 64, max_retry: int =
     api_key = os.environ.get("ANTHROPIC_API_KEY")
 
     def chat(_model_ignored, temp, prompt, seed, agent, rnd, k=8, max_retry=max_retry):
+        # max_tokens in the key: raising the ceiling must invalidate truncated entries
         key = hashlib.sha256(
-            f"{model}|{temp}|{seed}|{agent}|{rnd}|{prompt}".encode()).hexdigest()
+            f"{model}|{temp}|{seed}|{agent}|{rnd}|{max_tokens}|{prompt}".encode()).hexdigest()
         hit = _cache_get(key)
         if hit is not None:
             return hit
@@ -113,7 +114,8 @@ def make_chat(model: str, cap_usd: float, max_tokens: int = 64, max_retry: int =
         if system:
             body["system"] = system
         data = json.dumps(body).encode()
-        for attempt in range(max_retry):
+        n_retry = 8   # 429/529 are transient; back off up to ~2 min total
+        for attempt in range(n_retry):
             try:
                 req = urllib.request.Request(
                     API_URL, data=data,
@@ -128,18 +130,25 @@ def make_chat(model: str, cap_usd: float, max_tokens: int = 64, max_retry: int =
                 return txt
             except BudgetExceeded:
                 raise
-            except Exception as e:
-                if attempt == max_retry - 1:
+            except urllib.error.HTTPError as e:
+                if e.code in (429, 529) and attempt < n_retry - 1:
+                    time.sleep(min(2 ** attempt * 2, 45))   # 2,4,8,16,32,45,45s
+                    continue
+                if attempt == n_retry - 1:
+                    raise
+                time.sleep(1.5 * (attempt + 1))
+            except Exception:
+                if attempt == n_retry - 1:
                     raise
                 time.sleep(1.5 * (attempt + 1))
 
     return chat
 
 
-def health_check(model: str):
+def health_check(model: str, cap_usd: float = 30.0):
     """One tiny live call to confirm key + model + parsing. Counts against the cache."""
     try:
-        fn = make_chat(model, cap_usd=1.0, max_tokens=16)
+        fn = make_chat(model, cap_usd=cap_usd, max_tokens=16)
         txt = fn("", None, 'Reply with only the JSON {"niche": 3}.', 0, 0, -1, k=8)
         return ('"niche"' in txt or "3" in txt), txt.strip()[:40]
     except Exception as e:

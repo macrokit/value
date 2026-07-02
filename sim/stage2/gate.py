@@ -153,16 +153,20 @@ def main():
 
     if args.tier == "mock":
         from mock_backend import mock_chat
-        chat_fn, model, cap = mock_chat, "mock-model", 0.0
+        chat_fn, elicit_fn, model, cap = mock_chat, mock_chat, "mock-model", 0.0
     else:
         model = DEFAULT_DEBUG if args.tier == "debug" else DEFAULT_FRONTIER
-        ok, msg = api_client.health_check(model)
+        ok, msg = api_client.health_check(model, cap_usd=HARD_CAP_USD)
         if not ok:
             print(f"HEALTH FAIL ({model}): {msg}")
             raise SystemExit(1)
         print(f"Health OK: {model} ({msg})")
         cap = HARD_CAP_USD
-        chat_fn = api_client.make_chat(model, cap_usd=cap, max_tokens=64)
+        # Debug-phase fix: 64 truncated prefaced JSON (15/16 parse fails in one G-3
+        # cell). max_tokens is a ceiling, not a purchase — raising it is free for
+        # well-behaved outputs and kills truncation. Niche 200; elicitation 400.
+        chat_fn = api_client.make_chat(model, cap_usd=cap, max_tokens=200)
+        elicit_fn = api_client.make_chat(model, cap_usd=cap, max_tokens=400)
 
     print(f"\n=== STAGE 2 GATE — tier={args.tier} model={model} ===")
     print("Frozen: PREREGISTRATION-gate.md  (N=12, T=8, S=4, K=16)")
@@ -171,7 +175,7 @@ def main():
     print(f"G-1 (γ={G1_GAMMA}, g={G1_G}) k̄ by seed: {[round(r['k_bar_ss'],2) for r in g1]}")
     g2 = [run_niche_condition(chat_fn, model, G2_GAMMA, G2_G, s) for s in SEEDS]
     print(f"G-2 (γ={G2_GAMMA}, g={G2_G}) k̄ by seed: {[round(r['k_bar_ss'],2) for r in g2]}")
-    g3 = run_g3(chat_fn, model)
+    g3 = run_g3(elicit_fn, model)
     print(f"G-3 info by agent (nats): {[round(a['info_nats'],3) for a in g3]}")
 
     v = verdict(g1, g2, g3)

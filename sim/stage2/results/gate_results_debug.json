@@ -1,0 +1,182 @@
+{
+  "tier": "debug",
+  "model": "claude-sonnet-5",
+  "spent_usd": 2.2314,
+  "verdict": {
+    "G1": {
+      "pass": true,
+      "pass_seeds": 4,
+      "req": 3,
+      "k_bar_by_seed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": "k\u0304 \u2264 5.5"
+    },
+    "G2": {
+      "pass": true,
+      "pass_seeds": 4,
+      "req": 3,
+      "k_bar_by_seed": [
+        13.0,
+        13.0,
+        13.0,
+        12.0
+      ],
+      "threshold": "k\u0304 \u2265 9.5"
+    },
+    "G3": {
+      "pass": true,
+      "mean_info": 0.6931,
+      "agents_pass": 3,
+      "req_agents": 2,
+      "info_by_agent": [
+        0.6931,
+        0.6931,
+        0.6931
+      ],
+      "threshold": "\u00ce \u2265 0.3466 nats (0.5\u00b7ln2)"
+    },
+    "GATE": "PASS"
+  },
+  "raw": {
+    "G1": [
+      {
+        "seed": 0,
+        "k_bar_ss": 0.0,
+        "parse_rate": 1.0
+      },
+      {
+        "seed": 1,
+        "k_bar_ss": 0.0,
+        "parse_rate": 1.0
+      },
+      {
+        "seed": 2,
+        "k_bar_ss": 0.0,
+        "parse_rate": 1.0
+      },
+      {
+        "seed": 3,
+        "k_bar_ss": 0.0,
+        "parse_rate": 1.0
+      }
+    ],
+    "G2": [
+      {
+        "seed": 0,
+        "k_bar_ss": 13.0,
+        "parse_rate": 0.9895833333333334
+      },
+      {
+        "seed": 1,
+        "k_bar_ss": 13.0,
+        "parse_rate": 1.0
+      },
+      {
+        "seed": 2,
+        "k_bar_ss": 13.0,
+        "parse_rate": 0.9895833333333334
+      },
+      {
+        "seed": 3,
+        "k_bar_ss": 12.0,
+        "parse_rate": 1.0
+      }
+    ],
+    "G3": [
+      {
+        "bit": 0,
+        "info_nats": 0.6931471804509665,
+        "frac_of_channel": 0.9999999998427768,
+        "parse_fails": 0,
+        "post0": [
+          0.25,
+          0.0,
+          0.25,
+          0.0,
+          0.25,
+          0.0,
+          0.25,
+          0.0
+        ],
+        "post1": [
+          0.0,
+          0.25,
+          0.0,
+          0.25,
+          0.0,
+          0.25,
+          0.0,
+          0.25
+        ]
+      },
+      {
+        "bit": 1,
+        "info_nats": 0.6931471804509665,
+        "frac_of_channel": 0.9999999998427768,
+        "parse_fails": 0,
+        "post0": [
+          0.25,
+          0.25,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.0,
+          0.0
+        ],
+        "post1": [
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.0,
+          0.0,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "bit": 2,
+        "info_nats": 0.6931471804509665,
+        "frac_of_channel": 0.9999999998427768,
+        "parse_fails": 0,
+        "post0": [
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post1": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      }
+    ]
+  },
+  "frozen": {
+    "N": 12,
+    "T": 8,
+    "seeds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "uniform_mean": 7.5,
+    "uniform_var": 21.25
+  }
+}
