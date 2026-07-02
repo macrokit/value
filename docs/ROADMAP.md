@@ -200,12 +200,16 @@ verdicts; no instrument-fishing for positives.
   trigger fired via non-response (eff_γ < 0 at both points), disclosed in full. K=8 saturates, K=16 doesn't
   respond — the 1.5b instrument class is affirmatively exhausted; the residual-scaling question moves to
   Stage 2 with a mandatory pre-registered responsiveness gate.
-- [ ] **Stage 2 — PATH CHOSEN (2026-06-12): lead with Everitt / institutional collaboration; run ON HOLD.**
-  Proposal verified (`drafts/stage2-proposal.md`, ~$160 frontier, gate-first ~$15). Owner to send Everitt a
-  thank-you + light collaboration/advice ask (owner-written; his specialty is agent incentives / causal
-  influence diagrams — the exact design expertise Stage 2 needs after two CAPs). Institutional doors in
-  parallel (CAIF best fit; LTFF/Manifund; Anthropic/OpenAI access). Freeze the pre-registration + run the
-  responsiveness gate only once a collaborator engages or the owner elects to self-fund. Original entry:
+- [ ] **Stage 2 — GATE PASSED (2026-07-02, self-funded): the frontier instrument is PROVEN; grid awaits its
+  own go.** The owner elected to self-fund the responsiveness gate (`docs/19-stage2-gate.md`): **PASS 3/3,
+  4/4 seeds, decisively** on `claude-opus-4-8` — G-1 control k̄ = 0.0 (population ON target under γ=18),
+  G-2 incentive k̄ = 12–13 (ON the reward peak), G-3 perception Î = ln2 exactly (exact-Bayes posteriors).
+  The capability bar that killed docs 13/18 (1.5b: uniform scatter under the same protocol) is cleared.
+  Audited spend $8.76 of the $30 cap; prereg `a159ca9` + amendment `4a8c376` precede results `0759c4b`.
+  **Remaining before the grid:** freeze `sim/stage2/PREREGISTRATION.md` (proposal §2–§4 + doc-19's J-vs-g
+  and elicitation-protocol notes) — separate owner go. The gate-pass also strengthens every pending
+  institutional application (Everitt note, CAIF/LTFF/Manifund doors — strategy unchanged below). Original
+  path note (2026-06-12) and entry:
   - [ ] **Stage 2 — the real Maxwell test (the stronger-agent instrument now exists commercially).** The
   convergence finding's blocker was "agents capable enough to play the value game" — small local models failed.
   Frontier-model agents via API plausibly clear that bar today. The experiment: a payout-coupled multi-agent
