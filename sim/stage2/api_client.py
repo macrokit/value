@@ -23,9 +23,11 @@ CACHE_DB = os.path.join(RESULTS, "gate_cache.sqlite")
 API_URL = "https://api.anthropic.com/v1/messages"
 _LOCK = threading.Lock()
 
-# list prices ($ per 1e6 tokens); used only for the local cap accounting
+# $ per 1e6 tokens — the enforcement meter (PREREGISTRATION.md §6). Calibrated
+# against the gate's actual billing (dashboard $3.67 vs $8.76 on the old
+# conservative table): Opus 4.8 ≈ 5/25. Kept slightly conservative.
 PRICES = {
-    "opus":   (15.0, 75.0),
+    "opus":   (5.0, 25.0),
     "sonnet": (3.0, 15.0),
     "haiku":  (0.80, 4.0),
 }
