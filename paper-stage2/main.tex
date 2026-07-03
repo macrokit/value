@@ -1,7 +1,19 @@
 \documentclass{article} % For LaTeX2e
-\usepackage[preprint]{tmlr}
-% NOTE: for actual TMLR submission, switch to \usepackage{tmlr} (anonymized,
-% "Under review" header). The [preprint] option shows the byline.
+
+% ===================== BUILD MODE (single toggle) =====================
+% Default = ANONYMOUS TMLR review submission (double-blind): byline suppressed,
+% "Under review as submission to TMLR" header, anonymized repository link, no
+% acknowledgments. To produce the DE-ANONYMIZED preprint (real byline, GitHub
+% link, header off, acknowledgments shown), comment out the \anontrue line
+% below -- nothing else changes.
+\newif\ifanon
+\anontrue
+% =====================================================================
+\ifanon
+  \usepackage{tmlr}            % anonymous submission (no option = double-blind)
+\else
+  \usepackage[preprint]{tmlr}  % de-anonymized preprint (byline shown, no banner)
+\fi
 
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{mathtools}
@@ -19,6 +31,17 @@
 % Typographic separation of exploratory (non-pre-registered) material:
 \newcommand{\expl}{\textbf{\textsc{Exploratory}}}
 \newcommand{\explbox}[1]{\begin{quote}\small\expl\ (not pre-registered; descriptive only). #1\end{quote}}
+
+% Repository link: anonymized mirror for double-blind review, public repo for the
+% preprint. The anonymized mirror carries the same file tree (pre-registrations,
+% amendments, runners, analyzer, raw results, and the per-call cache); the
+% commit-chain hashes of Section~\ref{sec:chain} are file-level artifacts in both.
+\ifanon
+  \newcommand{\repolink}{\url{https://anonymous.4open.science/r/value-XXXX/}}
+  \hypersetup{pdfauthor={},pdfkeywords={}} % keep PDF metadata anonymous
+\else
+  \newcommand{\repolink}{\url{https://github.com/macrokit/value}}
+\fi
 
 \title{Information Limits and Attractor Dynamics in Economies of Frontier LLM Agents: A Pre-Registered Test}
 
@@ -73,7 +96,7 @@ Both results are deliberately reported with equal billing. The confirmation is o
 
 \paragraph{Pre-registration.} Our protocol follows the pre-registration discipline of the empirical sciences \citep{nosek2018}: predictions and analysis rules frozen and committed before data collection, amendments committed blind before the runs they govern, and negative outcomes published with the same prominence as positive ones. We are not aware of prior pre-registered tests of quantitative growth laws on frontier LLM populations.
 
-\paragraph{Theoretical companion.} The two predictions under test are drawn from a companion synthesis \citep{qian2026}, which derives the coupled capacity region and the residual-scaling law within a single information-theoretic account of resource growth. This paper is self-contained and defends only the experiment reported here; readers need not accept (or read) the companion's broader framework to evaluate either result. Where this paper says ``value'' it means growth of wealth in the Kelly sense, nothing more.
+\paragraph{Relation to a broader synthesis.} The two predictions under test are drawn from a synthesis \citep{qian2026} that derives the coupled capacity region and the residual-scaling law within a single information-theoretic account of resource growth. This paper is self-contained and defends only the experiment reported here; readers need not accept (or read) that synthesis's broader framework to evaluate either result. Where this paper says ``value'' it means growth of wealth in the Kelly sense, nothing more.
 
 \section{Predictions and pre-registered bands}
 \label{sec:predictions}
@@ -103,7 +126,7 @@ The equality is an identity when reports are exact Bayes posteriors (the common 
 \subsection{Prediction (ii): residual scaling in a population under selection and control}
 \label{sec:pred-ii}
 
-\paragraph{Setup.} $N = 20$ agents occupy niches $k \in \{0,\dots,15\}$ on a one-dimensional landscape and repeatedly choose where to sit, given (in-prompt) the payout structure and their neighbors' positions. Payouts have three parts: a \emph{reward gradient} (tent landscape $\mathrm{rewards}[k] = g\,(12 - |k - 12|)$, peak $12g$ at $k_g = 12$, zero at the target), a \emph{control bonus} $\gamma$ paid at the target niche $k^* = 0$, and a coordination dividend $J = 1$ for co-locating with neighbors. Population misalignment is the residual $\bar{k} - k^*$; goal dispersion is the population variance $V$ of niche occupancy. The law under test, derived in the companion from a linearized selection--control (Price-equation \citep{price1970}) drift balance, predicts in its linear-response regime
+\paragraph{Setup.} $N = 20$ agents occupy niches $k \in \{0,\dots,15\}$ on a one-dimensional landscape and repeatedly choose where to sit, given (in-prompt) the payout structure and their neighbors' positions. Payouts have three parts: a \emph{reward gradient} (tent landscape $\mathrm{rewards}[k] = g\,(12 - |k - 12|)$, peak $12g$ at $k_g = 12$, zero at the target), a \emph{control bonus} $\gamma$ paid at the target niche $k^* = 0$, and a coordination dividend $J = 1$ for co-locating with neighbors. Population misalignment is the residual $\bar{k} - k^*$; goal dispersion is the population variance $V$ of niche occupancy. The law under test, derived in that synthesis from a linearized selection--control (Price-equation \citep{price1970}) drift balance, predicts in its linear-response regime
 \begin{equation}
 \text{residual} \;\propto\; \frac{V g}{\gamma},
 \label{eq:vg}
@@ -323,14 +346,16 @@ We emphasize the epistemic status split: the capacity-region result is a pre-reg
 \section{Reproducibility statement}
 \label{sec:repro}
 
-The repository \url{https://github.com/macrokit/value} contains the frozen pre-registrations and amendments (\texttt{sim/stage2/PREREGISTRATION*.md}), the runners (\texttt{stage2a.py}, \texttt{stage2b.py}, \texttt{gate.py}), the mechanical analyzer (\texttt{analyze\_stage2.py}), the complete raw outputs and frozen analysis (\texttt{results/*.json}), and the commit chain of Section~\ref{sec:chain} establishing that every prediction precedes its data. Running \texttt{python3 sim/stage2/analyze\_stage2.py} reproduces every number in this paper offline, deterministically, at zero cost, from the committed raw outputs; the underlying per-call SQLite cache (19.9\,MB, keyed by full request, with per-call token metering) is committed with the repository (\texttt{sim/stage2/results/gate\_cache.sqlite}), so every individual model response in the experiment is itself auditable. Re-running the experiment from scratch against the live API costs $\approx$ \$139 at current list prices (audit in Appendix~\ref{app:cost}). A mock backend (\texttt{--tier mock}) allows full-protocol dry runs without any API key.
+The repository \repolink{} contains the frozen pre-registrations and amendments (\texttt{sim/stage2/PREREGISTRATION*.md}), the runners (\texttt{stage2a.py}, \texttt{stage2b.py}, \texttt{gate.py}), the mechanical analyzer (\texttt{analyze\_stage2.py}), the complete raw outputs and frozen analysis (\texttt{results/*.json}), and the commit chain of Section~\ref{sec:chain} establishing that every prediction precedes its data. Running \texttt{python3 sim/stage2/analyze\_stage2.py} reproduces every number in this paper offline, deterministically, at zero cost, from the committed raw outputs; the underlying per-call SQLite cache (19.9\,MB, keyed by full request, with per-call token metering) is committed with the repository (\texttt{sim/stage2/results/gate\_cache.sqlite}), so every individual model response in the experiment is itself auditable. Re-running the experiment from scratch against the live API costs $\approx$ \$139 at current list prices (audit in Appendix~\ref{app:cost}). A mock backend (\texttt{--tier mock}) allows full-protocol dry runs without any API key.
 
 \section{Conclusion}
 
-In a pre-registered test on frontier LLM agents costing \$138.76, an information-theoretic capacity region for coupled agent economies was confirmed within all five of its frozen primary bands --- relative growth equals relative claimed information to 46 millinats, coalition value bends exactly where and how conditional independence says it must, joint growth saturates the entropy ceiling, and markets select the best-informed --- while the companion mean-field residual-scaling law found no domain to be tested in: every tested LLM population, across three instruments and two capability tiers, either saturates, ignores, or totally collapses the goal dispersion the law assumes, and the frontier population in particular behaves as a discrete attractor system with step-function responses and seed-selected bistability. What an LLM agent knows prices what it earns, to the millinat, the moment agents are coupled through a market. How an LLM \emph{population} responds to incentives is not smooth at all: interventions switch attractors, or they do nothing.
+In a pre-registered test on frontier LLM agents costing \$138.76, an information-theoretic capacity region for coupled agent economies was confirmed within all five of its frozen primary bands --- relative growth equals relative claimed information to 46 millinats, coalition value bends exactly where and how conditional independence says it must, joint growth saturates the entropy ceiling, and markets select the best-informed --- while the paired mean-field residual-scaling law found no domain to be tested in: every tested LLM population, across three instruments and two capability tiers, either saturates, ignores, or totally collapses the goal dispersion the law assumes, and the frontier population in particular behaves as a discrete attractor system with step-function responses and seed-selected bistability. What an LLM agent knows prices what it earns, to the millinat, the moment agents are coupled through a market. How an LLM \emph{population} responds to incentives is not smooth at all: interventions switch attractors, or they do nothing.
 
+\ifanon\else
 \subsubsection*{Acknowledgments}
 The experiment was self-funded (\$138.76 in metered API spend). No external compute, grants, or institutional resources were used.
+\fi
 
 \bibliography{refs}
 \bibliographystyle{tmlr}
