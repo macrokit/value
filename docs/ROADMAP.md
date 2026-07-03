@@ -213,6 +213,11 @@ verdicts; no instrument-fishing for positives.
   paragraph in the next version per docs/21 §3. Exploratory (stated as such): lowering g flipped 8/8 seeds
   to perfect alignment while raising γ did nothing — incentive design switches the attractor. Chain:
   `4c0a7a1`→`c79f8fe`→`2b2c010`→`9d685f8`→`f8b902d`→`a7e639b`. Gate record below.
+  - [x] **Standalone Stage-2 paper DRAFTED (2026-07-03)** — `paper-stage2/main.tex` (TMLR format, 15 pp
+    incl. appendices; both results equal billing; all numbers from the frozen analyzer; exploratory
+    material typographically fenced). **Awaiting owner review + venue submission (owner-gated:
+    OpenReview account, anonymization switch, the submission click). Primary venue TMLR; fallbacks
+    AAMAS 2027 / NeurIPS 2027.**
   - [x] **Gate (2026-07-02):** PASS 3/3 (`docs/19-stage2-gate.md`): **PASS 3/3,
   4/4 seeds, decisively** on `claude-opus-4-8` — G-1 control k̄ = 0.0 (population ON target under γ=18),
   G-2 incentive k̄ = 12–13 (ON the reward peak), G-3 perception Î = ln2 exactly (exact-Bayes posteriors).
