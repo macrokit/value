@@ -200,8 +200,20 @@ verdicts; no instrument-fishing for positives.
   trigger fired via non-response (eff_γ < 0 at both points), disclosed in full. K=8 saturates, K=16 doesn't
   respond — the 1.5b instrument class is affirmatively exhausted; the residual-scaling question moves to
   Stage 2 with a mandatory pre-registered responsiveness gate.
-- [ ] **Stage 2 — GATE PASSED (2026-07-02, self-funded): the frontier instrument is PROVEN; grid awaits its
-  own go.** The owner elected to self-fund the responsiveness gate (`docs/19-stage2-gate.md`): **PASS 3/3,
+- [x] **Stage 2 — RUN AND DECIDED (2026-07-03, owner-funded $138.76/$160): prediction (i) CONFIRMED on real
+  frontier agents; prediction (ii) CAP — the mean-field dispersion domain appears EMPTY** (`docs/21-stage2-
+  maxwell-test.md`). The coupled capacity region held its frozen bands on claude-opus-4-8 (gap law 0.046 ≤
+  0.05; submodularity −0.019; the XOR synergy control 0.621 ≥ ln2/2; ceiling exact; Kelly selection 4/5;
+  P4b clone equality a disclosed supporting miss) — **the first real-agent confirmation of a distinctively-
+  coupled-regime prediction of the unification.** ‖Vg‖/γ: P5 CAP "0/9 in-regime" by a third mechanism —
+  dispersion collapse (max V 4.85 vs floor 5.31 across 72 runs; strong-control cells at 0.000±0.000; bistable
+  corner-selection in competitive cells; response is a step function across γ ⋛ 12g). Three instruments now
+  bracket the noise-maintained-dispersion assumption from all sides (saturation / non-response /
+  concentration) → retire ‖Vg‖/γ to its toy/mathematical scope; update the paper's decisive-prediction
+  paragraph in the next version per docs/21 §3. Exploratory (stated as such): lowering g flipped 8/8 seeds
+  to perfect alignment while raising γ did nothing — incentive design switches the attractor. Chain:
+  `4c0a7a1`→`c79f8fe`→`2b2c010`→`9d685f8`→`f8b902d`→`a7e639b`. Gate record below.
+  - [x] **Gate (2026-07-02):** PASS 3/3 (`docs/19-stage2-gate.md`): **PASS 3/3,
   4/4 seeds, decisively** on `claude-opus-4-8` — G-1 control k̄ = 0.0 (population ON target under γ=18),
   G-2 incentive k̄ = 12–13 (ON the reward peak), G-3 perception Î = ln2 exactly (exact-Bayes posteriors).
   The capability bar that killed docs 13/18 (1.5b: uniform scatter under the same protocol) is cleared.
