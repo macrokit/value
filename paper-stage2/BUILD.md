@@ -18,6 +18,21 @@ The de-anonymized preprint is one line away: `./build.sh preprint` flips the
 toggle into a generated `main-preprint.tex` and builds `main-preprint.pdf`, so
 the two versions can never drift.
 
+## Anonymized supplementary material (for OpenReview)
+
+TMLR allows an anonymized supplement up to 100 MB. Build it with:
+
+```
+./make-supplement.sh      # -> stage2-supplement-anon.zip (~5.5 MB)
+```
+
+It packages a tracked-only snapshot of `sim/stage2` (pre-registrations, runners,
+analyzer, raw results, per-call cache) with the `Author byline: Cheng Qian.`
+headers stripped to `Anonymous`, plus a reviewer README, and **hard-fails if any
+identifying string survives** (text files and the binary cache are both scanned).
+Reviewers get code delivery **both** ways (owner decision): this ZIP as a
+self-contained backup, and the `anonymous.4open.science` mirror for browsing.
+
 ## Requirements
 - [`tectonic`](https://tectonic-typesetting.github.io/) (`brew install tectonic`).
   Self-contained: fetches its own packages, no MacTeX needed. First run needs
