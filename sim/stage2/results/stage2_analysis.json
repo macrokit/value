@@ -141,6 +141,218 @@
    "note": "diagnostic only (A2.1): expected small dev on (a)-(d), ~0 on (e)"
   }
  },
+ "B": {
+  "grid": [
+   {
+    "gamma": 2.0,
+    "g": 0.25,
+    "n": 8,
+    "residual_mean": 10.216145833333332,
+    "residual_std": 4.744498922676845,
+    "V_mean": 0.45861979166666667,
+    "k_bar": 10.216145833333332,
+    "above": 0.3723958333333333,
+    "parse_min": 1.0,
+    "predicted": 0.05732747395833333,
+    "ratio": 178.2068025665777,
+    "non_responsive": false,
+    "in_regime": false,
+    "regime_fails": [
+     "V collapsed",
+     "k\u0304 at peak",
+     "above-peak>0.2"
+    ]
+   },
+   {
+    "gamma": 2.0,
+    "g": 0.7,
+    "n": 8,
+    "residual_mean": 11.944270833333334,
+    "residual_std": 1.5070369618114459,
+    "V_mean": 0.5551822916666668,
+    "k_bar": 11.944270833333334,
+    "above": 0.24583333333333335,
+    "parse_min": 1.0,
+    "predicted": 0.19431380208333335,
+    "ratio": 61.4689780410499,
+    "non_responsive": false,
+    "in_regime": false,
+    "regime_fails": [
+     "V collapsed",
+     "k\u0304 at peak",
+     "above-peak>0.2"
+    ]
+   },
+   {
+    "gamma": 2.0,
+    "g": 2.0,
+    "n": 8,
+    "residual_mean": 12.044270833333332,
+    "residual_std": 1.5891652269514283,
+    "V_mean": 0.7013281250000001,
+    "k_bar": 12.044270833333332,
+    "above": 0.3703125,
+    "parse_min": 1.0,
+    "predicted": 0.7013281250000001,
+    "ratio": 17.173517507704872,
+    "non_responsive": false,
+    "in_regime": false,
+    "regime_fails": [
+     "V collapsed",
+     "k\u0304 at peak",
+     "above-peak>0.2"
+    ]
+   },
+   {
+    "gamma": 6.0,
+    "g": 0.25,
+    "n": 8,
+    "residual_mean": 0.0,
+    "residual_std": 0.0,
+    "V_mean": 0.0,
+    "k_bar": 0.0,
+    "above": 0.0,
+    "parse_min": 1.0,
+    "predicted": 0.0,
+    "ratio": NaN,
+    "non_responsive": false,
+    "in_regime": false,
+    "regime_fails": [
+     "V collapsed",
+     "residual\u22640"
+    ]
+   },
+   {
+    "gamma": 6.0,
+    "g": 0.7,
+    "n": 8,
+    "residual_mean": 10.5890625,
+    "residual_std": 4.454112341810905,
+    "V_mean": 0.9629947916666667,
+    "k_bar": 10.5890625,
+    "above": 0.37083333333333335,
+    "parse_min": 1.0,
+    "predicted": 0.11234939236111112,
+    "ratio": 94.25117730912912,
+    "non_responsive": false,
+    "in_regime": false,
+    "regime_fails": [
+     "V collapsed",
+     "k\u0304 at peak",
+     "above-peak>0.2"
+    ]
+   },
+   {
+    "gamma": 6.0,
+    "g": 2.0,
+    "n": 8,
+    "residual_mean": 11.915104166666666,
+    "residual_std": 1.5217356056398958,
+    "V_mean": 0.7321614583333333,
+    "k_bar": 11.915104166666666,
+    "above": 0.24427083333333333,
+    "parse_min": 1.0,
+    "predicted": 0.24405381944444446,
+    "ratio": 48.82162546683264,
+    "non_responsive": false,
+    "in_regime": false,
+    "regime_fails": [
+     "V collapsed",
+     "k\u0304 at peak",
+     "above-peak>0.2"
+    ]
+   },
+   {
+    "gamma": 18.0,
+    "g": 0.25,
+    "n": 8,
+    "residual_mean": 0.0,
+    "residual_std": 0.0,
+    "V_mean": 0.0,
+    "k_bar": 0.0,
+    "above": 0.0,
+    "parse_min": 1.0,
+    "predicted": 0.0,
+    "ratio": NaN,
+    "non_responsive": false,
+    "in_regime": false,
+    "regime_fails": [
+     "V collapsed",
+     "residual\u22640"
+    ]
+   },
+   {
+    "gamma": 18.0,
+    "g": 0.7,
+    "n": 8,
+    "residual_mean": 0.0,
+    "residual_std": 0.0,
+    "V_mean": 0.0,
+    "k_bar": 0.0,
+    "above": 0.0,
+    "parse_min": 1.0,
+    "predicted": 0.0,
+    "ratio": NaN,
+    "non_responsive": false,
+    "in_regime": false,
+    "regime_fails": [
+     "V collapsed",
+     "residual\u22640"
+    ]
+   },
+   {
+    "gamma": 18.0,
+    "g": 2.0,
+    "n": 8,
+    "residual_mean": 10.5640625,
+    "residual_std": 4.384750437177624,
+    "V_mean": 1.414921875,
+    "k_bar": 10.5640625,
+    "above": 0.3661458333333333,
+    "parse_min": 1.0,
+    "predicted": 0.15721354166666668,
+    "ratio": 67.1956269670366,
+    "non_responsive": false,
+    "in_regime": false,
+    "regime_fails": [
+     "V collapsed",
+     "k\u0304 at peak",
+     "above-peak>0.2"
+    ]
+   }
+  ],
+  "n_in_regime": 0,
+  "n_non_responsive": 0,
+  "signal": {
+   "sigma_in": NaN,
+   "R_across": 0.0,
+   "span": 0,
+   "gate": false
+  },
+  "P5": {
+   "outcome": "CAP",
+   "reason": "insufficient in-regime span: 0 conds, 0.0x"
+  },
+  "P6": {
+   "points": [
+    {
+     "id": "B1",
+     "eff_gamma": -2.9781249999999986,
+     "eff_g": 21.178125,
+     "ratio": -7.111227701993708,
+     "resolvable": false
+    },
+    {
+     "id": "B2",
+     "eff_gamma": 0.0,
+     "eff_g": 0.0,
+     "ratio": Infinity,
+     "resolvable": false
+    }
+   ],
+   "verdict": "INCONCLUSIVE"
+  }
+ },
  "checks": [
   {
    "name": "P1 gap law |\u0394\u011c \u2212 \u0394\u00ce| \u2264 0.05 (pairs, ['a_disjoint', 'b_overlap', 'c_clones', 'd_noisy'])",
@@ -171,6 +383,16 @@
    "name": "P4b clone terminal-wealth gap \u2264 10% (\u22654/5 seeds)",
    "pass": false,
    "detail": "gaps = [1.0, 0.5, 0.0, 0.0, nan]"
+  },
+  {
+   "name": "P5 exponents (outcome)",
+   "pass": false,
+   "detail": "CAP \u2014 insufficient in-regime span: 0 conds, 0.0x"
+  },
+  {
+   "name": "P6 direction (verdict)",
+   "pass": false,
+   "detail": "INCONCLUSIVE"
   }
  ],
  "primary_pass": false
