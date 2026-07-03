@@ -65,7 +65,13 @@ laws generalize. A further pre-registered test shows the out-of-sample bridge $\
 bridge from a demonstration toward a law. A fleet-pricing experiment is reported scoped and primary-metric-first: value-pricing recovers
 cost-aware routing from first principles --- it ties good hand-tuned routing under a token budget, beats a
 cost-blind router under a compute budget, and does not outperform a cost-aware engineer; its contribution is
-principled measurement, not outperformance. The laws hold in the smooth, concave (diminishing-returns) regime;
+principled measurement, not outperformance. The paper's stated continuation gate has since been run
+(pre-registered, on a frontier-model population): the coupled capacity-region prediction --- the growth-gap law,
+coalition submodularity with a designed XOR synergy control, the joint ceiling, and Kelly selection --- is
+\emph{confirmed within its frozen bands} on real agents, the first real-agent confirmation of a prediction no
+component theory makes separately; the mean-field residual-scaling law $\|Vg\|/\gamma$, by contrast, found
+\emph{no domain} --- capable populations hold no goal dispersion ($V\to 0$) --- and is retired to its
+mathematical scope. The laws hold in the smooth, concave (diminishing-returns) regime;
 threshold, satiation, and risk-seeking goals lie outside it. None of the underlying mechanisms is individually
 new --- the single-agent core is generalized Kelly, the is/ought asymmetry's value-side is \citet{armstrong2018occam},
 and the alignment-stability algebra is classical control; the contribution is their unification under one
@@ -706,20 +712,43 @@ softer one; and the regime in which it does win --- agents that are heterogeneou
 into a concrete operating advantage. \emph{Alignment}, finally, is incentive design before oversight
 (Theorem~\ref{thm:align}): spend first on making what pays equal what is wanted.
 
-\paragraph{The decisive prediction (stated as the continuation gate).} A unification earns the status of a
+\paragraph{The decisive prediction (the continuation gate, now run).} A unification earns the status of a
 discovery only when the combination predicts something no component predicts --- Maxwell's displacement current
-forcing wave solutions is the canonical case. By that standard this work is a synthesis, not yet a discovery,
-and we state explicitly what its displacement-current candidate is. For a \emph{coupled} fleet (shared payout
-or explicit resource coupling), the unified theory predicts (i) a capacity-region structure on
-jointly-achievable growth vectors as perception overlap is varied --- with counterfactual sub-coalition
-throughputs as the measurable --- and (ii) the selection-vs-control residual scaling $\|Vg\|/\gamma$ of
-Theorem~\ref{thm:align} on real agent populations. Neither is predicted by Kelly portfolios, classical control,
-or welfare economics taken separately. Both are currently untestable on available instruments: our pre-registered
-attempts came back underpowered or capability-limited (\S\ref{sec:real}; the small-model ceiling), and
-observational data exposes only degenerate corners of the coupled regime. The honest status is therefore: a
-falsifiable program gated on a controlled multi-agent experiment with agents capable enough to play the value
-game. If, when such an instrument exists, these predictions fail or remain unresolvable, the distinctively-unified
-layer of this theory should be retired; if they pass, the unification will have earned the stronger word.
+forcing wave solutions is the canonical case. By that standard the previous version of this paper declared
+itself a synthesis, not yet a discovery, and stated its displacement-current candidate explicitly. For a
+\emph{coupled} fleet (shared payout or explicit resource coupling), the unified theory predicts (i) a
+capacity-region structure on jointly-achievable growth vectors as perception overlap is varied --- with
+counterfactual sub-coalition throughputs as the measurable --- and (ii) the selection-vs-control residual
+scaling $\|Vg\|/\gamma$ of Theorem~\ref{thm:align} on real agent populations. Neither is predicted by Kelly
+portfolios, classical control, or welfare economics taken separately. Earlier pre-registered attempts came back
+underpowered or capability-limited (\S\ref{sec:real}; the small-model ceiling), so the previous version stated
+the rule and stopped: if the predictions fail or remain unresolvable when a capable instrument exists, the
+distinctively-unified layer retires; if they pass, the unification earns the stronger word.
+
+Both predictions have now been tested, in a pre-registered experiment on a frontier-model population
+(Claude Opus 4.8; a capability gate, the frozen grid pre-registration, three pre-run amendments, and all raw
+run records are archived with the project, with the pre-registration commits provably preceding the results).
+The verdict splits the candidate down its seam. \emph{Prediction (i) is confirmed within its frozen bands}: the
+growth-gap law $\hat G_a-\hat G_b=\hat\I_a-\hat\I_b$ holds to $46$ millinats across four channel structures
+under parimutuel coupling; coalition value is submodular where signals overlap and flips supermodular under a
+designed XOR control --- two individually-worthless signals jointly worth one bit (gap $0.62\ge\ln 2/2$),
+reasoned out by the agents; the joint ceiling holds exactly; and in a live market the best-informed agent
+absorbs the pool (selection ordered by information in $4/5$ ladders). One supporting check fails and is
+disclosed: clone wealth equality, broken by absorbing all-in dynamics at sampling temperature.
+\emph{Prediction (ii) returned the pre-registered abstention}: no linear-response regime exists on this
+instrument. Across all $72$ grid runs the population dispersion the theorem assumes collapses ($V\to 0$;
+maximum $4.85$ against the frozen floor $5.31$); populations concentrate onto attractors, and the response to
+the incentive and control levers is a step function across the attractor-dominance boundary, not a power law.
+Three instrument classes now miss the mean-field regime by three distinct mechanisms --- gradient saturation
+and non-response in small models, dispersion collapse at the frontier. Applying the stated rule to each half:
+the coupled capacity region --- the half that is distinctively the unification's --- has earned its first
+real-agent confirmation, while $\|Vg\|/\gamma$ is retired to its mathematical scope: the noise-maintained
+dispersion it assumes has no realisation in any LLM population tested, and a future design that \emph{creates}
+sustained dispersion would be testing a stated modification, not this theory. One exploratory observation,
+reported as such: near the dominance boundary, lowering the reward gradient $g$ flipped every seed to perfect
+alignment while raising the control gain $\gamma$ did nothing --- the incentive lever did not marginally beat
+oversight, it switched the attractor. This is consistent with, but not a frozen test of, the governance reading
+of Theorem~\ref{thm:align}.
 
 \section{Limits}\label{sec:limits}
 
@@ -748,19 +777,23 @@ same memory ceiling that bounds the ladder elsewhere. Crucially the code \emph{b
 shape is underpowered, and we report it as such rather than as a counterexample or forcing the run on
 inadequate hardware. The alignment theorem is mean-field with a linearized
 landscape and a quasi-static dispersion $V$; a fully coupled treatment, and an endogenous reward gradient $g$ in
-a closed multi-agent world, remain open.
+a closed multi-agent world, remain open --- and the continuation-gate experiment sharpens this limit into a
+measured one: no tested LLM population, small or frontier, maintains the noise-driven dispersion the mean-field
+layer assumes, so its claims should be read at mathematical scope until a population that holds dispersion is
+exhibited.
 
 \paragraph{What remains decisive.} The scale-up (\S\ref{sec:v2}) already ran the heterogeneous,
 resource-constrained fleet test the governance claim turns on --- specialists perceiving different slices of $X$
 under a compute budget --- and the answer was scoped, not triumphant: value-pricing beats naive and cost-blind
 allocation but only \emph{matches} a strong cost-aware hand-tuned baseline, while collective throughput obeyed
-the predicted ceiling $\sum_a G_a\le H(X)$. Two things would still be decisive, and neither is yet done. First, a
-\emph{dynamic} multi-agent setting in which the goals $k$ themselves evolve over time
-(\S\ref{sec:dynamics}--\ref{sec:alignment}), rather than the static classification tested here --- that is the
-regime where the is/ought asymmetry and the alignment-stability theorem actually bite, and a failure of the
-predicted flows there would refute the dynamical layer. Second, independent replication at larger scale. We have
-shown the single-frame laws \emph{generalize} across three task shapes and a ten-model ladder; what remains is to
-show the framework governs a population whose goals \emph{move}.
+the predicted ceiling $\sum_a G_a\le H(X)$. The \emph{dynamic} multi-agent test --- a population whose goals $k$
+themselves evolve (\S\ref{sec:dynamics}--\ref{sec:alignment}) --- has now been run as the pre-registered
+continuation-gate experiment (see the decisive-prediction paragraph): the coupled capacity region passed its
+frozen bands, and the dynamical layer's residual law, finding no population that holds the dispersion it
+assumes, is retired to mathematical scope rather than refuted or confirmed. What remains decisive is therefore:
+independent replication on a different model family and provider, and any pre-registered design that sustains
+goal dispersion in a capable population --- which would test a stated modification of the mean-field layer, and
+should be offered as such.
 
 \section{Conclusion}\label{sec:conclusion}
 
@@ -770,7 +803,10 @@ fleet entropy ceiling, and an alignment-stability law. Shannon's own quantities 
 information, the Fisher metric --- reappear unbidden throughout, which is the strongest internal evidence that
 the abstraction is real rather than decorative. On live language models --- across three task domains and a
 ten-model, five-family ladder, pre-registered --- the single-frame laws hold to high precision and generalize,
-and the one fleet-level claim with a genuine precondition is reported with its boundary intact. The
+and the one fleet-level claim with a genuine precondition is reported with its boundary intact. The stated
+continuation gate has been run on a frontier-model population: the coupled capacity region --- the prediction
+that is distinctively the unification's own --- is confirmed within its frozen bands, and the mean-field
+residual law, having found no domain, is retired to its mathematical scope. The
 quantity is frame-relative; the laws relating frames are universal; and they are now testable on the artificial
 agents the theory was built to govern.
 
