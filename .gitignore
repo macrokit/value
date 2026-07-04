@@ -57,6 +57,7 @@ HANDOFF-erc-connection.md
 .env.stage2
 HANDOFF-v6-publish.md
 HANDOFF-stage2-standalone-paper.md
+HANDOFF-stage2-zenodo.md
 
 # Stage 2 paper: generated de-anon build + LaTeX intermediates (reproducible via build.sh)
 paper-stage2/main-preprint.tex
