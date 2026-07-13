@@ -70,6 +70,31 @@
     "detail": "\u0394=-21.9138 95%CI[-25.7065,-18.2204]"
   },
   {
+    "name": "R5 [per-compute (params\u00d7tok, FLOP-proxy)] value-price > round_robin (REQUIRED)",
+    "verdict": "PASS",
+    "detail": "\u0394=+7.2522 95%CI[+6.0678,+8.2870]"
+  },
+  {
+    "name": "R5 [per-compute (params\u00d7tok, FLOP-proxy)] value-price > equal_pool (REQUIRED)",
+    "verdict": "PASS",
+    "detail": "\u0394=+8.4462 95%CI[+7.3052,+9.6162]"
+  },
+  {
+    "name": "R5 [per-compute (params\u00d7tok, FLOP-proxy)] value-price > best_single (info)",
+    "verdict": "INFO",
+    "detail": "\u0394=+7.7543 95%CI[+6.6094,+8.8387]"
+  },
+  {
+    "name": "R5 [per-compute (params\u00d7tok, FLOP-proxy)] value-price > hand_tuned (STRONG)",
+    "verdict": "PASS",
+    "detail": "\u0394=+7.4495 95%CI[+6.3312,+8.4770]"
+  },
+  {
+    "name": "R5 [per-compute (params\u00d7tok, FLOP-proxy)] value-price > hand_cost (info)",
+    "verdict": "INFO",
+    "detail": "\u0394=+0.0000 95%CI[+0.0000,+0.0000]"
+  },
+  {
     "name": "Ceiling: all pairwise joint I \u2264 H(X)",
     "verdict": "PASS",
     "detail": "data-processing bound holds empirically"
