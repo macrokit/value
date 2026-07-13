@@ -119,13 +119,29 @@ def available_models():
         print("MISSING (skipped, logged):", [t for t, _, _ in missing])
     return avail
 
+def unload(tag):
+    """Force Ollama to evict a model (keep_alive=0) so the next model has full RAM.
+    Prevents the concurrent-load OOM on the 16 GB host (the phi3.5 HTTP-500 cause)."""
+    try:
+        body = json.dumps({"model": tag, "keep_alive": 0, "prompt": ""}).encode()
+        urllib.request.urlopen(urllib.request.Request(
+            OLLAMA + "/api/generate", data=body, headers={"Content-Type": "application/json"}),
+            timeout=30).read()
+    except Exception:
+        pass
+    time.sleep(2)
+
 def main():
     domains = sys.argv[1].split(",") if len(sys.argv) > 1 else D.DOMAINS
     avail = available_models()
+    only = sys.argv[2].split(",") if len(sys.argv) > 2 else None
+    if only:
+        avail = [m for m in avail if m[1] in only]
     print("models to run:", [s for _, s, _ in avail], flush=True)
-    for tag, short, p in avail:                # batch per model
+    for tag, short, p in avail:                # batch per model, then evict it
         for dom in domains:
             run(tag, short, dom)
+        unload(tag)                            # free RAM before the next model loads
 
 if __name__ == "__main__":
     main()
