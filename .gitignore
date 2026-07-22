@@ -58,3 +58,14 @@ HANDOFF-erc-connection.md
 HANDOFF-v6-publish.md
 HANDOFF-stage2-standalone-paper.md
 HANDOFF-stage3-trading.md
+HANDOFF-stage2-zenodo.md
+
+# Stage 2 paper: generated de-anon build + LaTeX intermediates (reproducible via build.sh)
+paper-stage2/main-preprint.tex
+paper-stage2/main-preprint.pdf
+paper-stage2/*.aux
+paper-stage2/*.bbl
+paper-stage2/*.blg
+paper-stage2/*.log
+paper-stage2/*.out
+paper-stage2/stage2-supplement-anon.zip
